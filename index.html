@@ -1109,10 +1109,21 @@ body.body--navy .toc-btn:hover {
 }
 </script>
 
+<script type="module">
+  import * as ReactNS from "react";
+  import * as ReactDOMNS from "react-dom";
+  import * as ReactDOMClientNS from "react-dom/client";
+  import * as FramerMotionNS from "framer-motion";
+  window.React = ReactNS.default || ReactNS;
+  window.ReactDOM = ReactDOMNS;
+  window.ReactDOMClient = ReactDOMClientNS;
+  window.FramerMotion = FramerMotionNS;
+</script>
+
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
 <script src="letters.js"></script>
-<script type="text/babel" data-type="module" src="app.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
 
 </body>
 </html>

@@ -1,8 +1,8 @@
-/* global LETTERS, CHAPTERS */
-import React, { useState, useEffect, useMemo, useCallback, useRef, useLayoutEffect } from "react";
-import { createPortal } from "react-dom";
-import { createRoot } from "react-dom/client";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+/* global React, ReactDOM, ReactDOMClient, FramerMotion, LETTERS, CHAPTERS */
+const { useState, useEffect, useMemo, useCallback, useRef, useLayoutEffect } = React;
+const { createPortal } = ReactDOM;
+const { createRoot } = ReactDOMClient;
+const { motion, AnimatePresence, useReducedMotion } = FramerMotion;
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
