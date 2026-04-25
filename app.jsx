@@ -637,20 +637,23 @@ function TitlePage({ letterCount, onBegin }) {
   return (
     <section className="title-page">
       <div className="title-eyebrow">A family archive</div>
-      <h1 className="title">Love, Always</h1>
-      <p className="subtitle">
-        The wartime letters of<br />
-        Raymond Eugene Lankford to Joan Northcutt
-      </p>
-      <ShipOrnament />
-      <p className="frontispiece">
-        A Navy boy. A girl back home in Kentucky.<br />
-        The last calm year before Pearl Harbor.
-      </p>
-      <p className="title-count">
-        {letterCount} letters · April – December 1940
-      </p>
-      <button className="title-prompt" onClick={onBegin}>Begin Chapter I</button>
+      <div className="title-hero">
+        <h1 className="title">Love, Always</h1>
+        <p className="subtitle">
+          The wartime letters of<br />
+          Raymond Eugene Lankford to Joan Northcutt
+        </p>
+      </div>
+      <div className="title-foot">
+        <ShipOrnament />
+        <p className="frontispiece">
+          He would survive Pearl Harbor.<br />
+          He would survive the U.S.S. New Orleans.<br />
+          These letters came first.
+        </p>
+        <p className="title-count">{letterCount} letters · April – December 1940</p>
+        <button className="title-prompt" onClick={onBegin}>Begin Chapter I</button>
+      </div>
     </section>
   );
 }
