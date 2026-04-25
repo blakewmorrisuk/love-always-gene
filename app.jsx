@@ -450,18 +450,9 @@ function Postmark({ letter }) {
 }
 
 function LetterHeader({ letter }) {
-  const status = ({
-    "transcribed":         "Letter",
-    "transcribed_partial": "Letter",
-    "transcribed_draft":   "Draft Reading",
-    "envelope_only":       "Envelope Only",
-    "christmas_card":      "Christmas Card",
-    "telegram":            "Telegram",
-  })[letter.status] || "Letter";
   const weather = (window.LETTER_WEATHER && window.LETTER_WEATHER[letter.id]) || null;
   return (
     <header className="letter-head">
-      <div className="letter-eyebrow">{status} · No. {String(letter.n).padStart(2, "0")}</div>
       <div className="letter-num"><em>{letter.date_label}</em></div>
       <div className="letter-stamp">{letter.location_stamp}</div>
       {weather && !weather.error && <WeatherGlyph weather={weather} />}
