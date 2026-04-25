@@ -687,10 +687,16 @@ body.body--navy .folio::after { background: var(--brass-soft); opacity: 0.45; }
   position: relative;
   font-family: var(--serif-body);
   font-size: 1.02rem;
-  line-height: 1.75;
+  line-height: 1.78;
   color: var(--walnut);
-  text-wrap: pretty;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
   hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  word-spacing: -0.01em;
   width: 100%;
   border: 1px solid rgba(31,45,61,0.18);
   box-shadow:
@@ -1105,8 +1111,10 @@ body.body--navy .folio::after { background: var(--brass-soft); opacity: 0.45; }
   color: var(--walnut-soft);
   max-width: 33rem;
   margin: 0 auto;
-  text-align: left;
-  text-wrap: pretty;
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 .hairline-rule {
   width: 100%;
