@@ -169,11 +169,155 @@ body.body--navy .paper-grain { opacity: 0; }
   50% { opacity: 1; }
 }
 
+/* ---- weather: rain / drizzle ----------------------------------- */
+.rain-streak {
+  position: absolute;
+  top: -10vh;
+  width: 1px;
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(180,200,220,0.0) 10%,
+    rgba(180,200,220,0.55) 60%,
+    rgba(180,200,220,0.0) 100%);
+  animation-name: rain-fall;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: transform;
+  transform: rotate(8deg);
+  transform-origin: top;
+}
+@keyframes rain-fall {
+  0%   { transform: translate3d(0, -10vh, 0) rotate(8deg); opacity: 0; }
+  10%  { opacity: var(--rain-op, 0.55); }
+  90%  { opacity: var(--rain-op, 0.55); }
+  100% { transform: translate3d(0, 120vh, 0) rotate(8deg); opacity: 0; }
+}
+
+/* ---- weather: fog / haze --------------------------------------- */
+.fog-layer {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 90% 70% at 30% 50%, rgba(220,215,200,0.32), transparent 65%),
+    radial-gradient(ellipse 80% 60% at 75% 60%, rgba(220,215,200,0.28), transparent 65%);
+  animation: fog-drift 32s ease-in-out infinite;
+}
+.fog-layer.f2 { animation-duration: 48s; animation-direction: reverse; opacity: 0.7; }
+@keyframes fog-drift {
+  0%, 100% { transform: translate3d(-3%, 0, 0); opacity: 0.85; }
+  50%      { transform: translate3d(3%, -1%, 0); opacity: 1; }
+}
+
+/* ---- weather: cloud shadows ------------------------------------ */
+.cloud-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, rgba(255,255,255,0.32), rgba(220,210,180,0.0) 70%);
+  filter: blur(12px);
+  animation-name: cloud-drift;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: transform;
+}
+@keyframes cloud-drift {
+  0%   { transform: translate3d(-30vw, 0, 0); opacity: 0; }
+  10%  { opacity: var(--cloud-op, 0.55); }
+  90%  { opacity: var(--cloud-op, 0.55); }
+  100% { transform: translate3d(130vw, 0, 0); opacity: 0; }
+}
+
+/* ---- weather: sun rays + warm light ---------------------------- */
+.sun-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(255,228,170,0.35), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(255,210,140,0.22), transparent 50%);
+  animation: sun-pulse 12s ease-in-out infinite;
+}
+@keyframes sun-pulse {
+  0%, 100% { opacity: 0.85; }
+  50%      { opacity: 1; }
+}
+.sun-ray {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 60vh;
+  background: linear-gradient(to bottom, rgba(255,228,170,0.4), transparent 70%);
+  transform-origin: top center;
+  animation: ray-shimmer 9s ease-in-out infinite;
+}
+@keyframes ray-shimmer {
+  0%, 100% { opacity: 0.0; }
+  50%      { opacity: 0.45; }
+}
+
+/* ---- weather: thunderstorm flash ------------------------------- */
+.lightning-flash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 100% 40% at 50% 0%, rgba(255,255,235,0.65), transparent 55%);
+  opacity: 0;
+  animation: lightning 11s linear infinite;
+  pointer-events: none;
+}
+@keyframes lightning {
+  0%, 6%, 8%, 12%, 100% { opacity: 0; }
+  6.5%  { opacity: 0.85; }
+  7%    { opacity: 0.1; }
+  7.5%  { opacity: 0.7; }
+  8.5%  { opacity: 0; }
+}
+
+/* ---- weather: clear-night stars (rare for these dates) --------- */
+.star-twinkle {
+  position: absolute;
+  width: 2px; height: 2px;
+  border-radius: 50%;
+  background: rgba(226,209,169,0.85);
+  box-shadow: 0 0 4px rgba(226,209,169,0.6);
+  animation: twinkle 4s ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50%      { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .snow-flake, .dust-mote, .sea-shimmer, .sea-vignette {
+  .snow-flake, .dust-mote, .sea-shimmer, .sea-vignette,
+  .rain-streak, .fog-layer, .cloud-shape, .sun-glow, .sun-ray,
+  .lightning-flash, .star-twinkle {
     animation: none !important;
   }
 }
+
+/* ---- weather glyph on letter card ------------------------------ */
+.weather-glyph {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--navy);
+  opacity: 0.7;
+  font-weight: 500;
+  margin-top: 0.1rem;
+}
+.weather-glyph svg {
+  width: 14px; height: 14px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: var(--navy);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.85;
+}
+.weather-glyph .wg-temp { font-style: normal; color: var(--brass); font-weight: 600; }
 
 /* ---- book stage --------------------------------------------------- */
 
@@ -1803,6 +1947,11 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
 <script src="letters.js"></script>
+<!-- weather.js is generated by scripts/fetch_weather.mjs. If absent the
+     atmosphere falls back to chapter defaults. The onerror swallow avoids
+     a console 404 when it hasn't been generated yet. -->
+<script>window.LETTER_WEATHER = window.LETTER_WEATHER || null;</script>
+<script src="weather.js" onerror="void 0"></script>
 <script type="text/babel" src="app.jsx"></script>
 
 </body>

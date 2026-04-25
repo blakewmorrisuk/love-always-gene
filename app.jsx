@@ -52,58 +52,223 @@ function parseHashIdx(maxIdx) {
 /*  Atmosphere — chapter-keyed ambient motion                          */
 /* ------------------------------------------------------------------ */
 
-function Atmosphere({ chapterKey, on }) {
-  const snow = useMemo(() => {
-    const arr = [];
-    for (let i = 0; i < 40; i++) {
-      arr.push({
-        size: 2 + Math.random() * 4,
-        left: Math.random() * 100,
-        delay: -Math.random() * 18,
-        dur: 14 + Math.random() * 12,
-        drift: (Math.random() - 0.5) * 80,
-        op: 0.35 + Math.random() * 0.4,
-      });
-    }
-    return arr;
-  }, []);
+/* Map an Open-Meteo / WMO weathercode to one of our atmosphere kinds.
+   Reference: https://open-meteo.com/en/docs (Weather variable codes). */
+function weatherKind(w) {
+  if (!w || w.wmo == null) return null;
+  const c = w.wmo;
+  if (c === 0)                                           return "clear";
+  if ([1, 2, 3].includes(c))                             return "clouds";
+  if ([45, 48].includes(c))                              return "fog";
+  if ([51, 53, 55, 56, 57].includes(c))                  return "drizzle";
+  if ([61, 63, 65, 66, 67, 80, 81, 82].includes(c))      return "rain";
+  if ([71, 73, 75, 77, 85, 86].includes(c))              return "snow";
+  if ([95, 96, 99].includes(c))                          return "storm";
+  return "clouds";
+}
 
-  const dust = useMemo(() => {
-    const arr = [];
-    for (let i = 0; i < 28; i++) {
-      arr.push({
-        size: 2 + Math.random() * 5,
-        left: 5 + Math.random() * 90,
-        top: 30 + Math.random() * 50,
-        delay: -Math.random() * 22,
-        dur: 18 + Math.random() * 16,
-        dx: (Math.random() - 0.5) * 220,
-        dy: -120 - Math.random() * 200,
-        op: 0.25 + Math.random() * 0.35,
-      });
-    }
-    return arr;
-  }, []);
+/* Friendly label for a kind. */
+function weatherLabel(kind) {
+  return ({
+    clear: "Clear",
+    clouds: "Cloudy",
+    fog: "Fog",
+    drizzle: "Drizzle",
+    rain: "Rain",
+    snow: "Snow",
+    storm: "Thunderstorm",
+  })[kind] || "";
+}
+
+/* Tiny SVG glyph per kind. */
+function WeatherIcon({ kind }) {
+  switch (kind) {
+    case "clear":   return (<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/><line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/><line x1="5.6" y1="5.6" x2="7" y2="7"/><line x1="17" y1="17" x2="18.4" y2="18.4"/><line x1="5.6" y1="18.4" x2="7" y2="17"/><line x1="17" y1="7" x2="18.4" y2="5.6"/></svg>);
+    case "clouds":  return (<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 16h11a3 3 0 0 0 0-6 5 5 0 0 0-9.6-1.5A4 4 0 0 0 7 16Z"/></svg>);
+    case "fog":     return (<svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="9" x2="20" y2="9"/><line x1="3" y1="13" x2="19" y2="13"/><line x1="5" y1="17" x2="21" y2="17"/></svg>);
+    case "drizzle":
+    case "rain":    return (<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14h11a3 3 0 0 0 0-6 5 5 0 0 0-9.6-1.5A4 4 0 0 0 7 14Z"/><line x1="9" y1="17" x2="8" y2="20"/><line x1="13" y1="17" x2="12" y2="20"/><line x1="17" y1="17" x2="16" y2="20"/></svg>);
+    case "snow":    return (<svg viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="6.5" y1="6.5" x2="17.5" y2="17.5"/><line x1="6.5" y1="17.5" x2="17.5" y2="6.5"/></svg>);
+    case "storm":   return (<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14h11a3 3 0 0 0 0-6 5 5 0 0 0-9.6-1.5A4 4 0 0 0 7 14Z"/><polyline points="13 14 10 19 13 19 11 22"/></svg>);
+    default:        return null;
+  }
+}
+
+function WeatherGlyph({ weather }) {
+  const kind = weatherKind(weather);
+  if (!kind || !weather) return null;
+  const t = weather.tmax_f != null ? `${Math.round(weather.tmax_f)}°` : "";
+  return (
+    <div className="weather-glyph" aria-label={`Weather: ${weatherLabel(kind)}${t ? ", high " + t : ""}`}>
+      <WeatherIcon kind={kind} />
+      <span>{weatherLabel(kind)}</span>
+      {t && <span className="wg-temp">{t}</span>}
+    </div>
+  );
+}
+
+function Atmosphere({ chapterKey, weather, on }) {
+  // Per-letter weather wins; otherwise fall back to chapter atmosphere.
+  const kind = weather ? weatherKind(weather) : null;
+
+  const snow = useMemo(() => Array.from({ length: 40 }, () => ({
+    size: 2 + Math.random() * 4, left: Math.random() * 100,
+    delay: -Math.random() * 18, dur: 14 + Math.random() * 12,
+    drift: (Math.random() - 0.5) * 80, op: 0.35 + Math.random() * 0.4,
+  })), []);
+
+  const rain = useMemo(() => Array.from({ length: 80 }, () => ({
+    left: Math.random() * 100, delay: -Math.random() * 1.2,
+    dur: 0.55 + Math.random() * 0.5, len: 60 + Math.random() * 40,
+    op: 0.35 + Math.random() * 0.35,
+  })), []);
+
+  const drizzle = useMemo(() => Array.from({ length: 40 }, () => ({
+    left: Math.random() * 100, delay: -Math.random() * 2.4,
+    dur: 1.4 + Math.random() * 0.8, len: 28 + Math.random() * 24,
+    op: 0.22 + Math.random() * 0.2,
+  })), []);
+
+  const clouds = useMemo(() => Array.from({ length: 5 }, () => ({
+    size: 240 + Math.random() * 360,
+    top: -20 + Math.random() * 90,
+    delay: -Math.random() * 90,
+    dur: 90 + Math.random() * 80,
+    op: 0.35 + Math.random() * 0.35,
+  })), []);
+
+  const dust = useMemo(() => Array.from({ length: 28 }, () => ({
+    size: 2 + Math.random() * 5, left: 5 + Math.random() * 90,
+    top: 30 + Math.random() * 50, delay: -Math.random() * 22,
+    dur: 18 + Math.random() * 16, dx: (Math.random() - 0.5) * 220,
+    dy: -120 - Math.random() * 200, op: 0.25 + Math.random() * 0.35,
+  })), []);
+
+  const rays = useMemo(() => Array.from({ length: 6 }, (_, i) => ({
+    left: 8 + i * 14 + Math.random() * 6,
+    delay: -Math.random() * 9,
+    rot: -8 + Math.random() * 16,
+  })), []);
+
+  const stars = useMemo(() => Array.from({ length: 60 }, () => ({
+    left: Math.random() * 100,
+    top: Math.random() * 65,
+    delay: -Math.random() * 4,
+    dur: 3 + Math.random() * 3,
+  })), []);
 
   if (!on) return null;
 
-  if (chapterKey === "great-lakes") {
+  // Render based on per-letter weather first
+  if (kind === "rain" || kind === "storm") {
+    return (
+      <div className="atmosphere atmosphere--on" aria-hidden="true">
+        {kind === "storm" && <div className="lightning-flash" />}
+        {rain.map((r, i) => (
+          <span key={i} className="rain-streak" style={{
+            left: `${r.left}%`,
+            height: `${r.len}px`,
+            animationDelay: `${r.delay}s`,
+            animationDuration: `${r.dur}s`,
+            "--rain-op": r.op,
+          }} />
+        ))}
+      </div>
+    );
+  }
+
+  if (kind === "drizzle") {
+    return (
+      <div className="atmosphere atmosphere--on" aria-hidden="true">
+        {drizzle.map((r, i) => (
+          <span key={i} className="rain-streak" style={{
+            left: `${r.left}%`,
+            height: `${r.len}px`,
+            animationDelay: `${r.delay}s`,
+            animationDuration: `${r.dur}s`,
+            "--rain-op": r.op,
+          }} />
+        ))}
+      </div>
+    );
+  }
+
+  if (kind === "snow") {
     return (
       <div className="atmosphere atmosphere--on" aria-hidden="true">
         {snow.map((s, i) => (
-          <span
-            key={i}
-            className="snow-flake"
-            style={{
-              width: `${s.size}px`,
-              height: `${s.size}px`,
-              left: `${s.left}%`,
-              animationDelay: `${s.delay}s`,
-              animationDuration: `${s.dur}s`,
-              "--snow-drift": `${s.drift}px`,
-              "--snow-op": s.op,
-            }}
-          />
+          <span key={i} className="snow-flake" style={{
+            width: `${s.size}px`, height: `${s.size}px`, left: `${s.left}%`,
+            animationDelay: `${s.delay}s`, animationDuration: `${s.dur}s`,
+            "--snow-drift": `${s.drift}px`, "--snow-op": s.op,
+          }} />
+        ))}
+      </div>
+    );
+  }
+
+  if (kind === "fog") {
+    return (
+      <div className="atmosphere atmosphere--on" aria-hidden="true">
+        <div className="fog-layer" />
+        <div className="fog-layer f2" />
+      </div>
+    );
+  }
+
+  if (kind === "clouds") {
+    return (
+      <div className="atmosphere atmosphere--on" aria-hidden="true">
+        {clouds.map((c, i) => (
+          <span key={i} className="cloud-shape" style={{
+            width: `${c.size}px`, height: `${c.size * 0.45}px`,
+            top: `${c.top}%`,
+            animationDelay: `${c.delay}s`,
+            animationDuration: `${c.dur}s`,
+            "--cloud-op": c.op,
+          }} />
+        ))}
+      </div>
+    );
+  }
+
+  if (kind === "clear") {
+    return (
+      <div className="atmosphere atmosphere--on" aria-hidden="true">
+        <div className="sun-glow" />
+        {rays.map((r, i) => (
+          <span key={i} className="sun-ray" style={{
+            left: `${r.left}%`,
+            transform: `rotate(${r.rot}deg)`,
+            animationDelay: `${r.delay}s`,
+          }} />
+        ))}
+        {dust.slice(0, 14).map((d, i) => (
+          <span key={`d${i}`} className="dust-mote" style={{
+            width: `${d.size}px`, height: `${d.size}px`,
+            left: `${d.left}%`, top: `${d.top}%`,
+            animationDelay: `${d.delay}s`, animationDuration: `${d.dur}s`,
+            "--dust-x": `${d.dx}px`, "--dust-y": `${d.dy}px`,
+            "--dust-op": d.op,
+          }} />
+        ))}
+      </div>
+    );
+  }
+
+  // Fallbacks: chapter-default atmosphere when there's no weather record (e.g.
+  // chapter divider pages, or weather.js not generated yet).
+  if (chapterKey === "great-lakes") {
+    return (
+      <div className="atmosphere atmosphere--on" aria-hidden="true">
+        {clouds.map((c, i) => (
+          <span key={i} className="cloud-shape" style={{
+            width: `${c.size}px`, height: `${c.size * 0.45}px`,
+            top: `${c.top}%`,
+            animationDelay: `${c.delay}s`,
+            animationDuration: `${c.dur}s`,
+            "--cloud-op": c.op,
+          }} />
         ))}
       </div>
     );
@@ -113,21 +278,13 @@ function Atmosphere({ chapterKey, on }) {
     return (
       <div className="atmosphere atmosphere--on" aria-hidden="true">
         {dust.map((d, i) => (
-          <span
-            key={i}
-            className="dust-mote"
-            style={{
-              width: `${d.size}px`,
-              height: `${d.size}px`,
-              left: `${d.left}%`,
-              top: `${d.top}%`,
-              animationDelay: `${d.delay}s`,
-              animationDuration: `${d.dur}s`,
-              "--dust-x": `${d.dx}px`,
-              "--dust-y": `${d.dy}px`,
-              "--dust-op": d.op,
-            }}
-          />
+          <span key={i} className="dust-mote" style={{
+            width: `${d.size}px`, height: `${d.size}px`,
+            left: `${d.left}%`, top: `${d.top}%`,
+            animationDelay: `${d.delay}s`, animationDuration: `${d.dur}s`,
+            "--dust-x": `${d.dx}px`, "--dust-y": `${d.dy}px`,
+            "--dust-op": d.op,
+          }} />
         ))}
       </div>
     );
@@ -291,11 +448,13 @@ function LetterHeader({ letter }) {
     "christmas_card":      "Christmas Card",
     "telegram":            "Telegram",
   })[letter.status] || "Letter";
+  const weather = (window.LETTER_WEATHER && window.LETTER_WEATHER[letter.id]) || null;
   return (
     <header className="letter-head">
       <div className="letter-eyebrow">{status} · No. {String(letter.n).padStart(2, "0")}</div>
       <div className="letter-num"><em>{letter.date_label}</em></div>
       <div className="letter-stamp">{letter.location_stamp}</div>
+      {weather && !weather.error && <WeatherGlyph weather={weather} />}
       <Postmark letter={letter} />
     </header>
   );
@@ -819,6 +978,11 @@ function App() {
     if (currentPage.type === "letter") return currentPage.chapter.key;
     return null;
   }, [currentPage]);
+  const currentWeather = useMemo(() => {
+    if (currentPage.type !== "letter") return null;
+    const w = window.LETTER_WEATHER && window.LETTER_WEATHER[currentPage.letter.id];
+    return (w && !w.error) ? w : null;
+  }, [currentPage]);
 
   const isNavy = currentPage.type === "chapter";
   useEffect(() => {
@@ -860,7 +1024,7 @@ function App() {
 
   return (
     <>
-      <AtmosphereMount chapterKey={chapterKey} />
+      <AtmosphereMount chapterKey={chapterKey} weather={currentWeather} />
       <ProgressBar pageIdx={pageIdx} total={pages.length} pages={pages} isVisible={showProgress} />
       <div className="stage" style={{ perspective: "1400px" }}>
         <AnimatePresence mode="wait" initial={false} custom={direction}>
@@ -913,7 +1077,7 @@ function App() {
   );
 }
 
-function AtmosphereMount({ chapterKey }) {
+function AtmosphereMount({ chapterKey, weather }) {
   const [mounted, setMounted] = useState(null);
   useLayoutEffect(() => {
     const node = document.getElementById("atmosphere-root");
@@ -921,7 +1085,7 @@ function AtmosphereMount({ chapterKey }) {
   }, []);
   if (!mounted) return null;
   return createPortal(
-    <Atmosphere chapterKey={chapterKey} on={!!chapterKey} />,
+    <Atmosphere chapterKey={chapterKey} weather={weather} on={!!chapterKey} />,
     mounted
   );
 }
