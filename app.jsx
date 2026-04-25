@@ -1,5 +1,8 @@
-/* global React, ReactDOM, LETTERS, CHAPTERS */
-const { useState, useEffect, useMemo, useCallback, useRef, useLayoutEffect } = React;
+/* global LETTERS, CHAPTERS */
+import React, { useState, useEffect, useMemo, useCallback, useRef, useLayoutEffect } from "react";
+import { createPortal } from "react-dom";
+import { createRoot } from "react-dom/client";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -45,18 +48,11 @@ function parseHashIdx(maxIdx) {
   return i;
 }
 
-function prefersReducedMotion() {
-  return typeof window !== "undefined" &&
-    window.matchMedia &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-
 /* ------------------------------------------------------------------ */
 /*  Atmosphere — chapter-keyed ambient motion                          */
 /* ------------------------------------------------------------------ */
 
 function Atmosphere({ chapterKey, on }) {
-  // Pre-generate stable particle params once per chapter
   const snow = useMemo(() => {
     const arr = [];
     for (let i = 0; i < 40; i++) {
@@ -454,7 +450,7 @@ function ChapterDivider({ chapter, letters, allChapters, allLetters }) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Folio (in-page, replaces fixed top indicator)                      */
+/*  Folio                                                               */
 /* ------------------------------------------------------------------ */
 
 function Folio({ page, totalLetters }) {
@@ -477,7 +473,7 @@ function Folio({ page, totalLetters }) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Page renderer (one full surface)                                   */
+/*  Page renderer                                                      */
 /* ------------------------------------------------------------------ */
 
 function PageContent({ page, totalLetters, onOpen, allChapters, allLetters }) {
@@ -524,7 +520,6 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  // Group pages by chapter for display
   const sections = [];
   let titleIdx = pages.findIndex(p => p.type === "title");
   let closingIdx = pages.findIndex(p => p.type === "closing");
@@ -533,7 +528,6 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
     const p = pages[i];
     if (p.type === "chapter") {
       const sec = { chapter: p.chapter, chapterIdx: i, items: [] };
-      // collect subsequent letter pages that belong to this chapter
       for (let j = i + 1; j < pages.length; j++) {
         if (pages[j].type !== "letter") break;
         if (pages[j].chapter.key !== p.chapter.key) break;
@@ -605,74 +599,43 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS), []);
   const [pageIdx, setPageIdx] = useState(() => parseHashIdx(pages.length - 1));
-  // turn state: { from, to, dir: 1|-1 } or null
-  const [turn, setTurn] = useState(null);
   const [lb, setLb] = useState(null);
   const [tocOpen, setTocOpen] = useState(false);
   const swipeRef = useRef(null);
-  const turnLockRef = useRef(false);
-
-  const TURN_MS = 900;
-  const reduced = prefersReducedMotion();
+  const reduced = useReducedMotion();
 
   const goto = useCallback((idx) => {
-    setPageIdx((curr) => {
+    setPageIdx(curr => {
       const next = Math.max(0, Math.min(pages.length - 1, idx));
-      if (next === curr) return curr;
-      if (turnLockRef.current) return curr;
-
-      const dir = next > curr ? 1 : -1;
-      turnLockRef.current = true;
-      setTurn({ from: curr, to: next, dir });
-
-      if (window.location.hash !== `#p=${next}`) {
-        window.location.hash = `p=${next}`;
-      }
-
-      const dur = reduced ? 280 : TURN_MS;
-      window.setTimeout(() => {
-        turnLockRef.current = false;
-        setTurn(null);
-      }, dur + 30);
-
-      return next;
+      return next === curr ? curr : next;
     });
-  }, [pages.length, reduced]);
+  }, [pages.length]);
 
   const next = useCallback(() => {
-    setPageIdx(curr => {
-      goto(curr + 1);
-      return curr;
-    });
-  }, [goto]);
-  const prev = useCallback(() => {
-    setPageIdx(curr => {
-      goto(curr - 1);
-      return curr;
-    });
-  }, [goto]);
+    setPageIdx(curr => Math.min(pages.length - 1, curr + 1));
+  }, [pages.length]);
 
-  // hash listener for back/forward
+  const prev = useCallback(() => {
+    setPageIdx(curr => Math.max(0, curr - 1));
+  }, [pages.length]);
+
+  // sync hash on pageIdx change
+  useEffect(() => {
+    const target = `p=${pageIdx}`;
+    if (window.location.hash.replace(/^#/, "") !== target) {
+      window.location.hash = target;
+    }
+  }, [pageIdx]);
+
+  // back/forward
   useEffect(() => {
     const onHash = () => {
       const idx = parseHashIdx(pages.length - 1);
-      setPageIdx(curr => {
-        if (idx === curr) return curr;
-        if (turnLockRef.current) return curr;
-        const dir = idx > curr ? 1 : -1;
-        turnLockRef.current = true;
-        setTurn({ from: curr, to: idx, dir });
-        const dur = reduced ? 280 : TURN_MS;
-        window.setTimeout(() => {
-          turnLockRef.current = false;
-          setTurn(null);
-        }, dur + 30);
-        return idx;
-      });
+      setPageIdx(curr => idx === curr ? curr : idx);
     };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
-  }, [pages.length, reduced]);
+  }, [pages.length]);
 
   // keyboard nav
   useEffect(() => {
@@ -717,7 +680,6 @@ function App() {
     };
   }, [next, prev, lb, tocOpen]);
 
-  // body class for navy + chapter atmosphere key
   const currentPage = pages[pageIdx];
   const chapterKey = useMemo(() => {
     if (currentPage.type === "chapter") return currentPage.chapter.key;
@@ -726,12 +688,10 @@ function App() {
   }, [currentPage]);
 
   const isNavy = currentPage.type === "chapter";
-
   useEffect(() => {
     document.body.classList.toggle("body--navy", isNavy);
   }, [isNavy]);
 
-  // lightbox
   const openLb = useCallback((letter, page = 1) => setLb({ letter, page }), []);
   const closeLb = useCallback(() => setLb(null), []);
   const navLb = useCallback((dir) => {
@@ -746,64 +706,37 @@ function App() {
 
   useEffect(() => {
     if (lb || tocOpen) {
-      const prev = document.body.style.overflow;
+      const prevOverflow = document.body.style.overflow;
       document.body.style.overflow = "hidden";
-      return () => { document.body.style.overflow = prev; };
+      return () => { document.body.style.overflow = prevOverflow; };
     }
   }, [lb, tocOpen]);
 
-  // RENDER ----------------------------------------------------------
-  // During a turn we render TWO surfaces:
-  //   - "under": the destination page sitting in place
-  //   - "flipping": the outgoing page (forward) or incoming page (backward) that animates
-  //
-  // Forward turn: outgoing "from" page rotates from 0° → -180° (lifts at right, swings to left)
-  // Backward turn: incoming "to" page rotates from -180° → 0° (begins folded, lays flat)
-
   const totalLetters = LETTERS.length;
-  const onOpen = openLb;
-
-  let topContent, underContent, topClass, underClass;
-
-  if (turn) {
-    const fromPage = pages[turn.from];
-    const toPage = pages[turn.to];
-    if (turn.dir === 1) {
-      // forward
-      underContent = <PageContent page={toPage} totalLetters={totalLetters} onOpen={onOpen} allChapters={CHAPTERS} allLetters={LETTERS} />;
-      topContent   = <PageContent page={fromPage} totalLetters={totalLetters} onOpen={onOpen} allChapters={CHAPTERS} allLetters={LETTERS} />;
-      underClass = `page-surface under ${toPage.type === "chapter" ? "is-navy" : ""}`;
-      topClass   = `page-surface flip-forward-out ${fromPage.type === "chapter" ? "is-navy" : ""}`;
-    } else {
-      // backward — top is the incoming page that unfolds onto the spread
-      underContent = <PageContent page={fromPage} totalLetters={totalLetters} onOpen={onOpen} allChapters={CHAPTERS} allLetters={LETTERS} />;
-      topContent   = <PageContent page={toPage} totalLetters={totalLetters} onOpen={onOpen} allChapters={CHAPTERS} allLetters={LETTERS} />;
-      underClass = `page-surface under ${fromPage.type === "chapter" ? "is-navy" : ""}`;
-      topClass   = `page-surface flip-backward-in ${toPage.type === "chapter" ? "is-navy" : ""}`;
-    }
-  } else {
-    underContent = null;
-    topContent   = <PageContent page={currentPage} totalLetters={totalLetters} onOpen={onOpen} allChapters={CHAPTERS} allLetters={LETTERS} />;
-    underClass = "";
-    topClass   = `page-surface ${currentPage.type === "chapter" ? "is-navy" : ""}`;
-  }
-
-  // atmosphere root portal
-  useEffect(() => {
-    // no-op; Atmosphere is rendered into #atmosphere-root via portal-style mount
-  }, []);
+  const dur = reduced ? 0 : 0.22;
 
   return (
     <>
       <AtmosphereMount chapterKey={chapterKey} />
-      <div className={"stage" + (turn ? " is-turning" : "")}>
-        <div className="spine-shadow" />
-        {underContent && <div className={underClass}>{underContent}</div>}
-        <div className={topClass} key={turn ? `${turn.from}-${turn.to}-${turn.dir}` : `s-${pageIdx}`}>
-          {topContent}
-          {turn && <div className="page-shade" />}
-          {turn && <div className="page-back">{turn.dir === 1 ? "Love, Always" : "Love, Always"}</div>}
-        </div>
+      <div className="stage">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={pageIdx}
+            className={"page-surface" + (isNavy ? " is-navy" : "")}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: dur, ease: "easeOut" }}
+          >
+            <PageContent
+              page={currentPage}
+              totalLetters={totalLetters}
+              onOpen={openLb}
+              allChapters={CHAPTERS}
+              allLetters={LETTERS}
+            />
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       <NavChrome
@@ -829,7 +762,6 @@ function App() {
   );
 }
 
-/* atmosphere mounts into its own root */
 function AtmosphereMount({ chapterKey }) {
   const [mounted, setMounted] = useState(null);
   useLayoutEffect(() => {
@@ -837,10 +769,10 @@ function AtmosphereMount({ chapterKey }) {
     if (node) setMounted(node);
   }, []);
   if (!mounted) return null;
-  return ReactDOM.createPortal(
+  return createPortal(
     <Atmosphere chapterKey={chapterKey} on={!!chapterKey} />,
     mounted
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+createRoot(document.getElementById("root")).render(<App />);

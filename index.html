@@ -34,9 +34,6 @@
   --mono:          "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --measure: 36rem;
-
-  --turn-dur: 900ms;
-  --turn-ease: cubic-bezier(0.55, 0.06, 0.32, 0.98);
 }
 
 * { box-sizing: border-box; }
@@ -184,26 +181,11 @@ body.body--navy .paper-grain { opacity: 0; }
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  perspective: 2400px;
-  perspective-origin: 50% 50%;
   z-index: 3;
 }
 
-.spine-shadow {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 50%;
-  width: 40px;
-  margin-left: -20px;
-  background: radial-gradient(ellipse at center, rgba(60,40,20,0.18), transparent 70%);
-  pointer-events: none;
-  z-index: 4;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-.stage.is-turning .spine-shadow { opacity: 1; }
-
-/* page surface — fills the viewport, scrolls internally */
+/* page surface — fills the viewport, scrolls internally.
+   Framer Motion drives the cross-fade via inline opacity. */
 .page-surface {
   position: absolute;
   inset: 0;
@@ -211,126 +193,12 @@ body.body--navy .paper-grain { opacity: 0; }
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  transform-origin: left center;
-  transition: transform var(--turn-dur) var(--turn-ease), opacity var(--turn-dur) var(--turn-ease), box-shadow var(--turn-dur) ease;
-  /* slight inner book shadow for depth */
   box-shadow: inset 18px 0 28px -18px rgba(60,40,20,0.18);
 }
-/* 3D context only applies during a turn — keeps Safari trackpad scroll working on static pages */
-.page-surface.flip-forward-out,
-.page-surface.flip-backward-in,
-.page-surface.under {
-  backface-visibility: hidden;
-  will-change: transform, opacity;
-}
 
-/* navy-themed surface (chapter dividers) */
-.page-surface.is-navy { background: var(--navy); box-shadow: inset 18px 0 32px -18px rgba(0,0,0,0.5); }
-
-/* the under page (incoming) sits below; comes into view as outgoing turns */
-.page-surface.under {
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* outgoing page that's flipping forward (next button) — rotates from 0 to -180 around left edge */
-.page-surface.flip-forward-out {
-  z-index: 3;
-  transform-origin: left center;
-  animation: turn-forward-out var(--turn-dur) var(--turn-ease) forwards;
-  pointer-events: none;
-  box-shadow:
-    inset 18px 0 28px -18px rgba(60,40,20,0.18),
-    8px 4px 32px rgba(60,40,20,0.25);
-}
-@keyframes turn-forward-out {
-  0%   { transform: rotateY(0deg); }
-  100% { transform: rotateY(-180deg); }
-}
-
-/* the back face of the flipping page — shown briefly */
-.page-back {
-  position: absolute;
-  inset: 0;
-  background: var(--paper-deep);
-  background-image:
-    repeating-linear-gradient(180deg,
-      rgba(155,123,63,0.04) 0,
-      rgba(155,123,63,0.04) 1px,
-      transparent 1px,
-      transparent 28px),
-    radial-gradient(ellipse at 30% 40%, rgba(155,123,63,0.08), transparent 60%);
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--brass);
-  font-family: var(--serif-display);
-  font-style: italic;
-  font-size: 1.1rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.4;
-}
-.page-surface.is-navy .page-back {
-  background: var(--navy-deep);
-  color: var(--brass-soft);
-}
-
-/* incoming page when flipping backward (prev button) — rotates from 180 down to 0 */
-.page-surface.flip-backward-in {
-  z-index: 3;
-  transform-origin: left center;
-  animation: turn-backward-in var(--turn-dur) var(--turn-ease) forwards;
-  pointer-events: none;
-  box-shadow:
-    inset 18px 0 28px -18px rgba(60,40,20,0.18),
-    8px 4px 32px rgba(60,40,20,0.25);
-}
-@keyframes turn-backward-in {
-  0%   { transform: rotateY(-180deg); }
-  100% { transform: rotateY(0deg); }
-}
-
-/* during forward turn, outgoing's back face is the visible side at the end — fade a soft shadow gradient sweep */
-.page-shade {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(to right,
-    rgba(60,40,20,0.0) 0%,
-    rgba(60,40,20,0.0) 20%,
-    rgba(60,40,20,0.18) 80%,
-    rgba(60,40,20,0.30) 100%);
-  opacity: 0;
-  z-index: 5;
-}
-.page-surface.flip-forward-out .page-shade {
-  animation: shade-forward var(--turn-dur) var(--turn-ease) forwards;
-}
-.page-surface.flip-backward-in .page-shade {
-  animation: shade-backward var(--turn-dur) var(--turn-ease) forwards;
-}
-@keyframes shade-forward {
-  0%   { opacity: 0; }
-  40%  { opacity: 1; }
-  100% { opacity: 0; }
-}
-@keyframes shade-backward {
-  0%   { opacity: 0; }
-  40%  { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-/* ---- when reduced motion: no 3D, just crossfade -------------------- */
-
-@media (prefers-reduced-motion: reduce) {
-  .page-surface.flip-forward-out,
-  .page-surface.flip-backward-in {
-    animation: rm-fadeout 280ms ease forwards;
-  }
-  @keyframes rm-fadeout { to { opacity: 0; } }
+.page-surface.is-navy {
+  background: var(--navy);
+  box-shadow: inset 18px 0 32px -18px rgba(0,0,0,0.5);
 }
 
 /* ---- archive layout (inside each page surface) ------------------- */
@@ -1216,9 +1084,9 @@ body.body--navy .toc-btn:hover {
 
 @media print {
   html, body { overflow: visible; height: auto; }
-  .paper-grain, .atmosphere, .nav-chrome, .toc-btn, .photo-link, .lb-close, .lb-nav, .spine-shadow, .page-back, .page-shade { display: none; }
-  .stage { perspective: none; height: auto; overflow: visible; }
-  .page-surface { position: static; box-shadow: none; transform: none !important; animation: none !important; }
+  .paper-grain, .atmosphere, .nav-chrome, .toc-btn, .photo-link, .lb-close, .lb-nav { display: none; }
+  .stage { height: auto; overflow: visible; }
+  .page-surface { position: static; box-shadow: none; }
   .archive { max-width: none; padding: 0; }
   .letter-card { page-break-inside: avoid; }
   .chapter-divider { page-break-before: always; }
@@ -1230,12 +1098,21 @@ body.body--navy .toc-btn:hover {
 <div id="atmosphere-root"></div>
 <div id="root"></div>
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom": "https://esm.sh/react-dom@18.3.1?deps=react@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?deps=react@18.3.1",
+    "framer-motion": "https://esm.sh/framer-motion@11?external=react,react-dom"
+  }
+}
+</script>
+
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
 <script src="letters.js"></script>
-<script type="text/babel" src="app.jsx"></script>
+<script type="text/babel" data-type="module" src="app.jsx"></script>
 
 </body>
 </html>
