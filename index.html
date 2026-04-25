@@ -330,21 +330,27 @@ body.body--navy .paper-grain { opacity: 0; }
 }
 
 /* page surface — fills the viewport, scrolls internally.
-   Framer Motion drives the cross-fade via inline opacity. */
+   Transparent so the atmosphere layer (snow/rain/clouds/etc.) shows
+   through; body bg supplies the page color. */
 .page-surface {
   position: absolute;
   inset: 0;
-  background: var(--paper);
+  background: transparent;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+}
+/* book-spine inset shadow lives on a separate fixed layer so it doesn't
+   paint over the atmosphere */
+.spine-shadow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
   box-shadow: inset 18px 0 28px -18px rgba(60,40,20,0.18);
+  transition: box-shadow 0.5s ease;
 }
-
-.page-surface.is-navy {
-  background: var(--navy);
-  box-shadow: inset 18px 0 32px -18px rgba(0,0,0,0.5);
-}
+body.body--navy .spine-shadow { box-shadow: inset 18px 0 32px -18px rgba(0,0,0,0.5); }
 
 /* ---- archive layout (inside each page surface) ------------------- */
 
@@ -1915,6 +1921,7 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 <div class="paper-grain"></div>
 <div id="atmosphere-root"></div>
 <div id="root"></div>
+<div class="spine-shadow" aria-hidden="true"></div>
 
 <script type="importmap">
 {
