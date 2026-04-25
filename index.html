@@ -48,6 +48,7 @@ html, body {
   /* Lock the viewport so the book stage owns scroll */
   overflow: hidden;
   height: 100%;
+  transition: background 0.4s ease;
 }
 body {
   font-family: var(--serif-body);
@@ -58,6 +59,11 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+/* Navy body when on a chapter divider page (set by App via classList) */
+body.body--navy,
+body.body--navy html { background: var(--navy); }
+body.body--navy .stage { background: var(--navy); }
 
 /* paper grain — extremely subtle */
 .paper-grain {
@@ -204,12 +210,18 @@ body.body--navy .paper-grain { opacity: 0; }
   background: var(--paper);
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   transform-origin: left center;
-  backface-visibility: hidden;
-  will-change: transform, opacity;
   transition: transform var(--turn-dur) var(--turn-ease), opacity var(--turn-dur) var(--turn-ease), box-shadow var(--turn-dur) ease;
   /* slight inner book shadow for depth */
   box-shadow: inset 18px 0 28px -18px rgba(60,40,20,0.18);
+}
+/* 3D context only applies during a turn — keeps Safari trackpad scroll working on static pages */
+.page-surface.flip-forward-out,
+.page-surface.flip-backward-in,
+.page-surface.under {
+  backface-visibility: hidden;
+  will-change: transform, opacity;
 }
 
 /* navy-themed surface (chapter dividers) */
@@ -338,7 +350,9 @@ body.body--navy .paper-grain { opacity: 0; }
 /* Now lives INSIDE the scroll surface as a small folio mark up top.   */
 
 .folio {
-  text-align: center;
+  display: block;
+  width: 100%;
+  text-align: center !important;
   font-family: var(--serif-body);
   font-style: italic;
   font-size: 0.7rem;
@@ -349,7 +363,8 @@ body.body--navy .paper-grain { opacity: 0; }
   user-select: none;
 }
 .folio .dot { color: var(--brass); margin: 0 0.55em; }
-.is-navy .folio { color: var(--brass-faint); }
+.is-navy .folio,
+body.body--navy .folio { color: var(--brass-faint); }
 
 /* ---- title page -------------------------------------------------- */
 
