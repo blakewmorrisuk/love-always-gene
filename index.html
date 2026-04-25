@@ -418,15 +418,14 @@ body.body--navy .folio::after { background: var(--brass-soft); opacity: 0.45; }
 
 .title-page {
   text-align: center;
-  padding: 3.2rem 0 2.4rem;
+  padding: 0;
   min-height: calc(100vh - 6rem);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
   isolation: isolate;
-  gap: 1.5rem;
 }
 .title-page::before {
   content: "";
@@ -439,24 +438,11 @@ body.body--navy .folio::after { background: var(--brass-soft); opacity: 0.45; }
   pointer-events: none;
 }
 
-/* Title-hero is the middle band — flex:1 plus internal centering pins
-   the title + subtitle to the dead vertical center of the spread. */
 .title-hero {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-/* Foot band — ornament + line + count + CTA, packed at the bottom. */
-.title-foot {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.4rem;
-  width: 100%;
+  gap: 2rem;
 }
 
 .title-eyebrow {
@@ -484,24 +470,25 @@ body.body--navy .folio::after { background: var(--brass-soft); opacity: 0.45; }
 .title {
   font-family: var(--serif-display);
   font-weight: 500;
-  font-size: clamp(3.4rem, 9.5vw, 6.2rem);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
+  font-size: clamp(3.6rem, 10vw, 6.6rem);
+  line-height: 1;
+  letter-spacing: -0.022em;
   color: var(--ink);
-  margin: 0 0 1.7rem;
+  margin: 0;
   font-style: italic;
   font-variation-settings: "opsz" 60;
 }
 
 .subtitle {
   font-family: var(--serif-display);
+  font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.1rem, 2.3vw, 1.35rem);
-  line-height: 1.55;
+  font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+  line-height: 1.7;
   color: var(--walnut-soft);
   max-width: 32rem;
-  margin: 0 auto 3rem;
-  letter-spacing: 0.005em;
+  margin: 0;
+  letter-spacing: 0.04em;
 }
 
 .ornament {
@@ -627,12 +614,15 @@ body.body--navy .folio::after { background: var(--brass-soft); opacity: 0.45; }
 .chapter-cta:hover::after,
 .chapter-cta:focus-visible::after { transform: translateX(4px); }
 
-/* huge translucent roman numeral as background watermark */
+/* huge translucent roman numeral — sits behind the title block.
+   Pinned high so it doesn't bleed through the bridge prose lower on the
+   spread; horizontally centered across the page. */
 .chapter-watermark {
   position: absolute;
-  inset: 0;
+  top: clamp(2rem, 8vh, 6rem);
+  left: 0;
+  right: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
   pointer-events: none;
   z-index: -1;
@@ -641,9 +631,9 @@ body.body--navy .folio::after { background: var(--brass-soft); opacity: 0.45; }
   font-family: var(--serif-display);
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(14rem, 28vw, 26rem);
+  font-size: clamp(11rem, 22vw, 18rem);
   line-height: 1;
-  color: rgba(226, 209, 169, 0.055);
+  color: rgba(226, 209, 169, 0.07);
   letter-spacing: -0.04em;
   user-select: none;
 }
@@ -1941,22 +1931,12 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-.title-page > .title-eyebrow,
 .title-page .title,
-.title-page .subtitle,
-.title-page .ornament,
-.title-page .frontispiece,
-.title-page .title-count,
-.title-page .title-prompt {
+.title-page .subtitle {
   animation: fade-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-.title-page > .title-eyebrow { animation-delay: 0.05s; }
-.title-page .title { animation-delay: 0.18s; animation-duration: 1.2s; }
-.title-page .subtitle { animation-delay: 0.42s; }
-.title-page .ornament { animation-delay: 0.55s; }
-.title-page .frontispiece { animation-delay: 0.7s; }
-.title-page .title-count { animation-delay: 0.82s; }
-.title-page .title-prompt { animation-delay: 0.95s; }
+.title-page .title { animation-delay: 0.1s; animation-duration: 1.2s; }
+.title-page .subtitle { animation-delay: 0.4s; }
 
 .chapter-divider > *:not(.chapter-watermark) {
   animation: fade-rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -1970,13 +1950,8 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 .chapter-watermark { animation: fade-in 1.6s ease 0.2s both; }
 
 @media (prefers-reduced-motion: reduce) {
-  .title-page > .title-eyebrow,
   .title-page .title,
   .title-page .subtitle,
-  .title-page .ornament,
-  .title-page .frontispiece,
-  .title-page .title-count,
-  .title-page .title-prompt,
   .chapter-divider > *:not(.chapter-watermark),
   .chapter-watermark {
     animation: none !important;
@@ -2035,14 +2010,14 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 
 <!-- Cache-bust: bump on every meaningful release so iOS Safari doesn't
      keep serving a stale app.jsx after a new index.html lands. -->
-<script>window.__APP_VERSION = "20260425e";</script>
-<script src="letters.js?v=20260425e"></script>
+<script>window.__APP_VERSION = "20260425f";</script>
+<script src="letters.js?v=20260425f"></script>
 <!-- weather.js is generated by scripts/fetch_weather.mjs. If absent the
      atmosphere falls back to chapter defaults. The onerror swallow avoids
      a console 404 when it hasn't been generated yet. -->
 <script>window.LETTER_WEATHER = window.LETTER_WEATHER || null;</script>
-<script src="weather.js?v=20260425e" onerror="void 0"></script>
-<script type="text/babel" src="app.jsx?v=20260425e"></script>
+<script src="weather.js?v=20260425f" onerror="void 0"></script>
+<script type="text/babel" src="app.jsx?v=20260425f"></script>
 
 </body>
 </html>

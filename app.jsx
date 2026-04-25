@@ -624,20 +624,15 @@ function ShipOrnament() {
   );
 }
 
-function TitlePage({ onBegin }) {
+function TitlePage() {
   return (
     <section className="title-page">
-      <div className="title-eyebrow">A family archive</div>
       <div className="title-hero">
         <h1 className="title">Love, Always</h1>
         <p className="subtitle">
-          The wartime letters of<br />
-          Raymond Eugene Lankford to Joan Northcutt
+          Raymond Eugene Lankford<br />
+          to Joan Northcutt
         </p>
-      </div>
-      <div className="title-foot">
-        <ShipOrnament />
-        <button className="title-prompt" onClick={onBegin}>Begin Chapter I</button>
       </div>
     </section>
   );
@@ -719,7 +714,7 @@ function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLette
   return (
     <main className="archive">
       <Folio page={page} totalLetters={totalLetters} />
-      {page.type === "title" && <TitlePage onBegin={onNext} />}
+      {page.type === "title" && <TitlePage />}
       {page.type === "chapter" && (
         <ChapterDivider
           chapter={page.chapter}
