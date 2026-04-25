@@ -1,5 +1,5 @@
 /* global React, ReactDOM, LETTERS, CHAPTERS */
-const { useState, useEffect, useMemo, useCallback, useRef } = React;
+const { useState, useEffect, useMemo, useCallback, useRef, useLayoutEffect } = React;
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -45,8 +45,115 @@ function parseHashIdx(maxIdx) {
   return i;
 }
 
+function prefersReducedMotion() {
+  return typeof window !== "undefined" &&
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
 /* ------------------------------------------------------------------ */
-/*  Route diagram (replaces the US silhouette)                         */
+/*  Atmosphere — chapter-keyed ambient motion                          */
+/* ------------------------------------------------------------------ */
+
+function Atmosphere({ chapterKey, on }) {
+  // Pre-generate stable particle params once per chapter
+  const snow = useMemo(() => {
+    const arr = [];
+    for (let i = 0; i < 40; i++) {
+      arr.push({
+        size: 2 + Math.random() * 4,
+        left: Math.random() * 100,
+        delay: -Math.random() * 18,
+        dur: 14 + Math.random() * 12,
+        drift: (Math.random() - 0.5) * 80,
+        op: 0.35 + Math.random() * 0.4,
+      });
+    }
+    return arr;
+  }, []);
+
+  const dust = useMemo(() => {
+    const arr = [];
+    for (let i = 0; i < 28; i++) {
+      arr.push({
+        size: 2 + Math.random() * 5,
+        left: 5 + Math.random() * 90,
+        top: 30 + Math.random() * 50,
+        delay: -Math.random() * 22,
+        dur: 18 + Math.random() * 16,
+        dx: (Math.random() - 0.5) * 220,
+        dy: -120 - Math.random() * 200,
+        op: 0.25 + Math.random() * 0.35,
+      });
+    }
+    return arr;
+  }, []);
+
+  if (!on) return null;
+
+  if (chapterKey === "great-lakes") {
+    return (
+      <div className="atmosphere atmosphere--on" aria-hidden="true">
+        {snow.map((s, i) => (
+          <span
+            key={i}
+            className="snow-flake"
+            style={{
+              width: `${s.size}px`,
+              height: `${s.size}px`,
+              left: `${s.left}%`,
+              animationDelay: `${s.delay}s`,
+              animationDuration: `${s.dur}s`,
+              "--snow-drift": `${s.drift}px`,
+              "--snow-op": s.op,
+            }}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  if (chapterKey === "san-diego") {
+    return (
+      <div className="atmosphere atmosphere--on" aria-hidden="true">
+        {dust.map((d, i) => (
+          <span
+            key={i}
+            className="dust-mote"
+            style={{
+              width: `${d.size}px`,
+              height: `${d.size}px`,
+              left: `${d.left}%`,
+              top: `${d.top}%`,
+              animationDelay: `${d.delay}s`,
+              animationDuration: `${d.dur}s`,
+              "--dust-x": `${d.dx}px`,
+              "--dust-y": `${d.dy}px`,
+              "--dust-op": d.op,
+            }}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  if (chapterKey === "pearl-harbor") {
+    return (
+      <div className="atmosphere atmosphere--on" aria-hidden="true">
+        <div className="sea-layer" />
+        <div className="sea-vignette" />
+        <div className="sea-shimmer" />
+        <div className="sea-shimmer s2" />
+        <div className="sea-shimmer s3" />
+      </div>
+    );
+  }
+
+  return null;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Route diagram                                                      */
 /* ------------------------------------------------------------------ */
 
 function RouteDiagram({ activeChapter, chapters, letters }) {
@@ -55,9 +162,7 @@ function RouteDiagram({ activeChapter, chapters, letters }) {
   const stops = chapters.filter(c => usedKeys.has(c.key));
   if (stops.length === 0) return null;
 
-  const x0 = 60;
-  const x1 = 740;
-  const yMid = 70;
+  const x0 = 60, x1 = 740, yMid = 70;
   const positions = stops.map((s, i) => {
     const x = stops.length === 1
       ? (x0 + x1) / 2
@@ -76,28 +181,13 @@ function RouteDiagram({ activeChapter, chapters, letters }) {
           const label = (p.map && p.map.label) || p.location_label || p.title;
           return (
             <g key={p.key}>
-              <circle
-                cx={p.x}
-                cy={p.y}
-                r={isActive ? 6 : 4}
-                className={isActive ? "route-pin-active" : "route-pin-inactive"}
-              />
-              <text
-                x={p.x}
-                y={p.y - 18}
-                textAnchor="middle"
-                className={isActive ? "route-label route-label--active" : "route-label"}
-              >
+              <circle cx={p.x} cy={p.y} r={isActive ? 6 : 4}
+                className={isActive ? "route-pin-active" : "route-pin-inactive"} />
+              <text x={p.x} y={p.y - 18} textAnchor="middle"
+                className={isActive ? "route-label route-label--active" : "route-label"}>
                 {label}
               </text>
-              <text
-                x={p.x}
-                y={p.y + 24}
-                textAnchor="middle"
-                className="route-date"
-              >
-                {dr}
-              </text>
+              <text x={p.x} y={p.y + 24} textAnchor="middle" className="route-date">{dr}</text>
             </g>
           );
         })}
@@ -128,9 +218,8 @@ function Lightbox({ letter, page, onClose, onNav }) {
   const alt = `Original handwritten letter, page ${k} of ${total}, dated ${letter.date_label}`;
 
   return (
-    <div className="lightbox" role="dialog" aria-modal="true" aria-label="Original letter pages"
-         onClick={onClose}>
-      <button className="lb-close" onClick={onClose} aria-label="Close">close</button>
+    <div className="lightbox" role="dialog" aria-modal="true" onClick={onClose}>
+      <button className="lb-close" onClick={onClose}>close</button>
       <div className="lb-stage" onClick={(e) => e.stopPropagation()}>
         <img src={src} alt={alt} />
         <div className="lb-meta">
@@ -140,8 +229,8 @@ function Lightbox({ letter, page, onClose, onNav }) {
       </div>
       {total > 1 && (
         <>
-          <button className="lb-nav lb-prev" onClick={(e) => { e.stopPropagation(); onNav(-1); }} aria-label="Previous page">‹</button>
-          <button className="lb-nav lb-next" onClick={(e) => { e.stopPropagation(); onNav(1); }} aria-label="Next page">›</button>
+          <button className="lb-nav lb-prev" onClick={(e) => { e.stopPropagation(); onNav(-1); }}>‹</button>
+          <button className="lb-nav lb-next" onClick={(e) => { e.stopPropagation(); onNav(1); }}>›</button>
         </>
       )}
     </div>
@@ -178,21 +267,15 @@ function TranscribedCard({ letter, onOpen }) {
       <LetterHeader letter={letter} />
       <div className="letter-body">
         <div className="salutation">{letter.salutation}</div>
-        {letter.body.split(/\n\n+/).map((para, i) => (
-          <p key={i}>{para}</p>
-        ))}
-        {letter.partial && (
-          <p className="incomplete-marker">[the letter continues]</p>
-        )}
+        {letter.body.split(/\n\n+/).map((para, i) => <p key={i}>{para}</p>)}
+        {letter.partial && <p className="incomplete-marker">[the letter continues]</p>}
         <div className="signature">{letter.signature}</div>
         {letter.postscript && (
           <p className="postscript"><span className="ps-mark">P.S.</span> {letter.postscript}</p>
         )}
       </div>
       {letter.note && <p className="letter-note">{letter.note}</p>}
-      {letter.partial && (
-        <p className="letter-note">Transcription incomplete; the remainder is being verified.</p>
-      )}
+      {letter.partial && <p className="letter-note">Transcription incomplete; the remainder is being verified.</p>}
       {letter.image_count > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
     </article>
   );
@@ -209,17 +292,13 @@ function DraftCard({ letter, onOpen }) {
       return <React.Fragment key={i}>{part}</React.Fragment>;
     });
   };
-
   const paragraphs = letter.body.split(/\n\n+/);
-
   return (
     <article className="letter-card letter-card--draft" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
         <div className="salutation">{letter.salutation}</div>
-        {paragraphs.map((para, i) => (
-          <p key={i}>{renderBody(para)}</p>
-        ))}
+        {paragraphs.map((para, i) => <p key={i}>{renderBody(para)}</p>)}
         <div className="signature">{letter.signature}</div>
       </div>
       {letter.note && <p className="letter-note">{letter.note}</p>}
@@ -235,16 +314,12 @@ function EnvelopeCard({ letter, onOpen }) {
     <article className="letter-card letter-card--envelope" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="envelope-stage">
-        <button className="envelope-img" onClick={() => onOpen(letter, 1)}
-                aria-label={`Original envelope, dated ${letter.date_label}`}>
-          <img src={src}
-               alt={`Original envelope, postmarked ${letter.date_label}`} />
+        <button className="envelope-img" onClick={() => onOpen(letter, 1)}>
+          <img src={src} alt={`Original envelope, postmarked ${letter.date_label}`} />
         </button>
       </div>
       <p className="letter-note envelope-note">The letter inside has been lost.</p>
-      {letter.envelope_note && (
-        <p className="letter-note">{letter.envelope_note}</p>
-      )}
+      {letter.envelope_note && <p className="letter-note">{letter.envelope_note}</p>}
     </article>
   );
 }
@@ -255,15 +330,12 @@ function ChristmasCardCard({ letter, onOpen }) {
       <div className="brass-rule" />
       <LetterHeader letter={letter} />
       <div className="xmas-stage">
-        <button className="xmas-img" onClick={() => onOpen(letter, 2)}
-                aria-label={`Christmas card, ${letter.date_label}`}>
+        <button className="xmas-img" onClick={() => onOpen(letter, 2)}>
           <img src={`${letter.folder}/${letter.id}_p2.jpg`}
-               alt={`Original Christmas card, page 2 of ${letter.image_count}, dated ${letter.date_label}`} />
+               alt={`Original Christmas card, dated ${letter.date_label}`} />
         </button>
         <div className="xmas-verse">
-          {letter.card_verse.split("\n").map((line, i) => (
-            <div key={i}>{line}</div>
-          ))}
+          {letter.card_verse.split("\n").map((line, i) => <div key={i}>{line}</div>)}
         </div>
       </div>
       <div className="signature signature--xmas">{letter.signature}</div>
@@ -285,9 +357,7 @@ function TelegramCard({ letter, onOpen }) {
         </div>
         <div className="telegram-routing">{letter.telegram_routing}</div>
         <div className="telegram-to">
-          {letter.telegram_to.split("\n").map((line, i) => (
-            <div key={i}>{line}</div>
-          ))}
+          {letter.telegram_to.split("\n").map((line, i) => <div key={i}>{line}</div>)}
         </div>
         <div className="telegram-message">{letter.telegram_message}</div>
         <div className="telegram-signed">{letter.telegram_signed}</div>
@@ -317,7 +387,7 @@ function ShipOrnament() {
   return (
     <div className="ornament" aria-hidden="true">
       <span className="ornament-rule" />
-      <svg viewBox="0 0 28 28" className="ornament-anchor" aria-hidden="true">
+      <svg viewBox="0 0 28 28" className="ornament-anchor">
         <circle cx="14" cy="6" r="2.4" fill="none" stroke="#9B7B3F" strokeWidth="1.1" />
         <line x1="14" y1="8.4" x2="14" y2="22" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
         <line x1="9" y1="11" x2="19" y2="11" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
@@ -348,6 +418,7 @@ function TitlePage({ letterCount }) {
         {letterCount} letters, transcribed and assembled<br />
         for the family who carries his story
       </p>
+      <p className="title-prompt">Turn the page →</p>
     </section>
   );
 }
@@ -366,18 +437,16 @@ function Closing() {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Chapter divider page (full-bleed navy)                             */
+/*  Chapter divider                                                     */
 /* ------------------------------------------------------------------ */
 
 function ChapterDivider({ chapter, letters, allChapters, allLetters }) {
   return (
-    <section className="chapter-divider" id={`chapter-${chapter.key}`}>
-      <header className="chapter-head">
-        <div className="chapter-numeral">Chapter {chapter.numeral}</div>
-        <h2 className="chapter-title">{chapter.title}</h2>
-        <div className="chapter-loc">{chapter.location_label}</div>
-        <div className="chapter-dates">{dateRange(letters)}</div>
-      </header>
+    <section className="chapter-divider">
+      <div className="chapter-numeral">Chapter {chapter.numeral}</div>
+      <h2 className="chapter-title">{chapter.title}</h2>
+      <div className="chapter-loc">{chapter.location_label}</div>
+      <div className="chapter-dates">{dateRange(letters)}</div>
       <RouteDiagram activeChapter={chapter.key} chapters={allChapters} letters={allLetters} />
       <p className="chapter-bridge">{chapter.bridge}</p>
     </section>
@@ -385,44 +454,146 @@ function ChapterDivider({ chapter, letters, allChapters, allLetters }) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Page indicator + Nav chrome                                        */
+/*  Folio (in-page, replaces fixed top indicator)                      */
 /* ------------------------------------------------------------------ */
 
-function PageIndicator({ page, totalLetters }) {
-  let label = "";
-  if (page.type === "title") label = "Title";
-  else if (page.type === "closing") label = "Closing";
-  else if (page.type === "chapter") {
-    label = `Chapter ${page.chapter.numeral} · ${page.chapter.title}`;
-  } else if (page.type === "letter") {
-    label = `Letter ${page.letter.n} of ${totalLetters} · Chapter ${page.chapter.numeral}`;
+function Folio({ page, totalLetters }) {
+  if (page.type === "title" || page.type === "closing") return null;
+  if (page.type === "chapter") {
+    return (
+      <div className="folio">
+        Chapter {page.chapter.numeral}<span className="dot">·</span>{page.chapter.title}
+      </div>
+    );
   }
+  if (page.type === "letter") {
+    return (
+      <div className="folio">
+        Letter {page.letter.n} of {totalLetters}<span className="dot">·</span>Chapter {page.chapter.numeral}
+      </div>
+    );
+  }
+  return null;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Page renderer (one full surface)                                   */
+/* ------------------------------------------------------------------ */
+
+function PageContent({ page, totalLetters, onOpen, allChapters, allLetters }) {
   return (
-    <div className="page-indicator" aria-live="polite" aria-atomic="true">
-      {label}
+    <main className="archive">
+      <Folio page={page} totalLetters={totalLetters} />
+      {page.type === "title" && <TitlePage letterCount={totalLetters} />}
+      {page.type === "chapter" && (
+        <ChapterDivider
+          chapter={page.chapter}
+          letters={page.letters}
+          allChapters={allChapters}
+          allLetters={allLetters}
+        />
+      )}
+      {page.type === "letter" && <LetterCard letter={page.letter} onOpen={onOpen} />}
+      {page.type === "closing" && <Closing />}
+    </main>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Nav chrome + TOC                                                    */
+/* ------------------------------------------------------------------ */
+
+function NavChrome({ pageIdx, total, onPrev, onNext, onToc }) {
+  return (
+    <div className="nav-chrome" role="navigation">
+      <button className="nav-btn nav-prev" onClick={onPrev} disabled={pageIdx === 0}>
+        <span className="nav-arrow">‹</span> Previous
+      </button>
+      <button className="toc-btn" onClick={onToc}>Contents</button>
+      <button className="nav-btn nav-next" onClick={onNext} disabled={pageIdx === total - 1}>
+        Next <span className="nav-arrow">›</span>
+      </button>
     </div>
   );
 }
 
-function NavChrome({ pageIdx, total, onPrev, onNext }) {
+function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  // Group pages by chapter for display
+  const sections = [];
+  let titleIdx = pages.findIndex(p => p.type === "title");
+  let closingIdx = pages.findIndex(p => p.type === "closing");
+
+  for (let i = 0; i < pages.length; i++) {
+    const p = pages[i];
+    if (p.type === "chapter") {
+      const sec = { chapter: p.chapter, chapterIdx: i, items: [] };
+      // collect subsequent letter pages that belong to this chapter
+      for (let j = i + 1; j < pages.length; j++) {
+        if (pages[j].type !== "letter") break;
+        if (pages[j].chapter.key !== p.chapter.key) break;
+        sec.items.push({ idx: j, letter: pages[j].letter });
+      }
+      sections.push(sec);
+    }
+  }
+
   return (
-    <div className="nav-chrome" role="navigation" aria-label="Page navigation">
-      <button
-        className="nav-btn nav-prev"
-        onClick={onPrev}
-        disabled={pageIdx === 0}
-        aria-label="Previous page"
-      >
-        Previous
-      </button>
-      <button
-        className="nav-btn nav-next"
-        onClick={onNext}
-        disabled={pageIdx === total - 1}
-        aria-label="Next page"
-      >
-        Next
-      </button>
+    <div className="toc-overlay" onClick={onClose}>
+      <div className="toc-panel" onClick={(e) => e.stopPropagation()}>
+        <button className="toc-close" onClick={onClose}>close</button>
+        <h2 className="toc-title">Contents</h2>
+        <div className="toc-sub">{totalLetters} Letters · April – December 1940</div>
+
+        <button
+          className={"toc-entry" + (currentIdx === titleIdx ? " is-current" : "")}
+          onClick={() => onJump(titleIdx)}
+        >
+          <span className="toc-num">—</span>
+          <span className="toc-date">Title page</span>
+        </button>
+
+        {sections.map((sec) => (
+          <div key={sec.chapter.key} className="toc-section">
+            <button
+              className={"toc-section-head" + (currentIdx === sec.chapterIdx ? " is-current" : "")}
+              onClick={() => onJump(sec.chapterIdx)}
+              style={{ background: "none", border: "none", width: "100%", cursor: "pointer", font: "inherit", textAlign: "left", padding: 0 }}
+            >
+              <span className="toc-section-numeral">Chapter {sec.chapter.numeral}</span>
+              <span style={{ flex: 1 }}>{sec.chapter.title}</span>
+              <span className="toc-loc">{sec.chapter.location_label}</span>
+            </button>
+            <ul className="toc-list">
+              {sec.items.map((it) => (
+                <li key={it.letter.id}>
+                  <button
+                    className={"toc-item" + (currentIdx === it.idx ? " is-current" : "")}
+                    onClick={() => onJump(it.idx)}
+                  >
+                    <span className="toc-num">{String(it.letter.n).padStart(2, "0")}</span>
+                    <span className="toc-date">{it.letter.date_label}</span>
+                    <span className="toc-loc">{it.letter.location_stamp}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+
+        <button
+          className={"toc-entry" + (currentIdx === closingIdx ? " is-current" : "")}
+          onClick={() => onJump(closingIdx)}
+        >
+          <span className="toc-num">—</span>
+          <span className="toc-date">Closing</span>
+        </button>
+      </div>
     </div>
   );
 }
@@ -434,54 +605,93 @@ function NavChrome({ pageIdx, total, onPrev, onNext }) {
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS), []);
   const [pageIdx, setPageIdx] = useState(() => parseHashIdx(pages.length - 1));
+  // turn state: { from, to, dir: 1|-1 } or null
+  const [turn, setTurn] = useState(null);
   const [lb, setLb] = useState(null);
+  const [tocOpen, setTocOpen] = useState(false);
   const swipeRef = useRef(null);
+  const turnLockRef = useRef(false);
+
+  const TURN_MS = 900;
+  const reduced = prefersReducedMotion();
 
   const goto = useCallback((idx) => {
     setPageIdx((curr) => {
       const next = Math.max(0, Math.min(pages.length - 1, idx));
-      if (next !== curr) {
-        if (window.location.hash !== `#p=${next}`) {
-          window.location.hash = `p=${next}`;
-        }
-        window.scrollTo(0, 0);
+      if (next === curr) return curr;
+      if (turnLockRef.current) return curr;
+
+      const dir = next > curr ? 1 : -1;
+      turnLockRef.current = true;
+      setTurn({ from: curr, to: next, dir });
+
+      if (window.location.hash !== `#p=${next}`) {
+        window.location.hash = `p=${next}`;
       }
+
+      const dur = reduced ? 280 : TURN_MS;
+      window.setTimeout(() => {
+        turnLockRef.current = false;
+        setTurn(null);
+      }, dur + 30);
+
       return next;
     });
-  }, [pages.length]);
+  }, [pages.length, reduced]);
 
-  const next = useCallback(() => goto(pageIdx + 1), [goto, pageIdx]);
-  const prev = useCallback(() => goto(pageIdx - 1), [goto, pageIdx]);
+  const next = useCallback(() => {
+    setPageIdx(curr => {
+      goto(curr + 1);
+      return curr;
+    });
+  }, [goto]);
+  const prev = useCallback(() => {
+    setPageIdx(curr => {
+      goto(curr - 1);
+      return curr;
+    });
+  }, [goto]);
 
   // hash listener for back/forward
   useEffect(() => {
     const onHash = () => {
       const idx = parseHashIdx(pages.length - 1);
-      setPageIdx(idx);
-      window.scrollTo(0, 0);
+      setPageIdx(curr => {
+        if (idx === curr) return curr;
+        if (turnLockRef.current) return curr;
+        const dir = idx > curr ? 1 : -1;
+        turnLockRef.current = true;
+        setTurn({ from: curr, to: idx, dir });
+        const dur = reduced ? 280 : TURN_MS;
+        window.setTimeout(() => {
+          turnLockRef.current = false;
+          setTurn(null);
+        }, dur + 30);
+        return idx;
+      });
     };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
-  }, [pages.length]);
+  }, [pages.length, reduced]);
 
-  // keyboard navigation (suspended while lightbox open)
+  // keyboard nav
   useEffect(() => {
-    if (lb) return;
+    if (lb || tocOpen) return;
     const onKey = (e) => {
       const tag = e.target && e.target.tagName;
       if (tag === "INPUT" || tag === "TEXTAREA") return;
-      if (e.key === "ArrowRight") next();
-      else if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === " ") { e.preventDefault(); next(); }
+      else if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); prev(); }
       else if (e.key === "Home") goto(0);
       else if (e.key === "End") goto(pages.length - 1);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [next, prev, goto, pages.length, lb]);
+  }, [next, prev, goto, pages.length, lb, tocOpen]);
 
-  // touch swipe navigation (50px horizontal threshold; vertical scroll wins)
+  // touch swipe
   useEffect(() => {
-    if (lb) return;
+    if (lb || tocOpen) return;
     const onStart = (e) => {
       const t = e.touches[0];
       swipeRef.current = { x: t.clientX, y: t.clientY, t: Date.now() };
@@ -494,11 +704,10 @@ function App() {
       const dx = t.clientX - s.x;
       const dy = t.clientY - s.y;
       const dt = Date.now() - s.t;
-      if (dt > 600) return;
-      if (Math.abs(dx) < 50) return;
-      if (Math.abs(dy) > Math.abs(dx) * 0.7) return;
-      if (dx < 0) next();
-      else prev();
+      if (dt > 700) return;
+      if (Math.abs(dx) < 60) return;
+      if (Math.abs(dy) > Math.abs(dx) * 0.6) return;
+      if (dx < 0) next(); else prev();
     };
     window.addEventListener("touchstart", onStart, { passive: true });
     window.addEventListener("touchend", onEnd, { passive: true });
@@ -506,16 +715,23 @@ function App() {
       window.removeEventListener("touchstart", onStart);
       window.removeEventListener("touchend", onEnd);
     };
-  }, [next, prev, lb]);
+  }, [next, prev, lb, tocOpen]);
 
-  // toggle navy class on body for chapter divider pages
+  // body class for navy + chapter atmosphere key
+  const currentPage = pages[pageIdx];
+  const chapterKey = useMemo(() => {
+    if (currentPage.type === "chapter") return currentPage.chapter.key;
+    if (currentPage.type === "letter") return currentPage.chapter.key;
+    return null;
+  }, [currentPage]);
+
+  const isNavy = currentPage.type === "chapter";
+
   useEffect(() => {
-    const isNavy = pages[pageIdx].type === "chapter";
     document.body.classList.toggle("body--navy", isNavy);
-    return () => document.body.classList.remove("body--navy");
-  }, [pageIdx, pages]);
+  }, [isNavy]);
 
-  // lightbox state + scroll lock
+  // lightbox
   const openLb = useCallback((letter, page = 1) => setLb({ letter, page }), []);
   const closeLb = useCallback(() => setLb(null), []);
   const navLb = useCallback((dir) => {
@@ -529,48 +745,101 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (lb) {
+    if (lb || tocOpen) {
       const prev = document.body.style.overflow;
       document.body.style.overflow = "hidden";
       return () => { document.body.style.overflow = prev; };
     }
-  }, [lb]);
+  }, [lb, tocOpen]);
 
-  const page = pages[pageIdx];
+  // RENDER ----------------------------------------------------------
+  // During a turn we render TWO surfaces:
+  //   - "under": the destination page sitting in place
+  //   - "flipping": the outgoing page (forward) or incoming page (backward) that animates
+  //
+  // Forward turn: outgoing "from" page rotates from 0° → -180° (lifts at right, swings to left)
+  // Backward turn: incoming "to" page rotates from -180° → 0° (begins folded, lays flat)
+
+  const totalLetters = LETTERS.length;
+  const onOpen = openLb;
+
+  let topContent, underContent, topClass, underClass;
+
+  if (turn) {
+    const fromPage = pages[turn.from];
+    const toPage = pages[turn.to];
+    if (turn.dir === 1) {
+      // forward
+      underContent = <PageContent page={toPage} totalLetters={totalLetters} onOpen={onOpen} allChapters={CHAPTERS} allLetters={LETTERS} />;
+      topContent   = <PageContent page={fromPage} totalLetters={totalLetters} onOpen={onOpen} allChapters={CHAPTERS} allLetters={LETTERS} />;
+      underClass = `page-surface under ${toPage.type === "chapter" ? "is-navy" : ""}`;
+      topClass   = `page-surface flip-forward-out ${fromPage.type === "chapter" ? "is-navy" : ""}`;
+    } else {
+      // backward — top is the incoming page that unfolds onto the spread
+      underContent = <PageContent page={fromPage} totalLetters={totalLetters} onOpen={onOpen} allChapters={CHAPTERS} allLetters={LETTERS} />;
+      topContent   = <PageContent page={toPage} totalLetters={totalLetters} onOpen={onOpen} allChapters={CHAPTERS} allLetters={LETTERS} />;
+      underClass = `page-surface under ${fromPage.type === "chapter" ? "is-navy" : ""}`;
+      topClass   = `page-surface flip-backward-in ${toPage.type === "chapter" ? "is-navy" : ""}`;
+    }
+  } else {
+    underContent = null;
+    topContent   = <PageContent page={currentPage} totalLetters={totalLetters} onOpen={onOpen} allChapters={CHAPTERS} allLetters={LETTERS} />;
+    underClass = "";
+    topClass   = `page-surface ${currentPage.type === "chapter" ? "is-navy" : ""}`;
+  }
+
+  // atmosphere root portal
+  useEffect(() => {
+    // no-op; Atmosphere is rendered into #atmosphere-root via portal-style mount
+  }, []);
 
   return (
     <>
-      <PageIndicator page={page} totalLetters={LETTERS.length} />
-      <main className="archive">
-        {page.type === "title" && <TitlePage letterCount={LETTERS.length} />}
-        {page.type === "chapter" && (
-          <ChapterDivider
-            chapter={page.chapter}
-            letters={page.letters}
-            allChapters={CHAPTERS}
-            allLetters={LETTERS}
-          />
-        )}
-        {page.type === "letter" && (
-          <LetterCard letter={page.letter} onOpen={openLb} />
-        )}
-        {page.type === "closing" && <Closing />}
-      </main>
+      <AtmosphereMount chapterKey={chapterKey} />
+      <div className={"stage" + (turn ? " is-turning" : "")}>
+        <div className="spine-shadow" />
+        {underContent && <div className={underClass}>{underContent}</div>}
+        <div className={topClass} key={turn ? `${turn.from}-${turn.to}-${turn.dir}` : `s-${pageIdx}`}>
+          {topContent}
+          {turn && <div className="page-shade" />}
+          {turn && <div className="page-back">{turn.dir === 1 ? "Love, Always" : "Love, Always"}</div>}
+        </div>
+      </div>
+
       <NavChrome
         pageIdx={pageIdx}
         total={pages.length}
         onPrev={prev}
         onNext={next}
+        onToc={() => setTocOpen(true)}
       />
-      {lb && (
-        <Lightbox
-          letter={lb.letter}
-          page={lb.page}
-          onClose={closeLb}
-          onNav={navLb}
+
+      {tocOpen && (
+        <TableOfContents
+          pages={pages}
+          currentIdx={pageIdx}
+          totalLetters={totalLetters}
+          onJump={(i) => { setTocOpen(false); goto(i); }}
+          onClose={() => setTocOpen(false)}
         />
       )}
+
+      {lb && <Lightbox letter={lb.letter} page={lb.page} onClose={closeLb} onNav={navLb} />}
     </>
+  );
+}
+
+/* atmosphere mounts into its own root */
+function AtmosphereMount({ chapterKey }) {
+  const [mounted, setMounted] = useState(null);
+  useLayoutEffect(() => {
+    const node = document.getElementById("atmosphere-root");
+    if (node) setMounted(node);
+  }, []);
+  if (!mounted) return null;
+  return ReactDOM.createPortal(
+    <Atmosphere chapterKey={chapterKey} on={!!chapterKey} />,
+    mounted
   );
 }
 
