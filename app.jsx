@@ -163,6 +163,7 @@ function Atmosphere({ chapterKey, weather, on }) {
   if (kind === "rain" || kind === "storm") {
     return (
       <div className="atmosphere atmosphere--on" aria-hidden="true">
+        <div className="rain-mist" />
         {kind === "storm" && <div className="lightning-flash" />}
         {rain.map((r, i) => (
           <span key={i} className="rain-streak" style={{
@@ -180,6 +181,7 @@ function Atmosphere({ chapterKey, weather, on }) {
   if (kind === "drizzle") {
     return (
       <div className="atmosphere atmosphere--on" aria-hidden="true">
+        <div className="rain-mist" style={{ opacity: 0.6 }} />
         {drizzle.map((r, i) => (
           <span key={i} className="rain-streak" style={{
             left: `${r.left}%`,
@@ -403,37 +405,45 @@ function Lightbox({ letter, page, onClose, onNav }) {
 /* ------------------------------------------------------------------ */
 
 function Postmark({ letter }) {
-  // Build a short uppercase city/place from the location chapter
   const place = ({
     "great-lakes": "GREAT LAKES",
     "san-diego":   "SAN DIEGO",
     "pearl-harbor": "PEARL HARBOR",
   })[letter.location_chapter] || "U.S. NAVY";
-  // Compact date stamp: e.g., "APR · 14 · 1940"
   const m = letter.date.match(/(\d{4})-(\d{2})-(\d{2})/);
   const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
-  const dateLine = m ? `${months[parseInt(m[2], 10) - 1]} ${parseInt(m[3], 10)} ${m[1]}` : "";
+  const monthAbbr = m ? months[parseInt(m[2], 10) - 1] : "";
+  const day = m ? parseInt(m[3], 10) : "";
+  const year = m ? m[1] : "";
   return (
     <svg className="postmark" viewBox="0 0 100 100" aria-hidden="true">
-      <defs>
-        <path id={`pm-arc-top-${letter.id}`} d="M 50 50 m -34 0 a 34 34 0 0 1 68 0" fill="none" />
-        <path id={`pm-arc-bot-${letter.id}`} d="M 50 50 m -34 0 a 34 34 0 0 0 68 0" fill="none" />
-      </defs>
-      <circle cx="50" cy="50" r="36" className="pm-ring" />
-      <circle cx="50" cy="50" r="30" className="pm-ring-inner" />
-      <line x1="14" y1="50" x2="22" y2="50" className="pm-bar" />
-      <line x1="78" y1="50" x2="86" y2="50" className="pm-bar" />
-      <text fontSize="6.6" letterSpacing="2.6">
-        <textPath href={`#pm-arc-top-${letter.id}`} startOffset="50%" textAnchor="middle">{place}</textPath>
+      <circle cx="50" cy="50" r="42" className="pm-ring" />
+      <circle cx="50" cy="50" r="36" className="pm-ring-inner" />
+      <line x1="4" y1="50" x2="12" y2="50" className="pm-bar" />
+      <line x1="88" y1="50" x2="96" y2="50" className="pm-bar" />
+      {/* Place name as straight horizontal text in upper band — reliable
+          across browsers (textPath + letterSpacing breaks on iOS Safari). */}
+      <text x="50" y="28" textAnchor="middle" fontSize="6.4"
+            fontFamily="var(--serif-body)" fontWeight="500"
+            style={{ letterSpacing: "1.4px" }}>
+        {place}
       </text>
-      <text fontSize="5.2" letterSpacing="2">
-        <textPath href={`#pm-arc-bot-${letter.id}`} startOffset="50%" textAnchor="middle">U.S. NAVY · MAIL</textPath>
+      <line x1="20" y1="32" x2="80" y2="32" className="pm-bar" />
+      {/* Date stack in middle */}
+      <text x="50" y="48" textAnchor="middle" fontSize="11"
+            fontFamily="var(--serif-display)" fontStyle="italic" fontWeight="500">
+        {monthAbbr}
       </text>
-      <text x="50" y="48" fontSize="6.4" textAnchor="middle" letterSpacing="0.6" fontStyle="italic">
-        {dateLine.split(" ")[0]}
+      <text x="50" y="62" textAnchor="middle" fontSize="14"
+            fontFamily="var(--serif-display)" fontStyle="italic" fontWeight="500">
+        {day}
       </text>
-      <text x="50" y="58" fontSize="9" textAnchor="middle" letterSpacing="1" fontWeight="500">
-        {dateLine.split(" ")[1]}
+      <line x1="20" y1="68" x2="80" y2="68" className="pm-bar" />
+      {/* Year + branch in lower band */}
+      <text x="50" y="78" textAnchor="middle" fontSize="6.4"
+            fontFamily="var(--serif-body)" fontWeight="500"
+            style={{ letterSpacing: "1.4px" }}>
+        {year} · U.S. NAVY
       </text>
     </svg>
   );
@@ -634,12 +644,11 @@ function TitlePage({ letterCount, onBegin }) {
       </p>
       <ShipOrnament />
       <p className="frontispiece">
-        Discovered in a cardboard box behind the family home<br />
-        in Somerset, Kentucky, 2023.
+        A Navy boy. A girl back home in Kentucky.<br />
+        The last calm year before Pearl Harbor.
       </p>
       <p className="title-count">
-        {letterCount} letters, transcribed and assembled<br />
-        for the family who carries his story
+        {letterCount} letters · April – December 1940
       </p>
       <button className="title-prompt" onClick={onBegin}>Begin Chapter I</button>
     </section>
@@ -663,7 +672,8 @@ function Closing() {
 /*  Chapter divider                                                     */
 /* ------------------------------------------------------------------ */
 
-function ChapterDivider({ chapter, letters, allChapters, allLetters }) {
+function ChapterDivider({ chapter, letters, allChapters, allLetters, onNext }) {
+  const firstLetterN = letters[0] && letters[0].n;
   return (
     <section className="chapter-divider">
       <div className="chapter-watermark" aria-hidden="true">
@@ -675,6 +685,11 @@ function ChapterDivider({ chapter, letters, allChapters, allLetters }) {
       <div className="chapter-dates">{dateRange(letters)}</div>
       <RouteDiagram activeChapter={chapter.key} chapters={allChapters} letters={allLetters} />
       <p className="chapter-bridge">{chapter.bridge}</p>
+      {onNext && (
+        <button className="chapter-cta" onClick={onNext}>
+          {firstLetterN ? `Letter No. ${String(firstLetterN).padStart(2, "0")}` : "Begin"}
+        </button>
+      )}
     </section>
   );
 }
@@ -723,6 +738,7 @@ function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLette
           letters={page.letters}
           allChapters={allChapters}
           allLetters={allLetters}
+          onNext={onNext}
         />
       )}
       {page.type === "letter" && <LetterCard letter={page.letter} onOpen={onOpen} />}
