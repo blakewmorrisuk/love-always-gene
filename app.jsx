@@ -158,7 +158,7 @@ function RouteDiagram({ activeChapter, chapters, letters }) {
   const stops = chapters.filter(c => usedKeys.has(c.key));
   if (stops.length === 0) return null;
 
-  const x0 = 60, x1 = 740, yMid = 70;
+  const x0 = 80, x1 = 720, yMid = 90;
   const positions = stops.map((s, i) => {
     const x = stops.length === 1
       ? (x0 + x1) / 2
@@ -168,7 +168,7 @@ function RouteDiagram({ activeChapter, chapters, letters }) {
 
   return (
     <div className="route-wrap" aria-hidden="true">
-      <svg viewBox="0 0 800 140" className="route-svg" preserveAspectRatio="xMidYMid meet">
+      <svg viewBox="0 0 800 200" className="route-svg" preserveAspectRatio="xMidYMid meet">
         <line x1={x0} y1={yMid} x2={x1} y2={yMid} className="route-line" />
         {positions.map(p => {
           const isActive = p.key === activeChapter;
@@ -177,13 +177,19 @@ function RouteDiagram({ activeChapter, chapters, letters }) {
           const label = (p.map && p.map.label) || p.location_label || p.title;
           return (
             <g key={p.key}>
-              <circle cx={p.x} cy={p.y} r={isActive ? 6 : 4}
+              {isActive && (
+                <circle cx={p.x} cy={p.y} r="11" className="route-pin-active-halo" />
+              )}
+              <circle cx={p.x} cy={p.y} r={isActive ? 6 : 5}
                 className={isActive ? "route-pin-active" : "route-pin-inactive"} />
-              <text x={p.x} y={p.y - 18} textAnchor="middle"
+              {isActive && (
+                <line x1={p.x - 22} y1={p.y - 28} x2={p.x + 22} y2={p.y - 28} className="route-label-rule" />
+              )}
+              <text x={p.x} y={p.y - 38} textAnchor="middle"
                 className={isActive ? "route-label route-label--active" : "route-label"}>
                 {label}
               </text>
-              <text x={p.x} y={p.y + 24} textAnchor="middle" className="route-date">{dr}</text>
+              <text x={p.x} y={p.y + 30} textAnchor="middle" className="route-date">{dr}</text>
             </g>
           );
         })}
@@ -215,18 +221,20 @@ function Lightbox({ letter, page, onClose, onNav }) {
 
   return (
     <div className="lightbox" role="dialog" aria-modal="true" onClick={onClose}>
-      <button className="lb-close" onClick={onClose}>close</button>
+      <button className="lb-close" onClick={onClose} aria-label="Close">×</button>
       <div className="lb-stage" onClick={(e) => e.stopPropagation()}>
-        <img src={src} alt={alt} />
+        <div className="lb-frame">
+          <img src={src} alt={alt} />
+        </div>
         <div className="lb-meta">
-          <span>{letter.date_label}</span>
-          <span className="lb-counter">page {k} of {total}</span>
+          <span className="lb-meta-date">{letter.date_label}</span>
+          <span className="lb-counter">{String(k).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
         </div>
       </div>
       {total > 1 && (
         <>
-          <button className="lb-nav lb-prev" onClick={(e) => { e.stopPropagation(); onNav(-1); }}>‹</button>
-          <button className="lb-nav lb-next" onClick={(e) => { e.stopPropagation(); onNav(1); }}>›</button>
+          <button className="lb-nav lb-prev" onClick={(e) => { e.stopPropagation(); onNav(-1); }} aria-label="Previous page">‹</button>
+          <button className="lb-nav lb-next" onClick={(e) => { e.stopPropagation(); onNav(1); }} aria-label="Next page">›</button>
         </>
       )}
     </div>
@@ -237,11 +245,58 @@ function Lightbox({ letter, page, onClose, onNav }) {
 /*  Letter card variants                                               */
 /* ------------------------------------------------------------------ */
 
+function Postmark({ letter }) {
+  // Build a short uppercase city/place from the location chapter
+  const place = ({
+    "great-lakes": "GREAT LAKES",
+    "san-diego":   "SAN DIEGO",
+    "pearl-harbor": "PEARL HARBOR",
+  })[letter.location_chapter] || "U.S. NAVY";
+  // Compact date stamp: e.g., "APR · 14 · 1940"
+  const m = letter.date.match(/(\d{4})-(\d{2})-(\d{2})/);
+  const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+  const dateLine = m ? `${months[parseInt(m[2], 10) - 1]} ${parseInt(m[3], 10)} ${m[1]}` : "";
+  return (
+    <svg className="postmark" viewBox="0 0 100 100" aria-hidden="true">
+      <defs>
+        <path id={`pm-arc-top-${letter.id}`} d="M 50 50 m -34 0 a 34 34 0 0 1 68 0" fill="none" />
+        <path id={`pm-arc-bot-${letter.id}`} d="M 50 50 m -34 0 a 34 34 0 0 0 68 0" fill="none" />
+      </defs>
+      <circle cx="50" cy="50" r="36" className="pm-ring" />
+      <circle cx="50" cy="50" r="30" className="pm-ring-inner" />
+      <line x1="14" y1="50" x2="22" y2="50" className="pm-bar" />
+      <line x1="78" y1="50" x2="86" y2="50" className="pm-bar" />
+      <text fontSize="6.6" letterSpacing="2.6">
+        <textPath href={`#pm-arc-top-${letter.id}`} startOffset="50%" textAnchor="middle">{place}</textPath>
+      </text>
+      <text fontSize="5.2" letterSpacing="2">
+        <textPath href={`#pm-arc-bot-${letter.id}`} startOffset="50%" textAnchor="middle">U.S. NAVY · MAIL</textPath>
+      </text>
+      <text x="50" y="48" fontSize="6.4" textAnchor="middle" letterSpacing="0.6" fontStyle="italic">
+        {dateLine.split(" ")[0]}
+      </text>
+      <text x="50" y="58" fontSize="9" textAnchor="middle" letterSpacing="1" fontWeight="500">
+        {dateLine.split(" ")[1]}
+      </text>
+    </svg>
+  );
+}
+
 function LetterHeader({ letter }) {
+  const status = ({
+    "transcribed":         "Letter",
+    "transcribed_partial": "Letter",
+    "transcribed_draft":   "Draft Reading",
+    "envelope_only":       "Envelope Only",
+    "christmas_card":      "Christmas Card",
+    "telegram":            "Telegram",
+  })[letter.status] || "Letter";
   return (
     <header className="letter-head">
-      <div className="letter-num">Letter {letter.n} <span className="dot">·</span> {letter.date_label}</div>
+      <div className="letter-eyebrow">{status} · No. {String(letter.n).padStart(2, "0")}</div>
+      <div className="letter-num"><em>{letter.date_label}</em></div>
       <div className="letter-stamp">{letter.location_stamp}</div>
+      <Postmark letter={letter} />
     </header>
   );
 }
@@ -333,6 +388,7 @@ function ChristmasCardCard({ letter, onOpen }) {
         <div className="xmas-verse">
           {letter.card_verse.split("\n").map((line, i) => <div key={i}>{line}</div>)}
         </div>
+        <div className="xmas-cartouche">Christmas · 1940</div>
       </div>
       <div className="signature signature--xmas">{letter.signature}</div>
       {letter.card_note && <p className="letter-note">{letter.card_note}</p>}
@@ -347,6 +403,7 @@ function TelegramCard({ letter, onOpen }) {
     <article className="letter-card letter-card--telegram" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="telegram-paper">
+        <div className="telegram-letterhead">Postal Telegraph · Commercial Cables</div>
         <div className="telegram-head">
           <span>POSTAL TELEGRAPH</span>
           <span>HOLIDAY GREETINGS</span>
@@ -383,20 +440,31 @@ function ShipOrnament() {
   return (
     <div className="ornament" aria-hidden="true">
       <span className="ornament-rule" />
-      <svg viewBox="0 0 28 28" className="ornament-anchor">
-        <circle cx="14" cy="6" r="2.4" fill="none" stroke="#9B7B3F" strokeWidth="1.1" />
-        <line x1="14" y1="8.4" x2="14" y2="22" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
-        <line x1="9" y1="11" x2="19" y2="11" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
-        <path d="M 6 18 Q 14 26 22 18" fill="none" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
-        <line x1="6" y1="18" x2="4.5" y2="16.4" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
-        <line x1="22" y1="18" x2="23.5" y2="16.4" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
+      <svg viewBox="0 0 56 56" className="ornament-anchor">
+        {/* outer rope ring — dotted */}
+        <circle cx="28" cy="28" r="25" fill="none" stroke="#9B7B3F"
+          strokeWidth="0.9" strokeDasharray="1 3" opacity="0.85" />
+        <circle cx="28" cy="28" r="22.5" fill="none" stroke="#9B7B3F"
+          strokeWidth="0.6" opacity="0.45" />
+        {/* anchor */}
+        <circle cx="28" cy="14" r="2.6" fill="none" stroke="#9B7B3F" strokeWidth="1.1" />
+        <line x1="28" y1="16.6" x2="28" y2="40" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
+        <line x1="22" y1="20" x2="34" y2="20" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
+        <path d="M 17 34 Q 28 46 39 34" fill="none" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
+        <line x1="17" y1="34" x2="15" y2="32" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
+        <line x1="39" y1="34" x2="41" y2="32" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
+        {/* olive branch flourishes left + right */}
+        <path d="M 6 28 Q 10 26 14 28" fill="none" stroke="#9B7B3F" strokeWidth="0.7" opacity="0.6" />
+        <path d="M 8 27.4 L 8 25.6 M 10.5 26.6 L 10.5 24.7 M 12.5 27 L 12.5 25.3" stroke="#9B7B3F" strokeWidth="0.6" opacity="0.55" strokeLinecap="round" />
+        <path d="M 50 28 Q 46 26 42 28" fill="none" stroke="#9B7B3F" strokeWidth="0.7" opacity="0.6" />
+        <path d="M 48 27.4 L 48 25.6 M 45.5 26.6 L 45.5 24.7 M 43.5 27 L 43.5 25.3" stroke="#9B7B3F" strokeWidth="0.6" opacity="0.55" strokeLinecap="round" />
       </svg>
       <span className="ornament-rule" />
     </div>
   );
 }
 
-function TitlePage({ letterCount }) {
+function TitlePage({ letterCount, onBegin }) {
   return (
     <section className="title-page">
       <div className="title-eyebrow">A family archive</div>
@@ -414,7 +482,7 @@ function TitlePage({ letterCount }) {
         {letterCount} letters, transcribed and assembled<br />
         for the family who carries his story
       </p>
-      <p className="title-prompt">Turn the page →</p>
+      <button className="title-prompt" onClick={onBegin}>Begin Chapter I</button>
     </section>
   );
 }
@@ -439,6 +507,9 @@ function Closing() {
 function ChapterDivider({ chapter, letters, allChapters, allLetters }) {
   return (
     <section className="chapter-divider">
+      <div className="chapter-watermark" aria-hidden="true">
+        <span className="chapter-watermark-text">{chapter.numeral}</span>
+      </div>
       <div className="chapter-numeral">Chapter {chapter.numeral}</div>
       <h2 className="chapter-title">{chapter.title}</h2>
       <div className="chapter-loc">{chapter.location_label}</div>
@@ -458,14 +529,20 @@ function Folio({ page, totalLetters }) {
   if (page.type === "chapter") {
     return (
       <div className="folio">
-        Chapter {page.chapter.numeral}<span className="dot">·</span>{page.chapter.title}
+        <span>Chapter {page.chapter.numeral}</span>
+        <span className="dot">·</span>
+        <span>{page.chapter.title}</span>
       </div>
     );
   }
   if (page.type === "letter") {
     return (
       <div className="folio">
-        Letter {page.letter.n} of {totalLetters}<span className="dot">·</span>Chapter {page.chapter.numeral}
+        <span>
+          Letter <span className="folio-num">{String(page.letter.n).padStart(2, "0")}</span> of <span className="folio-num">{totalLetters}</span>
+        </span>
+        <span className="dot">·</span>
+        <span>Chapter {page.chapter.numeral}</span>
       </div>
     );
   }
@@ -476,11 +553,11 @@ function Folio({ page, totalLetters }) {
 /*  Page renderer                                                      */
 /* ------------------------------------------------------------------ */
 
-function PageContent({ page, totalLetters, onOpen, allChapters, allLetters }) {
+function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLetters }) {
   return (
     <main className="archive">
       <Folio page={page} totalLetters={totalLetters} />
-      {page.type === "title" && <TitlePage letterCount={totalLetters} />}
+      {page.type === "title" && <TitlePage letterCount={totalLetters} onBegin={onNext} />}
       {page.type === "chapter" && (
         <ChapterDivider
           chapter={page.chapter}
@@ -513,6 +590,46 @@ function NavChrome({ pageIdx, total, onPrev, onNext, onToc }) {
   );
 }
 
+/* ------------------------------------------------------------------ */
+/*  Progress bar                                                       */
+/* ------------------------------------------------------------------ */
+
+function ProgressBar({ pageIdx, total, pages, isVisible }) {
+  const pct = total <= 1 ? 0 : (pageIdx / (total - 1)) * 100;
+  const chapterMarkers = useMemo(() => {
+    const out = [];
+    for (let i = 0; i < pages.length; i++) {
+      if (pages[i].type === "chapter") {
+        out.push({ idx: i, pct: total <= 1 ? 0 : (i / (total - 1)) * 100, key: pages[i].chapter.key });
+      }
+    }
+    return out;
+  }, [pages, total]);
+  return (
+    <div className={"progress" + (isVisible ? " is-visible" : "")} aria-hidden="true">
+      <div className="progress-track" />
+      <div className="progress-fill" style={{ width: `${pct}%` }} />
+      {chapterMarkers.map(m => (
+        <span
+          key={m.key}
+          className={"progress-marker" + (pageIdx >= m.idx ? " is-active" : "")}
+          style={{ left: `${m.pct}%` }}
+        />
+      ))}
+    </div>
+  );
+}
+
+function statusDotClass(status) {
+  switch (status) {
+    case "envelope_only":      return "toc-status toc-status--envelope";
+    case "transcribed_draft":  return "toc-status toc-status--draft";
+    case "christmas_card":
+    case "telegram":           return "toc-status toc-status--special";
+    default:                   return "toc-status toc-status--transcribed";
+  }
+}
+
 function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
   useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
@@ -539,10 +656,13 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
 
   return (
     <div className="toc-overlay" onClick={onClose}>
-      <div className="toc-panel" onClick={(e) => e.stopPropagation()}>
-        <button className="toc-close" onClick={onClose}>close</button>
-        <h2 className="toc-title">Contents</h2>
-        <div className="toc-sub">{totalLetters} Letters · April – December 1940</div>
+      <div className="toc-panel" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label="Table of contents">
+        <button className="toc-close" onClick={onClose} aria-label="Close">×</button>
+        <div className="toc-header">
+          <div className="toc-header-eyebrow">Contents</div>
+          <h2 className="toc-title">Love, Always</h2>
+          <div className="toc-sub">{totalLetters} letters · April – December 1940</div>
+        </div>
 
         <button
           className={"toc-entry" + (currentIdx === titleIdx ? " is-current" : "")}
@@ -557,11 +677,10 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
             <button
               className={"toc-section-head" + (currentIdx === sec.chapterIdx ? " is-current" : "")}
               onClick={() => onJump(sec.chapterIdx)}
-              style={{ background: "none", border: "none", width: "100%", cursor: "pointer", font: "inherit", textAlign: "left", padding: 0 }}
             >
-              <span className="toc-section-numeral">Chapter {sec.chapter.numeral}</span>
-              <span style={{ flex: 1 }}>{sec.chapter.title}</span>
-              <span className="toc-loc">{sec.chapter.location_label}</span>
+              <span className="toc-section-numeral">Ch. {sec.chapter.numeral}</span>
+              <span className="toc-section-title">{sec.chapter.title}</span>
+              <span className="toc-section-loc">{sec.items.length}</span>
             </button>
             <ul className="toc-list">
               {sec.items.map((it) => (
@@ -570,6 +689,7 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
                     className={"toc-item" + (currentIdx === it.idx ? " is-current" : "")}
                     onClick={() => onJump(it.idx)}
                   >
+                    <span className={statusDotClass(it.letter.status)} aria-hidden="true" />
                     <span className="toc-num">{String(it.letter.n).padStart(2, "0")}</span>
                     <span className="toc-date">{it.letter.date_label}</span>
                     <span className="toc-loc">{it.letter.location_stamp}</span>
@@ -599,6 +719,8 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS), []);
   const [pageIdx, setPageIdx] = useState(() => parseHashIdx(pages.length - 1));
+  const [direction, setDirection] = useState(1);
+  const prevIdxRef = useRef(0);
   const [lb, setLb] = useState(null);
   const [tocOpen, setTocOpen] = useState(false);
   const swipeRef = useRef(null);
@@ -607,16 +729,27 @@ function App() {
   const goto = useCallback((idx) => {
     setPageIdx(curr => {
       const next = Math.max(0, Math.min(pages.length - 1, idx));
-      return next === curr ? curr : next;
+      if (next === curr) return curr;
+      setDirection(next > curr ? 1 : -1);
+      prevIdxRef.current = curr;
+      return next;
     });
   }, [pages.length]);
 
   const next = useCallback(() => {
-    setPageIdx(curr => Math.min(pages.length - 1, curr + 1));
+    setPageIdx(curr => {
+      const n = Math.min(pages.length - 1, curr + 1);
+      if (n !== curr) { setDirection(1); prevIdxRef.current = curr; }
+      return n;
+    });
   }, [pages.length]);
 
   const prev = useCallback(() => {
-    setPageIdx(curr => Math.max(0, curr - 1));
+    setPageIdx(curr => {
+      const n = Math.max(0, curr - 1);
+      if (n !== curr) { setDirection(-1); prevIdxRef.current = curr; }
+      return n;
+    });
   }, [pages.length]);
 
   // sync hash on pageIdx change
@@ -713,25 +846,43 @@ function App() {
   }, [lb, tocOpen]);
 
   const totalLetters = LETTERS.length;
-  const dur = reduced ? 0 : 0.22;
+  const showProgress = currentPage.type !== "title";
+
+  const variants = useMemo(() => ({
+    initial: (dir) => reduced
+      ? { opacity: 0 }
+      : { opacity: 0, x: dir > 0 ? 24 : -24, rotateY: dir > 0 ? 2 : -2 },
+    animate: { opacity: 1, x: 0, rotateY: 0 },
+    exit: (dir) => reduced
+      ? { opacity: 0 }
+      : { opacity: 0, x: dir > 0 ? -16 : 16, rotateY: dir > 0 ? -1.5 : 1.5 },
+  }), [reduced]);
 
   return (
     <>
       <AtmosphereMount chapterKey={chapterKey} />
-      <div className="stage">
-        <AnimatePresence mode="wait" initial={false}>
+      <ProgressBar pageIdx={pageIdx} total={pages.length} pages={pages} isVisible={showProgress} />
+      <div className="stage" style={{ perspective: "1400px" }}>
+        <AnimatePresence mode="wait" initial={false} custom={direction}>
           <motion.div
             key={pageIdx}
+            custom={direction}
+            variants={variants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{
+              duration: reduced ? 0 : 0.36,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className={"page-surface" + (isNavy ? " is-navy" : "")}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: dur, ease: "easeOut" }}
+            style={{ transformStyle: "preserve-3d" }}
           >
             <PageContent
               page={currentPage}
               totalLetters={totalLetters}
               onOpen={openLb}
+              onNext={next}
               allChapters={CHAPTERS}
               allLetters={LETTERS}
             />
