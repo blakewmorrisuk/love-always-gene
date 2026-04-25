@@ -633,7 +633,7 @@ function ShipOrnament() {
   );
 }
 
-function TitlePage({ letterCount, onBegin }) {
+function TitlePage({ onBegin }) {
   return (
     <section className="title-page">
       <div className="title-eyebrow">A family archive</div>
@@ -646,12 +646,6 @@ function TitlePage({ letterCount, onBegin }) {
       </div>
       <div className="title-foot">
         <ShipOrnament />
-        <p className="frontispiece">
-          He would survive Pearl Harbor.<br />
-          He would survive the U.S.S. New Orleans.<br />
-          These letters came first.
-        </p>
-        <p className="title-count">{letterCount} letters · April – December 1940</p>
         <button className="title-prompt" onClick={onBegin}>Begin Chapter I</button>
       </div>
     </section>
@@ -734,7 +728,7 @@ function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLette
   return (
     <main className="archive">
       <Folio page={page} totalLetters={totalLetters} />
-      {page.type === "title" && <TitlePage letterCount={totalLetters} onBegin={onNext} />}
+      {page.type === "title" && <TitlePage onBegin={onNext} />}
       {page.type === "chapter" && (
         <ChapterDivider
           chapter={page.chapter}
