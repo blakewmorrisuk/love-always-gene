@@ -851,8 +851,10 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
                     >
                       <span className={statusDotClass(it.letter.status)} aria-hidden="true" />
                       <span className="toc-num">{String(it.letter.n).padStart(2, "0")}</span>
-                      <span className="toc-date">{it.letter.date_label}</span>
-                      {showLoc && <span className="toc-loc">{it.letter.location_stamp}</span>}
+                      <div className="toc-meta">
+                        <span className="toc-date">{it.letter.date_label}</span>
+                        {showLoc && <span className="toc-loc">{it.letter.location_stamp}</span>}
+                      </div>
                     </button>
                   </li>
                 );
