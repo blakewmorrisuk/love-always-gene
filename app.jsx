@@ -25,6 +25,15 @@ function dateRange(letters) {
   return first === last ? first : `${first} to ${last}`;
 }
 
+const PEARL_HARBOR = new Date("1941-12-07T00:00:00Z");
+function daysUntilPearlHarbor(dateStr) {
+  const d = new Date(dateStr + "T00:00:00Z");
+  if (isNaN(d)) return null;
+  const ms = PEARL_HARBOR - d;
+  const days = Math.round(ms / 86400000);
+  return days > 0 ? days : null;
+}
+
 function buildPages(letters, chapters) {
   const grouped = groupByChapter(letters, chapters);
   const pages = [{ type: "title" }];
@@ -455,11 +464,17 @@ function Postmark({ letter }) {
 
 function LetterHeader({ letter }) {
   const weather = (window.LETTER_WEATHER && window.LETTER_WEATHER[letter.id]) || null;
+  const days = daysUntilPearlHarbor(letter.date);
   return (
     <header className="letter-head">
       <div className="letter-num"><em>{letter.date_label}</em></div>
       <div className="letter-stamp">{letter.location_stamp}</div>
       {weather && !weather.error && <WeatherGlyph weather={weather} />}
+      {days != null && (
+        <div className="letter-countdown" aria-label={`${days} days before the attack on Pearl Harbor`}>
+          {days.toLocaleString()} days before Pearl Harbor
+        </div>
+      )}
       <Postmark letter={letter} />
     </header>
   );
