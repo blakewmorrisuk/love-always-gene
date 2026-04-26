@@ -840,19 +840,23 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
               <span className="toc-section-loc">{sec.items.length}</span>
             </button>
             <ul className="toc-list">
-              {sec.items.map((it) => (
-                <li key={it.letter.id}>
-                  <button
-                    className={"toc-item" + (currentIdx === it.idx ? " is-current" : "")}
-                    onClick={() => onJump(it.idx)}
-                  >
-                    <span className={statusDotClass(it.letter.status)} aria-hidden="true" />
-                    <span className="toc-num">{String(it.letter.n).padStart(2, "0")}</span>
-                    <span className="toc-date">{it.letter.date_label}</span>
-                    <span className="toc-loc">{it.letter.location_stamp}</span>
-                  </button>
-                </li>
-              ))}
+              {sec.items.map((it, idx) => {
+                const prevLoc = idx > 0 ? sec.items[idx - 1].letter.location_stamp : null;
+                const showLoc = it.letter.location_stamp !== prevLoc;
+                return (
+                  <li key={it.letter.id}>
+                    <button
+                      className={"toc-item" + (currentIdx === it.idx ? " is-current" : "")}
+                      onClick={() => onJump(it.idx)}
+                    >
+                      <span className={statusDotClass(it.letter.status)} aria-hidden="true" />
+                      <span className="toc-num">{String(it.letter.n).padStart(2, "0")}</span>
+                      <span className="toc-date">{it.letter.date_label}</span>
+                      {showLoc && <span className="toc-loc">{it.letter.location_stamp}</span>}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
