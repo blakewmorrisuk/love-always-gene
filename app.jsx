@@ -655,8 +655,7 @@ function Closing() {
 /*  Chapter divider                                                     */
 /* ------------------------------------------------------------------ */
 
-function ChapterDivider({ chapter, letters, allChapters, allLetters, onNext }) {
-  const firstLetterN = letters[0] && letters[0].n;
+function ChapterDivider({ chapter, letters, allChapters, allLetters }) {
   return (
     <section className="chapter-divider">
       <div className="chapter-watermark" aria-hidden="true">
@@ -666,13 +665,8 @@ function ChapterDivider({ chapter, letters, allChapters, allLetters, onNext }) {
       <h2 className="chapter-title">{chapter.title}</h2>
       <div className="chapter-loc">{chapter.location_label}</div>
       <div className="chapter-dates">{dateRange(letters)}</div>
-      <RouteDiagram activeChapter={chapter.key} chapters={allChapters} letters={allLetters} />
       <p className="chapter-bridge">{chapter.bridge}</p>
-      {onNext && (
-        <button className="chapter-cta" onClick={onNext}>
-          {firstLetterN ? `Letter No. ${String(firstLetterN).padStart(2, "0")}` : "Begin"}
-        </button>
-      )}
+      <RouteDiagram activeChapter={chapter.key} chapters={allChapters} letters={allLetters} />
     </section>
   );
 }
@@ -721,7 +715,6 @@ function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLette
           letters={page.letters}
           allChapters={allChapters}
           allLetters={allLetters}
-          onNext={onNext}
         />
       )}
       {page.type === "letter" && <LetterCard letter={page.letter} onOpen={onOpen} />}
