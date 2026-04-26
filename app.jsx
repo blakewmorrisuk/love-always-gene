@@ -628,10 +628,16 @@ function TitlePage() {
   return (
     <section className="title-page">
       <div className="title-hero">
+        <ShipOrnament />
         <h1 className="title">Love, Always</h1>
         <p className="subtitle">
           Raymond Eugene Lankford<br />
           to Joan Northcutt
+        </p>
+        <p className="title-locator">
+          <span>Stanford, Kentucky</span>
+          <span className="locator-mark" aria-hidden="true">✦</span>
+          <span>U.S.S. New Orleans</span>
         </p>
       </div>
     </section>
