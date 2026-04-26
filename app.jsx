@@ -422,9 +422,11 @@ function Postmark({ letter }) {
   return (
     <svg className="postmark" viewBox="0 0 100 100" aria-hidden="true">
       <defs>
-        {/* Slight inset from the inner ring so type sits comfortably inside. */}
-        <path id={arcTopId} d="M 18 50 a 32 32 0 0 1 64 0" fill="none" />
-        <path id={arcBotId} d="M 18 50 a 32 32 0 0 0 64 0" fill="none" />
+        {/* Inset arc paths — radius 27/29 keep all letter tops inside the
+            inner ring (r=36). Earlier we used r=32 and capitals crossed
+            the ring. */}
+        <path id={arcTopId} d="M 23 50 a 27 27 0 0 1 54 0" fill="none" />
+        <path id={arcBotId} d="M 21 50 a 29 29 0 0 0 58 0" fill="none" />
       </defs>
       <circle cx="50" cy="50" r="44" className="pm-ring-outer" />
       <circle cx="50" cy="50" r="40" className="pm-ring-mid" />
@@ -433,7 +435,7 @@ function Postmark({ letter }) {
       <line x1="0"  y1="50" x2="14" y2="50" className="pm-cancel" />
       <line x1="86" y1="50" x2="100" y2="50" className="pm-cancel" />
       {/* Place name arched along the top. */}
-      <text className="pm-arc-text" fontSize="7">
+      <text className="pm-arc-text" fontSize="6.4">
         <textPath href={`#${arcTopId}`} startOffset="50%" textAnchor="middle">
           {place}
         </textPath>
@@ -441,9 +443,8 @@ function Postmark({ letter }) {
       {/* Date stack in the middle: italic month over big italic day. */}
       <text x="50" y="49" textAnchor="middle" className="pm-month">{monthAbbr}</text>
       <text x="50" y="64" textAnchor="middle" className="pm-day">{day}</text>
-      {/* Year + branch arched along the bottom (rotated text path baseline
-          flips so it reads correctly along the lower curve). */}
-      <text className="pm-arc-text pm-arc-text--bottom" fontSize="6">
+      {/* Year + branch arched along the bottom curve. */}
+      <text className="pm-arc-text" fontSize="5.6">
         <textPath href={`#${arcBotId}`} startOffset="50%" textAnchor="middle">
           {year}  ·  U.S. NAVY
         </textPath>
@@ -456,10 +457,10 @@ function LetterHeader({ letter }) {
   const weather = (window.LETTER_WEATHER && window.LETTER_WEATHER[letter.id]) || null;
   return (
     <header className="letter-head">
-      <Postmark letter={letter} />
       <div className="letter-num"><em>{letter.date_label}</em></div>
       <div className="letter-stamp">{letter.location_stamp}</div>
       {weather && !weather.error && <WeatherGlyph weather={weather} />}
+      <Postmark letter={letter} />
     </header>
   );
 }
