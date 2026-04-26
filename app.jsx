@@ -665,8 +665,8 @@ function ChapterDivider({ chapter, letters, allChapters, allLetters }) {
       <h2 className="chapter-title">{chapter.title}</h2>
       <div className="chapter-loc">{chapter.location_label}</div>
       <div className="chapter-dates">{dateRange(letters)}</div>
-      <p className="chapter-bridge">{chapter.bridge}</p>
       <RouteDiagram activeChapter={chapter.key} chapters={allChapters} letters={allLetters} />
+      <p className="chapter-bridge">{chapter.bridge}</p>
     </section>
   );
 }
