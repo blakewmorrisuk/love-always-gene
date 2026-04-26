@@ -635,9 +635,9 @@ function TitlePage() {
           to Joan Northcutt
         </p>
         <p className="title-locator">
-          <span>Stanford, Kentucky</span>
-          <span className="locator-mark" aria-hidden="true">✦</span>
           <span>U.S.S. New Orleans</span>
+          <span className="locator-mark" aria-hidden="true">✦</span>
+          <span>Stanford, Kentucky</span>
         </p>
       </div>
     </section>
