@@ -415,35 +415,38 @@ function Postmark({ letter }) {
   const monthAbbr = m ? months[parseInt(m[2], 10) - 1] : "";
   const day = m ? parseInt(m[3], 10) : "";
   const year = m ? m[1] : "";
+  // textPath needs a unique id per stamp so multiple cards can render in
+  // the same DOM (e.g. when navigating). Use the letter id.
+  const arcTopId = `pm-arc-top-${letter.id}`;
+  const arcBotId = `pm-arc-bot-${letter.id}`;
   return (
     <svg className="postmark" viewBox="0 0 100 100" aria-hidden="true">
-      <circle cx="50" cy="50" r="42" className="pm-ring" />
+      <defs>
+        {/* Slight inset from the inner ring so type sits comfortably inside. */}
+        <path id={arcTopId} d="M 18 50 a 32 32 0 0 1 64 0" fill="none" />
+        <path id={arcBotId} d="M 18 50 a 32 32 0 0 0 64 0" fill="none" />
+      </defs>
+      <circle cx="50" cy="50" r="44" className="pm-ring-outer" />
+      <circle cx="50" cy="50" r="40" className="pm-ring-mid" />
       <circle cx="50" cy="50" r="36" className="pm-ring-inner" />
-      <line x1="4" y1="50" x2="12" y2="50" className="pm-bar" />
-      <line x1="88" y1="50" x2="96" y2="50" className="pm-bar" />
-      {/* Place name as straight horizontal text in upper band — reliable
-          across browsers (textPath + letterSpacing breaks on iOS Safari). */}
-      <text x="50" y="28" textAnchor="middle" fontSize="6.4"
-            fontFamily="var(--serif-body)" fontWeight="500"
-            style={{ letterSpacing: "1.4px" }}>
-        {place}
+      {/* Cancellation marks — short hairlines crossing the rings at L/R. */}
+      <line x1="0"  y1="50" x2="14" y2="50" className="pm-cancel" />
+      <line x1="86" y1="50" x2="100" y2="50" className="pm-cancel" />
+      {/* Place name arched along the top. */}
+      <text className="pm-arc-text" fontSize="7">
+        <textPath href={`#${arcTopId}`} startOffset="50%" textAnchor="middle">
+          {place}
+        </textPath>
       </text>
-      <line x1="20" y1="32" x2="80" y2="32" className="pm-bar" />
-      {/* Date stack in middle */}
-      <text x="50" y="48" textAnchor="middle" fontSize="11"
-            fontFamily="var(--serif-display)" fontStyle="italic" fontWeight="500">
-        {monthAbbr}
-      </text>
-      <text x="50" y="62" textAnchor="middle" fontSize="14"
-            fontFamily="var(--serif-display)" fontStyle="italic" fontWeight="500">
-        {day}
-      </text>
-      <line x1="20" y1="68" x2="80" y2="68" className="pm-bar" />
-      {/* Year + branch in lower band */}
-      <text x="50" y="78" textAnchor="middle" fontSize="6.4"
-            fontFamily="var(--serif-body)" fontWeight="500"
-            style={{ letterSpacing: "1.4px" }}>
-        {year} · U.S. NAVY
+      {/* Date stack in the middle: italic month over big italic day. */}
+      <text x="50" y="49" textAnchor="middle" className="pm-month">{monthAbbr}</text>
+      <text x="50" y="64" textAnchor="middle" className="pm-day">{day}</text>
+      {/* Year + branch arched along the bottom (rotated text path baseline
+          flips so it reads correctly along the lower curve). */}
+      <text className="pm-arc-text pm-arc-text--bottom" fontSize="6">
+        <textPath href={`#${arcBotId}`} startOffset="50%" textAnchor="middle">
+          {year}  ·  U.S. NAVY
+        </textPath>
       </text>
     </svg>
   );
@@ -453,10 +456,10 @@ function LetterHeader({ letter }) {
   const weather = (window.LETTER_WEATHER && window.LETTER_WEATHER[letter.id]) || null;
   return (
     <header className="letter-head">
+      <Postmark letter={letter} />
       <div className="letter-num"><em>{letter.date_label}</em></div>
       <div className="letter-stamp">{letter.location_stamp}</div>
       {weather && !weather.error && <WeatherGlyph weather={weather} />}
-      <Postmark letter={letter} />
     </header>
   );
 }
