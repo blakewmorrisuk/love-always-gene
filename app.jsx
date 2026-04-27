@@ -1211,15 +1211,32 @@ function AtmosphereMount({ chapterKey, weather }) {
    atmospheres: a fixed field of absolutely-positioned petal spans
    with randomized fall parameters, animated via CSS keyframes. */
 function PlumeriaField({ on }) {
-  const petals = useMemo(() => Array.from({ length: 26 }, () => ({
-    left: Math.random() * 100,
-    delay: -Math.random() * 26,
-    dur: 22 + Math.random() * 14,
-    drift: (Math.random() - 0.5) * 380,
-    rot: 360 + Math.random() * 720,
-    size: 22 + Math.random() * 14,
-    op: 0.78 + Math.random() * 0.22,
-  })), []);
+  // Burst-pattern delay cluster. All petals share the same cycle
+  // duration so the bursts repeat predictably; clustering delays into
+  // burstCount groups (each tight, 0–0.5s spread) makes a fresh wave
+  // arrive every cycleDuration / burstCount seconds.
+  const petals = useMemo(() => {
+    const burstCount = 4;
+    const petalsPerBurst = 8;
+    const cycleDuration = 8;                       // seconds per loop
+    const burstSpacing = cycleDuration / burstCount; // 2s between bursts
+    const arr = [];
+    for (let b = 0; b < burstCount; b++) {
+      const burstBase = b * burstSpacing;
+      for (let p = 0; p < petalsPerBurst; p++) {
+        arr.push({
+          left: Math.random() * 100,
+          delay: -(burstBase + Math.random() * 0.45),
+          dur: cycleDuration + (Math.random() - 0.5) * 1.4,
+          drift: (Math.random() - 0.5) * 520,
+          rot: 360 + Math.random() * 900,
+          size: 9 + Math.random() * 8,
+          op: 0.85 + Math.random() * 0.15,
+        });
+      }
+    }
+    return arr;
+  }, []);
   if (!on) return null;
   return (
     <div className="plumeria-field" aria-hidden="true">
