@@ -519,13 +519,19 @@ function NoteBlock({ text, extraClass }) {
   ));
 }
 
-/* Render a paragraph string, splitting on [[...]] markers and wrapping
-   matched runs in <Emphasis> so they get the scroll-triggered underline. */
+/* Render a paragraph string, splitting on [[...]] (emphasis) and
+   [?]/[word?] (uncertain-reading) markers and wrapping each in the
+   right component. Used by both transcribed and draft cards so the
+   markers behave the same in either path. */
 function renderProse(text) {
-  const parts = text.split(/(\[\[[^\]]+\]\])/g);
+  const parts = text.split(/(\[\[[^\]]+\]\]|\[\?\]|\[[^\]]+\?\])/g);
   return parts.map((part, i) => {
-    const m = part.match(/^\[\[([^\]]+)\]\]$/);
-    if (m) return <Emphasis key={i}>{m[1]}</Emphasis>;
+    const em = part.match(/^\[\[([^\]]+)\]\]$/);
+    if (em) return <Emphasis key={i}>{em[1]}</Emphasis>;
+    if (/^\[.*\?\]$/.test(part)) {
+      const inner = part.replace(/^\[|\]$/g, "");
+      return <sub key={i} className="uncertain" title="Uncertain reading">{inner}</sub>;
+    }
     return <React.Fragment key={i}>{part}</React.Fragment>;
   });
 }
@@ -561,16 +567,6 @@ function TranscribedCard({ letter, onOpen }) {
 }
 
 function DraftCard({ letter, onOpen }) {
-  const renderBody = (text) => {
-    const parts = text.split(/(\[\?\]|\[[^\]]+\?\])/g);
-    return parts.map((part, i) => {
-      if (/^\[.*\?\]$/.test(part)) {
-        const inner = part.replace(/^\[|\]$/g, "");
-        return <sub key={i} className="uncertain" title="Uncertain reading">{inner}</sub>;
-      }
-      return <React.Fragment key={i}>{part}</React.Fragment>;
-    });
-  };
   const paragraphs = letter.body.split(/\n\n+/);
   return (
     <article className="letter-card letter-card--draft" id={`letter-${letter.id}`}>
@@ -581,11 +577,11 @@ function DraftCard({ letter, onOpen }) {
           if (i === 0 && /^[A-Za-z]/.test(para)) {
             return (
               <p key={i} className="has-dropcap">
-                <span className="dropcap">{para.charAt(0)}</span>{renderBody(para.slice(1))}
+                <span className="dropcap">{para.charAt(0)}</span>{renderProse(para.slice(1))}
               </p>
             );
           }
-          return <p key={i}>{renderBody(para)}</p>;
+          return <p key={i}>{renderProse(para)}</p>;
         })}
         <div className="signature">{letter.signature}</div>
       </div>

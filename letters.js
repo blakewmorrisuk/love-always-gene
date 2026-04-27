@@ -17,7 +17,7 @@ window.LETTERS = [
     salutation: "Dear Joan,",
     body: `Will write a few lines today while I have the time. I am getting along fine. They was fourteen (14) that came from Louisville the day I did. We arrived here about 12 'clock Thursday. We had a sleeper all by ourself and did we have a great time. It was snowing when we got here and the wind off of these Lakes will freeze you to the bone.
 
-There are 20 in my company and about three thousand here in all. They sure are tough on you while in training, and they sure have been keeping us going for the last four days, learning to wash and roll clothes. We are here for three weeks and then we are moved over in a place which is called 'Paradise', where we stay for 6 more weeks. We then will get a 10 day leave before going on the sea. So I will be home in 9 weeks.
+There are 20 in my company and about three thousand here in all. They sure are tough on you while in training, and they sure have been keeping us going for the last four days, learning to wash and roll clothes. We are here for three weeks and then we are moved over in a place which is called 'Paradise', where we stay for 6 more weeks. We then will get a 10 day leave before going on the sea. [[So I will be home in 9 weeks.]]
 
 All of us have to go to church on Sundays and they have two shows a week on Mondays and Thursdays. We get the rest of Sunday off but won't be able to leave the training station for three weeks.
 
@@ -48,13 +48,13 @@ So you made the highest grade in English of your grade. That's about as good as 
 
 In the letter I get from Mother, she didn't have much to say. Said they all had the blues including Tom. She said Tom was going to try to find him another job. I don't know what Tom will do, he always liked to be traveling. He got married one of these days and will have to settle down. They all do after so long.
 
-It also rained here all day Wednesday and we had to drill in it for about 2 hours. We have started to drill this week and have they been putting us through. We drill from 6 to 8 hours a day and by the time 4 O'clock comes we are awful raw. These nine pound rifles will get your goat. We also have to wear a gun belt on a bonnet, which is five pounds more. You can see we have a good load. We only have 9 weeks of training and are they rushing us through. There was about two hundred more that came in this week. It seems that there is going to be a war. Well I hope not, but if there is I will be ready to fight, for someone has to protect this country. Some of the boys were from Kentucky but more around home. Think I am the only one out of three thousand that is from Lincoln County.
+It also rained here all day Wednesday and we had to drill in it for about 2 hours. We have started to drill this week and have they been putting us through. We drill from 6 to 8 hours a day and by the time 4 O'clock comes we are awful raw. These nine pound rifles will get your goat. We also have to wear a gun belt on a bonnet, which is five pounds more. You can see we have a good load. We only have 9 weeks of training and are they rushing us through. There was about two hundred more that came in this week. [[It seems that there is going to be a war. Well I hope not, but if there is I will be ready to fight, for someone has to protect this country.]] Some of the boys were from Kentucky but more around home. Think I am the only one out of three thousand that is from Lincoln County.
 
 You asked how I look in my uniform, well like all other sailors. They all dress alike and our hair is cutted off to about one half inch long (does mine look funny, sticks straight up all the time). It will grow out though.
 
 Tell Peggy to take good care of them kittens (by the way, where the on half come in?). I will write her a letter when I get the time, so tell her not to get mad.
 
-Will have to close now for it is about show time. Be sure and write to me when you have the time. I think about you every day. Be good and I sure will.
+Will have to close now for it is about show time. Be sure and write to me when you have the time. [[I think about you every day.]] Be good and I sure will.
 
 Your Pal,`,
     signature: "Gene",
@@ -80,7 +80,7 @@ I getting along fine. A little tired. We get this afternoon and tomorrow off. Th
 
 Well, next Thursday we go over in Paradise to finish our training. We only have an hour of drilling each day over these. The rest of the time we have it to study, when I'm on duty. We do get a twelve hour leave next Saturday. I don't know whether I take it, though. They're giving us a swimming test next Saturday (hope I don't go under. Wouldn't be much good if I did. Our company has to put on a stage show Sunday night. I bet it'll be some show. We have a movie every other night and it's free for any one that'd like to go. They really have some good shows. The latest out. I think they have the best going next week. I'll probably be on guard duty and won't get to see them though.
 
-I'm glad all of you are fine in old Kentucky. I wish sometimes I was back. A person doesn't know he misses is home & friends 'till he has left it all (I'm getting homesick like a fish). I hated hearing about Jim's goat. He thought a lot of it. Jim is some boy, makes you made one minute and laugh the next. I bet you will be glad when school is out. Will you have to take the exams? I had one the other day. I also have four more when we go over in Paradise.
+I'm glad all of you are fine in old Kentucky. I wish sometimes I was back. [[A person doesn't know he misses is home & friends 'till he has left it all]] (I'm getting homesick like a fish). I hated hearing about Jim's goat. He thought a lot of it. Jim is some boy, makes you made one minute and laugh the next. I bet you will be glad when school is out. Will you have to take the exams? I had one the other day. I also have four more when we go over in Paradise.
 
 The weather here is beginning to fair up. I hope it stays that way. This wind and sun is giving me a real sun tan. We are outside about seven hours a day.
 
@@ -111,7 +111,7 @@ It snowed here hard for two days & nights. Although it melted about as fast as i
 
 If you don't read this letter don't blame it on me. I'm in a rush, have to wash some clothes 'fore I got on watch in a little while. Will have to close. Be sure and answer soon. Tell Peggy I said hello and that I haven't forgotten her yet.`,
     signature: "Gene",
-    postscript: "I'll be sending you something in a few days (guess what)"
+    postscript: "[[I'll be sending you something in a few days (guess what)]]"
   },
   {
     id: "L05",
@@ -128,7 +128,7 @@ If you don't read this letter don't blame it on me. I'm in a rush, have to wash 
 
 So they got a roller-skating ring in Rowland now. We have one here at the station and I still can't do much skating.
 
-Well, Jo, how is everything down in Kentucky way. A lot better since I left, I bet. I mess things up most the time. That's the best thing to ever happen in Lincoln County in getting rid of me. I went to a show the other night and in it they sang 'Old Kentucky Home' and boy did it make me homesick (a little, not much).
+Well, Jo, how is everything down in Kentucky way. A lot better since I left, I bet. I mess things up most the time. That's the best thing to ever happen in Lincoln County in getting rid of me. [[I went to a show the other night and in it they sang 'Old Kentucky Home' and boy did it make me homesick]] (a little, not much).
 
 Joan, there isn't any news around here right now and will sign off for a while. Write me a nice, sweet, long, long letter very soon.
 
@@ -148,7 +148,7 @@ L.L.,`,
     salutation: "Dear Joan,",
     body: `Your letter came safe and sound today. You are about the only one I can receive a letter from. They say I don't write often enough down home, but I be darn if I get a letter once a month from them.
 
-Well, Joan I am through with my training and ready for Germany, now. We have taken all our examinations and have finished the drilling part. Well, we been loafing around for the last for four or five days. I will start home 9:30 Wednesday night and get to Stanford 11:00 the next morning. That's a long time to be on the road, but the trains going that way is awful slow. They have to stop at so many small towns.
+Well, Joan I am through with my training and [[ready for Germany, now.]] We have taken all our examinations and have finished the drilling part. Well, we been loafing around for the last for four or five days. I will start home 9:30 Wednesday night and get to Stanford 11:00 the next morning. That's a long time to be on the road, but the trains going that way is awful slow. They have to stop at so many small towns.
 
 You said I was getting homesick. Well, I don't think so. It doesn't pay to think about home here. I let every day take care of itself.
 
@@ -182,7 +182,7 @@ Well, I'm out of the hospital now and in Company 28 instead of co. 26. I only lo
 
 Well, we have been on the rifle range this week to see how good a shot we are. Only have one more day left of that. We will have it tomorrow. Our shoulders are getting awful sore. There was a boy that got his hand about blown off the other day. The gun he was shooting jammed some way on him and well, it just blowed up.
 
-We graduate June 19 and I will be home June 20 for 13 days before going aboard ship. It'll probably be a long time before I get another, way the war sounds now. Looks like it's going to take the United States to stop it. They are really preparing for it, too. You only have to sign up in the Navy for four years now and they're calling them in fast. They also have only five weeks of training (looks like I signed up too soon).
+We graduate June 19 and I will be home June 20 for 13 days before going aboard ship. [[It'll probably be a long time before I get another, way the war sounds now. Looks like it's going to take the United States to stop it.]] They are really preparing for it, too. You only have to sign up in the Navy for four years now and they're calling them in fast. They also have only five weeks of training (looks like I signed up too soon).
 
 Joan, your stationary is really nice looking, and you can write good letters when you want to.
 
@@ -231,7 +231,7 @@ Joan, most of my old company 26 had gone to sea. The rest of them are leaving to
 
 Joan, I am looking for that picture every day so be sure and send it as quick as possible.
 
-Will have to close now. Be sure and answer right back for I am not going to let you stop writing, if I have to write you every day.
+Will have to close now. [[Be sure and answer right back for I am not going to let you stop writing, if I have to write you every day.]]
 
 Love,`,
     signature: "Gene",
@@ -251,7 +251,7 @@ Love,`,
     salutation: "Dear Jo,",
     body: `Received your letter yesterday afternoon and will try to answer it today. I also got one from home, said they was all OK.
 
-Well, Joan, I leave 4 O'clock this afternoon for San Diego, California. I go on a heavy cruiser, the New Orleans. It's really a nice ship and the very kind I wanted on. They are never in the same place very long. Always on the move.
+Well, Joan, I leave 4 O'clock this afternoon for San Diego, California. [[I go on a heavy cruiser, the New Orleans.]] It's really a nice ship and the very kind I wanted on. They are never in the same place very long. Always on the move.
 
 Carroll and his boyfriend came down Fourth of July and stayed till Sunday. We Went in Chicago Thursday and Saturday. I think we saw about everything there were to see, from one end of town to the other. I really had a swell time. Chicago is sure a large town when you start looking it over.
 
@@ -263,7 +263,7 @@ Well, Joan, I will have to close for a while. Will write again when I've arrived
 
 Lots of Love,`,
     signature: "Gene",
-    postscript: "Kiss yourself once for me.",
+    postscript: "[[Kiss yourself once for me.]]",
     note: "Gene received his orders this afternoon. He is leaving by rail for San Diego to join the U.S.S. New Orleans."
   },
   {
@@ -283,7 +283,7 @@ We got to San Diego sometime Friday afternoon and we really had a nice trip comi
 
 I am now at the Destroyer Base waiting to be transferred to Honolulu where my ship is at. They don't know when the next ship leaves, but I think in the next few days. There sure will be several miles between me & you when I get out there. You can't tell how long I will be there. Might be 2 years and still it could only be 2 months. I got a funny feeling I'm not going to like the place anyway. California is a nice place to live but still, I will take Old Kentucky. I guess it's because I've lived there all my life.
 
-Have you been down home since I left? You told me you would go more often. Don't know when I'll get another chance to come home. It won't be long now before the United States is going to be in the war. If you have seen and heard the things I have you'd think the same way.
+Have you been down home since I left? You told me you would go more often. Don't know when I'll get another chance to come home. [[It won't be long now before the United States is going to be in the war. If you have seen and heard the things I have you'd think the same way.]]
 
 What have you been doing since I left? Working hard, I bet. I am still looking for that picture. Be sure and write me a long letter when you have the time to spare. Joan, send it to the address at the head of the letter; if I'm not here, they will it on to me.
 
@@ -307,7 +307,7 @@ With Love,`,
 
 Well, Joan, what have you been doing for yourself all this time? I don't know when I'll ever get a letter from you again. I'm leaving the United States tomorrow morning for Honolulu where my ship is stationed. It will take us around eight days to cross (and that's plenty of time to get seasick). I don't know how long I will be there, long time I guess and still it might be a short time.
 
-How would you like to be that far away from home? It feels funny to me to be this far away, don't know how I'll feel when I get out there. I don't care where they send me. They can send me on to China if they want to. I got six years to stay in and I might as well see the world. I would like to stay here a while longer for this is a really pretty country to live in. But they say it's twice as pretty in Honolulu.
+How would you like to be that far away from home? It feels funny to me to be this far away, don't know how I'll feel when I get out there. I don't care where they send me. They can send me on to China if they want to. [[I got six years to stay in and I might as well see the world.]] I would like to stay here a while longer for this is a really pretty country to live in. But they say it's twice as pretty in Honolulu.
 
 Well, I can't think of anything to write. I guess you know I couldn't write a letter if I did know something to write.
 
@@ -334,9 +334,9 @@ With Love,`,
     salutation: "Dear Joan,",
     body: `I am at last going to write you a letter and please forgive me for not writing sooner. Don't think that I have forgotten you by a long shot. I've only been putting it off until I got on my own ship. I came over on the Cuyama and it took eight days to make the trip. When we got here, the New Orleans was out to sea. I then went aboard Portland and stayed on it for three days before my ship came in. The ship is about the best in the fleet. It's only been built a short time.
 
-Joan, I only received your letters last week and the picture came yesterday. I was tickled to get it and it couldn't be any better. I wouldn't take anything in this world for it. I got it on the door of my locker so every time I open it, I can see it. You might think I'm crazy (so what?)
+Joan, I only received your letters last week and the picture came yesterday. I was tickled to get it and it couldn't be any better. [[I wouldn't take anything in this world for it.]] I got it on the door of my locker so every time I open it, I can see it. You might think I'm crazy (so what?)
 
-Well, they have put me on the deck force; just the place I thought I would get. You can't get the job want in the Navy now. They put you where they want you and you got to take it and make yourself like it. They might make me take this but they can never make me like it. There are so many coming in now that a person hasn't a chance to get anywhere. I'm going to get out as soon as I can. They think I'm in here six years but have one that will be hard to keep in that long. If they won't give me a discharge, well, I'll get one some way. They tell you what a big chance you have in the Navy but after you see what the score is and know what it's all about, you find it doesn't look so good. The Navy isn't this way all the time but with the war over in Europe, you can't expect any better.
+Well, they have put me on the deck force; just the place I thought I would get. You can't get the job want in the Navy now. They put you where they want you and you got to take it and make yourself like it. They might make me take this but they can never make me like it. There are so many coming in now that a person hasn't a chance to get anywhere. I'm going to get out as soon as I can. They think I'm in here six years but have one that will be hard to keep in that long. If they won't give me a discharge, well, I'll get one some way. They tell you what a big chance you have in the Navy but after you see what the score is and know what it's all about, you find it doesn't look so good. [[The Navy isn't this way all the time but with the war over in Europe, you can't expect any better.]]
 
 Joan, you asked about these islands, if they were as pretty as they say. There are a lot of nice things to see but still, I like to see white people once in a while. You might like it here a little while, then you get tired of it all.
 
@@ -365,7 +365,7 @@ Joan, do they kid you about me? I bet they do. If they do, jus tell them you hav
 
 Well, we are in Pearl Harbor until Oct. 11 before going back to sea.
 
-We like to had gone to the East Coast. There was a call for 4 heavy cruisers and we missed it some way. They seem to think this ship will be sent to China before long. I don't care myself where they send us. Looks as if there's going to be war anyway, so I hope it will hurry and start and get it over with. I'm really on a bad ship to be in war for. These are the kind of ships that does so much damage and they really pay for them.
+We like to had gone to the East Coast. There was a call for 4 heavy cruisers and we missed it some way. They seem to think this ship will be sent to China before long. I don't care myself where they send us. [[Looks as if there's going to be war anyway, so I hope it will hurry and start and get it over with.]] [[I'm really on a bad ship to be in war for. These are the kind of ships that does so much damage and they really pay for them.]]
 
 Joan, I want to tell you something that is really funny. Starting Tuesday, we have to wear a new uniform. It's only a pair of short pants cut off about 6 or 8 inches above the knees and a undershirt. The whole fleet out here has to wear them. Some of these old men are going to look nice in them. Don't you think so?
 
@@ -409,7 +409,7 @@ Do you know that there is 26 gallons of coffee put out for each man aboard this 
 
 Dad told me about Tom leaving. It left him in an awful bad place. Did Carroll come home? I haven't gotten a letter from him. The last he wrote, I didn't answer it, so he has stopped writing. I don't write to anyone but you and a few letters home.
 
-There isn't anything, Joan, to write that you care to hear so I will close, but will write again soon. You better write to me more often, for you don't know how happy it makes me feel when I get a letter from you. I think about you every day of my life. So be good and don't do anything I wouldn't (that gives you a lot of space, or do you think so).
+There isn't anything, Joan, to write that you care to hear so I will close, but will write again soon. You better write to me more often, for you don't know how happy it makes me feel when I get a letter from you. [[I think about you every day of my life.]] So be good and don't do anything I wouldn't (that gives you a lot of space, or do you think so).
 
 (How are those Highland boys; good looking I bet)
 
@@ -436,13 +436,13 @@ I'm sorry to say but I haven't been doing so well in the Navy. I guess I told yo
 
 Well, Joan, what've you been doing to help yourself? Have you started to study yet? You get to like Highland school after you go there awhile, so don't feel so bad about it. I hope you have a good time & make better grades in school. Wished I were back to go with you this year. I would have finished this year, but that can never be. How is little Peggy making out in school?
 
-There are so many new ones coming aboard now that they hardly got enough bunks. There are close to a thousand men on this ship; enough to run a battle ship. They got to have this many in war, for when one man is killed, there's got to be another one to take his place. We only had about six hundred at the time I came on, so you can see how they increased?
+There are so many new ones coming aboard now that they hardly got enough bunks. There are close to a thousand men on this ship; enough to run a battle ship. [[They got to have this many in war, for when one man is killed, there's got to be another one to take his place.]] We only had about six hundred at the time I came on, so you can see how they increased?
 
 I bet it's really beginning to get cold back in Old Kentucky now. The weather out here stays the same year-round. This is a pretty place to see but a person gets so he doesn't think it's nice after he's here a while. I know the states wouldn't look good to me now. Far as the 'pretty women', well I don't see anything special about them. I would rather pick mine from Kentucky anytime.
 
 Don't you think I have wrote enough of this for one time anyway? So I will close for a while, but I will always be writing to you. Try and write to me every time you can, for you will never know how happy it makes me to see a letter from you.
 
-You might have thought I would forget you. That would take an awful long time.
+[[You might have thought I would forget you. That would take an awful long time.]]
 
 Joan, I guess it would have been the best if I never have seen you (or would it). I don't think so.
 
@@ -474,7 +474,7 @@ Joan, I can't think of nothing to write today that you would care to hear. I cou
 
 So a lot of the boys are getting married around there. I wouldn't blame them. Carroll didn't stay at home very long by what the letter from mother said. That as much as can be expected from him for he's been in the Navy 4 years.
 
-Well, Joan, didn't you think I have just about said enough for one time anyway? Please keep writing to me. You don't know how much I really care for you and whatever Carroll said, forget all about. He seems to think Jim's just like he was in the Navy. He can't judge others by himself. You are the only girl I would snap a finger for and please don't get me wrong. There isn't a day that goes by that I don't think about you, and at night. Well you might know (I hope) these 'beautiful girls' you seem to think are over here aren't as pretty as you think. They are different in too many ways for me to care anything about. I wished I could tell you what it's really like over here but it's not even worth writing.
+Well, Joan, didn't you think I have just about said enough for one time anyway? Please keep writing to me. You don't know how much I really care for you and whatever Carroll said, forget all about. He seems to think Jim's just like he was in the Navy. He can't judge others by himself. [[You are the only girl I would snap a finger for]] and please don't get me wrong. There isn't a day that goes by that I don't think about you, and at night. Well you might know (I hope) these 'beautiful girls' you seem to think are over here aren't as pretty as you think. They are different in too many ways for me to care anything about. I wished I could tell you what it's really like over here but it's not even worth writing.
 
 I'll be looking for an answer real soon & always be thinking & loving you.
 
@@ -498,7 +498,7 @@ I hope everyone is in the best of health around that part of the country, includ
 
 We are back in Pearl Harbor this weekend, but will leave again tomorrow morning for another week. After next week, we come back and stay until the holidays and I sure am glad of it. The last three weeks has been a little tough. Have been shooting at night and of course, we were up most the nights and I think next week will be about the same. I have seen a lot of things I never would have known about if I didn't come to the Navy. A person outside doesn't know what is really going on until he sees them for himself.
 
-Joan, you think I won't get out, well just watch and see; that is, if war doesn't start and if it does, I wouldn't want out. I'd die just like the others will and think nothing about it.
+Joan, you think I won't get out, well just watch and see; that is, [[if war doesn't start and if it does, I wouldn't want out. I'd die just like the others will and think nothing about it.]]
 
 I guess I could get a leave in two or three months, but I wouldn't care about it now for it's too far to travel only a few days at home. Besides, we go back to the states next June and I will get to go home then and something could happen that I wouldn't come back. I got my plans all made out and it will be a smooth job.
 
@@ -544,7 +544,7 @@ I also got a letter from home today, for a chance. They said Carroll had got out
 
 Well, Joan I think we are going to Australia or to China in a month or so. We got the day clock to have some work done on the ship first and then they know what will be sent somewhere but they really don't know what but they think it will be one of the two.
 
-Say Joan, I know Roosevelt won the election. You remember that he said he would never send United States boys to Europe. Well, you can see that wouldn't help him to get elected. He's [?] [?] [?] me [?] long [?] will be before we are in the war. We not [stopping?] [?] and having a [?] [?] around this ship. Mostly [?] doing all of the work or might be when we not have one [?]. After all, will I don't care anything! [?] [?] [?] [?]. That [?] me to [Mr Daly?] so why not make myself useful.
+Say Joan, I know Roosevelt won the election. [[You remember that he said he would never send United States boys to Europe.]] Well, you can see that wouldn't help him to get elected. He's [?] [?] [?] me [?] long [?] will be before we are in the war. We not [stopping?] [?] and having a [?] [?] around this ship. Mostly [?] doing all of the work or might be when we not have one [?]. After all, will I don't care anything! [?] [?] [?] [?]. That [?] me to [Mr Daly?] so why not make myself useful.
 
 So you are trying to kill yourself by school per [?]. Well, you could [?] of others ways doing that wouldn't be more pleasant. That is really, is too way out there in Old Kentucky. I'm sure would you like being out there?
 
@@ -611,7 +611,7 @@ Well, Joan, you can talk about it being cold back there and all. The weather is 
 
 Joan, if you really want a picture of me I will go over sometime this week and have one made, so don't blame me after you get it, for you asked for it. As you might say, I don't sit. My heart isn't in it.
 
-Will have to bring this letter to a close but I will write again soon. I am sorry I have been so long but I promise it never happen again, and you know me to be (I think you understand). There isn't a day or night that goes by that I don't think about you. Remember the nights we were together? Will I think there might come more just as those if [?] later. Please keep on writing, Joan, and if I don't write as often as I should, forgive me. Be a good girl like you always have been and don't let some boy talk you into doing things that you shouldn't. Stay the same girl as I knew you. Things might be dull at times but after all it comes in write everybody life. So take is with a smile.
+Will have to bring this letter to a close but I will write again soon. I am sorry I have been so long but I promise it never happen again, and you know me to be (I think you understand). [[There isn't a day or night that goes by that I don't think about you.]] Remember the nights we were together? Will I think there might come more just as those if [?] later. Please keep on writing, Joan, and if I don't write as often as I should, forgive me. Be a good girl like you always have been and don't let some boy talk you into doing things that you shouldn't. Stay the same girl as I knew you. Things might be dull at times but after all it comes in write everybody life. So take is with a smile.
 
 Write Soon,
 With Lots of Love`,
