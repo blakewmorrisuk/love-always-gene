@@ -49,6 +49,12 @@ const LETTERS = [
   { id: "L21", date: "1940-12-15", loc: "pearl-harbor" },
   { id: "L22", date: "1940-12-25", loc: "pearl-harbor" },
   { id: "L23", date: "1940-12-29", loc: "pearl-harbor" },
+
+  // ─── Chapter IV — At War ─────────────────────────────────────────
+  // L24 was written from sea on the recall from the Wake Island relief
+  // expedition, but the ship's home port and the postal coordinates the
+  // censor would associate with the letter are still Pearl Harbor.
+  { id: "L24", date: "1941-12-20", loc: "pearl-harbor" },
 ];
 
 const ENDPOINT = "https://archive-api.open-meteo.com/v1/archive";

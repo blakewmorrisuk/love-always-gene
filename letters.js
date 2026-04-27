@@ -618,6 +618,40 @@ With Lots of Love`,
     signature: "Gene",
     draft: true,
     note: "Written six days after Roosevelt's 'Arsenal of Democracy' fireside chat. Pearl Harbor was eleven months and eight days away."
+  },
+
+  // ──────────────────────────────────────────────────────────────────
+  // Chapter IV — At War. The first letter Gene wrote after the attack
+  // on Pearl Harbor and the first to pass through naval censorship.
+  // ──────────────────────────────────────────────────────────────────
+
+  {
+    id: "L24",
+    n: 24,
+    date: "1941-12-20",
+    date_label: "December 20, 1941",
+    location_chapter: "at-war",
+    location_stamp: "U.S.S. New Orleans · Pearl Harbor",
+    folder: "L24_1941-12-20_pearl-harbor",
+    image_count: 3,
+    status: "transcribed",
+    salutation: "Dearest Joan;",
+    body: `I finally received your letter today which you wrote around the first of December. Anyhow I sure was glad to get it, as it had been so long since I last gotten a letter from you.
+
+Well, Darling this leaves me as well as usual & hope it finds you in the very best of help. Just received two letters from home this week. They seem to be awfully worried about me as they hadn't heard from me since the bombing of Pearl Harbor. Guess you got my letter by now. I knew the war was comming sooner or later. Just received an letter today from Martha. She said they would get her just as soon she finish training. Carroll probably be called back to the navy shortly, also Thomas will be called. Maybe Earl will have to go in the Army just as soon he's of age. The Lankfords family is going to be hit hard. Anyway I glad to fight and I'm sure we all feel the same way. I saw the first battle & expect to see the last.
+
+Well, Joan it's only five more days until Xmas. I hope you have the best Xmas that you ever had. Was going to send you an present but it's impossible now. Anyway I'm going to get you something nice the first chance I have. You probably get so many that you won't even miss my though.
+
+Joan, I don't know much to write. All of our mail is censored now & there really not anything much I can write. Hope you will understand why my letters are short. You keep on writting to me as usual & I try to write as often as I can. I thought I would never hear from you the last time, although the letter was a long time getting here. That promise you made still stands doesn't it? I know it does.
+
+Write soon, Darling & tell me all the news as I'm always looking for a letter from you. Be good Joan & don't worry about me. So here's wishing you a Merry Xmas & a very Happy New Year. Give my love to all,`,
+    signature: "Gene",
+    postscript: null,
+    note: `Gene wrote this from sea, thirteen days after the attack on Pearl Harbor. He could not say where he was. The U.S.S. New Orleans had sailed from Pearl Harbor on December 14 as part of Task Force 14, the Wake Island relief expedition organized around the carrier Saratoga, with orders to break through to the Marine garrison and evacuate the construction workers under siege there. On December 22, with TF 14 about four hundred miles from Wake, the Japanese launched their second assault, and the island fell the next day. Vice Admiral William Pye, acting commander of the Pacific Fleet, recalled the force. The New Orleans returned to Pearl Harbor on December 27.
+
+"I saw the first battle." On the morning of December 7 the New Orleans was moored in the Navy Yard with her power down for refit. When the alarm sounded, sailors carried ammunition up from the magazines by hand. Her chaplain, Lt. Howell Forgy, walked among them saying "Praise the Lord and pass the ammunition" — a line Frank Loesser turned into a hit song the following year. Three crewmen were wounded and the ship survived intact.
+
+Martha, Carroll, Thomas, Earl — Gene names them as if Joan would already be running the same arithmetic. Congress had declared war on Japan on December 8 and on Germany and Italy on December 11. Every household in the country was counting who was old enough to be drafted and who could still be deferred.`
   }
 ];
 
@@ -647,5 +681,17 @@ window.CHAPTERS = [
     location_label: "U.S.S. New Orleans, Territory of Hawaii",
     bridge: `Gene crossed to Honolulu aboard the U.S.S. Cuyama in late July, then transferred briefly to the Portland before joining the New Orleans when she returned to port. He was assigned to F Division, on the deck force. The ship steamed out for gunnery and back to Pearl on a weekly cycle through the autumn and winter. Europe had been at war for over a year. America was still neutral.`,
     map: { x: 1015, y: 525, label: "Pearl Harbor", inset: true }
+  },
+  {
+    key: "at-war",
+    numeral: "IV",
+    title: "At War",
+    location_label: "U.S.S. New Orleans, the Pacific",
+    bridge: `The morning of December 7, 1941 the U.S.S. New Orleans was moored in the Navy Yard at Pearl Harbor for refit, her power down. Sailors passed ammunition up to the antiaircraft guns by hand and the ship survived intact. Three crewmen were wounded and no one died. Within a week she was at sea again. From that morning forward every letter Gene wrote passed through a naval censor before it reached Joan in Kentucky. Most of what he wanted to say, he could not.`,
+    // No own `map` field — the Pacific theater is where the New Orleans
+    // ranged after Dec 7, but Pearl Harbor remained her home port. mapPin
+    // tells the RouteDiagram to highlight Pearl Harbor when this chapter
+    // is active so we don't double-pin or invent coordinates.
+    mapPin: "pearl-harbor"
   }
 ];

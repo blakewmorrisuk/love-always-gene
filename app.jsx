@@ -26,12 +26,16 @@ function dateRange(letters) {
 }
 
 const PEARL_HARBOR = new Date("1941-12-07T00:00:00Z");
-function daysUntilPearlHarbor(dateStr) {
+// Returns { days, label } or null. label is the small-caps phrase to render.
+// Negative deltas (letter date < Dec 7, 1941) become "X days before"; positive
+// deltas (after) become "X days after"; the day itself is its own marker.
+function pearlHarborMarker(dateStr) {
   const d = new Date(dateStr + "T00:00:00Z");
   if (isNaN(d)) return null;
-  const ms = PEARL_HARBOR - d;
-  const days = Math.round(ms / 86400000);
-  return days > 0 ? days : null;
+  const days = Math.round((d - PEARL_HARBOR) / 86400000);
+  if (days < 0)  return { days: -days, label: `${(-days).toLocaleString()} days before Pearl Harbor` };
+  if (days > 0)  return { days, label: `${days.toLocaleString()} days after Pearl Harbor` };
+  return { days: 0, label: "the morning of Pearl Harbor" };
 }
 
 function buildPages(letters, chapters) {
@@ -323,7 +327,14 @@ function Atmosphere({ chapterKey, weather, on }) {
 function RouteDiagram({ activeChapter, chapters, letters }) {
   const grouped = useMemo(() => groupByChapter(letters, chapters), [letters, chapters]);
   const usedKeys = new Set(letters.map(l => l.location_chapter));
-  const stops = chapters.filter(c => usedKeys.has(c.key));
+  // A chapter only becomes a route stop if it has letters AND defines a
+  // `map` field. Chapters like "at-war" share Pearl Harbor's geography
+  // and intentionally omit `map`, so they don't double-pin the diagram.
+  const stops = chapters.filter(c => usedKeys.has(c.key) && c.map);
+  // Resolve mapPin redirection: a chapter without its own map can declare
+  // which existing pin to highlight when it's the active chapter.
+  const activeDef = chapters.find(c => c.key === activeChapter);
+  const effectiveActive = (activeDef && activeDef.mapPin) || activeChapter;
   if (stops.length === 0) return null;
 
   const x0 = 80, x1 = 720, yMid = 90;
@@ -339,7 +350,7 @@ function RouteDiagram({ activeChapter, chapters, letters }) {
       <svg viewBox="0 0 800 200" className="route-svg" preserveAspectRatio="xMidYMid meet">
         <line x1={x0} y1={yMid} x2={x1} y2={yMid} className="route-line" />
         {positions.map(p => {
-          const isActive = p.key === activeChapter;
+          const isActive = p.key === effectiveActive;
           const ls = grouped[p.key] || [];
           const dr = dateRange(ls);
           const label = (p.map && p.map.label) || p.location_label || p.title;
@@ -464,15 +475,15 @@ function Postmark({ letter }) {
 
 function LetterHeader({ letter }) {
   const weather = (window.LETTER_WEATHER && window.LETTER_WEATHER[letter.id]) || null;
-  const days = daysUntilPearlHarbor(letter.date);
+  const ph = pearlHarborMarker(letter.date);
   return (
     <header className="letter-head">
       <div className="letter-num"><em>{letter.date_label}</em></div>
       <div className="letter-stamp">{letter.location_stamp}</div>
       {weather && !weather.error && <WeatherGlyph weather={weather} />}
-      {days != null && (
-        <div className="letter-countdown" aria-label={`${days} days before the attack on Pearl Harbor`}>
-          {days.toLocaleString()} days before Pearl Harbor
+      {ph && (
+        <div className="letter-countdown" aria-label={ph.label}>
+          {ph.label}
         </div>
       )}
       <Postmark letter={letter} />
