@@ -508,6 +508,17 @@ function PhotoLink({ letter, onOpen }) {
   );
 }
 
+/* Render a multi-paragraph note string. Splits on blank lines so each
+   block lands as its own .letter-note <p> instead of a single wall of
+   text. extraClass lets envelope/card variants attach their tint. */
+function NoteBlock({ text, extraClass }) {
+  if (!text) return null;
+  const cls = "letter-note" + (extraClass ? ` ${extraClass}` : "");
+  return text.split(/\n\n+/).map((para, i) => (
+    <p key={i} className={cls}>{para}</p>
+  ));
+}
+
 /* Render a paragraph string, splitting on [[...]] markers and wrapping
    matched runs in <Emphasis> so they get the scroll-triggered underline. */
 function renderProse(text) {
@@ -532,7 +543,7 @@ function TranscribedCard({ letter, onOpen }) {
           <p className="postscript"><span className="ps-mark">P.S.</span> {renderProse(letter.postscript)}</p>
         )}
       </div>
-      {letter.note && <p className="letter-note">{letter.note}</p>}
+      <NoteBlock text={letter.note} />
       {letter.partial && <p className="letter-note">Transcription incomplete; the remainder is being verified.</p>}
       {letter.image_count > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
     </article>
@@ -559,7 +570,7 @@ function DraftCard({ letter, onOpen }) {
         {paragraphs.map((para, i) => <p key={i}>{renderBody(para)}</p>)}
         <div className="signature">{letter.signature}</div>
       </div>
-      {letter.note && <p className="letter-note">{letter.note}</p>}
+      <NoteBlock text={letter.note} />
       <p className="letter-note">Some words are still being verified.</p>
       {letter.image_count > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
     </article>
@@ -577,7 +588,7 @@ function EnvelopeCard({ letter, onOpen }) {
         </button>
       </div>
       <p className="letter-note envelope-note">The letter inside has been lost.</p>
-      {letter.envelope_note && <p className="letter-note">{letter.envelope_note}</p>}
+      <NoteBlock text={letter.envelope_note} />
     </article>
   );
 }
@@ -598,7 +609,7 @@ function ChristmasCardCard({ letter, onOpen }) {
         <div className="xmas-cartouche">Christmas · 1940</div>
       </div>
       <div className="signature signature--xmas">{letter.signature}</div>
-      {letter.card_note && <p className="letter-note">{letter.card_note}</p>}
+      <NoteBlock text={letter.card_note} />
       {letter.image_count > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
       <div className="brass-rule" />
     </article>

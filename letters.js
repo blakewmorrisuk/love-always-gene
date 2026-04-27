@@ -642,7 +642,7 @@ Well, Darling this leaves me as well as usual & hope it finds you in the very be
 
 Well, Joan it's only five more days until Xmas. I hope you have the best Xmas that you ever had. Was going to send you an present but it's impossible now. Anyway I'm going to get you something nice the first chance I have. You probably get so many that you won't even miss my though.
 
-Joan, I don't know much to write. All of our mail is censored now & there really not anything much I can write. Hope you will understand why my letters are short. You keep on writting to me as usual & I try to write as often as I can. I thought I would never hear from you the last time, although the letter was a long time getting here. That promise you made still stands doesn't it? I know it does.
+Joan, I don't know much to write. All of our mail is censored now & there really not anything much I can write. Hope you will understand why my letters are short. You keep on writting to me as usual & I try to write as often as I can. I thought I would never hear from you the last time, although the letter was a long time getting here. [[That promise you made still stands doesn't it? I know it does.]]
 
 Write soon, Darling & tell me all the news as I'm always looking for a letter from you. Be good Joan & don't worry about me. So here's wishing you a Merry Xmas & a very Happy New Year. Give my love to all,`,
     signature: "Gene",
