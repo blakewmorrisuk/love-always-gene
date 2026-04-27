@@ -173,9 +173,11 @@ function Atmosphere({ chapterKey, weather, on }) {
   if (!on) return null;
 
   // Render based on per-letter weather first
-  // War mode — closing page. Distant lightning + thinned rain + a low
-  // red horizon glow. Reads like the storm is miles off, not overhead.
-  if (chapterKey === "war") {
+  // War mode — Chapter IV (At War) divider. Distant lightning, thinned
+  // rain, low red horizon glow. Reads like the storm is miles off, not
+  // overhead. Letters within the chapter still get their own per-day
+  // weather animation; this only fires on the divider itself.
+  if (chapterKey === "at-war") {
     return (
       <div className="atmosphere atmosphere--on" aria-hidden="true">
         <div className="war-glow" />
@@ -522,17 +524,28 @@ function PhotoLink({ letter, onOpen }) {
   );
 }
 
+/* Render a paragraph string, splitting on [[...]] markers and wrapping
+   matched runs in <Emphasis> so they get the scroll-triggered underline. */
+function renderProse(text) {
+  const parts = text.split(/(\[\[[^\]]+\]\])/g);
+  return parts.map((part, i) => {
+    const m = part.match(/^\[\[([^\]]+)\]\]$/);
+    if (m) return <Emphasis key={i}>{m[1]}</Emphasis>;
+    return <React.Fragment key={i}>{part}</React.Fragment>;
+  });
+}
+
 function TranscribedCard({ letter, onOpen }) {
   return (
     <article className="letter-card" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
         <div className="salutation">{letter.salutation}</div>
-        {letter.body.split(/\n\n+/).map((para, i) => <p key={i}>{para}</p>)}
+        {letter.body.split(/\n\n+/).map((para, i) => <p key={i}>{renderProse(para)}</p>)}
         {letter.partial && <p className="incomplete-marker">[the letter continues]</p>}
         <div className="signature">{letter.signature}</div>
         {letter.postscript && (
-          <p className="postscript"><span className="ps-mark">P.S.</span> {letter.postscript}</p>
+          <p className="postscript"><span className="ps-mark">P.S.</span> {renderProse(letter.postscript)}</p>
         )}
       </div>
       {letter.note && <p className="letter-note">{letter.note}</p>}
@@ -731,7 +744,7 @@ function Closing() {
     <section className="closing">
       <div className="hairline-rule" />
       <p className="closing-body">
-        Gene's letters to Joan continued through the war. Less than a year after this last letter of 1940, on the morning of December 7, 1941, he was at Pearl Harbor. A year after that, off Tassafaronga in the Solomon Islands, a Japanese torpedo struck the New Orleans and <Emphasis>tore away one hundred and fifty feet of her bow</Emphasis>. One hundred and eighty-three of his shipmates went down with it, along with most of Joan's letters back. Gene came home in 1943. He and Joan were married for forty-nine years.
+        Gene's letters to Joan continued through the war. Less than a year after this last letter of 1940, on the morning of December 7, 1941, he was at Pearl Harbor. A year after that, off Tassafaronga in the Solomon Islands, a Japanese torpedo struck the New Orleans and tore away one hundred and fifty feet of her bow. One hundred and eighty-three of his shipmates went down with it, along with most of Joan's letters back. Gene came home in 1943. He and Joan were married for forty-nine years.
       </p>
       <div className="hairline-rule" />
       <p className="dedication">For the family who carries his story.</p>
@@ -1062,7 +1075,6 @@ function App() {
   const chapterKey = useMemo(() => {
     if (currentPage.type === "chapter") return currentPage.chapter.key;
     if (currentPage.type === "letter") return currentPage.chapter.key;
-    if (currentPage.type === "closing") return "war";
     return null;
   }, [currentPage]);
   const currentWeather = useMemo(() => {
@@ -1072,7 +1084,7 @@ function App() {
   }, [currentPage]);
 
   const isNavy = currentPage.type === "chapter";
-  const isWar = currentPage.type === "closing";
+  const isWar = currentPage.type === "chapter" && currentPage.chapter.key === "at-war";
   useEffect(() => {
     document.body.classList.toggle("body--navy", isNavy);
     document.body.classList.toggle("body--war", isWar);
