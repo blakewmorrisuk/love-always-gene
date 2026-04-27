@@ -1211,14 +1211,14 @@ function AtmosphereMount({ chapterKey, weather }) {
    atmospheres: a fixed field of absolutely-positioned petal spans
    with randomized fall parameters, animated via CSS keyframes. */
 function PlumeriaField({ on }) {
-  const petals = useMemo(() => Array.from({ length: 14 }, () => ({
+  const petals = useMemo(() => Array.from({ length: 26 }, () => ({
     left: Math.random() * 100,
-    delay: -Math.random() * 14,
-    dur: 14 + Math.random() * 10,
-    drift: (Math.random() - 0.5) * 240,
-    rot: 360 + Math.random() * 540,
-    size: 16 + Math.random() * 9,
-    op: 0.7 + Math.random() * 0.25,
+    delay: -Math.random() * 26,
+    dur: 22 + Math.random() * 14,
+    drift: (Math.random() - 0.5) * 380,
+    rot: 360 + Math.random() * 720,
+    size: 22 + Math.random() * 14,
+    op: 0.78 + Math.random() * 0.22,
   })), []);
   if (!on) return null;
   return (
