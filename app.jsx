@@ -1067,8 +1067,11 @@ function App() {
     return (w && !w.error) ? w : null;
   }, [currentPage]);
 
-  const isNavy = currentPage.type === "chapter";
   const isWar = currentPage.type === "chapter" && currentPage.chapter.key === "at-war";
+  // navy and war are mutually exclusive — at-war gets red, every other
+  // chapter divider gets navy. Avoids a CSS specificity tie that left
+  // navy chrome bleeding through on the at-war page.
+  const isNavy = currentPage.type === "chapter" && !isWar;
   useEffect(() => {
     document.body.classList.toggle("body--navy", isNavy);
     document.body.classList.toggle("body--war", isWar);
