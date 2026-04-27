@@ -1103,7 +1103,6 @@ function App() {
     document.body.classList.toggle("body--war", isWar);
   }, [isNavy, isWar]);
 
-  const isTitle = currentPage.type === "title";
 
   const openLb = useCallback((letter, page = 1) => setLb({ letter, page }), []);
   const closeLb = useCallback(() => setLb(null), []);
@@ -1141,7 +1140,6 @@ function App() {
   return (
     <>
       <AtmosphereMount chapterKey={chapterKey} weather={currentWeather} />
-      <PlumeriaMount on={isTitle && !reduced} />
       <ProgressBar pageIdx={pageIdx} total={pages.length} pages={pages} isVisible={showProgress} />
       <div className="stage" style={{ perspective: "1400px" }}>
         <AnimatePresence mode="wait" initial={false} custom={direction}>
@@ -1207,63 +1205,5 @@ function AtmosphereMount({ chapterKey, weather }) {
   );
 }
 
-/* Plumeria petals — title page only. Same shape as the snow / rain
-   atmospheres: a fixed field of absolutely-positioned petal spans
-   with randomized fall parameters, animated via CSS keyframes. */
-function PlumeriaField({ on }) {
-  // Burst-pattern delay cluster. All petals share the same cycle
-  // duration so the bursts repeat predictably; clustering delays into
-  // burstCount groups (each tight, 0–0.5s spread) makes a fresh wave
-  // arrive every cycleDuration / burstCount seconds.
-  const petals = useMemo(() => {
-    const burstCount = 4;
-    const petalsPerBurst = 8;
-    const cycleDuration = 8;                       // seconds per loop
-    const burstSpacing = cycleDuration / burstCount; // 2s between bursts
-    const arr = [];
-    for (let b = 0; b < burstCount; b++) {
-      const burstBase = b * burstSpacing;
-      for (let p = 0; p < petalsPerBurst; p++) {
-        arr.push({
-          left: Math.random() * 100,
-          delay: -(burstBase + Math.random() * 0.45),
-          dur: cycleDuration + (Math.random() - 0.5) * 1.4,
-          drift: (Math.random() - 0.5) * 520,
-          rot: 360 + Math.random() * 900,
-          size: 9 + Math.random() * 8,
-          op: 0.85 + Math.random() * 0.15,
-        });
-      }
-    }
-    return arr;
-  }, []);
-  if (!on) return null;
-  return (
-    <div className="plumeria-field" aria-hidden="true">
-      {petals.map((p, i) => (
-        <span key={i} className="plumeria-petal" style={{
-          left: `${p.left}%`,
-          width: `${p.size * 0.6}px`,
-          height: `${p.size}px`,
-          animationDelay: `${p.delay}s`,
-          animationDuration: `${p.dur}s`,
-          "--p-drift": `${p.drift}px`,
-          "--p-rot": `${p.rot}deg`,
-          "--p-op": p.op,
-        }} />
-      ))}
-    </div>
-  );
-}
-
-function PlumeriaMount({ on }) {
-  const [mounted, setMounted] = useState(null);
-  useLayoutEffect(() => {
-    const node = document.getElementById("atmosphere-root");
-    if (node) setMounted(node);
-  }, []);
-  if (!mounted) return null;
-  return createPortal(<PlumeriaField on={on} />, mounted);
-}
 
 createRoot(document.getElementById("root")).render(<App />);
