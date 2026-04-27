@@ -173,27 +173,11 @@ function Atmosphere({ chapterKey, weather, on }) {
   if (!on) return null;
 
   // Render based on per-letter weather first
-  // War mode — Chapter IV (At War) divider. Distant lightning, thinned
-  // rain, low red horizon glow. Reads like the storm is miles off, not
-  // overhead. Letters within the chapter still get their own per-day
-  // weather animation; this only fires on the divider itself.
-  if (chapterKey === "at-war") {
-    return (
-      <div className="atmosphere atmosphere--on" aria-hidden="true">
-        <div className="war-glow" />
-        <div className="war-flash" />
-        {rain.slice(0, 30).map((r, i) => (
-          <span key={i} className="rain-streak" style={{
-            left: `${r.left}%`,
-            height: `${r.len}px`,
-            animationDelay: `${r.delay}s`,
-            animationDuration: `${r.dur * 1.4}s`,
-            "--rain-op": r.op * 0.6,
-          }} />
-        ))}
-      </div>
-    );
-  }
+  // Chapter IV (At War) divider — no animated atmosphere. The deep red
+  // background (body--war class on the body element) carries the mood
+  // on its own. Letters within the chapter still get their per-day
+  // weather animation as normal.
+  if (chapterKey === "at-war") return null;
 
   if (kind === "rain" || kind === "storm") {
     return (
