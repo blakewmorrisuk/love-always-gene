@@ -1103,6 +1103,40 @@ function App() {
     document.body.classList.toggle("body--war", isWar);
   }, [isNavy, isWar]);
 
+  // Plumeria petals — falling on the title page only. sakura-js is
+  // loaded as a deferred CDN script (window.Sakura). We pass our own
+  // className so the library's default petal silhouette is bypassed
+  // and our .petal-plumeria SVG takes over. Cleanup uses the graceful
+  // stop so any in-flight petals finish their fall instead of popping.
+  const isTitle = currentPage.type === "title";
+  useEffect(() => {
+    if (!isTitle || reduced) return;
+    const start = () => {
+      if (!window.Sakura) return null;
+      return new window.Sakura("body", {
+        className: "petal-plumeria",
+        fallSpeed: 1.8,
+        delay: 400,
+        minSize: 14,
+        maxSize: 22,
+      });
+    };
+    let instance = start();
+    // sakura.min.js is loaded with `defer`, so on the very first title
+    // mount window.Sakura may not be ready yet. Retry once on load.
+    let onLoad = null;
+    if (!instance) {
+      onLoad = () => { instance = start(); };
+      window.addEventListener("load", onLoad, { once: true });
+    }
+    return () => {
+      if (onLoad) window.removeEventListener("load", onLoad);
+      if (instance && typeof instance.stop === "function") {
+        instance.stop(true);
+      }
+    };
+  }, [isTitle, reduced]);
+
   const openLb = useCallback((letter, page = 1) => setLb({ letter, page }), []);
   const closeLb = useCallback(() => setLb(null), []);
   const navLb = useCallback((dir) => {
