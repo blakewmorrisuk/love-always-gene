@@ -173,6 +173,26 @@ function Atmosphere({ chapterKey, weather, on }) {
   if (!on) return null;
 
   // Render based on per-letter weather first
+  // War mode — closing page. Distant lightning + thinned rain + a low
+  // red horizon glow. Reads like the storm is miles off, not overhead.
+  if (chapterKey === "war") {
+    return (
+      <div className="atmosphere atmosphere--on" aria-hidden="true">
+        <div className="war-glow" />
+        <div className="war-flash" />
+        {rain.slice(0, 30).map((r, i) => (
+          <span key={i} className="rain-streak" style={{
+            left: `${r.left}%`,
+            height: `${r.len}px`,
+            animationDelay: `${r.delay}s`,
+            animationDuration: `${r.dur * 1.4}s`,
+            "--rain-op": r.op * 0.6,
+          }} />
+        ))}
+      </div>
+    );
+  }
+
   if (kind === "rain" || kind === "storm") {
     return (
       <div className="atmosphere atmosphere--on" aria-hidden="true">
@@ -674,12 +694,44 @@ function TitlePage() {
   );
 }
 
+/* Emphasis — wraps a phrase with a brass underline that draws in once
+   when the line scrolls into view. Stays underlined afterward. Use
+   sparingly so the gesture keeps its weight. */
+function Emphasis({ children }) {
+  const ref = useRef(null);
+  const [revealed, setRevealed] = useState(false);
+  useEffect(() => {
+    if (revealed) return;
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === "undefined") {
+      setRevealed(true);
+      return;
+    }
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.55 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [revealed]);
+  return (
+    <span ref={ref} className={"emphasis" + (revealed ? " is-revealed" : "")}>
+      {children}
+    </span>
+  );
+}
+
 function Closing() {
   return (
     <section className="closing">
       <div className="hairline-rule" />
       <p className="closing-body">
-        Gene's letters to Joan continued through the war. Less than a year after this last letter of 1940, on the morning of December 7, 1941, he was at Pearl Harbor. A year after that, off Tassafaronga in the Solomon Islands, a Japanese torpedo struck the New Orleans and tore away one hundred and fifty feet of her bow. One hundred and eighty-three of his shipmates went down with it, along with most of Joan's letters back. Gene came home in 1943. He and Joan were married for forty-nine years.
+        Gene's letters to Joan continued through the war. Less than a year after this last letter of 1940, on the morning of December 7, 1941, he was at Pearl Harbor. A year after that, off Tassafaronga in the Solomon Islands, a Japanese torpedo struck the New Orleans and <Emphasis>tore away one hundred and fifty feet of her bow</Emphasis>. One hundred and eighty-three of his shipmates went down with it, along with most of Joan's letters back. Gene came home in 1943. He and Joan were married for forty-nine years.
       </p>
       <div className="hairline-rule" />
       <p className="dedication">For the family who carries his story.</p>
@@ -1010,6 +1062,7 @@ function App() {
   const chapterKey = useMemo(() => {
     if (currentPage.type === "chapter") return currentPage.chapter.key;
     if (currentPage.type === "letter") return currentPage.chapter.key;
+    if (currentPage.type === "closing") return "war";
     return null;
   }, [currentPage]);
   const currentWeather = useMemo(() => {
@@ -1019,9 +1072,11 @@ function App() {
   }, [currentPage]);
 
   const isNavy = currentPage.type === "chapter";
+  const isWar = currentPage.type === "closing";
   useEffect(() => {
     document.body.classList.toggle("body--navy", isNavy);
-  }, [isNavy]);
+    document.body.classList.toggle("body--war", isWar);
+  }, [isNavy, isWar]);
 
   const openLb = useCallback((letter, page = 1) => setLb({ letter, page }), []);
   const closeLb = useCallback(() => setLb(null), []);

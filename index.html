@@ -62,6 +62,40 @@ body.body--navy,
 body.body--navy html { background: var(--navy); }
 body.body--navy .stage { background: var(--navy); }
 
+/* War body — closing page. Deeper than chapter navy; carries the
+   distant-thunderstorm atmosphere. */
+body.body--war,
+body.body--war html { background: var(--navy-deep); }
+body.body--war .stage { background: var(--navy-deep); }
+body.body--war .paper-grain { opacity: 0; }
+body.body--war .closing-body { color: var(--brass-faint); }
+body.body--war .dedication   { color: var(--brass-soft); opacity: 0.9; }
+body.body--war .hairline-rule {
+  background: linear-gradient(90deg, transparent, var(--brass-soft) 50%, transparent);
+  opacity: 0.45;
+}
+body.body--war .nav-chrome {
+  background: linear-gradient(to top, var(--navy-deep) 35%, rgba(21,32,44,0));
+}
+body.body--war .nav-btn { color: var(--brass-faint); }
+body.body--war .nav-btn:hover, body.body--war .nav-btn:focus-visible { color: var(--paper); }
+body.body--war .nav-btn::after { background: var(--brass-soft); }
+body.body--war .nav-arrow { color: var(--brass-soft); }
+body.body--war .nav-btn:hover .nav-arrow { color: var(--paper); }
+body.body--war .toc-btn {
+  color: var(--brass-faint);
+  border-color: rgba(200, 172, 116, 0.4);
+}
+body.body--war .toc-btn:hover {
+  color: var(--paper);
+  background: rgba(44,66,88,0.55);
+  border-color: var(--brass-soft);
+}
+body.body--war .progress-track { background: rgba(200,172,116,0.18); }
+body.body--war .progress-fill { background: var(--brass-soft); box-shadow: 0 0 6px rgba(200,172,116,0.5); }
+body.body--war .folio { color: var(--brass-faint); }
+body.body--war .folio::before, body.body--war .folio::after { background: var(--brass-soft); opacity: 0.45; }
+
 /* paper grain — layered, with a faint vignette for depth */
 .paper-grain {
   position: fixed; inset: 0;
@@ -266,6 +300,39 @@ body.body--navy .paper-grain { opacity: 0; }
 @keyframes ray-shimmer {
   0%, 100% { opacity: 0.0; }
   50%      { opacity: 0.45; }
+}
+
+/* ---- war mode (closing page) ---------------------------------- */
+/* Distant thunderstorm rather than the on-letter active storm. Soft
+   red-orange glow on the lower horizon (fire / blood / dawn over a
+   warship), gentler infrequent lightning, thinned-out rain. */
+.war-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 90% 38% at 50% 100%, rgba(150, 35, 30, 0.22), transparent 65%),
+    radial-gradient(ellipse 60% 28% at 75% 95%, rgba(110, 25, 25, 0.16), transparent 60%),
+    radial-gradient(ellipse 70% 30% at 25% 95%, rgba(110, 25, 25, 0.14), transparent 60%);
+  pointer-events: none;
+}
+.war-flash {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 32% at 30% 8%, rgba(245, 230, 200, 0.55), transparent 55%),
+    radial-gradient(ellipse 60% 28% at 80% 4%, rgba(245, 230, 200, 0.45), transparent 55%);
+  opacity: 0;
+  animation: war-lightning 17s linear infinite;
+  pointer-events: none;
+}
+@keyframes war-lightning {
+  0%, 7%, 9%, 13%, 38%, 40%, 100% { opacity: 0; }
+  7.6%  { opacity: 0.55; }
+  8.2%  { opacity: 0.08; }
+  8.7%  { opacity: 0.4; }
+  9.5%  { opacity: 0; }
+  38.5% { opacity: 0.42; }
+  39.2% { opacity: 0; }
 }
 
 /* ---- weather: thunderstorm flash ------------------------------- */
@@ -792,6 +859,38 @@ body.body--navy .folio::after { background: var(--brass-soft); opacity: 0.45; }
 
 @media (prefers-reduced-motion: reduce) {
   .route-pin-active-halo { animation: none !important; r: 11; opacity: 0.4; }
+}
+
+/* ---- emphasis (scroll-triggered underline) ---------------------- */
+/* Wraps a phrase that earns weight. A brass underline draws in once
+   when the line scrolls into the viewport (IntersectionObserver flips
+   .is-revealed). After that it stays underlined; subsequent scroll-bys
+   do nothing — preserves the gesture. */
+.emphasis {
+  position: relative;
+  display: inline;
+  background-image: linear-gradient(var(--brass), var(--brass));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1.5px;
+  padding-bottom: 0.12em;
+  transition: background-size 1.6s cubic-bezier(0.65, 0, 0.35, 1), color 0.6s ease;
+}
+.emphasis.is-revealed {
+  background-size: 100% 1.5px;
+  color: var(--paper);
+}
+body.body--war .emphasis {
+  background-image: linear-gradient(var(--brass-soft), var(--brass-soft));
+}
+body.body--war .emphasis.is-revealed {
+  color: var(--paper);
+}
+@media (prefers-reduced-motion: reduce) {
+  .emphasis {
+    background-size: 100% 1.5px;
+    transition: none;
+  }
 }
 
 /* ---- letter card ------------------------------------------------- */
@@ -2082,14 +2181,14 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 
 <!-- Cache-bust: bump on every meaningful release so iOS Safari doesn't
      keep serving a stale app.jsx after a new index.html lands. -->
-<script>window.__APP_VERSION = "20260425s";</script>
-<script src="letters.js?v=20260425s"></script>
+<script>window.__APP_VERSION = "20260425t";</script>
+<script src="letters.js?v=20260425t"></script>
 <!-- weather.js is generated by scripts/fetch_weather.mjs. If absent the
      atmosphere falls back to chapter defaults. The onerror swallow avoids
      a console 404 when it hasn't been generated yet. -->
 <script>window.LETTER_WEATHER = window.LETTER_WEATHER || null;</script>
-<script src="weather.js?v=20260425s" onerror="void 0"></script>
-<script type="text/babel" src="app.jsx?v=20260425s"></script>
+<script src="weather.js?v=20260425t" onerror="void 0"></script>
+<script type="text/babel" src="app.jsx?v=20260425t"></script>
 
 </body>
 </html>
