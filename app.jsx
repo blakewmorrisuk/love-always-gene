@@ -1103,39 +1103,7 @@ function App() {
     document.body.classList.toggle("body--war", isWar);
   }, [isNavy, isWar]);
 
-  // Plumeria petals — falling on the title page only. sakura-js is
-  // loaded as a deferred CDN script (window.Sakura). We pass our own
-  // className so the library's default petal silhouette is bypassed
-  // and our .petal-plumeria SVG takes over. Cleanup uses the graceful
-  // stop so any in-flight petals finish their fall instead of popping.
   const isTitle = currentPage.type === "title";
-  useEffect(() => {
-    if (!isTitle || reduced) return;
-    const start = () => {
-      if (!window.Sakura) return null;
-      return new window.Sakura("body", {
-        className: "petal-plumeria",
-        fallSpeed: 1.8,
-        delay: 400,
-        minSize: 14,
-        maxSize: 22,
-      });
-    };
-    let instance = start();
-    // sakura.min.js is loaded with `defer`, so on the very first title
-    // mount window.Sakura may not be ready yet. Retry once on load.
-    let onLoad = null;
-    if (!instance) {
-      onLoad = () => { instance = start(); };
-      window.addEventListener("load", onLoad, { once: true });
-    }
-    return () => {
-      if (onLoad) window.removeEventListener("load", onLoad);
-      if (instance && typeof instance.stop === "function") {
-        instance.stop(true);
-      }
-    };
-  }, [isTitle, reduced]);
 
   const openLb = useCallback((letter, page = 1) => setLb({ letter, page }), []);
   const closeLb = useCallback(() => setLb(null), []);
@@ -1173,6 +1141,7 @@ function App() {
   return (
     <>
       <AtmosphereMount chapterKey={chapterKey} weather={currentWeather} />
+      <PlumeriaMount on={isTitle && !reduced} />
       <ProgressBar pageIdx={pageIdx} total={pages.length} pages={pages} isVisible={showProgress} />
       <div className="stage" style={{ perspective: "1400px" }}>
         <AnimatePresence mode="wait" initial={false} custom={direction}>
@@ -1236,6 +1205,48 @@ function AtmosphereMount({ chapterKey, weather }) {
     <Atmosphere chapterKey={chapterKey} weather={weather} on={!!chapterKey} />,
     mounted
   );
+}
+
+/* Plumeria petals — title page only. Same shape as the snow / rain
+   atmospheres: a fixed field of absolutely-positioned petal spans
+   with randomized fall parameters, animated via CSS keyframes. */
+function PlumeriaField({ on }) {
+  const petals = useMemo(() => Array.from({ length: 14 }, () => ({
+    left: Math.random() * 100,
+    delay: -Math.random() * 14,
+    dur: 14 + Math.random() * 10,
+    drift: (Math.random() - 0.5) * 240,
+    rot: 360 + Math.random() * 540,
+    size: 16 + Math.random() * 9,
+    op: 0.7 + Math.random() * 0.25,
+  })), []);
+  if (!on) return null;
+  return (
+    <div className="plumeria-field" aria-hidden="true">
+      {petals.map((p, i) => (
+        <span key={i} className="plumeria-petal" style={{
+          left: `${p.left}%`,
+          width: `${p.size * 0.6}px`,
+          height: `${p.size}px`,
+          animationDelay: `${p.delay}s`,
+          animationDuration: `${p.dur}s`,
+          "--p-drift": `${p.drift}px`,
+          "--p-rot": `${p.rot}deg`,
+          "--p-op": p.op,
+        }} />
+      ))}
+    </div>
+  );
+}
+
+function PlumeriaMount({ on }) {
+  const [mounted, setMounted] = useState(null);
+  useLayoutEffect(() => {
+    const node = document.getElementById("atmosphere-root");
+    if (node) setMounted(node);
+  }, []);
+  if (!mounted) return null;
+  return createPortal(<PlumeriaField on={on} />, mounted);
 }
 
 createRoot(document.getElementById("root")).render(<App />);
