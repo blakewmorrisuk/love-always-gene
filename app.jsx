@@ -531,12 +531,22 @@ function renderProse(text) {
 }
 
 function TranscribedCard({ letter, onOpen }) {
+  const paragraphs = letter.body.split(/\n\n+/);
   return (
     <article className="letter-card" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
         <div className="salutation">{letter.salutation}</div>
-        {letter.body.split(/\n\n+/).map((para, i) => <p key={i}>{renderProse(para)}</p>)}
+        {paragraphs.map((para, i) => {
+          if (i === 0 && /^[A-Za-z]/.test(para)) {
+            return (
+              <p key={i} className="has-dropcap">
+                <span className="dropcap">{para.charAt(0)}</span>{renderProse(para.slice(1))}
+              </p>
+            );
+          }
+          return <p key={i}>{renderProse(para)}</p>;
+        })}
         {letter.partial && <p className="incomplete-marker">[the letter continues]</p>}
         <div className="signature">{letter.signature}</div>
         {letter.postscript && (
@@ -567,7 +577,16 @@ function DraftCard({ letter, onOpen }) {
       <LetterHeader letter={letter} />
       <div className="letter-body">
         <div className="salutation">{letter.salutation}</div>
-        {paragraphs.map((para, i) => <p key={i}>{renderBody(para)}</p>)}
+        {paragraphs.map((para, i) => {
+          if (i === 0 && /^[A-Za-z]/.test(para)) {
+            return (
+              <p key={i} className="has-dropcap">
+                <span className="dropcap">{para.charAt(0)}</span>{renderBody(para.slice(1))}
+              </p>
+            );
+          }
+          return <p key={i}>{renderBody(para)}</p>;
+        })}
         <div className="signature">{letter.signature}</div>
       </div>
       <NoteBlock text={letter.note} />
