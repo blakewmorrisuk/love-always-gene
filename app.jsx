@@ -1210,18 +1210,18 @@ function AtmosphereMount({ chapterKey, weather }) {
    bursty), randomized parameters per envelope. Each envelope is a
    tiny SVG of a sealed cream envelope with a red heart wax seal. */
 function EnvelopeRain({ on }) {
-  // Trickle of letters — sparse, slow, falling like leaves. POSITIVE
-  // delays so the field stays empty until the title-page text intro
-  // finishes (the staggered fade-rise animations complete ~1.5s in).
-  // After that initial pause, envelopes appear staggered over a few
-  // seconds and continue cycling.
+  // Trickle through a central chute — letters spiral down a narrow
+  // vertical band rather than scattering across the whole page.
+  // POSITIVE delays so the field stays empty until the title-page
+  // text intro finishes (~1.5s).
   const envelopes = useMemo(() => Array.from({ length: 8 }, (_, i) => ({
-    left: Math.random() * 100,
-    delay: 1.8 + i * 0.6 + Math.random() * 0.5,
-    dur: 18 + Math.random() * 9,        // 18-27s; trickle, not rain
-    drift: (Math.random() - 0.5) * 320, // wide sway for leaf-like path
-    rot: -270 + Math.random() * 540,    // tumble ±270°
-    size: 11 + Math.random() * 6,       // 11-17px; smaller again
+    // 35-65% — central 30% band, the chute
+    left: 35 + Math.random() * 30,
+    delay: 1.8 + i * 0.7 + Math.random() * 0.5,
+    dur: 14 + Math.random() * 7,        // 14-21s; faster so twirl reads
+    drift: (Math.random() - 0.5) * 110, // tight sway within the chute
+    rot: 540 + Math.random() * 540,     // heavy twirl: 540-1080° per fall
+    size: 12 + Math.random() * 6,       // 12-18px
     op: 0.85 + Math.random() * 0.15,
   })), []);
   if (!on) return null;
