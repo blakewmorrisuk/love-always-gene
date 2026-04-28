@@ -542,7 +542,7 @@ function TranscribedCard({ letter, onOpen }) {
     <article className="letter-card" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
-        <div className="salutation"><TypedSalutation text={letter.salutation} /></div>
+        <div className="salutation"><HandwrittenSalutation text={letter.salutation} /></div>
         {paragraphs.map((para, i) => {
           if (i === 0 && /^[A-Za-z]/.test(para)) {
             return (
@@ -572,7 +572,7 @@ function DraftCard({ letter, onOpen }) {
     <article className="letter-card letter-card--draft" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
-        <div className="salutation"><TypedSalutation text={letter.salutation} /></div>
+        <div className="salutation"><HandwrittenSalutation text={letter.salutation} /></div>
         {paragraphs.map((para, i) => {
           if (i === 0 && /^[A-Za-z]/.test(para)) {
             return (
@@ -750,37 +750,22 @@ function Emphasis({ children }) {
   );
 }
 
-/* TypedSalutation — typewriter reveal on a letter's salutation using
-   typed.js (loaded as a deferred CDN script in index.html). Falls back
-   to static text if window.Typed isn't available yet, or if the user
-   prefers reduced motion. The wrapping <span> carries the .typed-done
-   class once typing finishes so .typed-cursor hides cleanly. */
-function TypedSalutation({ text }) {
+/* HandwrittenSalutation — cursive script reveal on a letter's
+   salutation. Renders the text in Caveat (loaded elsewhere) and uses
+   a CSS mask-image gradient that wipes left-to-right via animation,
+   so the salutation appears as if being written by hand. The `key`
+   prop re-mounts the span when the text changes, which retriggers
+   the CSS animation cleanly when navigating between letters.
+
+   Reduced-motion: drop the mask + animation, render the text statically. */
+function HandwrittenSalutation({ text }) {
   const reduced = useReducedMotion();
-  const ref = useRef(null);
-  const wrapRef = useRef(null);
-  useEffect(() => {
-    if (reduced) return;
-    const el = ref.current;
-    const wrap = wrapRef.current;
-    if (!el || !wrap || typeof window.Typed !== "function") return;
-    el.textContent = "";
-    wrap.classList.remove("typed-done");
-    const instance = new window.Typed(el, {
-      strings: [text],
-      typeSpeed: 38,
-      showCursor: true,
-      cursorChar: "|",
-      onComplete: () => { wrap.classList.add("typed-done"); },
-    });
-    return () => { try { instance.destroy(); } catch (e) {} };
-  }, [text, reduced]);
-  // Static fallback: render the text directly when reduced-motion or
-  // when Typed hasn't loaded. The effect above will overwrite once it
-  // runs. The wrapping span lets the .typed-cursor styling scope here.
   return (
-    <span ref={wrapRef} className="typed-wrap">
-      <span ref={ref}>{(reduced || typeof window === "undefined" || typeof window.Typed !== "function") ? text : ""}</span>
+    <span
+      key={text}
+      className={"handwritten-reveal" + (reduced ? " is-static" : "")}
+    >
+      {text}
     </span>
   );
 }
