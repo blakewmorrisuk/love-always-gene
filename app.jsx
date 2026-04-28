@@ -1218,13 +1218,13 @@ function ConfettiRain({ on }) {
     const shapes = ["rect", "rect", "rect", "circle"]; // weighted: more rectangles
     return Array.from({ length: 90 }, () => ({
       left: Math.random() * 100,
-      delay: -Math.random() * 6,        // negative so they're already in flight on mount
-      dur: 3.5 + Math.random() * 4,     // 3.5-7.5s; rain pace
+      delay: -Math.random() * 12,       // spread across the slower cycle
+      dur: 8 + Math.random() * 6,        // 8-14s; was 3.5-7.5s
       drift: (Math.random() - 0.5) * 80,
-      rotX: 360 + Math.random() * 720,  // 1-3 full flips
+      rotX: 360 + Math.random() * 720,
       rotY: 360 + Math.random() * 720,
       rotZ: -540 + Math.random() * 1080,
-      size: 6 + Math.random() * 6,      // 6-12px
+      size: 3 + Math.random() * 4,       // 3-7px; was 6-12
       color: colors[Math.floor(Math.random() * colors.length)],
       shape: shapes[Math.floor(Math.random() * shapes.length)],
     }));
