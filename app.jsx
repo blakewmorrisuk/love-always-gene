@@ -1210,14 +1210,15 @@ function AtmosphereMount({ chapterKey, weather }) {
    bursty), randomized parameters per envelope. Each envelope is a
    tiny SVG of a sealed cream envelope with a red heart wax seal. */
 function EnvelopeRain({ on }) {
-  const envelopes = useMemo(() => Array.from({ length: 44 }, () => ({
+  const envelopes = useMemo(() => Array.from({ length: 32 }, () => ({
     left: Math.random() * 100,
-    delay: -Math.random() * 12,        // spread across the full cycle
-    dur: 7 + Math.random() * 5,         // 7-12s per envelope; steady rain
-    drift: (Math.random() - 0.5) * 180, // mild horizontal drift
-    rot: -180 + Math.random() * 360,    // tumble between -180 and +180
-    size: 14 + Math.random() * 10,      // 14-24px wide
-    op: 0.78 + Math.random() * 0.22,
+    delay: -Math.random() * 14,        // delays spread across full cycle
+    dur: 9 + Math.random() * 6,         // 9-15s; slower so the flutter reads
+    drift: (Math.random() - 0.5) * 340, // wide sway so envelopes traverse
+    rot: -360 + Math.random() * 720,    // tumble -360 to +360
+    size: 18 + Math.random() * 10,      // 18-28px wide; bigger so the
+                                        // stamp + address lines read
+    op: 0.82 + Math.random() * 0.18,
   })), []);
   if (!on) return null;
   return (
