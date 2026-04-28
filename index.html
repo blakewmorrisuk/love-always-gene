@@ -2116,56 +2116,42 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
   .letter-body { box-shadow: none; border: 1px solid rgba(0,0,0,0.2); }
 }
 
-/* ---- envelope rain (title page only) -------------------------------
-   Continuous steady fall of small love envelopes — cream paper with
-   a red heart wax seal. Same atmosphere pattern as the snow / rain
-   animations: a fixed-position field, randomized fall per envelope,
-   linear timing so it reads as rain rather than confetti bursts. */
-.envelope-rain {
+/* ---- confetti rain (title page only) -------------------------------
+   Standard confettipage.com-style infinite rain: bright multi-color
+   pieces, mixed shapes (rectangle + circle), linear fall, 3D tumble
+   on every piece. Container has perspective so rotateX/Y reads as a
+   real flip rather than a flat skew. */
+.confetti-rain {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 15;
   overflow: hidden;
+  perspective: 600px;
 }
-.envelope-piece {
+.confetti-piece {
   position: absolute;
-  top: -12vh;
-  /* Envelope as it'd be addressed: cream paper with three address
-     lines and a red stamp in the top-right corner. The stamp carries
-     a tiny heart — 'love letter' reads at a glance, even at 18-26px.
-     Skipping the V-flap entirely; at small size it crossed the
-     rectangle and looked like an X. */
-  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect x='2' y='3' width='56' height='34' rx='1.4' fill='%23fdfaf2' stroke='%239b7b3f' stroke-width='1'/%3E%3Crect x='44' y='7' width='11' height='13' fill='%23c83232' stroke='%237a1c1c' stroke-width='0.5'/%3E%3Cpath d='M49.5 11.4 C48.4 10.2 46.6 10.2 46.6 12 C46.6 13.6 49.5 15.8 49.5 15.8 C49.5 15.8 52.4 13.6 52.4 12 C52.4 10.2 50.6 10.2 49.5 11.4 Z' fill='%23fff5d8' stroke='none'/%3E%3Cline x1='8' y1='23' x2='36' y2='23' stroke='%239b7b3f' stroke-width='0.8' opacity='0.55'/%3E%3Cline x1='8' y1='28' x2='40' y2='28' stroke='%239b7b3f' stroke-width='0.8' opacity='0.55'/%3E%3Cline x1='8' y1='33' x2='32' y2='33' stroke='%239b7b3f' stroke-width='0.8' opacity='0.55'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: drop-shadow(0 2px 3px rgba(60,40,20,0.28));
-  animation-name: envelope-fall;
+  top: -10vh;
+  animation-name: confetti-fall;
   animation-iteration-count: infinite;
-  /* ease-in-out gives the petal a 'settling' beat at each waypoint —
-     reads as flutter rather than a constant-velocity drop. */
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
   will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
 }
-/* Chute fall: tight horizontal sinusoid (the sway uses fractional
-   multiples of --e-drift, but --e-drift itself is small now ~±100px
-   so the envelopes spiral down a narrow vertical band) and a heavy
-   rotation accumulation (--e-rot is set to 540-1080° per fall) for
-   the twirl. Fades out around 78vh so they don't run to the bottom. */
-@keyframes envelope-fall {
-  0%   { transform: translate3d(0, -8vh, 0) rotate(0deg); opacity: 0; }
-  8%   { opacity: var(--e-op, 0.95); }
-  20%  { transform: translate3d(calc(var(--e-drift) *  1.0), 14vh, 0) rotate(calc(var(--e-rot) * 0.2)); }
-  35%  { transform: translate3d(calc(var(--e-drift) * -1.0), 26vh, 0) rotate(calc(var(--e-rot) * 0.38)); }
-  50%  { transform: translate3d(calc(var(--e-drift) *  1.0), 38vh, 0) rotate(calc(var(--e-rot) * 0.55)); }
-  65%  { transform: translate3d(calc(var(--e-drift) * -1.0), 50vh, 0) rotate(calc(var(--e-rot) * 0.72)); }
-  80%  { transform: translate3d(calc(var(--e-drift) *  0.7), 62vh, 0) rotate(calc(var(--e-rot) * 0.88)); }
-  90%  { opacity: var(--e-op, 0.95); }
-  100% { transform: translate3d(0, 78vh, 0) rotate(var(--e-rot)); opacity: 0; }
+.confetti-rect { /* default: a colored rectangle, no border-radius */ }
+.confetti-circle { border-radius: 50%; }
+
+@keyframes confetti-fall {
+  0%   { transform: translate3d(0, -10vh, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: translate3d(var(--c-drift), 112vh, 0)
+                    rotateX(var(--c-rotx))
+                    rotateY(var(--c-roty))
+                    rotateZ(var(--c-rotz)); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .envelope-piece { animation: none !important; display: none; }
+  .confetti-piece { animation: none !important; display: none; }
 }
 
 </style>
@@ -2208,14 +2194,14 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 
 <!-- Cache-bust: bump on every meaningful release so iOS Safari doesn't
      keep serving a stale app.jsx after a new index.html lands. -->
-<script>window.__APP_VERSION = "20260427q";</script>
-<script src="letters.js?v=20260427q"></script>
+<script>window.__APP_VERSION = "20260427r";</script>
+<script src="letters.js?v=20260427r"></script>
 <!-- weather.js is generated by scripts/fetch_weather.mjs. If absent the
      atmosphere falls back to chapter defaults. The onerror swallow avoids
      a console 404 when it hasn't been generated yet. -->
 <script>window.LETTER_WEATHER = window.LETTER_WEATHER || null;</script>
-<script src="weather.js?v=20260427q" onerror="void 0"></script>
-<script type="text/babel" src="app.jsx?v=20260427q"></script>
+<script src="weather.js?v=20260427r" onerror="void 0"></script>
+<script type="text/babel" src="app.jsx?v=20260427r"></script>
 
 </body>
 </html>

@@ -1140,7 +1140,7 @@ function App() {
   return (
     <>
       <AtmosphereMount chapterKey={chapterKey} weather={currentWeather} />
-      <EnvelopeRainMount on={currentPage.type === "title" && !reduced} />
+      <ConfettiRainMount on={currentPage.type === "title" && !reduced} />
       <ProgressBar pageIdx={pageIdx} total={pages.length} pages={pages} isVisible={showProgress} />
       <div className="stage" style={{ perspective: "1400px" }}>
         <AnimatePresence mode="wait" initial={false} custom={direction}>
@@ -1206,51 +1206,62 @@ function AtmosphereMount({ chapterKey, weather }) {
   );
 }
 
-/* Envelope rain — title page only. Continuous, steady fall (not
-   bursty), randomized parameters per envelope. Each envelope is a
-   tiny SVG of a sealed cream envelope with a red heart wax seal. */
-function EnvelopeRain({ on }) {
-  // Trickle through a central chute — letters spiral down a narrow
-  // vertical band rather than scattering across the whole page.
-  // POSITIVE delays so the field stays empty until the title-page
-  // text intro finishes (~1.5s).
-  const envelopes = useMemo(() => Array.from({ length: 8 }, (_, i) => ({
-    // 35-65% — central 30% band, the chute
-    left: 35 + Math.random() * 30,
-    delay: 1.8 + i * 0.7 + Math.random() * 0.5,
-    dur: 14 + Math.random() * 7,        // 14-21s; faster so twirl reads
-    drift: (Math.random() - 0.5) * 110, // tight sway within the chute
-    rot: 540 + Math.random() * 540,     // heavy twirl: 540-1080° per fall
-    size: 12 + Math.random() * 6,       // 12-18px
-    op: 0.85 + Math.random() * 0.15,
-  })), []);
+/* Confetti rain — full-page continuous infinite rain, mimicking
+   confettipage.com style. Mixed shapes (rectangles + circles),
+   bright color palette, linear fall timing, 3D tumble per piece. */
+function ConfettiRain({ on }) {
+  const pieces = useMemo(() => {
+    const colors = [
+      "#ef4444", "#f59e0b", "#facc15", "#10b981",
+      "#3b82f6", "#a855f7", "#ec4899", "#ffffff",
+    ];
+    const shapes = ["rect", "rect", "rect", "circle"]; // weighted: more rectangles
+    return Array.from({ length: 90 }, () => ({
+      left: Math.random() * 100,
+      delay: -Math.random() * 6,        // negative so they're already in flight on mount
+      dur: 3.5 + Math.random() * 4,     // 3.5-7.5s; rain pace
+      drift: (Math.random() - 0.5) * 80,
+      rotX: 360 + Math.random() * 720,  // 1-3 full flips
+      rotY: 360 + Math.random() * 720,
+      rotZ: -540 + Math.random() * 1080,
+      size: 6 + Math.random() * 6,      // 6-12px
+      color: colors[Math.floor(Math.random() * colors.length)],
+      shape: shapes[Math.floor(Math.random() * shapes.length)],
+    }));
+  }, []);
   if (!on) return null;
   return (
-    <div className="envelope-rain" aria-hidden="true">
-      {envelopes.map((e, i) => (
-        <span key={i} className="envelope-piece" style={{
-          left: `${e.left}%`,
-          width: `${e.size}px`,
-          height: `${e.size * 0.66}px`,
-          animationDelay: `${e.delay}s`,
-          animationDuration: `${e.dur}s`,
-          "--e-drift": `${e.drift}px`,
-          "--e-rot": `${e.rot}deg`,
-          "--e-op": e.op,
-        }} />
+    <div className="confetti-rain" aria-hidden="true">
+      {pieces.map((p, i) => (
+        <span
+          key={i}
+          className={"confetti-piece confetti-" + p.shape}
+          style={{
+            left: `${p.left}%`,
+            background: p.color,
+            width: `${p.size}px`,
+            height: `${p.size * (p.shape === "rect" ? 1.8 : 1)}px`,
+            animationDelay: `${p.delay}s`,
+            animationDuration: `${p.dur}s`,
+            "--c-drift": `${p.drift}px`,
+            "--c-rotx": `${p.rotX}deg`,
+            "--c-roty": `${p.rotY}deg`,
+            "--c-rotz": `${p.rotZ}deg`,
+          }}
+        />
       ))}
     </div>
   );
 }
 
-function EnvelopeRainMount({ on }) {
+function ConfettiRainMount({ on }) {
   const [mounted, setMounted] = useState(null);
   useLayoutEffect(() => {
     const node = document.getElementById("atmosphere-root");
     if (node) setMounted(node);
   }, []);
   if (!mounted) return null;
-  return createPortal(<EnvelopeRain on={on} />, mounted);
+  return createPortal(<ConfettiRain on={on} />, mounted);
 }
 
 
