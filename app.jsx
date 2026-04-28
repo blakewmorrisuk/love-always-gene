@@ -542,7 +542,7 @@ function TranscribedCard({ letter, onOpen }) {
     <article className="letter-card" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
-        <div className="salutation">{letter.salutation}</div>
+        <div className="salutation"><TypedSalutation text={letter.salutation} /></div>
         {paragraphs.map((para, i) => {
           if (i === 0 && /^[A-Za-z]/.test(para)) {
             return (
@@ -572,7 +572,7 @@ function DraftCard({ letter, onOpen }) {
     <article className="letter-card letter-card--draft" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
-        <div className="salutation">{letter.salutation}</div>
+        <div className="salutation"><TypedSalutation text={letter.salutation} /></div>
         {paragraphs.map((para, i) => {
           if (i === 0 && /^[A-Za-z]/.test(para)) {
             return (
@@ -700,6 +700,7 @@ function ShipOrnament() {
 function TitlePage() {
   return (
     <section className="title-page">
+      <VantaTitle />
       <div className="title-hero">
         <ShipOrnament />
         <h1 className="title">Love, Always</h1>
@@ -747,6 +748,105 @@ function Emphasis({ children }) {
       {children}
     </span>
   );
+}
+
+/* TypedSalutation — typewriter reveal on a letter's salutation using
+   typed.js (loaded as a deferred CDN script in index.html). Falls back
+   to static text if window.Typed isn't available yet, or if the user
+   prefers reduced motion. The wrapping <span> carries the .typed-done
+   class once typing finishes so .typed-cursor hides cleanly. */
+function TypedSalutation({ text }) {
+  const reduced = useReducedMotion();
+  const ref = useRef(null);
+  const wrapRef = useRef(null);
+  useEffect(() => {
+    if (reduced) return;
+    const el = ref.current;
+    const wrap = wrapRef.current;
+    if (!el || !wrap || typeof window.Typed !== "function") return;
+    el.textContent = "";
+    wrap.classList.remove("typed-done");
+    const instance = new window.Typed(el, {
+      strings: [text],
+      typeSpeed: 38,
+      showCursor: true,
+      cursorChar: "|",
+      onComplete: () => { wrap.classList.add("typed-done"); },
+    });
+    return () => { try { instance.destroy(); } catch (e) {} };
+  }, [text, reduced]);
+  // Static fallback: render the text directly when reduced-motion or
+  // when Typed hasn't loaded. The effect above will overwrite once it
+  // runs. The wrapping span lets the .typed-cursor styling scope here.
+  return (
+    <span ref={wrapRef} className="typed-wrap">
+      <span ref={ref}>{(reduced || typeof window === "undefined" || typeof window.Typed !== "function") ? text : ""}</span>
+    </span>
+  );
+}
+
+/* VantaTitle — animated background on the title page. ?vanta=waves
+   (default) or ?vanta=fog or ?vanta=none. Three.js + the chosen Vanta
+   bundle load deferred from CDN; if not yet ready, the effect retries
+   once on window load. Cleanup destroys the Vanta instance so the
+   <canvas> doesn't linger when navigating away from the title. */
+function VantaTitle() {
+  const reduced = useReducedMotion();
+  const elRef = useRef(null);
+  const effect = useMemo(() => {
+    const m = window.location.search.match(/[?&]vanta=(waves|fog|none)/i);
+    return m ? m[1].toLowerCase() : "waves";
+  }, []);
+  useEffect(() => {
+    if (reduced || effect === "none") return;
+    const el = elRef.current;
+    if (!el) return;
+    const start = () => {
+      if (!window.VANTA) return null;
+      if (effect === "waves" && window.VANTA.WAVES) {
+        return window.VANTA.WAVES({
+          el,
+          mouseControls: false,
+          touchControls: false,
+          gyroControls: false,
+          color: 0x1F2D3D,
+          shininess: 30,
+          waveHeight: 12,
+          waveSpeed: 0.5,
+          zoom: 0.85,
+        });
+      }
+      if (effect === "fog" && window.VANTA.FOG) {
+        return window.VANTA.FOG({
+          el,
+          mouseControls: false,
+          touchControls: false,
+          gyroControls: false,
+          highlightColor: 0xF5EFE0,
+          midtoneColor: 0xC8AC74,
+          lowlightColor: 0x5C4733,
+          baseColor: 0xEDE4CC,
+          speed: 1.0,
+          blurFactor: 0.45,
+        });
+      }
+      return null;
+    };
+    let instance = start();
+    let onLoad = null;
+    if (!instance) {
+      onLoad = () => { instance = start(); };
+      window.addEventListener("load", onLoad, { once: true });
+    }
+    return () => {
+      if (onLoad) window.removeEventListener("load", onLoad);
+      if (instance && typeof instance.destroy === "function") {
+        try { instance.destroy(); } catch (e) {}
+      }
+    };
+  }, [effect, reduced]);
+  if (reduced || effect === "none") return null;
+  return <div ref={elRef} className="vanta-bg" aria-hidden="true" />;
 }
 
 function Closing() {
@@ -1140,7 +1240,6 @@ function App() {
   return (
     <>
       <AtmosphereMount chapterKey={chapterKey} weather={currentWeather} />
-      <ConfettiRainMount on={currentPage.type === "title" && !reduced} />
       <ProgressBar pageIdx={pageIdx} total={pages.length} pages={pages} isVisible={showProgress} />
       <div className="stage" style={{ perspective: "1400px" }}>
         <AnimatePresence mode="wait" initial={false} custom={direction}>
@@ -1206,57 +1305,6 @@ function AtmosphereMount({ chapterKey, weather }) {
   );
 }
 
-/* Letter rain — title page only. Same density and 3D-tumble motion
-   as the confetti base, but each piece is a tiny envelope (cream
-   paper, brass outline, red stamp) instead of a colored rectangle.
-   Single shape, no color variation; sized just large enough to read
-   as 'letter with stamp' when flipping in 3D. */
-function ConfettiRain({ on }) {
-  const pieces = useMemo(() => Array.from({ length: 90 }, () => ({
-    left: Math.random() * 100,
-    delay: -Math.random() * 12,
-    dur: 8 + Math.random() * 6,
-    drift: (Math.random() - 0.5) * 80,
-    rotX: 360 + Math.random() * 720,
-    rotY: 360 + Math.random() * 720,
-    rotZ: -540 + Math.random() * 1080,
-    size: 9 + Math.random() * 5,        // 9-14px wide; envelopes need
-                                        // a touch more than the 3-7px
-                                        // colored rectangles to read
-  })), []);
-  if (!on) return null;
-  return (
-    <div className="confetti-rain" aria-hidden="true">
-      {pieces.map((p, i) => (
-        <span
-          key={i}
-          className="letter-piece"
-          style={{
-            left: `${p.left}%`,
-            width: `${p.size}px`,
-            height: `${p.size * 0.66}px`,  // envelope landscape ratio
-            animationDelay: `${p.delay}s`,
-            animationDuration: `${p.dur}s`,
-            "--c-drift": `${p.drift}px`,
-            "--c-rotx": `${p.rotX}deg`,
-            "--c-roty": `${p.rotY}deg`,
-            "--c-rotz": `${p.rotZ}deg`,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
-function ConfettiRainMount({ on }) {
-  const [mounted, setMounted] = useState(null);
-  useLayoutEffect(() => {
-    const node = document.getElementById("atmosphere-root");
-    if (node) setMounted(node);
-  }, []);
-  if (!mounted) return null;
-  return createPortal(<ConfettiRain on={on} />, mounted);
-}
 
 
 createRoot(document.getElementById("root")).render(<App />);
