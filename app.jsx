@@ -1140,6 +1140,7 @@ function App() {
   return (
     <>
       <AtmosphereMount chapterKey={chapterKey} weather={currentWeather} />
+      <EnvelopeRainMount on={currentPage.type === "title" && !reduced} />
       <ProgressBar pageIdx={pageIdx} total={pages.length} pages={pages} isVisible={showProgress} />
       <div className="stage" style={{ perspective: "1400px" }}>
         <AnimatePresence mode="wait" initial={false} custom={direction}>
@@ -1203,6 +1204,48 @@ function AtmosphereMount({ chapterKey, weather }) {
     <Atmosphere chapterKey={chapterKey} weather={weather} on={!!chapterKey} />,
     mounted
   );
+}
+
+/* Envelope rain — title page only. Continuous, steady fall (not
+   bursty), randomized parameters per envelope. Each envelope is a
+   tiny SVG of a sealed cream envelope with a red heart wax seal. */
+function EnvelopeRain({ on }) {
+  const envelopes = useMemo(() => Array.from({ length: 44 }, () => ({
+    left: Math.random() * 100,
+    delay: -Math.random() * 12,        // spread across the full cycle
+    dur: 7 + Math.random() * 5,         // 7-12s per envelope; steady rain
+    drift: (Math.random() - 0.5) * 180, // mild horizontal drift
+    rot: -180 + Math.random() * 360,    // tumble between -180 and +180
+    size: 14 + Math.random() * 10,      // 14-24px wide
+    op: 0.78 + Math.random() * 0.22,
+  })), []);
+  if (!on) return null;
+  return (
+    <div className="envelope-rain" aria-hidden="true">
+      {envelopes.map((e, i) => (
+        <span key={i} className="envelope-piece" style={{
+          left: `${e.left}%`,
+          width: `${e.size}px`,
+          height: `${e.size * 0.66}px`,
+          animationDelay: `${e.delay}s`,
+          animationDuration: `${e.dur}s`,
+          "--e-drift": `${e.drift}px`,
+          "--e-rot": `${e.rot}deg`,
+          "--e-op": e.op,
+        }} />
+      ))}
+    </div>
+  );
+}
+
+function EnvelopeRainMount({ on }) {
+  const [mounted, setMounted] = useState(null);
+  useLayoutEffect(() => {
+    const node = document.getElementById("atmosphere-root");
+    if (node) setMounted(node);
+  }, []);
+  if (!mounted) return null;
+  return createPortal(<EnvelopeRain on={on} />, mounted);
 }
 
 
