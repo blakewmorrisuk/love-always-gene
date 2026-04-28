@@ -1206,41 +1206,35 @@ function AtmosphereMount({ chapterKey, weather }) {
   );
 }
 
-/* Confetti rain — full-page continuous infinite rain, mimicking
-   confettipage.com style. Mixed shapes (rectangles + circles),
-   bright color palette, linear fall timing, 3D tumble per piece. */
+/* Letter rain — title page only. Same density and 3D-tumble motion
+   as the confetti base, but each piece is a tiny envelope (cream
+   paper, brass outline, red stamp) instead of a colored rectangle.
+   Single shape, no color variation; sized just large enough to read
+   as 'letter with stamp' when flipping in 3D. */
 function ConfettiRain({ on }) {
-  const pieces = useMemo(() => {
-    const colors = [
-      "#ef4444", "#f59e0b", "#facc15", "#10b981",
-      "#3b82f6", "#a855f7", "#ec4899", "#ffffff",
-    ];
-    const shapes = ["rect", "rect", "rect", "circle"]; // weighted: more rectangles
-    return Array.from({ length: 90 }, () => ({
-      left: Math.random() * 100,
-      delay: -Math.random() * 12,       // spread across the slower cycle
-      dur: 8 + Math.random() * 6,        // 8-14s; was 3.5-7.5s
-      drift: (Math.random() - 0.5) * 80,
-      rotX: 360 + Math.random() * 720,
-      rotY: 360 + Math.random() * 720,
-      rotZ: -540 + Math.random() * 1080,
-      size: 3 + Math.random() * 4,       // 3-7px; was 6-12
-      color: colors[Math.floor(Math.random() * colors.length)],
-      shape: shapes[Math.floor(Math.random() * shapes.length)],
-    }));
-  }, []);
+  const pieces = useMemo(() => Array.from({ length: 90 }, () => ({
+    left: Math.random() * 100,
+    delay: -Math.random() * 12,
+    dur: 8 + Math.random() * 6,
+    drift: (Math.random() - 0.5) * 80,
+    rotX: 360 + Math.random() * 720,
+    rotY: 360 + Math.random() * 720,
+    rotZ: -540 + Math.random() * 1080,
+    size: 9 + Math.random() * 5,        // 9-14px wide; envelopes need
+                                        // a touch more than the 3-7px
+                                        // colored rectangles to read
+  })), []);
   if (!on) return null;
   return (
     <div className="confetti-rain" aria-hidden="true">
       {pieces.map((p, i) => (
         <span
           key={i}
-          className={"confetti-piece confetti-" + p.shape}
+          className="letter-piece"
           style={{
             left: `${p.left}%`,
-            background: p.color,
             width: `${p.size}px`,
-            height: `${p.size * (p.shape === "rect" ? 1.8 : 1)}px`,
+            height: `${p.size * 0.66}px`,  // envelope landscape ratio
             animationDelay: `${p.delay}s`,
             animationDuration: `${p.dur}s`,
             "--c-drift": `${p.drift}px`,
