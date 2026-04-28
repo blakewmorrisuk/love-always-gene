@@ -542,7 +542,7 @@ function TranscribedCard({ letter, onOpen }) {
     <article className="letter-card" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
-        <div className="salutation"><HandwrittenSalutation text={letter.salutation} /></div>
+        <div className="salutation">{letter.salutation}</div>
         {paragraphs.map((para, i) => {
           if (i === 0 && /^[A-Za-z]/.test(para)) {
             return (
@@ -572,7 +572,7 @@ function DraftCard({ letter, onOpen }) {
     <article className="letter-card letter-card--draft" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
-        <div className="salutation"><HandwrittenSalutation text={letter.salutation} /></div>
+        <div className="salutation">{letter.salutation}</div>
         {paragraphs.map((para, i) => {
           if (i === 0 && /^[A-Za-z]/.test(para)) {
             return (
@@ -700,7 +700,6 @@ function ShipOrnament() {
 function TitlePage() {
   return (
     <section className="title-page">
-      <VantaTitle />
       <div className="title-hero">
         <ShipOrnament />
         <h1 className="title">Love, Always</h1>
@@ -750,89 +749,6 @@ function Emphasis({ children }) {
   );
 }
 
-/* HandwrittenSalutation — cursive script reveal on a letter's
-   salutation. Renders the text in Caveat (loaded elsewhere) and uses
-   a CSS mask-image gradient that wipes left-to-right via animation,
-   so the salutation appears as if being written by hand. The `key`
-   prop re-mounts the span when the text changes, which retriggers
-   the CSS animation cleanly when navigating between letters.
-
-   Reduced-motion: drop the mask + animation, render the text statically. */
-function HandwrittenSalutation({ text }) {
-  const reduced = useReducedMotion();
-  return (
-    <span
-      key={text}
-      className={"handwritten-reveal" + (reduced ? " is-static" : "")}
-    >
-      {text}
-    </span>
-  );
-}
-
-/* VantaTitle — animated background on the title page. ?vanta=waves
-   (default) or ?vanta=fog or ?vanta=none. Three.js + the chosen Vanta
-   bundle load deferred from CDN; if not yet ready, the effect retries
-   once on window load. Cleanup destroys the Vanta instance so the
-   <canvas> doesn't linger when navigating away from the title. */
-function VantaTitle() {
-  const reduced = useReducedMotion();
-  const elRef = useRef(null);
-  const effect = useMemo(() => {
-    const m = window.location.search.match(/[?&]vanta=(waves|fog|none)/i);
-    return m ? m[1].toLowerCase() : "waves";
-  }, []);
-  useEffect(() => {
-    if (reduced || effect === "none") return;
-    const el = elRef.current;
-    if (!el) return;
-    const start = () => {
-      if (!window.VANTA) return null;
-      if (effect === "waves" && window.VANTA.WAVES) {
-        return window.VANTA.WAVES({
-          el,
-          mouseControls: false,
-          touchControls: false,
-          gyroControls: false,
-          color: 0x1F2D3D,
-          shininess: 30,
-          waveHeight: 12,
-          waveSpeed: 0.5,
-          zoom: 0.85,
-        });
-      }
-      if (effect === "fog" && window.VANTA.FOG) {
-        return window.VANTA.FOG({
-          el,
-          mouseControls: false,
-          touchControls: false,
-          gyroControls: false,
-          highlightColor: 0xF5EFE0,
-          midtoneColor: 0xC8AC74,
-          lowlightColor: 0x5C4733,
-          baseColor: 0xEDE4CC,
-          speed: 1.0,
-          blurFactor: 0.45,
-        });
-      }
-      return null;
-    };
-    let instance = start();
-    let onLoad = null;
-    if (!instance) {
-      onLoad = () => { instance = start(); };
-      window.addEventListener("load", onLoad, { once: true });
-    }
-    return () => {
-      if (onLoad) window.removeEventListener("load", onLoad);
-      if (instance && typeof instance.destroy === "function") {
-        try { instance.destroy(); } catch (e) {}
-      }
-    };
-  }, [effect, reduced]);
-  if (reduced || effect === "none") return null;
-  return <div ref={elRef} className="vanta-bg" aria-hidden="true" />;
-}
 
 function Closing() {
   return (
