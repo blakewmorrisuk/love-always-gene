@@ -697,6 +697,44 @@ function ShipOrnament() {
   );
 }
 
+/* ShipSilhouette — heavy-cruiser silhouette evocative of the U.S.S.
+   New Orleans (CA-32): forward and aft turrets with twin barrels, a
+   tripod-mast bridge, two staggered funnels, aft superstructure. Sits
+   at the bottom of the title page on a faint brass horizon hairline,
+   like the ship is on the horizon at sea. */
+function ShipSilhouette() {
+  return (
+    <div className="ship-horizon" aria-hidden="true">
+      <svg className="ship-silhouette" viewBox="0 0 800 130" preserveAspectRatio="xMidYMid meet">
+        <g fill="currentColor">
+          <path d="M 60 92 L 80 82 L 130 80 L 700 80 L 738 84 L 744 92 L 738 100 L 70 100 Z" />
+          <path d="M 130 80 L 130 70 L 280 70 L 290 80 Z" />
+          <rect x="160" y="60" width="44" height="11" rx="1.5" />
+          <rect x="120" y="63" width="44" height="2.4" />
+          <rect x="120" y="68" width="44" height="2.4" />
+          <rect x="310" y="56" width="170" height="24" />
+          <rect x="340" y="40" width="56" height="16" />
+          <rect x="356" y="28" width="24" height="12" />
+          <rect x="367" y="6" width="2" height="22" />
+          <line x1="357" y1="28" x2="367" y2="10" stroke="currentColor" strokeWidth="1.6" />
+          <line x1="378" y1="28" x2="368" y2="10" stroke="currentColor" strokeWidth="1.6" />
+          <rect x="362" y="14" width="11" height="3" />
+          <path d="M 408 56 L 408 24 L 432 20 L 432 56 Z" />
+          <path d="M 452 56 L 452 30 L 476 26 L 476 56 Z" />
+          <rect x="500" y="58" width="68" height="22" />
+          <rect x="525" y="48" width="36" height="10" />
+          <rect x="540" y="30" width="2" height="18" />
+          <rect x="568" y="72" width="120" height="8" />
+          <rect x="600" y="62" width="40" height="10" rx="1.5" />
+          <rect x="635" y="65" width="44" height="2.4" />
+          <rect x="635" y="70" width="44" height="2.4" />
+          <rect x="730" y="74" width="1.6" height="10" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
 function TitlePage() {
   return (
     <section className="title-page">
@@ -712,6 +750,7 @@ function TitlePage() {
           <span className="locator-mark" aria-hidden="true">✦</span>
           <span>Stanford, Kentucky</span>
         </p>
+        <ShipSilhouette />
       </div>
     </section>
   );
