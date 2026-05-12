@@ -18,19 +18,7 @@ signature: "With lots of Love,\nYours, \"Gene\""
 postscript: |
   P.S. Please Excuse pencil.
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS OCT 11 8:30 AM 1941" (ship cancel); single 6¢ red Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten. Envelope back blank.
-
-  Inside date "Wednesday Oct. 8" — Gene wrote on Wed. Oct 8 but the letter wasn't postmarked until Sat. Oct 11 (3-day lag — possibly held for the ship's outgoing mail run). Postmark used as canonical date; Gene's inside date preserved verbatim.
-
-  Salutation "My Dearest Joan;" — name preceded by "My", new variant.
-
-  **This letter is written in PENCIL** (not pen) — Gene apologises in the P.S. ("P.S. Please Excuse pencil.").
-
-  Notable content: (1) Gene's stated preference for the **Atlantic theater over the Pacific** — "We probably go back to Honolulu from here, but I hoping we don't. I want to go around on the East coast myself. Although if we go around there we will probably have convoy duty. I would rather have convoying around there than to go back to, Honolulu." Gene would prefer the dangerous Atlantic convoy work to the routine Pacific assignment.
-
-  (2) Gene wants U.S. entry — "Sometimes I wished we would hurry and get in the war & get it over with. If we got to crush Germany ourselves the sooner the better." First time Gene has expressed an active desire for U.S. entry rather than just prediction.
-
-  Also: Gene has been gone from Joan exactly "a month & four days"; sister Martha had an appendectomy at the same time as brother Carroll's operation ("kindly strange by both of them being operated on for the same thing and the same time"); Jack Parkhurst back from leave, reassigned from Office to Deck force (didn't like it); Gene rode around Bremerton with Parkhurst, refused to drink ("he wanted to get drunk but I wouldn't even take a drink with him"); Joan and Charlotte horseback riding to Sugar Loaf Mountain.
+  Pencil letter (he apologized for it). The first time in the archive Gene says, out loud, that he wants the United States in the war. 'Sometimes I wished we would hurry and get in the war & get it over with. If we got to crush Germany ourselves the sooner the better.' He would prefer Atlantic convoy duty to going back to Honolulu. Two months later the New Orleans was at Pearl Harbor.
 
 ---
 

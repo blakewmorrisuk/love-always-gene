@@ -15,17 +15,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "With Lots of Love & kisses,\nFrom the one who cares,\nYours,\nGene"
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS JUN 6 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten (underlined). Envelope torn at the top; envelope back blank, no return address. Source folder skips IMG_9612 (not part of this letter).
-
-  Gene did not date the letter at the top — only the return-address block. Postmark used as canonical date.
-
-  Stationery is **the ship's illustrated letterhead** — a blue ink-drawing of the U.S.S. New Orleans (CA-32) at sea, captioned "U.S.S. NEW ORLEANS," centered at the top of pages 1 and 2. First time this illustrated variant appears in the archive (cf. L36 which used the plain printed letterhead with hull number only). Page 3 is on plain stationery — Gene either ran out of letterhead sheets or used a continuation sheet.
-
-  Notable content: (1) "We are having gunnery school on this ship now and will last for six weeks" — explicit combat-training period, also Gene's stated reason the ship's yard return was pushed to August;
-
-  (2) Gene directly answering Joan's question — "You asked if I thought there was going to be war. Well, I don't hardly see how we will stay out now. Looks awful bad don't you think." This is the strongest war-prediction in the archive, framed as a reply to her direct question, and clarifies that the recipient (Joan) was already asking about U.S. entry in early June 1941. Continues the L33 → L35 → L36 → L38 → L39 → L41 war-foreshadowing arc — seven letters in 11 weeks where Gene has voiced increasing certainty of U.S. entry.
-
-  Also: Gene hopes to get "a few days leave when we go in the yards this August … It will be my last chance then for a long time"; "if that ford of Dads will still run by then" — a reminder Gene plans to drive Joan around in his father's Ford if he gets home.
+  Six weeks of gunnery school at sea, starting Monday. Gene was writing on the ship's illustrated letterhead, a blue ink drawing of the New Orleans, the first time he used that variant. He didn't see how the country was going to stay out of the war. He was right. Pearl Harbor was six months away.
 
 ---
 

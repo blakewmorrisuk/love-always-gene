@@ -17,15 +17,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Love & Kisses\nalways, \"Gene\""
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS OCT 3 8:30 AM 1941" (ship cancel); single 6¢ Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten. Envelope back has Gene's explicit handwritten return address: "Return to → Eugene Lankford, U.S.S. New Orleans, % Postmaster, Bremerton, Washington, F Division."
-
-  Inside date "Thursday Oct 2" — Gene wrote Thurs. Oct 2 and the letter was postmarked Fri. Oct 3. Postmark used as canonical date.
-
-  Notable content: (1) Gene continues his exit-from-navy thread from L48 → L49 → L50 → L52 → L53 — "I'm comming out of the navy though";
-
-  (2) **Gene reads Joan's silence as a no on the marriage proposal** — "I won't ask you to make me that promise again, Joan I can understand how you feel about it." Withdraws the L52 proposal after Joan's L53/L54-era replies didn't commit. He also pre-emptively releases her: "Joan, I want you to know that you aren't under no obligations to me what so ever. It's for you to decide what you want. There isn't a thing that I can promise you. You could find some one else that would beat me by a long shot."
-
-  Also: Gene's vision for civilian life — "all I ever want to be is just a farmer … Some day I hope to owned a small farm of mine own" — first time the farming aspiration is stated explicitly; predicts post-war economic slowdown ("All of this defense work will stop and a guy won't have a chance to get a job anywhere"); ship will be at Bremerton "about a month longer" then Long Beach for "a very short while" before back to Honolulu — confirms the L51 conditional (ship's going back unless war intervenes); Christmas in Honolulu doesn't feel like Christmas; brothers Carroll and Thomas (drafted into the Army) and sister Martha all home for a weekend Gene missed; Louise Dunagan's Stanford address shared per Joan's request.
+  Gene read Joan's silence as the answer. 'I won't ask you to make me that promise again, Joan. I can understand how you feel about it.' He withdrew the proposal he had made three days earlier and tried, in the same letter, to describe what he actually wanted his life to look like: a small farm, somewhere in Kentucky. 'It's the only thing I will ever care to be.'
 
 ---
 

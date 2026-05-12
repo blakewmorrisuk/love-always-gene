@@ -15,11 +15,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dear Joan,"
 signature: "With Lots of Love,\nGene"
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS APR 24 9-AM 1941" with two 3¢ Jefferson stamps, "via Air Mail" written by hand (no stamped "VIA AIR MAIL" this time). Inside date "April 24, 1941" matches postmark.
-
-  Envelope back has Gene's handwritten return address along the (partially torn) top edge: "Eugene Lankford / Pearl Harbor / Honolulu, T.H. / F Division" — partly cut by the tear, reconstructed from visible fragments.
-
-  Notable content: this is the "big surprise" letter teased in L36's postscript — Gene reveals he sent Joan a radio for her birthday (a substantial gift; he's asking what brand/model it turned out to be because he ordered it shipped direct without seeing it first). One [[…]] emphasis applied: the firmest stateside-return timeline yet — "about three weeks" from April 24 = roughly May 15, 1941. The follow-on line — "I think it will be the last time we go out until we head for the states" — reinforces the prediction; both reflect the same expected ship movement, so only the more concrete date is marked. Also: another Nanakuli Beach weekend (cf. L28/L31); a year-and-five-months since Gene last saw sister Martha; ship goes out Monday for ~10 days.
+  The radio letter. Gene had ordered a radio shipped directly to Joan in Kentucky as a birthday present, sight unseen, and wanted her to write back and tell him the brand so he could check the right model had arrived. He also gave the firmest stateside-return projection of the year: three weeks. Six weeks later, the leave was canceled and the ship's yard return was pushed to August.
 
 ---
 

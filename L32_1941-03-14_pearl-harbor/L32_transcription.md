@@ -17,17 +17,7 @@ signature: "Love and Kisses,\nGene"
 postscript: |
   P.S. Hope Mr. Hampton is over the pneumonia by now.
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS MAR 14 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Air Mail" handwritten. Plain envelope (no illustration); envelope back is blank with no return address.
-
-  Inside date "March 14, 1941" matches the postmark.
-
-  Notable content: (1) Gene's first explicit reference to the European war — joking that his brothers' goats (named Jim & Buck) will be "just as bad as Hitler & Mussolini when they get a little larger." Even in joke form this is the first time the Axis names appear in any of Gene's letters in this archive.
-
-  (2) A more specific stateside-return projection — June or July 1941 — continuing the deployment thread (cf. L26 "March 15," L30 "three months," L29 "twenty days leave").
-
-  Also notable: Gene reports ten days at sea in rough weather (no mail in or out — the planes couldn't fly); Dad has arranged for the Stanford paper to be mailed to Gene; siblings/family pet roll-call (Peggy and cats, Jim & Buster with goats).
-
-  Closing annotation: Gene drew an arrow from a marginal note "(this is special)" pointing to a heavy round ink-spot deliberately placed on the line "Love and Kisses," — likely meant as a kiss-mark or affection token. Preserved in the body as `[•]` with the annotation on the following line; the description here in `note:` is the authoritative reading.
+  Ten days at sea in seas rough enough that the mail planes couldn't fly. Gene mentions, almost as an aside, that his brothers' new goats are named Jim and Buck and will probably 'be just as bad as Hitler and Mussolini when they get a little larger.' First time the European war shows up in his letters, even as a joke.
 
 ---
 

@@ -15,19 +15,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "With Lots of Love,\nGene"
 note: |
-  **Early peacetime Christmas-week letter from Pearl Harbor**, 11 months and 15 days before the Dec 7 attack. Envelope is plain (not Hawaiian illustrated); postmark "U.S.S. NEW ORLEANS DEC [?] AM 1940" — ship cancel, date partially obscured but consistent with mid-late December. **Two 3¢ violet Jefferson Prexy stamps** (6¢ airmail rate). "Air Mail" handwritten + "VIA AIR MAIL" stamped. Envelope back blank.
-
-  Inside date "Sunday, Dec 22" — Gene wrote Sunday Dec 22 (Dec 22 1940 was Sunday — calendar consistent), mailed the next day (postmark Dec 23 per queue).
-
-  Return address on page 1: "U.S.S. New Orleans / Pearl Harbor, Honolulu / F Division, T.H." — first appearance of "T.H." (Territory of Hawaii) abbreviation in return address.
-
-  Salutation **"Dearest Joan,"** — **FIRST "DEAREST" SALUTATION in the archive** (L104 and L105 used "Dear Joan,"). The shift from "Dear" to "Dearest" in three months marks the warming relationship in late 1940 — pre-engagement, but more affectionate.
-
-  Notable content: (1) **"There isn't a day or night that goes by that I don't think about you"** — Gene's strongest pre-engagement love declaration in the archive. Establishes that even in late 1940 — over a year before he would propose by letter — Gene was already deeply attached.
-
-  (2) **"Remember the nights we were together? Well I think there might be some more just as good or better"** — Pre-leave memory of nights spent with Joan, paired with future-hope. The Gene-Joan relationship had a physical/intimate dimension before his deployment (likely from his last leave home before the navy or earlier in 1940 before the ship's transfer to Hawaii). Gene anticipates more such nights.
-
-  Also: **Christmas gift to Joan** — Gene received Joan's Xmas card and Xmas gift; **Gene's own gift to Joan is "too far to send"** but will arrive in 4-5 months — Gene says "if you could guess if you stop to think enough? I think you enjoy it a lot"; **Mrs. Lankford (Gene's mother) sick** — taking shots for the same trouble she had four years ago; **Xmas card from Martha**; **Hawaiian summer December** — "from 90 to 100 out here. It only drops down to about 80 at night. The sun burns right through you every day. It seems more like, July then it does December"; **Joan asked for a picture** — Gene promises to get one made; **Gene's protective advice** — "Be a good girl like you always have been and don't let some boy talk you into doing things that you shouldn't. Stay the same girl as I know you" (notable since the "promise" arc later turns on these themes).
+  Christmas week, eleven months and fifteen days before the attack on Pearl Harbor. For the first time in the archive Gene opens with 'Dearest Joan,' instead of 'Dear Joan,' and for the first time he says, plainly, that he thinks about her every day and night. 'Remember the nights we were together? Well I think there might be some more just as good or better.' The relationship had a past Joan and Gene could already remember; the engagement was still ten months out.
 
 ---
 

@@ -15,13 +15,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "(closing/signature missing — Gene ends page III with the marker '(Back of first page)', suggesting a continuation on a sheet that was not photographed)"
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS MAR 2 A.M. 1941" with two 3¢ Jefferson stamps, "Via Air Mail" stamped + "Air Mail" handwritten. Plain envelope (no illustration); envelope back is blank with two tape patches over a tear. No return address written by Gene.
-
-  Gene did not date the letter at the top — only the return-address block. Postmark used as canonical date.
-
-  Notable content: (1) a vivid pre-war Pacific operation — Gene watches at sea while six or more ships search by searchlight for a downed Army bomber the night before the New Orleans returned to harbor, ending with the recovery of five crewmen alive in the floating plane the next morning;
-
-  (2) the ongoing stateside-return thread, now stated more confidently than in L26/L27/L29/L30 ("it won't be long before we being heading back to the states and it won't be too soon for me"). Also: Joan has been sick; Gene reports a camping trip continuing the L28 Nanakuli pattern (this one with dancing and drinking on weekends).
+  An Army bomber had gone down somewhere near the ship the night before they returned to harbor, and Gene watched from the deck as six or more ships swept the dark water with searchlights. By morning the plane was found floating with all five of its crew still alive. The next day's newspapers credited a different bomber with the find and didn't mention the Navy. 'That goes to show that a person can't believed what the papers say.'
 
 ---
 

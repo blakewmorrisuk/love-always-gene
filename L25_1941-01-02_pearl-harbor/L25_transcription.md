@@ -19,13 +19,7 @@ postscript: |
   P.S. Excuse this writting for you know how it is when you in a rush.
   P.S.S. Address the letters at the same place. If we are still out there they will send them on.
 note: |
-  Envelope postmark reads "U.S.S. NEW ORLEANS JAN 2 A.M. 1941" with two 3¢ Jefferson stamps and "Via Air Mail" stamped. Gene dated the letter inside "Jan. 3, 1941"; postmark used as canonical date per the brief's date-establishment order. Discrepancy preserved verbatim in body.
-
-  Letter announces ship's departure the next day for Midway Island (~1300 mi from Pearl Harbor) ferrying about 200 marines — one of USS New Orleans' pre-war reinforcement runs to the outer Pacific bases.
-
-  Each page image (L25_p1–p3) is a bifold sheet opened flat (two sides of writing visible at once). Reading order is left-then-right within each spread, then on to the next.
-
-  Two envelope images: L25_envelope.jpg (front, addressed to Miss Joan Northcutt, Stanford, Kentucky, Route 1) and L25_envelope_back.jpg (back, mostly blank with postal handling marks).
+  Eleven months before Pearl Harbor, the New Orleans was running Marines and ammunition to the outer bases on what was still a peacetime patrol cycle. The next morning, Gene's ship would sail twelve hundred miles west to drop two hundred Marines at Midway and turn around, and Gene could say so by name, because no one was yet reading his mail. After December 7 he would never again be able to tell Joan where his ship was. He had been gone from Kentucky seven months.
 
 ---
 

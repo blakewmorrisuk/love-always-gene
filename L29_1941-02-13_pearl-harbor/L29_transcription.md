@@ -17,13 +17,7 @@ signature: "With Love & lots of kisses,\nYours,\nGene"
 postscript: |
   P.S. I think I still remember your birthday. (Maybe) - or had I better be sure (Gene)
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS FEB 13 A.M. 1941" with two 3¢ Jefferson stamps, "Via Air Mail" stamped + "Air Mail" handwritten. Header date inside ("Feb 13, 1941") matches the postmark.
-
-  Envelope stationery is the "Aloha — Army & Navy YMCA" service envelope from the Honolulu Y.M.C.A. — black-ink vignette of Diamond Head with palm trees and a Y.M.C.A. emblem; preprinted "Return to / Address" fields left blank. Envelope back is blank (no return address written by Gene).
-
-  Notable content: a week at sea just ended ("just gotten in the harbor this afternoon … after a week out at sea"); a stateside-leave hope and a 20-day plan with Joan; thanks for a picture Joan sent (or returned); questions about a new bridge being built near Stanford, Ky.; sister Martha news (senior nurse, one year of training left); affectionate plea that Joan not cut her hair before he returns.
-
-  One [[…]] emphasis applied: Gene's stateside-leave speculation — a continuation of the deployment-speculation thread from L26 ("we are going back to the States March 15") and L27 ("they might send us anywhere in the next three months").
+  The week at sea had ended; Gene was in port and writing a long letter. Twenty days of leave at home was the hope again. He thanked Joan for a picture, threatened her with consequences if she cut her hair before he came home, and asked, twice, what she planned to do this summer.
 
 ---
 

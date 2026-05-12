@@ -19,17 +19,7 @@ postscript: |
   P.S. Tell every one I said hello for me. I hope your grand mother isn't still mad at me.
                                                           "Gene"
 note: |
-  Envelope postmark **"U.S.S. NEW ORLEANS SEP 18 1941"** — back to the ship's own postmaster cancel (rather than Bremerton's civic post office); the ship handles its own mail even at the Bremerton yard. Single 6¢ Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten. Envelope back has a partial annotation "[?]re I said" along the torn flap.
-
-  Inside date "Wed. Sept 17" — Gene wrote on Wed. Sep 17 and the letter was postmarked Thu. Sep 18. Postmark used as canonical date.
-
-  **Six sheets** of plain stationery, numbered 1., (2), (3), (4), (5), (6 unnumbered P.S.) in Gene's hand. Substantial letter.
-
-  Notable content: (1) operational intelligence — "unless we are in war before we leave the yards that we will go right back out to Honolulu agin" — Gene reveals the conditional orders the ship is operating under in mid-Sept 1941;
-
-  (2) most direct mortality acknowledgment yet — "you can be living today and dead that night," followed by the eerie observation that "we might go through the whole war without firing a shot and agin we could be sunk the first week" (the New Orleans actually lost her bow at Tassafaronga Nov 30, 1942).
-
-  Also: Gene reveals he can telephone Joan from the ship while in port at Bremerton (and did, after Jack Parkhurst was apparently calling Gene one time — "I like to have went through the deck for I thought that some thing was wrong at home"); Charlotte (friend) has named her baby brother after Gene; family back home hasn't written in two weeks ("Hope they aren't all dead down there"); Gene tells Joan she "will be always the only one from the bottom of my heart" — third explicit commitment after L48 ("the only girl I ever cared anything about") and L50 ("I think you are the sweetest girl in the world").
+  Six sheets. He told Joan that 'unless we are in war before we leave the yards that we will go right back out to Honolulu agin,' six thousand miles back to where he had been. 'You can be living today and dead that night.' Joan was the only one writing him; two weeks back from leave and he still hadn't heard from his family in Kentucky.
 
 ---
 

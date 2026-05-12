@@ -16,17 +16,7 @@ signature: "Lots & love & kisses\nYours \"Gene\"\n(R.E. Lankford)"
 postscript: |
   P.S. Please excuse this writing.
 note: |
-  Envelope is red-white-blue diagonal striped airmail; postmark "U.S. NAVY NOV 11 1942" — **Armistice Day (now Veterans Day)** ship cancel — three weeks before the Tassafaronga torpedo. Single 6¢ red Transport Plane Air Mail stamp. "VIA AIR MAIL" stamped + "Sailors Mail" handwritten. "PASSED BY NAVAL CENSOR" stamp lower-left. Return address handwritten upper-left: "Eugene Lankford, Sea 1c, U.S.S. New Orleans" — rate appears as "Sea 1c" (Seaman First Class) here, consistent with L91. The L90/L92 readings of "S 2/c" may have been misread or Gene's rate fluctuated.
-
-  Inside date NOT on page 1 — Gene skipped the date. Postmark Nov 11 used as canonical (Wednesday).
-
-  Salutation "Dearest Joan;" — semicolon variant.
-
-  Notable content: (1) **Most of Gene's best friends have been transferred off the ship** — "Most of my best pals have been transferred some-where else. Just have to make new ones as you know. The picture of, Chapin with the girl is still with me though. Guess he's about the best buddy I got. Him & Jack Parkhurst & my self use to have grand times together. Sure hated to see, Jack go too. At the present time I don't really know for sure where he is." Confirms Jack Parkhurst's L80 departure was a transfer (Gene doesn't know where he is now). Wartime crew turnover and friend-loss without death.
-
-  (2) **Gene reads Joan's bitter tone between letters** — "You know Darling I'm afraid you are a little bitter at me. Not in the yesterday's letter but the one you wrote last. Of course you didn't come right & say so, but I can read between the lines. Hope theres nothing serious, Joan. I compared the two letters together & paintly a person can see something was wrong." Gene's detective work on Joan's letters reveals something is wrong in their relationship; offers to "work the thing out together".
-
-  Also: **Jack Parkhurst spent leave at home and wanted to meet Joan and the folks** — "He did get a nice vacation & spent it at home. We were going to spend our vacation last summer together, but as you know, it didn't work out the way we planned. He wanted to meet you & the folks an awfully lot"; **Letter from Alberta + letter from Martha** — Alberta new name (possibly Parkhurst's family); **Gene says NO Christmas present** — "Joan, somehow I feel I'll repeat don't send me a Xmas present this year. It's not that I appreciate one, but that can wait another time. So please take my advice & don't" (wartime mail constraint); **Gene homesickness is "passed the state"** of acute longing — "I think though I'm passed the state of home sickness"; "If there's any-thing worrying you let me know and may be we can work the thing out together" — relationship offering; P.S. apology for handwriting.
+  Armistice Day, three weeks before Tassafaronga. Most of Gene's old friends had been transferred off the ship. Jack Parkhurst, he wrote, was somewhere in New York; he didn't know exactly. He had also detected, comparing Joan's last two letters side by side, a bitterness in her writing that hadn't been there before. 'I can read between the lines. Hope theres nothing serious, Joan.'
 
 ---
 

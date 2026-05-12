@@ -16,19 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Love & kisses\nalways \"Gene\"\n(R.E. Lankford)"
 note: |
-  **First letter on U.S.S. NEW ORLEANS ILLUSTRATED LETTERHEAD** — both letter sheets feature a small printed engraving/photograph of the U.S.S. New Orleans at sea at the top of the page, labeled "U.S.S. NEW ORLEANS" beneath. Beautiful ship-stationery, almost certainly issued aboard the ship.
-
-  Envelope is a red-white-blue diagonal striped airmail envelope (matches L66/L68 style) with "PAR AVION" French airmail marking on the lower-right (first appearance of "PAR AVION" — likely just a stylistic feature of this envelope style, not actual international routing). Postmark "U.S. NAVY SEP 29 1942" — ship cancel. Single 6¢ red Transport Plane Air Mail stamp; "VIA AIR MAIL / CORREO AEREO" stamped in red ink; **"Sailors Mail"** handwritten by Gene. "PASSED BY NAVAL CENSOR" stamp lower-left with censor signature. Envelope back has "VIA AIR MAIL" printed in red on the side.
-
-  Inside date NOT on page 1 — Gene skipped the date. Postmark Sep 29 used as canonical (Tuesday).
-
-  Salutation "Dearest Joan," — comma variant.
-
-  Notable content: (1) **AUSTRALIA DISCLOSURE — "I can say I have been in, Australia"** — "Wished I could write and tell you the things I have seen. I can say I have been in, Australia and really loved the place. It's a beautiful country and the people there are so friendly. Sure had a nice time while I were there." First explicit operational location-disclosure Gene has made post-Pearl Harbor — the censor allowed Gene to name "Australia" but not the timing or operational context. The U.S.S. New Orleans visited Sydney/Brisbane during 1942 Pacific operations (the ship had been at Sydney in late August 1942 between Guadalcanal sorties). Gene tells the most he is allowed to tell.
-
-  (2) **Engagement origin reflection** — "Yes, it was kindly queer the way we became engaged — wasn't it? I can't see anything wrong with it though." Joan apparently raised the strangeness of their long-distance proposal-by-letter / promise-by-phone-call engagement. "Queer" here means strange/unusual (period idiom). Gene's response is gentle defense — the unconventional path doesn't bother him.
-
-  Also: **Joan's grandmother has likely died** — "Joan the way you talked in your last letter about your grandmother she probably gone by now. Everybody got to face death sooner or later. It's something a person doesn't like to think of"; **Gene's long-promised PICTURE has been taken** — "Well Darling finally I had that long promised picture made. Probably be several days before I can get it, but I send it as soon I'm able. Though I know the thing won't be very good as I wasn't feeling very good the day I got it taken. Probably look just as bad as I felt"; **J.B. Davidson** referenced — may be the same as L84's "J.D. Davidson" (likely Gene's friend in England); **Joan now typing letters** — Gene compliments: "I'm not much at typing. It takes me to long to type a letter. You know I never did take it in school. I'm glad you like it though"; "the folks home hardly ever write" — Gene contrasts Joan's frequent letters with family's silence.
+  The first time the naval censor let Gene name an operational place. He told Joan he had been in Australia, that he had liked it, that the people had been kind. He told her almost nothing else, because the censor had drawn a line that ran exactly there. The ship had been at Sydney in late August between Guadalcanal sorties; the picture Gene was about to mail her had been taken on shore leave there. Joan's grandmother, sick for over a year, had probably died by the time this letter reached Kentucky.
 
 ---
 

@@ -14,17 +14,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Lots & Love & Kisses\nalways yours \"Gene\"\nR.E. Lankford."
 note: |
-  Envelope is a red-white-blue diagonal striped airmail envelope; postmark "U.S. NAVY OCT 13 1942" — ship cancel. Single 6¢ red Transport Plane Air Mail stamp. **"VIA AIR MAIL" stamped large** + "Sailors Mail" handwritten. "PASSED BY NAVAL CENSOR" stamp lower-left with censor signature. **Return address handwritten upper-left: "Raymond E. Lankford / U.S.S. New Orleans"** — Gene switches back to the formal "Raymond E. Lankford" form on this envelope (vs. "Eugene Lankford" on L84/L85/L86 envelopes); the name alternation continues.
-
-  Inside date NOT on page 1 — Gene skipped the date. Postmark Oct 13 used as canonical (Tuesday).
-
-  Salutation "Dearest Joan," — comma variant.
-
-  Notable content: (1) **First direct combat acknowledgment: "Darling you don't know what's it like out here fighting a war"** — Gene's plainest statement to Joan that he is in active combat. Compared to the L81 "couldn't say this was paradise" hint and the L85 censored "things I have seen," this drops the indirection.
-
-  (2) **Engagement check-in mid-deployment** — "By the way are we still going to get married when I get back? Can you think of any reason why we shouldn't?" Gene quietly re-asks the engagement question in the middle of combat operations, with a gentle inversion ("any reason why we shouldn't?") that puts the burden of objection on Joan.
-
-  Also: **Gene feeling better** after the week of illness in L84-L86 — "Have been feeling a lot better lately"; **Joan in a new coat and gown** — possibly nursing-school graduation gown; Gene: "wished I was there to see that coat & gown. Bet it does look beautiful on you"; **THREE pictures of Gene made** — one for the folks, one for Joan, one (presumably) for himself; Gene confirms "I had three made"; **Gene threw away wartime postcards** — "I had a lot of pictures, post cards of places I've seen, but didn't have anywhere to keep them so I threw them away" — wartime shipboard storage constraints; censorship-on-pictures — "we aren't suppose to mail anything like that now. They wouldn't pass the censorship"; **Australia continued** — "Yes, Darling I did like, Australia and I believe you would too. Some of the girls are very pretty and awfully nice. Of course they talk different from us. Our way of talking seems just as funny to them. The country were awfully pretty where I were. I still take the good U.S.A. anytime though. The people there thought a lot of the American sailors"; **Carroll likely shipped out to navy**; **Thomas's whereabouts unknown** — Gene fears for Thomas: "Just hope he doesn't go where I think he will"; **Dad making jokes** — Gene asks Joan not to take them seriously: "Don't listen to anything Dad says for he's always cracking jokes on some body. Don't you think he had the right idea at one time, though, so they all at home thinks. There isn't a girl like you Joan. They always mention you in their letters."
+  Two letters from Joan in three days. Gene was feeling better, the pictures had been mailed, and for the first time he wrote down what the rest of the year would look like for him. 'Darling you don't know what's it like out here fighting a war.' He asked Joan, in passing, whether they were still going to be married when he came back. 'Can you think of any reason why we shouldn't?'
 
 ---
 

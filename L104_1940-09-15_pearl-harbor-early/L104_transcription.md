@@ -17,21 +17,7 @@ postscript: |
 
   Have to stop my pen is getting so it won't hardly write. It probably out of ink.
 note: |
-  **EARLIEST DATED FROM-SHIP LETTER in the archive.** Sep 15, 1940 — 15 months before Pearl Harbor attack. Gene is anchored peacefully off Waikiki Beach with the U.S.S. New Orleans on her routine peacetime operations.
-
-  Envelope is a **HAWAIIAN-THEMED ILLUSTRATED ENVELOPE** with a color illustration of the **Hawaiian Coat of Arms** (the heraldic crest of the former Kingdom of Hawaii, with the "Hawaii" label below). The illustration shows the royal coat of arms with shields, crown, robe, and motto "Ua Mau Ke Ea O Ka Aina I Ka Pono" (the Hawaiian state motto). First Hawaiian-themed envelope in the archive — significantly predates the L71 souvenir envelope and the L85 U.S.S. New Orleans letterhead.
-
-  Postmark "U.S.S. NEW ORLEANS SEP 15[?] AM 1940" — ship cancel (earliest ship cancel in the archive). **Two 3¢ violet Jefferson Prexy stamps** (6¢ total airmail rate). "Air Mail to U.S.A." handwritten — first explicit "to U.S.A." routing instruction. Envelope back blank with age stains and torn flap.
-
-  Inside date: NOT on page 1 — Gene skipped the date. Postmark Sep 15 used as canonical (Sunday).
-
-  Salutation **"Dear Joan,"** — distinctly more formal than the later "Dearest Joan;" / "Joan, Dearest;" / "My Dearest Joan;" variants. This is the EARLIEST salutation form Gene used to Joan.
-
-  Notable content: (1) **PEACETIME PEARL HARBOR ANCHORAGE described** — "Well this finds me anchor off Waikiki beach about a mile and half. We always come in over the weekend then go back to sea on Mondays and stay until Friday afternoon." Routine peacetime Navy schedule (Mon-Fri at sea, weekends in port) — the way the New Orleans operated for over a year before Dec 7 1941. **The earliest direct view in the archive of where Gene actually was**. Waikiki anchorage area is now permanently associated with Pearl Harbor.
-
-  (2) **Friend SNUCK IN TO SEE LANA TURNER** — "Oh, I forgot to tell you about my boy-friend going down that night to see the movie star, Lana Turner. Well he got in to see her some way, but I couldn't tell how. He didn't know how he did it himself. The navy had quit a write up about it next day." A Hollywood-star encounter for one of Gene's sailor friends; the Navy wrote it up the next day. Lana Turner had been in Honolulu in 1940 doing USO appearances. Charmingly biographical.
-
-  Also: **CARROLL had been in the navy in 1940** — P.S. confirms "He went his way when he was in here" — meaning Carroll did navy service before Gene; Carroll wrote Gene "a book" of advice; **Gene's friend lost liberty cards** the night of the photo session — got off easy with Officer of the Deck; **Joan back in school** — Gene's empathetic acknowledgment; **Pictures sent** — Gene mailed a couple photos with this letter (with the warning "If I was you I wouldn't let any one else see them"); **"Hawaii" and "Hawaiian Islands"** stationery first appearance — confirms Gene was already in Hawaii by Sep 1940.
+  Gene's earliest surviving letter from the ship, fifteen months before the war. The New Orleans was running a quiet peacetime cycle out of Pearl Harbor: at sea Monday through Friday, anchored off Waikiki on the weekends. Gene was still signing 'Dear Joan' (he wouldn't shift to 'Dearest' until December) and writing about a Saturday-night photo session in Honolulu where his friend had snuck in to meet Lana Turner and talked them both back aboard after losing their liberty cards. Carroll, Gene's older brother who had served before him, was now sending Gene long letters of advice. Gene didn't intend to take any of it.
 
 ---
 

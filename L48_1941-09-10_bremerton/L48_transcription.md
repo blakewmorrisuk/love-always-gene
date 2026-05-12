@@ -19,19 +19,7 @@ postscript: |
   P.S. Tell all the family I said hello for me & I hope your grandmother is feeling better. Also tell them how sorry I am that I couldn't stop to say goodbye to them the night I left.
                                                           "Gene"
 note: |
-  Envelope postmark **"BREMERTON WASH SEP 10 11PM 1941"** — first letter mailed from the U.S. mainland in this archive after Pearl Harbor. Single 6¢ red stamp (air mail rate); "Air Mail" handwritten. Envelope torn at top right. Only one envelope photo (front) — no envelope back was photographed.
-
-  Return address is new: **U.S.S. New Orleans / % Fleet Postmaster / Bremerton, Wash. / F Division** — confirming the ship is now at Bremerton, Washington (Puget Sound Navy Yard, ~15 miles west of Seattle) for the yard period predicted in L45.
-
-  Inside date "Wed. Sept. 10th" matches the postmark.
-
-  Context: this is the first letter after Gene's 26-day leave home (announced L46, in transit L47 from Chicago Union Station). It follows an emotional parting — Gene apologises throughout for "the way I acted toward you the night before I left."
-
-  Notable content: (1) **War/career-relevant** — Gene admits he is actively trying to leave the navy: "I trying to get out of the navy and if I don't, well I guess I be will learn to hate it more & more every day. This is my only chance and let us hope together it will work out alright." A dramatic reversal from his earlier acceptance;
-
-  (2) **Love-meaningful, priority 2** — "Joan, you are the only girl I ever cared anything about and I know now that you will always be the only one" — Gene offers Joan an explicit commitment, followed by an open offer of engagement: "Just any time you make that promise I asked you to I will be ready for it."
-
-  Also: Gene mentions Joan's grandmother in the postscript (sick) and Joan herself ("Did you go to see the doctor yet? Please don't keep putting it off") — two health concerns at home; Bremerton weather "nothing like Honolulu" — rain and cool nights.
+  His first letter from the Bremerton Navy Yard. He had been gone from her for six days and was apologizing for whatever had happened on the last night home. 'I trying to get out of the navy and if I don't, well I guess I be will learn to hate it more & more every day.' The letter ends with the closest thing yet to a proposal: 'Joan, you are the only girl I ever cared anything about and I know now that you will always be the only one. Just any time you make that promise I asked you to I will be ready for it.'
 
 ---
 

@@ -18,15 +18,7 @@ signature: "With Lots & Lots of love\nalways, \"Gene\""
 postscript: |
   ("Think hard Joan")
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS SEP 25 1941" (ship cancel); single 6¢ red Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten. Envelope torn at top; envelope back shows a partial fragment of a letter page tucked behind the flap.
-
-  Inside date "Wed. Sept. 24" — Gene wrote Wed. Sep 24 and the letter was postmarked Thu. Sep 25. Postmark used as canonical date.
-
-  Notable content: (1) **follow-up to the L52 marriage proposal** — Joan apparently asked in her last letter if Gene still wanted her to make "that promise," and Gene replies "darn well that still want it. There isn't anything that would be more satisfying then that. My eyes would be sparkling with joy if you would. Think it over Honey and let me know." Postscript reinforces: ("Think hard Joan");
-
-  (2) Gene's first acknowledgment of war-duration uncertainty — "Sometimes I think that it won't last long and again it looks like it might last for years." Earlier letters predicted imminent U.S. entry; this is the first time Gene engages with how *long* the war might last.
-
-  Also: Mrs. Gentry has died (Stanford acquaintance); sister Martha was sick but is now better; Gene catches a cold in the Bremerton damp; movies seen: "So Ends Our Night" (1941 Lewis Milestone film about anti-Nazi refugees) and "Shepherd of the Hills" (1941 John Wayne film); Joan's grandmother has forgiven Gene and Joan for "the trouble we cause her" — open about what; Joan's breast condition mentioned again (Gene urging a doctor's visit).
+  Joan had written back asking whether he still wanted 'that promise' from her. He did. 'Think hard Joan,' is the postscript. 'My eyes would be sparkling with joy if you would.' The same letter has Gene wondering, for the first time in his correspondence, whether the war might last for years rather than weeks.
 
 ---
 

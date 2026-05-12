@@ -16,21 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "My Dearest Joan;"
 signature: "Lots & Lots of love with kisses\nYours, \"Gene\""
 note: |
-  Envelope is the red+blue "CORREO AEREO / VIA AIR MAIL" diagonal-stripe airmail envelope (matches L66). Stamp is the 6¢ red Transport Plane Air Mail (matches L67). Postmark "U.S.S. [unclear, partial — likely U.S.S. NEW ORLEANS] NOV 10 8:30 AM 1941" — ship cancel applied at Mare Island before the ship sailed; "VIA AIR MAIL" stamped large across the lower portion. Envelope back blank, corner tear matching the front.
-
-  Inside date "Sunday Nite Nov. 9" — calendar consistent (Nov 9, 1941 was Sunday). Letter written Sunday night before the Monday morning departure for Hawaii.
-
-  Return address on page 1 unchanged from L67: "U.S.S. New Orleans / San Francisco / California / F Division."
-
-  Salutation "My Dearest Joan;" — third consecutive letter with "My" prefix (L66/L67/L68).
-
-  **First appearance of U.S. NAVY printed letterhead** — both sheets carry a small "U.S. NAVY" header centered at the top of each page (printed, not Gene's hand). Likely from a Navy YMCA or shipyard writing-room stationery in Mare Island.
-
-  Notable content: (1) **Gene and Jack Parkhurst considered transferring to the U.S.S. HORNET** — "Jack & myself were going to try & get on the new aircraft carrier the 'Hornet' which is in Norfolk Va. There were a bunch off this ship that did get to on that ship. We decided to wait a while longer & see where we would go before we start trying to be transferred." The Hornet (CV-8) commissioned Oct 20, 1941, would later launch the Doolittle Raid (Apr 1942) and fight at Midway (Jun 1942) before being sunk at Santa Cruz (Oct 1942). **Some New Orleans sailors did make the transfer.** Gene's decision to "wait a while longer" kept him on the New Orleans for the entire Pacific war. Also worth noting: Gene's mother wrote to him asking him NOT to seek the East-coast transfer Gene mentioned in L64 — Mother's wish to keep Gene away from the Atlantic interferes with Gene's earlier escape plan.
-
-  (2) **Final departure for Hawaii confirmed Monday morning** — "Well, Darling we are leaving again tomorrow morning for Sunny Hawaii. I'm not very anxious to get there myself, but that isn't at all the deal … We will leave agin for, Honolulu & no doubt about it not getting there this time." Gene's wry reassurance after the L67 mechanical breakdown — this is the actual successful sail-off for the Pacific that will land the ship in Pearl Harbor before Dec 7.
-
-  Also: Gene and Parkhurst spent Sunday in San Francisco and Oakland sight-seeing; Gene had a "swell dream" about Joan that "turn out to be a goof"; **Gene also dreamed about "Jim"** — unclear who Jim is (possibly Joan's family member or someone they both knew) — Gene says he'll explain when he has more time; warm weather in SF + Honolulu vs. cold setting in at Kentucky; Gene needs to write Martha and Thomas tonight.
+  Sunday night in San Francisco. The ship would sail for Hawaii in the morning, this time for real. Gene's mother had written to ask him not to seek the East Coast transfer he and Jack Parkhurst had been discussing; she didn't want him near the Atlantic war. Gene and Jack had also considered transferring to a new aircraft carrier that had just commissioned in Norfolk, the U.S.S. Hornet. They decided to wait. The Hornet would later carry Doolittle's bombers to Tokyo and be sunk at Santa Cruz in October 1942.
 
 ---
 

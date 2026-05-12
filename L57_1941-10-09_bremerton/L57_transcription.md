@@ -18,17 +18,7 @@ signature: "Loads of Love,\nAlways, \"Gene\""
 postscript: |
   P.S. You know I dreamed about you all the time.
 note: |
-  Envelope postmark "NAVY YARD BREMERTON WASH OCT 9 10AM 1941 STA." — the **Navy Yard Bremerton sub-station** civic postmark (not the ship's onboard cancel). Single 6¢ Air Mail eagle stamp; "Air Mail" handwritten. Envelope back blank.
-
-  Inside date "Friday Nite Oct 10" — but Oct 10, 1941 was Friday and the postmark is Oct 9 (Thursday). Gene either mis-dated the letter (off by one day) or wrote it on Thursday night thinking it was Friday. Postmark Oct 9 used as canonical date; Gene's "Oct 10" preserved verbatim in the body. Source folder name "October 9, 1941" matches the postmark.
-
-  Salutation "Joan, Dearest;" — name-first variant.
-
-  Notable content: (1) **Gene REVERSES the L55 withdrawal of his marriage proposal** — "Joan, I give anything if you would only make me that promise to marry me when you finish school. I haven't much to start with but I believed we could get along swell together." This is significant: just six days after telling Joan in L55 that "I won't ask you to make me that promise again," Gene is asking again.
-
-  (2) Mortality reflection on Gene's last sight of the Kentucky moon — "As I were taking the last look I said to myself this might be my last time to see it at all" — echoes the L51 mortality thread.
-
-  Also: brother Carroll recovering from his operation; brother Thomas in Detroit, likely to be drafted ("Once they get him in he might as well plan to stay there until this war is over … the navy bad enough to me. The army is just about four times worse"); Elizabeth McKinney visiting Joan for the weekend; movies seen: "Man Hunt" (1941 Fritz Lang, Walter Pidgeon & Joan Bennett) and "Kiss The Boys Goodbye" (1941, Mary Martin & Don Ameche); Bill (presumably Joan's relative) has cut his finger off.
+  Six days after telling Joan he wouldn't ask again, Gene asked again. 'Joan, I give anything if you would only make me that promise to marry me when you finish school.' The line about the moon hanging low over Kentucky was a memory of the night he had left her: 'I said to myself this might be my last time to see it at all.'
 
 ---
 

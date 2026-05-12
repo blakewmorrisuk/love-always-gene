@@ -16,21 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Lots of Love & Kisses,\nYours always \"Gene\"\n(R.E. Lankford)"
 note: |
-  Envelope plain wartime stationery; postmark "U.S. NAVY SEP 6 1942" — ship cancel. **THREE 2¢ red "ARMY AND NAVY" patriotic-issue stamps** totaling 6¢ — FIRST APPEARANCE of the 1942 patriotic Army/Navy commemoratives, replacing the standard Air Mail stamp. "Air Mail" handwritten + **"Sailor's Mail"** stamped (second appearance after L81). "PASSED BY NAVAL CENSOR" stamp upper-left. Return address handwritten upper-right: "Eugene Lankford / U.S.S. New Orleans." Address line includes "(U.S.A.)" — wartime domestic-mail convention.
-
-  Inside date NOT on page 1 — Gene skipped the date. Postmark Sep 6 used as canonical (Sunday).
-
-  Return address inside page 1: "U.S.S. New Orleans / % Fleet Postmaster / San Francisco / F Division, Calif." — matches L81 routing.
-
-  Salutation "Dearest Joan," — comma variant.
-
-  **Historical context:** September 6, 1942 — the U.S. Marines landed at Guadalcanal Aug 7, 1942. By Sep 6, the Guadalcanal campaign was in its first month and the Battle of Savo Island (Aug 9) had just been lost. The U.S.S. New Orleans was operating in the South Pacific in support of Guadalcanal operations. Gene is writing in active wartime theater.
-
-  Notable content: (1) **Censorship explicit — "if I did they would only be cut out"** — "Joan you can write very interesting letters. Sure wished I could answer all your questions, but if I did they would only be cut out." First time Gene explicitly references the censor's cutting/cutting-out action; previous censorship references were oblique ("can't talk of any of that," "we aren't suppose to write a thing about whats going on"). This makes the censor's editorial hand concrete.
-
-  (2) **JOAN IS KEEPING ALL OF GENE'S LETTERS** — "No I didn't know you were keeping all my letters. Surely have a lot of them by now I bet. Aren't you afraid the wrong person might get a hold of them?" Gene learns from Joan's letter that she has been preserving the correspondence. **THIS IS WHY THE ARCHIVE EXISTS.** Joan's preservation, started in 1940 or earlier, has created the corpus Blake is now transcribing. Wry concern about the letters being intercepted ironic given that censored mail itself was the most-surveilled correspondence.
-
-  Also: **Mail backlog clears** — Gene got 3 letters from Joan in a few days; **2 letters from home**, one from Martha (Gene's sister); **Carl was home** — new name in the archive, presumably Joan's family/friend; **Martha (sister) recovering slowly** — "spending a month away from the City … can't see why it's taking her so long in getting her health back agin"; **Carroll's vacation confirmed**; **Joan has a new watch + dress** Gene saw in a picture (or photo Joan sent); **Peggy and her cats** — Joan's sister Peggy "foolish about cats"; **Jim** referenced — "How you & Jim getting along with each other these days" — Jim has appeared before (L68 dream); **Inside joke "Buster & his 13 kisses, that certain day"** — affectionate memory possibly about Joan's dog or a person nicknamed Buster; **Family endorsement of Joan** — "The whole family I know thinks the world of you, Joan. Mother always writes about you in her letters & also Martha"; **Joan's grandmother still sick.**
+  Three of Joan's letters arrived together, including the one in which she told Gene she was keeping every letter he wrote. He was wry about it (and slightly nervous about the wrong person reading them) but he did not ask her to stop. The reason this archive exists is in that paragraph. The ship was a month into the Guadalcanal campaign. Gene also writes here, for the first time, that the censor will cut things out if he answers what he wants to answer.
 
 ---
 

@@ -17,13 +17,7 @@ signature: "With Love & kisses,\nGene"
 postscript: |
   P.S. Keep a thinking Joan.
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS FEB 24 A.M. 1941" with two 3¢ Jefferson stamps, "Via Air Mail" stamped + "Air Mail" handwritten. Plain envelope (no illustration); envelope back is blank — Gene did not write a return address.
-
-  Gene dated the letter "Sunday," — Feb 24, 1941 was a Monday, so Gene wrote it Sun. Feb 23 and it was postmarked the next morning. Postmark used as canonical date per the brief; "Sunday" preserved verbatim at the head of the body.
-
-  Gene writes from sea — "we are riding the waves today and will go in about Thursday" — and notes the navy is flying mail off the ship while it's at sea ("they fly it in by plane and we just sent a plane in yesterday"). Location stamp set to "U.S.S. New Orleans · At Sea" rather than Pearl Harbor for this reason.
-
-  Notable content: Gene's firmest stateside-return projection yet — a stated three-month horizon for the ship to "turn the nose … to the states." Continues the deployment-speculation thread from L26 ("going back to the States March 15"), L27 ("they might send us anywhere in the next three months"), and L29 ("I think maybe I will get a leave when we go back to the states"). Also: Gene reveals he hasn't been on Mess-cook duty for about three months.
+  Writing from sea. The mail was being flown off the ship by plane every few days. Gene gave his firmest stateside-return projection so far, three months out, and then walked into the harder territory of trying to ask Joan, directly, whether she actually cared about him. He referenced the last night he was home on leave, when she'd told him she hated him, and asked whether she had meant it.
 
 ---
 

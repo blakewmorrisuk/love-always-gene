@@ -17,21 +17,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dear Gene,"
 signature: "Your old buddy,\nDon.\nDonald V. Chapin"
 note: |
-  **THIS IS NOT A LETTER FROM GENE.** It is a letter **FROM Donald V. Chapin** — Gene's L88-named best friend (also referenced in L94 as his closest remaining shipboard friend after Parkhurst left) — **TO Gene at Gene's NEW address in Lexington, Kentucky**.
-
-  Envelope is a red-blue diagonal striped airmail envelope. Postmark on the envelope is partially obscured but is likely a ship cancel (USS Rowe DD-563); not fully legible. **Don's return address: "Don. Chapin (Cox) / U.S.S. Rowe D.D. 563 / % Fleet P.O. / San Francisco / California"** — Don has been reassigned to the U.S.S. Rowe (Fletcher-class destroyer); his rate is "Cox" (Coxswain). Single 6¢ red Transport Plane Air Mail stamp. **"PASSED BY NAVAL CENSOR"** stamp lower-left. "Air Mail" handwritten with a small airplane drawing.
-
-  **GENE'S NEW ADDRESS on envelope: "Mr. R.E. Lankford / 921 Cramer Ave / Apartment #2 / Lexington / Ky."** — **First Lexington Kentucky address in the archive.** Gene is no longer aboard ship; he is now living at 921 Cramer Ave, Apt #2 in Lexington (presumably Joan was nearby finishing nursing training at U.K., or they are married and living together). Major life-change marker.
-
-  Inside date "Oct. 8, 1944" — Don wrote Oct 8 (Sunday), letter postmarked/sent later; queue date 1944-10-11 used as canonical (the postmark/receipt date for Gene).
-
-  Salutation **"Dear Gene,"** — Don's casual address.
-
-  Notable content: (1) **Don complains that Gene wrote a letter to Betty (Don's wife) that upset her, and Don has now seen it** — "Received a letter from my wife the other day and she had enclosed the letter you had written to her. Well I guess you know what kind of a spot that puts me in. I've tried to think it over Gene and from the sound of thing I'd say that you have lost your faith lately. I bet you kid she is my wife and I would be human if I said that was the kind of a letter I wanted a buddy of mine to write her." Don gently confronts Gene about the letter and adds that Betty has been "pretty sick" recently. Don closes with a peace offer: "as one favor to me try not think to hard of B.S. [Betty Sue / Betty Chapin]. Maybe someday we can all meet as straighten things out right." A friendship under wartime strain.
-
-  (2) **GENE NOW LIVING IN LEXINGTON, KENTUCKY** — envelope addressed to "Mr. R.E. Lankford / 921 Cramer Ave / Apartment #2 / Lexington, Ky." First non-ship address for Gene in the archive. Whether through discharge, medical reassignment, or post-war landing, Gene is back in Kentucky by October 1944, living at a Lexington apartment with (or near) Joan. Major life-change marker not foreshadowed in earlier letters.
-
-  Also: **Don is now on U.S.S. Rowe (DD-563)** as a Coxswain — a Fletcher-class destroyer in the Pacific theater; **Don's M.A.A. (Master-at-Arms) duty** described as "ungrateful job"; **Don hasn't heard from Jack Parkhurst either** — "I haven't heard nothing about Jack but I'm still hoping to run across him"; **Don has news of "our friends" but cannot say what** — censorship; **Don's morale**: "The longer I stay out here the more discouraged I get. It's still rough and will not likely get rougher" (cf. Gene's L89 "There's going to be a pay off"); **Don passes "regards to Joan"** — confirms Gene and Joan are together (married or co-located) in Lexington.
+  A letter to Gene from Don Chapin, eighteen months after the previous letter in the archive. Gene was no longer aboard the New Orleans, no longer in the Pacific, and no longer in the Navy: the envelope is addressed to 921 Cramer Avenue, Apartment 2, Lexington, Kentucky. Don was now a Coxswain aboard the destroyer U.S.S. Rowe in the western Pacific. He had written to confront Gene about a letter Gene had sent to Don's wife Betty that had upset her. 'I'd say that you have lost your faith lately.' Don closed with a peace offer: 'Maybe someday we can all meet as straighten things out right. Good luck kid.'
 
 ---
 

@@ -18,17 +18,7 @@ postscript: |
   P.S. I'm sorry about Mr. Hampton being so low & hope he is better by now.
                                                                   Gene.
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS SEP 21 1941" (ship's onboard cancel, like L51); single 6¢ red Air Mail "plane" stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten. Envelope back has partial annotations along the torn flap ("[?]ington" reading is uncertain — possibly "Bremerton" or "Bremington").
-
-  Inside date "Sat. Sept 20" — Gene wrote on Sat. Sep 20 at the Craven Center; postmarked Sun. Sep 21. Postmark used as canonical date.
-
-  Stationery is the **CRAVEN CENTER — PUGET SOUND NAVY YARD — BREMERTON, WASHINGTON** preprinted letterhead. Craven Center was the sailors' YMCA/recreation building at the Puget Sound Navy Yard (named for Adm. Thomas T. Craven). First time this stationery appears in the archive — analogous to L44 (Pearl Harbor Y.M.C.A.) for the Bremerton period. Four sheets, numbered (no number), (2.), (3), (4) in Gene's hand; pages 1 and 3 are on the Craven Center printed letterhead, pages 2 and 4 are plain back sides of the same sheets.
-
-  Notable content: (1) "I won't have much of a chance to come home agin until the war is over" — Gene acknowledges he doesn't expect to be home until war ends;
-
-  (2) **MARRIAGE PROPOSAL** — "I can never love no one else but you and would like to have you as my wife any day." This is Gene's first explicit proposal in the archive, building on the L48 "you will always be the only one" and L51 "you will be always the only one from the bottom of my heart" declarations.
-
-  Also: confirms Gene has quit drinking entirely ("won't even take a drink of beer"), continues the L48–L50 self-improvement thread; Bremerton liberty better than Honolulu (3 nights/4 vs. every other day); ship will return to Honolulu "unless we are in war" per L51's conditional; Mr. Hampton (Stanford, KY acquaintance — last mentioned in L34) is now seriously ill ("being so low"); reflections on the recent leave home (Alberta trip with Joan, taking family to movies).
+  This is the proposal. Gene was writing on the Puget Sound Navy Yard YMCA's letterhead. 'I can never love no one else but you and would like to have you as my wife any day.' He had been working up to it since L48; he had also formally given up drinking ('won't even take a drink of beer'); and he had already accepted that he probably wasn't coming home again until the war ended.
 
 ---
 

@@ -16,19 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan;"
 signature: "Always,\nGene"
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS OCT 25 8:30 AM 1941" (ship cancel — Saturday morning); single 6¢ red Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten across the postmark. Envelope back has heavy ink bleed-through stains and a torn flap — significantly more damaged than the surrounding L63/L64/L66 envelopes.
-
-  Inside date "Friday, Oct. 24" — Gene wrote Friday night just hours after the much longer L64. **L65 is a same-day-as-L64 follow-up letter**; both letters reached the post office on consecutive mornings (L64 postmarked Fri Oct 24, L65 postmarked Sat Oct 25).
-
-  Letter is SHORT — only two sheets, plain lined stationery, numbered (1),
-
-  (2) in Gene's hand. Page 2 is half-blank.
-
-  Notable content: (1) **The L64 phone call is CANCELED and rescheduled** — "I told you in the letter last nite that I would call you on the phone Wednesday nite. Well we got orders to leave here that day so it's impossible to make that phone call." Then in the close: "Will try to phone you Tuesday nite if it's possible." Phone-call deadline shifts from Wed Oct 29 to Tue Oct 28 (now the eve-of-sail).
-
-  (2) **Departure now Wednesday Oct 29** — "We will leave here sometime Wednesday" — the date slips again from Thursday Oct 30 (L64) back to Wednesday Oct 29 because of new orders received Friday Oct 24.
-
-  Also: Joan playing in some kind of contest Friday (basketball? piano?) — Gene asking about it.
+  The phone call was moved up a day. The ship had been ordered to sail Wednesday morning instead of Thursday. Gene wrote this short follow-up to tell Joan the new plan, then dropped it in the ship's mail and went back to his duty.
 
 ---
 

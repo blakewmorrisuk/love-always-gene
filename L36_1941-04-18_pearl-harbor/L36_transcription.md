@@ -18,17 +18,7 @@ postscript: |
                                                           Love
                                                                 Gene
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS APR 18 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Air Mail" handwritten. Plain envelope (with a tear at top); envelope back blank with no return address.
-
-  Inside date "April 17, 1941" — Gene wrote on Thurs. Apr 17 and the letter was postmarked Fri. Apr 18. Postmark used as canonical date.
-
-  Stationery is the U.S.S. New Orleans's printed ship's letterhead — preprinted "U.S.S. NEW ORLEANS" centered at the top of pages 1 and 3, with "CA32/" stamped in the left margin (the ship's hull designation, CA-32). Two punch holes near the top center suggest the sheets came from a hole-punched pad. Page 2 is the back of sheet 1 (printed letterhead visible as bleed-through). This is the FIRST letter in the archive on the ship's official stationery — a notable physical detail.
-
-  Notable content: (1) "also taking everything off this ship that isn't really useful in time of war" — direct evidence the New Orleans is being lightened for combat operations in April 1941;
-
-  (2) "Looks like we are about the only ones left to stop Germany" — Gene's first explicit reference to Germany and the United States' role as the last Allied holdout (this is 2 months before Operation Barbarossa, 8 months before Pearl Harbor). Continues the steep war-foreshadowing arc through L33 → L35 → L36 — three letters in five weeks where Gene has independently arrived at the certainty that war is imminent.
-
-  Also: the ship is going to the Navy Yard "next month" (May 1941) — likely Mare Island or Puget Sound — and Gene hopes for a home visit if his leave aligns; sister Peggy has the measles; school is ending and Joan's taking a summer job at the 5&10 cents store; J.B. Davidson (Stanford acquaintance) moving back to Stanford; Gene signs the postscript "Love, Gene" in addition to the main "With Lots of Love, Gene" signoff.
+  Three days after L35. The ship was being stripped down: 'also taking everything off this ship that isn't really useful in time of war.' Gene wrote this one on the U.S.S. New Orleans's printed letterhead, the first time in the archive he used the ship's official stationery. 'Looks like we are about the only ones left to stop Germany.' He was eight months out from the war, and still imagining it as a European one.
 
 ---
 

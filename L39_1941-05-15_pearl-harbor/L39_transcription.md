@@ -17,15 +17,7 @@ signature: "always\nLove\n\"Gene\""
 postscript: |
   P.S. Tell every one I said "Hello" (Gene)
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS MAY 15 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped (faded) + "Via Air Mail" handwritten. Plain envelope (with a tear at top); envelope back blank, no return address.
-
-  Inside date "May 13, 1941" — Gene wrote on Tues. May 13 and the letter was postmarked Thurs. May 15. Postmark used as canonical date.
-
-  Notable content: (1) Gene's most direct prediction of U.S. entry — "Maybe it won't be long now before we be into it";
-
-  (2) "Of course they won't open it but when war starts they will" — Gene's startling awareness of wartime mail censorship before it exists. He admits in the body that he's revealing more than he should ("I'm not suppose to tell you this and if they happen to open this letter and see this. Well guess you know what they would do to me"). Continues the steep escalation from L33 → L35 → L36 → L38 → L39 — six letters in eight weeks tracing Gene's certainty that the U.S. is about to enter the war.
-
-  Also: Gene's father has written that "Miss Joan Northcutt got a grand radio from some one. (I wonder who)" — confirming the L37 birthday gift was received; Gene confirms again that the stateside leave he was hoping for is now "off"; Joan apparently mentioned a car accident or near-miss ("take it easy with the car"); third successive signature variant in three letters ('"Gene"' in quotes, after "Eddie—'Gene'" in L35 and "Gene" in L36).
+  'Of course they won't open it but when war starts they will.' Seven months before Pearl Harbor, Gene wrote the line that anticipates the rest of his correspondence with Joan. From December onward, every letter he sent would pass through a naval censor before it reached Stanford.
 
 ---
 

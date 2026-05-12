@@ -19,17 +19,7 @@ postscript: |
   P.S. The call will be about or between 9:00 & 10:30 O'clock Wednesday nite by your time. If you changed your mind about the promise Joan let me for an final answer then. So until then,
   (Be sure to have Mother up to your house then.)
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS OCT 24 8:30 AM 1941" (ship cancel); single 6¢ red Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten across the postmark. Envelope back blank, tape repair on the flap edge.
-
-  Inside date "Thursday Oct 23" — Gene wrote Thursday, mailed Friday morning Oct 24. Calendar consistent.
-
-  Salutation "Dearest Joan;" — standard variant.
-
-  Notable content: (1) **U.S.S. New Orleans LOST IN FOG at sea, reported on national radio** — "Guess you heard the report over the radio about the U.S.S. New Orleans, being lost for two days in a heavy fog at sea." Gene confirms: ship was on a sea-test, fog set in, dropped anchor, waited two days for visibility, just returned to the yard this afternoon. The radio bulletin reached Kentucky and Joan's family heard the report — Gene knows it would worry them. First mainland-news public mention of Gene's ship.
-
-  (2) **A long-distance PHONE CALL is planned for Wednesday Oct 29, 9–10:30 PM Kentucky time** — Gene tells Joan to have his Mother brought up to Joan's house in Stanford for the call, and asks Joan for her "final answer" on the marriage promise then. Gene wants both his mother and Joan on the line before he sails for the Pacific. First long-distance phone call in the archive — and the marriage proposal now has a hard deadline.
-
-  Also: **Departure date now Thursday Oct 30** (slipped from Oct 28 because of the fog delay) — confirms via "Joan we will probably won't leave until next Thursday Oct 30"; Joan apparently asked Gene to wait until she finished nursing school then propose, which Gene rejects ("Why don't you first stop & think how I would feel if you were in my place. Joan I wouldn't ask you to marry me then if you were the only girl in this world tonight"); Gene + Jack Parkhurst putting in for **an East-coast transfer** — would let them come home four or five times a year vs. far Pacific deployment; **Gene's accusation of being led on** — "You been doing everything in the world (I said or really mean about everything) to lead me on for the last two years"; Gene's surrender — "from now on I'm letting nature take it's course"; California stop ahead — "California sunshine will feel awful good agin"; lyrical description of Hawaii — "the Island where the mountains meets the moon of Hawaii"; Joan apparently confused about the calendar ("You said guess the letter wouldn't reach me before I left as I were leaving the 25th of October and it was the 21st of that day. Well I got the letter today & it's only the 23rd of October. Joan, time sure is flying or you or school lessons are getting you upset one").
+  The U.S.S. New Orleans had been all over the national radio. She had gone out for a sea-test, fog had set in, and she had spent two days at anchor in the fog while wire reports went out that she was missing. Joan's family had heard the bulletins in Kentucky. The same letter set up a long-distance phone call for Wednesday night, October 29, with Gene's mother brought up to Joan's house in Stanford so Gene could speak to them both before the ship sailed. He wanted Joan's 'final answer' on the marriage promise on that call.
 
 ---
 

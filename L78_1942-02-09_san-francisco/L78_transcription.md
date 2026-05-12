@@ -15,19 +15,7 @@ signature: "Lots of Love & kisses\nYours Always,\n\"Gene.\""
 postscript: |
   P.S. I [V mom?] [unclear]
 note: |
-  **HOTEL LOMBARD STATIONERY — both envelope and letter pages** are on Hotel Lombard, San Francisco, Geary & Polk letterhead (preprinted red logo with the address line). Hotel Lombard was a mid-century SF hotel on Geary at Polk Street. First appearance of hotel stationery in the archive.
-
-  Postmark "SAN FRANCISCO CALIF FEB 9 2:30 PM 1942 RINCON ANNEX" — mailed from the SF civic post office (Rincon Annex). **NO naval censor stamp** — Gene bypassed the ship's mail clerk again (matches L76 pattern). **Two 3¢ violet Prexy Jefferson stamps** (totaling 6¢) instead of one 6¢ airmail — matches L71 multi-stamp pattern. "Via Air Mail" handwritten. Upper-right corner of envelope torn.
-
-  Inside date "Sunday Nite, Feb. 8 / San Francisco / Calif." — Gene wrote Sunday night (Feb 8 was Sunday, calendar consistent), mailed Monday morning Feb 9.
-
-  Salutation "My Dearest Joan;" — return to the "My" prefix form.
-
-  Notable content: (1) **GENE BOUGHT AN ENGAGEMENT RING IN SAN FRANCISCO — $95 with diamonds** — "Joan I got the ring you said about getting you yesterday. It's really a lovely one and has some swell looking diamonds in it. You never said whether you would wear it or not. So I don't know if I should send it. It's not a cheap one at all. I had to pay $95 for it and I know you really be proud of it. I haven't had a chance to mail it yet but I'm going to the first chance I have." First concrete RING acquisition in the archive (Gene asked for Joan's size in L74 three weeks ago). $95 in 1942 ≈ $1,800 in 2024 dollars — a serious sum for a Fireman First Class on $55/month pay.
-
-  (2) **Combat premonition — "I have a feeling we going to do a lot more fighting before long"** — paired with "There will be times when I won't be able to write." Written Feb 8, four months before the Battle of Midway (June 4, 1942) where the U.S.S. New Orleans escorted the carriers. Gene anticipates the coming Pacific campaign.
-
-  Also: **Second long-distance phone call to Joan** — "How you like the telephone call? I sorry to have been so late about calling, but it took me over an hour to get it through. I try to call you all night before but weren't able to get you." Second phone call in the archive after the L66 pre-Pearl Harbor call; **Ship's planned departure delayed (again)** — "We were suppose to leave yesterday and did, but something went a-wrong agin. So we came back agin"; **Letter from Dad** received — first time "Dad" is referenced by that exact term (previously "Mother / folks at home"); **Carroll possibly rejoining the navy** — Dad's letter suggests this; Gene's response — "I hate to see him come back, but if he does I sure want him to get on this ship. It's a lot better than a sub-marine and really a fighting [navy?]"; **Hotel Lombard top-floor SF view** — "I'm on the top floor and sure is a pretty city below with all the lights. I think this is the prettiest city at night I ever have seen. A person can't help from falling in love with it"; "Write soon!" handwritten at top of page 1 as a header note.
+  Top floor of the Hotel Lombard, San Francisco, two in the morning. Gene had been pricing rings all day. He had bought one, ninety-five dollars with diamonds, and he had it in his pocket but had not mailed it yet. 'I have a feeling we going to do a lot more fighting before long.' The ship's planned departure had been delayed again. He couldn't say where it was going.
 
 ---
 

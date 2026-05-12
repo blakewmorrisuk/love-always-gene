@@ -16,15 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan;"
 signature: "With Love\nalways\nGene"
 note: |
-  Envelope postmark partially legible — "[Bremerton?] OCT 17 1941 10AM"; single 6¢ Air Mail eagle stamp; "Air Mail" handwritten. Envelope back has tape repair and faint ink bleed-through, no readable return address.
-
-  Inside date "Thursday Nite Oct 16" — Gene wrote Thurs. Oct 16 and the letter was postmarked Fri. Oct 17. Postmark used as canonical date.
-
-  Notable content: (1) "It's only be a matter of time now until we'll be in the war" followed by Gene's fatalist coda — "there's only one way for a guy to died and he got to go some time or other. So why worry about it." Mortality acceptance, paired with operational news: sea trial Sunday Oct 19 (seven hours), back to yard until Oct 21, then down the coast via San Francisco / Los Angeles / Long Beach, then back to Hawaii.
-
-  (2) **Gene's FINAL withdrawal of the marriage proposal** — "I have been trying for three months now and begging you to promise. I'm not any better off than when I started. So I promise I won't ask you again." Caps the arc: L52 proposal → L55 first withdrawal → L57 re-ask → L59 third request → L60 ultimatum with date ("June, 1943") → L61 final withdrawal.
-
-  Also: Jack Parkhurst says he is getting married next year — ironic juxtaposition with Gene's own withdrawal; Gene revises his pay-home plan from $40/month (L56) to $30/month; mother worrying about Gene in the navy; Gene comments on a "southern picture" Joan saw with a girl who "had the southern talk."
+  The final withdrawal. 'I have been trying for three months now and begging you to promise. I'm not any better off than when I started. So I promise I won't ask you again.' Jack Parkhurst, hearing all of this, had decided he himself would get married next year if he could get the leave. The ship was about to head for Honolulu via San Francisco, Los Angeles, and Long Beach.
 
 ---
 

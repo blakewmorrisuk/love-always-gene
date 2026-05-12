@@ -18,15 +18,7 @@ signature: "Loads of Love & Kisses\nAlways Yours, \"Gene\""
 postscript: |
   P.S. (Excuse writting)
 note: |
-  **Envelope stationery is the BREMERTON BRANCH NAVY Y.M.C.A. illustrated envelope** — preprinted "BREMERTON BRANCH / NAVY Y.M.C.A. / BREMERTON, WASHINGTON" return-address block with a small ink-drawing of the YMCA building. First time this envelope appears in the archive (compare L44 envelope, which had a Pearl Harbor Y.M.C.A. body letterhead but a plain envelope).
-
-  Postmark "BREMERTON OCT 13 2 AM 1941 WASH." (Bremerton civic, late-night cancel — Gene mailed late Sunday or it sat overnight); single 6¢ Air Mail eagle stamp; "Air Mail" handwritten. Envelope back blank.
-
-  Inside date "Sunday Oct. 12" matches calendar (Oct 12, 1941 was Sunday). Postmark Oct 13 (Monday 2 AM) = canonical.
-
-  Notable content: Gene's bus-ride-home-from-leave reflection — "That night I got on the bus I thought that I were leaving everything in life behind then. All I did was set in my seat until I got in Chicago and just looked out of the window not really seeing anything at all." This bookends the L47 Chicago postcard sent that same trip; here Gene fills in what the trip felt like from inside.
-
-  Also: brother Thomas in Detroit ("kindly surprise me hearing from him" — Thomas wrote, lonely since Carroll left); Gene and Jack Parkhurst spending Sunday loafing in Bremerton town, Gene writing across the YMCA table from Parkhurst (who's writing to his own girlfriend); Gene plans to make Parkhurst attend church that night ("It might take a little time but I will make him finally quit drinking"); third re-request for the marriage promise ("I would feel a lot better though if you would make me that promise Joan").
+  Sunday afternoon at the Bremerton YMCA, Gene and Jack Parkhurst across the table from each other writing letters to their girls. 'That night I got on the bus I thought that I were leaving everything in life behind then. All I did was set in my seat until I got in Chicago and just looked out of the window not really seeing anything at all.' He asked Joan to make the promise a third time.
 
 ---
 

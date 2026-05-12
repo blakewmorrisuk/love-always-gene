@@ -15,15 +15,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Always,\nEddie—\"Gene\""
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS APR 15 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Air Mail" handwritten. Plain envelope (torn at top); envelope back blank.
-
-  Inside date "April 12, 1941" — Gene wrote on Sat. Apr 12 and the letter was postmarked Tue. Apr 15. Postmark used as canonical date; Gene's inside date preserved verbatim. Source folder skips IMG_9582 (not part of this letter).
-
-  Notable content: (1) the ship is in port for "a little repair work done getting it in better shape for war. Its only around the corner now" — concrete evidence the U.S.S. New Orleans is being prepped for combat in April 1941, 8 months before Pearl Harbor;
-
-  (2) Gene's first explicit acknowledgment that he may not survive the war — "If war does break loose I won't see you until it is over, that is if I am still kicking." Continues the L33 ("five months before war") arc into personal mortality. Also: the ship plans to return to the West Coast at the end of May 1941 (continuing the deployment/leave thread from L26–L34); brother Thomas and sister Martha home with Carroll for a weekend.
-
-  Signature is unusual — Gene signs "Eddie — 'Gene'" rather than the typical "Gene." "Eddie" reading is a best-guess from the looped cursive (could be a self-nickname, a passing inside joke, or a stylized "Edd--" flourish); the quoted "Gene" is clear.
+  The ship had spent a week in port being prepared, in Gene's words, 'for war. Its only around the corner now.' He was eight months out from Pearl Harbor, and for the first time in a letter he wrote down the possibility that he might not survive the thing he was being trained for. 'If war does break loose I won't see you until it is over, that is if I am still kicking.'
 
 ---
 

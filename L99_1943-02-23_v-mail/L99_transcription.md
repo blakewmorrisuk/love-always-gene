@@ -17,21 +17,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan;"
 signature: "[Gene]"
 note: |
-  Second V-MAIL in the archive. Same "WAR & NAVY DEPARTMENTS / V-MAIL SERVICE / OFFICIAL BUSINESS" preprinted franking as L98. Postmark "NEW YORK, N.Y. FEB 23 1 AM 1943 GRAND CENTRAL ANNEX." Sender block: "EUGENE LANKFORD / U.S.S. New Orleans / % Fleet Postmaster / San Francisco, Calif. / F Division." Recipient block: "Miss Joan Northcutt / Stanford, Kentucky / Route 1." V-Mail control number partial: "NY 11[??]". "PASSED BY NAVAL CENSOR" stamp visible.
-
-  **Inside date "Sunday, Feb. 14, 1943" — VALENTINE'S DAY.** Gene wrote on Valentine's Day, the V-Mail microfilm processed and printed about 9 days later at NY Grand Central Annex (Feb 23, 1 AM postmark).
-
-  Salutation "Dearest Joan;" — semicolon variant.
-
-  Letter content fills the V-Mail form densely — Gene's handwriting compressed to fit the limited space. **The handwriting is difficult to read** due to ink density and the small form size; transcription contains several [unclear] markers and approximate readings.
-
-  **Historical context:** Feb 14, 1943 — the U.S.S. New Orleans was still in Sydney at Cockatoo Island Dockyard, near the end of the emergency bow-replacement work (the ship returned to San Francisco / Puget Sound for full reconstruction in March 1943). Gene wrote this Valentine's V-Mail from Sydney.
-
-  Notable content: (1) **JOAN'S PICTURE FINALLY ARRIVED** — "Joan, I bet it has been an awfully long time since I last wrote you a letter. I have received a lot of nice letters the past weeks, but still I couldn't bring myself to write again. Why? I got your very delightful picture several days ago." After Gene's L70 request for the picture (Nov 23, 1941) — almost 15 months ago — Joan's picture has finally reached the ship.
-
-  (2) **"Maybe after the war is over things [will] get back"** — partial reading of the post-war hope line near the end of the letter. Gene's "after the war things will get back" framing is paired with relational reflection that is hard to fully read but suggests Gene is reaffirming or hedging the future plans. The line is partially obscured by ink density; flag for Blake to re-read directly.
-
-  Also: **Valentine's Day** — Gene's letter dated 2/14/1943 — Gene's only documented Valentine's Day letter; **Brief writing** — V-Mail size constraint; **"Don't planning on the everything home"** — possibly "don't plan on everything home" or similar (unclear reading); **closing "Bye / Gene"** — abbreviated signature for V-Mail form.
+  Valentine's Day, 1943, on a V-Mail form so dense Gene's handwriting can barely be read in the microfilm. Joan's picture had finally reached the ship after fifteen months in transit. He wrote, half-readably, about whether the two of them would still know each other when he came home. 'Maybe after the war is over things [will] get back.'
 
 ---
 

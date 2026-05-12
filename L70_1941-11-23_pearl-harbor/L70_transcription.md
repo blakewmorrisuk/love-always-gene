@@ -16,17 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Darling,"
 signature: "Lots & Lots of Love & kisses\nYours, \"Gene\""
 note: |
-  Envelope is the red+blue "CORREO AEREO / VIA AIR MAIL" diagonal-stripe airmail envelope; 6¢ red Transport Plane Air Mail stamp. Postmark "U.S.S. NOV 23 8 PM 1941 NEW ORLEANS" (ship cancel, Sunday evening). "VIA AIR MAIL" stamped. **Return address now handwritten in Gene's hand on the front of the envelope, upper-left** (first envelope where the return address moves to the front — pattern that continues in subsequent Pearl Harbor mail): "[E—] Lankford / U.S.S. New Orleans / % Fleet Post Office / Pearl Harbor, T.H. / F Division." First initial(s) of Gene's surname-prefix not fully legible (looks like "Eu—" or "Ea—" — possibly the start of "Eugene"). Envelope back blank.
-
-  Inside date is NOT on page 1 — Gene wrote the address block but skipped the date line. Postmark Sun Nov 23 used as canonical date.
-
-  Salutation "Dearest Darling," — NEW variant — first letter without "Joan" in the salutation; uses "Darling" as the term of address instead.
-
-  Notable content: (1) **"Looks like I'm going to have to spent another Christmas here in, Honolulu"** — Gene resigned to spending the holiday on station. The U.S.S. New Orleans will be at Pearl Harbor for Dec 7 attack, exactly 14 days from this letter. The "another Christmas here" plan reads ominously in hindsight.
-
-  (2) **"We aren't going to let the Navy stand between us. Are we?"** — Gene reaffirms the L66 promise in the post-acceptance phase, framing the navy enlistment as the only obstacle to marriage. First "we" pledge after Joan's yes.
-
-  Also: **Birthday present from sister Martha arrived** — Gene's birthday is in November (specific date not in letter, but the present arrived recently); **Gene lost the lock of Joan's hair** Joan gave him before he left for Bremerton — "you know that last of hair that you gave me just before I left. Well I lost it some place or other while we were in the navy yard. & would you cart to send me another curl" — Gene asks for a replacement curl AND a small picture; says he still has the photo Joan sent him a year ago; **Thanksgiving 1941 aboard the ship** — "It was a big holiday for the Navy & sure had a awful nice dinner aboard the ship. Just about anything a person wanted to eat" (Thursday Nov 20, 1941); **expected $10 navy pay raise** with back-pay to August — Gene expects to draw $55/month soon; **Gene's current duty**: running the motor boat — "I'm still running the motor boat and not much work to that. Just riding around is about all"; mail-lag from family — no word from Thomas or Carroll since Bremerton; Gene anticipates US war entry — "looks like everybody will have to help win this war before it's over with."
+  Two weeks before Pearl Harbor. Gene had spent Thanksgiving on the ship and was already resigned to spending Christmas in Honolulu. He asked Joan for a small picture and another lock of her hair to replace the one he had lost in the Bremerton yard. The Navy was about to give everyone a ten-dollar raise in monthly pay.
 
 ---
 

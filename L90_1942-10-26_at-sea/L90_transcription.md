@@ -14,17 +14,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Lots of Love & K[isses]\nAlways \"Gene\"\n(R.E. Lankford)"
 note: |
-  Envelope is a red-white-blue diagonal striped airmail envelope; postmark "U.S. NAVY OCT 26 1942" — ship cancel. Single 6¢ red Transport Plane Air Mail stamp. "VIA AIR MAIL" stamped + "Sailors Mail" handwritten. "PASSED BY NAVAL CENSOR" stamp lower-left with censor signature. **Return address handwritten upper-left: "Eugene Lankford, Sea 2/c, U.S.S. New Orleans"** — Gene's RATE has changed from F-1/c (Fireman First Class, L77) to **Sea 2/c (Seaman Second Class)**. This is a step down in pay grade and suggests Gene moved from Engineering (F Division) to Deck division — likely a divisional reassignment during the Pacific deployment; verify with Blake. (Alternative reading: "Sea 1/c" — Seaman First Class — but the digit looks more like a 2.)
-
-  Inside date NOT on page 1 — Gene skipped the date. Postmark Oct 26 used as canonical (Monday).
-
-  Salutation "Dearest Joan," — comma variant.
-
-  Notable content: (1) **"I'm tired of the Japs and sure like to be at home again"** — Gene's bluntest war-fatigue statement; comes after a joke about preferring "to face the Japs" rather than face cold weather, then walked back: "I'm just kidding Darling. I'm tired of the Japs and sure like to be at home again. It's really seems a long time since I left you that night." Five weeks before the Tassafaronga torpedo hit.
-
-  (2) **"In a way the same old Gene you use to know. Do you still remember him?"** — Gene wonders whether Joan still remembers the pre-war him. Paired with the L89 "see if they still know their son" line about his picture, this is the second time in a week Gene worries his combat-changed self is unrecognizable. Joan's role as the keeper of pre-war Gene becomes explicit.
-
-  Also: **Gene's RATE change to Sea 2/c** — confirmed in envelope return; **"The very biggest mistake you ever made was when we got acquainted"** — Gene's self-deprecating affection; **"Joan, your girl friend description sounds very interesting"** — Joan apparently set up a friend for Gene to write to; Gene's wry response: "Might pick the wrong sweet, if I didn't, you"; **Gene's CONTRADICTORY Carroll-news** — "Guess Carroll's in this outfit now" but L89 just said Carroll stayed out of the navy — Gene's source is family letters, possibly out of date; **Gene applied for an exchange of duty** — "I have tried for my exchange of duty myself"; **Gene's photos taken ashore** — "did you get the ones I taken myself. I just wanted to show you I could handle a camera taken I'm sober"; **Censor mockery** — closing line: "The censor probably raise hell about it I guess. He would to it if I had to read the thing"; **Snow longing** — "I can't hardly realize what it be like to see snow on the ground. Probably be afraid of the stuff if it didn't kill me. I rather face the Japs."
+  Gene's rate on the envelope had changed from Fireman First Class to Seaman Second Class, a step down in pay grade and a sign that he had been moved out of the Engineering division. 'In a way the same old Gene you use to know. Do you still remember him?' Five weeks before Tassafaronga, Gene was wondering whether Joan still recognized the man she had said yes to.
 
 ---
 

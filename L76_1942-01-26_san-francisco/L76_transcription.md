@@ -17,19 +17,7 @@ postscript: |
   P.S. Excuse this writting body. I writting in bed sometime.
   He, Gene.
 note: |
-  **Mailed from SAN FRANCISCO, CALIFORNIA — ship is back on the mainland.** Postmark "SAN FRANCISCO CALIF JAN 26 1 PM 1942" with the wartime "BUY DEFENSE SAVINGS BONDS AND STAMPS" slogan in the cancellation box. **NO naval censor stamp** — Gene mailed this letter ashore at a regular SF post office, bypassing the ship's mail clerk and the standard naval censorship. Plain envelope, single 6¢ red Transport Plane Air Mail stamp; "Via Air Mail" handwritten. Pencil mark "M/79" or similar on the left side (possibly a postal handling code). Envelope is missing from the image set as a separate "back" — only front imaged.
-
-  Inside date "San Francisco / January 25." — Gene wrote Sunday afternoon, mailed Monday morning. Calendar consistent.
-
-  Salutation "Dearest Joan," — comma variant. Returning to warmer tone.
-
-  **Important location/operational note:** The U.S.S. New Orleans was in San Francisco Bay (Mare Island) in late January 1942 after returning from Hawaii for repairs/refit following the Pearl Harbor attack (the ship took partial damage in the Dec 7 raid). Gene and Jack Parkhurst are on weekend liberty in SF.
-
-  Notable content: (1) **"if something does happen to me, just try to forget you ever known me quick as possible"** — Gene's first explicit "if I die" instruction to Joan in the archive. He continues: "I don't want any one thinking about me & spending their lives after I'm gone." Coming six weeks after Pearl Harbor and four months before the Coral Sea / Midway battles, this is Gene preparing Joan emotionally for the possibility of his death.
-
-  (2) **"Things are looking awfully bad now & a guy never knows whether he will be here tomorrow … I'm not afraid to died. Anyway I think the Japs going have a hard time killing me"** — Gene's blunt war assessment paired with his defiance. January 1942 was the low point of US fortunes in the Pacific war; Gene's "looking awfully bad" reflects what crew aboard a battle-damaged cruiser would have understood.
-
-  Also: **Gene encloses a $20 BILL for Joan** to buy her own present — "Guess you are wondering what the twenty dollar bill is for. Well this is the reason. I have been searching all over town trying to find you a present" — couldn't find clothing without size, Parkhurst vetoed a watch ("she has a watch & that was out"); $58 spent the night before between them ("All I know is we had fifty-eight dollars less this morning") — heavy SF liberty spending; **Joan's school picture finally arrived** — sent Dec 1, received Friday Jan 23 (~ 7 weeks transit) — Gene loves it ("I wouldn't take 5 fortunes for it"); Gene + Jack at a "awfully swell hotel" with three rooms in the apartment for the weekend; advice: "anything but don't get drunk"; PS apology for writing in bed.
+  Mailed from a regular post office in San Francisco on a weekend liberty, without the ship's censor seeing it. Gene and Parkhurst had a hotel suite with three rooms. Gene enclosed a twenty-dollar bill and asked Joan to pick her own present. The other half of the letter was the first 'if I die' instruction in the archive. 'If something does happen to me, just try to forget you ever known me quick as possible. I don't want any one thinking about me & spending their lives after I'm gone.'
 
 ---
 

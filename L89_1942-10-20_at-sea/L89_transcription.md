@@ -14,17 +14,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Loads of Love\nAlways yours \"Gene\"\n(R.E. Lankford)"
 note: |
-  Envelope is a red-white-blue diagonal striped airmail envelope; postmark "U.S. NAVY OCT 20 1942" — ship cancel. Single 6¢ red Transport Plane Air Mail stamp. **"POSTAGE DUE 6 CENTS"** handwritten in red and **two 3¢ red POSTAGE DUE stamps** affixed by the receiving post office — first postage-due envelope in the archive. Joan paid 6¢ on receipt (Gene's stamp was apparently insufficient for the air mail rate). "VIA AIR MAIL" stamped + "Sailors Mail" handwritten. "PASSED BY NAVAL CENSOR" stamp lower-left with censor signature. Return address handwritten upper-left: "Eugene Lankford / U.S.S. New Orleans."
-
-  Inside date NOT on page 1 — Gene skipped the date. Postmark Oct 20 used as canonical (Tuesday).
-
-  Salutation "Dearest Joan," — comma variant.
-
-  Notable content: (1) **Combat fatigue: "Let's forget the war. I'm sick of it without writting about it"** — "There's going to be a pay off one of these days. Let's forget the war. I'm sick of it without writting about it." Gene's most direct combat-fatigue statement: he doesn't even want to acknowledge the war in his letters anymore. The "pay off" line is foreboding — six weeks later (Nov 30, 1942) the ship would lose her bow at the **Battle of Tassafaronga**.
-
-  (2) **Gene asks if his family will still recognize him** — "Tell the folks take a look at the picture and see if they still know their son." Combat has changed Gene's appearance enough that he openly wonders whether his parents will recognize the picture he sent.
-
-  Also: **3-MONTH mail lag** — "I got a letter from you yesterday which you wrote in July. A little late if you ask me" (received October 19, written July, so 3+ months in transit); **Emotional swings/possible depression** — "There's days & nights when I think I'm home sick and times when I say to my self 'there you not home sick at all. So when I get in that certain mood there's hardly any thing I care about. Guess in a way it's best not to look to far ahead in the position I'm in. Joan I know you can't understand why I feel that way I can see myself why you wouldn't, and don't try to" — Gene gently warns Joan against trying to understand combat-zone mental states; **Jeannie teaching school at McKinney** — new name (possibly Joan's cousin/friend); **Letters from Dad twice recently** with photos enclosed; **Carroll STAYED out of the navy** — back to Detroit work — Gene mixed feelings ("I'm glad in a way but still I'm not. You can't hardly blame him for staying out as long as possible. Some people gets all the luck"); **Gene took pictures ashore with a Kodak** — sending some to Joan ("The other fellows are some of my friends … may be they make your scrap book, I hope").
+  A letter Joan had written him in July had finally reached him in October. Gene read it and was 'kindly blue & home sick' for the rest of the page. He was sick of the war and didn't want to write about it anymore. 'There's going to be a pay off one of these days.' He had also taken candid photos ashore with a Kodak and mailed some to Joan. 'Tell the folks take a look at the picture and see if they still know their son.'
 
 ---
 

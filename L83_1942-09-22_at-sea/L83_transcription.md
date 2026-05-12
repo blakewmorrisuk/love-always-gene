@@ -16,21 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Darling,"
 signature: "Love & Kisses\nAlways \"Gene\"\n(R.E. Lankford)"
 note: |
-  Envelope plain wartime stationery; postmark "U.S. NAVY SEP 22 1942" — ship cancel. Single 6¢ red Transport Plane Air Mail stamp. "Air Mail" handwritten + **"Sailors Mail"** large handwritten on the envelope (Gene wrote it himself this time, rather than the postal stamp version). "PASSED BY NAVAL CENSOR" stamp upper-left. Address line includes "(U.S.A.)" — wartime convention.
-
-  Inside date NOT on page 1 — Gene skipped the date. Postmark Sep 22 used as canonical (Tuesday).
-
-  Return address inside page 1: "U.S.S. New Orleans / % Fleet Postmaster / San Francisco, Calif. / F Division" — matches L81/L82.
-
-  Salutation "Dearest Darling," — variant (matches L70).
-
-  **Historical context:** Sep 22, 1942 — Guadalcanal campaign in heavy combat (Battle of Edson's Ridge had just ended Sep 14, 1942 — Marines repulsed a Japanese assault). The U.S.S. New Orleans operating in the South Pacific supporting Guadalcanal. Eight weeks from the Battle of Tassafaronga (Nov 30, 1942) where the ship would lose her bow.
-
-  Notable content: (1) **Gene self-blames for relationship trouble during last leave** — "You know it's really has been a long time now since we last been together. Would surely be nice to see everybody. We got along terrible last time I was home. Don't you think so? Guess it was mostly my fault though. Sure hope we can do better the next time." First explicit acknowledgment that Gene's last leave home (late Aug / early Sep 1941 per L48/L49 references) included friction with Joan, and Gene takes responsibility.
-
-  (2) **Gene breaks with brother Carroll** — "It's going to be a long sad day before I ever write him another line. I think last time I heard from him was last January." Carroll-Louise marriage trouble has now caused a Gene-Carroll cutoff; Gene hasn't written Carroll in months and doesn't plan to.
-
-  Also: **Three more letters from Joan** received; **Letter from Martha + letter from Louise Dunagan (Carroll's wife/fiancée)** — Louise just returned from a 2-week vacation in Ohio; **Brother Thomas in the service** — only one letter from him since he enlisted, "Probably to busy with that nurse lately"; **Jim "still in the S.C."** — possible South Carolina station or Signal Corps unit; Gene's wry observation "Bet he doesn't stay away from home very long"; **Joan changed her hairstyle** — Gene's defensive response: "So you have fixed your hair another way. What in the world was wrong with it the other way? It's your hair though and guess you have the right to fix it the way you want to"; Gene hasn't been able to get pictures made yet — will send Joan one when possible; Gene asking for the picture Joan promised; "How did the big fair come out this year! Or did you go?" — Joan's local fair attendance.
+  Three more letters from Joan and one from the woman Carroll was about to leave. Gene mentioned, in his own gentle way, what had gone wrong on his last leave home in late August 1941. 'We got along terrible last time I was home. Don't you think so? Guess it was mostly my fault though. Sure hope we can do better the next time.' He had not heard from his brother Carroll in nine months and didn't expect to.
 
 ---
 

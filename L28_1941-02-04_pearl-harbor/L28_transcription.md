@@ -17,15 +17,7 @@ signature: "Yours forever,\nLove, Gene"
 postscript: |
   P.S.S. I sent that picture and I hope you like it. If you don't you know what to do with it. → You are more than just a friend to Jo, even though that's only what I am to you.
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS FEB 4 A.M. 1941" with two 3¢ Jefferson stamps, "Via Air Mail" stamped + "Air Mail" handwritten. Inside date matches the postmark ("Feb. 4, 1941").
-
-  Envelope back has Gene's block-letter return address: "IF NOT DELIVERED IN 10 DAYS RETURN TO / R.E. Lankford, U.S.S. New Orleans / Pearl Harbor, Honolulu, T.H. / F Division."
-
-  Stationery is the Hawaii illustrated airmail letterhead (same series as L27): banner with six color vignettes (Hawaiian Sunset, Aloha Tower, Waikiki Beach and Diamond Head, Kamehameha Statue, Hula Girl, and a sixth thatched-hut/grass-skirt scene) beneath a rainbow arch, with "HAWAII" in red caps.
-
-  Pages 1 & 2 share the HAWAII letterhead (front/back of the same bifold sheet — Gene wrote "(Back of first page)" at the bottom of page 2, matching the L26 pattern); page 3 is a continuation sheet without the letterhead, with a handwritten "3" at the top.
-
-  Notable content: a three-day camping trip to Nanakuli Beach (~40 mi from Pearl Harbor on Oahu's leeward coast) — a recreational interlude, not a ship movement. The body is dominated by Gene's anxiety that Joan has stopped writing (only one letter received since Dec. 18) — affectionate/lovesick rather than war-relevant, so no [[]] emphasis applied.
+  Six weeks since Joan's last letter. Most of L28 is Gene anxious that she might be losing interest, mixed in with a description of a three-day camping trip to Nanakuli Beach on Oahu's leeward coast, forty miles from the ship and feeling like deliverance. 'I'd give anything I had just to see you tonight.'
 
 ---
 

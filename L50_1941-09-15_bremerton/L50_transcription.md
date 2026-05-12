@@ -16,15 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "From the one who really cares\nGene"
 note: |
-  Envelope postmark "BREMERTON SEP 15 10AM 1941 WASH." with single 6¢ red Air Mail stamp (the air-mail rate, used once before in this archive at L48). "Air Mail" handwritten. Envelope torn at top; envelope back blank.
-
-  Inside date "Sunday Sept. 14" — Gene wrote on Sun. Sep 14 and the letter was postmarked Mon. Sep 15. Postmark used as canonical date.
-
-  Notable content: (1) Gene's most direct U.S. entry prediction yet — "Any day now we will be right in there throwing shells & bombs at them";
-
-  (2) "Just a lot of men killed and this country in terrible conditions, only for that fool in Germany!" — Gene names Hitler ("that fool in Germany") and acknowledges the human cost. Combined with the L33 → L35 → L36 → L41 arc, this is Gene's most concrete vision of what U.S. entry will look like operationally and humanly.
-
-  Also: Gene reflects again on his enlistment regret — "I should had finished school and maybe I wouldn't have joined the navy"; promises to give up drinking ("I also will never take another drink. I think I told you that when I was home"); notes thousands of workers in the Bremerton yard.
+  'Any day now we will be right in there throwing shells & bombs at them.' Gene named Hitler ('that fool in Germany') for the first time and described, plainly, what U.S. entry would cost: 'Just a lot of men killed and this country in terrible conditions.' Bremerton was cold and loud, with thousands of men working in the Puget Sound yard. He had stopped drinking.
 
 ---
 

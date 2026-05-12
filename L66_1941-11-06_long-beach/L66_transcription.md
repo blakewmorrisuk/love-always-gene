@@ -22,17 +22,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "My Dearest Joan;"
 signature: "With All my love & K[isses]\nYours\n\"Gene\""
 note: |
-  **First letter mailed from CALIFORNIA — and the last letter from the continental United States before Pearl Harbor.** Envelope is the new red+blue "CORREO AEREO / VIA AIR MAIL" diagonal-stripe airmail envelope (first appearance — replaces the plain envelope with handwritten "Air Mail"); small airplane icon between the stripes. Postmark "LONG BEACH NOV 6 4 PM 1941 CALIF." (civic postmark, not the ship's onboard cancel — mail dropped at the Long Beach post office before the ship sailed for Hawaii). The lower-right corner of the envelope is torn off, partially obscuring the address and removing most of the stamp (a red stamp fragment remains). Envelope back blank.
-
-  Inside date "Thursday, Nov. 6" — calendar consistent (Nov 6, 1941 was Thursday). Letter written in the morning before the ship sailed.
-
-  Salutation "My Dearest Joan;" — variant with "My" prefix; first appearance since L58.
-
-  Notable content: (1) **THE MARRIAGE PROMISE IS MADE** — "Darling, I'm so happy this morning & it's an sin because I'm going to Honolulu, either. I'm so glad you finally decided to make me that promise that I don't hardly know what to do with myself." After L52's proposal, the L55/L57/L61/L63/L64 oscillations, and the canceled-then-rescheduled phone call in L65, Joan has agreed. Gene mentions Joan's letter is expected to follow him to Hawaii ("If I don't get that letter you said you wrote this morning it probably be waiting in, Honolulu"). The climax of the entire marriage-promise arc, recorded on the morning of the Pacific departure.
-
-  (2) **Last letter from the U.S. — Pearl Harbor address takes effect** — "the mail is about to leave the ship & I want to get this ashore before we get under-way. I promise to write you a real long letter just as soon as I get to, Hawaii" + the new "Pearl Harbor, T.H." address at the bottom of page 3. The ship is sailing for Hawaii within minutes of this letter being mailed.
-
-  Also: Gene confirms he made a long-distance phone call the previous night — "That telephone call last night I made was for the same reason. I wanted to see if you had changed your mind before I left the states." So the L64/L65 phone-call plan DID happen, just one night earlier (Wed Nov 5) than originally planned. Gene's pledges in the moment of joy: "I going to be the best boy in the navy. I haven't had even one drink since I came back off of leave. I would even stop smoking cigarettes if you say so. I going to do everything I can to keep you from being sorry, you made that promise." First time Gene volunteers to quit smoking; first explicit "best boy" pledge.
+  The last letter from the continental United States before Pearl Harbor. Long Beach, California, the morning of November 6, with the ship about to weigh anchor for Hawaii. The phone call the night before, from somewhere in California to Joan's house in Stanford, was the one where she finally said yes. 'I'm so glad you finally decided to make me that promise that I don't hardly know what to do with myself.' Gene volunteered to give up cigarettes if she wanted; he had already given up everything else. He had five minutes to put the letter into the mail before the ship sailed.
 
 ---
 

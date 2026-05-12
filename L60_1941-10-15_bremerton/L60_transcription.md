@@ -16,15 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan;"
 signature: "Lots of love & kisses,\nAlways Yours, \"Gene\""
 note: |
-  Envelope postmark partially legible — "OCT [14 or 15] 8:30 [AM/PM] 1941"; the source folder name "October 15, 1941" suggests postmark Oct 15 used as canonical date. Single 6¢ Air Mail eagle stamp; "Air Mail" handwritten. Envelope back has tape repair and faint ink bleed-through.
-
-  Inside date "Tuesday Oct. 14" — Gene wrote Tues. Oct 14 and the letter was postmarked the next day.
-
-  Notable content: (1) **Gene proposes a specific wedding month** — "Honey when are you going to make me that promise? It won't even be two years now. Say in June, 1943" — pointing to Joan's graduation timeline (two more years of school). First explicit date Gene has put on the marriage promise;
-
-  (2) **Gene's ultimatum** — "I'm not comming home agin until you do" — escalation from the L57 plea and L59 third request to a refusal to return until she agrees.
-
-  Also: Bremerton Navy Yard amenities described — two movie theaters in the yards, reading rooms, writing rooms, pool tables, bowling alleys, darning, radios; Gene hiking trip with four other sailors through the timber land; Gene's Kentucky-state pride — "Although I wouldn't give Old Kentucky for all the states I been through. There are some awful pretty ones but Kentucky is the prettiest as a whole I think"; sending Joan more stamps "whether you like it or not"; mention of Joan's dog who doesn't like Gene.
+  Gene proposed a specific month for the wedding for the first time: June 1943, after Joan finished school. And then an ultimatum: 'I'm not comming home agin until you do.'
 
 ---
 

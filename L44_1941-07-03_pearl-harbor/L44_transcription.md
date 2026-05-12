@@ -16,19 +16,7 @@ signature: "With Love & kisses\nRaymond E.L."
 postscript: |
   P.S. I made seaman 1st class and getting eighteen ($18) dollars a month more, July 1st. (Pretty good for a change huh?)
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS JUL 3 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope torn at top right. Only one envelope photo (front) — no envelope back was photographed.
-
-  Stationery is the **NAVY YOUNG MEN'S CHRISTIAN ASSOCIATION** Pearl Harbor letterhead, with a printed photo of the YMCA building captioned "OUR HOME AWAY FROM HOME" and the Navy YMCA compass emblem in the upper-left. First time this stationery appears in the archive — Gene is writing ashore at the Navy YMCA in Pearl Harbor (a sailors' club). Four sheets all on this letterhead, numbered 1, 2 (un-numbered top continues from 1), 3, (4) in Gene's hand.
-
-  Inside date "July 3, 1941" matches the postmark.
-
-  Notable content: (1) ship movement — "We are leaving Saturday for some place and I don't know where for sure, but I think for Midway Island agin" — second Midway run if confirmed (first was L25, Jan 1941); Gene also frames this as info he's not supposed to share ("Something else Joan, I shouldn't tell you this but I will");
-
-  (2) mortality reference — "as you know it could be the last time or maybe I should say a long time before I could get back agin" — picks up the L35 "still kicking" thread.
-
-  Also: Gene mentions his "best friend" — both got drunk together when those earlier pictures of Gene were taken; Joan asked about photos with the long-hair girl Gene was apparently with (Gene clarifies it was his best friend, just both drunk); Gene wishes he could be home for July 4th; promotion to Seaman 1st Class confirmed in the P.S. (matches L43's emphasis line).
-
-  Signature uses "Raymond E.L." — Gene's initials with full first name. The "L." at the end of the signature is partly cropped in IMG_9795 but the most natural reading is "Raymond E. L[ankford]"; could alternatively be "Raymond E.J." with "J." as a flourish (less likely given the family name).
+  Going to Midway again the next morning. Gene wrote this from the Navy YMCA at Pearl Harbor, on the floor of the sailors' clubhouse, asking Joan to forgive him for letting his best friend talk him into a drunken photo session he had already had to explain to her once. 'It could be the last time or maybe I should say a long time before I could get back agin.'
 
 ---
 

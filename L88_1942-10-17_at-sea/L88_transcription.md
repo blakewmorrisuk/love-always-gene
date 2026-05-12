@@ -14,17 +14,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan;"
 signature: "Lots of Love & Kisses\nYours \"Gene\"\n(R.E. Lankford)"
 note: |
-  Envelope is a red-white-blue diagonal striped airmail envelope; postmark "U.S. NAVY OCT 17 1942" — ship cancel. Single 6¢ red Transport Plane Air Mail stamp. "VIA AIR MAIL" stamped + "Sailors Mail" handwritten. "PASSED BY NAVAL CENSOR" stamp lower-left. Return address handwritten upper-left: "Eugene Lankford / U.S.S. New Orleans."
-
-  Inside date NOT on page 1 — Gene skipped the date. Postmark Oct 17 used as canonical (Saturday).
-
-  Salutation "Dearest Joan;" — semicolon variant.
-
-  Notable content: (1) **"My wires seems to be crossed all the time and nothing I can do about it"** — Gene's coded language for emotional/mental disorder during sustained combat operations. The "wires crossed" idiom evokes nerves, connection breakdown, mental fog — Gene cannot say "shellshocked" or "combat fatigue" but signals something is wrong. Combined with the L84 week-of-illness and L85 picture-day low mood, this builds a picture of Gene struggling psychologically.
-
-  (2) **"I am a little low in faith Darling, but as you said guess you have enough for us both"** — Gene's most vulnerable admission to Joan. Acknowledges his faith has flagged; relies on Joan's stated reserve. Joan apparently wrote that she had faith enough for both. This is the most intimate Gene-asks-Joan-for-strength moment in the war-year correspondence.
-
-  Also: **Gene's height/weight: 150 lbs**, considers himself short — "Anyway I shan't be the tallest in the family. I know Carroll isn't any longer than I even though he thinks he is" (the height-claim sibling argument continues); **Gene's PICTURE has been MAILED — sent three days ago** — Joan should receive it; **One picture sent has another sailor in it: Don Chapin** — Gene's best friend (the L62 Seattle wedding subject); his wife Betty; the photo is the ONLY copy Gene has and he asks Joan to keep it safe; **Will mail Martha a copy** too; **"There's isn't a girl who can ever yet would take your place"** — commitment phrasing; "Carroll is liking the navy by now. I feel sorry for him if he doesn't."
+  This is one of the hardest letters in the archive. 'You know a person will get wires cross sometimes. Well, my seems to be crossed all the time and nothing I can do about it.' And, later in the same paragraph: 'To tell the truth I am a little low in faith Darling, but as you said guess you have enough for us both.' The picture he had mailed days earlier showed him with his best remaining friend on the ship, Don Chapin, and Don's wife Betty. Six weeks from the night that would take the bow off the New Orleans, Gene was already coming apart in a way he could not say.
 
 ---
 

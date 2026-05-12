@@ -15,13 +15,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Lots & Lots of Love,\nGene"
 note: |
-  Folder named "January 17, 1941" (likely postmark); letter dated "Jan. 16, Thursday" inside (Jan 16, 1941 was indeed a Thursday). Postmark used as canonical date.
-
-  Envelope is the printed-illustrated U.S.S. NEW ORLEANS Air Mail envelope (the ship illustration is part of the stationery).
-
-  Notable content: Gene confirms an 8-day round trip the ship just made to Midway Island (continuation of the voyage anticipated in L25), and floats the possibility that the ship is "going back to the States March 15" with a hoped-for leave in May or June 1941.
-
-  Pages 1 & 2 are front/back of the same sheet (Gene noted "Back of first page" on page 2); page 3 is a separate sheet. The page 1 photo also has Gene's handwritten note "(Send 3 pages)" at the bottom margin — a reminder for the addresser.
+  Back from the Midway run, eight days at sea round trip. The Pacific routine kept producing rumors of where the ship would go next, and Gene had heard the New Orleans might rotate back to the States by mid-March; he was already planning a leave home in May or June. None of it happened. The ship would not see Kentucky again for two and a half years.
 
 ---
 

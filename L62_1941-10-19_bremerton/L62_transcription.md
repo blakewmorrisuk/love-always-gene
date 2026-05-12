@@ -18,17 +18,7 @@ signature: "Loads of Love & Kisses\nYours, \"Gene\""
 postscript: |
   P.S. "They are right now singing 'my Old Kentucky Home,' on the radio. Sure makes me feel awful bad.
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS OCT 19 [3?] PM 1941" (ship cancel — likely an afternoon cancel on Sunday Oct 19); single 6¢ red Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air" handwritten. Envelope back has tape repair and age stains, no return address.
-
-  Inside date "Saturday Nite Oct 18" — Oct 18, 1941 was Saturday, consistent with calendar. Gene wrote Saturday night; mail postmarked Sunday afternoon = canonical date Oct 19.
-
-  **P.S. written at the TOP of page 1** (above the date header) — Gene heard "My Old Kentucky Home" on the radio while writing and added the note in the available top margin. This is the homesickness moment of the letter.
-
-  Notable content: (1) **Homesickness P.S.** — Gene hears "My Old Kentucky Home" on the ship's radio while writing and notes "Sure makes me feel awful bad".
-
-  (2) **Ship's Bremerton departure window narrows** — "Will only be here about ten more days. Sure will hate going back to sea agin" — confirms the ship leaves Bremerton ~Oct 28, then down the coast (San Francisco/LA/Long Beach per L61), then on to Hawaii. This is the fall departure for Pearl Harbor.
-
-  Also: Joan writing less often this week ("Only one letter this week is all I got"); Gene & Jack Parkhurst spending Saturday night at the Craven Center writing letters & waiting for the movie to start; movie reference "Blood & Sand" (1941, Rouben Mamoulian — Tyrone Power, Linda Darnell, Rita Hayworth); evenings spent at the radio or pool table at Craven Center; church plans for Sunday night if Parkhurst will go; **friend Chapin getting married in Seattle "in just a few days"** to a local girl Gene calls "an awful nice looking girl" (note the ironic juxtaposition with L61's Parkhurst-marriage-next-year line and Gene's own withdrawn proposal).
+  Saturday night at Craven Center, Gene and Parkhurst killing time before a movie. Someone on the radio started singing 'My Old Kentucky Home,' and Gene crammed a postscript into the top margin: 'Sure makes me feel awful bad.' Their friend Chapin was getting married to a Seattle girl in a few days. Gene was ten days from sailing for Hawaii again.
 
 ---
 

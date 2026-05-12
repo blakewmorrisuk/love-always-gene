@@ -20,15 +20,7 @@ postscript: |
                                                   Long Beach, Calif.
                                                   F Division
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS JUL 17 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope torn at top right.
-
-  Inside date "July 17, 1941" matches the postmark.
-
-  Notable content: (1) confirms a second Midway run — "We made a trip to Midway Island agin and was gone for eight days" — same 8-day duration as the L25 first trip (Jan 1941). Followed by 6-hour return for fuel/food and another 6-day sortie.
-
-  (2) New stateside-return destination — Long Beach, CA on Jul 24 then Seattle, WA for the yard: "we go from there to Seattle, Wash. where we will go in the yards." This is the FIRST naming of Seattle (Puget Sound) as the yard destination — significant given the handoff brief's note that the New Orleans got a new bow at Puget Sound in 1943 after Tassafaronga. Gene also expects a 30-day leave, possibly home by Aug 3; plans with Joan include the Renfro Valley Country Music Center in Kentucky.
-
-  Also: postscript supplies the new mailing address — `c. U.S.S. New Orleans, Long Beach, Calif., F Division`; Gene reports buying civilian clothes ashore at Pearl Harbor for after-duty wear; Joan apparently liked the "present" Gene sent (could be the L42 second present or new earrings/jewelry — "Most of the girls wears them down here").
+  Eight days at Midway, six hours back in port for fuel, six more days at sea. The ship's stateside-yard destination was now Seattle, not Long Beach, with a brief stop at Long Beach first. Gene had been told he might get thirty days of leave when they docked. If the math held, he'd be in Stanford by August 3. It was the first plan with Joan that actually was going to happen.
 
 ---
 

@@ -16,13 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Loads of Love & kisses\nAlways, \"Gene\""
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS SEP 27 1941" (ship cancel); single 6¢ Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten. Envelope back blank. Source folder name uses "September 27th, 1941" — the only folder in the queue with an ordinal suffix.
-
-  Inside date "Friday Sept. 26" — Gene wrote Fri. Sep 26 and the letter was postmarked Sat. Sep 27. Postmark used as canonical date.
-
-  Notable content: Gene's self-identification — "Guess I'm nothing but a country boy at heart" — a poignant summary of his Bremerton city-vs-country reflection. Captures the tonal note of the letter.
-
-  Also: Gene confirms his self-improvement run — no drinking ("not even beer for the looks of it makes me sick"), church every Sunday and sometimes twice a week; planning to attend the Wash. vs Minn. football game at Seattle the next day (Sept 27, 1941 — historic UW–Minnesota game, Minnesota won 14-6); Joan has been ill in multiple ways (stomach ache, swollen ankle); Bremerton is "around 80 thousand people" with the ship "two hundred yards" from main street; protective jealousy about Joan ("I feel sorry for the boy that even look like he might want to double cross me"); "Highland Heifers" — Gene's playful nickname for the Highland school girls.
+  Going to a Washington State versus Minnesota football game in Seattle on the weekend if he could find someone to swap duty. Going to church on Sunday nights. Watching for the boy who might double-cross him while he was at sea. 'Guess I'm nothing but a country boy at heart.'
 
 ---
 

@@ -17,13 +17,7 @@ signature: "with Love & kisses,\nGene"
 postscript: |
   P.S. You said I know who you were crazy about. I hope so or so I know.
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS JUN 22 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope torn at top.
-
-  Inside date "Sunday June 22" matches the postmark.
-
-  Notable content: Gene's most specific stateside-departure projection yet — "We will leave for the states July 24, and go in the yards about the 1st of August." Replaces the L38 generic "August" with concrete dates.
-
-  Also: Gene plays two baseball games for the F Division (the F Division now has a full team); three new pictures of Gene with a deep tan ("the sun has tanned me so that I'm just about black"); another present bought for Joan to be sent in a day or two; reference to it being "a year since I been home" (matching the L37 "a year and five months since I saw [Martha]" — Gene left for navy training in spring 1940).
+  Late June, with the ship about to head back to the States. Gene gave the most specific departure date he'd given Joan all year: 'We will leave for the states July 24, and go in the yards about the 1st of August.' The F Division had assembled a baseball team and was playing well; Gene had a tan deep enough to startle himself in the new pictures he'd just had taken.
 
 ---
 

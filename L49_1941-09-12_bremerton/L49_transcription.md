@@ -19,13 +19,7 @@ postscript: |
   P.S. Excuse this writting for you know yourself that I never had a pen that would half way write.
                                                           Love, "Gene"
 note: |
-  Envelope postmark "BREMERTON SEP 12 11:30 PM 1941 WASH." with two 3¢ Jefferson stamps and "Air Mail" handwritten (no "VIA AIR MAIL" stamp — different post office than U.S.S. New Orleans's onboard cancel). Envelope back is blank.
-
-  Inside date "Friday Sept. 12" matches the postmark.
-
-  Notable content: Gene's regret continues from L48 — "I have wished a thousand of times that I never joined this navy." The L48 thread about "trying to get out of the navy" deepens here into open regret about the original enlistment decision (cf. L27 where Gene's brother Carroll wrote saying Gene "shouldn't had joined the navy" — Gene now agrees).
-
-  Also: shipmate Jack Parkhurst has gone on leave ("bet that guy will never get back" — Gene suspects desertion or just permanent absence); Gene wonders if Joan is still planning nurse training; asks her to write more often; struggling pen quality apologised for in the P.S.
+  Two days later, still trying to get out of the navy. 'I have wished a thousand of times that I never joined this navy.' Jack Parkhurst had also gone home on leave and Gene was sure he wouldn't come back.
 
 ---
 

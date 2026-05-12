@@ -15,15 +15,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "With all kinds of Love\nYours, \"Gene\"\nRaymond"
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS MAR 30 9-AM 1941" with two 3¢ Jefferson stamps, "Via Air Mail" stamped + "Air Mail" handwritten. Plain envelope, with a tear at the top.
-
-  Envelope back shows fragments of a handwritten return address along the torn top edge ("Pearl Harbor, Honolulu, T.H. / F Division / T. of Hawaii" or similar) — partially lost to the tear.
-
-  Gene wrote the inside-letter date as "March 30, 1940" — a year-typo for 1941 (the postmark, chronological position, and content all place this in March 1941). Postmark used as canonical date; Gene's "1940" preserved verbatim in the body.
-
-  Notable content: Gene's first new-duty mention — promoted to coxswain of a 30-foot motor launch that hauls 26 men (a step up from Mess-cook duty, last referenced in L30). Gene confirms he's now getting the Stanford paper (per the L32 arrangement with Dad). He answers the L29-postscript question about Joan's birthday — "I know its some time in May" — but admits she's never actually told him the exact day. Signs with both nickname and given name ("Gene" / Raymond) — only the third signature variant in the archive after L08 ("Eugene Lankford") and L33 ("Eugene").
-
-  One [[…]] emphasis applied: Gene's confession "Sometime I wish to hell I could forget that I ever saw you" — a heavy line buried mid-paragraph that captures the depth of his longing and the cost of distance. No war-foreshadowing content rises to the bar in this letter (the strongest war-prediction line is in L33 the week before).
+  Promoted to coxswain of one of the ship's thirty-foot motor launches, hauling twenty-six men at a time between cruiser and shore. A step up from mess-cook duty. The line at the bottom of page two, buried in a paragraph about how he gets lonesome, is the one that stayed: 'Sometime I wish to hell I could forget that I ever saw you.'
 
 ---
 

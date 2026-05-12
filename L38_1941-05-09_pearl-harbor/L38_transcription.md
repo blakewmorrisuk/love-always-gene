@@ -17,15 +17,7 @@ signature: "Always with love & kisses\n\"Gene\""
 postscript: |
   P.S. Sure I can read your letters & hope you can do the same with my.
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS MAY 9 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope is torn at the top; envelope back blank, no return address. Source folder skips IMG_9599 (not part of this letter).
-
-  Inside date "May 8, 1941" — Gene wrote on Thurs. May 8, postmarked Fri. May 9. Postmark used as canonical date.
-
-  Notable content: (1) the long-anticipated stateside return is pushed from "this month" (May) to August — "The ship just got orders that we wouldn't go into the yards until August" — collapsing seven months of leave hopes into a single sentence;
-
-  (2) Gene's first reference to convoying duty — "I pretty sure we will get convoying duty before long and you know what that will mean." Atlantic convoy escort by U.S. warships became overt in mid-1941 (the "neutrality patrol" expanded to active escort by April–September 1941); for a Pacific ship to anticipate that work is a clear sign of imminent combat duty.
-
-  Also: Joan has received the radio Gene sent (the "big surprise" of L36); Gene confirms he knows her birthday (cf. L29 P.S. and L34); sister Martha now working in the operating room (her nursing training is finishing).
+  The leave was canceled. The ship's stateside yard return had been pushed from May to August, taking with it Gene's planned trip home. He also worked out, on the page, that the New Orleans was probably about to be assigned to convoy escort duty in the Atlantic, where the U.S. Navy was already shooting at German submarines under a 'neutrality patrol' that fooled no one.
 
 ---
 

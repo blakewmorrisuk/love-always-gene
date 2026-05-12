@@ -11,17 +11,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "(Bye, Gene)"
 note: |
-  **POSTCARD format** — not a letter and not in the brief's status enum (`transcribed | transcribed_draft | envelope_only | christmas_card | telegram`). Marked `transcribed_draft`; Blake may want to add a `postcard` enum value when integrating. Slug "chicago-postcard" follows the L22 "honolulu-telegram" precedent.
-
-  Picture side (L47_p1): color illustration of **Union Station, Chicago** — printed caption on the back panel reads "UNION STATION — Passenger Terminal for the Pennsylvania Ry., C., B. & Q. Ry., C. M. St. P. & P. Ry., and C. & A. Ry., it is one of the largest of railroad stations in the world, representing an investment of 65 million dollars." Card identifier "C 209" lower left, "A C CO. — PRODUCT OF U.S.A." lower-right corner emblem.
-
-  Message side (L47_p2): handwritten message on the left half (runs vertically, was rotated 90° CCW for transcription); postmark "CHICAGO, ILL. SEP 5 6:30 PM 1941" with slogan cancel "BUY DEFENSE SAVINGS BONDS AND S[tamps]"; 1¢ "FOR DEFENSE" Industry-Agriculture stamp (1940 issue, used here as postcard rate); addressed in Gene's hand "Miss Joan Northcutt / Stanford, Kentucky / Route 1." No envelope.
-
-  Context: this falls in the 6-week gap between L46 (Jul 25, 1941 from Pearl Harbor, announcing 30-day leave) and L48 (Sep 10, 1941 from the ship). The postmark places Gene at Chicago's Union Station on Sept 5, 1941, in transit back from his leave home in Stanford, KY to rejoin the U.S.S. New Orleans (still in Seattle for the August yard period at this point, or possibly already heading west).
-
-  Notable content: (1) "I was just about starting to cash my ticket in and though the whole army up" — Gene's heartsick admission that he nearly went AWOL at Chicago Union Station rather than continue back to the ship;
-
-  (2) "If your voice made me feel so good that I will go on to Seattle" — Joan's voice on a long-distance call from Chicago to Stanford gave him the strength to continue. The dating in L47 also establishes that Gene was heading back to Seattle (matching the L45 prediction).
+  A postcard from Chicago Union Station, on Gene's way back to the ship after twenty-six days at home. 'I was just about starting to cash my ticket in and though the whole army up.' He had called Joan long-distance from the station before he wrote this. Her voice was what got him onto the next train to Seattle.
 
 ---
 

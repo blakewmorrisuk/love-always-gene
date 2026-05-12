@@ -14,17 +14,9 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Lots of kisses\nalways\nGene\n(R.E. Lankford)"
 note: |
-  Envelope plain wartime stationery; postmark "U.S. NAVY APR 23 1942" — ship cancel. Single 6¢ red Transport Plane Air Mail stamp; "Air Mail" handwritten multiple times. **PASSED BY NAVAL CENSOR** circular stamp with **censor initials "HBM"** inside the ring (same censor as L77 — likely a recurring assigned censor for Gene's mail). Return address handwritten upper-left: "Eugene Lankford / U.S.S. New Orleans."
+  Two weeks before the New Orleans steamed into the Coral Sea, her first sea battle of the war, Gene was writing under a censorship that had been scrubbing his letters for four months. He couldn't say where he was, where he was going, or that the carrier task force he had been screening was about to fight the first naval battle in history where the opposing fleets never sighted each other. What he could say, between the lines, was that Jack Parkhurst, his closest friend through the Bremerton refit and the San Francisco weekends, had transferred off the ship. The past-tense 'was a swell kid when you got to knowing him' reads as departure, not death; combat was still ten days off.
 
-  Inside date "April 23, 1942" — calendar consistent with postmark same-day.
-
-  Salutation "Dearest Joan," — comma variant.
-
-  Notable content: (1) **JACK PARKHURST HAS GONE** — "Joan, you probably know by now that Jack has gone. We sure did have swell times together. I don't hardly know what to do with myself now. He was a swell kid when you got to knowing him." Parkhurst was Gene's closest navy buddy through the L52–L78 sequence (Bremerton, Long Beach, Mare Island, Hawaii, San Francisco refit, hotel weekends together). The "has gone" + past-tense "was a swell kid" + "when you got to knowing him" pattern reads as TRANSFER OFF THE SHIP rather than death (the U.S.S. New Orleans had not yet entered the Coral Sea battle on April 23). Likely Parkhurst was reassigned (possibly to a Hornet-type transfer as he and Gene discussed in L68) — but the prose is mournful enough to be ambiguous; flag for Blake. End of the Gene-and-Jack arc that has run since L46.
-
-  (2) **The engagement ring has been MAILED** — "Did you get the ring that I sent? Hope you like it. I thought it was an awfully nice one." Gene confirms the L78 ring purchase ($95 with diamonds, San Francisco) has been shipped to Joan. Closing of the ring-acquisition arc from L74 (ring sizing request) → L78 (ring purchased) → L80 (ring mailed).
-
-  Also: **Mail-gap continues** — "You know it's been so long now since I heard from you, that it's more or less like writting to a stranger"; **Brother Thomas in the Army** — "Guess, Thomas is in the Army doing fine"; **Brother Carroll probably back in the Navy** — confirms the L78/L74 Carroll-return-to-navy thread; **Earl mentioned** — "Tell that, Earl not to make a mistake and to stay clear of it all" — Earl is a new family/friend name in the archive, Gene urges him to avoid enlisting; **Martha was sick** but Gene hopes recovered; censorship reference — "there isn't anything that is worth reading I can write. So please excuse the letters, if they seem so short."
+  Eleven weeks earlier in San Francisco, Gene had spent ninety-five dollars on a diamond ring. He confirms here that it's been mailed home. The family arithmetic had also shifted while Gene was at sea: Thomas had enlisted in the Army, Carroll was back in the Navy after a brief discharge, and Gene was telling Joan to warn cousin Earl off the same path.
 
 ---
 

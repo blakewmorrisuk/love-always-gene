@@ -16,17 +16,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "My Dearest Joan;"
 signature: "Lots & Lots of Love & Kisses,\nYours, \"Gene\""
 note: |
-  **FIRST LETTER POSTMARKED FROM PEARL HARBOR after the fall transit.** Envelope is the red+blue "CORREO AEREO / VIA AIR MAIL" diagonal-stripe airmail envelope; 6¢ red Transport Plane Air Mail stamp. Postmark "U.S.S. NEW ORLEANS NOV 18 8:30 AM 1941" (ship cancel). "VIA AIR MAIL" stamped. Upper-right corner of envelope torn. **Envelope back has Gene's handwritten return address on the back flap** ("U.S.S. New Orleans / % Fleet Post Office / Pearl Harbor, T.H. / F Division") — first envelope-back return address in many letters.
-
-  Inside date is not on page 1 — Gene skipped the date line this time. Postmark Nov 18 used as canonical (Tuesday). Letter mentions arriving in Pearl Harbor "last Saturday morning" = Nov 15, 1941 (Saturday). Mail leaves Pearl Harbor only twice a week for the mainland — Gene waited for the Friday outgoing run, dated his letter to land it on the Tuesday ship cancel.
-
-  Salutation "My Dearest Joan;" — fourth consecutive letter with the "My" prefix (L66/L67/L68/L69).
-
-  Notable content: (1) **U.S.S. New Orleans arrived at Pearl Harbor Saturday Nov 15, 1941** — "Joan we arrived in Pearl Harbor last Saturday morning. It just took us little over four days to come across." Four-day transit from Mare Island/SF (departed Mon Nov 10) to Pearl Harbor (arrived Sat Nov 15). **The ship will be moored at the 10/10 dock in Pearl Harbor on the morning of Sunday Dec 7, 1941 — exactly 22 days from this letter's arrival.** First Pearl Harbor postmark and address in the post-Bremerton sequence.
-
-  (2) **Christmas approaching, Gene's foreboding** — "It's sure not going to seem like Christmas agin this year to me. Joan, Xmas isn't far off and I can't figure out what in the world you would want for a present. That's myself & Parkhurst biggest worry right now what in the devil to buy our girl friends for Christmas." Gene's gift-shopping anxiety in the same paragraph as his "won't seem like Christmas" — reads bleakly in hindsight given that Pearl Harbor will be attacked before Christmas.
-
-  Also: Joan's letter (the one with the promise confirmation) arrived the day before yesterday ("Your sweet letter came a day or so ago"); Gene reaffirms the promise — "I'm glad you finally made that sweet promise & going to do everything in my power to keep you from being sorry"; mail from Hawaii to mainland leaves only twice a week, sometimes once; **Joan has a cold** — Gene's macabre joke: "Don't let a little cold Darling to cause you to, kick the bucket, though. What would happen to me if you did. Guess I would just jump over-board & let the sharks eat me. (kidding aside)"; Gene tells Joan NOT to buy him a Christmas present — "If I weren't in the navy it would be different, but as it is I wouldn't have any use for a present"; Joan's dog reappears — "I think a lot of your dog even though he wouldn't claw his feet on my pants. In fact I love everything you have"; closing pledge to escape the navy — "I just wished I could get out of this navy. We won't let that stand between us will we Darling?"
+  First letter from Pearl Harbor after the trip back. Gene had arrived on Saturday morning, November 15. 'It's sure not going to seem like Christmas agin this year to me.' He was trying to think of what to send Joan; he and Parkhurst were both stumped. Twenty-two days from now Japanese planes would come in low over Battleship Row.
 
 ---
 

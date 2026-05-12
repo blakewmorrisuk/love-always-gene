@@ -17,11 +17,7 @@ signature: "With Lots of Love,\nGene"
 postscript: |
   P.S. Have you cut your hair off yet?
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS JUN 26 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope torn at right edge.
-
-  Inside date "June 26, 1941" matches the postmark.
-
-  Notable content: Gene's promotion to Seaman 1st Class — "I made Seaman 1st class and will be rated about August 1st. Pays, eighteen ($18) dollars a month more." A meaningful career milestone, also dovetailing with the planned August yard return. Also reiterates the L42 stateside-departure date ("we are leaving for the states July 24"), notes the gunnery school is "just about finished," confirms Gene is still coxswain of his motor launch ("haven't wrecked it yet"), and dwells on Joan's recent dream about him.
+  Promoted to Seaman 1st Class as of August 1, eighteen dollars more a month. Gunnery school was almost finished. The States were three weeks away.
 
 ---
 

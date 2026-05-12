@@ -14,27 +14,7 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan;"
 signature: "Lots of love & kisses\nAlways \"Gene\"\n(R.E. Lankford)"
 note: |
-  **Queue marked this letter as UNCERTAIN DAY** ("November 11(?), 1942"). **Inferred to be 1942-11-01** based on:
-
-  (1) Postmark "U.S. NAVY NOV 1[?] 1942" — the day digit reads as "1" possibly with a partial "1" or "4" after; clearer as Nov 1 than as Nov 11.
-
-  (2) **Distinct from L94 (Nov 11, 1942)** which has its own folder and matched content; L110 is a different letter.
-
-  (3) Content references: Carroll back in the navy, "this certain girl been giving you the wrong dope" (relates to L93/L94 relationship-tension thread), Tommy in Tacoma — all match late 1942.
-
-  (4) Slots chronologically between L91 (Oct 29) and L92 (Nov 3).
-
-  Envelope is red-white-blue diagonal striped airmail; single 6¢ red Transport Plane Air Mail stamp. "VIA AIR MAIL" stamped + "Sailor's Mail" handwritten. **PASSED BY NAVAL CENSOR** stamp lower-left with red censor signature. Return address handwritten upper-left: "Eugene Lankford, Sea 1c, U.S.S. New Orleans" — matches L91/L94/L95 rate convention.
-
-  Inside date NOT on page 1 — Gene skipped the date. Postmark Nov 1 used as canonical (Sunday, if Nov 1 is correct).
-
-  Salutation "Dearest Joan;" — semicolon variant.
-
-  Notable content: (1) **GENE CROSSED THE EQUATOR — SHELLBACK INITIATION** — "Yes Joan I was initiated the first time I crossed the equator. I got a certificate which I'm sending home in the next day or so. Next time you are around home take a look at it." Traditional naval Shellback ceremony marking a sailor's first equator crossing; Gene received the formal certificate that he's mailing home for safekeeping. The U.S.S. New Orleans's first equatorial crossing of the deployment most likely occurred during the run to Coral Sea (May 1942) or to Guadalcanal (Aug 1942) — likely the Aug 1942 transit. Joan would see the Shellback certificate at the Lankford home.
-
-  (2) **"This certain girl been giving you the wrong dope" + Gene's fidelity defense** — "I'm sorry, Joan this certain girl been giving you the wrong dope. Where ever she's getting it at, that is more than I can see. There's no way for her to find out anymore than you do. I tell you everything it's possible to say, so stop believing things you hear, because this girl who ever she is knows really nothing about what she's talking about. Personally you can tell her I said so myself. Not even one thing she told you is true." Direct response to the L93 (Nov 9) Joan sarcasm and L94 (Nov 11) bitter-between-the-lines tone — someone (a "certain girl") has been spreading rumors to Joan about Gene. Gene's strongest fidelity-defense in the archive.
-
-  Also: **Tommy (Thomas) stationed in TACOMA, WASHINGTON** — Mrs. Lankford sent Gene Tommy's address; Gene was in Tacoma during the Bremerton period (1941); **Carroll back in navy** (per Mother's letter, matches L92/L100 narrative); **Gene's "Go out with whom ever you please. There's no way for me to find out and you don't have to tell me either. You know I wouldn't let you stand in my way in having a little fun"** — Gene's libertine-position permission to Joan (paired with his own fidelity claim).
+  Two days after L91. Nothing of what the next four weeks would do to the ship was visible yet. The notable lines in this one were about peace, not war. Joan had heard a rumor (passed by 'this certain girl' she knew) and Gene wrote her an unusually direct defense. 'I tell you everything it's possible to say, so stop believing things you hear, because this girl who ever she is knows really nothing about what she's talking about.' He also mentioned, in a single sentence, that he had crossed the equator some weeks earlier and been initiated into the order of Shellbacks. The certificate was on its way home.
 
 ---
 
