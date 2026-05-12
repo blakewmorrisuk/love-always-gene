@@ -17,11 +17,14 @@ signature: "With Lots of Love,\nGene"
 postscript: |
   P.S. Have you cut your hair off yet?
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS  JUN 26  9-AM  1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope torn at right edge.
+  Envelope postmark "U.S.S. NEW ORLEANS JUN 26 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope torn at right edge.
+
   Inside date "June 26, 1941" matches the postmark.
+
   Letter pages: page 1 (IMG_9620) is a portrait bifold (top half + bottom half — `sips -r 90` needed); **page 2 (IMG_9621) is a LANDSCAPE bifold spread** (left column + right column, no rotation needed); page 3 (IMG_9622) is a single-page sheet (`sips -r 90` needed). Same mixed-orientation pattern as L42.
-  Notable content (one [[…]] emphasis applied): Gene's promotion to Seaman 1st Class — "I made Seaman 1st class and will be rated about August 1st. Pays, eighteen ($18) dollars a month more." A meaningful career milestone, also dovetailing with the planned August yard return. Also reiterates the L42 stateside-departure date ("we are leaving for the states July 24"), notes the gunnery school is "just about finished," confirms Gene is still coxswain of his motor launch ("haven't wrecked it yet"), and dwells on Joan's recent dream about him.
-  Cursive readings worth a second look: page-2 left column "(You don't [trust?] that?)" — parenthetical reading uncertain; multiple small strikethroughs throughout page 2 (Gene was writing in a rush); page-3 "I thinking [I adore] you all the time" — "adore" reading is firm; "and if we boil it down" on page-2 right column is unusual phrasing for Gene, may be a misread.
+
+  Notable content: Gene's promotion to Seaman 1st Class — "I made Seaman 1st class and will be rated about August 1st. Pays, eighteen ($18) dollars a month more." A meaningful career milestone, also dovetailing with the planned August yard return. Also reiterates the L42 stateside-departure date ("we are leaving for the states July 24"), notes the gunnery school is "just about finished," confirms Gene is still coxswain of his motor launch ("haven't wrecked it yet"), and dwells on Joan's recent dream about him.
+
 ---
 
                                                           U.S.S. New Orleans

@@ -14,20 +14,19 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "With Love & kisses,\nEugene"
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS  MAR 23  9-AM  1941" with two 3¢ Jefferson stamps, "Via Air Mail" stamped + "Air Mail" handwritten. Plain envelope with a tear at the top; envelope back blank, no return address.
+  Envelope postmark "U.S.S. NEW ORLEANS MAR 23 9-AM 1941" with two 3¢ Jefferson stamps, "Via Air Mail" stamped + "Air Mail" handwritten. Plain envelope with a tear at the top; envelope back blank, no return address.
+
   Inside header is unusually short — just "March 23, 1941 / Pearl Harbor, Honolulu, T.H. / F Division" (no U.S.S. New Orleans line). Gene is writing at sea: "we are sending a plane into Pearl Harbor with the mail tomorrow." Location stamp set to "At Sea" rather than Pearl Harbor for this reason.
-  Letter pages are plain stationery, numbered I., (2.), (3.) in Gene's hand.
-  Source photos captured 90° CCW from upright; rotated in place via `sips -r 90` before transcription.
+
   Gene signs this letter "Eugene" rather than the usual "Gene" — only the second time in the archive after L08's envelope return address.
-  Notable content (one [[…]] emphasis applied): the most explicit war-foreshadowing in the archive so far — Gene's flat prediction "I will give the United States five months before we will be right in the middle of war." Written ~8.5 months before Pearl Harbor; Gene's five-month horizon (≈late August 1941) misses the actual date but the certainty of imminent war is striking. Also: Gene's first wartime self-reflection about staying in the navy ("I'm in a pretty place to be now but I guess I can take it"); brother Earl's high-school progress; a four-day-in / ten-days-out tempo of harbor returns.
-  Cursive readings worth a second look: the strikethrough on page 2 around the basketball line ("if some[strikethrough: thing happen?] that they did" — Gene's struck word(s) unclear); "bring this [strikethrough] letter to a close" on page 3 (Gene likely struck a repeated "is"); "Holyclaw" (Stanford acquaintance — name spelling preserved as written).
+
+  Notable content: the most explicit war-foreshadowing in the archive so far — Gene's flat prediction "I will give the United States five months before we will be right in the middle of war." Written ~8.5 months before Pearl Harbor; Gene's five-month horizon (≈late August 1941) misses the actual date but the certainty of imminent war is striking. Also: Gene's first wartime self-reflection about staying in the navy ("I'm in a pretty place to be now but I guess I can take it"); brother Earl's high-school progress; a four-day-in / ten-days-out tempo of harbor returns.
+
 ---
 
 March 23, 1941
                                                           Pearl Harbor, Honolulu, T.H.
                                                           F Division
-
-I.
 
 Dearest Joan,
 

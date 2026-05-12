@@ -16,13 +16,14 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "From the one who really cares\nGene"
 note: |
-  Envelope postmark "BREMERTON  SEP 15  10AM  1941  WASH." with single 6¢ red Air Mail stamp (the air-mail rate, used once before in this archive at L48). "Air Mail" handwritten. Envelope torn at top; envelope back blank.
+  Envelope postmark "BREMERTON SEP 15 10AM 1941 WASH." with single 6¢ red Air Mail stamp (the air-mail rate, used once before in this archive at L48). "Air Mail" handwritten. Envelope torn at top; envelope back blank.
+
   Inside date "Sunday Sept. 14" — Gene wrote on Sun. Sep 14 and the letter was postmarked Mon. Sep 15. Postmark used as canonical date.
-  Letter pages are plain stationery, numbered 1., (2), (3) in Gene's hand. Three sheets total.
-  Source photos captured 90° CCW from upright; rotated in place via `sips -r 90` before transcription.
-  Notable content (two [[…]] emphases applied, both top-priority war-foreshadowing): (1) Gene's most direct U.S. entry prediction yet — "Any day now we will be right in there throwing shells & bombs at them"; (2) "Just a lot of men killed and this country in terrible conditions, only for that fool in Germany!" — Gene names Hitler ("that fool in Germany") and acknowledges the human cost. Combined with the L33 → L35 → L36 → L41 arc, this is Gene's most concrete vision of what U.S. entry will look like operationally and humanly.
+
+  Notable content: (1) Gene's most direct U.S. entry prediction yet — "Any day now we will be right in there throwing shells & bombs at them"; (2) "Just a lot of men killed and this country in terrible conditions, only for that fool in Germany!" — Gene names Hitler ("that fool in Germany") and acknowledges the human cost. Combined with the L33 → L35 → L36 → L41 arc, this is Gene's most concrete vision of what U.S. entry will look like operationally and humanly.
+
   Also: Gene reflects again on his enlistment regret — "I should had finished school and maybe I wouldn't have joined the navy"; promises to give up drinking ("I also will never take another drink. I think I told you that when I was home"); notes thousands of workers in the Bremerton yard.
-  Cursive readings worth a second look: "studing" for "studying"; "here" for "hear" ("can't here your own self talk"); "fool in Germany" — Gene's slang for Hitler; "From the one who really cares" closing has a flourish that could read "the one who really cares" or similar.
+
 ---
 
 Sunday Sept. 14
@@ -31,23 +32,15 @@ Sunday Sept. 14
                                                           Bremerton, Wash.
                                                           F Division
 
-1.
-
 Dearest Joan,
 
 Just a few lines tonight to say hello and of course thinking of you. Hope this finds you OK and myself alright except awful lonesome and blue. Sure wished I could be back there tonight with you and the folks. I haven't been able to get a letter from anyone yet.
 
-Well, Joan what you been doing since I left? Just going to school and studing hard I guess. I should had finished school and maybe I wouldn't have joined the navy. Joan there is so much noise around this place that you can't here your own self talk. There's thousands of men working (over)
-
-(2)
-
-in this place and you can see for yourself why there is so much noise. You can give me the nice peaceful country any time. Just away from all of this war stuff for the thirty days I was at home really did help a lot.
+Well, Joan what you been doing since I left? Just going to school and studing hard I guess. I should had finished school and maybe I wouldn't have joined the navy. Joan there is so much noise around this place that you can't here your own self talk. There's thousands of men working (over) in this place and you can see for yourself why there is so much noise. You can give me the nice peaceful country any time. Just away from all of this war stuff for the thirty days I was at home really did help a lot.
 
 The war sure looks bad for the U. S. now doesn't it. [[Any day now we will be right in there throwing shells & bombs at them.]] What will we get out of it? [[Just a lot of men killed and this country in terrible conditions, only for that fool in Germany!]]
 
 Joan the weather here in Bremerton is a lot colder than it was in Kentucky. It also rains a lot too. I think it is mean by being so much water inland. See, this place is several miles in from the coast.
-
-(3)
 
 Well Darling there isn't much to write and I had better write the home folks a few lines too. Write and tell me every thing about yourself. Your letters really does help a lot and I read them over & over until I get another. I think you are the sweetest girl in the world Joan. You might think I'm just kidding and go out with girls every night. The only way I can prove it is to give you my word, if that means anything to you, that I don't. I also will never take another drink. I think I told you that when I was home. Be good honey & write soon.
 

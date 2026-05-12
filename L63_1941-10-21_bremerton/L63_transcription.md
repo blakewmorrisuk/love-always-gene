@@ -16,13 +16,16 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan;"
 signature: "Lots of Love & kisses,\nAlways, \"Gene\""
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS  OCT 21  8:30 AM  1941" (ship cancel — Tuesday morning); single 6¢ red Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten in pen across the postmark. Envelope back blank apart from age stains; tape repair on flap.
+  Envelope postmark "U.S.S. NEW ORLEANS OCT 21 8:30 AM 1941" (ship cancel — Tuesday morning); single 6¢ red Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten in pen across the postmark. Envelope back blank apart from age stains; tape repair on flap.
+
   Inside date "Monday Nite Oct 20" — Gene wrote Monday night, mailed Tuesday morning. Calendar consistent.
+
   Letter pages are plain lined stationery, numbered (1), (2), (3), (4), (5) in Gene's hand. Five sheets total.
-  Source photos captured 90° CCW from upright; rotated in place via `sips -r 90` before transcription. Envelope (IMG_9681) required an additional 180° (i.e., 270° total) to read upright — original photo orientation differed from the pages.
-  Notable content (two [[…]] emphases applied): (1) **Concrete departure date confirmed** — "Joan we will leave here the 28th of Oct. and be sure to write me right back so I get the letter before we leave. Will go out, Wednesday for an testing run to see if everything works O.K." Pins down the L62 "ten more days" prediction to a specific date — Oct 28 sail south, Wednesday Oct 22 sea-test (war priority 1, last operational marker before the long Pacific transit). (2) **Goodbye-kiss memory in front of his family** — "Sure, I still remember the last kiss I gave you when I left, even though it were before my whole family. I know they expected it too for they know how I care for you. So why should you & I hide it?" Most tender specific memory Gene has put on paper since the proposal arc began (love priority 2).
+
+  Notable content: (1) **Concrete departure date confirmed** — "Joan we will leave here the 28th of Oct. and be sure to write me right back so I get the letter before we leave. Will go out, Wednesday for an testing run to see if everything works O.K." Pins down the L62 "ten more days" prediction to a specific date — Oct 28 sail south, Wednesday Oct 22 sea-test. (2) **Goodbye-kiss memory in front of his family** — "Sure, I still remember the last kiss I gave you when I left, even though it were before my whole family. I know they expected it too for they know how I care for you. So why should you & I hide it?" Most tender specific memory Gene has put on paper since the proposal arc began.
+
   Also: Joan wrote TWO letters in one day (one morning, one afternoon — both arrived together because Joan had been forgetting to put "F Division" on the address); Martha (sister) recuperating at home from her appendectomy — "Glad to hear that and it probably do her good to get away from the hospital for a few days"; Gene's brief school-regret reflection — "The trouble with me was I took school to much as a joke … If I had went ahead and finished school look how much better off I would been today. Would have been out of school by now and probably had a nice job. No, instead I go to the navy which hasn't any future what so ever now." First time Gene articulates his school-quitting regret in the archive. Senior-class wreck at Stanford ("They are sure lucky there wasn't some of them killed"); Joan's dog hit by a car ("tell him the next time he cross the road to watch the cars"); list of 1941 songs Gene likes — "Walking by the River," "You & I," "Jim," "I Don't Want To Set The World On Fire," "You Are My Sunshine," "Harbor Lights," "Woodpecker Song," "Hills," "Harvest Moon," "Little South of North Carolina." Marriage thread: Gene re-opens the topic ("Seems like I won't be able to make you see my terms of that promise") then closes it again at the end of the letter ("I have been begging you long enough I think. If you can't make the promise the way I want it, I will still love you just as much. I won't be bothering you any more with it") — the second "final" withdrawal after L61.
-  Cursive readings worth a second look: "(over)" written at the end of page 1 in Gene's hand; "Little South of North Carolina" on page 4 — likely Gene's title for "I'm Just A Country Boy at Heart" or similar period song; "Singing" trailing at the end of page 3 then "Hills" continuing on page 4 — appears to be one continuous song title broken across pages ("Singing Hills"? — there is a 1940 song "Singing Hills"); "I'm" / "I" pattern as before; "I sorry" for "I'm sorry" on page 3; "you can't hurt that" on page 1 — Gene's idiom for "no harm in that."
+
 ---
 
 Monday Nite Oct 20
@@ -31,35 +34,17 @@ Monday Nite Oct 20
                                                           Bremerton, Wash.
                                                           F Division
 
-(1)
-
 Dearest Joan;
 
-Just received two letters from you today. One came this morning & the other one this afternoon. Really glad to get them as it has been several days since I heard from you. Yes, if you don't put the division on them Joan they are a day or so late in getting to me. Everybody makes mistakes once in a while though. I got a letter today from Martha too. She said she were getting along fine. Glad to hear that and it probably do her good to get away from the hospital for a few days. You can't hurt that. Carroll I don't (over)
+Just received two letters from you today. One came this morning & the other one this afternoon. Really glad to get them as it has been several days since I heard from you. Yes, if you don't put the division on them Joan they are a day or so late in getting to me. Everybody makes mistakes once in a while though. I got a letter today from Martha too. She said she were getting along fine. Glad to hear that and it probably do her good to get away from the hospital for a few days. You can't hurt that. Carroll I don't (over) care what kind of an operation he had to have.
 
-(2)
+Well, Sweetheart I'm glad that you are O.K. and still thinking about me. I know you are studying hard in school without you saying so. Keep it up Joan and you will be glad of it some day. The trouble with me was I took school to much as a joke. I didn't feel like getting my lessons. I just forgot all about them. If I had went ahead and finished school look how much better off I would been today. Would have been out of school by now and probably had a nice job. No, instead I go to the navy which hasn't any future what so ever now. Joan, I sorry to hear about that terrible wreck the Senior class had. They are sure lucky there wasn't some of them killed. Hope your dog is better now and tell him the next time he cross the road to watch the cars.
 
-care what kind of an operation he had to have.
-
-Well, Sweetheart I'm glad that you are O.K. and still thinking about me. I know you are studying hard in school without you saying so. Keep it up Joan and you will be glad of it some day. The trouble with me was I took school to much as a joke. I didn't feel like getting my lessons. I just forgot all about them. If I had went ahead and finished school look how much better off I would been today. Would have been out of school by now and probably had a nice
-
-(3)
-
-job. No, instead I go to the navy which hasn't any future what so ever now. Joan, I sorry to hear about that terrible wreck the Senior class had. They are sure lucky there wasn't some of them killed. Hope your dog is better now and tell him the next time he cross the road to watch the cars.
-
-You asked what songs I liked the best. Well "Walking by the River" is still the one I like best. "You & I," "Jim," "I don't want to set the world on fire," "You are My Sunshine," "Harbor Lights," "Woodpecker Song." Guess I will have to dream the rest. Singing
-
-(4)
-
-Hills," "Harvest Moon," & "Little South of North Carolina," & few others but them are the ones I like best. Hope you like the same ones I do.
+You asked what songs I liked the best. Well "Walking by the River" is still the one I like best. "You & I," "Jim," "I don't want to set the world on fire," "You are My Sunshine," "Harbor Lights," "Woodpecker Song." Guess I will have to dream the rest. Singing Hills," "Harvest Moon," & "Little South of North Carolina," & few others but them are the ones I like best. Hope you like the same ones I do.
 
 [[Joan we will leave here the 28th of Oct. and be sure to write me right back so I get the letter before we leave. Will go out, Wednesday for an testing run to see if everything works O.K.]]
 
-Seems like I won't be able to make you see my terms of that promise. I have done everything that I know to do and you still want the nurse training first. It's up to you, Joan whether you make it on my terms. If it
-
-(5)
-
-is impossible that way there isn't anything I can do. You know the way I want it & the way you want it. So it's all up to you to decide which way it got to be. I have been begging you long enough I think. If you can't make the promise the way I want it, I will still love you just as much. I won't be bothering you any more with it.
+Seems like I won't be able to make you see my terms of that promise. I have done everything that I know to do and you still want the nurse training first. It's up to you, Joan whether you make it on my terms. If it is impossible that way there isn't anything I can do. You know the way I want it & the way you want it. So it's all up to you to decide which way it got to be. I have been begging you long enough I think. If you can't make the promise the way I want it, I will still love you just as much. I won't be bothering you any more with it.
 
 [[Sure, I still remember the last kiss I gave you when I left, even though it were before my whole family. I know they expected it too for they know how I care for you. So why should you & I hide it?]] Write soon, Darling. Be good.
 

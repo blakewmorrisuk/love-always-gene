@@ -15,21 +15,20 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan,"
 signature: "Always,\nEddie—\"Gene\""
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS  APR 15  9-AM  1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Air Mail" handwritten. Plain envelope (torn at top); envelope back blank.
+  Envelope postmark "U.S.S. NEW ORLEANS APR 15 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Air Mail" handwritten. Plain envelope (torn at top); envelope back blank.
+
   Inside date "April 12, 1941" — Gene wrote on Sat. Apr 12 and the letter was postmarked Tue. Apr 15. Postmark used as canonical date; Gene's inside date preserved verbatim. Source folder skips IMG_9582 (not part of this letter).
-  Letter pages are plain stationery, numbered I., (2.), (3.) in Gene's hand.
-  Source photos captured 90° CCW from upright; rotated in place via `sips -r 90` before transcription. Page 3 photo (IMG_9583) is a different resolution (3024×4032) from pages 1–2 (4284×5712).
-  Notable content (two [[…]] emphases applied, both top-priority war-foreshadowing): (1) the ship is in port for "a little repair work done getting it in better shape for war. Its only around the corner now" — concrete evidence the U.S.S. New Orleans is being prepped for combat in April 1941, 8 months before Pearl Harbor; (2) Gene's first explicit acknowledgment that he may not survive the war — "If war does break loose I won't see you until it is over, that is if I am still kicking." Continues the L33 ("five months before war") arc into personal mortality. Also: the ship plans to return to the West Coast at the end of May 1941 (continuing the deployment/leave thread from L26–L34); brother Thomas and sister Martha home with Carroll for a weekend.
+
+  Notable content: (1) the ship is in port for "a little repair work done getting it in better shape for war. Its only around the corner now" — concrete evidence the U.S.S. New Orleans is being prepped for combat in April 1941, 8 months before Pearl Harbor; (2) Gene's first explicit acknowledgment that he may not survive the war — "If war does break loose I won't see you until it is over, that is if I am still kicking." Continues the L33 ("five months before war") arc into personal mortality. Also: the ship plans to return to the West Coast at the end of May 1941 (continuing the deployment/leave thread from L26–L34); brother Thomas and sister Martha home with Carroll for a weekend.
+
   Signature is unusual — Gene signs "Eddie — 'Gene'" rather than the typical "Gene." "Eddie" reading is a best-guess from the looped cursive (could be a self-nickname, a passing inside joke, or a stylized "Edd--" flourish); the quoted "Gene" is clear.
-  Cursive readings worth a second look: the page-1 strikethrough after "with me not being around" (struck question unclear — possibly "[strikethrough: what you think?]"); "way [strikethrough: down] here" on page 2; the signature first-name reading.
+
 ---
 
 April 12, 1941
                                                           U.S.S. New Orleans
                                                           Pearl Harbor, Honolulu, T.H.
                                                           F Division
-
-I.
 
 Dearest Joan,
 

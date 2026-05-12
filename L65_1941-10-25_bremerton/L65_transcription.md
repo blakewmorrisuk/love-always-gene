@@ -16,13 +16,16 @@ transcribed_by: claude (from photographs, 2026-05-10)
 salutation: "Dearest Joan;"
 signature: "Always,\nGene"
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS  OCT 25  8:30 AM  1941" (ship cancel — Saturday morning); single 6¢ red Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten across the postmark. Envelope back has heavy ink bleed-through stains and a torn flap — significantly more damaged than the surrounding L63/L64/L66 envelopes.
+  Envelope postmark "U.S.S. NEW ORLEANS OCT 25 8:30 AM 1941" (ship cancel — Saturday morning); single 6¢ red Air Mail eagle stamp; "VIA AIR MAIL" stamped + "Air Mail" handwritten across the postmark. Envelope back has heavy ink bleed-through stains and a torn flap — significantly more damaged than the surrounding L63/L64/L66 envelopes.
+
   Inside date "Friday, Oct. 24" — Gene wrote Friday night just hours after the much longer L64. **L65 is a same-day-as-L64 follow-up letter**; both letters reached the post office on consecutive mornings (L64 postmarked Fri Oct 24, L65 postmarked Sat Oct 25).
+
   Letter is SHORT — only two sheets, plain lined stationery, numbered (1), (2) in Gene's hand. Page 2 is half-blank.
-  Source photos captured 90° CCW from upright; rotated in place via `sips -r 90`. Envelope (IMG_9688) required an additional 270° to read upright.
-  Notable content (two [[…]] emphases applied — both top priority, immediate consequence to L64): (1) **The L64 phone call is CANCELED and rescheduled** — "I told you in the letter last nite that I would call you on the phone Wednesday nite. Well we got orders to leave here that day so it's impossible to make that phone call." Then in the close: "Will try to phone you Tuesday nite if it's possible." Phone-call deadline shifts from Wed Oct 29 to Tue Oct 28 (now the eve-of-sail). (2) **Departure now Wednesday Oct 29** — "We will leave here sometime Wednesday" — the date slips again from Thursday Oct 30 (L64) back to Wednesday Oct 29 because of new orders received Friday Oct 24.
+
+  Notable content: (1) **The L64 phone call is CANCELED and rescheduled** — "I told you in the letter last nite that I would call you on the phone Wednesday nite. Well we got orders to leave here that day so it's impossible to make that phone call." Then in the close: "Will try to phone you Tuesday nite if it's possible." Phone-call deadline shifts from Wed Oct 29 to Tue Oct 28 (now the eve-of-sail). (2) **Departure now Wednesday Oct 29** — "We will leave here sometime Wednesday" — the date slips again from Thursday Oct 30 (L64) back to Wednesday Oct 29 because of new orders received Friday Oct 24.
+
   Also: Joan playing in some kind of contest Friday (basketball? piano?) — Gene asking about it.
-  Cursive readings worth a second look: "I told you in the letter last nite" — Gene explicitly cross-references L64; "that contest today" on page 1 — what contest? (probably a basketball/sports contest given Highland school references earlier in the archive); "I look forward hearing you talking Tuesday nite" on page 2 — Gene's tender phrasing about the anticipated call.
+
 ---
 
 Friday, Oct. 24
@@ -31,17 +34,11 @@ Friday, Oct. 24
                                                           Bremerton, Wash.
                                                           F Division
 
-(1)
-
 Dearest Joan;
 
 Just a line or two tonite as I am thinking of you. I wrote you a letter last night but thought I had better drop a line tonight to let you know that [[we will leave here sometime Wednesday]]. I told you in the letter last nite that I would call you on the phone Wednesday nite. [[Well we got orders to leave here that day so it's impossible to make that phone call.]]
 
-Sure hope you did alright in that contest today. You said you were going to play Friday and this is the day
-
-(2)
-
-Well, Joan there isn't anything I know to write so I make this letter short. I'll try to write agin before we leave so until then good-bye. Will try to phone you Tuesday nite if it's possible. So I look forward hearing you talking Tuesday nite.
+Sure hope you did alright in that contest today. You said you were going to play Friday and this is the day Well, Joan there isn't anything I know to write so I make this letter short. I'll try to write agin before we leave so until then good-bye. Will try to phone you Tuesday nite if it's possible. So I look forward hearing you talking Tuesday nite.
 
                                                           Always,
                                                               Gene

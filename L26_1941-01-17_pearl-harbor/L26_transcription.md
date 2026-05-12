@@ -16,11 +16,13 @@ salutation: "Dearest Joan,"
 signature: "Lots & Lots of Love,\nGene"
 note: |
   Folder named "January 17, 1941" (likely postmark); letter dated "Jan. 16, Thursday" inside (Jan 16, 1941 was indeed a Thursday). Postmark used as canonical date.
+
   Envelope is the printed-illustrated U.S.S. NEW ORLEANS Air Mail envelope (the ship illustration is part of the stationery).
+
   Notable content: Gene confirms an 8-day round trip the ship just made to Midway Island (continuation of the voyage anticipated in L25), and floats the possibility that the ship is "going back to the States March 15" with a hoped-for leave in May or June 1941.
+
   Pages 1 & 2 are front/back of the same sheet (Gene noted "Back of first page" on page 2); page 3 is a separate sheet. The page 1 photo also has Gene's handwritten note "(Send 3 pages)" at the bottom margin — a reminder for the addresser.
-  Source photos were captured rotated 90° CCW from upright; rotated in place via `sips -r 270` then `-r 180` before transcription.
-  Several cursive readings uncertain; transcribed as best-guess without inline markers. Notable candidates for review: "are you not" (could be "or you not"), "just took some of father spells" (Gene's phrasing for inherited mood/illness episodes).
+
 ---
 
 Jan. 16, Thursday
@@ -39,11 +41,7 @@ Joan, I don't know whether for sure but I think [[we are going back to the State
 
 Joan I will go into Honolulu tomorrow to get those pictures I had taking and will send you one the next day, whether they good or not. I think tho they'll be alright. Though some of the boys had some taking at the same place and they turn out pretty good. So if you don't like it don't say I didn't try. You know your silly when I get back I came & there is something got to happen.
 
-I you bet keep writting to me & going to — well what can I do but I'm not feeling writt whenever you can, Jo. So if you don't hear from me don't stop, for I just took some
-
-(Back of first page)
-
-of father spells. I write to you more than I do at home, but don't tell them so. They always saying I don't write enough the way it is.
+I you bet keep writting to me & going to — well what can I do but I'm not feeling writt whenever you can, Jo. So if you don't hear from me don't stop, for I just took some of father spells. I write to you more than I do at home, but don't tell them so. They always saying I don't write enough the way it is.
 
 There isn't much I know to write tonight, Jo. So will come to a close. Give my love to all and a big kiss to you. Untill you hear from me again.
 

@@ -18,13 +18,18 @@ signature: "With Lots of Love to You,\n(Gene)"
 postscript: |
   (I'm sure now me darling)
 note: |
-  Folder named "January 25, 1941" (postmark date — envelope reads "U.S.S. NEW ORLEANS  JAN 25  A.M.  1941"). Gene dated the letter inside "Jan. 23, 1941." Postmark used as canonical date.
+  Folder named "January 25, 1941" (postmark date — envelope reads "U.S.S. NEW ORLEANS JAN 25 A.M. 1941"). Gene dated the letter inside "Jan. 23, 1941." Postmark used as canonical date.
+
   Envelope is decorated stationery — a Hawaiian Crown / royal coat of arms illustration with the motto "Ua Mau Ke Ea O Ka Aina I Ka Pono" and "HAWAII" label. Two 3¢ Jefferson stamps, "Air Mail" written by hand, "VIA AIR MAIL" stamped.
+
   Envelope back has the return address written out in Gene's block-letter hand: "IF NOT DELIVERED IN 10 DAYS RETURN TO / EUGENE LANKFORD U.S.S NEW ORLEANS / PEARL HARBOR Honolulu T.H. F Division."
+
   Letter pages are on Hawaii-illustrated stationery (page 1 and page 3 have the colored Hawaii vignette banner; page 2 is text-only).
+
   Notable content: Gene reports a letter from his brother Carroll arguing he "shouldn't had joined the navy" (Carroll's view that Gene would have a "pretty good job by now" on the outside). Gene asks himself whether they'll be sent to Australia ("they might send us anywhere in the next three months") — early speculation about Pacific deployment. Also mentions a week of gunnery exercises at sea ahead of returning to Pearl Harbor "early in the morning."
-  Source photos were captured 90° CW from upright; rotated 90° CCW (`sips -r 90`) before transcription.
+
   A few cursive readings flagged for verification: "I sorry yet you are pine going muddle about the present" (Gene's phrasing is rough; could be "pining puzzling"), and "I'm still on what so [strike-through] for some funny one and will stay that."
+
 ---
 
 Jan. 23, 1941

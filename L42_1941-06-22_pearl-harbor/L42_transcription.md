@@ -17,12 +17,16 @@ signature: "with Love & kisses,\nGene"
 postscript: |
   P.S. You said I know who you were crazy about. I hope so or so I know.
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS  JUN 22  9-AM  1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope torn at top.
+  Envelope postmark "U.S.S. NEW ORLEANS JUN 22 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope torn at top.
+
   Inside date "Sunday June 22" matches the postmark.
+
   Letter pages: page 1 (IMG_9625) and page 3 (IMG_9627) are portrait bifolds photographed in portrait orientation (top half + bottom half, vertical reading order). **Page 2 (IMG_9626) is a LANDSCAPE bifold spread** — Gene wrote down the left half of the sheet, then continued at the top of the right half. This is the first landscape-bifold spread in the archive; reading order is left-column-then-right-column. Rotation: pages 1 and 3 needed `sips -r 90`; page 2 needed no rotation.
-  Notable content (one [[…]] emphasis applied): Gene's most specific stateside-departure projection yet — "We will leave for the states July 24, and go in the yards about the 1st of August." Replaces the L38 generic "August" with concrete dates.
+
+  Notable content: Gene's most specific stateside-departure projection yet — "We will leave for the states July 24, and go in the yards about the 1st of August." Replaces the L38 generic "August" with concrete dates.
+
   Also: Gene plays two baseball games for the F Division (the F Division now has a full team); three new pictures of Gene with a deep tan ("the sun has tanned me so that I'm just about black"); another present bought for Joan to be sent in a day or two; reference to it being "a year since I been home" (matching the L37 "a year and five months since I saw [Martha]" — Gene left for navy training in spring 1940).
-  Cursive readings worth a second look: "Maybe I have been thinking about writting and never did" on page 1 (Gene admits he's been thinking about writing but hasn't); strikethrough on page 2 left column ("F. Division has got [strikethrough: us] a ball team" — struck word unclear); strikethrough on page 2 left column ("They aren't so good as [strikethrough] they were"); strikethrough on page 3 top ("turn on if I [strikethrough] get to come" — likely a struck "don't" or "forget").
+
 ---
 
 Sunday June 22
@@ -42,5 +46,5 @@ Well there is just anything much going on down here in these Islands. [[We will 
 
 Well, Joan I will have to make this letter short tonight, but will write you a longer one next time. Any way it's getting awful late and we will have to get up early in the morning as we are going to sea for a couple of days.
 
-Write soon                                                with Love & kisses,
+Write soon with Love & kisses,
                                                                           Gene

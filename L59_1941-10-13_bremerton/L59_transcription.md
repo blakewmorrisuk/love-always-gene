@@ -19,13 +19,15 @@ postscript: |
   P.S. (Excuse writting)
 note: |
   **Envelope stationery is the BREMERTON BRANCH NAVY Y.M.C.A. illustrated envelope** — preprinted "BREMERTON BRANCH / NAVY Y.M.C.A. / BREMERTON, WASHINGTON" return-address block with a small ink-drawing of the YMCA building. First time this envelope appears in the archive (compare L44 envelope, which had a Pearl Harbor Y.M.C.A. body letterhead but a plain envelope).
-  Postmark "BREMERTON  OCT 13  2 AM  1941  WASH." (Bremerton civic, late-night cancel — Gene mailed late Sunday or it sat overnight); single 6¢ Air Mail eagle stamp; "Air Mail" handwritten. Envelope back blank.
+
+  Postmark "BREMERTON OCT 13 2 AM 1941 WASH." (Bremerton civic, late-night cancel — Gene mailed late Sunday or it sat overnight); single 6¢ Air Mail eagle stamp; "Air Mail" handwritten. Envelope back blank.
+
   Inside date "Sunday Oct. 12" matches calendar (Oct 12, 1941 was Sunday). Postmark Oct 13 (Monday 2 AM) = canonical.
-  Letter pages are plain stationery (Gene wrote ashore at the Y.M.C.A. but only the envelope is on Y.M.C.A. paper).
-  Source photos captured 90° CCW from upright; rotated in place via `sips -r 90` before transcription. Three sheets.
-  Notable content (one [[…]] emphasis applied, love/family-meaningful priority 2): Gene's bus-ride-home-from-leave reflection — "That night I got on the bus I thought that I were leaving everything in life behind then. All I did was set in my seat until I got in Chicago and just looked out of the window not really seeing anything at all." This bookends the L47 Chicago postcard sent that same trip; here Gene fills in what the trip felt like from inside.
+
+  Notable content: Gene's bus-ride-home-from-leave reflection — "That night I got on the bus I thought that I were leaving everything in life behind then. All I did was set in my seat until I got in Chicago and just looked out of the window not really seeing anything at all." This bookends the L47 Chicago postcard sent that same trip; here Gene fills in what the trip felt like from inside.
+
   Also: brother Thomas in Detroit ("kindly surprise me hearing from him" — Thomas wrote, lonely since Carroll left); Gene and Jack Parkhurst spending Sunday loafing in Bremerton town, Gene writing across the YMCA table from Parkhurst (who's writing to his own girlfriend); Gene plans to make Parkhurst attend church that night ("It might take a little time but I will make him finally quit drinking"); third re-request for the marriage promise ("I would feel a lot better though if you would make me that promise Joan").
-  Cursive readings worth a second look: "that I were leaving everything in life behind" on page 2 (Gene's first-person past-tense quirk — "I were" for "I was"); "[strikethrough] sure take it easy" on page 3 (struck word unclear); "I think hard" near the close (Gene's "think hard" echoes the L53 P.S. "Think hard Joan"); page-3 P.S. apology for handwriting.
+
 ---
 
 Sunday Oct. 12

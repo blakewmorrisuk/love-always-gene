@@ -20,12 +20,16 @@ postscript: |
                                                   Long Beach, Calif.
                                                   F Division
 note: |
-  Envelope postmark "U.S.S. NEW ORLEANS  JUL 17  9-AM  1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope torn at top right.
+  Envelope postmark "U.S.S. NEW ORLEANS JUL 17 9-AM 1941" with two 3¢ Jefferson stamps, "VIA AIR MAIL" stamped + "Via Air Mail" handwritten. Envelope torn at top right.
+
   Inside date "July 17, 1941" matches the postmark.
+
   Letter pages: page 1 (IMG_9630) is a portrait bifold (`sips -r 90`); **page 2 (IMG_9631) is a LANDSCAPE bifold spread** (left-then-right reading order, no rotation needed); pages 3 (IMG_9632) and 4 (IMG_9633) are portrait single sheets (`sips -r 90`). Mixed-orientation pattern matches L42 and L43.
-  Notable content (two [[…]] emphases applied): (1) confirms a second Midway run — "We made a trip to Midway Island agin and was gone for eight days" — same 8-day duration as the L25 first trip (Jan 1941). Followed by 6-hour return for fuel/food and another 6-day sortie. (2) New stateside-return destination — Long Beach, CA on Jul 24 then Seattle, WA for the yard: "we go from there to Seattle, Wash. where we will go in the yards." This is the FIRST naming of Seattle (Puget Sound) as the yard destination — significant given the handoff brief's note that the New Orleans got a new bow at Puget Sound in 1943 after Tassafaronga. Gene also expects a 30-day leave, possibly home by Aug 3; plans with Joan include the Renfro Valley Country Music Center in Kentucky.
+
+  Notable content: (1) confirms a second Midway run — "We made a trip to Midway Island agin and was gone for eight days" — same 8-day duration as the L25 first trip (Jan 1941). Followed by 6-hour return for fuel/food and another 6-day sortie. (2) New stateside-return destination — Long Beach, CA on Jul 24 then Seattle, WA for the yard: "we go from there to Seattle, Wash. where we will go in the yards." This is the FIRST naming of Seattle (Puget Sound) as the yard destination — significant given the handoff brief's note that the New Orleans got a new bow at Puget Sound in 1943 after Tassafaronga. Gene also expects a 30-day leave, possibly home by Aug 3; plans with Joan include the Renfro Valley Country Music Center in Kentucky.
+
   Also: postscript supplies the new mailing address — `c. U.S.S. New Orleans, Long Beach, Calif., F Division`; Gene reports buying civilian clothes ashore at Pearl Harbor for after-duty wear; Joan apparently liked the "present" Gene sent (could be the L42 second present or new earrings/jewelry — "Most of the girls wears them down here").
-  Cursive readings worth a second look: "Joan I just in for a thirty (30) days leave" on page 2 right column (likely "I just put in for a thirty (30) days leave"); "Always from with Love, Gene" closing (likely "Always Yours" — the cursive Y is hard to distinguish from F); "I bet you be both awful sweet with you have fixed that way. You know how I like I am about your hair" on page 3 (Gene's grammar is rough here — likely about Joan's hairstyle).
+
 ---
 
 July 17, 1941
