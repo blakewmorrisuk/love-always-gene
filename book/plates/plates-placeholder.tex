@@ -1,0 +1,33 @@
+% Plates signature — reserved 8 pages for v2 photographs.
+% Sits between Part V (West Coast Refit) and Part VI (The Return and the Attack).
+%
+% Rationale for placement: the West Coast Refit is the last stateside stretch.
+% Inserting the plates here lets the reader pause on Gene's American ground
+% before the book turns into December 1941. The plates do not need to be in
+% chronological order with the letters around them; they are a separate
+% gathering.
+%
+% Designer note: design two reusable plate templates in the class:
+%   - \plateOneUp{path}{caption}    -- full-page single image with caption
+%   - \plateTwoUp{path}{caption}{path}{caption}  -- two images on one page
+% with captions in JetBrains Mono small caps. Until the templates exist, the
+% eight pages below render as labeled placeholders so binding signatures stay
+% correct and v2 drops in without re-flowing.
+
+\cleardoublepage
+\thispagestyle{laempty}
+
+\foreach \i in {1,...,8}{%
+    \begin{center}
+        \vspace*{0.34\textheight}
+        {\Huge\color{brassfaint!60}$\diamond$}\par
+        \vspace{2em}
+        {\monofont\small\addfontfeature{LetterSpace=26}\color{walnutmute}
+            PLATE \i\par}
+        \vspace{0.4em}
+        {\itshape\small\color{walnutmute}
+            [\,placeholder reserved for v2\,]\par}
+    \end{center}
+    \vfill
+    \clearpage
+}

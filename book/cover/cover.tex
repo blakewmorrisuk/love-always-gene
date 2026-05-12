@@ -1,0 +1,159 @@
+% cover.tex — full cover spread for a 6x9 in paperback at Lulu.
+% Cover dimensions depend on spine width, which depends on page count and
+% paper stock. Lulu publishes a cover-template calculator; once the final
+% page count is locked, set TRIMW, TRIMH, SPINE, and BLEED below.
+%
+% Stock assumption for v1: Lulu cream uncoated, 60# (book paper).
+% At ~320 pages, the spine will be roughly 0.74 in. Refresh this before
+% submitting.
+%
+% Build separately with:  xelatex cover.tex
+% This is intentionally not included from main.tex; Lulu wants two PDFs
+% (interior + cover) and merging them at the LaTeX layer adds no value.
+
+\documentclass[12pt]{article}
+
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage[absolute, overlay]{textpos}
+\usepackage{graphicx}
+
+\defaultfontfeatures{Path=../fonts/, Ligatures=TeX}
+
+\newfontfamily\displayfont{CormorantGaramond}[
+    UprightFont    = *-Regular.ttf,
+    ItalicFont     = *-Italic.ttf,
+    BoldFont       = *-SemiBold.ttf
+]
+\newfontfamily\bodyfont{SourceSerif4}[
+    UprightFont = *-Regular.otf,
+    ItalicFont  = *-Italic.otf
+]
+\newfontfamily\monofont{JetBrainsMono}[
+    UprightFont = *-Regular.ttf,
+    Scale=0.86
+]
+
+\definecolor{paper}{HTML}{F5EFE0}
+\definecolor{ink}{HTML}{1F1B17}
+\definecolor{walnut}{HTML}{3B2A1A}
+\definecolor{walnutmute}{HTML}{806852}
+\definecolor{brass}{HTML}{9B7B3F}
+
+% ---- Lulu cover geometry (placeholders -- recalc with final pagecount) ----
+\def\TRIMW{6in}
+\def\TRIMH{9in}
+\def\SPINE{0.74in}     % TODO[blake]: replace with Lulu's spine calculator output
+\def\BLEED{0.125in}
+
+\newlength{\fullW}\setlength{\fullW}{\dimexpr 2\TRIMW + \SPINE + 2\BLEED\relax}
+\newlength{\fullH}\setlength{\fullH}{\dimexpr \TRIMH + 2\BLEED\relax}
+
+\usepackage[
+    paperwidth=\fullW,
+    paperheight=\fullH,
+    margin=0in,
+    nohead, nofoot
+]{geometry}
+
+\pagecolor{paper}
+\pagestyle{empty}
+
+\setlength{\TPHorizModule}{1in}
+\setlength{\TPVertModule}{1in}
+
+% Layout coordinates (from top-left, in inches, relative to the bleed page).
+\newlength{\backX}  \setlength{\backX}{\BLEED}
+\newlength{\spineX} \setlength{\spineX}{\dimexpr \BLEED + \TRIMW\relax}
+\newlength{\frontX} \setlength{\frontX}{\dimexpr \BLEED + \TRIMW + \SPINE\relax}
+
+\begin{document}
+
+% ============================== FRONT COVER =============================
+\begin{textblock*}{\TRIMW}(\frontX, \BLEED)%
+    \color{ink}
+    \vspace*{1.2in}
+    \begin{center}
+        {\monofont\small\addfontfeature{LetterSpace=22}\color{walnutmute}
+            THE WARTIME LETTERS OF\par}
+        \vspace{0.4em}
+        {\displayfont\itshape\fontsize{28pt}{32pt}\selectfont\color{walnut}
+            Raymond Eugene Lankford\par}
+        \vspace{1.2em}
+        {\color{brass}\rule{2.6in}{0.5pt}}\par
+        \vspace{1.0em}
+        {\displayfont\itshape\fontsize{64pt}{68pt}\selectfont
+            Love,\\[-0.1em] Always\par}
+        \vspace{1.2em}
+        {\color{brass}\rule{2.6in}{0.5pt}}\par
+        \vspace{1.0em}
+        {\displayfont\itshape\large
+            with Joan Northcutt\par}
+        \vspace{0.4em}
+        {\monofont\small\addfontfeature{LetterSpace=22}\color{walnutmute}
+            1940 \,---\, 1943\par}
+    \end{center}
+    \vfill
+    \begin{center}
+        % TODO[designer]: drop ship silhouette PDF here
+        % \includegraphics[width=3in]{../assets/ship-silhouette.pdf}
+        {\color{brass}\rule{3in}{0.5pt}}\par
+        \vspace{0.3em}
+        {\monofont\footnotesize\addfontfeature{LetterSpace=22}\color{walnutmute}
+            U.S.S. NEW ORLEANS \,/\, CA-32\par}
+    \end{center}
+    \vspace*{0.8in}
+\end{textblock*}
+
+% ================================ SPINE =================================
+% Spine text reads bottom-to-top (Lulu convention). Use a rotated block.
+\begin{textblock*}{\SPINE}(\spineX, \BLEED)%
+    \rotatebox{-90}{%
+        \begin{minipage}{\TRIMH}
+            \color{ink}
+            \centering
+            \vspace*{0.5in}
+            {\displayfont\itshape\Large Love, Always}\quad
+            {\monofont\small\addfontfeature{LetterSpace=20}\color{walnutmute}
+                LANKFORD}
+        \end{minipage}
+    }
+\end{textblock*}
+
+% ============================== BACK COVER ==============================
+\begin{textblock*}{\TRIMW}(\backX, \BLEED)%
+    \color{ink}
+    \vspace*{1.2in}
+    \begin{center}
+        \begin{minipage}{4.4in}
+            \bodyfont\itshape\small\color{walnut}
+            % TODO[blake]: this back-cover copy is seeded from the website's
+            % closing paragraph. Edit to taste; the lower line should be the
+            % dedication.
+
+            Gene's letters to Joan continued through the war. Less than a
+            year after the last letter of 1940, on the morning of December~7,
+            1941, he was at Pearl Harbor. A year after that, off Tassafaronga
+            in the Solomon Islands, a Japanese torpedo struck the New Orleans
+            and tore away one hundred and fifty feet of her bow. One hundred
+            and eighty-three of his shipmates went down with it, along with
+            most of Joan's letters back. Gene came home in 1943. He and Joan
+            were married for forty-nine years.
+
+            \vspace{1.4em}
+            \rule{1.2in}{0.4pt}
+            \vspace{0.6em}
+
+            For the family who carries his story.
+        \end{minipage}
+    \end{center}
+    \vfill
+    \begin{center}
+        {\monofont\footnotesize\addfontfeature{LetterSpace=22}\color{walnutmute}
+            PRIVATELY PRINTED \,/\, NOT FOR SALE\par}
+    \end{center}
+    \vspace*{0.8in}
+\end{textblock*}
+
+\null
+\end{document}

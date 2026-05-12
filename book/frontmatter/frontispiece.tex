@@ -1,0 +1,24 @@
+% Frontispiece — recto facing the prologue. Anchor ornament + ship silhouette.
+% Designer note: convert the website's ShipOrnament and ShipSilhouette SVGs
+% to PDF and drop them in book/assets/. Until then, this page renders the
+% ornament block as type only.
+
+\cleardoublepage
+\thispagestyle{laempty}
+\vspace*{0.20\textheight}
+\begin{center}
+    % TODO[designer]: replace with \includegraphics{assets/anchor-ornament.pdf}
+    {\Huge\color{brass}$\diamond$}\par
+    \vspace{2.4em}
+    {\monofont\small\addfontfeature{LetterSpace=28}\color{walnutmute}
+        ONE HUNDRED AND TEN LETTERS\par}
+    \vspace{0.4em}
+    {\monofont\small\addfontfeature{LetterSpace=28}\color{walnutmute}
+        APRIL 1940 \, --- \, DECEMBER 1944\par}
+    \vspace{4em}
+    % TODO[designer]: replace with \includegraphics{assets/ship-silhouette.pdf}
+    {\color{brass}\rule{3in}{0.4pt}}\par
+    \vspace{0.6em}
+    {\eyebrow{U.S.S. New Orleans (CA-32)}\par}
+\end{center}
+\vfill
