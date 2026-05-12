@@ -21,20 +21,11 @@ note: |
 
   Inside date "Sunday June 22" matches the postmark.
 
-  Letter pages: page 1 (IMG_9625) and page 3 (IMG_9627) are portrait bifolds photographed in portrait orientation (top half + bottom half, vertical reading order). **Page 2 (IMG_9626) is a LANDSCAPE bifold spread** — Gene wrote down the left half of the sheet, then continued at the top of the right half. This is the first landscape-bifold spread in the archive; reading order is left-column-then-right-column. Rotation: pages 1 and 3 needed `sips -r 90`; page 2 needed no rotation.
-
   Notable content: Gene's most specific stateside-departure projection yet — "We will leave for the states July 24, and go in the yards about the 1st of August." Replaces the L38 generic "August" with concrete dates.
 
   Also: Gene plays two baseball games for the F Division (the F Division now has a full team); three new pictures of Gene with a deep tan ("the sun has tanned me so that I'm just about black"); another present bought for Joan to be sent in a day or two; reference to it being "a year since I been home" (matching the L37 "a year and five months since I saw [Martha]" — Gene left for navy training in spring 1940).
 
 ---
-
-Sunday June 22
-                                                          U.S.S. New Orleans
-                                                          Pearl Harbor, Honolulu, T.H.
-                                                          F Division
-
-Dearest Joan,
 
 I got your letter a couple of days ago and I can't figure it out why you aren't getting any letters from me because or at least I thought I had been writting often enough. Maybe I have been thinking about writting and never did. There some thing wrong some where or other.
 
@@ -45,6 +36,3 @@ Joan, you asked if I had changed in any way. Guess I have in a few ways but of c
 Well there is just anything much going on down here in these Islands. [[We will leave for the states July 24, and go in the yards about the 1st of August.]] Sure hope I can get a leave to come home as you said in your letter it has been a year since I been home. Boy will I turn on if I [strikethrough] get to come. We sure have a wonderful time, I hope. I know we will sure be glad to see each other agin after so long.
 
 Well, Joan I will have to make this letter short tonight, but will write you a longer one next time. Any way it's getting awful late and we will have to get up early in the morning as we are going to sea for a couple of days.
-
-Write soon with Love & kisses,
-                                                                          Gene

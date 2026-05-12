@@ -38,10 +38,6 @@ note: |
 
 ---
 
-                                                          U.S.S. New Orleans
-
-Dearest Joan;
-
 Well, Darling I have finally got the chance to write a few lines. Received four of your letters & stay over with twenty-two of them this week. A little late, of course I receive them all the same day. (Bunny letters?) I just love to get them. You know what I mean? I really feel out of touch & lonely when I don't hear from you for a few days. So write as often as you possible can darling.
 
 [bulk of letter difficult to read with confidence]
@@ -51,6 +47,3 @@ Well, Darling I have finally got the chance to write a few lines. Received four 
 Joan, even if your Carroll's old enough to be there with me to know what he meant of war, well that goes by him.
 
 […dense middle and closing content — recommend Blake review original photos for full reading…]
-
-                                                          [signature area]
-                                                              Gene

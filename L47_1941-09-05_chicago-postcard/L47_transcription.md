@@ -19,18 +19,14 @@ note: |
 
   Context: this falls in the 6-week gap between L46 (Jul 25, 1941 from Pearl Harbor, announcing 30-day leave) and L48 (Sep 10, 1941 from the ship). The postmark places Gene at Chicago's Union Station on Sept 5, 1941, in transit back from his leave home in Stanford, KY to rejoin the U.S.S. New Orleans (still in Seattle for the August yard period at this point, or possibly already heading west).
 
-  Notable content: (1) "I was just about starting to cash my ticket in and though the whole army up" — Gene's heartsick admission that he nearly went AWOL at Chicago Union Station rather than continue back to the ship; (2) "If your voice made me feel so good that I will go on to Seattle" — Joan's voice on a long-distance call from Chicago to Stanford gave him the strength to continue. The dating in L47 also establishes that Gene was heading back to Seattle (matching the L45 prediction).
+  Notable content: (1) "I was just about starting to cash my ticket in and though the whole army up" — Gene's heartsick admission that he nearly went AWOL at Chicago Union Station rather than continue back to the ship;
+
+  (2) "If your voice made me feel so good that I will go on to Seattle" — Joan's voice on a long-distance call from Chicago to Stanford gave him the strength to continue. The dating in L47 also establishes that Gene was heading back to Seattle (matching the L45 prediction).
 
 ---
-
-                                                                              Chicago, Ill.
-
-Dearest Joan,
 
 Well after the long distant telephone call I going to write a few lines. Joan I am so dare blue that I had to hear your voice once more before got to far away.
 
 No kidding Joan [[I was just about starting to cash my ticket in and though the whole army up]]. [[If your voice made me feel so good that I will go on to Seattle.]] I told you on the telephone that I would be back soon, I'm going to do every thing in the world to keep that promise.
 
 Joan I haven't went to sleep yet tonight when I get on the train I going to take a couple of sleeping and see if I can go to sleep that way. Be good Joan & I will be writ[ing]
-
-                                                                              (Bye, Gene)

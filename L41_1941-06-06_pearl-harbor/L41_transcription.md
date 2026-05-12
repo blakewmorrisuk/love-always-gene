@@ -21,18 +21,13 @@ note: |
 
   Stationery is **the ship's illustrated letterhead** — a blue ink-drawing of the U.S.S. New Orleans (CA-32) at sea, captioned "U.S.S. NEW ORLEANS," centered at the top of pages 1 and 2. First time this illustrated variant appears in the archive (cf. L36 which used the plain printed letterhead with hull number only). Page 3 is on plain stationery — Gene either ran out of letterhead sheets or used a continuation sheet.
 
-  Notable content: (1) "We are having gunnery school on this ship now and will last for six weeks" — explicit combat-training period, also Gene's stated reason the ship's yard return was pushed to August; (2) Gene directly answering Joan's question — "You asked if I thought there was going to be war. Well, I don't hardly see how we will stay out now. Looks awful bad don't you think." This is the strongest war-prediction in the archive, framed as a reply to her direct question, and clarifies that the recipient (Joan) was already asking about U.S. entry in early June 1941. Continues the L33 → L35 → L36 → L38 → L39 → L41 war-foreshadowing arc — seven letters in 11 weeks where Gene has voiced increasing certainty of U.S. entry.
+  Notable content: (1) "We are having gunnery school on this ship now and will last for six weeks" — explicit combat-training period, also Gene's stated reason the ship's yard return was pushed to August;
+
+  (2) Gene directly answering Joan's question — "You asked if I thought there was going to be war. Well, I don't hardly see how we will stay out now. Looks awful bad don't you think." This is the strongest war-prediction in the archive, framed as a reply to her direct question, and clarifies that the recipient (Joan) was already asking about U.S. entry in early June 1941. Continues the L33 → L35 → L36 → L38 → L39 → L41 war-foreshadowing arc — seven letters in 11 weeks where Gene has voiced increasing certainty of U.S. entry.
 
   Also: Gene hopes to get "a few days leave when we go in the yards this August … It will be my last chance then for a long time"; "if that ford of Dads will still run by then" — a reminder Gene plans to drive Joan around in his father's Ford if he gets home.
 
 ---
-
-                                                          [illustration of U.S.S. New Orleans]
-                                                          U.S.S. NEW ORLEANS
-                                                          Pearl Harbor, Honolulu, T.H.
-                                                          F Div.
-
-Dearest Joan,
 
 I got your sweet letter yesterday and sure glad to hear from you agin. Seems like you about the only one who writes to me now except a letter from home once in awhile.
 
@@ -43,8 +38,3 @@ I sure hope the dry spell is over around there by now. It sure is awful hot down
 Joan if I do get to come home for a few days, we going to have really a swell time. That is if that ford of Dads will still run by then. I won't say for sure but I might be able to get a few days leave when we go in the yards this August. It will be my last chance then for a long time and I comming if possible.
 
 Well, Darling will have to close now for the movie is about ready to start. Hope you will be able to read this and I doubt it for I wrote it in such a hurry. So I will be looking always for a letter from you.
-
-                                                          With Lots of Love & kisses,
-                                                                          From the one who cares,
-                                                                                          Yours,
-                                                                                                  Gene

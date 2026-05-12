@@ -26,26 +26,16 @@ note: |
 
   **Historical context:** July 8, 1942 — Battle of Midway was June 4-7, 1942 (U.S.S. New Orleans was screening for Yorktown). The Guadalcanal landing would begin Aug 7, 1942. Gene is writing between Midway and Guadalcanal — likely at sea or briefly at a forward Pacific base.
 
-  Notable content: (1) **"A person couldn't say this was paradise"** — Gene's opaque hint about where he is. Censored mail won't allow specifics, but the negation of "paradise" (vs. the Honolulu references of 1940-41) signals Gene is somewhere harder than Hawaii. Most likely the South Pacific theater — possibly returning from Midway operations or staging for Guadalcanal. The line carries weight Gene cannot deliver directly. (2) **"I miss you a terrible lot, Joan & would give anything just to see you"** — Gene's most direct longing-statement in the post-Pearl Harbor era. Comes paired with "I do get home sick once in awhile. Anybody would I guess if they thought to much about home".
+  Notable content: (1) **"A person couldn't say this was paradise"** — Gene's opaque hint about where he is. Censored mail won't allow specifics, but the negation of "paradise" (vs. the Honolulu references of 1940-41) signals Gene is somewhere harder than Hawaii. Most likely the South Pacific theater — possibly returning from Midway operations or staging for Guadalcanal. The line carries weight Gene cannot deliver directly.
+
+  (2) **"I miss you a terrible lot, Joan & would give anything just to see you"** — Gene's most direct longing-statement in the post-Pearl Harbor era. Comes paired with "I do get home sick once in awhile. Anybody would I guess if they thought to much about home".
 
   Also: **Mail-routing changes to San Francisco Fleet Postmaster** — operational shift; **Mail gap continues** — "Haven't got a letter from you since the last time I have written"; "There will no doubt be days before you hear from me" — Gene preparing Joan for further silence; **Brother Carroll on vacation home** — "is home or he has probably gone back to work by the time you get this. Sure hope he had a lovely vacation"; "There's really not anything interesting I know to write. What letters I do write seems dull I know. Of course there's a good reason for that" — censorship reference; Gene's "If you ever want or can do anything for [me], just let me know" practical offer.
 
 ---
-
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco
-                                                          F Div. California
-
-Dearest Joan,
 
 Just a few lines tonite while thinking of you & wondering what you might be doing. Haven't got a letter from you since the last time I have written, but going to write anyhow. I want to write to you as often I can and I know that won't be to much. There will no doubt be days before you hear from me. Anyway I'll write every possible chance, Joan. Darling there's really not anything interesting I know to write. What letters I do write seems dull I know. Of course there's a good reason for that. [[A person couldn't say this was paradise.]]
 
 Well, Darling what you doing good for yourself these days. Bet the country is really nice around there these summer days. Guess Carroll is home or he has probably gone back to work by the time you get this. Sure hope he had a lovely vacation which no doubt he did. Would like to have been there with him. I do get home sick once in awhile. Anybody would I guess if they thought to much about home. [[I miss you a terrible lot, Joan & would give anything just to see you.]]
 
 Well Joan I don't know anything worth writing. I'm always thinking of you & I know I love you more than words can say. Write to me when ever you can as your letters are welcome very much. If you ever want or can do anything for you. Just let me know. Tell all I said hello for me. Be good & take care of yourself.
-
-                                                          Lots of Love & Kisses,
-                                                              Yours always "Gene"
-
-(R.E. Lankford)

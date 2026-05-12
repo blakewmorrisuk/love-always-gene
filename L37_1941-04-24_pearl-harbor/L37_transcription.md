@@ -23,13 +23,6 @@ note: |
 
 ---
 
-April 24, 1941
-                                                          U.S.S. New Orleans
-                                                          Pearl Harbor, Honolulu, T.H.
-                                                          F Division
-
-Dear Joan,
-
 I am going too write you a few lines tonight although I haven't heard from you agin. There is a steamer going out tomorrow so I thought it would be the best not to let it leave without writting too some one. Anyway I promise to write you a letter every week if I didn't get one from you.
 
 Hope this finds all well and happy. Of course you know without me telling you I'm alright.
@@ -47,6 +40,3 @@ Well there isn't much going on out here. We will go out to sea Monday and stay o
 Don't you think I have said enough for once and anyway there isn't much to write and if there were I, or maybe I wouldn't write it anyway.
 
 Joan don't let them work you too hard and don't do anything I wouldn't want you to do. When ever you haven't anything else to do pick up a pen and sheet of paper and drop me a line or two. You never know how much I like getting your letters. Will close now but I will write agin soon. Be good so well I.
-
-                                                          With Lots of Love,
-                                                                          Gene

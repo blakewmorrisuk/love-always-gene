@@ -22,19 +22,13 @@ note: |
 
   Inside date "Wed. Sept. 24" — Gene wrote Wed. Sep 24 and the letter was postmarked Thu. Sep 25. Postmark used as canonical date.
 
-  Notable content: (1) **follow-up to the L52 marriage proposal** — Joan apparently asked in her last letter if Gene still wanted her to make "that promise," and Gene replies "darn well that still want it. There isn't anything that would be more satisfying then that. My eyes would be sparkling with joy if you would. Think it over Honey and let me know." Postscript reinforces: ("Think hard Joan"); (2) Gene's first acknowledgment of war-duration uncertainty — "Sometimes I think that it won't last long and again it looks like it might last for years." Earlier letters predicted imminent U.S. entry; this is the first time Gene engages with how *long* the war might last.
+  Notable content: (1) **follow-up to the L52 marriage proposal** — Joan apparently asked in her last letter if Gene still wanted her to make "that promise," and Gene replies "darn well that still want it. There isn't anything that would be more satisfying then that. My eyes would be sparkling with joy if you would. Think it over Honey and let me know." Postscript reinforces: ("Think hard Joan");
+
+  (2) Gene's first acknowledgment of war-duration uncertainty — "Sometimes I think that it won't last long and again it looks like it might last for years." Earlier letters predicted imminent U.S. entry; this is the first time Gene engages with how *long* the war might last.
 
   Also: Mrs. Gentry has died (Stanford acquaintance); sister Martha was sick but is now better; Gene catches a cold in the Bremerton damp; movies seen: "So Ends Our Night" (1941 Lewis Milestone film about anti-Nazi refugees) and "Shepherd of the Hills" (1941 John Wayne film); Joan's grandmother has forgiven Gene and Joan for "the trouble we cause her" — open about what; Joan's breast condition mentioned again (Gene urging a doctor's visit).
 
 ---
-
-Wed. Sept. 24
-                                                          U.S.S. New Orleans
-                                                          % Postmaster
-                                                          Bremerton, Wash.
-                                                          F Division
-
-Dearest "Joan",
 
 Your letter came a few minutes ago and thought I would answer it right back. Let me tell you right now, sweetheart that you can write an awful sweet letter. I'm sorry about Joan getting sick on cherry preserves. Next time I guess you won't eat so many of them.
 
@@ -49,6 +43,3 @@ Joan, you never said how the place on your breast was. Did you ever go to the Dr
 Joan, I saw an awful good movie last night and it made twice I have seen it but I still thought it was awful good. If it comes to Stanford go & see it. "So Ends our Night" is the name of it. There is a good on also tonight and I going to see it. It's "Shepherd of the Hills."
 
 Well, Darling, please write to me more often for your letters seem so far apart. I'm not much of an writter but I will promise that I answer every one of them. Be good Joan and I will be thinking about you every minute of the day. I have been dreaming about you every night since I been back.
-
-                                                          With Lots & Lots of love
-                                                                  always, "Gene"

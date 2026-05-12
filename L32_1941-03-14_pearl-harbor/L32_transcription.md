@@ -21,20 +21,15 @@ note: |
 
   Inside date "March 14, 1941" matches the postmark.
 
-  Notable content: (1) Gene's first explicit reference to the European war — joking that his brothers' goats (named Jim & Buck) will be "just as bad as Hitler & Mussolini when they get a little larger." Even in joke form this is the first time the Axis names appear in any of Gene's letters in this archive. (2) A more specific stateside-return projection — June or July 1941 — continuing the deployment thread (cf. L26 "March 15," L30 "three months," L29 "twenty days leave").
+  Notable content: (1) Gene's first explicit reference to the European war — joking that his brothers' goats (named Jim & Buck) will be "just as bad as Hitler & Mussolini when they get a little larger." Even in joke form this is the first time the Axis names appear in any of Gene's letters in this archive.
+
+  (2) A more specific stateside-return projection — June or July 1941 — continuing the deployment thread (cf. L26 "March 15," L30 "three months," L29 "twenty days leave").
 
   Also notable: Gene reports ten days at sea in rough weather (no mail in or out — the planes couldn't fly); Dad has arranged for the Stanford paper to be mailed to Gene; siblings/family pet roll-call (Peggy and cats, Jim & Buster with goats).
 
   Closing annotation: Gene drew an arrow from a marginal note "(this is special)" pointing to a heavy round ink-spot deliberately placed on the line "Love and Kisses," — likely meant as a kiss-mark or affection token. Preserved in the body as `[•]` with the annotation on the following line; the description here in `note:` is the authoritative reading.
 
 ---
-
-March 14, 1941
-                                                          U.S.S. New Orleans
-                                                          Pearl Harbor, Honolulu, T.H.
-                                                          F Division
-
-Dearest Joan,
 
 Received your sweet letter yesterday and will try to write back a few lines tonight. Hope this finds you and the rest of the family in the best of health.
 
@@ -57,8 +52,3 @@ likes their goats and I will have to say that, Peggy thinks a lot of her cats. I
 Joan you might not be able to read this letter for this darn pen doesn't write but once in awhile and I think tonight is about time to throw it away.
 
 Well Joan you made your letter short and I going to do the same. When you write a longer letter so will I. Anyway there isn't much to write but I promise to write again real soon. So saying, Goodbye sweet, until the next time.
-
-                                                          Love and Kisses, [•]
-                                                                          Gene
-
-                                                              ↑ (this is special)

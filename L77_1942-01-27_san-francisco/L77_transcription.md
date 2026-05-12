@@ -22,22 +22,16 @@ note: |
 
   Letter is short — page 1 + a second sheet imaged as a single bifold-style spread (image count 3 total: envelope, page 1, page 2-spread).
 
-  Notable content: (1) **Gene gently confronts Joan about a bitter letter** — "Darling, your letter didn't seem like your self. You surely had hate in your heart." Joan's most recent letter struck Gene as out of character. The phrasing is tender; Gene calls out the mood without escalating. (2) **Marriage commitment reaffirmed for the third time post-attack** — "Joan, you know darn well I still care for you & always will. Sure the promise still stands. We won't have to wait much longer. Will we?" Continuing the L74 / L76 reaffirmation arc (the promise still standing post-Pearl Harbor), now with an explicit timeline hint ("We won't have to wait much longer").
+  Notable content: (1) **Gene gently confronts Joan about a bitter letter** — "Darling, your letter didn't seem like your self. You surely had hate in your heart." Joan's most recent letter struck Gene as out of character. The phrasing is tender; Gene calls out the mood without escalating.
+
+  (2) **Marriage commitment reaffirmed for the third time post-attack** — "Joan, you know darn well I still care for you & always will. Sure the promise still stands. We won't have to wait much longer. Will we?" Continuing the L74 / L76 reaffirmation arc (the promise still standing post-Pearl Harbor), now with an explicit timeline hint ("We won't have to wait much longer").
 
   Also: **SF weekend confirmed** — "I spent the week-end in San Francisco. Sure had a swell of a time" (matches L76 narrative); **Joan's grandmother is sick** — Gene says, with self-deprecation, "Sometimes I wonder if she still has it in for me. I believed she was glad to see me leave when I were home. Anyhow she probably had a good reason to hate me. Yes. Maybe I didn't treat her as nice as I should"; **Trouble at Highland** — Joan and "you girls" had trouble at Highland school involving the boys getting back at "Mr. Mc." — Gene's response: "When a person gamble he shouldn't cry over spilt milk. I use to play basketball at one time. After all it's only a sport"; **Joan jealous of a "certain girl"** — "That certain girl you mention I wouldn't let her stand in my way of taking that trip. I don't know what you got against her. It's probably not any of my business any way." Gene defends his own choices on his recent leave-trip home.
 
 ---
-
-                                                          Monday Nite
-                                                          January 26
-
-Dearest Joan;
 
 I got your very interesting letter today and was surely glad to hear from you once agin. Guess you have heard from me by how as I have written to you at least three times. In fact I wrote you a letter couple of days ago.
 
 I'm sure sorry to hear about your grand mother being so sick. Hope this finds her much better. Sometimes I wonder if she still has it in for me. I believed she was glad to see me leave when I were home. Anyhow she probably had a good reason to hate me. Yes. Maybe I didn't treat her as nice as I should. I don't know.
 
 Well Joan I'm as well as usual. I spent the week-end in San Francisco. Sure had a swell of a time. [[Darling, your letter didn't seem like your self. You surely had hate in your heart.]] The trouble that you girls had at Highland well I only know one side of the story. You know it could be that the boys had a reason to get even with Mr. Mc.— When a person gamble he shouldn't cry over spilt milt. I use to play basketball at one time. After all it's only a sport.
-
-That certain girl you mention I wouldn't let her stand in my way of taking that trip. I don't know what you got against her. It's probably not any of my business any way. [[Joan, you know darn well I still care for you & always will. Sure the promise still stands. We won't have to wait much longer. Will we?]] Be good & write to me soon, Darling. Love Always, Gene
-                                                          R.E. Lankford.

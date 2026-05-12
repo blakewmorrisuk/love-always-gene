@@ -28,21 +28,14 @@ note: |
 
   **THE ENTIRE LETTER IS ONE PAGE.** Plain stationery, no page number, no U.S. NAVY letterhead. Sharply shorter than every preceding letter.
 
-  Notable content: (1) **"We aren't suppose to write a thing about whats going on"** — Gene's explicit acknowledgment of the navy's censorship rule. The U.S.S. New Orleans was moored at the 10/10 dock in Pearl Harbor during the attack and took partial battle damage; Gene cannot mention any of this. The naked statement of what Gene CAN'T say is the central act of this letter. (2) **"I know how every one feels about this back there. Anyway there isn't any use in worrying"** — Gene's reassurance to Joan and the family back in Stanford, knowing they have seen newsreel and radio coverage of Pearl Harbor and have likely feared for his life over the past four days. The first survival-letter in the archive.
+  Notable content: (1) **"We aren't suppose to write a thing about whats going on"** — Gene's explicit acknowledgment of the navy's censorship rule. The U.S.S. New Orleans was moored at the 10/10 dock in Pearl Harbor during the attack and took partial battle damage; Gene cannot mention any of this. The naked statement of what Gene CAN'T say is the central act of this letter.
+
+  (2) **"I know how every one feels about this back there. Anyway there isn't any use in worrying"** — Gene's reassurance to Joan and the family back in Stanford, knowing they have seen newsreel and radio coverage of Pearl Harbor and have likely feared for his life over the past four days. The first survival-letter in the archive.
 
   Also: Gene received "your two letters a few days ago" — likely Joan's pre-attack letters had reached him before Dec 7; he tells Joan to take this short note as his answer. Closing P.S.-style note after the signature: "Looking for an answer soon."
 
 ---
 
-                                                          U.S.S. New Orleans
-
-Dear Joan,
-
 Just a few words to say hello & let you know that I'm fine. Received your two letters a few days ago & you will have to take this for an answer. [[We aren't suppose to write a thing about whats going on.]] Guess that won't be hard to understand. Write to me soon & I will try too agin soon. [[I know how every one feels about this back there. Anyway there isn't any use in worrying.]]
 
 Give my love to all.
-
-                                                          Always
-                                                              Raymond E. Lankford
-
-Looking for an answer soon.

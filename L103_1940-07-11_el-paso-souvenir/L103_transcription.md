@@ -35,8 +35,6 @@ note: |
 
 ---
 
-[SOUVENIR FOLDER — EL PASO, TEXAS — no handwritten message]
-
 [[Address: Miss Joan Northcutt / Stanford, Ky. / Route 9 (or 4)]]
 Postmark: El Paso, Tex. — Jul 11, 7:30 PM, 1940
 Sent at 1½¢ "postage without message" rate

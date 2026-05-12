@@ -27,13 +27,6 @@ note: |
 
 ---
 
-Feb 13, 1941
-                                                          U.S.S. New Orleans
-                                                          Pearl Harbor, Honolulu, T.H.
-                                                          F Division
-
-Dearest Joan,
-
 Received your letter today and will write a few lines back while thinking of you tonight. I'm really glad you like the picture for I thought maybe you wouldn't think very much of it.
 
 We have just gotten in the harbor this afternoon and it sure is nice to get in after a week out at sea. Glad the weather is beginning to warm up back there. I sure have had a nice winter out here for it has been just like summer all year round. Yes Joan we are still wearing short pants and they sure are alright when it comes to keeping cool. All we wear is short pants and a undershirt. But it seems funny to you. I sorry to hear about Bill having the flu twice and I believe you when you say once is enough.
@@ -51,7 +44,3 @@ Joan, [strikethrough: Don't] Don't let that Latin get you down. I know you will 
 Jo, you never write too much and I don't get tired of reading it [strikethrough: ever] either. So please make the letters as long as you like.
 
 Will close now and be sure to write soon. Your letters sure helps a lot. You never can guess how much I think of you. Be good.
-
-                                              With Love & lots of kisses,
-                                                                Yours,
-                                                                  Gene

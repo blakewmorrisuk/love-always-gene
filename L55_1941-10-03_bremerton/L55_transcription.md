@@ -21,19 +21,13 @@ note: |
 
   Inside date "Thursday Oct 2" — Gene wrote Thurs. Oct 2 and the letter was postmarked Fri. Oct 3. Postmark used as canonical date.
 
-  Notable content: (1) Gene continues his exit-from-navy thread from L48 → L49 → L50 → L52 → L53 — "I'm comming out of the navy though"; (2) **Gene reads Joan's silence as a no on the marriage proposal** — "I won't ask you to make me that promise again, Joan I can understand how you feel about it." Withdraws the L52 proposal after Joan's L53/L54-era replies didn't commit. He also pre-emptively releases her: "Joan, I want you to know that you aren't under no obligations to me what so ever. It's for you to decide what you want. There isn't a thing that I can promise you. You could find some one else that would beat me by a long shot."
+  Notable content: (1) Gene continues his exit-from-navy thread from L48 → L49 → L50 → L52 → L53 — "I'm comming out of the navy though";
+
+  (2) **Gene reads Joan's silence as a no on the marriage proposal** — "I won't ask you to make me that promise again, Joan I can understand how you feel about it." Withdraws the L52 proposal after Joan's L53/L54-era replies didn't commit. He also pre-emptively releases her: "Joan, I want you to know that you aren't under no obligations to me what so ever. It's for you to decide what you want. There isn't a thing that I can promise you. You could find some one else that would beat me by a long shot."
 
   Also: Gene's vision for civilian life — "all I ever want to be is just a farmer … Some day I hope to owned a small farm of mine own" — first time the farming aspiration is stated explicitly; predicts post-war economic slowdown ("All of this defense work will stop and a guy won't have a chance to get a job anywhere"); ship will be at Bremerton "about a month longer" then Long Beach for "a very short while" before back to Honolulu — confirms the L51 conditional (ship's going back unless war intervenes); Christmas in Honolulu doesn't feel like Christmas; brothers Carroll and Thomas (drafted into the Army) and sister Martha all home for a weekend Gene missed; Louise Dunagan's Stanford address shared per Joan's request.
 
 ---
-
-Thursday Oct 2
-                                                          U.S.S. New Orleans
-                                                          % Postmaster
-                                                          Bremerton, Wash.
-                                                          F Division
-
-Dearest Joan,
 
 Received your letter yesterday and tonight is the first chance I had to answer it. I know you think that I write to often, anyhow. If I didn't write to you I wouldn't know what to do with myself.
 
@@ -56,6 +50,3 @@ You could find some one else that would beat me by a long shot. I thought I had 
 [[I won't ask you to make me that promise again]], Joan I can understand how you feel about it.
 
 Well, guess there isn't a lot to write about. Anyway will have to close as I better write the folks a few lines tonight. Write soon, Joan. Be good.
-
-                                                          Love & Kisses
-                                                                  always, "Gene"

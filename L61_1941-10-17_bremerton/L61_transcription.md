@@ -20,21 +20,13 @@ note: |
 
   Inside date "Thursday Nite Oct 16" — Gene wrote Thurs. Oct 16 and the letter was postmarked Fri. Oct 17. Postmark used as canonical date.
 
-  Letter pages are plain lined stationery, numbered (1), (2), (3), (4), (5) in Gene's hand. Five sheets total.
+  Notable content: (1) "It's only be a matter of time now until we'll be in the war" followed by Gene's fatalist coda — "there's only one way for a guy to died and he got to go some time or other. So why worry about it." Mortality acceptance, paired with operational news: sea trial Sunday Oct 19 (seven hours), back to yard until Oct 21, then down the coast via San Francisco / Los Angeles / Long Beach, then back to Hawaii.
 
-  Notable content: (1) "It's only be a matter of time now until we'll be in the war" followed by Gene's fatalist coda — "there's only one way for a guy to died and he got to go some time or other. So why worry about it." Mortality acceptance, paired with operational news: sea trial Sunday Oct 19 (seven hours), back to yard until Oct 21, then down the coast via San Francisco / Los Angeles / Long Beach, then back to Hawaii. (2) **Gene's FINAL withdrawal of the marriage proposal** — "I have been trying for three months now and begging you to promise. I'm not any better off than when I started. So I promise I won't ask you again." Caps the arc: L52 proposal → L55 first withdrawal → L57 re-ask → L59 third request → L60 ultimatum with date ("June, 1943") → L61 final withdrawal.
+  (2) **Gene's FINAL withdrawal of the marriage proposal** — "I have been trying for three months now and begging you to promise. I'm not any better off than when I started. So I promise I won't ask you again." Caps the arc: L52 proposal → L55 first withdrawal → L57 re-ask → L59 third request → L60 ultimatum with date ("June, 1943") → L61 final withdrawal.
 
   Also: Jack Parkhurst says he is getting married next year — ironic juxtaposition with Gene's own withdrawal; Gene revises his pay-home plan from $40/month (L56) to $30/month; mother worrying about Gene in the navy; Gene comments on a "southern picture" Joan saw with a girl who "had the southern talk."
 
 ---
-
-Thursday Nite Oct 16
-                                                          U.S.S. New Orleans
-                                                          % Postmaster
-                                                          Bremerton, Wash.
-                                                          F Division
-
-Dearest Joan;
 
 Your letter came today and will try to write a line or two tonite, while thinking about you. Sure glad to get the letter as it seems such a long time between each letter. Haven't heard from home for a week or more now. Should be getting a letter before long, though. They at the average write about once a week. Guess Carroll and Martha will be there for a few days to keep them company. I think Mother worry her-self to much about me being in this navy. She shouldn't and wished I could keep her from worrying. Guess all mothers are that way. [[It's only be a matter of time now until we'll be in the war.]] There isn't even a small chance for us to keep out. I hate to see it come just as much as anybody and wished it wouldn't. The way I look at it though, there's only one way for a guy to died and he got to go some time or other. So why worry about it.
 
@@ -47,7 +39,3 @@ So you aren't going to make that promise at all. There isn't anything else I kno
 Yes, Joan, Jack is a change boy since he came back from leave. I think or any way he says he's going get married next year. If he can get the leave to go home. We just sit around at nights talking & listen to the radio. Also take in a movie if it's any good.
 
 Well, guess I wrote enough for once. Better write the folks a few words too. They kindly expect me to write about three letters to their one. I'm going to send them thirty dollars a month of my pay from now on. No use for me saving it and it will do them more good. Write soon, Joan and be good.
-
-                                                          With Love
-                                                              always
-                                                                  Gene

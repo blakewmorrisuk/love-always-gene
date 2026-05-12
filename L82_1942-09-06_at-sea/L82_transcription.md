@@ -26,18 +26,13 @@ note: |
 
   **Historical context:** September 6, 1942 — the U.S. Marines landed at Guadalcanal Aug 7, 1942. By Sep 6, the Guadalcanal campaign was in its first month and the Battle of Savo Island (Aug 9) had just been lost. The U.S.S. New Orleans was operating in the South Pacific in support of Guadalcanal operations. Gene is writing in active wartime theater.
 
-  Notable content: (1) **Censorship explicit — "if I did they would only be cut out"** — "Joan you can write very interesting letters. Sure wished I could answer all your questions, but if I did they would only be cut out." First time Gene explicitly references the censor's cutting/cutting-out action; previous censorship references were oblique ("can't talk of any of that," "we aren't suppose to write a thing about whats going on"). This makes the censor's editorial hand concrete. (2) **JOAN IS KEEPING ALL OF GENE'S LETTERS** — "No I didn't know you were keeping all my letters. Surely have a lot of them by now I bet. Aren't you afraid the wrong person might get a hold of them?" Gene learns from Joan's letter that she has been preserving the correspondence. **THIS IS WHY THE ARCHIVE EXISTS.** Joan's preservation, started in 1940 or earlier, has created the corpus Blake is now transcribing. Wry concern about the letters being intercepted ironic given that censored mail itself was the most-surveilled correspondence.
+  Notable content: (1) **Censorship explicit — "if I did they would only be cut out"** — "Joan you can write very interesting letters. Sure wished I could answer all your questions, but if I did they would only be cut out." First time Gene explicitly references the censor's cutting/cutting-out action; previous censorship references were oblique ("can't talk of any of that," "we aren't suppose to write a thing about whats going on"). This makes the censor's editorial hand concrete.
+
+  (2) **JOAN IS KEEPING ALL OF GENE'S LETTERS** — "No I didn't know you were keeping all my letters. Surely have a lot of them by now I bet. Aren't you afraid the wrong person might get a hold of them?" Gene learns from Joan's letter that she has been preserving the correspondence. **THIS IS WHY THE ARCHIVE EXISTS.** Joan's preservation, started in 1940 or earlier, has created the corpus Blake is now transcribing. Wry concern about the letters being intercepted ironic given that censored mail itself was the most-surveilled correspondence.
 
   Also: **Mail backlog clears** — Gene got 3 letters from Joan in a few days; **2 letters from home**, one from Martha (Gene's sister); **Carl was home** — new name in the archive, presumably Joan's family/friend; **Martha (sister) recovering slowly** — "spending a month away from the City … can't see why it's taking her so long in getting her health back agin"; **Carroll's vacation confirmed**; **Joan has a new watch + dress** Gene saw in a picture (or photo Joan sent); **Peggy and her cats** — Joan's sister Peggy "foolish about cats"; **Jim** referenced — "How you & Jim getting along with each other these days" — Jim has appeared before (L68 dream); **Inside joke "Buster & his 13 kisses, that certain day"** — affectionate memory possibly about Joan's dog or a person nicknamed Buster; **Family endorsement of Joan** — "The whole family I know thinks the world of you, Joan. Mother always writes about you in her letters & also Martha"; **Joan's grandmother still sick.**
 
 ---
-
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco
-                                                          F Division, Calif.
-
-Dearest Joan,
 
 Darling I finally received three of your letters a few days past. You never know how much I appreciated them as they are so long in reaching me. Tonight I'm going do my best to drop you a few words as I have the chance to mail a letter. Also two letters came from home and one of them was from Martha. She occasionally writes me a few lines. [[No kidding Joan you can write very interesting letters. Sure wished I could answer all your questions, but if I did they would only be cut out.]]
 
@@ -50,8 +45,3 @@ Well, Darling I'm still in the best of health. Hope this finds every one there t
 The whole family I know thinks the world of you, Joan. Mother always writes about you in her letters & also Martha whenever she writes.
 
 Well, as you know there's really not anything new for me to write that's interesting. I'm looking for several more letters from you which I know have been on the way sometime now. Tell all I said hello for me. Hope your grandmother is better but guess she isn't, though. Will be thinking of you every minute we are apart & still love you as always. Be good & Bye.
-
-                                                          Lots of Love & Kisses,
-                                                              Yours always "Gene"
-
-(R.E. Lankford)

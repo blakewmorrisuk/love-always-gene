@@ -26,19 +26,13 @@ note: |
 
   **This letter is written in PENCIL** (not pen) — Gene apologises in the P.S. ("P.S. Please Excuse pencil.").
 
-  Notable content: (1) Gene's stated preference for the **Atlantic theater over the Pacific** — "We probably go back to Honolulu from here, but I hoping we don't. I want to go around on the East coast myself. Although if we go around there we will probably have convoy duty. I would rather have convoying around there than to go back to, Honolulu." Gene would prefer the dangerous Atlantic convoy work to the routine Pacific assignment. (2) Gene wants U.S. entry — "Sometimes I wished we would hurry and get in the war & get it over with. If we got to crush Germany ourselves the sooner the better." First time Gene has expressed an active desire for U.S. entry rather than just prediction.
+  Notable content: (1) Gene's stated preference for the **Atlantic theater over the Pacific** — "We probably go back to Honolulu from here, but I hoping we don't. I want to go around on the East coast myself. Although if we go around there we will probably have convoy duty. I would rather have convoying around there than to go back to, Honolulu." Gene would prefer the dangerous Atlantic convoy work to the routine Pacific assignment.
+
+  (2) Gene wants U.S. entry — "Sometimes I wished we would hurry and get in the war & get it over with. If we got to crush Germany ourselves the sooner the better." First time Gene has expressed an active desire for U.S. entry rather than just prediction.
 
   Also: Gene has been gone from Joan exactly "a month & four days"; sister Martha had an appendectomy at the same time as brother Carroll's operation ("kindly strange by both of them being operated on for the same thing and the same time"); Jack Parkhurst back from leave, reassigned from Office to Deck force (didn't like it); Gene rode around Bremerton with Parkhurst, refused to drink ("he wanted to get drunk but I wouldn't even take a drink with him"); Joan and Charlotte horseback riding to Sugar Loaf Mountain.
 
 ---
-
-Wednesday Oct. 8.
-                                                          U.S.S. New Orleans
-                                                          % Postmaster
-                                                          Bremerton, Wash.
-                                                          F Division
-
-My Dearest Joan;
 
 Your sweet letter came today and thought I would write you a few lines tonight while thinking so much about you. Joan, I'm always looking forward from one of your letters to the other. They are about all that helps me going from one day to the next. You might think that I don't think about you much, but you are on my mind every minute of the day. So, you know that at nights I couldn't keep from dreaming about you. I'll give anything just to be with you awhile tonight. You know, Joan I have been gone from you a month now. I be (over) exact a month & four days. Seems like to me it has been ages. Darling, you ask when I thought I would get to come back agin. Well I hope it won't be too long and of course you know just about as much about it than I do. I don't expect I will get to come back until the war is over, though.
 
@@ -61,6 +55,3 @@ Joan I sure wished you could see some of the country & things around here. There
 Joan, I hope you past the six weeks test you said something about had to studing for.
 
 Honey, please keep writting to me every chance you have. I hate to write so much but if I can't get a letter from you about three times a week I go crazy. You know without me telling you how much I'm in love with you. Be good Darling.
-
-                                                          With lots of Love,
-                                                                  Yours, "Gene"

@@ -19,15 +19,11 @@ note: |
 
   Gene did not date the letter at the top — only the return-address block. Postmark used as canonical date.
 
-  Notable content: (1) a vivid pre-war Pacific operation — Gene watches at sea while six or more ships search by searchlight for a downed Army bomber the night before the New Orleans returned to harbor, ending with the recovery of five crewmen alive in the floating plane the next morning; (2) the ongoing stateside-return thread, now stated more confidently than in L26/L27/L29/L30 ("it won't be long before we being heading back to the states and it won't be too soon for me"). Also: Joan has been sick; Gene reports a camping trip continuing the L28 Nanakuli pattern (this one with dancing and drinking on weekends).
+  Notable content: (1) a vivid pre-war Pacific operation — Gene watches at sea while six or more ships search by searchlight for a downed Army bomber the night before the New Orleans returned to harbor, ending with the recovery of five crewmen alive in the floating plane the next morning;
+
+  (2) the ongoing stateside-return thread, now stated more confidently than in L26/L27/L29/L30 ("it won't be long before we being heading back to the states and it won't be too soon for me"). Also: Joan has been sick; Gene reports a camping trip continuing the L28 Nanakuli pattern (this one with dancing and drinking on weekends).
 
 ---
-
-                                                          U.S.S. New Orleans
-                                                          Pearl Harbor, Honolulu, T.H.
-                                                          F Division
-
-Dearest Joan,
 
 Received your letter about two days ago and sure glad to get the letter but didn't like the news about you being sick. I hope this letter finds you again in the best of health and also the rest of the family. Yes, Jo, I'm O.K. and haven't been sick a day since I have been out here. Haven't heard from home for over a week now. Did I tell you about Buster writting me a letter? Although he didn't write much but what he did write was nice.
 

@@ -28,34 +28,16 @@ note: |
 
   Salutation "My Dearest Joan;" — variant with "My" prefix; first appearance since L58.
 
-  Letter pages are plain lined stationery, numbered I., (2), (3) in Gene's hand. Three sheets total. **Page 3 carries the NEW return address** Gene wants Joan to use going forward: "U.S.S. New Orleans / % Fleet Post Office / Pearl Harbor, T.H. / F Division." This is the first Pearl Harbor address in the archive since the L24 era — the ship's mail routing now reverts to the Pacific.
+  Notable content: (1) **THE MARRIAGE PROMISE IS MADE** — "Darling, I'm so happy this morning & it's an sin because I'm going to Honolulu, either. I'm so glad you finally decided to make me that promise that I don't hardly know what to do with myself." After L52's proposal, the L55/L57/L61/L63/L64 oscillations, and the canceled-then-rescheduled phone call in L65, Joan has agreed. Gene mentions Joan's letter is expected to follow him to Hawaii ("If I don't get that letter you said you wrote this morning it probably be waiting in, Honolulu"). The climax of the entire marriage-promise arc, recorded on the morning of the Pacific departure.
 
-  Notable content: (1) **THE MARRIAGE PROMISE IS MADE** — "Darling, I'm so happy this morning & it's an sin because I'm going to Honolulu, either. I'm so glad you finally decided to make me that promise that I don't hardly know what to do with myself." After L52's proposal, the L55/L57/L61/L63/L64 oscillations, and the canceled-then-rescheduled phone call in L65, Joan has agreed. Gene mentions Joan's letter is expected to follow him to Hawaii ("If I don't get that letter you said you wrote this morning it probably be waiting in, Honolulu"). The climax of the entire marriage-promise arc, recorded on the morning of the Pacific departure. (2) **Last letter from the U.S. — Pearl Harbor address takes effect** — "the mail is about to leave the ship & I want to get this ashore before we get under-way. I promise to write you a real long letter just as soon as I get to, Hawaii" + the new "Pearl Harbor, T.H." address at the bottom of page 3. The ship is sailing for Hawaii within minutes of this letter being mailed.
+  (2) **Last letter from the U.S. — Pearl Harbor address takes effect** — "the mail is about to leave the ship & I want to get this ashore before we get under-way. I promise to write you a real long letter just as soon as I get to, Hawaii" + the new "Pearl Harbor, T.H." address at the bottom of page 3. The ship is sailing for Hawaii within minutes of this letter being mailed.
 
   Also: Gene confirms he made a long-distance phone call the previous night — "That telephone call last night I made was for the same reason. I wanted to see if you had changed your mind before I left the states." So the L64/L65 phone-call plan DID happen, just one night earlier (Wed Nov 5) than originally planned. Gene's pledges in the moment of joy: "I going to be the best boy in the navy. I haven't had even one drink since I came back off of leave. I would even stop smoking cigarettes if you say so. I going to do everything I can to keep you from being sorry, you made that promise." First time Gene volunteers to quit smoking; first explicit "best boy" pledge.
 
 ---
-
-Thursday, Nov. 6
-                                                          U.S.S. New Orleans
-                                                          % Postmaster
-                                                          Long Beach, Calif.
-                                                          F Division
-
-My Dearest Joan;
 
 Well I only write a few lines this morning before we get under-way for, Hawaii. Sure hope you will be able to read this as I have only about five minutes left to write.
 
 [[Darling, I'm so happy this morning & it's an sin because I'm going to Honolulu, either. I'm so glad you finally decided to make me that promise that I don't hardly know what to do with myself.]] If I don't get that letter you said you wrote this morning it probably be waiting in, Honolulu Got me the day I leave got there. That telephone call last night I made was for the same reason. I wanted to see if you had changed your mind before I left the states. Darling I sure hope you not sorry that you made it. I love you so much that nothing else in life makes any different to me. I going to be the best boy in the navy. I haven't had even one drink since I came back off of leave. I would even stop smoking cigarettes if you say so. I going to do everything I can to keep you from being sorry, you made that promise.
 
 Honey, I would like to write more but [[the mail is about to leave the ship & I want to get this ashore before we get under-way. I promise to write you a real long letter just as soon as I get to, Hawaii.]] Anyway I will have a lot to write & sure would like to now, but can't. Be good Darling & I'll be thinking about you every minute. Please write very soon.
-
-                                                          With All my love & K[isses]
-                                                              Yours
-                                                                  "Gene"
-
-My Address:
-U.S.S. New Orleans
-% Fleet Post Office
-Pearl Harbor, T.H.
-F Division

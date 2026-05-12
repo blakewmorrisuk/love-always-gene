@@ -22,19 +22,13 @@ note: |
 
   Salutation "Dearest Darling;" with semicolon — new variant in the archive.
 
-  Notable content: (1) "We are so close to war now that I think the fleet will spread out and move around more" — Gene's prediction of imminent fleet dispersion; (2) **the historic shoot-on-sight order** — "the navy orders are to sink any enemy ship seen in American waters." This references FDR's "shoot on sight" speech of Sept 11, 1941, which directed the U.S. Navy to attack German vessels in American defensive waters following the Greer incident. Gene's awareness of this order, on a Pacific ship in a Pacific yard, dates how broadly the order was disseminated to the fleet.
+  Notable content: (1) "We are so close to war now that I think the fleet will spread out and move around more" — Gene's prediction of imminent fleet dispersion;
+
+  (2) **the historic shoot-on-sight order** — "the navy orders are to sink any enemy ship seen in American waters." This references FDR's "shoot on sight" speech of Sept 11, 1941, which directed the U.S. Navy to attack German vessels in American defensive waters following the Greer incident. Gene's awareness of this order, on a Pacific ship in a Pacific yard, dates how broadly the order was disseminated to the fleet.
 
   Also: mail logistics — only one ship per week to Honolulu, five-day transit, so letters will take longer once the ship returns; Jack Parkhurst's leave ends 8:00 AM next morning, Gene expects him back any minute (Gene also worries Parkhurst may come back married); brother Carroll's operation; Tommy returning to work; Gene has been listening to the 1941 World Series (Yankees vs Dodgers, Oct 1–6) every morning; Gene has saved $100 and is sending $40/month home; Alberta and Bill (presumably Gene's sister and brother-in-law) wrote telling Gene to "hurry back and marry that sweet girl of mine & settle down" — directly contrary to L55 where Gene had just withdrawn the marriage proposal.
 
 ---
-
-Saturday Oct 4
-                                                          U.S.S. New Orleans
-                                                          % Postmaster
-                                                          Bremerton, Wash.
-                                                          F Division
-
-Dearest Darling;
 
 Your letter came this morning and as this is Saturday night I can't think of anything else I would rather do then to answer your sweet letter. I have got to write you an letter every other day anyway, although I want to write every day. There isn't much to write, but it makes me feel better some way if I write to you. Seems like we are closer together where I can hear from you so often. You, when I get back out at Honolulu, it will take a letter a lot longer to get there. Only about one ship a week sails out there and it takes it around five days to make the trip. I don't know for sure, whether we are going back there and I praying that (over)
 
@@ -57,6 +51,3 @@ back out to sea agin. There sure are a lot of men working in this place. Afterno
 Joan, I got a letter from Alberta & Bill yesterday. The letter, Bill wrote was quite some letter wished you could read it. He told me to hurry back and marry that sweet girl of mine & settle down. Guess you know who he was laughing about. He said he understood how I felt about you.
 
 Well, don't you think I wrote enough for once, honey. Keep writting to me Sweetheart every chance you get. I'm always dreaming & thinking about you. Be good Darling.
-
-                                                          With Loads of Love & Kisses,
-                                                                          Yours, "Gene"

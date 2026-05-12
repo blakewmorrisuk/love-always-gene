@@ -24,27 +24,16 @@ note: |
 
   **ONE PAGE only — Gene's shortest letter since L72 (the first post-Pearl Harbor letter).** The L72 / L96 parallel is striking: Pearl Harbor first-after letter was one page, censored, formal; Tassafaronga first-after letter is one page, censored, plain.
 
-  Notable content: (1) **"Well, sweet finally I can write you a few lines again. I know you probably be awfully glad to hear from me as my letters are far between these"** — Gene's communication resumes after ten days of silence covering the torpedo strike, the makeshift bow, and the Tulagi-to-Sydney transit. Gene cannot mention any of it; what he CAN say is just that he's writing again. (2) **"Of course I'm still alright in about every way"** — Gene's understated survival declaration. After 183 crew dead, 24 missing, and the ship's bow underwater, "still alright in about every way" is the only post-Tassafaronga statement the censor allowed.
+  Notable content: (1) **"Well, sweet finally I can write you a few lines again. I know you probably be awfully glad to hear from me as my letters are far between these"** — Gene's communication resumes after ten days of silence covering the torpedo strike, the makeshift bow, and the Tulagi-to-Sydney transit. Gene cannot mention any of it; what he CAN say is just that he's writing again.
+
+  (2) **"Of course I'm still alright in about every way"** — Gene's understated survival declaration. After 183 crew dead, 24 missing, and the ship's bow underwater, "still alright in about every way" is the only post-Tassafaronga statement the censor allowed.
 
   Also: **Christmas wishes** — "Darling, it's not long now until Christmas. All I can do is wish you a merry xmas & happy New Year"; **Mail-receipt status** — "Sure has been quite sometime since I last received any mail" — Gene also hasn't received mail; **Family greeting** — "Hope this letter finds you and rest of the family in the very best of health."
 
 ---
-
-                                                          Thursday, Dec. 10
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco, Calif.
-                                                          F Division
-
-Darling Joan,
 
 [[Well, sweet finally I can write you a few lines again. I know you probably be awfully glad to hear from me as my letters are far between these.]] Anyhow Darling I'm thinking of you even though I can't write often. Sure has been quite sometime since I last received any mail.
 
 Hope this letter finds you and rest of the family in the very best of health. [[Of course I'm still alright in about every way.]]
 
 Darling, it's not long now until Christmas. All I can do is wish you a merry xmas & happy New Year. Will have to cut this letter short. Write, Joan when ever possible & I do the same. Be good
-
-                                                          Lots & lots of love & kisses
-                                                              Always "Gene"
-
-(R.E. Lankford)

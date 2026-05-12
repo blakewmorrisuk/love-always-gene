@@ -26,14 +26,6 @@ note: |
 
 ---
 
-Friday Sept. 26.
-                                                          U.S.S. New Orleans
-                                                          % Postmaster
-                                                          Bremerton, Wash.
-                                                          F Division
-
-Dearest Joan,
-
 Your letter came a few minutes ago and will try to answer it right now. No kidding, Joan your letters makes me feel so much better after reading them. I sure hope you like to write to me as much, or even half as much as I love writting to you.
 
 Joan, you sure have been having a hard time, the way you talk. Stomach ache and a swollen up ankle & may be a broken neck by now. How in the devil can you have so many things happen to you Sweetheart. You have better learn to take more care of yourself. (over) The little cold that I had is about all gone now. Might have another in a day or so though.
@@ -47,6 +39,3 @@ So Highland has got a good soft ball team this year (over) Wished I was going to
 Well, Honey really there isn't anything to write about around here. Just a lots of noise and so on. Sometimes I say if I ever get back to the country where it's peaceful & quiet I will never want to leave it agin. [[Guess I'm nothing but a country boy at heart.]]
 
 Darling, write soon and I be seeing you in my dreams too. Take it easy on those Highland Heifers for they are just kidding you to have a little fun. You know who I crazy about and always will. Good-bye, until the next letter.
-
-                                                          Loads of Love & kisses
-                                                                  Always, "Gene"

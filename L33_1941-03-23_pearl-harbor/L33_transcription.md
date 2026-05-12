@@ -24,12 +24,6 @@ note: |
 
 ---
 
-March 23, 1941
-                                                          Pearl Harbor, Honolulu, T.H.
-                                                          F Division
-
-Dearest Joan,
-
 Received your letter yesterday and as I think we are sending a plane into Pearl Harbor with the mail tomorrow I will try to write you a few lines tonight while thinking of you. Guess you think I write to darn much anyway. If I do don't bother to answer them for I know how it would be. I write them because you are the only one that I think is worth writting them to. So if you are just writting to make me feel better just forget all about them. Anyway I may not be worth it. What you think?
 
 Well, Joan I will tell you before I start that there isn't any news to write. We were in the Harbor for four days and came right back out to sea agin for ten more days. You could see that I couldn't write anything but how lovely the ocean (over)
@@ -53,6 +47,3 @@ Glad to hear about you getting along with the sheep so good. Keep the good work 
 Well Darling, I don't know very much more to write. I guess when you get in that shape you gotta do something and I can't think of anything else to do but bring this [strikethrough] letter to a close with a sweet kiss.
 
 Write if you really find time enough Joan. So I'm all yours until next time.
-
-                                                          With Love & kisses,
-                                                                          Eugene

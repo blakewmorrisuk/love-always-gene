@@ -70,9 +70,51 @@ DOUBLE_WORD_ALLOWLIST = {
 }
 
 
-def clean_body(text):
-    """Strip page markers, rejoin sentence-spanning paragraphs,
-    apply conservative typo fixes. Operates on body text only."""
+def clean_body(text, salutation=None, signature=None):
+    """Strip page markers, rejoin sentence-spanning paragraphs, strip
+    the leading date/address/salutation block and trailing signature
+    block (rendered separately by the card via letter.salutation /
+    letter.signature), and apply conservative typo fixes."""
+    text = _strip_page_markers(text)
+    text = _strip_envelope(text, salutation, signature)
+    text = _join_split_sentences(text)
+    return _clean_spelling(text)
+
+
+def _join_split_sentences(text):
+    """Rejoin adjacent paragraphs where the prev clearly ends mid-
+    sentence and the next clearly continues it — typically a blank
+    line inserted by the transcriber that doesn't correspond to a
+    page break."""
+    paragraphs = re.split(r"\n\n+", text)
+    out = []
+    for p in paragraphs:
+        if out and _continues_sentence(out[-1], p):
+            out[-1] = out[-1].rstrip() + " " + p.lstrip()
+        else:
+            out.append(p)
+    return "\n\n".join(out)
+
+
+def _continues_sentence(prev, nxt):
+    """True if `nxt` is clearly a mid-sentence continuation of
+    `prev`: prev ends without sentence punctuation AND nxt begins
+    with a lowercase letter. Indented blocks are never merged."""
+    prev_last_line = prev.rstrip("\n").split("\n")[-1]
+    if prev_last_line.startswith("    "):
+        return False
+    if _first_line_is_indented(nxt):
+        return False
+    last_meaningful = re.sub(r'[\s"\'`\]\)]+$', "", prev_last_line)
+    if not last_meaningful or last_meaningful[-1] in SENTENCE_END:
+        return False
+    first = nxt.lstrip()
+    if not first:
+        return False
+    return first[0].islower()
+
+
+def _strip_page_markers(text):
     paragraphs = re.split(r"\n\n+", text)
     out = []
     merge_next = False
@@ -82,10 +124,8 @@ def clean_body(text):
                 prev_trimmed = out[-1].rstrip()
                 merge_next = _should_merge(prev_trimmed)
                 out[-1] = prev_trimmed
-            continue  # drop the marker paragraph itself
+            continue
         if merge_next:
-            # Only merge if the next paragraph's first line looks like
-            # prose continuation (not indented address/salutation block).
             if _first_line_is_indented(p):
                 merge_next = False
                 out.append(p)
@@ -94,7 +134,104 @@ def clean_body(text):
                 merge_next = False
         else:
             out.append(p)
-    return _clean_spelling("\n\n".join(out))
+    return "\n\n".join(out)
+
+
+def _strip_envelope(text, salutation, signature):
+    """Strip the leading header block (date, return address, the
+    duplicated salutation, any V-Mail / Air-Mail preamble) and the
+    trailing signature block (indented closing + parenthetical
+    full-name). letter.salutation and letter.signature are rendered
+    separately, so leaving these in the body produces duplicates and
+    dropcap'd date headers."""
+    paragraphs = re.split(r"\n\n+", text)
+
+    # ---- leading: through and including the salutation ----
+    leading_strip_idx = None
+    sal = (salutation or "").strip()
+    if sal:
+        for i, p in enumerate(paragraphs):
+            if p.strip() == sal:
+                leading_strip_idx = i
+                break
+        if leading_strip_idx is None:
+            # Fallback: short single-line greeting in the first 5
+            # paragraphs that shares the salutation's distinctive
+            # word ("Dearest", "Dear", "My Dearest", first name).
+            head_word = sal.split(",")[0].split(";")[0].strip()
+            for i, p in enumerate(paragraphs[:5]):
+                t = p.strip()
+                if (head_word and head_word in t
+                        and len(t) <= 80 and "\n" not in t):
+                    leading_strip_idx = i
+                    break
+
+    if leading_strip_idx is not None:
+        paragraphs = paragraphs[leading_strip_idx + 1:]
+    else:
+        # No salutation match — strip leading paragraphs that look
+        # like date/return-address blocks.
+        while paragraphs and _looks_like_header(paragraphs[0]):
+            paragraphs = paragraphs[1:]
+
+    # ---- trailing: from signature onwards ----
+    sig = (signature or "").strip()
+    sig_first_line = sig.split("\n", 1)[0].strip() if sig else ""
+    if sig_first_line:
+        # Iterate from the end so we catch the closing-block
+        # occurrence, not any earlier appearance of the phrase.
+        for i in range(len(paragraphs) - 1, -1, -1):
+            if sig_first_line in paragraphs[i]:
+                paragraphs = paragraphs[:i]
+                break
+
+    # Strip trailing artifacts (heavily indented blocks, bare
+    # parenthetical full-names like "(R.E. Lankford)") that may
+    # remain after the signature-first-line match.
+    while paragraphs and _looks_like_signature(paragraphs[-1]):
+        paragraphs = paragraphs[:-1]
+
+    return "\n\n".join(paragraphs)
+
+
+def _looks_like_header(paragraph):
+    """True if paragraph looks like a leading date / return-address
+    block (multi-line with at least one heavily indented line, or a
+    single bare date line)."""
+    lines = paragraph.split("\n")
+    if any(ln.startswith("    ") for ln in lines if ln.strip()):
+        return True
+    first = lines[0].strip()
+    # "April 23, 1942" / "Sunday Oct. 12, 1941" / "Jan. 16, Thursday"
+    if re.match(
+        r"^(?:[A-Z][a-z]+(?:day)?,?\s+)?"
+        r"[A-Z][a-z]+\.?\s+\d{1,2}(?:,?\s*\d{2,4})?$",
+        first,
+    ):
+        return True
+    # "[V-MAIL FORM]" / "[Air Mail — printed in red on left margin]"
+    if re.match(r"^\[[A-Za-z\s—\-,]+\]$", first):
+        return True
+    return False
+
+
+def _looks_like_signature(paragraph):
+    """True if paragraph is a trailing closing/signature artifact —
+    an all-indented block, or a bare parenthetical full-name like
+    '(R.E. Lankford)' / '(Eugene Lankford)'."""
+    lines = [ln for ln in paragraph.split("\n") if ln.strip() or True]
+    if not lines:
+        return False
+    non_empty = [ln for ln in lines if ln.strip()]
+    if non_empty and all(ln.startswith("    ") for ln in non_empty):
+        return True
+    if len(non_empty) == 1:
+        t = non_empty[0].strip()
+        if re.match(r"^\([A-Z]\.[A-Z]\.\s+\w+\)$", t):
+            return True
+        if re.match(r"^\((?:Eugene|R\.E\.|Raymond)\b[^()]*\)$", t):
+            return True
+    return False
 
 
 def _should_merge(prev_paragraph):
@@ -249,7 +386,39 @@ def clean_note(text):
     # separators between every remaining substantive line).
     substantive = [l for l in cleaned if l.strip()]
 
-    return "\n\n".join(substantive)
+    # Split any paragraph that contains multiple (1) (2) ...
+    # enumerated items so each item renders as its own paragraph.
+    expanded = []
+    for p in substantive:
+        expanded.extend(_split_enumerated(p))
+
+    return "\n\n".join(expanded)
+
+
+def _split_enumerated(paragraph):
+    """Split paragraphs that contain a (1) (2) … enumeration into
+    one paragraph per enumerated item. The (1) item stays attached
+    to its lead-in (e.g. 'Notable content: (1) **...**'); each
+    (N) for N >= 2 starts a new paragraph."""
+    if "(1)" not in paragraph:
+        return [paragraph]
+    matches = [
+        m for m in re.finditer(r"\((\d+)\)(?=\s)", paragraph)
+        if int(m.group(1)) >= 2
+    ]
+    if not matches:
+        return [paragraph]
+    out = []
+    start = 0
+    for m in matches:
+        chunk = paragraph[start:m.start()].rstrip()
+        if chunk:
+            out.append(chunk)
+        start = m.start()
+    tail = paragraph[start:].rstrip()
+    if tail:
+        out.append(tail)
+    return out
 
 
 # ---------------------------------------------------------------------
@@ -280,9 +449,13 @@ def extract_field_value(frontmatter, key):
     The full_match_slice is the (start, end) indices in the
     frontmatter string covering the whole `key: ...` block, so the
     caller can splice a new value in."""
-    # Literal block: `key: |` followed by indented lines.
+    # Literal block: `key: |` followed by indented lines. A blank
+    # line inside the block is preserved as an empty content line in
+    # YAML, so the alternation matches whitespace-only lines too —
+    # the block ends only at the first unindented non-blank line.
     block_re = re.compile(
-        r"(^" + re.escape(key) + r":\s*\|\-?\s*\n)((?:^[ \t].*(?:\n|$))*)",
+        r"(^" + re.escape(key) + r":\s*\|\-?\s*\n)"
+        r"((?:^[ \t].*\n|^[ \t]*\n)*)",
         re.M,
     )
     m = block_re.search(frontmatter)
@@ -438,6 +611,43 @@ def update_letters_js(letters_js_text, letter_id, new_body, new_note):
     return letters_js_text[:entry_start] + new_entry + letters_js_text[entry_end:]
 
 
+def extract_quoted_string_from_letters_js(letters_js_text, letter_id, field):
+    """Read a JS double-quoted string field (e.g. salutation,
+    signature) for the given letter id. Decodes the standard
+    JS escapes \\n, \\", \\\\."""
+    id_re = re.compile(r'^\s+id:\s*"' + re.escape(letter_id) + r'",\s*$', re.M)
+    id_match = id_re.search(letters_js_text)
+    if not id_match:
+        return None
+    next_entry_re = re.compile(r"^\s*\{|^\];", re.M)
+    nxt = next_entry_re.search(letters_js_text, id_match.end())
+    entry_end = nxt.start() if nxt else len(letters_js_text)
+    entry = letters_js_text[id_match.start():entry_end]
+    m = re.search(
+        r'^\s+' + re.escape(field) + r':\s*"((?:[^"\\]|\\.)*)"',
+        entry, re.M,
+    )
+    if not m:
+        return None
+    raw = m.group(1)
+    return (raw.replace('\\n', '\n')
+               .replace('\\"', '"')
+               .replace("\\\\", "\\"))
+
+
+def decode_quoted(yaml_value):
+    """Decode a YAML scalar that may be wrapped in double quotes
+    with JS-style escape sequences (\\n, \\", \\\\). Block scalars
+    handled by extract_field_value already return decoded text."""
+    if yaml_value is None:
+        return None
+    s = yaml_value.strip()
+    if len(s) >= 2 and s[0] == '"' and s[-1] == '"':
+        s = s[1:-1]
+        s = s.replace('\\n', '\n').replace('\\"', '"').replace("\\\\", "\\")
+    return s
+
+
 def extract_field_from_letters_js(letters_js_text, letter_id, field):
     """Read back the (unescaped) content of a body/note field for a
     given letter id. Used by the verify pass."""
@@ -493,8 +703,12 @@ def process_letter(letter_id, md_path, letters_js_text, dry_run, verbose,
     frontmatter, body = parse_md(md_text)
 
     note_value, _ = extract_field_value(frontmatter, "note")
+    sal_raw, _ = extract_field_value(frontmatter, "salutation")
+    sig_raw, _ = extract_field_value(frontmatter, "signature")
+    md_salutation = decode_quoted(sal_raw)
+    md_signature = decode_quoted(sig_raw)
 
-    new_body = clean_body(body)
+    new_body = clean_body(body, md_salutation, md_signature)
     new_note = clean_note(note_value) if note_value is not None else None
 
     changed = False
@@ -517,8 +731,16 @@ def process_letter(letter_id, md_path, letters_js_text, dry_run, verbose,
     # Update letters.js entry for this letter.
     js_body = extract_field_from_letters_js(letters_js_text, letter_id, "body")
     js_note = extract_field_from_letters_js(letters_js_text, letter_id, "note")
+    js_sal = extract_quoted_string_from_letters_js(
+        letters_js_text, letter_id, "salutation"
+    )
+    js_sig = extract_quoted_string_from_letters_js(
+        letters_js_text, letter_id, "signature"
+    )
 
-    new_js_body = clean_body(js_body) if js_body is not None else None
+    new_js_body = (
+        clean_body(js_body, js_sal, js_sig) if js_body is not None else None
+    )
     new_js_note = clean_note(js_note) if js_note is not None else None
 
     if new_js_body != js_body or new_js_note != js_note:

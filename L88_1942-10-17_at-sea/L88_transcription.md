@@ -20,19 +20,13 @@ note: |
 
   Salutation "Dearest Joan;" — semicolon variant.
 
-  Notable content: (1) **"My wires seems to be crossed all the time and nothing I can do about it"** — Gene's coded language for emotional/mental disorder during sustained combat operations. The "wires crossed" idiom evokes nerves, connection breakdown, mental fog — Gene cannot say "shellshocked" or "combat fatigue" but signals something is wrong. Combined with the L84 week-of-illness and L85 picture-day low mood, this builds a picture of Gene struggling psychologically. (2) **"I am a little low in faith Darling, but as you said guess you have enough for us both"** — Gene's most vulnerable admission to Joan. Acknowledges his faith has flagged; relies on Joan's stated reserve. Joan apparently wrote that she had faith enough for both. This is the most intimate Gene-asks-Joan-for-strength moment in the war-year correspondence.
+  Notable content: (1) **"My wires seems to be crossed all the time and nothing I can do about it"** — Gene's coded language for emotional/mental disorder during sustained combat operations. The "wires crossed" idiom evokes nerves, connection breakdown, mental fog — Gene cannot say "shellshocked" or "combat fatigue" but signals something is wrong. Combined with the L84 week-of-illness and L85 picture-day low mood, this builds a picture of Gene struggling psychologically.
+
+  (2) **"I am a little low in faith Darling, but as you said guess you have enough for us both"** — Gene's most vulnerable admission to Joan. Acknowledges his faith has flagged; relies on Joan's stated reserve. Joan apparently wrote that she had faith enough for both. This is the most intimate Gene-asks-Joan-for-strength moment in the war-year correspondence.
 
   Also: **Gene's height/weight: 150 lbs**, considers himself short — "Anyway I shan't be the tallest in the family. I know Carroll isn't any longer than I even though he thinks he is" (the height-claim sibling argument continues); **Gene's PICTURE has been MAILED — sent three days ago** — Joan should receive it; **One picture sent has another sailor in it: Don Chapin** — Gene's best friend (the L62 Seattle wedding subject); his wife Betty; the photo is the ONLY copy Gene has and he asks Joan to keep it safe; **Will mail Martha a copy** too; **"There's isn't a girl who can ever yet would take your place"** — commitment phrasing; "Carroll is liking the navy by now. I feel sorry for him if he doesn't."
 
 ---
-
-[Air Mail — printed in red on left margin]
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco, Calif.
-                                                          F Division
-
-Dearest Joan;
 
 Your sweet hour letter I received today and I know you wouldn't mind if I wrote a few lines tonite, Joan. It's so nice to get your letters for they sure helps me a lot. I hardly know what I do without them. I can always depend on a letter from you when every one else fails.
 
@@ -45,8 +39,3 @@ Darling I have finally sent you the picture that I been promising for so long. Y
 Well darling as you know there's nothing interesting I can write. Guess old, Carroll is liking the navy by now. I feel sorry for him if he doesn't. Yes I sure hope we can see each other soon. Hoping is about all a person can do though.
 
 [[To tell the truth I am a little low in faith Darling, but as you said guess you have enough for us both.]] I do miss you more every day. Don't worry I never forget you. There's isn't a girl who can ever yet would take your place. Be good & Bye.
-
-                                                          Lots of Love & Kisses
-                                                              Yours "Gene"
-
-(R.E. Lankford)

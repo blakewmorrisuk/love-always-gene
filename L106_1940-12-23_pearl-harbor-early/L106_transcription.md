@@ -23,18 +23,13 @@ note: |
 
   Salutation **"Dearest Joan,"** — **FIRST "DEAREST" SALUTATION in the archive** (L104 and L105 used "Dear Joan,"). The shift from "Dear" to "Dearest" in three months marks the warming relationship in late 1940 — pre-engagement, but more affectionate.
 
-  Notable content: (1) **"There isn't a day or night that goes by that I don't think about you"** — Gene's strongest pre-engagement love declaration in the archive. Establishes that even in late 1940 — over a year before he would propose by letter — Gene was already deeply attached. (2) **"Remember the nights we were together? Well I think there might be some more just as good or better"** — Pre-leave memory of nights spent with Joan, paired with future-hope. The Gene-Joan relationship had a physical/intimate dimension before his deployment (likely from his last leave home before the navy or earlier in 1940 before the ship's transfer to Hawaii). Gene anticipates more such nights.
+  Notable content: (1) **"There isn't a day or night that goes by that I don't think about you"** — Gene's strongest pre-engagement love declaration in the archive. Establishes that even in late 1940 — over a year before he would propose by letter — Gene was already deeply attached.
+
+  (2) **"Remember the nights we were together? Well I think there might be some more just as good or better"** — Pre-leave memory of nights spent with Joan, paired with future-hope. The Gene-Joan relationship had a physical/intimate dimension before his deployment (likely from his last leave home before the navy or earlier in 1940 before the ship's transfer to Hawaii). Gene anticipates more such nights.
 
   Also: **Christmas gift to Joan** — Gene received Joan's Xmas card and Xmas gift; **Gene's own gift to Joan is "too far to send"** but will arrive in 4-5 months — Gene says "if you could guess if you stop to think enough? I think you enjoy it a lot"; **Mrs. Lankford (Gene's mother) sick** — taking shots for the same trouble she had four years ago; **Xmas card from Martha**; **Hawaiian summer December** — "from 90 to 100 out here. It only drops down to about 80 at night. The sun burns right through you every day. It seems more like, July then it does December"; **Joan asked for a picture** — Gene promises to get one made; **Gene's protective advice** — "Be a good girl like you always have been and don't let some boy talk you into doing things that you shouldn't. Stay the same girl as I know you" (notable since the "promise" arc later turns on these themes).
 
 ---
-
-                                                          Sunday, Dec 22
-                                                          U.S.S. New Orleans
-                                                          Pearl Harbor, Honolulu
-                                                          F Division, T.H.
-
-Dearest Joan,
 
 Thought I have forgotten all about you by now I guess. Well I haven't by a long shot yet and I can't think of any good reason why I haven't been so without writting. If I did think of some you wouldn't believed it any way. So why should I worries about it. I got your Xmas card and also the Xmas gift and I'm really proud of it. Guess you think I'm some guy forgetting all about Xmas. I didn't forget it though. You will see what I mean one of these days. I couldn't think of but one thing to send you, Joan, that I thought you would want, so it just a little to far to send. That but it will be just as good in four or five months from now and don't ask me what it is. If you could guess if you stop to think enough? I think you enjoy it a lot.
 
@@ -47,6 +42,3 @@ Joan if you really want a picture of me I will go over sometime this week and ha
 Will have to bring this letter to a close but I will write again soon. I sorry I have been so long but I promise it never happen again and you know me to do you. I think you understand.
 
 [[There isn't a day or night that goes by that I don't think about you. Remember the nights we were together? Well I think there might be some more just as good or better.]] Please keep writting Joan and if I don't write as often as I should forgive me. [[Be a good girl like you always have been and don't let some boy talk you into doing things that you shouldn't. Stay the same girl as I know you.]] Things might be dull at times but after all it comes into everybody life, so take it with a smile. Write Soon.
-
-                                                          With Lots of Love,
-                                                              Gene

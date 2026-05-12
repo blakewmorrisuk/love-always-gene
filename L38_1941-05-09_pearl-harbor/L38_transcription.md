@@ -21,18 +21,13 @@ note: |
 
   Inside date "May 8, 1941" — Gene wrote on Thurs. May 8, postmarked Fri. May 9. Postmark used as canonical date.
 
-  Notable content: (1) the long-anticipated stateside return is pushed from "this month" (May) to August — "The ship just got orders that we wouldn't go into the yards until August" — collapsing seven months of leave hopes into a single sentence; (2) Gene's first reference to convoying duty — "I pretty sure we will get convoying duty before long and you know what that will mean." Atlantic convoy escort by U.S. warships became overt in mid-1941 (the "neutrality patrol" expanded to active escort by April–September 1941); for a Pacific ship to anticipate that work is a clear sign of imminent combat duty.
+  Notable content: (1) the long-anticipated stateside return is pushed from "this month" (May) to August — "The ship just got orders that we wouldn't go into the yards until August" — collapsing seven months of leave hopes into a single sentence;
+
+  (2) Gene's first reference to convoying duty — "I pretty sure we will get convoying duty before long and you know what that will mean." Atlantic convoy escort by U.S. warships became overt in mid-1941 (the "neutrality patrol" expanded to active escort by April–September 1941); for a Pacific ship to anticipate that work is a clear sign of imminent combat duty.
 
   Also: Joan has received the radio Gene sent (the "big surprise" of L36); Gene confirms he knows her birthday (cf. L29 P.S. and L34); sister Martha now working in the operating room (her nursing training is finishing).
 
 ---
-
-                                                          U.S.S. New Orleans
-                                                          May 8, 1941
-                                                          Pearl Harbor, Honolulu, T.H.
-                                                          F Division
-
-Dearest Joan,
 
 Received your letter a couple of days ago and thought I would try to answer it today while thinking of you. Guess this leaves me as well as usual and hope you are the same. Little blue though.
 
@@ -43,6 +38,3 @@ I also got a letter from Martha the same day I got yours. She didn't have much t
 Joan, You don't have to tell me when your birthday is for I know anyway. So there Sweetheart Guess you got the present that I sent you by now. It really a nice radio Joan and it's not just a cheap one either. You should be able to pick up any radio stations with it. Anyhow I hope you like it for I feel kindly bad about the hole thing if you didn't. You know darn well I wouldn't spend that much on any [other] girl. I don't care who she was. No kidding Jo I think more of you than you ever will know and don't think I don't keep you on my mind. (always)
 
 Well, Joan there isn't much anything I know to write so will have to bring this letter to a close. Will write agin soon. So [strikethrough: hear] saying, Goodbye Darling, until then. Always looking for a letter from you. Be good.
-
-                                                          Always with love & kisses
-                                                                            "Gene"

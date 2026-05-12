@@ -25,14 +25,6 @@ note: |
 
 ---
 
-Jan. 16, Thursday
-                                                              % U.S.S. New Orleans
-                                                              Pearl Harbor, Honolulu
-                                                              T.H.
-                                                              F. Division
-
-Dearest Joan,
-
 It seems you will never write again. So I thought I had better not let you forget. I was writing a letter home and so thought I would also drop you a line. We out to sea and writting will pass the time away faster. I don't know whether I told you, are you not that we went to Midway Island. It only took us eight days to go out there and back.
 
 Well what you doing for yourself these days? Studying hard I guess. How all the family? OK I bet. Well you can guess how I am. The same old kid you might said. Maybe change in a few ways, but not much. Really cold back in Ky. tonight. I bet, How would a pair of these short pants I'm wearing would feel back there. (Send 3 pages)
@@ -44,6 +36,3 @@ Joan I will go into Honolulu tomorrow to get those pictures I had taking and wil
 I you bet keep writting to me & going to — well what can I do but I'm not feeling writt whenever you can, Jo. So if you don't hear from me don't stop, for I just took some of father spells. I write to you more than I do at home, but don't tell them so. They always saying I don't write enough the way it is.
 
 There isn't much I know to write tonight, Jo. So will come to a close. Give my love to all and a big kiss to you. Untill you hear from me again.
-
-                                                                        Lots & Lots of Love,
-                                                                                      Gene

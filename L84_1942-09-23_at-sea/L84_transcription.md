@@ -26,18 +26,13 @@ note: |
 
   Salutation "Dearest Joan;" — semicolon variant.
 
-  Notable content: (1) **Censorship asymmetry explained clearly** — "Joan, wished I could answer all your questions but they wouldn't pass if I did. See, you can write anything you care to, but there's just certain things I'm able to write about." Gene's most explicit articulation of the censorship rules — Joan can ask anything, but Gene's response is filtered. The "wouldn't pass" verb tense makes the censor an active agent. (2) **P.S. war-duration prediction: "it's a long ways from being over with yet"** — Joan apparently asked Gene if the war would soon be over. Gene's blunt P.S. response, set off from the body of the letter, is one of the soberest assessments in his correspondence — five months before Stalingrad was won and three years before V-J Day.
+  Notable content: (1) **Censorship asymmetry explained clearly** — "Joan, wished I could answer all your questions but they wouldn't pass if I did. See, you can write anything you care to, but there's just certain things I'm able to write about." Gene's most explicit articulation of the censorship rules — Joan can ask anything, but Gene's response is filtered. The "wouldn't pass" verb tense makes the censor an active agent.
+
+  (2) **P.S. war-duration prediction: "it's a long ways from being over with yet"** — Joan apparently asked Gene if the war would soon be over. Gene's blunt P.S. response, set off from the body of the letter, is one of the soberest assessments in his correspondence — five months before Stalingrad was won and three years before V-J Day.
 
   Also: **SEVEN letters from Joan received in one day** — "Darling just a few lines this afternoon to let you know how glad I am to received seven (7) letters from you today. If it weren't for you writting to me, Joan I probably wouldn't get very much mail"; **Gene unwell** — "Haven't even feeling so good the last week, but it's nothing serious. Probably just home sickness"; **Joan's grandmother in final illness** — "Hope your grand mother much better, but as you say guess there isn't anything left to be done for her"; **Martha (sister) not improving** in her recovery; **Martha moving frequently** — Gene's letters keep being returned because she's relocating; **J.D. Davidson in England** — Gene's friend now in the European theater; **Louise Dunagan in New Orleans, LA** — vacation, "Lots of soldiers & sailors"; **EARL is now in Detroit working with Carroll** — first clarification of Earl's whereabouts (previously unclear if Earl was Joan's family or Gene's); **"Keep them smiling club" victory-club care package** from the Detroit factory where Carroll works; movies aboard ship continuing regularly; Gene promises to have a picture made soon.
 
 ---
-
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco, Calif.
-                                                          F Division
-
-Dearest Joan;
 
 Darling just a few lines this afternoon to let you know how glad I am to received seven (7) letters from you today. If it weren't for you writting to me, Joan I probably wouldn't get very much mail. I only got one letter from, Mother and one from Martha. I wrote Martha several letters in the past but she is moving so often that the letters comes back to me.
 
@@ -54,10 +49,3 @@ Is Earl is now working in, Detroit with Carroll. I'm sure glad to hear that and 
 Darling I'm going to have that picture made soon that I have promised so long. You probably won't like the thing, but don't blame me for it.
 
 Well dare if I know anything to write. Hope you can read what I have written as I wrote this letter in such a hurry. Got several more to write, so please understand. Keep writting to me sweet heart and you know I haven't forgotten you yet.
-
-                                                          Love
-                                                              Always "Gene"
-
-[[P.S. "You are right, Joan," — but it's a long ways from being over with yet.]]
-
-(R.E. Lankford)

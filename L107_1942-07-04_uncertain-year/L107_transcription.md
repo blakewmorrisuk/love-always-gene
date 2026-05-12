@@ -36,18 +36,13 @@ note: |
 
   Salutation "Dearest Joan;" — semicolon variant.
 
-  Notable content: (1) **"You ran the first time I kissed you … Do you remember the first slap you gave me"** — Gene's intimate pre-deployment memory: Joan ran away from their first kiss and slapped Gene the first time he tried. Tender mid-1942 memory of early Gene-Joan courtship that survives Tassafaronga two years later. **Earliest first-kiss-and-slap memory in the archive**. (2) **Jack Parkhurst news + J.B. Davidson address request** — "Jack is alright and he's in New York now. I miss him quite a lot, though" + Gene asks Joan to find J.B. Davidson's address. The first definitive post-departure Parkhurst sighting in the archive (L80 had "Jack has gone" with unknown location; here Gene knows Jack is in NY). Confirms the post-leave Parkhurst-to-Massachusetts transition that's later detailed in L102.
+  Notable content: (1) **"You ran the first time I kissed you … Do you remember the first slap you gave me"** — Gene's intimate pre-deployment memory: Joan ran away from their first kiss and slapped Gene the first time he tried. Tender mid-1942 memory of early Gene-Joan courtship that survives Tassafaronga two years later. **Earliest first-kiss-and-slap memory in the archive**.
+
+  (2) **Jack Parkhurst news + J.B. Davidson address request** — "Jack is alright and he's in New York now. I miss him quite a lot, though" + Gene asks Joan to find J.B. Davidson's address. The first definitive post-departure Parkhurst sighting in the archive (L80 had "Jack has gone" with unknown location; here Gene knows Jack is in NY). Confirms the post-leave Parkhurst-to-Massachusetts transition that's later detailed in L102.
 
   Also: **Martha recovering**; **Carroll's vacation home — Gene wants Joan to "tell him I said..."** (line cuts off); **Louise Dunagan dating a Michigan guy**, likely to be married — sets up L83's "down & out on Carroll"; **Old school mate** wrote to Gene; **Gene asks Joan to find J.B. Davidson's address** (J.B. Davidson was Gene's friend in England — first noted L84); **Billie Tilds** mentioned — first appearance of this name; **"News does travel fast"** — Gene's surprise at how much the school mate knew about Gene-Joan; standard "Lots of Love & Kisses / Yours always 'Gene' / (R.E. Lankford)" signature.
 
 ---
-
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco
-                                                          F Div., California
-
-Dearest Joan;
 
 Just received two of your very interesting letters yesterday. Surely glad to get them darling and will do my best to write a few words tonite. There's really not anything I'm able to write only to let you know I'm still think of you.
 
@@ -58,8 +53,3 @@ Joan, you want to take care of yourself & let nothing like that happen to you. Y
 Well, guess, Carroll is home for his vacation now. Tell him I said take it easy. Got a letter from Louise a few days past. She's going with another guy from, Michigan now. I think she will be married soon, that is the way she talked. You know I got another letter from a certain person Joan, too. Just one of my old school mates, if you care to know. I was surprised how much she known about you & I. News does travel fast doesn't it?
 
 Joan, I wish you try to find out, J.B. Davidson address for me. Yes, I could very easy look Billie Tilds up. [[Jack is alright and he's in New York now. I miss him quite a lot, though.]] Darling of course I can remember the old memories of ours. [[You ran the first time I kissed you, sure I know what happened. Do you remember the first slap you gave me.]] Write soon (Be good)
-
-                                                          Lots of Love & K[isses]
-                                                              Yours always "Gene"
-
-(R.E. Lankford)

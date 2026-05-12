@@ -19,18 +19,13 @@ note: |
 
   Inside date "April 12, 1941" — Gene wrote on Sat. Apr 12 and the letter was postmarked Tue. Apr 15. Postmark used as canonical date; Gene's inside date preserved verbatim. Source folder skips IMG_9582 (not part of this letter).
 
-  Notable content: (1) the ship is in port for "a little repair work done getting it in better shape for war. Its only around the corner now" — concrete evidence the U.S.S. New Orleans is being prepped for combat in April 1941, 8 months before Pearl Harbor; (2) Gene's first explicit acknowledgment that he may not survive the war — "If war does break loose I won't see you until it is over, that is if I am still kicking." Continues the L33 ("five months before war") arc into personal mortality. Also: the ship plans to return to the West Coast at the end of May 1941 (continuing the deployment/leave thread from L26–L34); brother Thomas and sister Martha home with Carroll for a weekend.
+  Notable content: (1) the ship is in port for "a little repair work done getting it in better shape for war. Its only around the corner now" — concrete evidence the U.S.S. New Orleans is being prepped for combat in April 1941, 8 months before Pearl Harbor;
+
+  (2) Gene's first explicit acknowledgment that he may not survive the war — "If war does break loose I won't see you until it is over, that is if I am still kicking." Continues the L33 ("five months before war") arc into personal mortality. Also: the ship plans to return to the West Coast at the end of May 1941 (continuing the deployment/leave thread from L26–L34); brother Thomas and sister Martha home with Carroll for a weekend.
 
   Signature is unusual — Gene signs "Eddie — 'Gene'" rather than the typical "Gene." "Eddie" reading is a best-guess from the looped cursive (could be a self-nickname, a passing inside joke, or a stylized "Edd--" flourish); the quoted "Gene" is clear.
 
 ---
-
-April 12, 1941
-                                                          U.S.S. New Orleans
-                                                          Pearl Harbor, Honolulu, T.H.
-                                                          F Division
-
-Dearest Joan,
 
 Received your letter a few days ago and will try to write you a few tonight while thinking of you. Although guess you think I have forgotten all about you for not answering sooner. Well I haven't even though I don't write.
 
@@ -55,6 +50,3 @@ Well what news around there Jo? Everything quite and fine I bet. You said spring
 that you might enjoy having. I hope so anyway.
 
 Well Joan guess I will have to bring this letter to a close. There isn't very much that I know to write and you will have too excuse this writting for I trying to finish before the movie begins. Be a good girl and save one kiss for me. You the only girl I ever thought anything about and sometime I hate myself for that.
-
-                                                          Always,
-                                                          Eddie—"Gene"

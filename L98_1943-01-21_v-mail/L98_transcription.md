@@ -27,29 +27,16 @@ note: |
 
   **Historical context:** Jan 21, 1943 — the U.S.S. New Orleans was still at Cockatoo Island Dockyard, Sydney, completing the bow replacement after Tassafaronga (Nov 30, 1942). The ship would leave Sydney in late February / March 1943 for return to the U.S. mainland (Puget Sound) for full reconstruction. Gene wrote this V-Mail from Sydney.
 
-  Notable content: (1) **First V-Mail format** — "Darling finally I'm writing you a few lines today to answer your very interesting letter I received. Really glad to get the letter as it had been so long since the last one." Gene's adoption of V-Mail marks the wartime postal system catching up with the Pacific theater's logistical needs. The microfilm process meant Gene's letter went: handwritten in Sydney → microfilm in Australia → flown to NY → printed at Grand Central Annex → mailed to Stanford KY. (2) **Belated Christmas wishes** — "Hope you had a grand Christmas this year and heard wishing you the best this New Year." Christmas was four weeks ago; Gene's first holiday acknowledgment to Joan, written from a ship still being repaired.
+  Notable content: (1) **First V-Mail format** — "Darling finally I'm writing you a few lines today to answer your very interesting letter I received. Really glad to get the letter as it had been so long since the last one." Gene's adoption of V-Mail marks the wartime postal system catching up with the Pacific theater's logistical needs. The microfilm process meant Gene's letter went: handwritten in Sydney → microfilm in Australia → flown to NY → printed at Grand Central Annex → mailed to Stanford KY.
+
+  (2) **Belated Christmas wishes** — "Hope you had a grand Christmas this year and heard wishing you the best this New Year." Christmas was four weeks ago; Gene's first holiday acknowledgment to Joan, written from a ship still being repaired.
 
   Also: **"this leaves me alright in about every way"** — Gene's standard survival affirmation; **Letter from home folks** received and they're fine; "Darling I will have to bring this to a close, but I'm going to write again soon. Write Joan every time you can for your letters. I'm always crazy for. Thinking of you & always loving you."
 
 ---
-
-[V-MAIL FORM]
-From: Eugene Lankford / U.S.S. New Orleans / B.P.M. San Francisco, California
-To: Miss Joan Northcutt / Stanford / Kentucky / U.S.A. / R.F.D. 1
-[V-Mail Control: NY 650]
-January 21, 1943
-
-Dearest Joan;
 
 [[Darling finally I'm writing you a few lines today to answer your very interesting letter I received. Really glad to get the letter as it had been so long since the last one.]]
 
 Well, Joan this leaves me alright in about every way. Hope you and rest of the family are fine. Received also an letter from the home folks and they seem to be fine.
 
 [[Hope you had a grand Christmas this year and heard wishing you the best this New Year.]]
-
-Darling I will have to bring this to a close, but I'm going to write again soon. Write Joan every time you can for your letters. I'm always crazy for. Thinking of you & always loving you. As ever yours,
-
-                                                          "Gene"
-                                                          (R.E. Lankford)
-
-[V-MAIL]

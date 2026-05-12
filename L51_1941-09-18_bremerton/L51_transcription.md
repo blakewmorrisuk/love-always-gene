@@ -25,19 +25,13 @@ note: |
 
   **Six sheets** of plain stationery, numbered 1., (2), (3), (4), (5), (6 unnumbered P.S.) in Gene's hand. Substantial letter.
 
-  Notable content: (1) operational intelligence — "unless we are in war before we leave the yards that we will go right back out to Honolulu agin" — Gene reveals the conditional orders the ship is operating under in mid-Sept 1941; (2) most direct mortality acknowledgment yet — "you can be living today and dead that night," followed by the eerie observation that "we might go through the whole war without firing a shot and agin we could be sunk the first week" (the New Orleans actually lost her bow at Tassafaronga Nov 30, 1942).
+  Notable content: (1) operational intelligence — "unless we are in war before we leave the yards that we will go right back out to Honolulu agin" — Gene reveals the conditional orders the ship is operating under in mid-Sept 1941;
+
+  (2) most direct mortality acknowledgment yet — "you can be living today and dead that night," followed by the eerie observation that "we might go through the whole war without firing a shot and agin we could be sunk the first week" (the New Orleans actually lost her bow at Tassafaronga Nov 30, 1942).
 
   Also: Gene reveals he can telephone Joan from the ship while in port at Bremerton (and did, after Jack Parkhurst was apparently calling Gene one time — "I like to have went through the deck for I thought that some thing was wrong at home"); Charlotte (friend) has named her baby brother after Gene; family back home hasn't written in two weeks ("Hope they aren't all dead down there"); Gene tells Joan she "will be always the only one from the bottom of my heart" — third explicit commitment after L48 ("the only girl I ever cared anything about") and L50 ("I think you are the sweetest girl in the world").
 
 ---
-
-Wed. Sept 17
-                                                          U.S.S. New Orleans
-                                                          % Postmaster
-                                                          Bremerton, Wash.
-                                                          F Division
-
-Dearest "Joan",
 
 Your letter came today and let me tell you I was glad to see your hand writting agin. Really, Joan you can write the best letter than anyone I know. I had just about giving up hopes of getting a letter from anybody until I got yours today. I can't or haven't yet had heard a word from home. Hope they aren't all dead down there for I have been gone from home now about two weeks and I don't see why I shouldn't have heard from some of them by now. It not because of me either because I wrote to them at least four times. I know though, that (over) I can always depend on getting a nice letter from you and I love you so much for it that there isn't enough words to say it in.
 
@@ -50,8 +44,3 @@ Joan, I found out that [[unless we are in war before we leave the yards that we 
 Joan, I'm awful glad you are gaining weight and also please to hear about that place going away you had on your breast. You don't want to let that five subjects you are taking in school get the best of you. Just think you will be out of school before long. The two years will [strikethrough: pass] past quit. Tell Charolette thanks a lot for naming that baby brother of hers after me.
 
 Well Darling don't you think I wrote about enough for once. I know you are tired of reading this stuff. Anyway I will be writting agin soon. You said that you would answer every letter I wrote so I'm going to hold you to that promise. You know darn well how crazy in love I am with you and you will be always [strikethrough: of] the only one from the bottom of my heart. Be good, honey and write to me soon.
-
-                                                          With Lots of love & kisses
-                                                                          Always yours
-                                                                                  "Gene"
-(over)

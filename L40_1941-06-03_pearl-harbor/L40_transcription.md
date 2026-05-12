@@ -25,12 +25,6 @@ note: |
 
 ---
 
-                                                          U.S.S. New Orleans
-                                                          Pearl Harbor, Honolulu, T.H.
-                                                          F Division
-
-Dearest Joan,
-
 I got your letter a few days ago & please excuse me for not writting sooner. Every time I started to write something would [strikethrough: started] turn up to delay me from writting. The days I have the duty I don't have much time to write and the days I off duty I go ashore to get off of the [strikethrough] ship for awhile. You asked if I see very many movies. Well they have a show on the ship every night most the time two a night. We get awful good shows and the latest out.
 
 Well Joan this is the month of June and I bet everythings are pretty and peaceful around now. I can't see any chance down here. (over)
@@ -50,6 +44,3 @@ Well, Joan guess you got enough of this for the time being. Anyway I don't know 
 Tell, Peggy and rest of the family I said Hello for me.
 
 Write soon & be good for me.
-
-                                                          With Love,
-                                                                  Gene

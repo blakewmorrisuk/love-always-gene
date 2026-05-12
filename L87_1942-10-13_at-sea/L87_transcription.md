@@ -20,19 +20,13 @@ note: |
 
   Salutation "Dearest Joan," — comma variant.
 
-  Notable content: (1) **First direct combat acknowledgment: "Darling you don't know what's it like out here fighting a war"** — Gene's plainest statement to Joan that he is in active combat. Compared to the L81 "couldn't say this was paradise" hint and the L85 censored "things I have seen," this drops the indirection. (2) **Engagement check-in mid-deployment** — "By the way are we still going to get married when I get back? Can you think of any reason why we shouldn't?" Gene quietly re-asks the engagement question in the middle of combat operations, with a gentle inversion ("any reason why we shouldn't?") that puts the burden of objection on Joan.
+  Notable content: (1) **First direct combat acknowledgment: "Darling you don't know what's it like out here fighting a war"** — Gene's plainest statement to Joan that he is in active combat. Compared to the L81 "couldn't say this was paradise" hint and the L85 censored "things I have seen," this drops the indirection.
+
+  (2) **Engagement check-in mid-deployment** — "By the way are we still going to get married when I get back? Can you think of any reason why we shouldn't?" Gene quietly re-asks the engagement question in the middle of combat operations, with a gentle inversion ("any reason why we shouldn't?") that puts the burden of objection on Joan.
 
   Also: **Gene feeling better** after the week of illness in L84-L86 — "Have been feeling a lot better lately"; **Joan in a new coat and gown** — possibly nursing-school graduation gown; Gene: "wished I was there to see that coat & gown. Bet it does look beautiful on you"; **THREE pictures of Gene made** — one for the folks, one for Joan, one (presumably) for himself; Gene confirms "I had three made"; **Gene threw away wartime postcards** — "I had a lot of pictures, post cards of places I've seen, but didn't have anywhere to keep them so I threw them away" — wartime shipboard storage constraints; censorship-on-pictures — "we aren't suppose to mail anything like that now. They wouldn't pass the censorship"; **Australia continued** — "Yes, Darling I did like, Australia and I believe you would too. Some of the girls are very pretty and awfully nice. Of course they talk different from us. Our way of talking seems just as funny to them. The country were awfully pretty where I were. I still take the good U.S.A. anytime though. The people there thought a lot of the American sailors"; **Carroll likely shipped out to navy**; **Thomas's whereabouts unknown** — Gene fears for Thomas: "Just hope he doesn't go where I think he will"; **Dad making jokes** — Gene asks Joan not to take them seriously: "Don't listen to anything Dad says for he's always cracking jokes on some body. Don't you think he had the right idea at one time, though, so they all at home thinks. There isn't a girl like you Joan. They always mention you in their letters."
 
 ---
-
-[Air Mail — printed in red on left margin]
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco, Calif.
-                                                          F Division
-
-Dearest Joan,
 
 Darling just a few lines tonite to answer your sweet letters which I received this morning. I hardly know what I do if it weren't for your letters regular. You never know how happy they make me, Joan. I'm glad everybody fine there and of course I'm well as can be expected. Have been feeling a lot better lately.
 
@@ -45,8 +39,3 @@ Yes, Darling I did like, Australia and I believe you would too. Some of the girl
 I haven't heard from the home folks since last week, but probably will soon. Guess, Carroll has left for the navy by now. Sure be glad to hear where, Thomas is at right now too. Just hope he doesn't go where I think he will. [[Darling you don't know what's it like out here fighting a war.]] Keep writting those big nice letters, Joan. Don't you get the idea you can't write interesting letters either.
 
 Joan, don't listen to anything Dad says for he's always cracking jokes on some body. Don't you think he had the right idea at one time, though, so they all at home thinks. There isn't a girl like you Joan. They always mention you in their letters. Be good & Bye.
-
-                                                          Lots & Love & Kisses
-                                                              always yours "Gene"
-
-R.E. Lankford.

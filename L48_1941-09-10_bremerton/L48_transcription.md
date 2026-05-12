@@ -25,23 +25,15 @@ note: |
 
   Inside date "Wed. Sept. 10th" matches the postmark.
 
-  Letter pages: page 1 (IMG_9785) is a single sheet (4032×3024 res, `sips -r 90` needed); pages 2–4 (IMG_9786–9788) are standard 5712×4284 portrait, `sips -r 90` rotation. Numbered 1., (2), (3), (4) in Gene's hand. Page 4 is the P.S. continuation.
-
   Context: this is the first letter after Gene's 26-day leave home (announced L46, in transit L47 from Chicago Union Station). It follows an emotional parting — Gene apologises throughout for "the way I acted toward you the night before I left."
 
-  Notable content: (1) **War/career-relevant** — Gene admits he is actively trying to leave the navy: "I trying to get out of the navy and if I don't, well I guess I be will learn to hate it more & more every day. This is my only chance and let us hope together it will work out alright." A dramatic reversal from his earlier acceptance; (2) **Love-meaningful, priority 2** — "Joan, you are the only girl I ever cared anything about and I know now that you will always be the only one" — Gene offers Joan an explicit commitment, followed by an open offer of engagement: "Just any time you make that promise I asked you to I will be ready for it."
+  Notable content: (1) **War/career-relevant** — Gene admits he is actively trying to leave the navy: "I trying to get out of the navy and if I don't, well I guess I be will learn to hate it more & more every day. This is my only chance and let us hope together it will work out alright." A dramatic reversal from his earlier acceptance;
+
+  (2) **Love-meaningful, priority 2** — "Joan, you are the only girl I ever cared anything about and I know now that you will always be the only one" — Gene offers Joan an explicit commitment, followed by an open offer of engagement: "Just any time you make that promise I asked you to I will be ready for it."
 
   Also: Gene mentions Joan's grandmother in the postscript (sick) and Joan herself ("Did you go to see the doctor yet? Please don't keep putting it off") — two health concerns at home; Bremerton weather "nothing like Honolulu" — rain and cool nights.
 
 ---
-
-                                                          Wed. Sept. 10th
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          Bremerton, Wash.
-                                                          F Division
-
-Dearest Joan,
 
 Well I final got time to write you a few lines anyway. I got back to the ship fine and also in plenty of time to spare. You never know how bad I hated leaving and sure wished I could have stay at home. Maybe some day will come when I can come back home to stay and lets hope it's soon.
 
@@ -56,14 +48,3 @@ The weather here in Bremerton is nothing like Honolulu for the two day that I be
 Well honey there isn't anything to write that you don't already know and I will probably be writting to you every day or two anyway, so I will make this letter short. Joan I want you to write to me when ever you can and don't think you can write to much. Your letters will be about all I will have to look forward to.
 
 Did you go to see the doctor yet? Please don't keep putting it off.
-
-Will close & looking for a letter soon. A letter from you tonight would really cheese me up a lot. Be good Joan
-                                                          Lots of Love
-                                                                  Gene
-(over)
-
-P.S. (4)
-
-Tell all the family I said hello for me & I hope your grandmother is feeling better. Also tell them how sorry I am that I couldn't stop to say goodbye to them the night I left.
-
-                                                                  "Gene"

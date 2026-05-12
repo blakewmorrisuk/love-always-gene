@@ -34,18 +34,13 @@ note: |
 
   Salutation **"My Dearest Joan;"** — variant with "My" prefix.
 
-  Notable content: (1) **Gene's name appeared in the newspaper** — "You know I was surprised to hear about my name comming out in the paper. Just goes to show that almost anything can happen these days. Anyhow I appreciate it." Joan or family member must have mentioned a hometown-paper item that included Gene's name. **First newspaper mention in the archive**. (2) **"Everybody knows about us" + Martha's endorsement** — "I think everybody knows about us. News does travel fast doesn't it? Anyhow I didn't care whether it was a secret or not. You know what Martha had to say. She said knew about us all along and not to let anything come between us." Martha's (Gene's sister) family-side endorsement of the Gene-Joan engagement.
+  Notable content: (1) **Gene's name appeared in the newspaper** — "You know I was surprised to hear about my name comming out in the paper. Just goes to show that almost anything can happen these days. Anyhow I appreciate it." Joan or family member must have mentioned a hometown-paper item that included Gene's name. **First newspaper mention in the archive**.
+
+  (2) **"Everybody knows about us" + Martha's endorsement** — "I think everybody knows about us. News does travel fast doesn't it? Anyhow I didn't care whether it was a secret or not. You know what Martha had to say. She said knew about us all along and not to let anything come between us." Martha's (Gene's sister) family-side endorsement of the Gene-Joan engagement.
 
   Also: **"Maybe we can work it out some way the next time I come to the states"** — Gene plans an in-person Joan reunion on his next stateside leave; **Letters from Joan and Mother arrived together** — multiple letters; **Letters dull** — censorship makes Gene's letters un-newsworthy; **Joan's grandmother "better"** (recovering from earlier illness) — and Gene tells her **"not to worry about Friday 13th"** — superstition reassurance (closest Friday 13th to May 28, 1942 was March 13, 1942; next was November 13, 1942 — Mrs. Northcutt is worried about an upcoming or recent Friday 13th).
 
 ---
-
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco, Calif.
-                                                          F Division
-
-My Dearest Joan;
 
 Will write a few lines this afternoon while I have the chance. Received three of your letters a few days ago & this will have to do for an answer (I hope). I know you will understand how it is, though. Would write two or three times a week if I had the chance.
 
@@ -54,6 +49,3 @@ Well how is the girl? Working your head off I bet. Of course I as well as usual.
 Yes, Darling I really would like to see you. Maybe we can work it out some way the next time I come to the states. What you think about it? [[You know Joan I think everybody knows about us. News does travel fast doesn't it? Anyhow I didn't care whether it was a secret or not. You know what Martha had to say. She said knew about us all along and not to let anything come between us.]]
 
 Joan I can't write anything interesting to read. I know all of my letters (the ones I do get to write) are dull. If it wasn't for your letters I don't know what I would do. They are wonderful things to receive way out here. Keep writting them, Darling and I know you are always thinking of me. I love you more than anything else in this world. Tell everyone I said Hello. Hope your grandmother is better and for her not to worry about Friday 13th. (Eugene Lankford)
-
-                                                          Lots of Love
-                                                              Always "Gene"

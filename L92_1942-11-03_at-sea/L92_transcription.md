@@ -20,19 +20,13 @@ note: |
 
   Salutation **"Joan, Dearest;"** — variant order (name-first, last appeared in L57 Oct 1941).
 
-  Notable content: (1) **"I'm not doing so well in here my self … I asked for a transfer but didn't have much luck"** — "Guess it's no one but my own self to blame. I asked for a transfer but didn't have much luck." First explicit transfer-attempt FAILURE in the archive (Gene mentioned attempting an "exchange of duty" in L90; here he confirms it didn't work). Combined with the recent L88 "wires crossed" and L89 "tired of the Japs," this is Gene at his lowest in the wartime correspondence. (2) **Memory of double-dating with Carroll & Louise** — "They had a lot in common last year if you remember. Do you remember those nights we were with them? The school house and a few other places. Louise says she knows Carroll told me everything." Pre-war memory of the four of them together; now Carroll-Louise is breaking up and the foursome is dispersed.
+  Notable content: (1) **"I'm not doing so well in here my self … I asked for a transfer but didn't have much luck"** — "Guess it's no one but my own self to blame. I asked for a transfer but didn't have much luck." First explicit transfer-attempt FAILURE in the archive (Gene mentioned attempting an "exchange of duty" in L90; here he confirms it didn't work). Combined with the recent L88 "wires crossed" and L89 "tired of the Japs," this is Gene at his lowest in the wartime correspondence.
+
+  (2) **Memory of double-dating with Carroll & Louise** — "They had a lot in common last year if you remember. Do you remember those nights we were with them? The school house and a few other places. Louise says she knows Carroll told me everything." Pre-war memory of the four of them together; now Carroll-Louise is breaking up and the foursome is dispersed.
 
   Also: **Joan asked about Louise Dunagan** — Gene's wry reply: "Darling it seems silly your asking me how, Louise Dunagan these days. You living only a short distance from her and me being so far away. She writes to me quite often and why I don't know"; Louise **teaching school at McKinney** (same place L89's Jeannie was teaching — flag: are McKinney and the L82's school references the same place?); **Louise "down & out on Carroll now"** — Joan thinks Louise and Carroll's relationship is finished; **Gene CONTRADICTS L89 again** — says "as Carroll is in the navy I kindly like to get with him" — but L89 said Carroll stayed out of the navy. The family-letter source keeps shifting; **Censorship sigh** — "Without any doubt my letters must seem awfully dull. I could make them very interesting if I could only write about a few things"; **J.B. Davidson** referenced (confirming L85 spelling vs. L84's "J.D.").
 
 ---
-
-[Air Mail — printed in red on left margin]
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco, Calif.
-                                                          F Division
-
-Joan, Dearest;
 
 Received one of your letters today and very glad to get it. The letter was a bit late in reaching me as I have received letters from you with a lately post mark. Surely got delayed some place or other which is the case quite often now days. Anyhow I was glad to hear from you again, Darling. You are so good in writing to me so often, and I'll never forget either.
 
@@ -43,8 +37,3 @@ Darling it seems silly your asking me how, Louise Dunagan these days. You living
 Well Dear there's not anything new to write as usual. I'm getting along fairly well. You know as Carroll is in the navy I kindly like to get with him. He probably wouldn't care to be on this ship though. [[I'm not doing so well in here my self. Guess it's no one but my own self to blame. I asked for a transfer but didn't have much luck.]]
 
 Darling tell all the family hello for me. Write any time you can for I'm glad to get the letters. Be good and I be thinking of you. Even though I not be able to write. Hope you got the pictures by now.
-
-                                                          Lots & lots of love,
-                                                              Always "Gene"
-
-(R.E. Lankford)

@@ -22,23 +22,15 @@ note: |
 
   Inside date "July 3, 1941" matches the postmark.
 
-  Notable content: (1) ship movement — "We are leaving Saturday for some place and I don't know where for sure, but I think for Midway Island agin" — second Midway run if confirmed (first was L25, Jan 1941); Gene also frames this as info he's not supposed to share ("Something else Joan, I shouldn't tell you this but I will"); (2) mortality reference — "as you know it could be the last time or maybe I should say a long time before I could get back agin" — picks up the L35 "still kicking" thread.
+  Notable content: (1) ship movement — "We are leaving Saturday for some place and I don't know where for sure, but I think for Midway Island agin" — second Midway run if confirmed (first was L25, Jan 1941); Gene also frames this as info he's not supposed to share ("Something else Joan, I shouldn't tell you this but I will");
+
+  (2) mortality reference — "as you know it could be the last time or maybe I should say a long time before I could get back agin" — picks up the L35 "still kicking" thread.
 
   Also: Gene mentions his "best friend" — both got drunk together when those earlier pictures of Gene were taken; Joan asked about photos with the long-hair girl Gene was apparently with (Gene clarifies it was his best friend, just both drunk); Gene wishes he could be home for July 4th; promotion to Seaman 1st Class confirmed in the P.S. (matches L43's emphasis line).
 
   Signature uses "Raymond E.L." — Gene's initials with full first name. The "L." at the end of the signature is partly cropped in IMG_9795 but the most natural reading is "Raymond E. L[ankford]"; could alternatively be "Raymond E.J." with "J." as a flourish (less likely given the family name).
 
 ---
-
-                                                          [NAVY Y.M.C.A. letterhead with photo of YMCA building]
-                                                          NAVY YOUNG MEN'S CHRISTIAN ASSOCIATION
-                                                          PEARL HARBOR, T.H.
-
-                                                          July 3, 1941
-                                                          F Division
-                                                          U.S.S. New Orleans
-
-Dearest Joan,
 
 Guess I had better write you a few lines tonight as I received your letter about two days ago. I should say it was good to know that you finally got a letter from me. Although I guess it was my own fought for being so long about writting and I give you my word I try not to let it happen agin. Maybe that doesn't mean much anyway but you know how I am at times and I would rather write you a letter then anyone else in this old world.
 
@@ -51,6 +43,3 @@ After all, as you know [[it could be the last time or maybe I should say a long 
 Joan did you get the present that I sent to you a few days ago. If I had some way of knowing what you would really like to have, maybe I know what to get some time. The way it is now I just I have to shut my eyes and pick up something that I wouldn't know whether you care for it or not. Why don't you tell me a few things for I don't know what girls would like to have (How about Joan)
 
 Joan, you will have to get you a pair glasses to read this letter for I wrote it in such a hurry. I been so busy running that dam boat today and I trying to write this before I have another trip. Sister, good looking don't be long about answering like I am. Just pick up a pen and write any day that you feel like it. I'm always looking for a letter from you. You know Joan, stop and think of it this is a funny old world. Don't you think so? Write soon.
-
-                                                          With Love & kisses
-                                                                          Raymond E.L.

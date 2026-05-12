@@ -23,20 +23,13 @@ note: |
 
   Salutation "My Dearest Joan;" — return to the "My" prefix form.
 
-  Letter pages on Hotel Lombard stationery, NOT numbered by Gene. Three sheets total plus envelope.
+  Notable content: (1) **GENE BOUGHT AN ENGAGEMENT RING IN SAN FRANCISCO — $95 with diamonds** — "Joan I got the ring you said about getting you yesterday. It's really a lovely one and has some swell looking diamonds in it. You never said whether you would wear it or not. So I don't know if I should send it. It's not a cheap one at all. I had to pay $95 for it and I know you really be proud of it. I haven't had a chance to mail it yet but I'm going to the first chance I have." First concrete RING acquisition in the archive (Gene asked for Joan's size in L74 three weeks ago). $95 in 1942 ≈ $1,800 in 2024 dollars — a serious sum for a Fireman First Class on $55/month pay.
 
-  Notable content: (1) **GENE BOUGHT AN ENGAGEMENT RING IN SAN FRANCISCO — $95 with diamonds** — "Joan I got the ring you said about getting you yesterday. It's really a lovely one and has some swell looking diamonds in it. You never said whether you would wear it or not. So I don't know if I should send it. It's not a cheap one at all. I had to pay $95 for it and I know you really be proud of it. I haven't had a chance to mail it yet but I'm going to the first chance I have." First concrete RING acquisition in the archive (Gene asked for Joan's size in L74 three weeks ago). $95 in 1942 ≈ $1,800 in 2024 dollars — a serious sum for a Fireman First Class on $55/month pay. (2) **Combat premonition — "I have a feeling we going to do a lot more fighting before long"** — paired with "There will be times when I won't be able to write." Written Feb 8, four months before the Battle of Midway (June 4, 1942) where the U.S.S. New Orleans escorted the carriers. Gene anticipates the coming Pacific campaign.
+  (2) **Combat premonition — "I have a feeling we going to do a lot more fighting before long"** — paired with "There will be times when I won't be able to write." Written Feb 8, four months before the Battle of Midway (June 4, 1942) where the U.S.S. New Orleans escorted the carriers. Gene anticipates the coming Pacific campaign.
 
   Also: **Second long-distance phone call to Joan** — "How you like the telephone call? I sorry to have been so late about calling, but it took me over an hour to get it through. I try to call you all night before but weren't able to get you." Second phone call in the archive after the L66 pre-Pearl Harbor call; **Ship's planned departure delayed (again)** — "We were suppose to leave yesterday and did, but something went a-wrong agin. So we came back agin"; **Letter from Dad** received — first time "Dad" is referenced by that exact term (previously "Mother / folks at home"); **Carroll possibly rejoining the navy** — Dad's letter suggests this; Gene's response — "I hate to see him come back, but if he does I sure want him to get on this ship. It's a lot better than a sub-marine and really a fighting [navy?]"; **Hotel Lombard top-floor SF view** — "I'm on the top floor and sure is a pretty city below with all the lights. I think this is the prettiest city at night I ever have seen. A person can't help from falling in love with it"; "Write soon!" handwritten at top of page 1 as a header note.
 
 ---
-
-[HOTEL LOMBARD — printed letterhead]
-                                                          Write soon!                   Sunday Nite, Feb. 8.
-                                                                                        San Francisco
-                                                                                        Calif.
-
-My Dearest Joan;
 
 Well honey I'm going to write a few short lines tonite before going to bed. Well I'm lucky to be here tonight as we were suppose to leave yesterday and did, but something went a-wrong agin. So we came back agin and as I had the week end off I decided to spend it in, San Francisco. It's about 2 O'clock now but thought I had better write as this might be my last chance. I don't know whether or not will leave tomorrow and if not probably Tuesday.
 
@@ -46,14 +39,6 @@ Joan I staying at the Lombard Hotel tonight, sure wished you could be here with 
 
 In Dad's letter he also said he thought Carroll would be back in the Navy before long. I hate to see him come back, but if he does I sure want him to get on this ship. It's a lot better than a submarine and really a fighting navy. [[I have a feeling we going to do a lot more fighting before long.]]
 
-[[Joan I got the ring you said about getting you yesterday. It's really a lovely one and has some swell looking diamonds in it. You never said whether you would wear it or not. So I don't know if I should send it. It's not a cheap one at]]
-
-all. I had to pay $95 for it and I know you really be proud of it. I haven't had a chance to mail it yet but I'm going to the first chance I have. I know you will love it but if you don't [strikethrough] to wear it we can always send it back. Wished I could be there to give it to you in person.
+[[Joan I got the ring you said about getting you yesterday. It's really a lovely one and has some swell looking diamonds in it. You never said whether you would wear it or not. So I don't know if I should send it. It's not a cheap one at]] all. I had to pay $95 for it and I know you really be proud of it. I haven't had a chance to mail it yet but I'm going to the first chance I have. I know you will love it but if you don't [strikethrough] to wear it we can always send it back. Wished I could be there to give it to you in person.
 
 Well Darling I must bring this letter to an close. I want you to write very soon and from here on don't wait for my letters before writting. There will be times when I won't be able to write, but I want you to write anyway. I'll promise to write though every chance I have. So [strikethrough: here] hoping to hear from you soon. Will always be thinking about you for I love you more than anything else in the world. Be good Darling.
-
-                                                          Lots of Love & kisses
-                                                              Yours Always,
-                                                                  "Gene."
-
-P.S. I [V mom?] [unclear]

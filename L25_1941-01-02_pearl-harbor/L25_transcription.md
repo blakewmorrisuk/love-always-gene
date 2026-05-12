@@ -29,14 +29,6 @@ note: |
 
 ---
 
-Jan. 3, 1941
-                                                          U.S.S. New Orleans
-                                                          Pearl Harbor, T.H.
-                                                          Honolulu, T.H.
-                                                          F. Division
-
-Dearest Joan,
-
 Will try to write a few lines today while thinking of you. It been about two weeks since I have received a letter from you. Don't go and forget to write Joan, even though I do sometimes. It isn't that I forgot. I just don't like writing letters. If I didn't write once in awhile I know I wouldn't get many letters. I guess I told you I got your Xmas present in my other letter. I was really glad to get it and Joan going to get something nice for not forgetting me.
 
 Well, Joan tomorrow we leave for [[Midway Island]]. It about 1300 miles from here. We are taking over about 200 marines + some marines. I don't think we will be over there very long, but you know I really don't know.
@@ -46,6 +38,3 @@ Jo, I had a swell of pictures taking of me but haven't went back to get them yet
 I got to make this letter short tonight, for I had better write a few lines home also. They always saying that I don't write enough. So please let me hear from you whenever you have the time.
 
 So be a good girl & tell all the family I said <em>Hello</em> for me.
-
-                                                            Lots & Lots of Love,
-                                                                          Gene

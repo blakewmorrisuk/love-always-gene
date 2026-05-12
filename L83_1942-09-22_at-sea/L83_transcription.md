@@ -26,18 +26,13 @@ note: |
 
   **Historical context:** Sep 22, 1942 — Guadalcanal campaign in heavy combat (Battle of Edson's Ridge had just ended Sep 14, 1942 — Marines repulsed a Japanese assault). The U.S.S. New Orleans operating in the South Pacific supporting Guadalcanal. Eight weeks from the Battle of Tassafaronga (Nov 30, 1942) where the ship would lose her bow.
 
-  Notable content: (1) **Gene self-blames for relationship trouble during last leave** — "You know it's really has been a long time now since we last been together. Would surely be nice to see everybody. We got along terrible last time I was home. Don't you think so? Guess it was mostly my fault though. Sure hope we can do better the next time." First explicit acknowledgment that Gene's last leave home (late Aug / early Sep 1941 per L48/L49 references) included friction with Joan, and Gene takes responsibility. (2) **Gene breaks with brother Carroll** — "It's going to be a long sad day before I ever write him another line. I think last time I heard from him was last January." Carroll-Louise marriage trouble has now caused a Gene-Carroll cutoff; Gene hasn't written Carroll in months and doesn't plan to.
+  Notable content: (1) **Gene self-blames for relationship trouble during last leave** — "You know it's really has been a long time now since we last been together. Would surely be nice to see everybody. We got along terrible last time I was home. Don't you think so? Guess it was mostly my fault though. Sure hope we can do better the next time." First explicit acknowledgment that Gene's last leave home (late Aug / early Sep 1941 per L48/L49 references) included friction with Joan, and Gene takes responsibility.
+
+  (2) **Gene breaks with brother Carroll** — "It's going to be a long sad day before I ever write him another line. I think last time I heard from him was last January." Carroll-Louise marriage trouble has now caused a Gene-Carroll cutoff; Gene hasn't written Carroll in months and doesn't plan to.
 
   Also: **Three more letters from Joan** received; **Letter from Martha + letter from Louise Dunagan (Carroll's wife/fiancée)** — Louise just returned from a 2-week vacation in Ohio; **Brother Thomas in the service** — only one letter from him since he enlisted, "Probably to busy with that nurse lately"; **Jim "still in the S.C."** — possible South Carolina station or Signal Corps unit; Gene's wry observation "Bet he doesn't stay away from home very long"; **Joan changed her hairstyle** — Gene's defensive response: "So you have fixed your hair another way. What in the world was wrong with it the other way? It's your hair though and guess you have the right to fix it the way you want to"; Gene hasn't been able to get pictures made yet — will send Joan one when possible; Gene asking for the picture Joan promised; "How did the big fair come out this year! Or did you go?" — Joan's local fair attendance.
 
 ---
-
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco, Calif.
-                                                          F Division
-
-Dearest Darling,
 
 Have once again received three of your letters and just now got the first chance to answer them. Surely glad to hear from you, even though the letters were somewhat late in reaching me. Of course I'm still well in every way and hope you & your family are the same. Guess my day & short letters seems awfully far between. Would you believe me if I said I do write every time it's possible? You'll figure that out for your self. Maybe I do and maybe I don't.
 
@@ -52,8 +47,3 @@ Well Joan, not much I know to write. Wished I could make the letters sound more 
 By the way is Jim still in the S.C. Bet he doesn't stay away from home very long. Haven't heard from Thomas for quite some time now. In fact I have received only one letter from him since he's been in the service. Probably to busy with that nurse lately. So you have fixed your hair another way. What in the world was wrong with it the other way? It's your hair though and guess you have the right to fix it the way you want to.
 
 Tell all I said Hello for me. Bye.
-
-                                                          Love & Kisses
-                                                              Always "Gene"
-
-(R.E. Lankford)

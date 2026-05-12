@@ -22,20 +22,13 @@ note: |
 
   Salutation "Dearest Joan," — comma variant (no semicolon). Standard.
 
-  Letter pages plain lined stationery (not U.S. NAVY letterhead), numbered (1), (2), (3) in Gene's hand. Three sheets.
+  Notable content: (1) **"In the mean time I will have to play ball with Hitler"** — Gene's first explicit reference to Hitler in the archive, written 7 days before Pearl Harbor and 11 days before Germany declared war on the United States. The "play ball with Hitler" idiom frames U.S. entry into the European war as already inevitable to Gene; he writes this while the U.S.S. New Orleans is moored at Pearl Harbor.
 
-  Notable content: (1) **"In the mean time I will have to play ball with Hitler"** — Gene's first explicit reference to Hitler in the archive, written 7 days before Pearl Harbor and 11 days before Germany declared war on the United States. The "play ball with Hitler" idiom frames U.S. entry into the European war as already inevitable to Gene; he writes this while the U.S.S. New Orleans is moored at Pearl Harbor. (2) **Gene plans to TELL his mother officially about the marriage** — "What would you do if I told her about our plans. I believe I will — & I don't think they would mad at all. What would your mother say if I told her? Wouldn't be much that she could do about it would there? Joan you are going to marry me just as soon it's possible. That's not going to be so long either." First time Gene proposes to formalize the engagement with family. Plans family-side action just as the attack on Pearl Harbor approaches.
+  (2) **Gene plans to TELL his mother officially about the marriage** — "What would you do if I told her about our plans. I believe I will — & I don't think they would mad at all. What would your mother say if I told her? Wouldn't be much that she could do about it would there? Joan you are going to marry me just as soon it's possible. That's not going to be so long either." First time Gene proposes to formalize the engagement with family. Plans family-side action just as the attack on Pearl Harbor approaches.
 
   Also: **Joan and Mrs. Lankford (Gene's mother) are corresponding** — Joan told Mrs. Lankford about getting the long-distance phone call from Gene; **Joan's grandmother is ill**; **Gene + Jack Parkhurst had a fight over whiskey today and made up** — "We got together a few minutes ago & made up though. He patted me on the back & said he was sorry … The whiskey was the cause which cause the whole thing. Boy way, we kissed & made up"; **Chapin's marriage trouble** — Chapin's Seattle wife (from the L62 wedding) wrote a letter that "didn't quite agree with him" — Gene thinks Chapin will bring her to Hawaii; **Gene gets a movie aboard ship every night** — "We do get the very best movies"; **Joan in a school play** — Gene wishes he could see it; **Gene's regret about enlisting in the navy** — "I just didn't quite realized it when I joined the navy or I wouldn't never been in here"; navy-discipline reflection — "a person can do almost anything he wants to just don't get caught doing the wrong thing. Well I never was afraid to do something once"; mother lonely at Stanford KY.
 
 ---
-
-                                                          U.S.S. New Orleans
-                                                          % Fleet Post Office
-                                                          Pearl Harbor, T.H.
-                                                          F Division
-
-Dearest Joan,
 
 Just received a letter from you today and also one yesterday. So I thought maybe it would be the best to write a few myself. I'm always glad to get a letter Joan so don't be afraid you'll write to much. I can't write letters worth reading at times.
 
@@ -54,7 +47,3 @@ I'm kindly feel bad tonight just a little headache. Had a busy day running the b
 Mother is always talking about how dull & lonesome things are around there now. She said that she has got so she isn't ever satisfied any where or anytime. Well guess everybody is that way once in awhile. This navy sometimes I think will drive me nuts. I'm always getting into trouble but have manage to slip out of it everytime. I just can't make myself do things like the navy wants it. They say a person can do almost anything he wants to just don't get caught doing the wrong thing. Well I never was afraid to do something once.
 
 Darling there isn't much to write that you would care to hear. Any how guess I write to much. Hoping to get an letter from you soon. Tell everyone I said hello & will you? Mother said in her letter you told her about getting the telephone call from me. Be good sweetheart & don't do everything that you think I would do. Hope you won't anyway. Write soon, Darling.
-
-                                                          With Lots of Love & K[isses]
-                                                              Always Yours,
-                                                                  "Gene"

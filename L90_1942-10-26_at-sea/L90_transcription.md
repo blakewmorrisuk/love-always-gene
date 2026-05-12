@@ -20,19 +20,13 @@ note: |
 
   Salutation "Dearest Joan," — comma variant.
 
-  Notable content: (1) **"I'm tired of the Japs and sure like to be at home again"** — Gene's bluntest war-fatigue statement; comes after a joke about preferring "to face the Japs" rather than face cold weather, then walked back: "I'm just kidding Darling. I'm tired of the Japs and sure like to be at home again. It's really seems a long time since I left you that night." Five weeks before the Tassafaronga torpedo hit. (2) **"In a way the same old Gene you use to know. Do you still remember him?"** — Gene wonders whether Joan still remembers the pre-war him. Paired with the L89 "see if they still know their son" line about his picture, this is the second time in a week Gene worries his combat-changed self is unrecognizable. Joan's role as the keeper of pre-war Gene becomes explicit.
+  Notable content: (1) **"I'm tired of the Japs and sure like to be at home again"** — Gene's bluntest war-fatigue statement; comes after a joke about preferring "to face the Japs" rather than face cold weather, then walked back: "I'm just kidding Darling. I'm tired of the Japs and sure like to be at home again. It's really seems a long time since I left you that night." Five weeks before the Tassafaronga torpedo hit.
+
+  (2) **"In a way the same old Gene you use to know. Do you still remember him?"** — Gene wonders whether Joan still remembers the pre-war him. Paired with the L89 "see if they still know their son" line about his picture, this is the second time in a week Gene worries his combat-changed self is unrecognizable. Joan's role as the keeper of pre-war Gene becomes explicit.
 
   Also: **Gene's RATE change to Sea 2/c** — confirmed in envelope return; **"The very biggest mistake you ever made was when we got acquainted"** — Gene's self-deprecating affection; **"Joan, your girl friend description sounds very interesting"** — Joan apparently set up a friend for Gene to write to; Gene's wry response: "Might pick the wrong sweet, if I didn't, you"; **Gene's CONTRADICTORY Carroll-news** — "Guess Carroll's in this outfit now" but L89 just said Carroll stayed out of the navy — Gene's source is family letters, possibly out of date; **Gene applied for an exchange of duty** — "I have tried for my exchange of duty myself"; **Gene's photos taken ashore** — "did you get the ones I taken myself. I just wanted to show you I could handle a camera taken I'm sober"; **Censor mockery** — closing line: "The censor probably raise hell about it I guess. He would to it if I had to read the thing"; **Snow longing** — "I can't hardly realize what it be like to see snow on the ground. Probably be afraid of the stuff if it didn't kill me. I rather face the Japs."
 
 ---
-
-[Air Mail — printed in red on left margin]
-                                                          U.S.S. New Orleans
-                                                          % Fleet Postmaster
-                                                          San Francisco, Calif.
-                                                          F Division
-
-Dearest Joan,
 
 Your letter came today and sure was good hearing from you agin. Haven't anything else to do tonight So I thought I just answer the letter. I also received an letter from, Mother couple days ago. Of course she didn't have much to say.
 
@@ -47,8 +41,3 @@ I'm glad bet it's started to get cold around there now. There nothing like a lit
 Joan your girl friend description sounds very interesting. Thanks for the address. No I don't remember the girl at all but her name is familiar. Does she know me? Will drop her a letter the first chance I get. Got to get acquainted first you know. Might pick the wrong sweet, if I didn't, you.
 
 Well darling I haven't anything to write. From the look of this letter a person wouldn't think so. The censor probably raise hell about it I guess. He would to it if I had to read the thing. Tell all I said hello when I can write again. So be good. Bye.
-
-                                                          Lots of Love & K[isses]
-                                                              Always "Gene"
-
-(R.E. Lankford)

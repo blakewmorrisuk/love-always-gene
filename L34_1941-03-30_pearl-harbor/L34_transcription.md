@@ -27,14 +27,6 @@ note: |
 
 ---
 
-                                                          U.S.S. New Orleans
-                                                          Pearl Harbor,
-                                                          Honolulu, T.H.
-                                                          March 30, 1940
-                                                          F Division
-
-Dearest Joan,
-
 I was so glad to hear from you agin and it seems as if your letters are so far between. Joan I sorry that I haven't been writting often but I thought I had been writting you a letter once a week. Guess though I forgotten too write one week although I thought I had.
 
 Well Joan you asked what I have been doing lately. There are about the same old routine every day. The most I do every day is running a motor boat. I finally work myself up to coxwain of it. It a small boat about thirty feet long and will haul 26 men at one time.
@@ -58,7 +50,3 @@ Joan I don't know anything worth writting. By the way you never did tell me when
 Jo, I get lonesome, as you say lots of times myself. Hope my letters cheers you up some. You needn't worry about me forgetting too think about you. [[Sometime I wish to hell I could forget that I ever saw you.]]
 
 Will have to bring this letter to a close now. Tell every one I say, hello for me. Always looking for a letter with your handwriting on it.
-
-                                                          With all kinds of Love
-                                                                          Yours, "Gene"
-                                                                                  Raymond

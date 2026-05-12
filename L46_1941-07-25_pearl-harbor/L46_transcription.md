@@ -22,7 +22,9 @@ note: |
 
   Status: `transcribed_draft` only because of one ambiguity in the typed addressee block at the bottom of the page (see below); the body text itself is typed-clear with no cursive uncertainty.
 
-  Notable content: (1) "I will be back in Long Beach, California Saturday, August 2nd" — concrete arrival date for the long-anticipated stateside return; (2) "I have thirty days leave and should be able to spend about twenty six days at home" — the 30-day leave is confirmed (Gene has been hoping for this since L29). The leave Gene has been chasing through L26 → L27 → L29 → L30 → L34 → L37 → L38 (canceled) → L42 → L43 → L45 finally materialises here.
+  Notable content: (1) "I will be back in Long Beach, California Saturday, August 2nd" — concrete arrival date for the long-anticipated stateside return;
+
+  (2) "I have thirty days leave and should be able to spend about twenty six days at home" — the 30-day leave is confirmed (Gene has been hoping for this since L29). The leave Gene has been chasing through L26 → L27 → L29 → L30 → L34 → L37 → L38 (canceled) → L42 → L43 → L45 finally materialises here.
 
   Asks Joan to drive over and tell Gene's mother that he's coming home, since "the mail is closing a-board ship in a few minutes and I will have to hurry."
 
@@ -30,20 +32,7 @@ note: |
 
 ---
 
-CA32/ U.S.S. NEW ORLEANS
-                                                          Pearl Harbor, T.H.
-                                                          July 25, 1941.
-
-Dearest Joan,
-
 [[I will be back in Long Beach, California Saturday, August 2nd]], and on leaving for home the same day. It Certainly will be good to be back home again and best of all I will be seeing you again. [[I have thirty days leave and should be able to spend about twenty six days at home.]] I'll bet we really will have a good time. How about doing me a favor and running over and telling mom that I am coming home and about when I will arrive. I would write a letter to her but the mail is closing a-board ship in a few minutes and I will have to hurry to send this one.
 
 Well be a good girl and I am looking forward to see-
 you as soon as I get back.
-
-                                                          With lots & lots of love
-                                                                          Gene.
-
-Mr. Gene Lankford,
-Stanford, Kentucky.
-R. 1.

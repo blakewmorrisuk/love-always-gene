@@ -24,19 +24,13 @@ note: |
 
   Salutation "Joan, Dearest;" — name-first variant.
 
-  Notable content: (1) **Gene REVERSES the L55 withdrawal of his marriage proposal** — "Joan, I give anything if you would only make me that promise to marry me when you finish school. I haven't much to start with but I believed we could get along swell together." This is significant: just six days after telling Joan in L55 that "I won't ask you to make me that promise again," Gene is asking again. (2) Mortality reflection on Gene's last sight of the Kentucky moon — "As I were taking the last look I said to myself this might be my last time to see it at all" — echoes the L51 mortality thread.
+  Notable content: (1) **Gene REVERSES the L55 withdrawal of his marriage proposal** — "Joan, I give anything if you would only make me that promise to marry me when you finish school. I haven't much to start with but I believed we could get along swell together." This is significant: just six days after telling Joan in L55 that "I won't ask you to make me that promise again," Gene is asking again.
+
+  (2) Mortality reflection on Gene's last sight of the Kentucky moon — "As I were taking the last look I said to myself this might be my last time to see it at all" — echoes the L51 mortality thread.
 
   Also: brother Carroll recovering from his operation; brother Thomas in Detroit, likely to be drafted ("Once they get him in he might as well plan to stay there until this war is over … the navy bad enough to me. The army is just about four times worse"); Elizabeth McKinney visiting Joan for the weekend; movies seen: "Man Hunt" (1941 Fritz Lang, Walter Pidgeon & Joan Bennett) and "Kiss The Boys Goodbye" (1941, Mary Martin & Don Ameche); Bill (presumably Joan's relative) has cut his finger off.
 
 ---
-
-Friday Nite Oct 10
-                                                          U.S.S. New Orleans
-                                                          % Postmaster
-                                                          Bremerton, Wash.
-                                                          F Division
-
-Joan, Dearest;
 
 Well your letter came yesterday and finally have time to answer it tonite. I read your letters over & over until I get the next one. You awful sweet Joan to take the trouble writting to me so much. You never know how much I appreciate it either. If you keep on you will make me think you really like me. I believed you care for me, anyway and I think you are the sweetest girl in this whole wide world.
 
@@ -63,6 +57,3 @@ Joan, I saw two awful good shows the last two nights. If you can possible get to
 Well Darling don't you think I said enough for once? Guess I said a little to much. Please write agin soon.
 
 I'm sorry about Bill cutting his finger off. Hope it's getting along fine. Looking for a letter very soon. Be good.
-
-                                                          Loads of Love,
-                                                                  Always, "Gene"

@@ -24,21 +24,13 @@ note: |
 
   **P.S. written at the TOP of page 1** (above the date header) — Gene heard "My Old Kentucky Home" on the radio while writing and added the note in the available top margin. This is the homesickness moment of the letter.
 
-  Notable content: (1) **Homesickness P.S.** — Gene hears "My Old Kentucky Home" on the ship's radio while writing and notes "Sure makes me feel awful bad". (2) **Ship's Bremerton departure window narrows** — "Will only be here about ten more days. Sure will hate going back to sea agin" — confirms the ship leaves Bremerton ~Oct 28, then down the coast (San Francisco/LA/Long Beach per L61), then on to Hawaii. This is the fall departure for Pearl Harbor.
+  Notable content: (1) **Homesickness P.S.** — Gene hears "My Old Kentucky Home" on the ship's radio while writing and notes "Sure makes me feel awful bad".
+
+  (2) **Ship's Bremerton departure window narrows** — "Will only be here about ten more days. Sure will hate going back to sea agin" — confirms the ship leaves Bremerton ~Oct 28, then down the coast (San Francisco/LA/Long Beach per L61), then on to Hawaii. This is the fall departure for Pearl Harbor.
 
   Also: Joan writing less often this week ("Only one letter this week is all I got"); Gene & Jack Parkhurst spending Saturday night at the Craven Center writing letters & waiting for the movie to start; movie reference "Blood & Sand" (1941, Rouben Mamoulian — Tyrone Power, Linda Darnell, Rita Hayworth); evenings spent at the radio or pool table at Craven Center; church plans for Sunday night if Parkhurst will go; **friend Chapin getting married in Seattle "in just a few days"** to a local girl Gene calls "an awful nice looking girl" (note the ironic juxtaposition with L61's Parkhurst-marriage-next-year line and Gene's own withdrawn proposal).
 
 ---
-
-P.S. "They are right now [[singing 'my Old Kentucky Home,' on the radio. Sure makes me feel awful bad.]]
-
-Saturday Nite Oct 18
-                                                          U.S.S. New Orleans
-                                                          % Postmaster
-                                                          Bremerton, Wash.
-                                                          F Division
-
-Dearest Joan;
 
 Just a few lines tonite to say hello, while not busy at the present. You don't write as often as you did, Honey. Only one letter this week is all I got. Guess I get another one in a day or two, though. Surely hope this finds you O.K. and also the family. I'm alright myself as usual.
 
@@ -49,6 +41,3 @@ Jack & myself are [strikethrough: over] here at Craven Center tonight and he is 
 At nights me & Jack just set around here listening to the radio or play pool. Things that will pass the time off. Guess we go to church tomorrow night if he will go. You know the other friend of mine the name of Chapin. I had some pictures I show you when I were home of him if you remember. Well, he is getting married in just a few days to a girl in, Seattle. He goes over there to her about every night. She is an awful nice looking girl.
 
 Joan, there isn't nothing new I know to write. Anyway I be writting again in a day or so. Please write, Darling whenever you have the chance. Every letter you write will be answer gladly and with all the love I have. So looking for an letter soon. Tell every one hello for me. You know I love the whole family and think about all of them. (Please excuse this writting.)
-
-                                                          Loads of Love & Kisses
-                                                                  Yours, "Gene"
