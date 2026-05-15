@@ -1047,7 +1047,7 @@ function CoverModal({ onClose }) {
         <button className="cover-x" onClick={onClose} aria-label="Close">×</button>
         <p className="cover-salutation">Dear Reader,</p>
         <p className="cover-body">
-          From before the war, through the attack on Pearl Harbor, and the perilous journey of the U.S.S. New Orleans — the "NO (Such) Boat," the "Ghost Ship" — the love my grandfather had for my grandmother is what survives.
+          From before the war, through the attack on Pearl Harbor, and the perilous journey of the U.S.S. New Orleans — the "NO (Such) Boat," the "Ghost Ship," the "Miracle Ship" — love endures.
         </p>
         <p className="cover-body">
           What follows are his letters to her.
