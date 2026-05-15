@@ -1070,9 +1070,9 @@ function CoverModal({ onClose }) {
           </a>
         </div>
         <div className="cover-signoff">
-          <p className="cover-signoff-line">From the one who cares,</p>
-          <p className="cover-signoff-handwritten">Love, always,</p>
-          <p className="cover-signoff-name">Blake William <strong>M</strong>orris</p>
+          <p className="cover-signoff-line">“From the one who cares,”</p>
+          <p className="cover-signoff-handwritten">“Love, always,”</p>
+          <p className="cover-signoff-name">Blake William Morris</p>
         </div>
         <button className="cover-close" onClick={onClose}>Open the letters</button>
       </div>
