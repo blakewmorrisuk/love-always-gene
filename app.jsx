@@ -697,61 +697,38 @@ function ShipOrnament() {
   );
 }
 
-/* ShipSilhouette — U.S.S. New Orleans (CA-32) after Tassafaronga, the
-   "Miracle Ship." On 30 November 1942 a Japanese Long Lance torpedo
-   tore away the 150 feet of bow forward of her second turret; she
-   limped to Tulagi camouflaged with palm fronds, then transited to
-   Cockatoo Island Dockyard, Sydney, for a new bow. This is her
-   profile in that period: stub bow on the left where A and B turrets
-   used to be, the bridge tower newly exposed at the forward end,
-   trunked twin funnels amidships, mainmast aft of the funnels, the
-   aircraft hangar deck astern, and only the X (aft) turret remaining
-   of her three main-battery triples. The empty space to the left of
-   the hull is the visual signal — what should be there isn't. */
+/* ShipSilhouette — heavy-cruiser silhouette evocative of the U.S.S.
+   New Orleans (CA-32): forward and aft turrets with twin barrels, a
+   tripod-mast bridge, two staggered funnels, aft superstructure. Sits
+   at the bottom of the title page on a faint brass horizon hairline,
+   like the ship is on the horizon at sea. */
 function ShipSilhouette() {
   return (
     <div className="ship-horizon" aria-hidden="true">
       <svg className="ship-silhouette" viewBox="0 0 800 130" preserveAspectRatio="xMidYMid meet">
         <g fill="currentColor">
-          {/* Hull. Stub bow at x=200, forecastle deck raised to y=76 from
-              bow to amidships, drops to main deck y=86 aft of x=420,
-              tapers to stern transom at x=755. */}
-          <path d="M 200 76 L 420 76 L 420 86 L 720 86 L 740 92 L 755 100 L 215 100 L 200 96 L 200 76 Z" />
-
-          {/* Bridge tower — multi-tier forward superstructure, now the
-              forward-most structure on the ship. */}
-          <rect x="220" y="58" width="90" height="18" />
-          <rect x="240" y="46" width="62" height="12" />
-          <rect x="255" y="36" width="38" height="10" />
-          <rect x="265" y="26" width="22" height="10" />
-          <rect x="270" y="20" width="10" height="6" />
-
-          {/* Tripod foremast + topmast */}
-          <rect x="274" y="4" width="2" height="16" />
-          <line x1="269" y1="26" x2="275" y2="6" stroke="currentColor" strokeWidth="1.4" />
-          <line x1="281" y1="26" x2="275" y2="6" stroke="currentColor" strokeWidth="1.4" />
-          <rect x="270" y="12" width="10" height="2" />
-
-          {/* Two trunked funnels, grouped close together, raked aft */}
-          <path d="M 348 86 L 348 36 L 384 32 L 384 86 Z" />
-          <path d="M 400 86 L 400 38 L 436 34 L 436 86 Z" />
-
-          {/* Mainmast aft of the funnels */}
-          <rect x="464" y="20" width="2" height="66" />
-          <rect x="458" y="32" width="14" height="2" />
-
-          {/* Aircraft hangar / handling area on aft deck */}
-          <rect x="494" y="72" width="140" height="14" />
-          <rect x="528" y="64" width="60" height="8" />
-
-          {/* X turret — the one remaining triple 8"/55 turret, firing aft */}
-          <rect x="655" y="74" width="50" height="12" rx="1.5" />
-          <rect x="705" y="76" width="50" height="2.2" />
-          <rect x="705" y="79.6" width="50" height="2.2" />
-          <rect x="705" y="83.2" width="50" height="2.2" />
-
-          {/* Jackstaff at stern */}
-          <rect x="751" y="88" width="1.5" height="12" />
+          <path d="M 60 92 L 80 82 L 130 80 L 700 80 L 738 84 L 744 92 L 738 100 L 70 100 Z" />
+          <path d="M 130 80 L 130 70 L 280 70 L 290 80 Z" />
+          <rect x="160" y="60" width="44" height="11" rx="1.5" />
+          <rect x="120" y="63" width="44" height="2.4" />
+          <rect x="120" y="68" width="44" height="2.4" />
+          <rect x="310" y="56" width="170" height="24" />
+          <rect x="340" y="40" width="56" height="16" />
+          <rect x="356" y="28" width="24" height="12" />
+          <rect x="367" y="6" width="2" height="22" />
+          <line x1="357" y1="28" x2="367" y2="10" stroke="currentColor" strokeWidth="1.6" />
+          <line x1="378" y1="28" x2="368" y2="10" stroke="currentColor" strokeWidth="1.6" />
+          <rect x="362" y="14" width="11" height="3" />
+          <path d="M 408 56 L 408 24 L 432 20 L 432 56 Z" />
+          <path d="M 452 56 L 452 30 L 476 26 L 476 56 Z" />
+          <rect x="500" y="58" width="68" height="22" />
+          <rect x="525" y="48" width="36" height="10" />
+          <rect x="540" y="30" width="2" height="18" />
+          <rect x="568" y="72" width="120" height="8" />
+          <rect x="600" y="62" width="40" height="10" rx="1.5" />
+          <rect x="635" y="65" width="44" height="2.4" />
+          <rect x="635" y="70" width="44" height="2.4" />
+          <rect x="730" y="74" width="1.6" height="10" />
         </g>
       </svg>
     </div>
