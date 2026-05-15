@@ -1024,11 +1024,12 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
 /*  Root                                                               */
 /* ------------------------------------------------------------------ */
 
-/* CoverModal — dedication pop-up that opens the archive. Pop-ad
-   pattern: contained box centered over a dimmed page, X close in
-   the corner, single CTA at the bottom. localStorage-gated so
-   returning readers aren't pestered. Click-outside, Escape, and
-   either button dismiss. */
+/* CoverModal — dedication letter from the grandson, pop-up overlay
+   on the title page. Different aesthetic from Eugene's letters
+   (lighter paper, no postmark/drop-cap/handwritten salutation —
+   plain readable typography, two short paragraphs, two press
+   buttons, simple signoff). localStorage-gated so returning readers
+   aren't pestered. Click-outside, Escape, X, or CTA dismiss. */
 function CoverModal({ onClose }) {
   useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
@@ -1041,21 +1042,30 @@ function CoverModal({ onClose }) {
     };
   }, [onClose]);
   return (
-    <div className="cover-backdrop" role="dialog" aria-modal="true" aria-label="A dedication" onClick={onClose}>
+    <div className="cover-backdrop" role="dialog" aria-modal="true" aria-label="A note from the grandson" onClick={onClose}>
       <div className="cover-popup" onClick={(e) => e.stopPropagation()}>
         <button className="cover-x" onClick={onClose} aria-label="Close">×</button>
+        <p className="cover-salutation">Dear Reader,</p>
         <p className="cover-body">
-          From before the war, through the attack on Pearl Harbor, and the perilous journey of the U.S.S. New Orleans — the "<em>NO (Such) Boat</em>," the "<em>Ghost Ship</em>" — the love my grandfather had for my grandmother is what survives. As you read these letters, you keep their story alive another day.
+          From before the war, through the attack on Pearl Harbor, and the perilous journey of the U.S.S. New Orleans — the "NO (Such) Boat," the "Ghost Ship" — the love my grandfather had for my grandmother is what survives.
         </p>
-        <p className="cover-press">
-          <a className="cover-press-link"
+        <p className="cover-body">
+          What follows are his letters to her. As you read them, you keep their story alive another day.
+        </p>
+        <div className="cover-buttons">
+          <a className="cover-button cover-button--navy"
              href="https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/"
-             target="_blank" rel="noopener noreferrer">WKYT article</a>
-          <span className="cover-press-dot" aria-hidden="true">·</span>
-          <a className="cover-press-link"
+             target="_blank" rel="noopener noreferrer">
+            <span className="cover-button-label">WKYT</span>
+            <span className="cover-button-text">Article</span>
+          </a>
+          <a className="cover-button cover-button--brass"
              href="https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/"
-             target="_blank" rel="noopener noreferrer">WKYT video</a>
-        </p>
+             target="_blank" rel="noopener noreferrer">
+            <span className="cover-button-label">WKYT</span>
+            <span className="cover-button-text">Video</span>
+          </a>
+        </div>
         <div className="cover-signoff">
           <p className="cover-signoff-line">From the one who cares,</p>
           <p className="cover-signoff-handwritten">Love, always,</p>
@@ -1078,11 +1088,19 @@ function App() {
   const reduced = useReducedMotion();
 
   // Cover dedication — show on first visit, remember dismissal so
-  // returning readers don't see it every reload.
-  const [coverOpen, setCoverOpen] = useState(() => {
-    try { return localStorage.getItem("love-always-cover-seen") !== "1"; }
-    catch (e) { return true; }
-  });
+  // returning readers don't see it every reload. Mount the popup
+  // ~2s after first load so the title-page entrance animations
+  // (ornament + title + names + locator + ship silhouette) have time
+  // to play before the overlay obscures them.
+  const [coverOpen, setCoverOpen] = useState(false);
+  useEffect(() => {
+    let seen = false;
+    try { seen = localStorage.getItem("love-always-cover-seen") === "1"; }
+    catch (e) {}
+    if (seen) return;
+    const t = setTimeout(() => setCoverOpen(true), 2000);
+    return () => clearTimeout(t);
+  }, []);
   const closeCover = useCallback(() => {
     try { localStorage.setItem("love-always-cover-seen", "1"); } catch (e) {}
     setCoverOpen(false);
