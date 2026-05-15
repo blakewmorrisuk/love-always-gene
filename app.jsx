@@ -1024,11 +1024,11 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
 /*  Root                                                               */
 /* ------------------------------------------------------------------ */
 
-/* CoverModal — full-bleed dedication that opens the archive. Shown
-   once per browser via localStorage so returning visitors aren't
-   nagged. Click-outside, Escape, or the "Open the letters" button
-   dismiss it. The close button fades + rises in ~1.6s after the
-   modal opens, giving the body text time to be read. */
+/* CoverModal — dedication pop-up that opens the archive. Pop-ad
+   pattern: contained box centered over a dimmed page, X close in
+   the corner, single CTA at the bottom. localStorage-gated so
+   returning readers aren't pestered. Click-outside, Escape, and
+   either button dismiss. */
 function CoverModal({ onClose }) {
   useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
@@ -1041,25 +1041,20 @@ function CoverModal({ onClose }) {
     };
   }, [onClose]);
   return (
-    <div className="cover-modal" role="dialog" aria-modal="true" aria-label="A dedication" onClick={onClose}>
-      <div className="cover-panel" onClick={(e) => e.stopPropagation()}>
-        <div className="cover-ornament" aria-hidden="true">
-          <span className="cover-rule" />
-          <span className="cover-mark">✦</span>
-          <span className="cover-rule" />
-        </div>
+    <div className="cover-backdrop" role="dialog" aria-modal="true" aria-label="A dedication" onClick={onClose}>
+      <div className="cover-popup" onClick={(e) => e.stopPropagation()}>
+        <button className="cover-x" onClick={onClose} aria-label="Close">×</button>
         <p className="cover-body">
           From before the war, through the attack on Pearl Harbor, and the perilous journey of the U.S.S. New Orleans — the "<em>NO (Such) Boat</em>," the "<em>Ghost Ship</em>" — the love my grandfather had for my grandmother is what survives. As you read these letters, you keep their story alive another day.
         </p>
         <p className="cover-press">
-          <span className="cover-press-label">Press</span>
           <a className="cover-press-link"
              href="https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/"
-             target="_blank" rel="noopener noreferrer">WKYT · article</a>
+             target="_blank" rel="noopener noreferrer">WKYT article</a>
           <span className="cover-press-dot" aria-hidden="true">·</span>
           <a className="cover-press-link"
              href="https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/"
-             target="_blank" rel="noopener noreferrer">WKYT · video</a>
+             target="_blank" rel="noopener noreferrer">WKYT video</a>
         </p>
         <div className="cover-signoff">
           <p className="cover-signoff-line">From the one who cares,</p>
