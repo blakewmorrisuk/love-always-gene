@@ -1052,9 +1052,6 @@ function CoverModal({ onClose }) {
         <p className="cover-body">
           What follows are his letters to her.
         </p>
-        <p className="cover-body">
-          As you read them, you keep their story alive another day.
-        </p>
         <div className="cover-buttons">
           <a className="cover-button cover-button--navy"
              href="https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/"
