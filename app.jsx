@@ -1024,6 +1024,54 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
 /*  Root                                                               */
 /* ------------------------------------------------------------------ */
 
+/* CoverModal — full-bleed dedication that opens the archive. Shown
+   once per browser via localStorage so returning visitors aren't
+   nagged. Click-outside, Escape, or the "Open the letters" button
+   dismiss it. The close button fades + rises in ~1.6s after the
+   modal opens, giving the body text time to be read. */
+function CoverModal({ onClose }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [onClose]);
+  return (
+    <div className="cover-modal" role="dialog" aria-modal="true" aria-label="A dedication" onClick={onClose}>
+      <div className="cover-panel" onClick={(e) => e.stopPropagation()}>
+        <div className="cover-ornament" aria-hidden="true">
+          <span className="cover-rule" />
+          <span className="cover-mark">✦</span>
+          <span className="cover-rule" />
+        </div>
+        <p className="cover-body">
+          From before the war, through the attack on Pearl Harbor, and the perilous journey of the U.S.S. New Orleans — the "<em>NO (Such) Boat</em>," the "<em>Ghost Ship</em>" — the love my grandfather had for my grandmother is what survives. As you read these letters, you keep their story alive another day.
+        </p>
+        <p className="cover-press">
+          <span className="cover-press-label">Press</span>
+          <a className="cover-press-link"
+             href="https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/"
+             target="_blank" rel="noopener noreferrer">WKYT · article</a>
+          <span className="cover-press-dot" aria-hidden="true">·</span>
+          <a className="cover-press-link"
+             href="https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/"
+             target="_blank" rel="noopener noreferrer">WKYT · video</a>
+        </p>
+        <div className="cover-signoff">
+          <p className="cover-signoff-line">From the one who cares,</p>
+          <p className="cover-signoff-handwritten">Love, always,</p>
+          <p className="cover-signoff-name">Blake William <strong>M</strong>orris</p>
+        </div>
+        <button className="cover-close" onClick={onClose}>Open the letters</button>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS), []);
   const [pageIdx, setPageIdx] = useState(() => parseHashIdx(pages.length - 1));
@@ -1033,6 +1081,17 @@ function App() {
   const [tocOpen, setTocOpen] = useState(false);
   const swipeRef = useRef(null);
   const reduced = useReducedMotion();
+
+  // Cover dedication — show on first visit, remember dismissal so
+  // returning readers don't see it every reload.
+  const [coverOpen, setCoverOpen] = useState(() => {
+    try { return localStorage.getItem("love-always-cover-seen") !== "1"; }
+    catch (e) { return true; }
+  });
+  const closeCover = useCallback(() => {
+    try { localStorage.setItem("love-always-cover-seen", "1"); } catch (e) {}
+    setCoverOpen(false);
+  }, []);
 
   const goto = useCallback((idx) => {
     setPageIdx(curr => {
@@ -1228,6 +1287,8 @@ function App() {
       )}
 
       {lb && <Lightbox letter={lb.letter} page={lb.page} onClose={closeLb} onNav={navLb} />}
+
+      {coverOpen && <CoverModal onClose={closeCover} />}
     </>
   );
 }

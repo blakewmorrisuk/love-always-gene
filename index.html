@@ -2044,6 +2044,185 @@ body.body--navy .toc-btn:hover {
   .lb-frame { padding: 10px; }
 }
 
+/* ---- cover dedication modal ------------------------------------- */
+/* Full-bleed splash that opens the archive. Paper-textured backdrop,
+   centered dedication, press links inline, handwritten 'Love, always,'
+   in Caveat to match Gene's signature voice. Close button at the foot
+   floats in 1.6s after open. localStorage-gated in App so returning
+   readers don't see it every reload. */
+.cover-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--paper);
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(155,123,63,0.07), transparent 55%),
+    radial-gradient(ellipse at 90% 95%, rgba(60,40,20,0.07), transparent 50%),
+    radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(60,40,20,0.10) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.2rem;
+  overflow-y: auto;
+  animation: cover-fadein 0.6s ease;
+}
+@keyframes cover-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.cover-panel {
+  max-width: 34rem;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.cover-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 0 auto 2.4rem;
+  max-width: 22rem;
+}
+.cover-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--brass), transparent);
+  opacity: 0.8;
+}
+.cover-mark {
+  color: var(--brass);
+  font-family: var(--serif-display);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.cover-body {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.08rem, 2.3vw, 1.25rem);
+  line-height: 1.75;
+  color: var(--walnut);
+  margin: 0 auto 2rem;
+  max-width: 30rem;
+  text-align: justify;
+  text-align-last: center;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.cover-body em {
+  font-style: italic;
+  color: var(--navy-deep);
+  font-weight: 500;
+}
+
+.cover-press {
+  font-family: var(--serif-body);
+  font-size: 0.66rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--walnut-mute);
+  margin: 0 auto 2.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 500;
+}
+.cover-press-label {
+  color: var(--brass);
+  margin-right: 0.3rem;
+}
+.cover-press-link {
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(31,45,61,0.35);
+  padding-bottom: 0.06em;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.cover-press-link:hover,
+.cover-press-link:focus-visible {
+  color: var(--navy-deep);
+  border-bottom-color: var(--navy);
+  outline: none;
+}
+.cover-press-dot { color: var(--brass); }
+
+.cover-signoff {
+  margin: 0 auto 2.8rem;
+}
+.cover-signoff-line {
+  font-family: var(--serif-body);
+  font-style: italic;
+  color: var(--walnut-soft);
+  font-size: 0.95rem;
+  margin: 0;
+}
+.cover-signoff-handwritten {
+  font-family: var(--hand);
+  font-size: 2rem;
+  color: var(--navy-deep);
+  margin: 0.5rem 0 0.4rem;
+  line-height: 1;
+}
+.cover-signoff-name {
+  font-family: var(--serif-display);
+  font-style: italic;
+  color: var(--ink);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+.cover-signoff-name strong {
+  font-weight: 700;
+  color: var(--navy-deep);
+}
+
+.cover-close {
+  background: none;
+  border: 1px solid rgba(155,123,63,0.5);
+  font-family: var(--serif-body);
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--walnut-mute);
+  cursor: pointer;
+  padding: 0.75rem 1.7rem;
+  border-radius: 2px;
+  font-weight: 500;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease, letter-spacing 0.3s ease;
+  opacity: 0;
+  animation: cover-close-rise 1.4s cubic-bezier(0.22, 1, 0.36, 1) 1.6s forwards;
+}
+.cover-close:hover, .cover-close:focus-visible {
+  color: var(--ink);
+  border-color: var(--brass);
+  background: rgba(226,209,169,0.45);
+  letter-spacing: 0.34em;
+  outline: none;
+}
+@keyframes cover-close-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover-modal { animation: none; }
+  .cover-close { animation: none; opacity: 1; transform: none; }
+}
+
+@media (max-width: 540px) {
+  .cover-body { font-size: 1.05rem; line-height: 1.7; }
+  .cover-signoff-handwritten { font-size: 1.7rem; }
+  .cover-close { font-size: 0.66rem; padding: 0.65rem 1.2rem; letter-spacing: 0.28em; }
+}
+
 /* ---- responsive -------------------------------------------------- */
 
 @media (max-width: 540px) {
@@ -2201,14 +2380,14 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 
 <!-- Cache-bust: bump on every meaningful release so iOS Safari doesn't
      keep serving a stale app.jsx after a new index.html lands. -->
-<script>window.__APP_VERSION = "20260512c";</script>
-<script src="letters.js?v=20260512c"></script>
+<script>window.__APP_VERSION = "20260512d";</script>
+<script src="letters.js?v=20260512d"></script>
 <!-- weather.js is generated by scripts/fetch_weather.mjs. If absent the
      atmosphere falls back to chapter defaults. The onerror swallow avoids
      a console 404 when it hasn't been generated yet. -->
 <script>window.LETTER_WEATHER = window.LETTER_WEATHER || null;</script>
-<script src="weather.js?v=20260512c" onerror="void 0"></script>
-<script type="text/babel" src="app.jsx?v=20260512c"></script>
+<script src="weather.js?v=20260512d" onerror="void 0"></script>
+<script type="text/babel" src="app.jsx?v=20260512d"></script>
 
 </body>
 </html>
