@@ -1050,7 +1050,10 @@ function CoverModal({ onClose }) {
           From before the war, through the attack on Pearl Harbor, and the perilous journey of the U.S.S. New Orleans — the "NO (Such) Boat," the "Ghost Ship" — the love my grandfather had for my grandmother is what survives.
         </p>
         <p className="cover-body">
-          What follows are his letters to her. As you read them, you keep their story alive another day.
+          What follows are his letters to her.
+        </p>
+        <p className="cover-body">
+          As you read them, you keep their story alive another day.
         </p>
         <div className="cover-buttons">
           <a className="cover-button cover-button--navy"
@@ -1087,24 +1090,16 @@ function App() {
   const swipeRef = useRef(null);
   const reduced = useReducedMotion();
 
-  // Cover dedication — show on first visit, remember dismissal so
-  // returning readers don't see it every reload. Mount the popup
-  // ~2s after first load so the title-page entrance animations
-  // (ornament + title + names + locator + ship silhouette) have time
-  // to play before the overlay obscures them.
+  // Cover dedication — float in 2s after page load so the title-page
+  // entrance animations get to play first. Shows every visit (no
+  // localStorage gate) so the dedication isn't hidden from returning
+  // readers.
   const [coverOpen, setCoverOpen] = useState(false);
   useEffect(() => {
-    let seen = false;
-    try { seen = localStorage.getItem("love-always-cover-seen") === "1"; }
-    catch (e) {}
-    if (seen) return;
     const t = setTimeout(() => setCoverOpen(true), 2000);
     return () => clearTimeout(t);
   }, []);
-  const closeCover = useCallback(() => {
-    try { localStorage.setItem("love-always-cover-seen", "1"); } catch (e) {}
-    setCoverOpen(false);
-  }, []);
+  const closeCover = useCallback(() => setCoverOpen(false), []);
 
   const goto = useCallback((idx) => {
     setPageIdx(curr => {
