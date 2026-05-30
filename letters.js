@@ -647,20 +647,16 @@ With Lots of Love`,
     salutation: "Dearest Joan;",
     body: `I finally received your letter today which you wrote around the first of December. Anyhow I sure was glad to get it, as it had been so long since I last gotten a letter from you.
 
-Well, Darling this leaves me as well as usual & hope it finds you in the very best of help. Just received two letters from home this week. They seem to be awfully worried about me as they hadn't heard from me since the bombing of Pearl Harbor. Guess you got my letter by now. I knew the war was coming sooner or later. Just received an letter today from Martha. She said they would get her just as soon she finish training. Carroll probably be called back to the navy shortly, also Thomas will be called. Maybe Earl will have to go in the Army just as soon he's of age. The Lankfords family is going to be hit hard. Anyway I glad to fight and I'm sure we all feel the same way. [[I saw the first battle & expect to see the last.]]
+Well, Darling this leaves me as well as usual & hope it finds you in the very best of health. Just received two letters from home this week. They seem to be awfully worried about me as they hadn't heard from me since the bombing of Pearl Harbor. Guess you got my letter by now. I knew the war was coming sooner or later. Just received a letter today from Martha. She said they would get her just as soon she finish training. Carroll probably be called back to the navy shortly, also Thomas will be called. Maybe Earl will have to go in the Army just as soon he's of age. The Lankfords family is going to be hit hard. Anyway I glad to fight and I'm sure we all feel the same way. [[I saw the first battle & expect to see the last.]]
 
-Well, Joan it's only five more days until Xmas. I hope you have the best Xmas that you ever had. Was going to send you an present but it's impossible now. Anyway I'm going to get you something nice the first chance I have. You probably get so many that you won't even miss my though.
+Well, Joan it's only five more days until Xmas. I hope you have the best Xmas that you ever had. Was going to send you a present but it's impossible now. Anyway I'm going to get you something nice the first chance I have. You probably get so many that you won't even miss me though.
 
 Joan, I don't know much to write. All of our mail is censored now & there really not anything much I can write. Hope you will understand why my letters are short. You keep on writing to me as usual & I try to write as often as I can. I thought I would never hear from you the last time, although the letter was a long time getting here. [[That promise you made still stands doesn't it? I know it does.]]
 
 Write soon, Darling & tell me all the news as I'm always looking for a letter from you. Be good Joan & don't worry about me. So here's wishing you a Merry Xmas & a very Happy New Year. Give my love to all,`,
     signature: "Gene",
     postscript: null,
-    note: `Gene wrote this from sea, thirteen days after the attack on Pearl Harbor. He could not say where he was. The U.S.S. New Orleans had sailed from Pearl Harbor on December 14 as part of Task Force 14, the Wake Island relief expedition organized around the carrier Saratoga, with orders to break through to the Marine garrison and evacuate the construction workers under siege there. On December 22, with TF 14 about four hundred miles from Wake, the Japanese launched their second assault, and the island fell the next day. Vice Admiral William Pye, acting commander of the Pacific Fleet, recalled the force. The New Orleans returned to Pearl Harbor on December 27.
-
-"I saw the first battle." On the morning of December 7 the New Orleans was moored in the Navy Yard with her power down for refit. When the alarm sounded, sailors carried ammunition up from the magazines by hand. Her chaplain, Lt. Howell Forgy, walked among them saying "Praise the Lord and pass the ammunition" — a line Frank Loesser turned into a hit song the following year. Three crewmen were wounded and the ship survived intact.
-
-Martha, Carroll, Thomas, Earl — Gene names them as if Joan would already be running the same arithmetic. Congress had declared war on Japan on December 8 and on Germany and Italy on December 11. Every household in the country was counting who was old enough to be drafted and who could still be deferred.`
+    note: `Written thirteen days after Pearl Harbor, from sea on the Wake Island relief sortie. The New Orleans had sailed with Task Force 14 on December 14 to break through to the Marine garrison; the island fell on December 23 and the force was recalled. On the morning of December 7 the ship was moored in the Navy Yard, power down for refit; her chaplain, Lt. Howell Forgy, walked among the men carrying ammunition up by hand, saying "Praise the Lord and pass the ammunition" — a line Frank Loesser turned into a hit song the next year.`
   },
   {
     id: "L25",
@@ -2073,7 +2069,7 @@ No, the boys aren't going to make this year, if I were you I should go & have th
     image_count: 4,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `Well Darling I'm going to write a few lines today. Guess it's about time anyway. Jack & myself are in San Francisco for the week-end. So this morning we step out for awhile & thought I would stay in bed & write a few words to you. We are staying at a awfully swell hotel & have rooms together. In fact there are three rooms to the apartment. We were out most the night so I'm late about getting up.
+    body: `Well Darling I'm going to write a few lines today. Guess it's about time anyway. Jack & myself are in San Francisco for the week-end. So this morning we step out for awhile & thought I would stay in bed & write a few words to you. We are staying at an awfully swell hotel & have rooms together. In fact there are three rooms to the apartment. We were out most the night so I'm late about getting up.
 
 Guess you are wondering what the twenty dollar bill is for. Well this is the reason. I have been searching all over town trying to find you a present. Of course Jack has too, but we never could get together on the same present. I thought about getting you something that could wear but didn't know the size. Jack said while not to buy a watch. I said "hell she" has a watch & that was out. After looking at this & looking at that I decided she had things to we was just get to good & dumb. I don't remember whether we did or not. Anyway, we got back to the hotel, alright. So I know I'm not going to start looking for a present today. Anyhow Joan I decided I would let you pick your own present. I don't know what you would want — & if I did get something you probably wouldn't have it. Jack told me just send the money & you get what you want. He said tell you it be cheaper for us both, after what we went through last night. All I know is we had fifty eight dollars less this morning. So that's why I'm sending the money instead. It make me a lot happier this knowing you can at least get something you want. So don't send it now. probably waste it tonight. Have a swell time with it. So anything but don't get drunk.
 
@@ -2100,7 +2096,7 @@ He, Gene.`,
 
 I'm sure sorry to hear about your grand mother being so sick. Hope this finds her much better. Sometimes I wonder if she still has it in for me. I believed she was glad to see me leave when I were home. Anyhow she probably had a good reason to hate me. Yes. Maybe I didn't treat her as nice as I should. I don't know.
 
-Well Joan I'm as well as usual. I spent the week-end in San Francisco. Sure had a swell of a time. [[Darling, your letter didn't seem like your self. You surely had hate in your heart.]] The trouble that you girls had at Highland well I only know one side of the story. You know it could be that the boys had a reason to get even with Mr. Mc.— When a person gamble he shouldn't cry over spilt milt. I use to play basketball at one time. After all it's only a sport.`,
+Well Joan I'm as well as usual. I spent the week-end in San Francisco. Sure had a swell of a time. [[Darling, your letter didn't seem like your self. You surely had hate in your heart.]] The trouble that you girls had at Highland well I only know one side of the story. You know it could be that the boys had a reason to get even with Mr. Mc.— When a person gamble he shouldn't cry over spilled milk. I use to play basketball at one time. After all it's only a sport.`,
     signature: "Love Always, Gene\nR.E. Lankford.",
     postscript: null,
     note: `Written the next night back aboard. The censor's mark this time has the initials HBM inside the ring, the first time we see the censor's hand on the page. Joan's recent letter, Gene wrote, didn't sound like her. 'Darling, your letter didn't seem like your self. You surely had hate in your heart.' He reaffirmed the engagement promise anyway. 'We won't have to wait much longer. Will we?'`
@@ -2118,7 +2114,7 @@ Well Joan I'm as well as usual. I spent the week-end in San Francisco. Sure had 
     salutation: "My Dearest Joan;",
     body: `Well honey I'm going to write a few short lines tonite before going to bed. Well I'm lucky to be here tonight as we were suppose to leave yesterday and did, but something went a-wrong agin. So we came back agin and as I had the week end off I decided to spend it in, San Francisco. It's about 2 O'clock now but thought I had better write as this might be my last chance. I don't know whether or not will leave tomorrow and if not probably Tuesday.
 
-How you like the telephone call? I sorry to have been so late about calling, but it took me over an hour to get it through. I try to call you all night before but weren't able to get you. Just received an letter from, Dad yesterday. (over)
+How you like the telephone call? I sorry to have been so late about calling, but it took me over an hour to get it through. I try to call you all night before but weren't able to get you. Just received a letter from, Dad yesterday. (over)
 
 Joan I staying at the Lombard Hotel tonight, sure wished you could be here with me. I'm on the top floor and sure is a pretty city below with all the lights. I think this is the prettiest city at night I ever have seen. A person can't help from falling in love with it. I know you would be crazy about it if you could look out for miles & see all kinds of lights. Sure going to hate leaving all of this. Anyhow I won't talk about the city.
 
@@ -2212,7 +2208,7 @@ Well Joan I don't know anything worth writing. I'm always thinking of you & I kn
     salutation: "Dearest Joan,",
     body: `Darling I finally received three of your letters a few days past. You never know how much I appreciated them as they are so long in reaching me. Tonight I'm going do my best to drop you a few words as I have the chance to mail a letter. Also two letters came from home and one of them was from Martha. She occasionally writes me a few lines. [[No kidding Joan you can write very interesting letters. Sure wished I could answer all your questions, but if I did they would only be cut out.]]
 
-Bet this finds you awfully busy these days studing again. Hope you don't forget & slack up writing to me. Guess it does get kindly tiresome writing so much and receiving but a few answer.
+Bet this finds you awfully busy these days studing again. Hope you don't forget & slack up writing to me. Guess it does get kindly tiresome writing so much and receiving but a few answers.
 
 Well, Darling I'm still in the best of health. Hope this finds every one there the same. You know it surprised me hearing, Carl, was home. I believe it will do Martha a lot of good spending a month away from the City. I just can't see why it's taking her so long in getting her health back agin. Guess Carroll has had his vacation & back to work by now, as in your letter you said he was coming that, Friday. I like very much to have been there myself, but as you know it was impossible.
 
@@ -2424,7 +2420,7 @@ Well Joan write to me when ever you can. Tell your Mother & all I said hello. Ho
     salutation: "Dearest Joan,",
     body: `Your letter came today and sure was good hearing from you agin. Haven't anything else to do tonight So I thought I just answer the letter. I also received an letter from, Mother couple days ago. Of course she didn't have much to say.
 
-Sure glad that everything fine at home. I'm making out fairly well myself. [[In a way the same old Gene you use to know. Do you still remember him?]] I must say you should. You know in a way when I stop to think about it we did have a few good times together. Well, except when I became a little to ambitious. You a swell girl Darling. In fact I think you are the nicest kid I ever meet. The very biggest mistake you ever made, was when we got acquainted.
+Sure glad that everything fine at home. I'm making out fairly well myself. [[In a way the same old Gene you use to know. Do you still remember him?]] I must say you should. You know in a way when I stop to think about it we did have a few good times together. Well, except when I became a little to ambitious. You a swell girl Darling. In fact I think you are the nicest kid I ever met. The very biggest mistake you ever made, was when we got acquainted.
 
 Guess Carroll's in this outfit now although you didn't mention him in the letter. I'm positive that this changed the destination in the letter from home Mother said thought he had gone on in the navy. He doesn't ever write to me and the news I have to get from you & know. He probably could get with me if he tried. I don't expect him to though, and have he doesn't he knows what would be coming for him on this ship. I have tried for my exchange of duty myself. Sure like to know where Thomas is being sent to. I have my own ideals though. I'm kindly hoping to get to see the rascal one of these days in the near future.
 
@@ -2452,7 +2448,7 @@ Well darling I haven't anything to write. From the look of this letter a person 
     salutation: "Dearest Joan;",
     body: `Received your letter today and will answer tonight while I have the opportunity. Really glad to get the letter, Darling. One thing I can always depend on your letters. Wished I could always keep writing as often as I have been lately, but of course there's times when I can't. As you know it's impossible to get mail off the ship every day.
 
-Yes, Joan everything fine with me at the present. You just didn't quite get what I met when I say my wires were cross. Anyhow I'm glad everyone fine in your family. I really would like to see all of you again, but its no use to think of that now. I hate to far in the future to look ahead. A person forgets a lot of things after he away for awhile. [[Home is something in the past that you can go back to. Anyhow let's don't go into that right now.]]
+Yes, Joan everything fine with me at the present. You just didn't quite get what I met when I say my wires were cross. Anyhow I'm glad everyone fine in your family. I really would like to see all of you again, but it's no use to think of that now. I hate to far in the future to look ahead. A person forgets a lot of things after he away for awhile. [[Home is something in the past that you can go back to. Anyhow let's don't go into that right now.]]
 
 Yes, dear I have seen the movies you mentioned. We have a couple of shows every night on the ship. We get the latest and the very best out. That helps out a lot when a person can go to the movie when he has nothing else to do.
 
@@ -2534,7 +2530,7 @@ He did get a nice vacation & spent it at home. We were going to spend our vacati
 
 Just got a letter from, Alberta & one from Martha. It had been an long time since, Alberta have written me a letter.
 
-[[You know Darling I'm afraid you are a little bitter at me. Not in the yesterday's letter but the one you wrote last. Of course you didn't come right & say so, but I can read between the lines. Hope theres nothing serious, Joan. I compared the two letters together & paintly a person can see something was wrong.]]
+[[You know Darling I'm afraid you are a little bitter at me. Not in the yesterday's letter but the one you wrote last. Of course you didn't come right & say so, but I can read between the lines. Hope theres nothing serious, Joan. I compared the two letters together & plainly a person can see something was wrong.]]
 
 Guess I do get a bit homesick. That's probably a crude way to say it. But you know have it might be. Just like to see everyone again. I think though I'm passed the state of home sickness. Don't be afraid to write anything you want to, Darling. Sometimes I like to be reminded of a few things. It's good for a person once in awhile you know.
 
@@ -2580,7 +2576,7 @@ Three days later, a Japanese Long Lance torpedo detonated the New Orleans's forw
     image_count: 2,
     status: "transcribed_draft",
     salutation: "Darling Joan,",
-    body: `[[Well, sweet finally I can write you a few lines again. I know you probably be awfully glad to hear from me as my letters are far between these.]] Anyhow Darling I'm thinking of you even though I can't write often. Sure has been quite sometime since I last received any mail.
+    body: `[[Well, sweetheart, finally I can write you a few lines again. I know you probably be awfully glad to hear from me as my letters are far between these.]] Anyhow Darling I'm thinking of you even though I can't write often. Sure has been quite sometime since I last received any mail.
 
 Hope this letter finds you and rest of the family in the very best of health. [[Of course I'm still alright in about every way.]]
 
@@ -2609,9 +2605,9 @@ Joan, I have hardly any thing to write. Write to me every time you possibly can.
 Will write again when I have more time to spare. Have to drop the folks a few lines. Be good & Bye.`,
     signature: "Loads of love & kisses\nAlways \"Gene\"\n(R.E. Lankford)",
     postscript: null,
-    note: `Four weeks after the night of Tassafaronga, a torpedo strike that killed a hundred and eighty-three men and tore off the New Orleans's bow, Gene was writing from a ship in dry dock at Sydney. Cockatoo Island Dockyard was building him a new front end so the ship could limp home. He was eight thousand miles from Kentucky, alive, and could not say so in any of those words. 'Couldn't ask for a better time my self,' is what he says about Christmas; the censor let it pass because nothing operational was named.
+    note: `Four weeks after Tassafaronga. The New Orleans was at Tulagi Harbor in the Solomons, hiding under camouflage netting with a temporary bow made of palm trunks and timber, waiting for safe passage south to Sydney. Gene tells Joan he is fine and that he had 'an unusual old time' at Christmas — the censor passed it because nothing operational was named.
 
-In the same letter Gene seems to walk back a promise. 'If I was you, Darling I wouldn't worry too much about my thinking. The promise I made at that certain time, if you remember things were differ than what they are to-day.' The phrasing is gentle and ambiguous, but it follows L88's 'low in faith,' L89's 'see if they still know their son,' and L90's 'same old Gene you use to know,' three letters in a row of a man re-introducing himself to the people he left.`
+In the same letter Gene seems to walk back the promise. 'If I was you, Darling I wouldn't worry too much about my thinking. The promise I made at that certain time, if you remember things were differ than what they are to-day.' It follows L88's 'low in faith,' L89's 'see if they still know their son,' and L90's 'same old Gene you use to know,' three letters in a row of a man re-introducing himself to the people he left.`
   },
   {
     id: "L98",
@@ -2631,7 +2627,7 @@ Well, Joan this leaves me alright in about every way. Hope you and rest of the f
 [[Hope you had a grand Christmas this year and heard wishing you the best this New Year.]]`,
     signature: "As ever yours,\n\"Gene\"\n(R.E. Lankford)",
     postscript: null,
-    note: `The first V-Mail in the archive. From January 1943 onward the Pacific theater started microfilming sailors' letters in Sydney, flying the film to New York, and printing the letters at Grand Central Annex before mailing them onward. Gene's first V-Mail is a few lines on a standard form. The ship was still at Cockatoo Island Dockyard, Sydney, getting a new bow. 'This leaves me alright in about every way.'`
+    note: `The first V-Mail in the archive. From January 1943 onward the Pacific theater began microfilming sailors' letters, flying the film to New York, and printing the letters at Grand Central Annex before mailing them onward. Gene's first V-Mail is a few lines on a standard form, written from the Solomons where the New Orleans was still at Tulagi waiting on a tow south to Sydney for the permanent repair. 'This leaves me alright in about every way.'`
   },
   {
     id: "L99",
@@ -2668,9 +2664,9 @@ Joan, sure hope this finds you & the others in the very best of health. Myself I
 
 Have been hearing from Carroll quite regular lately. Really don't know exactly where he is, but I can't make a good guess. Anyhow I probably been seeing him one of these days & also, Thomas. Haven't heard from him for some time now. When I see him I going to read him off for not writing. May be I just not getting his letters.
 
-[[Joan, mother wrote me a letter which made me feel awful funny. She wanted to know what were the troubles you & I were having. Said you had come to her feeling badly. That letter I wrote to you know was somewhat a puzzle. Darling I want you to forget all about that letter. Really I didn't mean anything written in it. No one had said anything to me about you and the only reasons I wrote it was my own. I'm not going to try to explain anything about it as it would be kindly hard]] for you to understand. You are a wonderful girl, Joan and to me you will always be just that. In fact I know you really much to good for me. Have loved you more than anything else in this world ever since I first met you. I couldn't forget you, beautiful how hard I try to. You should know that for your self. [[I'm keep that ring Darling and hope it isn't much longer when we can put another one on with it.]]
+[[Joan, mother wrote me a letter which made me feel awful funny. She wanted to know what were the troubles you & I were having. Said you had come to her feeling badly. That letter I wrote to you know was somewhat a puzzle. Darling I want you to forget all about that letter. Really I didn't mean anything written in it. No one had said anything to me about you and the only reasons I wrote it was my own. I'm not going to try to explain anything about it as it would be kindly hard]] for you to understand. You are a wonderful girl, Joan and to me you will always be just that. In fact I know you really much to good for me. Have loved you more than anything else in this world ever since I first met you. I couldn't forget you, beautiful how hard I try to. You should know that for your self. [[I'll keep that ring Darling and hope it isn't much longer when we can put another one on with it.]]
 
-Well, there's particially nothing I can write. Anyway will have to bring this so call of a letter to a end. Darling hoping there isn't any hard feelings toward me for that might not be so good at the present. Write real soon. If you see any of the home folks tell them I said hello for I'm not writing to them today as there isn't enough time. In the mean time be good. Bye —`,
+Well, there's practically nothing I can write. Anyway will have to bring this so call of a letter to a end. Darling hoping there isn't any hard feelings toward me for that might not be so good at the present. Write real soon. If you see any of the home folks tell them I said hello for I'm not writing to them today as there isn't enough time. In the mean time be good. Bye —`,
     signature: "Lots of Love & kisses\nAlways Yours,\n\"Gene\"\n(R.E. Lankford)",
     postscript: `P.S. Joan, my friend Jack Parkhurst got married, December 25, to Mary Louise Pendleton. She's really a lovely girl. Guess I'm the next one on the list. Love "Gene"`,
     note: `Letter number one hundred in the archive. Joan had gone to Gene's mother in tears about the L97 and L99 letters, and Gene's mother had written him asking what was happening. Gene retracts the previous letters entirely. 'Really I didn't mean anything written in it.' Then, plainly, the engagement is on again. 'I'm keep that ring Darling and hope it isn't much longer when we can put another one on with it.' At the bottom, in a postscript: Jack Parkhurst had been married on Christmas Day 1942 to Mary Louise Pendleton. 'Guess I'm the next one on the list.'`
@@ -2944,7 +2940,7 @@ Mother sent me, Tommy's address which I was very glad to get. As you probably kn
 
 [[I'm sorry, Joan this certain girl been giving you the wrong dope. Where ever she's getting it at, that is more than I can see. There's no way for her to find out anymore than you do. I tell you everything it's possible to say, so stop believing things you hear, because this girl who ever she is knows really nothing about what she's talking about. Personally you can tell her I said so myself. Not even one thing she told you is true.]]
 
-Yes, Darling I would give anything too just to see you again. I'm afraid it might be a very long time before we can though. Just don't let me stand in your way from having a good time. Go out with whom ever you please. There's no way for me to find out and you don't have to tell me either. You know I wouldn't let you stand in my way in having a little fun.
+Yes, Darling I would give anything to just to see you again. I'm afraid it might be a very long time before we can though. Just don't let me stand in your way from having a good time. Go out with whom ever you please. There's no way for me to find out and you don't have to tell me either. You know I wouldn't let you stand in my way in having a little fun.
 
 The folks said, Carroll was back in the navy. Hopes the old boy likes it O.K.
 
