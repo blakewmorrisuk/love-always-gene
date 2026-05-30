@@ -826,6 +826,19 @@ function ChapterDivider({ chapter, letters, allChapters, allLetters }) {
 /*  Folio                                                               */
 /* ------------------------------------------------------------------ */
 
+function toRomanLower(n) {
+  const map = [
+    [1000, "m"], [900, "cm"], [500, "d"], [400, "cd"],
+    [100, "c"], [90, "xc"], [50, "l"], [40, "xl"],
+    [10, "x"], [9, "ix"], [5, "v"], [4, "iv"], [1, "i"],
+  ];
+  let out = "", v = n;
+  for (const [val, sym] of map) {
+    while (v >= val) { out += sym; v -= val; }
+  }
+  return out;
+}
+
 function Folio({ page, totalLetters }) {
   if (page.type === "title" || page.type === "closing") return null;
   if (page.type === "chapter") {
@@ -838,13 +851,21 @@ function Folio({ page, totalLetters }) {
     );
   }
   if (page.type === "letter") {
+    const num = toRomanLower(page.letter.n);
+    const total = toRomanLower(totalLetters);
     return (
-      <div className="folio">
-        <span>
-          Letter <span className="folio-num">{String(page.letter.n).padStart(2, "0")}</span> of <span className="folio-num">{totalLetters}</span>
+      <div className="folio folio--running">
+        <span className="folio-left">
+          <span className="folio-chapter-title">{page.chapter.title}</span>
+          <span className="folio-sep">·</span>
+          <span className="folio-chapter-num">{page.chapter.numeral}</span>
         </span>
-        <span className="dot">·</span>
-        <span>Chapter {page.chapter.numeral}</span>
+        <span className="folio-right">
+          <span className="folio-no">Nº</span>
+          <span className="folio-num">{num}</span>
+          <span className="folio-slash">/</span>
+          <span className="folio-num">{total}</span>
+        </span>
       </div>
     );
   }
