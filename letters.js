@@ -15,7 +15,7 @@ window.LETTERS = [
     image_count: 4,
     status: "transcribed",
     salutation: "Dear Joan,",
-    body: `Will write a few lines today while I have the time. I am getting along fine. They was fourteen (14) that came from Louisville the day I did. We arrived here about 12 'clock Thursday. We had a sleeper all by ourself and did we have a great time. It was snowing when we got here and the wind off of these Lakes will freeze you to the bone.
+    body: `Will write a few lines today while I have the time. I am getting along fine. They was fourteen (14) that came from Louisville the day I did. We arrived here about 12 o'clock Thursday. We had a sleeper all by ourself and did we have a great time. It was snowing when we got here and the wind off of these Lakes will freeze you to the bone.
 
 There are 20 in my company and about three thousand here in all. They sure are tough on you while in training, and they sure have been keeping us going for the last four days, learning to wash and roll clothes. We are here for three weeks and then we are moved over in a place which is called 'Paradise', where we stay for 6 more weeks. We then will get a 10 day leave before going on the sea. [[So I will be home in 9 weeks.]]
 
@@ -29,7 +29,8 @@ Please excuse this pencil for we are not allowed to have fountain pens yet. It s
 
 How are all folks getting along down home; haven't heard from any of them yet.`,
     signature: "Gene",
-    postscript: "ans. This letter if you care to"
+    postscript: "ans. This letter if you care to",
+    note: "Two days into boot camp. Gene's nineteen, just off the Louisville-to-Chicago train, and the wind off Lake Michigan is taking April into the low twenties."
   },
   {
     id: "L02",
@@ -48,11 +49,11 @@ So you made the highest grade in English of your grade. That's about as good as 
 
 In the letter I get from Mother, she didn't have much to say. Said they all had the blues including Tom. She said Tom was going to try to find him another job. I don't know what Tom will do, he always liked to be traveling. He got married one of these days and will have to settle down. They all do after so long.
 
-It also rained here all day Wednesday and we had to drill in it for about 2 hours. We have started to drill this week and have they been putting us through. We drill from 6 to 8 hours a day and by the time 4 O'clock comes we are awful raw. These nine pound rifles will get your goat. We also have to wear a gun belt on a bonnet, which is five pounds more. You can see we have a good load. We only have 9 weeks of training and are they rushing us through. There was about two hundred more that came in this week. [[It seems that there is going to be a war. Well I hope not, but if there is I will be ready to fight, for someone has to protect this country.]] Some of the boys were from Kentucky but more around home. Think I am the only one out of three thousand that is from Lincoln County.
+It also rained here all day Wednesday and we had to drill in it for about 2 hours. We have started to drill this week and have they been putting us through. We drill from 6 to 8 hours a day and by the time 4 O'clock comes we are awful raw. These nine pound rifles will get your goat. We also have to wear a gun belt and a helmet, which is five pounds more. You can see we have a good load. We only have 9 weeks of training and are they rushing us through. There was about two hundred more that came in this week. [[It seems that there is going to be a war. Well I hope not, but if there is I will be ready to fight, for someone has to protect this country.]] Some of the boys were from Kentucky but more around home. Think I am the only one out of three thousand that is from Lincoln County.
 
-You asked how I look in my uniform, well like all other sailors. They all dress alike and our hair is cutted off to about one half inch long (does mine look funny, sticks straight up all the time). It will grow out though.
+You asked how I look in my uniform, well like all other sailors. They all dress alike and our hair is cut off to about one half inch long (does mine look funny, sticks straight up all the time). It will grow out though.
 
-Tell Peggy to take good care of them kittens (by the way, where the on half come in?). I will write her a letter when I get the time, so tell her not to get mad.
+Tell Peggy to take good care of them kittens (by the way, where the one half come in?). I will write her a letter when I get the time, so tell her not to get mad.
 
 Will have to close now for it is about show time. Be sure and write to me when you have the time. [[I think about you every day.]] Be good and I sure will.
 
@@ -72,15 +73,15 @@ Your Pal,`,
     image_count: 4,
     status: "transcribed",
     salutation: "Dear Joan,",
-    body: `Received your letter Friday afternoon and really enjoyed it a lot. There wasn't but one thing wrong it; you didn't write enough. Next time you write, try and write a lot more if you have the time. For I rather read a letter than to do anything else.
+    body: `Received your letter Friday afternoon and really enjoyed it a lot. There wasn't but one thing wrong with it; you didn't write enough. Next time you write, try and write a lot more if you have the time. For I rather read a letter than to do anything else.
 
 These sailors sure like to receive letters, if some of them doesn't get a letter every day, they go straight up. I know you not sleepy all the time, and I know how a person feels when they are sleepy, for I been sleepy ever since I been here.
 
 I getting along fine. A little tired. We get this afternoon and tomorrow off. They take our pictures tomorrow: the whole company together, some by ourself. If they're any good, I'll send one. (When you going to send one of you?).
 
-Well, next Thursday we go over in Paradise to finish our training. We only have an hour of drilling each day over these. The rest of the time we have it to study, when I'm on duty. We do get a twelve hour leave next Saturday. I don't know whether I take it, though. They're giving us a swimming test next Saturday (hope I don't go under. Wouldn't be much good if I did. Our company has to put on a stage show Sunday night. I bet it'll be some show. We have a movie every other night and it's free for any one that'd like to go. They really have some good shows. The latest out. I think they have the best going next week. I'll probably be on guard duty and won't get to see them though.
+Well, next Thursday we go over in Paradise to finish our training. We only have an hour of drilling each day over there. The rest of the time we have it to study, when I'm on duty. We do get a twelve hour leave next Saturday. I don't know whether I take it, though. They're giving us a swimming test next Saturday (hope I don't go under. Wouldn't be much good if I did). Our company has to put on a stage show Sunday night. I bet it'll be some show. We have a movie every other night and it's free for any one that'd like to go. They really have some good shows. The latest out. I think they have the best going next week. I'll probably be on guard duty and won't get to see them though.
 
-I'm glad all of you are fine in old Kentucky. I wish sometimes I was back. [[A person doesn't know he misses is home & friends 'till he has left it all]] (I'm getting homesick like a fish). I hated hearing about Jim's goat. He thought a lot of it. Jim is some boy, makes you made one minute and laugh the next. I bet you will be glad when school is out. Will you have to take the exams? I had one the other day. I also have four more when we go over in Paradise.
+I'm glad all of you are fine in old Kentucky. I wish sometimes I was back. [[A person doesn't know he misses is home & friends 'till he has left it all]] (I'm getting homesick like a fish). I hated hearing about Jim's goat. He thought a lot of it. Jim is some boy, makes you mad one minute and laugh the next. I bet you will be glad when school is out. Will you have to take the exams? I had one the other day. I also have four more when we go over in Paradise.
 
 The weather here is beginning to fair up. I hope it stays that way. This wind and sun is giving me a real sun tan. We are outside about seven hours a day.
 
@@ -88,7 +89,8 @@ I knew you have had enough of this Navy stuff, so I will dry off for the time be
 
 As you know me,`,
     signature: "Gene",
-    postscript: "Glad Ann's getting alone time."
+    postscript: "Glad Ann's getting along fine.",
+    note: "Two weeks in. Gene moves to the 'Paradise' barracks Thursday — the advanced side of Great Lakes where the last six weeks of boot are spent."
   },
   {
     id: "L04",
@@ -105,13 +107,14 @@ As you know me,`,
 
 Well, we are moved over in Paradise. They have anything you want over here. Have any kind of games, also a big swimming pool. I get a 12 hour leave tomorrow, but don't know whether I take it or not. About the only thing you can do on the outside is to get drunk and I don't want to do that.
 
-We had our pictures tooking last Sunday, but they didn't turn out so well. I am sending one, you can do anything you want to with it. I'll send one of my whole company home. The next time you're down that way, take a look at it.
+We had our pictures taken last Sunday, but they didn't turn out so well. I am sending one, you can do anything you want to with it. I'll send one of my whole company home. The next time you're down that way, take a look at it.
 
 It snowed here hard for two days & nights. Although it melted about as fast as it fell. Sure would've been some snow if it stayed on.
 
-If you don't read this letter don't blame it on me. I'm in a rush, have to wash some clothes 'fore I got on watch in a little while. Will have to close. Be sure and answer soon. Tell Peggy I said hello and that I haven't forgotten her yet.`,
+If you don't read this letter don't blame it on me. I'm in a rush, have to wash some clothes 'fore I go on watch in a little while. Will have to close. Be sure and answer soon. Tell Peggy I said hello and that I haven't forgotten her yet.`,
     signature: "Gene",
-    postscript: "[[I'll be sending you something in a few days (guess what)]]"
+    postscript: "[[I'll be sending you something in a few days (guess what)]]",
+    note: "Three weeks in. Gene's gained fifteen pounds on Navy rations. Back in Stanford, his mother and brother Jim are down with tonsillitis."
   },
   {
     id: "L05",
@@ -124,16 +127,17 @@ If you don't read this letter don't blame it on me. I'm in a rush, have to wash 
     image_count: 3,
     status: "transcribed",
     salutation: "Dear Joan,",
-    body: `Your letter came safe and sound. Seems like a month the last time I heard from you, or was it me to think so. I had forgotten the last time I wrote but it was about two weeks ago and you said you first got my letter last Thursday. I might have written a letter in my sleep. I don't know. I haven't gotten a letter this week and I came in this morning from church and there was four. One from you, Martha, Carroll, and the old folks at home. Carroll was bawling me out for not writing to him. Said he was coming down to see me soon and have a big time before I went to the west coast. I told him to come head but wait till after my Boot Leave.
+    body: `Your letter came safe and sound. Seems like a month the last time I heard from you, or was it me to think so. I had forgotten the last time I wrote but it was about two weeks ago and you said you first got my letter last Thursday. I might have written a letter in my sleep. I don't know. I haven't gotten a letter this week and I came in this morning from church and there was four. One from you, Martha, Carroll, and the old folks at home. Carroll was bawling me out for not writing to him. Said he was coming down to see me soon and have a big time before I went to the west coast. I told him to come ahead but wait till after my Boot Leave.
 
-So they got a roller-skating ring in Rowland now. We have one here at the station and I still can't do much skating.
+So they got a roller-skating rink in Rowland now. We have one here at the station and I still can't do much skating.
 
 Well, Jo, how is everything down in Kentucky way. A lot better since I left, I bet. I mess things up most the time. That's the best thing to ever happen in Lincoln County in getting rid of me. [[I went to a show the other night and in it they sang 'Old Kentucky Home' and boy did it make me homesick]] (a little, not much).
 
 Joan, there isn't any news around here right now and will sign off for a while. Write me a nice, sweet, long, long letter very soon.
 
 L.L.,`,
-    signature: "Gene"
+    signature: "Gene",
+    note: "May 10, 1940. The day Gene heard 'My Old Kentucky Home' in a Navy show at Great Lakes, German armor crossed into Belgium, the Netherlands, Luxembourg, and France."
   },
   {
     id: "L06",
@@ -148,7 +152,7 @@ L.L.,`,
     salutation: "Dear Joan,",
     body: `Your letter came safe and sound today. You are about the only one I can receive a letter from. They say I don't write often enough down home, but I be darn if I get a letter once a month from them.
 
-Well, Joan I am through with my training and [[ready for Germany, now.]] We have taken all our examinations and have finished the drilling part. Well, we been loafing around for the last for four or five days. I will start home 9:30 Wednesday night and get to Stanford 11:00 the next morning. That's a long time to be on the road, but the trains going that way is awful slow. They have to stop at so many small towns.
+Well, Joan I am through with my training and [[ready for Germany, now.]] We have taken all our examinations and have finished the drilling part. Well, we been loafing around for the last four or five days. I will start home 9:30 Wednesday night and get to Stanford 11:00 the next morning. That's a long time to be on the road, but the trains going that way is awful slow. They have to stop at so many small towns.
 
 You said I was getting homesick. Well, I don't think so. It doesn't pay to think about home here. I let every day take care of itself.
 
@@ -198,7 +202,8 @@ Write to me soon as possible if you feel like it.
 
 Your Friend,`,
     signature: "Eugene L.",
-    postscript: "Don't forget Company 28"
+    postscript: "Don't forget Company 28",
+    note: "Memorial Day. While Gene marched in the station parade, the Royal Navy was lifting 338,000 Allied soldiers off the beaches of Dunkirk."
   },
   {
     id: "L08",
@@ -235,7 +240,7 @@ Will have to close now. [[Be sure and answer right back for I am not going to le
 
 Love,`,
     signature: "Gene",
-    postscript: "Joan, I'm sorry the way I treated you Sunday night. I'm not at all and mad and I hope you are not. Be good, I am really going to miss you.",
+    postscript: "Joan, I'm sorry the way I treated you Sunday night. I'm not at all mad and I hope you are not. Be good, I am really going to miss you.",
     note: "Written the day after Gene's boot leave home in Kentucky."
   },
   {
@@ -253,7 +258,7 @@ Love,`,
 
 Well, Joan, I leave 4 O'clock this afternoon for San Diego, California. [[I go on a heavy cruiser, the New Orleans.]] It's really a nice ship and the very kind I wanted on. They are never in the same place very long. Always on the move.
 
-Carroll and his boyfriend came down Fourth of July and stayed till Sunday. We Went in Chicago Thursday and Saturday. I think we saw about everything there were to see, from one end of town to the other. I really had a swell time. Chicago is sure a large town when you start looking it over.
+Carroll and his boyfriend came down Fourth of July and stayed till Sunday. We went in Chicago Thursday and Saturday. I think we saw about everything there were to see, from one end of town to the other. I really had a swell time. Chicago is sure a large town when you start looking it over.
 
 Joan, there was two navy boys on the train when I got on from London. So I had plenty of company all the way up. Don't know when I'll get another chance to come home but when I do, you'll see me there. I'll get over the homesick part after a little while. This time next week, I'll be a long ways from you. We get to Calif. sometime around Saturday night. Don't know where I go from there.
 
