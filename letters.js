@@ -2627,7 +2627,7 @@ Well, Joan this leaves me alright in about every way. Hope you and rest of the f
 [[Hope you had a grand Christmas this year and heard wishing you the best this New Year.]]`,
     signature: "As ever yours,\n\"Gene\"\n(R.E. Lankford)",
     postscript: null,
-    note: `The first V-Mail in the archive. From January 1943 onward the Pacific theater began microfilming sailors' letters, flying the film to New York, and printing the letters at Grand Central Annex before mailing them onward. Gene's first V-Mail is a few lines on a standard form, written from the Solomons where the New Orleans was still at Tulagi waiting on a tow south to Sydney for the permanent repair. 'This leaves me alright in about every way.'`
+    note: `The first V-Mail in the archive. From January 1943 onward the Pacific theater began microfilming sailors' letters, flying the film to New York, and printing them at Grand Central Annex before mailing them onward. Gene's first V-Mail is a few lines on a standard form, written from the Solomons where the New Orleans was still at Tulagi waiting on a tow south to Sydney for the permanent repair. That same month, Kay Kyser's recording of "Praise the Lord and Pass the Ammunition" — the line Chaplain Forgy had said aboard this ship fourteen months earlier — reached number one on the Billboard pop chart. The ship the song was about was, at that moment, camouflaged under jungle netting with her bow gone. 'This leaves me alright in about every way.'`
   },
   {
     id: "L99",
