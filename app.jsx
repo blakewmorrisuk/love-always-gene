@@ -508,6 +508,22 @@ function PhotoLink({ letter, onOpen }) {
   );
 }
 
+/* Small brass dingbat used as a section break between letter body and
+   postscript, and between body and historical note. Inline SVG (not a
+   Unicode glyph) so it renders the same across iOS/Android system
+   fonts. The two hairlines are drawn by ::before/::after in CSS. */
+function Fleuron() {
+  return (
+    <div className="fleuron" aria-hidden="true">
+      <svg className="fleuron-glyph" viewBox="0 0 36 8" width="36" height="8">
+        <circle cx="6" cy="4" r="1.1" fill="currentColor" opacity="0.8" />
+        <path d="M 18 0.8 L 21.2 4 L 18 7.2 L 14.8 4 Z" fill="currentColor" />
+        <circle cx="30" cy="4" r="1.1" fill="currentColor" opacity="0.8" />
+      </svg>
+    </div>
+  );
+}
+
 /* Render a multi-paragraph note string. Splits on blank lines so each
    block lands as its own .letter-note <p> instead of a single wall of
    text. extraClass lets envelope/card variants attach their tint. */
@@ -538,6 +554,7 @@ function renderProse(text) {
 
 function TranscribedCard({ letter, onOpen }) {
   const paragraphs = letter.body.split(/\n\n+/);
+  const hasNote = !!letter.note || letter.partial;
   return (
     <article className="letter-card" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
@@ -555,10 +572,12 @@ function TranscribedCard({ letter, onOpen }) {
         })}
         {letter.partial && <p className="incomplete-marker">[the letter continues]</p>}
         <div className="signature">{letter.signature}</div>
+        {letter.postscript && <Fleuron />}
         {letter.postscript && (
           <p className="postscript"><span className="ps-mark">P.S.</span> {renderProse(letter.postscript)}</p>
         )}
       </div>
+      {hasNote && <Fleuron />}
       <NoteBlock text={letter.note} />
       {letter.partial && <p className="letter-note">Transcription incomplete; the remainder is being verified.</p>}
       {letter.image_count > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
@@ -585,6 +604,7 @@ function DraftCard({ letter, onOpen }) {
         })}
         <div className="signature">{letter.signature}</div>
       </div>
+      <Fleuron />
       <NoteBlock text={letter.note} />
       <p className="letter-note">Some words are still being verified.</p>
       {letter.image_count > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
