@@ -290,12 +290,12 @@ I am now at the Destroyer Base waiting to be transferred to Honolulu where my sh
 
 Have you been down home since I left? You told me you would go more often. Don't know when I'll get another chance to come home. [[It won't be long now before the United States is going to be in the war. If you have seen and heard the things I have you'd think the same way.]]
 
-What have you been doing since I left? Working hard, I bet. I am still looking for that picture. Be sure and write me a long letter when you have the time to spare. Joan, send it to the address at the head of the letter; if I'm not here, they will it on to me.
+What have you been doing since I left? Working hard, I bet. I am still looking for that picture. Be sure and write me a long letter when you have the time to spare. Joan, send it to the address at the head of the letter; if I'm not here, they will send it on to me.
 
 With Love,`,
     signature: "Eugene",
     postscript: "Be Good.",
-    note: "Written from California, after the cross-country troop train. The same week, Roosevelt signed the Two-Ocean Navy Act, expanding the Pacific fleet by seventy percent."
+    note: "Written from California, after the cross-country troop train. Five days later Roosevelt signed the Two-Ocean Navy Act, authorizing a 70% expansion of the U.S. Navy."
   },
   {
     id: "L12",
@@ -324,7 +324,7 @@ Looking For That Picture.
 
 With Love,`,
     signature: "Gene",
-    note: "Last letter before Gene's eight-day crossing to Honolulu aboard the U.S.S. Cuyama."
+    note: "Gene's last letter from American soil. Tomorrow he crosses to Honolulu on the U.S.S. Cuyama, an eight-day passage. He has never been at sea."
   },
   {
     id: "L13",
@@ -341,7 +341,7 @@ With Love,`,
 
 Joan, I only received your letters last week and the picture came yesterday. I was tickled to get it and it couldn't be any better. [[I wouldn't take anything in this world for it.]] I got it on the door of my locker so every time I open it, I can see it. You might think I'm crazy (so what?)
 
-Well, they have put me on the deck force; just the place I thought I would get. You can't get the job want in the Navy now. They put you where they want you and you got to take it and make yourself like it. They might make me take this but they can never make me like it. There are so many coming in now that a person hasn't a chance to get anywhere. I'm going to get out as soon as I can. They think I'm in here six years but have one that will be hard to keep in that long. If they won't give me a discharge, well, I'll get one some way. They tell you what a big chance you have in the Navy but after you see what the score is and know what it's all about, you find it doesn't look so good. [[The Navy isn't this way all the time but with the war over in Europe, you can't expect any better.]]
+Well, they have put me on the deck force; just the place I thought I would get. You can't get the job you want in the Navy now. They put you where they want you and you got to take it and make yourself like it. They might make me take this but they can never make me like it. There are so many coming in now that a person hasn't a chance to get anywhere. I'm going to get out as soon as I can. They think I'm in here six years but I'm one that will be hard to keep in that long. If they won't give me a discharge, well, I'll get one some way. They tell you what a big chance you have in the Navy but after you see what the score is and know what it's all about, you find it doesn't look so good. [[The Navy isn't this way all the time but with the war over in Europe, you can't expect any better.]]
 
 Joan, you asked about these islands, if they were as pretty as they say. There are a lot of nice things to see but still, I like to see white people once in a while. You might like it here a little while, then you get tired of it all.
 
@@ -349,7 +349,7 @@ We are anchored at Lahaina Roads today, but we have been out to sea all week and
 
 I hope you had a nice time on that camping trip. I bet that road is really in an awful mess. After they get it fixed, it will be all right. Thanks again for the picture; I really appreciate it a lot. It's going to be a long time before`,
     partial: true,
-    note: "Gene's first letter from aboard the U.S.S. New Orleans."
+    note: "Gene's first letter from aboard the U.S.S. New Orleans, anchored at Lahaina Roads — the deep-water training anchorage off Maui where most of the Pacific Fleet rotated through gunnery and maneuvers."
   },
   {
     id: "L14",
@@ -366,7 +366,7 @@ I hope you had a nice time on that camping trip. I bet that road is really in an
 
 I hope this finds you O.K. and still jolly as you were. I got a letter from Martha when she was at home & said you went with them up to Independence. I also heard from Alberta and she said my girl friend had been up to see them. Wished I were there and went alone with you.
 
-Joan, do they kid you about me? I bet they do. If they do, jus tell them you have forgotten all about me, and besides, I guess that might be the best thing to (or would it).
+Joan, do they kid you about me? I bet they do. If they do, just tell them you have forgotten all about me, and besides, I guess that might be the best thing to do (or would it).
 
 Well, we are in Pearl Harbor until Oct. 11 before going back to sea.
 
@@ -387,7 +387,7 @@ Don't you think I have wrote enough of this for once anyway? One of these days i
 With Best Wishes & Love,`,
     signature: "Gene",
     postscript: "I have been writing a poem; in fact, two of them. One about Kentucky and the other of a war. I'll send them to you and see what you say about them. That is if I ever get them finished. You know. You should anyway. — Gene",
-    note: "Written nine days after the Selective Training and Service Act was signed into law, instituting the first peacetime draft in U.S. history."
+    note: "Written thirteen days after the Selective Training and Service Act was signed into law, instituting the first peacetime draft in U.S. history."
   },
   {
     id: "L15",
@@ -404,11 +404,11 @@ With Best Wishes & Love,`,
 
 I couldn't really make you write if you didn't care to, but you can expect a letter from me anyway. So be a good girl and don't be so long next time. I went to look for a letter every mail call and if I don't get one, I feel awful blue. You would too if you were out here.
 
-I got a letter from home if the same day and it didn't cheer me up much. Seems as if things isn't going so well for them. They don't have much to say and there is something about the way they write. You can see I'm depending on you to tell me everything.
+I got a letter from home the same day and it didn't cheer me up much. Seems as if things isn't going so well for them. They don't have much to say and there is something about the way they write. You can see I'm depending on you to tell me everything.
 
 Hope this finds your mother getting along fine and also the rest of the family. So you're not doing so hot in school this year. I can't hardly blame you. I know how it is to change schools and worst where you don't like the school besides.
 
-Glad you're having a good time, though. You know that old saying, 'you're not young but once' and you better have it then. I couldn't go as far to say I'm having a good time, for it's a hard life to live (if you know what I mean). But as you said, I don't care anymore either. This Navy is tearing me all to pieces. As you would say, 'my nerves are shot.' I can't hardly sleep at night and stay up to midnight to put on top of that. What's the use of going to bed when you can't sleep. You know how I smoked at home, well, that wasn't anything to what I smoke now. From three to four packs every day. Most of these guys does, so I have gotten the habit also. We just drink coffee and smoke to put it short.
+Glad you're having a good time, though. You know that old saying, 'you're not young but once' and you better have it then. I couldn't go as far to say I'm having a good time, for it's a hard life to live (if you know what I mean). But as you said, I don't care anymore either. This Navy is tearing me all to pieces. As you would say, 'my nerves are shot.' I can't hardly sleep at night and stay up to midnight on top of that. What's the use of going to bed when you can't sleep. You know how I smoked at home, well, that wasn't anything to what I smoke now. From three to four packs every day. Most of these guys does, so I have gotten the habit also. We just drink coffee and smoke to put it short.
 
 Do you know that there is 26 gallons of coffee put out for each man aboard this ship every week? I don't drink that much, but somebody does.
 
@@ -420,7 +420,8 @@ There isn't anything, Joan, to write that you care to hear so I will close, but 
 
 With Love,`,
     signature: "Gene",
-    postscript: "This pen of mine had a little accident; got its point bent a little. That's the reason the letter's hard to read (don't get me wrong, Sweet). A good Pal, Always."
+    postscript: "This pen of mine had a little accident; got its point bent a little. That's the reason the letter's hard to read (don't get me wrong, Sweet). A good Pal, Always.",
+    note: "Six weeks aboard the New Orleans. The Pacific Fleet had been moved permanently from San Diego to Pearl Harbor that spring — Roosevelt's standing deterrent against Japanese expansion."
   },
   {
     id: "L16",
@@ -437,7 +438,7 @@ With Love,`,
 
 The letter finds me riding the waves tonight and the sea is a little rough. We been out for the last three days. We were able to get radio stations from the states last night, so we wasn't very far from the West Coast. That's the way they do travel; west one day and east the next. We're going to fire these guns tomorrow, so I thought I had better write tonight while I was able. Well, it's not that bad but, still, they almost run you crazy.
 
-I'm sorry to say but I haven't been doing so well in the Navy. I guess I told you I was mess cooking for the chief Petty Officers and the other day I got into a fight with the mess cook in the Chief's Compartment. I know We will never get along together, for we like to had another today.
+I'm sorry to say but I haven't been doing so well in the Navy. I guess I told you I was mess cooking for the chief Petty Officers and the other day I got into a fight with the mess cook in the Chief's Compartment. I know we will never get along together, for we like to had another today.
 
 Well, Joan, what've you been doing to help yourself? Have you started to study yet? You get to like Highland school after you go there awhile, so don't feel so bad about it. I hope you have a good time & make better grades in school. Wished I were back to go with you this year. I would have finished this year, but that can never be. How is little Peggy making out in school?
 
@@ -454,7 +455,8 @@ Joan, I guess it would have been the best if I never have seen you (or would it)
 Please write me soon, Jo. Double please.
 
 Love,`,
-    signature: "Gene"
+    signature: "Gene",
+    note: "The New Orleans was commissioned in 1934 with a peacetime crew of about 700. By October 1940 she had swelled to nearly a thousand — the wartime complement."
   },
   {
     id: "L17",
@@ -469,7 +471,7 @@ Love,`,
     salutation: "Dearest Joan,",
     body: `Received your letter a couple of days ago and will try to answer today. I wrote you a letter the same day I got yours but will write again for good measure.
 
-Hope this finds you and the family O.K. It leaves me all right as far as I know. I also got a letter from Mother yesterday and it didn't cheer me up very much. She said things are awful lonesome around there now but I guess she will get use to it after a little while.
+Hope this finds you and the family O.K. It leaves me all right as far as I know. I also got a letter from Mother yesterday and it didn't cheer me up very much. She said things are awful lonesome around there now but I guess she will get used to it after a little while.
 
 Well, Joan, we are back in Pearl Harbor today, but will go back out tomorrow morning for another week. We got to fire at night, then it will be over with for a month or so. I get so sick of just seeing water that sometimes I think I like it. So the weather is turning cold back there. It's still hot out here and I don't mean warm. The days get a little shorter, but it doesn't get much cooler.
 
@@ -477,14 +479,15 @@ How's the school Jo, studying hard I bet. I'm glad your grades wasn't as bad as 
 
 Joan, I can't think of nothing to write today that you would care to hear. I could write all day about things in this Navy but I know you wouldn't want to read it. These crazy outfits are getting my goat. Well, all I do is just what I can to get by and that's all. They have movies every night and that helps a lot. We really do have the very best that is out. I have seen so many of them that I don't care much for them now.
 
-So a lot of the boys are getting married around there. I wouldn't blame them. Carroll didn't stay at home very long by what the letter from mother said. That as much as can be expected from him for he's been in the Navy 4 years.
+So a lot of the boys are getting married around there. I wouldn't blame them. Carroll didn't stay at home very long by what the letter from mother said. That is as much as can be expected from him for he's been in the Navy 4 years.
 
 Well, Joan, didn't you think I have just about said enough for one time anyway? Please keep writing to me. You don't know how much I really care for you and whatever Carroll said, forget all about. He seems to think Jim's just like he was in the Navy. He can't judge others by himself. [[You are the only girl I would snap a finger for]] and please don't get me wrong. There isn't a day that goes by that I don't think about you, and at night. Well you might know (I hope) these 'beautiful girls' you seem to think are over here aren't as pretty as you think. They are different in too many ways for me to care anything about. I wished I could tell you what it's really like over here but it's not even worth writing.
 
 I'll be looking for an answer real soon & always be thinking & loving you.
 
 With Love & Kisses,`,
-    signature: "Gene"
+    signature: "Gene",
+    note: "Night gunnery before a month's stand-down. The Pacific Fleet ran weekly firing cycles through the autumn of 1940, training out of Pearl Harbor."
   },
   {
     id: "L18",
@@ -497,9 +500,9 @@ With Love & Kisses,`,
     image_count: 4,
     status: "transcribed",
     salutation: "Dearest Joan,",
-    body: `Well, old kid, I'm going to write you a few more lines tonight whether you like it or not. Seems like I'll never get another letter from you again. Could be I expect too many but it doesn't seem that way to me. Now don't get mad and stop writing about what I just said. You know me, I might say anything. Anyway, I get a little lonesome if I don't hear from you every few days. Get to thinking you are forgetting me if I don't hear from you after. It might be the best for you if you did. I'm not the one to judge that & don't get me wrong. I just wrote a letter home and I'm in the mood of writing, too, tonight anyway; so I thought you wouldn't care if I drop you a line or two. Did I tell you about the fight I had a few days ago with the mess cook that works with me? Well, I had another, yesterday with him and the funny part about it was about you, and you're four or five thousand miles away. I haven't any use for him anyway & he's got a habit of calling everyone bad names. I never have tooking anything like that from anyone and never will, if I can help it. But if I keep on fighting, they'll throw me into jail, but I don't care hardly for anything now, so I guess it wouldn't hurt much.
+    body: `Well, old kid, I'm going to write you a few more lines tonight whether you like it or not. Seems like I'll never get another letter from you again. Could be I expect too many but it doesn't seem that way to me. Now don't get mad and stop writing about what I just said. You know me, I might say anything. Anyway, I get a little lonesome if I don't hear from you every few days. Get to thinking you are forgetting me if I don't hear from you after. It might be the best for you if you did. I'm not the one to judge that & don't get me wrong. I just wrote a letter home and I'm in the mood of writing, too, tonight anyway; so I thought you wouldn't care if I drop you a line or two. Did I tell you about the fight I had a few days ago with the mess cook that works with me? Well, I had another, yesterday with him and the funny part about it was about you, and you're four or five thousand miles away. I haven't any use for him anyway & he's got a habit of calling everyone bad names. I never have taken anything like that from anyone and never will, if I can help it. But if I keep on fighting, they'll throw me into jail, but I don't care hardly for anything now, so I guess it wouldn't hurt much.
 
-I hope everyone is in the best of health around that part of the country, including you the most. Hope your mother is over her illness by now, which I guess she is. You sure have got a nice mother, Joan, and I would think a lot of her. I guess everybody thinks there is the best at that, but I know she would be hard to beat. Why don't she write me a few lines when she gets the time. I sure would appreciate it a lot if she did. Does she read the letters I write to you? I hope she don't anyway; if she did she might not think so much of me. (I hope). Anyway, tell me her to write to me and I will be sure to answer it right back. Well, so much for mothers. Let's talk about you and me for a while, or is there anything to say about us. I could say a lot but I don't think you would care to hear it. (or would you). Don't be bashful, Jo. You know I'm not and wouldn't want you to be. Guess you think I'm crazy and I could be at that. You would make fun of these shorts we are wearing & don't blame for them, for I didn't make the law. We do look like eight year old kids with them on. They are cool and I like them for that. You should see me serving meals with them on. Joan, I won't send you a picture of me with these things on so you could laugh at it, but I will have one made & send to you when I get the chance; that is, if you want one. (and it won't be in Navy Uniform).
+I hope everyone is in the best of health around that part of the country, including you the most. Hope your mother is over her illness by now, which I guess she is. You sure have got a nice mother, Joan, and I would think a lot of her. I guess everybody thinks there is the best at that, but I know she would be hard to beat. Why don't she write me a few lines when she gets the time. I sure would appreciate it a lot if she did. Does she read the letters I write to you? I hope she don't anyway; if she did she might not think so much of me. (I hope). Anyway, tell her to write to me and I will be sure to answer it right back. Well, so much for mothers. Let's talk about you and me for a while, or is there anything to say about us. I could say a lot but I don't think you would care to hear it. (or would you). Don't be bashful, Jo. You know I'm not and wouldn't want you to be. Guess you think I'm crazy and I could be at that. You would make fun of these shorts we are wearing & don't blame me for them, for I didn't make the law. We do look like eight year old kids with them on. They are cool and I like them for that. You should see me serving meals with them on. Joan, I won't send you a picture of me with these things on so you could laugh at it, but I will have one made & send to you when I get the chance; that is, if you want one. (and it won't be in Navy Uniform).
 
 We are back in Pearl Harbor this weekend, but will leave again tomorrow morning for another week. After next week, we come back and stay until the holidays and I sure am glad of it. The last three weeks has been a little tough. Have been shooting at night and of course, we were up most the nights and I think next week will be about the same. I have seen a lot of things I never would have known about if I didn't come to the Navy. A person outside doesn't know what is really going on until he sees them for himself.
 
@@ -516,7 +519,8 @@ Joan, don't think I'm bawling you out for not writing more often, for I'm just k
 With Love.
 
 Your Best Friend,`,
-    signature: "Gene"
+    signature: "Gene",
+    note: "Three days before the presidential election. Roosevelt was campaigning on the promise that 'your boys are not going to be sent into any foreign wars' — Boston, October 30, 1940."
   },
   {
     id: "L19",
@@ -528,7 +532,7 @@ Your Best Friend,`,
     folder: "L19_1940-11-17_envelope-only",
     image_count: 1,
     status: "envelope_only",
-    envelope_note: "Air Mail envelope postmarked aboard the U.S.S. New Orleans. The first air mail envelope in this collection. The letter inside has been lost."
+    envelope_note: "The first air mail envelope in the collection — postmarked aboard the U.S.S. New Orleans, sent via Pan American's trans-Pacific Clipper service. The letter inside has been lost."
   },
   {
     id: "L20",
@@ -561,7 +565,7 @@ With love & kisses
 Yours,`,
     signature: "Gene",
     draft: true,
-    note: "Written four weeks after Roosevelt won an unprecedented third term, having promised that no American boys would be sent into any foreign wars."
+    note: "Written three weeks after Roosevelt won an unprecedented third term, having campaigned on the promise that no American boys would be sent into any foreign wars."
   },
   {
     id: "L21",
@@ -616,13 +620,13 @@ Well, Joan, you can talk about it being cold back there and all. The weather is 
 
 Joan, if you really want a picture of me I will go over sometime this week and have one made, so don't blame me after you get it, for you asked for it. As you might say, I don't sit. My heart isn't in it.
 
-Will have to bring this letter to a close but I will write again soon. I am sorry I have been so long but I promise it never happen again, and you know me to be (I think you understand). [[There isn't a day or night that goes by that I don't think about you.]] Remember the nights we were together? Will I think there might come more just as those if [?] later. Please keep on writing, Joan, and if I don't write as often as I should, forgive me. Be a good girl like you always have been and don't let some boy talk you into doing things that you shouldn't. Stay the same girl as I knew you. Things might be dull at times but after all it comes in write everybody life. So take is with a smile.
+Will have to bring this letter to a close but I will write again soon. I am sorry I have been so long but I promise it never happen again, and you know me to be (I think you understand). [[There isn't a day or night that goes by that I don't think about you.]] Remember the nights we were together? Will I think there might come more just as those if [?] later. Please keep on writing, Joan, and if I don't write as often as I should, forgive me. Be a good girl like you always have been and don't let some boy talk you into doing things that you shouldn't. Stay the same girl as I knew you. Things might be dull at times but after all it comes in everybody's life. So take it with a smile.
 
 Write Soon,
 With Lots of Love`,
     signature: "Gene",
     draft: true,
-    note: "Written six days after Roosevelt's 'Arsenal of Democracy' fireside chat. Pearl Harbor was eleven months and eight days away."
+    note: "The night Gene wrote this, Roosevelt delivered his 'Arsenal of Democracy' fireside chat from the White House. Pearl Harbor was eleven months and eight days away."
   },
 
   // ──────────────────────────────────────────────────────────────────
