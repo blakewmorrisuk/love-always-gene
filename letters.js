@@ -647,11 +647,11 @@ With Lots of Love`,
     salutation: "Dearest Joan;",
     body: `I finally received your letter today which you wrote around the first of December. Anyhow I sure was glad to get it, as it had been so long since I last gotten a letter from you.
 
-Well, Darling this leaves me as well as usual & hope it finds you in the very best of help. Just received two letters from home this week. They seem to be awfully worried about me as they hadn't heard from me since the bombing of Pearl Harbor. Guess you got my letter by now. I knew the war was comming sooner or later. Just received an letter today from Martha. She said they would get her just as soon she finish training. Carroll probably be called back to the navy shortly, also Thomas will be called. Maybe Earl will have to go in the Army just as soon he's of age. The Lankfords family is going to be hit hard. Anyway I glad to fight and I'm sure we all feel the same way. [[I saw the first battle & expect to see the last.]]
+Well, Darling this leaves me as well as usual & hope it finds you in the very best of help. Just received two letters from home this week. They seem to be awfully worried about me as they hadn't heard from me since the bombing of Pearl Harbor. Guess you got my letter by now. I knew the war was coming sooner or later. Just received an letter today from Martha. She said they would get her just as soon she finish training. Carroll probably be called back to the navy shortly, also Thomas will be called. Maybe Earl will have to go in the Army just as soon he's of age. The Lankfords family is going to be hit hard. Anyway I glad to fight and I'm sure we all feel the same way. [[I saw the first battle & expect to see the last.]]
 
 Well, Joan it's only five more days until Xmas. I hope you have the best Xmas that you ever had. Was going to send you an present but it's impossible now. Anyway I'm going to get you something nice the first chance I have. You probably get so many that you won't even miss my though.
 
-Joan, I don't know much to write. All of our mail is censored now & there really not anything much I can write. Hope you will understand why my letters are short. You keep on writting to me as usual & I try to write as often as I can. I thought I would never hear from you the last time, although the letter was a long time getting here. [[That promise you made still stands doesn't it? I know it does.]]
+Joan, I don't know much to write. All of our mail is censored now & there really not anything much I can write. Hope you will understand why my letters are short. You keep on writing to me as usual & I try to write as often as I can. I thought I would never hear from you the last time, although the letter was a long time getting here. [[That promise you made still stands doesn't it? I know it does.]]
 
 Write soon, Darling & tell me all the news as I'm always looking for a letter from you. Be good Joan & don't worry about me. So here's wishing you a Merry Xmas & a very Happy New Year. Give my love to all,`,
     signature: "Gene",
@@ -683,7 +683,7 @@ I got to make this letter short tonight, for I had better write a few lines home
 
 So be a good girl & tell all the family I said <em>Hello</em> for me.`,
     signature: "Lots & Lots of Love,\nGene",
-    postscript: `P.S. Excuse this writting for you know how it is when you in a rush.
+    postscript: `P.S. Excuse this writing for you know how it is when you in a rush.
 P.S.S. Address the letters at the same place. If we are still out there they will send them on.`,
     note: `Eleven months before Pearl Harbor, the New Orleans was running Marines and ammunition to the outer bases on what was still a peacetime patrol cycle. The next morning, Gene's ship would sail twelve hundred miles west to drop two hundred Marines at Midway and turn around, and Gene could say so by name, because no one was yet reading his mail. After December 7 he would never again be able to tell Joan where his ship was. He had been gone from Kentucky seven months.`
   },
@@ -698,7 +698,7 @@ P.S.S. Address the letters at the same place. If we are still out there they wil
     image_count: 3,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `It seems you will never write again. So I thought I had better not let you forget. I was writing a letter home and so thought I would also drop you a line. We out to sea and writting will pass the time away faster. I don't know whether I told you, are you not that we went to Midway Island. It only took us eight days to go out there and back.
+    body: `It seems you will never write again. So I thought I had better not let you forget. I was writing a letter home and so thought I would also drop you a line. We out to sea and writing will pass the time away faster. I don't know whether I told you, or you not, that we went to Midway Island. It only took us eight days to go out there and back.
 
 Well what you doing for yourself these days? Studying hard I guess. How all the family? OK I bet. Well you can guess how I am. The same old kid you might said. Maybe change in a few ways, but not much. Really cold back in Ky. tonight. I bet, How would a pair of these short pants I'm wearing would feel back there. (Send 3 pages)
 
@@ -706,9 +706,9 @@ Joan, I don't know whether for sure but I think [[we are going back to the State
 
 Joan I will go into Honolulu tomorrow to get those pictures I had taking and will send you one the next day, whether they good or not. I think tho they'll be alright. Though some of the boys had some taking at the same place and they turn out pretty good. So if you don't like it don't say I didn't try. You know your silly when I get back I came & there is something got to happen.
 
-I you bet keep writting to me & going to — well what can I do but I'm not feeling writt whenever you can, Jo. So if you don't hear from me don't stop, for I just took some of father spells. I write to you more than I do at home, but don't tell them so. They always saying I don't write enough the way it is.
+I you bet keep writing to me & going to — well what can I do but I'm not feeling writt whenever you can, Jo. So if you don't hear from me don't stop, for I just took some of father spells. I write to you more than I do at home, but don't tell them so. They always saying I don't write enough the way it is.
 
-There isn't much I know to write tonight, Jo. So will come to a close. Give my love to all and a big kiss to you. Untill you hear from me again.`,
+There isn't much I know to write tonight, Jo. So will come to a close. Give my love to all and a big kiss to you. Until you hear from me again.`,
     signature: "Lots & Lots of Love,\nGene",
     postscript: null,
     note: `Back from the Midway run, eight days at sea round trip. The Pacific routine kept producing rumors of where the ship would go next, and Gene had heard the New Orleans might rotate back to the States by mid-March; he was already planning a leave home in May or June. None of it happened. The ship would not see Kentucky again for two and a half years.`
@@ -754,11 +754,11 @@ Please don't be so long about writing next time, Joan. Your letters sure come in
     image_count: 3,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `It seems like you will never write again. So thought I would drop a line or two tonight to see whether you are sick. Maybe its just that you don't care anymore. I hope not anyway, for that would really cause me to feel badly. Do you know that I only got one letter from you since the day of Dec. 18, and that's a hell of a long time ago. I'm really disappointed because you aren't writting more. You know yourself I have been writting you a letter every week. So Joan if you don't want me to keep writting just let me know. I'd hate to write to a girl that doesn't [strikethrough: that] care enough [strikethrough: atall] about me to answer.
+    body: `It seems like you will never write again. So thought I would drop a line or two tonight to see whether you are sick. Maybe its just that you don't care anymore. I hope not anyway, for that would really cause me to feel badly. Do you know that I only got one letter from you since the day of Dec. 18, and that's a hell of a long time ago. I'm really disappointed because you aren't writing more. You know yourself I have been writing you a letter every week. So Joan if you don't want me to keep writing just let me know. I'd hate to write to a girl that doesn't [strikethrough: that] care enough [strikethrough: atall] about me to answer.
 
 Well, I went out to Nanakuli Beach on a camping trip for three days and just got back this afternoon. It's a place about 40 miles from here and there is really a nice beach there. I enjoyed the trip a lot for its sure did feel good just to get off of the ship for that short time.
 
-Well, Joan I make this letter short to-nite. Please let me know why you aren't writting. Maybe I made you mad some way or other. If I did just forget all about it. You know I care more about you than anything in this world. There isn't a day that you aren't on my mind. I don't know what it is but you have me in control someway that makes me love you more & more every time I think about you. I just hope you don't find some one else that would make you forget me. Of course if you did I couldn't do anything about it. You might think that I'm way out here and just having a hell of a time [strikethrough: with] with girls and feeding you all of this trash. Well you might think so and I couldn't go for these girls out here if I cared to. Wouldn't trade you for a hundred of them.
+Well, Joan I make this letter short to-nite. Please let me know why you aren't writing. Maybe I made you mad some way or other. If I did just forget all about it. You know I care more about you than anything in this world. There isn't a day that you aren't on my mind. I don't know what it is but you have me in control someway that makes me love you more & more every time I think about you. I just hope you don't find some one else that would make you forget me. Of course if you did I couldn't do anything about it. You might think that I'm way out here and just having a hell of a time [strikethrough: with] with girls and feeding you all of this trash. Well you might think so and I couldn't go for these girls out here if I cared to. Wouldn't trade you for a hundred of them.
 
 Please write often than you are, Joan, if you think enough of me to do that much. Give my love to all,`,
     signature: "Yours forever,\nLove, Gene",
@@ -786,7 +786,7 @@ Joan, you know damn well I miss you more than anything in this world. I would gi
 
 Listen, if you cut that hair off before I come home I don't know what I will do to you. That's the way I always like it and please keep it that way. You look so pretty with it long and don't let anyone taught you into cutting it off. If Ann doesn't like it just tell her she has to see me first. Do you remember that time we were going to school and I got mad at you? Well I'm going to get more than mad this time.
 
-I got a letter from Martha today and she said she was getting along fine. It was the first letter I had gotten from her since X-mas. She is a senior nurse now. About one more year left. Do you know its been over a year since I last saw her. Will go to see her when I come next time. [[I think maybe I will get a leave when we go back to the states.]] If I can get as much as twenty days leave I'm comming. We will really make it the best twenty days of our life. Won't we, Joan? Maybe I shouldn't say that but I see to it that we do have a good time.
+I got a letter from Martha today and she said she was getting along fine. It was the first letter I had gotten from her since X-mas. She is a senior nurse now. About one more year left. Do you know its been over a year since I last saw her. Will go to see her when I come next time. [[I think maybe I will get a leave when we go back to the states.]] If I can get as much as twenty days leave I'm coming. We will really make it the best twenty days of our life. Won't we, Joan? Maybe I shouldn't say that but I see to it that we do have a good time.
 
 Joan, [strikethrough: Don't] Don't let that Latin get you down. I know you will pass it alright. Don't [strikethrough] do like I did and just quit trying. If I didn't like a subject I forgotten all about it and didn't care much. I sorry you didn't get to go to that party. I guess your mother knows best although it probably doesn't seem so.
 
@@ -832,9 +832,9 @@ Well will close now for its getting about supper time. No, Joan I'm not Mess coo
     image_count: 3,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `Received your letter about two days ago and sure glad to get the letter but didn't like the news about you being sick. I hope this letter finds you again in the best of health and also the rest of the family. Yes, Jo, I'm O.K. and haven't been sick a day since I have been out here. Haven't heard from home for over a week now. Did I tell you about Buster writting me a letter? Although he didn't write much but what he did write was nice.
+    body: `Received your letter about two days ago and sure glad to get the letter but didn't like the news about you being sick. I hope this letter finds you again in the best of health and also the rest of the family. Yes, Jo, I'm O.K. and haven't been sick a day since I have been out here. Haven't heard from home for over a week now. Did I tell you about Buster writing me a letter? Although he didn't write much but what he did write was nice.
 
-Well Joan this place is as dull as it is back there in Ky. About the same thing going on every day. We had a little excitement the night before we came back in the harbor. About 9 O'clock that night we got a radio call that [[a big Army bomber had went down about where we were]]. In about two hours there were (6) or more ships there searching for it with searchlights and it was a thrill to see it. Well about 10 O'clock the next day we found them, five in the plane still afloat. The next day it came out in the papers that another bomber found it up in the mountains and didn't say [strikethrough] anything about the navy searching for them. That goes to show that a person can't believed what the papers say.
+Well Joan this place is as dull as it is back there in Ky. About the same thing going on every day. We had a little excitement the night before we came back in the harbor. About 9 O'clock that night we got a radio call that [[a big Army bomber had went down about where we were]]. In about two hours there were (6) or more ships there searching for it with searchlights and it was a thrill to see it. Well about 10 O'clock the next day we found them, five in the plane still afloat. The next day it came out in the papers that another bomber found it up in the mountains and didn't say [strikethrough] anything about the navy searching for them. That goes to show that a person can't believe what the papers say.
 
 Yes, Jo, I had a good time on the camping trip. We could do anything we cared to, fish, swim and at night they have a dance or you could stay drunk if you cared to. Anyone that wanted to can go out there each week end if we are in port. I guess I will go out again before long. It's a good place to go for this ship is a little tiresome at times.
 
@@ -845,7 +845,7 @@ So you still like to know what your present is going to be. Why should I tell yo
 Guess I have told you about every thing I know so will bring this letter to a close. Write to me when you get time and don't make the letters so short next time. Hope you are over`,
     signature: "(closing/signature missing — Gene ends page III with the marker '(Back of first page)', suggesting a continuation on a sheet that was not photographed)",
     postscript: null,
-    note: `An Army bomber had gone down somewhere near the ship the night before they returned to harbor, and Gene watched from the deck as six or more ships swept the dark water with searchlights. By morning the plane was found floating with all five of its crew still alive. The next day's newspapers credited a different bomber with the find and didn't mention the Navy. 'That goes to show that a person can't believed what the papers say.'`
+    note: `An Army bomber had gone down somewhere near the ship the night before they returned to harbor, and Gene watched from the deck as six or more ships swept the dark water with searchlights. By morning the plane was found floating with all five of its crew still alive. The next day's newspapers credited a different bomber with the find and didn't mention the Navy. 'That goes to show that a person can't believe what the papers say.'`
   },
   {
     id: "L32",
@@ -860,7 +860,7 @@ Guess I have told you about every thing I know so will bring this letter to a cl
     salutation: "Dearest Joan,",
     body: `Received your sweet letter yesterday and will try to write back a few lines tonight. Hope this finds you and the rest of the family in the best of health.
 
-Joan, the reason I haven't written sooner was because we have been out to sea for the last ten days and just got in yesterday. All the time we were out we didn't get a chance to get our mail because the sea was so rough and they were afraid to send the planes out. There were also two letters from home for me, so I guess they thought I had quit writting too.
+Joan, the reason I haven't written sooner was because we have been out to sea for the last ten days and just got in yesterday. All the time we were out we didn't get a chance to get our mail because the sea was so rough and they were afraid to send the planes out. There were also two letters from home for me, so I guess they thought I had quit writing too.
 
 Well, Joan what good are you doing for yourself tonight? (over)
 
@@ -894,7 +894,7 @@ Well Joan you made your letter short and I going to do the same. When you write 
     image_count: 3,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `Received your letter yesterday and as I think we are sending a plane into Pearl Harbor with the mail tomorrow I will try to write you a few lines tonight while thinking of you. Guess you think I write to darn much anyway. If I do don't bother to answer them for I know how it would be. I write them because you are the only one that I think is worth writting them to. So if you are just writting to make me feel better just forget all about them. Anyway I may not be worth it. What you think?
+    body: `Received your letter yesterday and as I think we are sending a plane into Pearl Harbor with the mail tomorrow I will try to write you a few lines tonight while thinking of you. Guess you think I write to darn much anyway. If I do don't bother to answer them for I know how it would be. I write them because you are the only one that I think is worth writing them to. So if you are just writing to make me feel better just forget all about them. Anyway I may not be worth it. What you think?
 
 Well, Joan I will tell you before I start that there isn't any news to write. We were in the Harbor for four days and came right back out to sea agin for ten more days. You could see that I couldn't write anything but how lovely the ocean (over)
 
@@ -932,13 +932,13 @@ Write if you really find time enough Joan. So I'm all yours until next time.`,
     image_count: 3,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `I was so glad to hear from you agin and it seems as if your letters are so far between. Joan I sorry that I haven't been writting often but I thought I had been writting you a letter once a week. Guess though I forgotten too write one week although I thought I had.
+    body: `I was so glad to hear from you agin and it seems as if your letters are so far between. Joan I sorry that I haven't been writing often but I thought I had been writing you a letter once a week. Guess though I forgotten too write one week although I thought I had.
 
 Well Joan you asked what I have been doing lately. There are about the same old routine every day. The most I do every day is running a motor boat. I finally work myself up to coxwain of it. It a small boat about thirty feet long and will haul 26 men at one time.
 
-Glad to hear that the weather has warmed up and hope it will stay that way. Yes the weather out here is still hot and the shorts that you asked about are comming along fine. Hope you passed all the tests alright, which I know you did.
+Glad to hear that the weather has warmed up and hope it will stay that way. Yes the weather out here is still hot and the shorts that you asked about are coming along fine. Hope you passed all the tests alright, which I know you did.
 
-So, Carroll, Tom and Martha is comming or has been home by now. Wished I could have been there also but guess I as soon wished for a fortune for as much good it would do me. Anyway it can't be as long as it has been.
+So, Carroll, Tom and Martha is coming or has been home by now. Wished I could have been there also but guess I as soon wished for a fortune for as much good it would do me. Anyway it can't be as long as it has been.
 
 That girl at Highland must think a lot of Carroll. Carroll doesn't write to me anymore and I don't care much anyway.
 
@@ -950,9 +950,9 @@ That Mr. Hampton must be a pretty nice man I think. I never forget the day I met
 
 Well, Joan we go back out to sea tomorrow but only stay out until Friday. How would you like to be out here in this land of sunshine?
 
-Joan I don't know anything worth writting. By the way you never did tell me when your birthday is. I know its some time in May.
+Joan I don't know anything worth writing. By the way you never did tell me when your birthday is. I know its some time in May.
 
-Jo, I get lonesome, as you say lots of times myself. Hope my letters cheers you up some. You needn't worry about me forgetting too think about you. [[Sometime I wish to hell I could forget that I ever saw you.]]
+Jo, I get lonesome, as you say lots of times myself. Hope my letters cheers you up some. You needn't worry about me forgetting to think about you. [[Sometime I wish to hell I could forget that I ever saw you.]]
 
 Will have to bring this letter to a close now. Tell every one I say, hello for me. Always looking for a letter with your handwriting on it.`,
     signature: "With all kinds of Love\nYours, \"Gene\"\nRaymond",
@@ -992,7 +992,7 @@ Well what news around there Jo? Everything quite and fine I bet. You said spring
 
 that you might enjoy having. I hope so anyway.
 
-Well Joan guess I will have to bring this letter to a close. There isn't very much that I know to write and you will have too excuse this writting for I trying to finish before the movie begins. Be a good girl and save one kiss for me. You the only girl I ever thought anything about and sometime I hate myself for that.`,
+Well Joan guess I will have to bring this letter to a close. There isn't very much that I know to write and you will have to excuse this writing for I trying to finish before the movie begins. Be a good girl and save one kiss for me. You the only girl I ever thought anything about and sometime I hate myself for that.`,
     signature: "Always,\nEddie—\"Gene\"",
     postscript: null,
     note: `The ship had spent a week in port being prepared, in Gene's words, 'for war. Its only around the corner now.' He was eight months out from Pearl Harbor, and for the first time in a letter he wrote down the possibility that he might not survive the thing he was being trained for. 'If war does break loose I won't see you until it is over, that is if I am still kicking.'`
@@ -1010,7 +1010,7 @@ Well Joan guess I will have to bring this letter to a close. There isn't very mu
     salutation: "Dearest Joan,",
     body: `Received your sweet letter yesterday and will try to write you a few lines today. Glad to hear that everyone is fine and awful glad your mother is about over with her trouble. Of course this leaves me just the same old kid. I guess by the time you get this letter your school will be out and I bet you really will be glad.
 
-Joan, I think you got me wrong. I didn't for you to think that I was tired of reading your letters. Your letters are about the only things I don't get tired of. You keep writting just as many letters to me as you feel like it and I will try to write just that many or more. There isn't another girl I know that I would even think of doing that for.
+Joan, I think you got me wrong. I didn't for you to think that I was tired of reading your letters. Your letters are about the only things I don't get tired of. You keep writing just as many letters to me as you feel like it and I will try to write just that many or more. There isn't another girl I know that I would even think of doing that for.
 
 Well Joan we are still in port and will stay until the last of this month. We having some repair work done and [strikethrough: also] [[also taking everything off this ship that isn't really useful in time of war]]. [[Looks like we are about the only ones left to stop Germany]], so the (over) sooner the better. There isn't much to going but lot let to loose. We are going back to the navy yard next month if nothing happens by then. So if possible I will be home while we are there. If not there it will be a long time before you see me. Not until the war is over anyway.
 
@@ -1023,7 +1023,7 @@ Joan, there isn't much to write about out. You all the same things every day and
                                                           CA32/
                                                           U.S.S. NEW ORLEANS
 
-of it without writting about it.
+of it without writing about it.
 
 Tell, Peggy I hope she is over the measles by now. Will have to bring this letter to a end and guess your tired of it anyway. Write soon for I will be looking for your letter soon.`,
     signature: "With Lots of Love,\nGene",
@@ -1043,7 +1043,7 @@ Tell, Peggy I hope she is over the measles by now. Will have to bring this lette
     image_count: 4,
     status: "transcribed_draft",
     salutation: "Dear Joan,",
-    body: `I am going too write you a few lines tonight although I haven't heard from you agin. There is a steamer going out tomorrow so I thought it would be the best not to let it leave without writting too some one. Anyway I promise to write you a letter every week if I didn't get one from you.
+    body: `I am going to write you a few lines tonight although I haven't heard from you agin. There is a steamer going out tomorrow so I thought it would be the best not to let it leave without writing to someone. Anyway I promise to write you a letter every week if I didn't get one from you.
 
 Hope this finds all well and happy. Of course you know without me telling you I'm alright.
 
@@ -1055,7 +1055,7 @@ Well, Joan guess you have got the radio that I sent you for a birthday present. 
 
 I sure hope you like it and when you get it let me know what kind it is and about what it looks like. The place where I got it, I had them just to send it from there to you and I want to see if they sent the right radio.
 
-Well there isn't much going on out here. We will go out to sea Monday and stay out for ten days. I think it will be the last time we go out until we head for the states. I did get a letter this week from Martha and said she was fine and also she had been home the week end before. You know it has been a year and five months since I saw her. Guess we won't know each other when we do meet agin. Joan you will have to excuse this writting paper for I'm out of the other and this was the best I could find.
+Well there isn't much going on out here. We will go out to sea Monday and stay out for ten days. I think it will be the last time we go out until we head for the states. I did get a letter this week from Martha and said she was fine and also she had been home the week end before. You know it has been a year and five months since I saw her. Guess we won't know each other when we do meet agin. Joan you will have to excuse this writing paper for I'm out of the other and this was the best I could find.
 
 Don't you think I have said enough for once and anyway there isn't much to write and if there were I, or maybe I wouldn't write it anyway.
 
@@ -1077,7 +1077,7 @@ Joan don't let them work you too hard and don't do anything I wouldn't want you 
     salutation: "Dearest Joan,",
     body: `Received your letter a couple of days ago and thought I would try to answer it today while thinking of you. Guess this leaves me as well as usual and hope you are the same. Little blue though.
 
-Listen Joan I got bad news or I think it is anyway. You know I said we were going back to the states this month. Well we only have about two weeks left and what you think happen. [[The ship just got orders that we wouldn't go into the yards until August.]] So I guess there isn't much use to look forward too the leave I was planning on taking. There are others who feel just as blue as I do about the whole thing. (over) I might be able to get a leave this fall or winter but doubt it a lot. What I mean is by then something else will come up and [[I pretty sure we will get convoying duty before long and you know what that will mean]]. Well its best not to look for me home until you see me there, and not much use taking or writting about it.
+Listen Joan I got bad news or I think it is anyway. You know I said we were going back to the states this month. Well we only have about two weeks left and what you think happen. [[The ship just got orders that we wouldn't go into the yards until August.]] So I guess there isn't much use to look forward to the leave I was planning on taking. There are others who feel just as blue as I do about the whole thing. (over) I might be able to get a leave this fall or winter but doubt it a lot. What I mean is by then something else will come up and [[I pretty sure we will get convoying duty before long and you know what that will mean]]. Well its best not to look for me home until you see me there, and not much use taking or writing about it.
 
 I also got a letter from Martha the same day I got yours. She didn't have much to say only that she was working in the operating room now and liking it fine. Haven't heard from home for quite awhile now.
 
@@ -1099,11 +1099,11 @@ Well, Joan there isn't much anything I know to write so will have to bring this 
     image_count: 3,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `I got your sweet letter today and not having anything else to do, thought I would will a few lines back. Guess you think I write to much the way it is. Well if I don't write to somebody once in awhile I go way. I also got a letter from Dad today and you know he doesn't write to me very much. He did say though that Miss Joan Northcutt got a grand radio from some one. (I wonder who) Anyway glad you got it and hope you like it as much as you said you did. It is a nice radio and it doesn't cost much to run it. (over)
+    body: `I got your sweet letter today and not having anything else to do, thought I would write a few lines back. Guess you think I write too much the way it is. Well if I don't write to somebody once in awhile I go way. I also got a letter from Dad today and you know he doesn't write to me very much. He did say though that Miss Joan Northcutt got a grand radio from some one. (I wonder who) Anyway glad you got it and hope you like it as much as you said you did. It is a nice radio and it doesn't cost much to run it. (over)
 
 (2.)
 
-Well, Joan without me writting it you know about what is going on down here. Just a lot of war stuff and so on. [[Maybe it won't be long now before we be into it.]] Guess I told you before about them delaying this ship going back to the states until August. We will only be there then for a couple of months I think. Although I don't think they send us back out here. Well the [strikethrough: leave] leave I was planning on taking is off. I doubt now [strikethrough: if I get one now] when we do go back because we will be there only a short time. You can't tell now what the Navy will do next. I'm not suppose to tell you this and if they happen to open this letter and see this. Well guess you know what [strikethrough: not] they would do to me. [[Of course they won't open it but when war starts they will.]]
+Well, Joan without me writing it you know about what is going on down here. Just a lot of war stuff and so on. [[Maybe it won't be long now before we be into it.]] Guess I told you before about them delaying this ship going back to the states until August. We will only be there then for a couple of months I think. Although I don't think they send us back out here. Well the [strikethrough: leave] leave I was planning on taking is off. I doubt now [strikethrough: if I get one now] when we do go back because we will be there only a short time. You can't tell now what the Navy will do next. I'm not suppose to tell you this and if they happen to open this letter and see this. Well guess you know what [strikethrough: not] they would do to me. [[Of course they won't open it but when war starts they will.]]
 
 Joan you sure must be working a lot this year by the way you flet on in the letter. It good for you and take it easy with the car.
 
@@ -1125,13 +1125,13 @@ Thanks for the thanks for the radio (you know what I mean) and I don't know who 
     image_count: 4,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `I got your letter a few days ago & please excuse me for not writting sooner. Every time I started to write something would [strikethrough: started] turn up to delay me from writting. The days I have the duty I don't have much time to write and the days I off duty I go ashore to get off of the [strikethrough] ship for awhile. You asked if I see very many movies. Well they have a show on the ship every night most the time two a night. We get awful good shows and the latest out.
+    body: `I got your letter a few days ago & please excuse me for not writing sooner. Every time I started to write something would [strikethrough: started] turn up to delay me from writing. The days I have the duty I don't have much time to write and the days I off duty I go ashore to get off of the [strikethrough] ship for awhile. You asked if I see very many movies. Well they have a show on the ship every night most the time two a night. We get awful good shows and the latest out.
 
 Well Joan this is the month of June and I bet everythings are pretty and peaceful around now. I can't see any chance down here. (over)
 
 (2.)
 
-though. This was the month that we were going in the yards and I was comming home if you remember. Well it can't be now. You don't feel as bad about it Joan or if so you feel awful bad is all I can said. I was looking forward of seeing you so much agin. Well, maybe things will be change by next year and I get to come. I know you still be just as sweet then. Anyway you might meet someone by then that you care more for then me. That's just what I'm afraid of at the present. Guess I shouldn't be that way though, but you know darn well how much I think of you. You know Joan, I kinda hate it there where you said something about sweet sixteen —
+though. This was the month that we were going in the yards and I was coming home if you remember. Well it can't be now. You don't feel as bad about it Joan or if so you feel awful bad is all I can said. I was looking forward of seeing you so much agin. Well, maybe things will be change by next year and I get to come. I know you still be just as sweet then. Anyway you might meet someone by then that you care more for then me. That's just what I'm afraid of at the present. Guess I shouldn't be that way though, but you know darn well how much I think of you. You know Joan, I kinda hate it there where you said something about sweet sixteen —
 
 (3.)
 
@@ -1139,7 +1139,7 @@ and never been kissed. Seems to me I heard something about that before just betw
 
 I got a letter from home and also one from Martha this last week. Mother said things were kindly lonesome around home now. Keep them from getting to lonesome for me I can. They crazy about you Joan for every letter I get from home they always say something about you in them. They sure seem glad when I sent you the radio for a birthday present. (over) I'm also glad that you like it so much.
 
-Well, Joan guess you got enough of this for the time being. Anyway I don't know everything else worth writting. Will close now and will always be looking for a letter from you.
+Well, Joan guess you got enough of this for the time being. Anyway I don't know everything else worth writing. Will close now and will always be looking for a letter from you.
 
 Tell, Peggy and rest of the family I said Hello for me.
 
@@ -1165,7 +1165,7 @@ Well Joan there isn't much to write about out here either. [[We are having gunne
 
 I sure hope the dry spell is over around there by now. It sure is awful hot down here this time of year. There are lots of pretty things around here to see, but I'm getting kindly tired of the place now. Bet things will be change around hard when I get back. Guess I won't know the place.
 
-Joan if I do get to come home for a few days, we going to have really a swell time. That is if that ford of Dads will still run by then. I won't say for sure but I might be able to get a few days leave when we go in the yards this August. It will be my last chance then for a long time and I comming if possible.
+Joan if I do get to come home for a few days, we going to have really a swell time. That is if that ford of Dads will still run by then. I won't say for sure but I might be able to get a few days leave when we go in the yards this August. It will be my last chance then for a long time and I coming if possible.
 
 Well, Darling will have to close now for the movie is about ready to start. Hope you will be able to read this and I doubt it for I wrote it in such a hurry. So I will be looking always for a letter from you.`,
     signature: "With Lots of Love & kisses,\nFrom the one who cares,\nYours,\nGene",
@@ -1183,7 +1183,7 @@ Well, Darling will have to close now for the movie is about ready to start. Hope
     image_count: 3,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `I got your letter a couple of days ago and I can't figure it out why you aren't getting any letters from me because or at least I thought I had been writting often enough. Maybe I have been thinking about writting and never did. There some thing wrong some where or other.
+    body: `I got your letter a couple of days ago and I can't figure it out why you aren't getting any letters from me because or at least I thought I had been writing often enough. Maybe I have been thinking about writing and never did. There some thing wrong some where or other.
 
 Well, Joan I'm O.K. in every way and hope you are the same. I am pretty tired tonight though for I played two baseball games today. The F. Division has got [strikethrough: us] a ball team now and at least I think we are pretty good. Although we lost one of the games today but both of the games were good.
 
@@ -1221,7 +1221,7 @@ Well I haven't been doing anything lately that's special. I play baseball the da
 
 Well, don't you think I have written about enough of this for once. Guess I had better close, anyway.
 
-I'm sorry you don't get my letters but I really have been writting no fooling. Be good Joan and always remember that I thinking [I adore] you all the time. Guess I had better write Martha a line or two while I'm at it. So Good-bye`,
+I'm sorry you don't get my letters but I really have been writing no fooling. Be good Joan and always remember that I thinking [I adore] you all the time. Guess I had better write Martha a line or two while I'm at it. So Good-bye`,
     signature: "With Lots of Love,\nGene",
     postscript: `P.S. Have you cut your hair off yet?`,
     note: `Promoted to Seaman 1st Class as of August 1, eighteen dollars more a month. Gunnery school was almost finished. The States were three weeks away.`
@@ -1237,11 +1237,11 @@ I'm sorry you don't get my letters but I really have been writting no fooling. B
     image_count: 4,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `Guess I had better write you a few lines tonight as I received your letter about two days ago. I should say it was good to know that you finally got a letter from me. Although I guess it was my own fought for being so long about writting and I give you my word I try not to let it happen agin. Maybe that doesn't mean much anyway but you know how I am at times and I would rather write you a letter then anyone else in this old world.
+    body: `Guess I had better write you a few lines tonight as I received your letter about two days ago. I should say it was good to know that you finally got a letter from me. Although I guess it was my own fought for being so long about writing and I give you my word I try not to let it happen agin. Maybe that doesn't mean much anyway but you know how I am at times and I would rather write you a letter than anyone else in this old world.
 
 By the way not to chance the subject but I looking for that snapshot you said you were sending to me. I bet you look wonderful with your hair that long. Joan you mention about (over) those pictures I sent to you long time ago. Well to tell the truth we both that is my best friend and I were both tight that day. Don't get me wrong because I was drunk that day. That's something I don't do very often anyway.
 
-Well, Darling it won't be long now before we will be leaving these islands and heading for the states. Something else Joan, I shouldn't tell you this but I will. [[We are leaving Saturday for some place and I don't know where for sure, but I think for Midway Island agin.]] I don't think we will be gone long, though. I wished I could be at home with you tomorrow as it's July 4th. We really make up for it John? If I be get there and I not kidding either.
+Well, Darling it won't be long now before we will be leaving these islands and heading for the states. Something else Joan, I shouldn't tell you this but I will. [[We are leaving Saturday for some place and I don't know where for sure, but I think for Midway Island agin.]] I don't think we will be gone long, though. I wished I could be at home with you tomorrow as it's July 4th. We really make up for it Joan? If I be get there and I not kidding either.
 
 After all, as you know [[it could be the last time or maybe I should say a long time before I could get back agin]]. Anyhow we hit the high spots Well, honey (I know you don't like that word & that is reason I wrote it) there isn't much going on out here now. I play ball the days we can get a game, the days I haven't got the duty I over come myself by going in swimming or something else. Also see a movie about every night & lots of times two. Yes, I saw The show Virginia and thought it was good myself.
 
@@ -1263,13 +1263,13 @@ Joan, you will have to get you a pair glasses to read this letter for I wrote it
     image_count: 4,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `Guess you think I have forgotten all about writting to you any more. Well I haven't and I am sorry that I been so long. [[We made a trip to Midway Island agin and was gone for eight days.]] When we did get back in port it was for only 6 hours, that is just enough time to take on fuel and food. So back out to sea for 6 more days and just came in today. I got a letter from you today and also one last week. So you can see why I didn't write sooner. I sure glad to get the two sweet letters from you, though. You never know how much your letters helps out Joan and I can always look forward getting them. I think you the sweetest girl in all the world and I never forget it either.
+    body: `Guess you think I have forgotten all about writing to you any more. Well I haven't and I am sorry that I been so long. [[We made a trip to Midway Island agin and was gone for eight days.]] When we did get back in port it was for only 6 hours, that is just enough time to take on fuel and food. So back out to sea for 6 more days and just came in today. I got a letter from you today and also one last week. So you can see why I didn't write sooner. I sure glad to get the two sweet letters from you, though. You never know how much your letters helps out Joan and I can always look forward getting them. I think you the sweetest girl in all the world and I never forget it either.
 
 Well, Joan this time next week we be on our way for Long Beach Calif for we leave the 24th of July. Will I be glad to get back there agin. We will only stay there for three or four days, though, [[we go from there to Seattle, Wash. where we will go in the yards]]. Joan I just in for a thirty (30) days leave on the arrival at Long Beach, but don't know yet whether I get it or not. I will get a leave while we are there though. If I get it at Long Beach I'm be at home by the 3 of August, still I be glad to see you and maybe you like to see me agin. (I hope) No kidding we will have a swell time don't you think. Sure we take in the fair and also Renfro Valley or any place you say. After all we got to make up for the lost time and while not make the most of it. The only thing I going to hate is leaving agin. I'm not going to worry about that, though.
 
 I bet you be both awful sweet with you have fixed that way. You know how I like I am about your hair.
 
-Joan you have to excuse this writting agin for I'm in an awful hurry (as usual.) I got to run over to town a while tonight and see about getting the clothes I have over there (Bands) and ready to take back with me. I have a few civilian clothes that I bought to wear when I go ashore. A guy gets tired of wearing the uniform in the time.
+Joan you have to excuse this writing agin for I'm in an awful hurry (as usual.) I got to run over to town a while tonight and see about getting the clothes I have over there (Bands) and ready to take back with me. I have a few civilian clothes that I bought to wear when I go ashore. A guy gets tired of wearing the uniform in the time.
 
 By the time you get this letter we will be on our way to Long Beach and of course when you answer it, address it to there. Glad you like the present I sent you. I thought they were pretty myself other wise I wouldn't sent them. Most of the girls wears them down here.
 
@@ -1311,7 +1311,7 @@ you as soon as I get back.`,
     image_count: 2,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `Well after the long distant telephone call I going to write a few lines. Joan I am so dare blue that I had to hear your voice once more before got to far away.
+    body: `Well after the long distant telephone call I going to write a few lines. Joan I am so darn blue that I had to hear your voice once more before got too far away.
 
 No kidding Joan [[I was just about starting to cash my ticket in and though the whole army up]]. [[If your voice made me feel so good that I will go on to Seattle.]] I told you on the telephone that I would be back soon, I'm going to do every thing in the world to keep that promise.
 
@@ -1333,15 +1333,15 @@ Joan I haven't went to sleep yet tonight when I get on the train I going to take
     salutation: "Dearest Joan,",
     body: `Well I final got time to write you a few lines anyway. I got back to the ship fine and also in plenty of time to spare. You never know how bad I hated leaving and sure wished I could have stay at home. Maybe some day will come when I can come back home to stay and lets hope it's soon.
 
-Joan I sorry awful sorry for the way I acted toward you the night before I left. I wasn't mad at all but I knew you hated me for the way I went on and being that way. I love you so much and if I thought I would loose you I would go crazy in a minute. Please say you forgive me & still care for me just as much as you ever did.
+Joan I sorry awful sorry for the way I acted toward you the night before I left. I wasn't mad at all but I knew you hated me for the way I went on and being that way. I love you so much and if I thought I would lose you I would go crazy in a minute. Please say you forgive me & still care for me just as much as you ever did.
 
 [[Joan, you are the only girl I ever cared anything about and I know now that you will always be the only one.]] I giving you my word if you still think that's much, that I never will go out with another girl. Just any time you make that promise I asked you to I will be ready for it. I'm not trying to make you to not go out with other boys for that's all up to you and I couldn't do a thing about it.
 
 Joan [[I trying to get out of the navy and if I don't, well I guess I be will learn to hate it more & more every day]]. This is my only chance and let us hope together it will work out alright.
 
-The weather here in Bremerton is nothing like Honolulu for the two day that I been here it has done nothing but rain. It's awful cool at nights and I will have to get use to it some way.
+The weather here in Bremerton is nothing like Honolulu for the two days that I been here it has done nothing but rain. It's awful cool at nights and I will have to get use to it some way.
 
-Well honey there isn't anything to write that you don't already know and I will probably be writting to you every day or two anyway, so I will make this letter short. Joan I want you to write to me when ever you can and don't think you can write to much. Your letters will be about all I will have to look forward to.
+Well honey there isn't anything to write that you don't already know and I will probably be writing to you every day or two anyway, so I will make this letter short. Joan I want you to write to me when ever you can and don't think you can write to much. Your letters will be about all I will have to look forward to.
 
 Did you go to see the doctor yet? Please don't keep putting it off.`,
     signature: "Lots of Love\nGene",
@@ -1370,7 +1370,7 @@ Well Joan there isn't a bare thing around here to write. Haven't heard from home
 
 I guess I will have to make this letter short, but you can always look for another letter in a couple of days. Be a good girl Joan & I do the same. Looking for a letter soon.`,
     signature: "With Lots of Love,\nAlways,\n\"Gene\"",
-    postscript: `P.S. Excuse this writting for you know yourself that I never had a pen that would half way write.
+    postscript: `P.S. Excuse this writing for you know yourself that I never had a pen that would half way write.
                                                         Love, "Gene"`,
     note: `Two days later, still trying to get out of the navy. 'I have wished a thousand of times that I never joined this navy.' Jack Parkhurst had also gone home on leave and Gene was sure he wouldn't come back.`
   },
@@ -1409,7 +1409,7 @@ Well Darling there isn't much to write and I had better write the home folks a f
     image_count: 6,
     status: "transcribed_draft",
     salutation: "Dearest \"Joan\",",
-    body: `Your letter came today and let me tell you I was glad to see your hand writting agin. Really, Joan you can write the best letter than anyone I know. I had just about giving up hopes of getting a letter from anybody until I got yours today. I can't or haven't yet had heard a word from home. Hope they aren't all dead down there for I have been gone from home now about two weeks and I don't see why I shouldn't have heard from some of them by now. It not because of me either because I wrote to them at least four times. I know though, that (over) I can always depend on getting a nice letter from you and I love you so much for it that there isn't enough words to say it in.
+    body: `Your letter came today and let me tell you I was glad to see your hand writing agin. Really, Joan you can write the best letter than anyone I know. I had just about giving up hopes of getting a letter from anybody until I got yours today. I can't or haven't yet had heard a word from home. Hope they aren't all dead down there for I have been gone from home now about two weeks and I don't see why I shouldn't have heard from some of them by now. It not because of me either because I wrote to them at least four times. I know though, that (over) I can always depend on getting a nice letter from you and I love you so much for it that there isn't enough words to say it in.
 
 Joan I'm so glad that I didn't cause any hard fillings between us while I was at home and I know if I had it was all on my fault. You might understand how it was on my part. See, knowing that I was there for only a few days and had to come back to the navy. It's not like going home to stay as long a guy wants too for in the navy he knows there's a time set when he got to be back. Guess it's just kindly got my nerves all upset when I thought leaving agin and not knowing when I would get to come back.
 
@@ -1419,7 +1419,7 @@ Joan, I found out that [[unless we are in war before we leave the yards that we 
 
 Joan, I'm awful glad you are gaining weight and also please to hear about that place going away you had on your breast. You don't want to let that five subjects you are taking in school get the best of you. Just think you will be out of school before long. The two years will [strikethrough: pass] past quit. Tell Charolette thanks a lot for naming that baby brother of hers after me.
 
-Well Darling don't you think I wrote about enough for once. I know you are tired of reading this stuff. Anyway I will be writting agin soon. You said that you would answer every letter I wrote so I'm going to hold you to that promise. You know darn well how crazy in love I am with you and you will be always [strikethrough: of] the only one from the bottom of my heart. Be good, honey and write to me soon.`,
+Well Darling don't you think I wrote about enough for once. I know you are tired of reading this stuff. Anyway I will be writing agin soon. You said that you would answer every letter I wrote so I'm going to hold you to that promise. You know darn well how crazy in love I am with you and you will be always [strikethrough: of] the only one from the bottom of my heart. Be good, honey and write to me soon.`,
     signature: "With Lots of love & kisses\nAlways yours\n\"Gene\"",
     postscript: `P.S. Tell every one I said hello for me. I hope your grand mother isn't still mad at me.
                                                         "Gene"`,
@@ -1436,9 +1436,9 @@ Well Darling don't you think I wrote about enough for once. I know you are tired
     image_count: 4,
     status: "transcribed_draft",
     salutation: "Dearest \"Joan\",",
-    body: `Received your very sweet letter today and was I glad to hear from you agin. You know darn well Joan I can read alright and after all you can write an awful nice letter. If I could do as half as good you can I wouldn't mind writting at all. So don't worry about whether I can read them or not.
+    body: `Received your very sweet letter today and was I glad to hear from you agin. You know darn well Joan I can read alright and after all you can write an awful nice letter. If I could do as half as good you can I wouldn't mind writing at all. So don't worry about whether I can read them or not.
 
-Glad everyone is alright and sure hope your grandmother is feeling better by now. I'm alright far as health, but otherways could be better, I guess. I received a letter from Dad yesterday and said they were all OK. I hardly every get a letter from him for Mother does most of the writting at home.
+Glad everyone is alright and sure hope your grandmother is feeling better by now. I'm alright far as health, but otherways could be better, I guess. I received a letter from Dad yesterday and said they were all OK. I hardly every get a letter from him for Mother does most of the writing at home.
 
 Joan you asked if I having any luck trying to get out of the navy. Well I aint see that I am yet. Guess I will have to stay in, ways things (over)
 
@@ -1452,7 +1452,7 @@ Joan this is Saturday afternoon and I haven't a thing to do until 8:00 monday mo
                                                           PUGET SOUND NAVY YARD
                                                           BREMERTON, WASHINGTON
 
-[[I won't have much of a chance to come home agin until the war is over]] and maybe then to stay. You know as much about how long this war going to last as I do. I really did have an awful swell time on my vacation and you was nice as you could be. I never forget the times we were together as long as I live. [[I can never love no one else but you and would like to have you as my wife any day.]] You know I told you that so much I was at home. The folks at home knows that I crazy about you Joan and I don't care if the whole world knows it. They really like you an awful lot Joan for I could tell that when I was at home. You know every time I tooked them to the movie they seem so glad when I would always stop and take you along. The trip we made to see Alberta, wouldn't been nice at all without you. The afternoon I got mad because you couldn't go down home with us, mother (over) asked me not to be that way and she seem to be so happy when the next day she asked me as I was due to getting ready & I said up to see you.
+[[I won't have much of a chance to come home agin until the war is over]] and maybe then to stay. You know as much about how long this war going to last as I do. I really did have an awful swell time on my vacation and you was nice as you could be. I never forget the times we were together as long as I live. [[I can never love no one else but you and would like to have you as my wife any day.]] You know I told you that so much I was at home. The folks at home knows that I crazy about you Joan and I don't care if the whole world knows it. They really like you an awful lot Joan for I could tell that when I was at home. You know every time I took them to the movie they seem so glad when I would always stop and take you along. The trip we made to see Alberta, wouldn't been nice at all without you. The afternoon I got mad because you couldn't go down home with us, mother (over) asked me not to be that way and she seem to be so happy when the next day she asked me as I was due to getting ready & I said up to see you.
 
 Don't you think I had better bring this letter to an end. Anyway I write to you every other day Joan. I know how school is but please write every chance you have. Be good Joan`,
     signature: "With Loads of Love\nAlways, \"Gene\"",
@@ -1499,7 +1499,7 @@ Well, Darling, please write to me more often for your letters seem so far apart.
     image_count: 5,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `Your letter came a few minutes ago and will try to answer it right now. No kidding, Joan your letters makes me feel so much better after reading them. I sure hope you like to write to me as much, or even half as much as I love writting to you.
+    body: `Your letter came a few minutes ago and will try to answer it right now. No kidding, Joan your letters makes me feel so much better after reading them. I sure hope you like to write to me as much, or even half as much as I love writing to you.
 
 Joan, you sure have been having a hard time, the way you talk. Stomach ache and a swollen up ankle & may be a broken neck by now. How in the devil can you have so many things happen to you Sweetheart. You have better learn to take more care of yourself. (over) The little cold that I had is about all gone now. Might have another in a day or so though.
 
@@ -1541,7 +1541,7 @@ We will only be here at Bremerton about a month longer. Will go to Long Beach, C
 
 I'm sorry about you still having car trouble. If you remember we had a little while I was at home. I didn't mind it, though. Did you care?
 
-Joan, guess I never get you to make me that promise. Maybe you know what's the best. You know what I have gotten myself into by joining the navy. By the time I will be able to get there won't be anything going on outside. All of this defense work will stop and a guy won't have a chance to get a job anywhere. [[I'm comming out of the navy though.]] To tell you the truth, all I ever want to be is just a farmer. I love the country life to much to be anything else. It hard work and tough at times, but at a hold it's a lot better then the city. Some day I hope to owned a small farm of mine own. Joan, I want you to know that you aren't under no obligations to me what so ever. It's for you to decide what you want. There isn't a thing that I can promise you.
+Joan, guess I never get you to make me that promise. Maybe you know what's the best. You know what I have gotten myself into by joining the navy. By the time I will be able to get there won't be anything going on outside. All of this defense work will stop and a guy won't have a chance to get a job anywhere. [[I'm coming out of the navy though.]] To tell you the truth, all I ever want to be is just a farmer. I love the country life to much to be anything else. It hard work and tough at times, but at a hold it's a lot better then the city. Some day I hope to owned a small farm of mine own. Joan, I want you to know that you aren't under no obligations to me what so ever. It's for you to decide what you want. There isn't a thing that I can promise you.
 
 You could find some one else that would beat me by a long shot. I thought I had better tell you now that I never expect to be anything but just a farmer. It's the only thing that I will ever care to be. Let me know how you feel about it. You probably wouldn't care to be a farmers wife. Go on and be an nurse if that's what you want to be.
 
@@ -1583,7 +1583,7 @@ back out to sea agin. There sure are a lot of men working in this place. Afterno
 
 Joan, I got a letter from Alberta & Bill yesterday. The letter, Bill wrote was quite some letter wished you could read it. He told me to hurry back and marry that sweet girl of mine & settle down. Guess you know who he was laughing about. He said he understood how I felt about you.
 
-Well, don't you think I wrote enough for once, honey. Keep writting to me Sweetheart every chance you get. I'm always dreaming & thinking about you. Be good Darling.`,
+Well, don't you think I wrote enough for once, honey. Keep writing to me Sweetheart every chance you get. I'm always dreaming & thinking about you. Be good Darling.`,
     signature: "With Loads of Love & Kisses\nYours, \"Gene\"",
     postscript: null,
     note: `Two days later. The ship was still in the yard and Gene was tracking the war on the same radio that was playing the 1941 World Series. He told Joan that 'the navy orders are to sink any enemy ship seen in American waters,' which was true. Roosevelt's shoot-on-sight order had gone out three weeks earlier after a German submarine torpedoed the destroyer Greer. Carroll had just had an operation. Gene was saving forty dollars a month.`
@@ -1599,13 +1599,13 @@ Well, don't you think I wrote enough for once, honey. Keep writting to me Sweeth
     image_count: 5,
     status: "transcribed_draft",
     salutation: "Joan, Dearest;",
-    body: `Well your letter came yesterday and finally have time to answer it tonite. I read your letters over & over until I get the next one. You awful sweet Joan to take the trouble writting to me so much. You never know how much I appreciate it either. If you keep on you will make me think you really like me. I believed you care for me, anyway and I think you are the sweetest girl in this whole wide world.
+    body: `Well your letter came yesterday and finally have time to answer it tonite. I read your letters over & over until I get the next one. You awful sweet Joan to take the trouble writing to me so much. You never know how much I appreciate it either. If you keep on you will make me think you really like me. I believed you care for me, anyway and I think you are the sweetest girl in this whole wide world.
 
-Just got a letter from Carroll today and said the operation were comming along fine. Guess he is at home by now. Said him and Martha would get to spend a few days at home. The rest (over)
+Just got a letter from Carroll today and said the operation were coming along fine. Guess he is at home by now. Said him and Martha would get to spend a few days at home. The rest (over)
 
 (2.)
 
-will probably do, Martha some good. Guess, Thomas will be kindly lonesome by hisself in Detroit while Carroll's away. Just got finished writting him a few words tonite. Looks as if they have him in the Army before long. Once they get him in he might as well plan to stay there until this war is over. Really hope he won't have to go, though. I know he wouldn't like the army at all for the navy bad enough to me. The army is just about four times worse.
+will probably do, Martha some good. Guess, Thomas will be kindly lonesome by hisself in Detroit while Carroll's away. Just got finished writing him a few words tonite. Looks as if they have him in the Army before long. Once they get him in he might as well plan to stay there until this war is over. Really hope he won't have to go, though. I know he wouldn't like the army at all for the navy bad enough to me. The army is just about four times worse.
 
 Hope, you & Elizabeth McKinney have a grand week-end as you said she was going to spend this week-end with you. Guess it will be too cold for swimming though. I been going swimming once in awhile but they are in-door swimming pools.
 
@@ -1643,13 +1643,13 @@ I'm sorry about Bill cutting his finger off. Hope it's getting along fine. Looki
 
 We are still here in the yards yet and will only be here a little over two weeks longer. [[We probably go back to Honolulu from here, but I hoping we don't. I want to go around on the East coast myself.]] Although if we go around there we will probably have convoy duty. I would rather have convoying around there than to go back to, Honolulu.
 
-[[Sometimes I wished we would hurry and get in the war & get it over with.]] If we got to crush Germany ourselves the sooner the better. All of this war defense stuff is getting tiresome and the sooner it's over the better I'm going to like it. Guess you hear enough about it without me writting it.
+[[Sometimes I wished we would hurry and get in the war & get it over with.]] If we got to crush Germany ourselves the sooner the better. All of this war defense stuff is getting tiresome and the sooner it's over the better I'm going to like it. Guess you hear enough about it without me writing it.
 
 Hope you and Charlotte had a grand time horseback riding up to Sugar Loaf Mountain. Joan, if you took the picture as you said you thought you would, send me one. I always like a picture to look at.
 
 I got a letter from home and said Martha had also been operated on for her appendix (over) kindly strange by both of them being operated on for the same thing and the same time.
 
-Yes Joan, Jack Parkhurst is back now from his leave. You know he work in the Office all the time. Well, when he was at home they put some one else in there and put him on the Deck force. Boy when he got back he didn't like it at all. He drawed what money he had comming while on leave and yesterday afternoon & night he wanted me to go out with him. We hired a car and rode around. He wanted to get drunk but I wouldn't even take a drink with him. So he didn't drink anything but a few beers and he try to get me drunk one but I wouldn't even take a taste.
+Yes Joan, Jack Parkhurst is back now from his leave. You know he work in the Office all the time. Well, when he was at home they put some one else in there and put him on the Deck force. Boy when he got back he didn't like it at all. He drawed what money he had coming while on leave and yesterday afternoon & night he wanted me to go out with him. We hired a car and rode around. He wanted to get drunk but I wouldn't even take a drink with him. So he didn't drink anything but a few beers and he try to get me drunk one but I wouldn't even take a taste.
 
 (5.)
 
@@ -1659,7 +1659,7 @@ Joan I sure wished you could see some of the country & things around here. There
 
 Joan, I hope you past the six weeks test you said something about had to studing for.
 
-Honey, please keep writting to me every chance you have. I hate to write so much but if I can't get a letter from you about three times a week I go crazy. You know without me telling you how much I'm in love with you. Be good Darling.`,
+Honey, please keep writing to me every chance you have. I hate to write so much but if I can't get a letter from you about three times a week I go crazy. You know without me telling you how much I'm in love with you. Be good Darling.`,
     signature: "With lots of Love,\nYours, \"Gene\"",
     postscript: `P.S. Please Excuse pencil.`,
     note: `Pencil letter (he apologized for it). The first time in the archive Gene says, out loud, that he wants the United States in the war. 'Sometimes I wished we would hurry and get in the war & get it over with. If we got to crush Germany ourselves the sooner the better.' He would prefer Atlantic convoy duty to going back to Honolulu. Two months later the New Orleans was at Pearl Harbor.`
@@ -1677,13 +1677,13 @@ Honey, please keep writting to me every chance you have. I hate to write so much
     salutation: "Dearest Joan,",
     body: `Received your letter yesterday and will write a few lines today, while thinking about you. Joan, your sweet letters sure helps out a lot and I wouldn't know what I do without them. I also got a letter a few minutes ago from Thomas and kindly surprise me hearing from him. He said it was awful lonesome up there by hisself since Carroll left. Guess he doesn't know what it really doesn't feel like to be away from home among just strangers like I am. I get awful homesick myself, but its best not to think too much about home.
 
-Well, sweetheart this is Sunday afternoon and I haven't really anything much to do. Jack Parkhurst and myself are over in town today just loafing around and he is now right across the table writting to his (over) his girl friend at home. He sure doesn't like the navy any since he got back off of leave. Guess he had to have a good time while he was home. He couldn't have had any better time then I did. I never forget it Joan and there wasn't but one thing wrong with it. You know yourself what that was without me saying it. Just the thought of having to come back to the navy agin. [[That night I got on the bus I thought that I were leaving everything in life behind then.]] All I did was set in my seat until I got in Chicago and just looked out of the window not really seeing anything at all. The only thing I'm looking forward to now is when the day comes when I be going back home agin. Just hoping it won't be too long, either. Guess I go to church tonight and going to make Parkhurst go also. It might take a little time but I will make him finally quit drinking. He said that he would try anyway and I know he can if he would only try hard enough. He is about the best friend I ever had and he thinks an awful lot of me.
+Well, sweetheart this is Sunday afternoon and I haven't really anything much to do. Jack Parkhurst and myself are over in town today just loafing around and he is now right across the table writing to his (over) his girl friend at home. He sure doesn't like the navy any since he got back off of leave. Guess he had to have a good time while he was home. He couldn't have had any better time then I did. I never forget it Joan and there wasn't but one thing wrong with it. You know yourself what that was without me saying it. Just the thought of having to come back to the navy agin. [[That night I got on the bus I thought that I were leaving everything in life behind then.]] All I did was set in my seat until I got in Chicago and just looked out of the window not really seeing anything at all. The only thing I'm looking forward to now is when the day comes when I be going back home agin. Just hoping it won't be too long, either. Guess I go to church tonight and going to make Parkhurst go also. It might take a little time but I will make him finally quit drinking. He said that he would try anyway and I know he can if he would only try hard enough. He is about the best friend I ever had and he thinks an awful lot of me.
 
 Well, guess you & Elizabeth are having a nice week-end together. Wished I could be there with you. I know we would have a nice time.
 
 So Highland has a good baseball team this year. They always could had about any kind of ball. They play with sure can play basket ball and I hope they have a good team this year. You girls [strikethrough] sure take it easy about in kissing the boys while the bleachers are around, anyway. Maybe that's the reason they can play such good ball games. I know though or at least I don't think you go around kissing boys. I would feel a lot better though if you would make me that promise Joan. Let me know for sure if it's possible Honey. I think hard. Be good.`,
     signature: "Loads of Love & Kisses\nAlways Yours, \"Gene\"",
-    postscript: `P.S. (Excuse writting)`,
+    postscript: `P.S. (Excuse writing)`,
     note: `Sunday afternoon at the Bremerton YMCA, Gene and Jack Parkhurst across the table from each other writing letters to their girls. 'That night I got on the bus I thought that I were leaving everything in life behind then. All I did was set in my seat until I got in Chicago and just looked out of the window not really seeing anything at all.' He asked Joan to make the promise a third time.`
   },
   {
@@ -1699,14 +1699,14 @@ So Highland has a good baseball team this year. They always could had about any 
     salutation: "Dearest Joan;",
     body: `Just a few lines tonite to say hello while thinking about you. Haven't heard from you since last Saturday & I answer that letter, Sunday. Guess I get a letter from you tomorrow, though, but I going to write tonite anyway. I know it's a lot of trouble for you to write so much, but if you didn't I wouldn't know what to do with myself. It's makes me feel so much better when I sit down for about thirty minutes and write to you. Just a letter means a lot you know when a guy is so far from home. Joan, now don't let me stop you from your school work just to write to me. Write when you have the time. If you haven't the time to answer all my letters I write, don't try to.
 
-Sure hope this finds every one in the best of health. Of course I good as you can expect. Just letting the days drift by as they will. At nights I go to a movie as we have two good theatres right in the yards here. Also have reading rooms & writting rooms. Lots of pool tables, bowling alleys, or they have darning, if you want to do that. Most the time though I sit and listen to the radio. What songs do you like the best now? I want to see if you like the same ones I do.
+Sure hope this finds every one in the best of health. Of course I good as you can expect. Just letting the days drift by as they will. At nights I go to a movie as we have two good theatres right in the yards here. Also have reading rooms & writing rooms. Lots of pool tables, bowling alleys, or they have darning, if you want to do that. Most the time though I sit and listen to the radio. What songs do you like the best now? I want to see if you like the same ones I do.
 
 Yesterday, Joan four of us boys kindly a hiking trip up the mountain. Not really up the large ones, but you know out in the country through the timber land. Had a nice trip and enjoyed it a lot. I wished you & I could see all of this together. It would be much more fun. Although I wouldn't give Old Kentucky for all the states I been through. There are some awful pretty ones but Kentucky is the prettiest as a whole I think.
 
-Well, Joan will make this letter short as I'm looking for a letter from you tomorrow. Sending you few more stamps whether you like it or not. Tell the family I said hello for me. Also the dog of yours, even though he doesn't like me. Honey [[when are you going to make me that promise? It won't even be two years now. Say in June, 1943]]. [[I'm not comming home agin until you do.]] Write soon. Still loving you more every day.`,
+Well, Joan will make this letter short as I'm looking for a letter from you tomorrow. Sending you few more stamps whether you like it or not. Tell the family I said hello for me. Also the dog of yours, even though he doesn't like me. Honey [[when are you going to make me that promise? It won't even be two years now. Say in June, 1943]]. [[I'm not coming home agin until you do.]] Write soon. Still loving you more every day.`,
     signature: "Lots of love & kisses,\nAlways Yours, \"Gene\"",
     postscript: null,
-    note: `Gene proposed a specific month for the wedding for the first time: June 1943, after Joan finished school. And then an ultimatum: 'I'm not comming home agin until you do.'`
+    note: `Gene proposed a specific month for the wedding for the first time: June 1943, after Joan finished school. And then an ultimatum: 'I'm not coming home agin until you do.'`
   },
   {
     id: "L61",
@@ -1749,11 +1749,11 @@ Well, guess I wrote enough for once. Better write the folks a few words too. The
 
 Well, sweetheart how was this week of school? Fine I bet. It had just been another week to me, for every day is the same old routine. [[Will only be here about ten more days. Sure will hate going back to sea agin.]] Guess though I will travel a lot of days on the waters yet.
 
-Jack & myself are [strikethrough: over] here at Craven Center tonight and he is writting on letter also. Thought we would just write letters until the movie starts. We saw a good one here last night, "Blood & Sand," with Tyrone Power. Be sure and see it if you can possible have the chance.
+Jack & myself are [strikethrough: over] here at Craven Center tonight and he is writing on letter also. Thought we would just write letters until the movie starts. We saw a good one here last night, "Blood & Sand," with Tyrone Power. Be sure and see it if you can possible have the chance.
 
 At nights me & Jack just set around here listening to the radio or play pool. Things that will pass the time off. Guess we go to church tomorrow night if he will go. You know the other friend of mine the name of Chapin. I had some pictures I show you when I were home of him if you remember. Well, he is getting married in just a few days to a girl in, Seattle. He goes over there to her about every night. She is an awful nice looking girl.
 
-Joan, there isn't nothing new I know to write. Anyway I be writting again in a day or so. Please write, Darling whenever you have the chance. Every letter you write will be answer gladly and with all the love I have. So looking for an letter soon. Tell every one hello for me. You know I love the whole family and think about all of them. (Please excuse this writting.)`,
+Joan, there isn't nothing new I know to write. Anyway I be writing again in a day or so. Please write, Darling whenever you have the chance. Every letter you write will be answer gladly and with all the love I have. So looking for an letter soon. Tell every one hello for me. You know I love the whole family and think about all of them. (Please excuse this writing.)`,
     signature: "Loads of Love & Kisses\nYours, \"Gene\"",
     postscript: `P.S. "They are right now singing 'my Old Kentucky Home,' on the radio. Sure makes me feel awful bad.`,
     note: `Saturday night at Craven Center, Gene and Parkhurst killing time before a movie. Someone on the radio started singing 'My Old Kentucky Home,' and Gene crammed a postscript into the top margin: 'Sure makes me feel awful bad.' Their friend Chapin was getting married to a Seattle girl in a few days. Gene was ten days from sailing for Hawaii again.`
@@ -1884,7 +1884,7 @@ Well, Darling we are leaving again tomorrow morning for Sunny Hawaii. I'm not ve
 
 you know be there a hell of a long while. Mother wrote me a letter the other day & said you told her that I was trying to get transferred around on the East coast. She asked me not to go around there unless I had to. [[Jack & myself were going to try & get on the new aircraft carrier the "Hornet" which is in Norfolk Va. There were a bunch off this ship that did get to on that ship. We decided to wait a while longer & see where we would go before we start trying to be transferred.]]
 
-Well Sweetheart how is school comming along? Sure hope this finds everyone in the best of health. But the weather is really beginning to get cold there now. It's awfully warm here in San Francisco & will never be a lot hotter in, Honolulu. You know I will never be able to get use to cold weather agin if we keep staying in their warm climates much longer. There is lot of interest things to see here in Francisco & would like to stay a while longer. Guess, though I can stand to see Hawaii, agin.
+Well Sweetheart how is school coming along? Sure hope this finds everyone in the best of health. But the weather is really beginning to get cold there now. It's awfully warm here in San Francisco & will never be a lot hotter in, Honolulu. You know I will never be able to get use to cold weather agin if we keep staying in their warm climates much longer. There is lot of interest things to see here in Francisco & would like to stay a while longer. Guess, though I can stand to see Hawaii, agin.
 
 Joan, I will have to cut this letter short as there are a couple more I should write tonight. Will have to write Martha & Thomas a line as it's been a good while since I last wrote to them. Write to me, Darling every chance you have for it's going to be lonesome to be that far away from you. You know a letter can be a big help. Will always be thinking about you & loving you with all my heart. Be good Darling & I'm doing the same. It won't always be this this will`,
     signature: "Lots & Lots of love with kisses\nYours, \"Gene\"",
@@ -1902,7 +1902,7 @@ Joan, I will have to cut this letter short as there are a couple more I should w
     image_count: 6,
     status: "transcribed_draft",
     salutation: "My Dearest Joan;",
-    body: `Your sweet letter came a day or so ago and I going to answer it tonight. Guess you think it's about time I did anyway. Well, I would have written sooner but there isn't a ship leaving for the states until Friday. So wouldn't be any use in writting a letter before then. There's only about two steamers a week that goes to the states & sometimes just one. [[Joan we arrived in Pearl Harbor last Saturday morning. It just took us little over four days to come across.]] Old Hawaii is about the same old place. Let me tell you it's really hot out here. You remember how hot it was when I were at home well that was cool compared with the weather here. Guess I will just have to get use to it agin. You know I really did hate (over) comming here agin. It's alright if a person hasn't never been here before, but I have already spent over a year here and have seen everything there is to see. Although, I guess I will have to see them again.
+    body: `Your sweet letter came a day or so ago and I going to answer it tonight. Guess you think it's about time I did anyway. Well, I would have written sooner but there isn't a ship leaving for the states until Friday. So wouldn't be any use in writing a letter before then. There's only about two steamers a week that goes to the states & sometimes just one. [[Joan we arrived in Pearl Harbor last Saturday morning. It just took us little over four days to come across.]] Old Hawaii is about the same old place. Let me tell you it's really hot out here. You remember how hot it was when I were at home well that was cool compared with the weather here. Guess I will just have to get use to it agin. You know I really did hate (over) coming here agin. It's alright if a person hasn't never been here before, but I have already spent over a year here and have seen everything there is to see. Although, I guess I will have to see them again.
 
 Darling, I sure hope you are over that cold by now. It takes all the life out & out of an person when they have an cold. Don't let a little cold Darling to cause you to, kick the bucket, though. What would happen to me if you did. Guess I would just jump over-board & let the sharks eat me. (saying [strikethrough: all] kidding aside) I know colds aren't a very nice thing to have for I have had a few myself. I bet its beginning to get cold there now as hot as it is here, though, its hard for me to believe. [[It's sure not going to seem like Christmas agin this year to me. Joan, Xmas isn't far off and I can't figure out what in the world you would want for a present. That's myself & Parkhurst biggest worry right now what in the devil to buy our girl friends for Christmas.]] So
 
@@ -1936,7 +1936,7 @@ So it's beginning to snow back there. I haven't seen it snow so long that I woul
 
 Well, what did you do on, Thanksgiving day? It was a big holiday for the Navy & sure had a awful nice dinner aboard the ship. Just about anything a person wanted to eat. [[Looks like I'm going to have to spent another Christmas here in, Honolulu.]] Wouldn't it be nice if I could be home for the holidays. We would really have a fine time together. Wouldn't we. You asked if I thought the war would be over in two years. Well that's hard to say whether it will or not. Any way let's hope that it is. I like just as much as you would to be out of the navy when we got married. [[We aren't going to let the Navy stand between us. Are we? There isn't a reason why we should.]]
 
-How you school comming along? Studying harder every day, I guess. I'm not doing much work myself. I'm still running the motor boat and not much work to that. Just riding around is about all. At times I get so tired of just travelling all the time. When we not at sea I'm running the boat. A person finally gets use to it though. Guess a guy can get use to anything if he did. Long enough. Joan I think the navy is going to get a ten dollars increase in pay before long. If we do we will draw the back pay from August up to now. I'll be drawing fifty-five dollars or more a month, then.
+How you school coming along? Studying harder every day, I guess. I'm not doing much work myself. I'm still running the motor boat and not much work to that. Just riding around is about all. At times I get so tired of just travelling all the time. When we not at sea I'm running the boat. A person finally gets use to it though. Guess a guy can get use to anything if he did. Long enough. Joan I think the navy is going to get a ten dollars increase in pay before long. If we do we will draw the back pay from August up to now. I'll be drawing fifty-five dollars or more a month, then.
 
 Well, Darling don't you think I have written just about enough for once. Guess you are tired of reading this stuff anyway. Write to me soon & be a good girl, Darling. Loving you more every day.`,
     signature: "Lots & Lots of Love & kisses\nYours, \"Gene\"",
@@ -2035,7 +2035,7 @@ The weather really must be awful cold there the way you talk. It's a little cool
 
 Joan, I would like to see you just as much you like to see me. If I was back there now I probably would freeze. He Joan, [[I still want to send that ring if you want it. Will you please send me the size? Let me know soon.]]
 
-Well, Darling there isn't much more I know to write. I will be looking for a long letter soon. Keep writting every chance you have & I do the same. Be good & take care of yourself. Looking for an answer soon. Tell everyone I said hello, will you?`,
+Well, Darling there isn't much more I know to write. I will be looking for a long letter soon. Keep writing every chance you have & I do the same. Be good & take care of yourself. Looking for an answer soon. Tell everyone I said hello, will you?`,
     signature: "Lots & Lots of love.\nAlways,\n\"Gene\"",
     postscript: null,
     note: `Five weeks after Pearl Harbor. Four of Joan's pre-attack letters had finally caught up with him in one delivery, including the one in which she had asked whether the war had changed his mind about marrying her. It had not. 'Of course it does & always will for my part.' Also in the letter: a request for her ring size, his sister Martha had gotten married (Gene was surprised), and Carroll's marriage was failing.`
@@ -2081,7 +2081,7 @@ Joan, you remember the picture you sent to me around Dec. 1st? Well I just got i
 
 Well, Sweetheart you write soon. Don't wait until you hear from me as impossible for me to write some times. I be thinking about you all the time though. Be a good girl Joan & I do the same. You know I love you more than anything in this world.`,
     signature: "My love & kisses\nAlways yours,\n\"Gene\"",
-    postscript: `P.S. Excuse this writting body. I writting in bed sometime.
+    postscript: `P.S. Excuse this writing body. I writing in bed sometime.
 He, Gene.`,
     note: `Mailed from a regular post office in San Francisco on a weekend liberty, without the ship's censor seeing it. Gene and Parkhurst had a hotel suite with three rooms. Gene enclosed a twenty-dollar bill and asked Joan to pick her own present. The other half of the letter was the first 'if I die' instruction in the archive. 'If something does happen to me, just try to forget you ever known me quick as possible. I don't want any one thinking about me & spending their lives after I'm gone.'`
   },
@@ -2126,7 +2126,7 @@ In Dad's letter he also said he thought Carroll would be back in the Navy before
 
 [[Joan I got the ring you said about getting you yesterday. It's really a lovely one and has some swell looking diamonds in it. You never said whether you would wear it or not. So I don't know if I should send it. It's not a cheap one at]] all. I had to pay $95 for it and I know you really be proud of it. I haven't had a chance to mail it yet but I'm going to the first chance I have. I know you will love it but if you don't [strikethrough] to wear it we can always send it back. Wished I could be there to give it to you in person.
 
-Well Darling I must bring this letter to an close. I want you to write very soon and from here on don't wait for my letters before writting. There will be times when I won't be able to write, but I want you to write anyway. I'll promise to write though every chance I have. So [strikethrough: here] hoping to hear from you soon. Will always be thinking about you for I love you more than anything else in the world. Be good Darling.`,
+Well Darling I must bring this letter to an close. I want you to write very soon and from here on don't wait for my letters before writing. There will be times when I won't be able to write, but I want you to write anyway. I'll promise to write though every chance I have. So [strikethrough: here] hoping to hear from you soon. Will always be thinking about you for I love you more than anything else in the world. Be good Darling.`,
     signature: "Lots of Love & kisses\nYours Always,\n\"Gene.\"",
     postscript: `P.S. I [V mom?] [unclear]`,
     note: `Top floor of the Hotel Lombard, San Francisco, two in the morning. Gene had been pricing rings all day. He had bought one, ninety-five dollars with diamonds, and he had it in his pocket but had not mailed it yet. 'I have a feeling we going to do a lot more fighting before long.' The ship's planned departure had been delayed again. He couldn't say where it was going.`
@@ -2144,9 +2144,9 @@ Well Darling I must bring this letter to an close. I want you to write very soon
     salutation: "Dearest Joan,",
     body: `Well Darling I finally have a chance to write you a few lines. I bet you have just about for gotten me by now. It's been impossible to write any sooner. [[No kidding I haven't received a letter for over two months now. I go crazy if I don't hear from some one before long. Really been around these last few weeks and I'm hoping to get some mail before long.]] Guess a lot of things has happen around since then. What you been doing lately. Working hard? I bet you have
 
-Of course I'm alright as usual. Sure hope this finds everyone there in the very best of health. [[You haven't been worrying about me, have you? I bet not. I wonder if you kept writting to me even though you hadn't hear from me. I bet you did.]]
+Of course I'm alright as usual. Sure hope this finds everyone there in the very best of health. [[You haven't been worrying about me, have you? I bet not. I wonder if you kept writing to me even though you hadn't hear from me. I bet you did.]]
 
-Well, how the climate there now? Warm I guess. I'm also writting to, Mother tonight. There's really much that I can write Honey. You know how it is now. Sure wished I could see you. Write me a long letter soon, Darling. I still love you more & more everyday. Be good.`,
+Well, how the climate there now? Warm I guess. I'm also writing to, Mother tonight. There's really much that I can write Honey. You know how it is now. Sure wished I could see you. Write me a long letter soon, Darling. I still love you more & more everyday. Be good.`,
     signature: "With Lots of Love & K[isses]\nAlways \"Gene\"\n(Eugene Lankford)",
     postscript: null,
     note: `Two months of silence. The ship had been at sea screening the Lexington and Yorktown task groups in the southwestern Pacific in the weeks leading up to Coral Sea, and Gene had not received a letter from anyone for nine weeks. The censor on this envelope used initials S.M., different from L77's HBM. There was very little Gene could say. 'There's really [not] much that I can write Honey. You know how it is now.'`
@@ -2162,7 +2162,7 @@ Well, how the climate there now? Warm I guess. I'm also writting to, Mother toni
     image_count: 4,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `Just a few lines this afternoon to let you know I'm fine. Sure hopes this finds everyone there in the very best of health. You know it's been so long now since I heard from you, that it's more or less like writting to a stranger. Anyway maybe I'll be able to receive mail before long.
+    body: `Just a few lines this afternoon to let you know I'm fine. Sure hopes this finds everyone there in the very best of health. You know it's been so long now since I heard from you, that it's more or less like writing to a stranger. Anyway maybe I'll be able to receive mail before long.
 
 How's everything back home now? Fine I hope. Guess spring of the year is there by now. That's really the best time of the year, I think. Guess, Thomas is in the Army doing fine. Carroll probably back in the Navy. Tell that, Earl not to make a mistake and to stay clear of it all. Sure hope that Martha came through her sickness alright.
 
@@ -2212,9 +2212,9 @@ Well Joan I don't know anything worth writing. I'm always thinking of you & I kn
     salutation: "Dearest Joan,",
     body: `Darling I finally received three of your letters a few days past. You never know how much I appreciated them as they are so long in reaching me. Tonight I'm going do my best to drop you a few words as I have the chance to mail a letter. Also two letters came from home and one of them was from Martha. She occasionally writes me a few lines. [[No kidding Joan you can write very interesting letters. Sure wished I could answer all your questions, but if I did they would only be cut out.]]
 
-Bet this finds you awfully busy these days studing again. Hope you don't forget & slack up writting to me. Guess it does get kindly tiresome writing so much and receiving but a few answer.
+Bet this finds you awfully busy these days studing again. Hope you don't forget & slack up writing to me. Guess it does get kindly tiresome writing so much and receiving but a few answer.
 
-Well, Darling I'm still in the best of health. Hope this finds every one there the same. You know it surprised me hearing, Carl, was home. I believe it will do Martha a lot of good spending a month away from the City. I just can't see why it's taking her so long in getting her health back agin. Guess Carroll has had his vacation & back to work by now, as in your letter you said he was comming that, Friday. I like very much to have been there myself, but as you know it was impossible.
+Well, Darling I'm still in the best of health. Hope this finds every one there the same. You know it surprised me hearing, Carl, was home. I believe it will do Martha a lot of good spending a month away from the City. I just can't see why it's taking her so long in getting her health back agin. Guess Carroll has had his vacation & back to work by now, as in your letter you said he was coming that, Friday. I like very much to have been there myself, but as you know it was impossible.
 
 [[Joan, the watch is very nice. I know that dress must be awfully pretty. No I didn't know you were keeping all my letters. Surely have a lot of them by now I bet. Aren't you afraid the wrong person might get a hold of them? It does it make any difference.]] By the way, before I forget it tell, Peggy I wish her all the luck with her cats. That's one girl which is foolish about cats. How you & Jim getting along with each other these days. (You still remember Buster & his 13 kisses, that certain day.) I didn't realize he could count so well.
 
@@ -2264,7 +2264,7 @@ Tell all I said Hello for me. Bye.`,
     image_count: 4,
     status: "transcribed_draft",
     salutation: "Dearest Joan;",
-    body: `Darling just a few lines this afternoon to let you know how glad I am to received seven (7) letters from you today. If it weren't for you writting to me, Joan I probably wouldn't get very much mail. I only got one letter from, Mother and one from Martha. I wrote Martha several letters in the past but she is moving so often that the letters comes back to me.
+    body: `Darling just a few lines this afternoon to let you know how glad I am to received seven (7) letters from you today. If it weren't for you writing to me, Joan I probably wouldn't get very much mail. I only got one letter from, Mother and one from Martha. I wrote Martha several letters in the past but she is moving so often that the letters comes back to me.
 
 Well this finds me fairly well as can be expected. Haven't even feeling so good the last week, but it's nothing serious. Probably just home sickness. So glad to hear that everything fine at home. Hope your grand mother much better, but as you say guess there isn't anything left to be done for her. You know I'm kindly worry about, Martha. She isn't improving like she should be. Martha never says anything in her letters to me about her self. I know though she isn't as healthy as a person should be.
 
@@ -2278,7 +2278,7 @@ Is Earl is now working in, Detroit with Carroll. I'm sure glad to hear that and 
 
 Darling I'm going to have that picture made soon that I have promised so long. You probably won't like the thing, but don't blame me for it.
 
-Well dare if I know anything to write. Hope you can read what I have written as I wrote this letter in such a hurry. Got several more to write, so please understand. Keep writting to me sweet heart and you know I haven't forgotten you yet.`,
+Well dare if I know anything to write. Hope you can read what I have written as I wrote this letter in such a hurry. Got several more to write, so please understand. Keep writing to me sweet heart and you know I haven't forgotten you yet.`,
     signature: "Love\nAlways \"Gene\"\n(R.E. Lankford)",
     postscript: `P.S. "You are right, Joan," — but it's a long ways from being over with yet.`,
     note: `Seven letters from Joan in one delivery. The censorship rule made explicit for the first time: 'you can write anything you care to, but there's just certain things I'm able to write about. They wouldn't pass if I did.' At the bottom of the page, set off as a postscript, the bleakest single line he wrote that year. About whether the war would soon be over. 'You are right, Joan, but it's a long ways from being over with yet.'`
@@ -2294,7 +2294,7 @@ Well dare if I know anything to write. Hope you can read what I have written as 
     image_count: 5,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `Just got a letter from you today and one a couple of days ago. I'm so glad that you had finally received a letter from me. You are awfully nice to keep writting with out even hearing from me. If it weren't for your letters, Joan know what I would do. The folks home hardly ever write.
+    body: `Just got a letter from you today and one a couple of days ago. I'm so glad that you had finally received a letter from me. You are awfully nice to keep writing with out even hearing from me. If it weren't for your letters, Joan know what I would do. The folks home hardly ever write.
 
 Joan the way you talked in your last letter about your grandmother she probably gone by now. Everybody got to face death sooner or later. It's something a person doesn't like to think of.
 
@@ -2332,7 +2332,7 @@ You know I was much surprised hearing, Carroll was home. I was hoping he wouldn'
 
 Darling I will send the picture in about a week. Hope you like it but it couldn't be very good as I had been kindly sick for a week but I got it taking.
 
-Well Joan there's really not anything I can write. I got a couple more to write, so excuse this writting. Would have written sooner but this the first chance I had. Will write agin soon. Be good darling.`,
+Well Joan there's really not anything I can write. I got a couple more to write, so excuse this writing. Would have written sooner but this the first chance I had. Will write agin soon. Be good darling.`,
     signature: "Lots & Lots of Love\nYours always \"Gene\"\n(R.E. Lankford)",
     postscript: null,
     note: `Joan's grandmother had died. Gene's reply was brief and tender: 'I know she must have suffered an awful lot before she died. Wished I could have been there at the time.' He had been sick for a week himself, but he had sat for the long-promised picture anyway and would mail it in a few days. 'There's no chance for me coming home for probably a long time yet, as you know some body got to do this fighting.'`
@@ -2356,7 +2356,7 @@ Darling I'm sending you the picture tomorrow as they will be ready then. I had t
 
 Yes, Darling I did like, Australia and I believe you would too. Some of the girls are very pretty and awfully nice. Of course they talk different from us. Our way of talking seems just as funny to them. The country were awfully pretty where I were. I still take the good U.S.A. anytime though. The people there thought a lot of the American sailors.
 
-I haven't heard from the home folks since last week, but probably will soon. Guess, Carroll has left for the navy by now. Sure be glad to hear where, Thomas is at right now too. Just hope he doesn't go where I think he will. [[Darling you don't know what's it like out here fighting a war.]] Keep writting those big nice letters, Joan. Don't you get the idea you can't write interesting letters either.
+I haven't heard from the home folks since last week, but probably will soon. Guess, Carroll has left for the navy by now. Sure be glad to hear where, Thomas is at right now too. Just hope he doesn't go where I think he will. [[Darling you don't know what's it like out here fighting a war.]] Keep writing those big nice letters, Joan. Don't you get the idea you can't write interesting letters either.
 
 Joan, don't listen to anything Dad says for he's always cracking jokes on some body. Don't you think he had the right idea at one time, though, so they all at home thinks. There isn't a girl like you Joan. They always mention you in their letters. Be good & Bye.`,
     signature: "Lots & Love & Kisses\nalways yours \"Gene\"\nR.E. Lankford.",
@@ -2402,7 +2402,7 @@ Well darling as you know there's nothing interesting I can write. Guess old, Car
     salutation: "Dearest Joan,",
     body: `Just a few words today while thinking of you. You know I got a letter from you yesterday which you wrote in July. A little late if you ask me. Any how it really was a nice letter and I enjoyed it very much. Although, Joan I will have to say there were a few things in the letter that made me kindly blue & home sick. It's funny what a little letter can do to a person sometimes, isn't it. There's days & nights when I think I'm home sick and times when I say to my self "there you not home sick at all. So when I get in that certain mood there's hardly any thing I care about. Guess in a way it's best not to look to far ahead in the position I'm in. Joan I know you can't understand why I feel that way I can see myself why you wouldn't, and don't try to.
 
-Darling, there isn't anything new to write. Guess you got my other letter I wrote a couple of days ago. Just received a letter from, Jeannie to-day. She teaching school at McKinney this year and liking it fine. Also got a letter from Dad today. His seems to be doing fine for hisself as that's two I received lately from him. He sent me some pictures with the letter. In the letter he said Carroll had gone back to Detroit to work and doesn't have to go in the Navy. I'm glad in a way but still I'm not. You can't hardly blame him for stay-ing out as long as possible. Some people gets all the luck, though. Carroll seems to be getting his share. Now use going out and get your self killed when you don't have to. [[There's going to be a pay off one of these days. Let's forget the war. I'm sick of it without writting about it.]]
+Darling, there isn't anything new to write. Guess you got my other letter I wrote a couple of days ago. Just received a letter from, Jeannie to-day. She teaching school at McKinney this year and liking it fine. Also got a letter from Dad today. His seems to be doing fine for hisself as that's two I received lately from him. He sent me some pictures with the letter. In the letter he said Carroll had gone back to Detroit to work and doesn't have to go in the Navy. I'm glad in a way but still I'm not. You can't hardly blame him for stay-ing out as long as possible. Some people gets all the luck, though. Carroll seems to be getting his share. Now use going out and get your self killed when you don't have to. [[There's going to be a pay off one of these days. Let's forget the war. I'm sick of it without writing about it.]]
 
 Darling, the pictures are some I taking ashore the other day and thought you might care to have them. They aren't so good but may be you know one of me. The other fellows are some of my friends. Will take some more soon and send to you if you want me to. You know, though I not very good with a Kodak, but may be they make your scrap book, I hope.
 
@@ -2426,7 +2426,7 @@ Well Joan write to me when ever you can. Tell your Mother & all I said hello. Ho
 
 Sure glad that everything fine at home. I'm making out fairly well myself. [[In a way the same old Gene you use to know. Do you still remember him?]] I must say you should. You know in a way when I stop to think about it we did have a few good times together. Well, except when I became a little to ambitious. You a swell girl Darling. In fact I think you are the nicest kid I ever meet. The very biggest mistake you ever made, was when we got acquainted.
 
-Guess Carroll's in this outfit now although you didn't mention him in the letter. I'm positive that this changed the destination in the letter from home Mother said thought he had gone on in the navy. He doesn't ever write to me and the news I have to get from you & know. He probably could get with me if he tried. I don't expect him to though, and have he doesn't he knows what would be comming for him on this ship. I have tried for my exchange of duty myself. Sure like to know where Thomas is being sent to. I have my own ideals though. I'm kindly hoping to get to see the rascal one of these days in the near future.
+Guess Carroll's in this outfit now although you didn't mention him in the letter. I'm positive that this changed the destination in the letter from home Mother said thought he had gone on in the navy. He doesn't ever write to me and the news I have to get from you & know. He probably could get with me if he tried. I don't expect him to though, and have he doesn't he knows what would be coming for him on this ship. I have tried for my exchange of duty myself. Sure like to know where Thomas is being sent to. I have my own ideals though. I'm kindly hoping to get to see the rascal one of these days in the near future.
 
 Well Darling sure hope you got that pictured by now. Sometimes I think girls are an awful lot of trouble. It didn't take so much trouble to have the thing made though. I'm looking forward to getting one in return you know after all it don't takes around thirty seconds for them to snap a picture. So don't be bashful. By the way did you get the ones I taken myself. I just wanted to show you I could handle a camera taken I'm sober. Believe it or not.
 
@@ -2450,7 +2450,7 @@ Well darling I haven't anything to write. From the look of this letter a person 
     image_count: 4,
     status: "transcribed_draft",
     salutation: "Dearest Joan;",
-    body: `Received your letter today and will answer tonight while I have the opportunity. Really glad to get the letter, Darling. One thing I can always depend on your letters. Wished I could always keep writting as often as I have been lately, but of course there's times when I can't. As you know it's impossible to get mail off the ship every day.
+    body: `Received your letter today and will answer tonight while I have the opportunity. Really glad to get the letter, Darling. One thing I can always depend on your letters. Wished I could always keep writing as often as I have been lately, but of course there's times when I can't. As you know it's impossible to get mail off the ship every day.
 
 Yes, Joan everything fine with me at the present. You just didn't quite get what I met when I say my wires were cross. Anyhow I'm glad everyone fine in your family. I really would like to see all of you again, but its no use to think of that now. I hate to far in the future to look ahead. A person forgets a lot of things after he away for awhile. [[Home is something in the past that you can go back to. Anyhow let's don't go into that right now.]]
 
@@ -2560,12 +2560,12 @@ Well, sweet heart as usual there's nothing to write again. Write soon & if there
 
 Well sweet heart sure hope you are fine. I'm alright as usual. [[Had an birthday a few days ago and they say I suppose to be a man now. Some of the boys gave me quite a beating too. Should have kept my mouth shut I guess.]]
 
-Well, Darling what you doing these days? Working & studying I bet. Having plenty of cold weather, no doubt. Sure wished I was there to see a part of it. I can remember those cold nights we use to share together. [[I'm comming back to all of that one of these days. Will make up for all of this sooner or later. Just keep your fingers crossed.]]
+Well, Darling what you doing these days? Working & studying I bet. Having plenty of cold weather, no doubt. Sure wished I was there to see a part of it. I can remember those cold nights we use to share together. [[I'm coming back to all of that one of these days. Will make up for all of this sooner or later. Just keep your fingers crossed.]]
 
-Joan, got to make this letter short as the mail is leaving the ship soon. Write to me when ever you can. I'm writting when it's possible, so don't wait for my letters. Be good, Darling and I'm always thinking about you.`,
+Joan, got to make this letter short as the mail is leaving the ship soon. Write to me when ever you can. I'm writing when it's possible, so don't wait for my letters. Be good, Darling and I'm always thinking about you.`,
     signature: "Lots of Love & K[isses]\nYours always \"Gene.\"\n(R.E. Lankford)",
     postscript: null,
-    note: `The last letter before the night Tassafaronga happened. Gene's birthday was a few days before, and the crew had done the traditional shipboard hazing to mark it. 'Some of the boys gave me quite a beating too.' He thanked Joan for the pocket-book she had mailed against his wishes. 'I'm comming back to all of that one of these days. Will make up for all of this sooner or later. Just keep your fingers crossed.'
+    note: `The last letter before the night Tassafaronga happened. Gene's birthday was a few days before, and the crew had done the traditional shipboard hazing to mark it. 'Some of the boys gave me quite a beating too.' He thanked Joan for the pocket-book she had mailed against his wishes. 'I'm coming back to all of that one of these days. Will make up for all of this sooner or later. Just keep your fingers crossed.'
 
 Three days later, a Japanese Long Lance torpedo detonated the New Orleans's forward magazines and tore off her bow forward of the second turret. One hundred and eighty-three men died. Twenty-four were missing. Gene was not among them.`
   },
@@ -2670,7 +2670,7 @@ Have been hearing from Carroll quite regular lately. Really don't know exactly w
 
 [[Joan, mother wrote me a letter which made me feel awful funny. She wanted to know what were the troubles you & I were having. Said you had come to her feeling badly. That letter I wrote to you know was somewhat a puzzle. Darling I want you to forget all about that letter. Really I didn't mean anything written in it. No one had said anything to me about you and the only reasons I wrote it was my own. I'm not going to try to explain anything about it as it would be kindly hard]] for you to understand. You are a wonderful girl, Joan and to me you will always be just that. In fact I know you really much to good for me. Have loved you more than anything else in this world ever since I first met you. I couldn't forget you, beautiful how hard I try to. You should know that for your self. [[I'm keep that ring Darling and hope it isn't much longer when we can put another one on with it.]]
 
-Well, there's particially nothing I can write. Anyway will have to bring this so call of a letter to a end. Darling hoping there isn't any hard feelings toward me for that might not be so good at the present. Write real soon. If you see any of the home folks tell them I said hello for I'm not writting to them today as there isn't enough time. In the mean time be good. Bye —`,
+Well, there's particially nothing I can write. Anyway will have to bring this so call of a letter to a end. Darling hoping there isn't any hard feelings toward me for that might not be so good at the present. Write real soon. If you see any of the home folks tell them I said hello for I'm not writing to them today as there isn't enough time. In the mean time be good. Bye —`,
     signature: "Lots of Love & kisses\nAlways Yours,\n\"Gene\"\n(R.E. Lankford)",
     postscript: `P.S. Joan, my friend Jack Parkhurst got married, December 25, to Mary Louise Pendleton. She's really a lovely girl. Guess I'm the next one on the list. Love "Gene"`,
     note: `Letter number one hundred in the archive. Joan had gone to Gene's mother in tears about the L97 and L99 letters, and Gene's mother had written him asking what was happening. Gene retracts the previous letters entirely. 'Really I didn't mean anything written in it.' Then, plainly, the engagement is on again. 'I'm keep that ring Darling and hope it isn't much longer when we can put another one on with it.' At the bottom, in a postscript: Jack Parkhurst had been married on Christmas Day 1942 to Mary Louise Pendleton. 'Guess I'm the next one on the list.'`
@@ -2779,7 +2779,7 @@ No salutation, no body, no signature — only Gene's hand on the address.`,
     image_count: 6,
     status: "transcribed_draft",
     salutation: "Dear Joan,",
-    body: `I received your letter yesterday morning and sure was glad to get it. I also got one from home the same time and they said I was [strikethrough] slow about writting too.
+    body: `I received your letter yesterday morning and sure was glad to get it. I also got one from home the same time and they said I was [strikethrough] slow about writing too.
 
 [[Well this finds me anchor off Waikiki beach about a mile and half. We always come in over the weekend then go back to sea on Mondays and stay until Friday afternoon.]] Guess you are busy
 
@@ -2787,18 +2787,18 @@ No salutation, no body, no signature — only Gene's hand on the address.`,
 
 Joan, I'm sending a couple of pictures my boy-friend and I had made last week-end. If I was you I wouldn't let any one else see them.
 
-Be looking at them you can tell I'm not getting alone so well. The guy with me is sure some guy and he really knows his way around. We really have a good time when we go
+Be looking at them you can tell I'm not getting along so well. The guy with me is sure some guy and he really knows his way around. We really have a good time when we go
 
-[HAWAIIAN ISLANDS illustrated letterhead] out together. The night we had this pictures made we lost our liberty cards and had quit a time getting back aboard ship. He could talk anyone out of anything they had so when we got aboard we had quit a talk with the Office of the Deck and he let us off easy. [[Oh, I forgot to tell you about my boy-friend going down that night to see the movie star, Lana Turner. Well he got in to see her some way, but I couldn't tell how. He didn't know how he did it himself. The navy had quit a write up about it next day.]] You can see I not going to get far in this Navy. So, what?
+[HAWAIIAN ISLANDS illustrated letterhead] out together. The night we had this pictures made we lost our liberty cards and had quite a time getting back aboard ship. He could talk anyone out of anything they had so when we got aboard we had quite a talk with the Officer of the Deck and he let us off easy. [[Oh, I forgot to tell you about my boy-friend going down that night to see the movie star, Lana Turner. Well he got in to see her some way, but I couldn't tell how. He didn't know how he did it himself. The navy had quite a write up about it next day.]] You can see I not going to get far in this Navy. So, what?
 
 Write soon
                                                           Gene
 
-P.S. I got a letter from Carroll or I might say a book, telling me what all I should do and what I shouldn't. He knows what the navy is like and I hope he knows that he's wasting his time writting to me. He went his way when he was in here and I think I go my way. This doesn't sounds so good does it?
+P.S. I got a letter from Carroll or I might say a book, telling me what all I should do and what I shouldn't. He knows what the navy is like and I hope he knows that he's wasting his time writing to me. He went his way when he was in here and I think I go my way. This doesn't sounds so good does it?
 
 Have to stop my pen is getting so it won't hardly write. It probably out of ink.`,
     signature: "The one that thinks a lot and says little\nwith kisses,\n\"Gene\"",
-    postscript: `P.S. I got a letter from Carroll or I might say a book, telling me what all I should do and what I shouldn't. He knows what the navy is like and I hope he knows that he's wasting his time writting to me. He went his way when he was in here and I think I go my way. This doesn't sounds so good does it?
+    postscript: `P.S. I got a letter from Carroll or I might say a book, telling me what all I should do and what I shouldn't. He knows what the navy is like and I hope he knows that he's wasting his time writing to me. He went his way when he was in here and I think I go my way. This doesn't sounds so good does it?
 
 Have to stop my pen is getting so it won't hardly write. It probably out of ink.`,
     note: `Gene's earliest surviving letter from the ship, fifteen months before the war. The New Orleans was running a quiet peacetime cycle out of Pearl Harbor: at sea Monday through Friday, anchored off Waikiki on the weekends. Gene was still signing 'Dear Joan' (he wouldn't shift to 'Dearest' until December) and writing about a Saturday-night photo session in Honolulu where his friend had snuck in to meet Lana Turner and talked them both back aboard after losing their liberty cards. Carroll, Gene's older brother who had served before him, was now sending Gene long letters of advice. Gene didn't intend to take any of it.`
@@ -2818,9 +2818,9 @@ Have to stop my pen is getting so it won't hardly write. It probably out of ink.
 
 Hope this finds all in the best of health. [[I'm as well & sound as you can expect. Just crazy about the navy as you know.]]
 
-We now at Pearl Harbor for two weeks before going back to sea. It sure is hot out here and it rains a little every day. Well, I guess you are busy now going to school. Don't study too hard. That's what is wrong with me to-day. I studyed so hard that it drove me crazy. (As you can see)
+We now at Pearl Harbor for two weeks before going back to sea. It sure is hot out here and it rains a little every day. Well, I guess you are busy now going to school. Don't study too hard. That's what is wrong with me to-day. I studied so hard that it drove me crazy. (As you can see)
 
-I got a letter from home the other day but they didn't have much to say. Hope you don't get to busy. I like to know about you once in awhile and don't be afraid you write too much. There isn't anything I can write that you would care to heard out here, only how pretty the palm trees were. (ha)
+I got a letter from home the other day but they didn't have much to say. Hope you don't get to busy. I like to know about you once in awhile and don't be afraid you write too much. There isn't anything I can write that you would care to hear out here, only how pretty the palm trees were. (ha)
 
 Expecting a letter soon.`,
     signature: "Your Best Friend (Crazy)\nEugene",
@@ -2838,7 +2838,7 @@ Expecting a letter soon.`,
     image_count: 5,
     status: "transcribed_draft",
     salutation: "Dearest Joan,",
-    body: `Thought I have forgotten all about you by now I guess. Well I haven't by a long shot yet and I can't think of any good reason why I haven't been so without writting. If I did think of some you wouldn't believed it any way. So why should I worries about it. I got your Xmas card and also the Xmas gift and I'm really proud of it. Guess you think I'm some guy forgetting all about Xmas. I didn't forget it though. You will see what I mean one of these days. I couldn't think of but one thing to send you, Joan, that I thought you would want, so it just a little to far to send. That but it will be just as good in four or five months from now and don't ask me what it is. If you could guess if you stop to think enough? I think you enjoy it a lot.
+    body: `Thought I had forgotten all about you by now I guess. Well I haven't by a long shot yet and I can't think of any good reason why I haven't been so without writing. If I did think of some you wouldn't believe it any way. So why should I worries about it. I got your Xmas card and also the Xmas gift and I'm really proud of it. Guess you think I'm some guy forgetting all about Xmas. I didn't forget it though. You will see what I mean one of these days. I couldn't think of but one thing to send you, Joan, that I thought you would want, so it just a little to far to send. That but it will be just as good in four or five months from now and don't ask me what it is. If you could guess if you stop to think enough? I think you enjoy it a lot.
 
 I received a letter from home a couple of days ago. I only wrote them one letter since the last time I wrote to you. I bet they really sore at me. This letters sometimes things isn't so good with them. Dad said mother had to take some kind of shots all the time for her. It's I think it's the same trouble she had four years ago. I also received a nice Xmas card from Martha.
 
@@ -2848,7 +2848,7 @@ Joan if you really want a picture of me I will go over sometime this week and ha
 
 Will have to bring this letter to a close but I will write again soon. I sorry I have been so long but I promise it never happen again and you know me to do you. I think you understand.
 
-[[There isn't a day or night that goes by that I don't think about you. Remember the nights we were together? Well I think there might be some more just as good or better.]] Please keep writting Joan and if I don't write as often as I should forgive me. [[Be a good girl like you always have been and don't let some boy talk you into doing things that you shouldn't. Stay the same girl as I know you.]] Things might be dull at times but after all it comes into everybody life, so take it with a smile. Write Soon.`,
+[[There isn't a day or night that goes by that I don't think about you. Remember the nights we were together? Well I think there might be some more just as good or better.]] Please keep writing Joan and if I don't write as often as I should forgive me. [[Be a good girl like you always have been and don't let some boy talk you into doing things that you shouldn't. Stay the same girl as I know you.]] Things might be dull at times but after all it comes into everybody's life, so take it with a smile. Write Soon.`,
     signature: "With Lots of Love,\nGene",
     postscript: null,
     note: `Christmas week, eleven months and fifteen days before the attack on Pearl Harbor. For the first time in the archive Gene opens with 'Dearest Joan,' instead of 'Dear Joan,' and for the first time he says, plainly, that he thinks about her every day and night. 'Remember the nights we were together? Well I think there might be some more just as good or better.' The relationship had a past Joan and Gene could already remember; the engagement was still ten months out.`
@@ -2914,11 +2914,11 @@ Joan, even if your Carroll's old enough to be there with me to know what he mean
     salutation: "My Dearest Joan;",
     body: `Will write a few lines this afternoon while I have the chance. Received three of your letters a few days ago & this will have to do for an answer (I hope). I know you will understand how it is, though. Would write two or three times a week if I had the chance.
 
-Well how is the girl? Working your head off I bet. Of course I as well as usual. Also received a few letters from Mother along with yours. She seems to be a little worried about me too. Why do people have to do that. Maybe it just runs in the family. [[You know I was surprised to hear about my name comming out in the paper. Just goes to show that almost anything can happen these days. Anyhow I appreciate it.]]
+Well how is the girl? Working your head off I bet. Of course I as well as usual. Also received a few letters from Mother along with yours. She seems to be a little worried about me too. Why do people have to do that. Maybe it just runs in the family. [[You know I was surprised to hear about my name coming out in the paper. Just goes to show that almost anything can happen these days. Anyhow I appreciate it.]]
 
 Yes, Darling I really would like to see you. Maybe we can work it out some way the next time I come to the states. What you think about it? [[You know Joan I think everybody knows about us. News does travel fast doesn't it? Anyhow I didn't care whether it was a secret or not. You know what Martha had to say. She said knew about us all along and not to let anything come between us.]]
 
-Joan I can't write anything interesting to read. I know all of my letters (the ones I do get to write) are dull. If it wasn't for your letters I don't know what I would do. They are wonderful things to receive way out here. Keep writting them, Darling and I know you are always thinking of me. I love you more than anything else in this world. Tell everyone I said Hello. Hope your grandmother is better and for her not to worry about Friday 13th. (Eugene Lankford)`,
+Joan I can't write anything interesting to read. I know all of my letters (the ones I do get to write) are dull. If it wasn't for your letters I don't know what I would do. They are wonderful things to receive way out here. Keep writing them, Darling and I know you are always thinking of me. I love you more than anything else in this world. Tell everyone I said Hello. Hope your grandmother is better and for her not to worry about Friday 13th. (Eugene Lankford)`,
     signature: "Lots of Love\nAlways \"Gene\"\n(Eugene Lankford)",
     postscript: null,
     note: `Gene's name had appeared in the Stanford hometown paper. Joan had written to tell him, surprised; he was, too. 'Anyhow I appreciate it.' Also in this letter: Martha had told the family she had known about Gene and Joan all along and would not be the one to come between them.`
@@ -2948,7 +2948,7 @@ Yes, Darling I would give anything too just to see you again. I'm afraid it migh
 
 The folks said, Carroll was back in the navy. Hopes the old boy likes it O.K.
 
-Well Darling I don't know anything worth writting. I got to write the folks and a few lines to Tommy while I have the opportunity to do so. Write to me any chance you have. Don't wait for me to answer before writting because that's uncertain when I can write.
+Well Darling I don't know anything worth writing. I got to write the folks and a few lines to Tommy while I have the opportunity to do so. Write to me any chance you have. Don't wait for me to answer before writing because that's uncertain when I can write.
 
 I do think of you, Darling and will keep my thinking you knows that. Tell all I said hello. Be good & write soon. Bye —`,
     signature: "Lots of love & kisses\nAlways \"Gene\"\n(R.E. Lankford)",
