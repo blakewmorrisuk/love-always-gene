@@ -1015,7 +1015,13 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
           <span className="toc-date">Title page</span>
         </button>
 
-        {sections.map((sec) => (
+        {sections.map((sec) => {
+          const lastLetterIdx = sec.chapterIdx + sec.items.length;
+          let progress;
+          if (currentIdx <= sec.chapterIdx) progress = 0;
+          else if (currentIdx >= lastLetterIdx) progress = 1;
+          else progress = (currentIdx - sec.chapterIdx) / sec.items.length;
+          return (
           <div key={sec.chapter.key} className="toc-section">
             <button
               className={"toc-section-head" + (currentIdx === sec.chapterIdx ? " is-current" : "")}
@@ -1024,15 +1030,19 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
               <span className="toc-section-numeral">Ch. {sec.chapter.numeral}</span>
               <span className="toc-section-title">{sec.chapter.title}</span>
               <span className="toc-section-loc">{sec.items.length}</span>
+              <span className="toc-section-progress" aria-hidden="true">
+                <span className="toc-section-progress-fill" style={{ width: `${progress * 100}%` }} />
+              </span>
             </button>
             <ul className="toc-list">
               {sec.items.map((it, idx) => {
                 const prevLoc = idx > 0 ? sec.items[idx - 1].letter.location_stamp : null;
                 const showLoc = it.letter.location_stamp !== prevLoc;
+                const isActive = currentIdx === it.idx;
                 return (
                   <li key={it.letter.id}>
                     <button
-                      className={"toc-item" + (currentIdx === it.idx ? " is-current" : "")}
+                      className={"toc-item" + (isActive ? " is-current" : "")}
                       onClick={() => onJump(it.idx)}
                     >
                       <span className={statusDotClass(it.letter.status)} aria-hidden="true" />
@@ -1041,13 +1051,22 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
                         <span className="toc-date">{it.letter.date_label}</span>
                         {showLoc && <span className="toc-loc">{it.letter.location_stamp}</span>}
                       </div>
+                      {isActive && (
+                        <svg className="toc-anchor" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+                          <circle cx="8" cy="3" r="1.5" fill="none" stroke="currentColor" strokeWidth="1.2" />
+                          <line x1="8" y1="4.5" x2="8" y2="13" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                          <line x1="5.5" y1="6" x2="10.5" y2="6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                          <path d="M 3 11 Q 3 14 8 14 Q 13 14 13 11" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                        </svg>
+                      )}
                     </button>
                   </li>
                 );
               })}
             </ul>
           </div>
-        ))}
+          );
+        })}
 
         <button
           className={"toc-entry" + (currentIdx === closingIdx ? " is-current" : "")}
