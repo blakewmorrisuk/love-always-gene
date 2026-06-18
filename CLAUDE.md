@@ -19,7 +19,9 @@ back to a working state with minimal fuss. Read this first; then run `python3 sc
 
 ## The editor — a LOCAL tool (the website does NOT depend on it)
 
-- Blake double-clicks **`Edit Letters.command`** → it runs **`scripts/edit_server.py`** on
+- Blake launches it from the **"Letter Editor"** Dock app (built into `~/Applications` by
+  `scripts/make_app.command`; rebuild/re-add with `bash scripts/make_app.command --add-to-dock`)
+  or by double-clicking **`Edit Letters.command`** → it runs **`scripts/edit_server.py`** on
   `http://localhost:8765` and opens **`editor/`**. He edits text beside the scanned images,
   then **Save** (writes `letters.json`, copies a backup into `.backups/`, regenerates
   `letters.js`) and **Publish** (commits + pushes; live in ~30s).

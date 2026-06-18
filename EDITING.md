@@ -4,9 +4,11 @@ A plain guide to fixing and publishing the letter transcripts. No coding needed.
 
 ## Open the editor
 
-1. Open the **love-always-gene** folder.
-2. Double-click **"Edit Letters.command"**. A small Terminal window opens and your browser
-   opens the editor. Keep the Terminal window open while you work; close it when you're done.
+The easy way: click **"Letter Editor"** on your Dock. The editor opens in your browser, and
+the helper starts on its own.
+
+Or, in the **love-always-gene** folder, double-click **"Edit Letters.command"** (a small
+Terminal window opens alongside the editor; keep it open while you work, close it when done).
 
 ## Make an edit
 
