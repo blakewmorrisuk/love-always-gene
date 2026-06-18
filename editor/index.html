@@ -106,6 +106,36 @@ button{font-family:var(--serif-body);cursor:pointer}
 .ed-preview .em{background-image:linear-gradient(var(--brass),var(--brass));background-repeat:no-repeat;
   background-position:0 100%;background-size:100% 1.5px;padding-bottom:.12em}
 .ed-preview sub.unc{font-size:.62em;color:var(--walnut-mute);font-style:italic;vertical-align:sub}
+
+/* health banner */
+.ed-banner{padding:.5rem 1rem;font-size:.84rem;display:flex;align-items:center;gap:.7rem;
+  border-bottom:1px solid rgba(0,0,0,.12)}
+.ed-banner[hidden]{display:none}
+.ed-banner.ok{background:#e7efe0;color:#33502b}
+.ed-banner.warn{background:#f6eccf;color:#6b531c}
+.ed-banner.err{background:#f6dcdc;color:#7a1f1f}
+.ed-banner .b-act{margin-left:auto;display:flex;gap:.5rem}
+.ed-banner button{border:1px solid currentColor;background:transparent;color:inherit;border-radius:3px;
+  padding:.22rem .7rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.ed-banner button:hover{background:rgba(0,0,0,.06)}
+
+/* overlays + cards */
+.ed-overlay{position:fixed;inset:0;z-index:60;background:rgba(21,32,44,.55);backdrop-filter:blur(3px);
+  display:flex;align-items:center;justify-content:center;padding:1.5rem}
+.ed-overlay[hidden]{display:none}
+.ed-card{background:var(--paper);border:1px solid var(--brass);border-radius:6px;max-width:32rem;
+  padding:1.8rem 1.8rem 1.5rem;box-shadow:0 20px 60px rgba(0,0,0,.4);position:relative}
+.ed-card--help{max-width:38rem;max-height:86vh;overflow:auto}
+.ed-card h2{font-family:var(--serif-display);font-style:italic;font-size:1.5rem;color:var(--navy-deep);margin:0 0 .8rem}
+.ed-card p{font-size:.96rem;line-height:1.6;margin:0 0 .8rem;color:var(--walnut)}
+.ed-card p.muted{font-size:.85rem;color:var(--walnut-mute)}
+.ed-card-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.ed-card .ed-btn{color:var(--navy-deep);border-color:var(--brass)}
+.ed-card .ed-btn:hover{background:var(--brass-soft)}
+.ed-card .ed-btn--pub{background:var(--brass);color:var(--navy-deep)}
+.ed-help-x{position:absolute;top:.7rem;right:.9rem;border:none;background:none;font-size:1.6rem;
+  line-height:1;color:var(--walnut-mute);cursor:pointer}
+.ed-help-x:hover{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -118,10 +148,13 @@ button{font-family:var(--serif-body);cursor:pointer}
   </div>
   <div class="ed-actions">
     <span class="ed-changes" id="changeInfo"></span>
+    <button class="ed-btn" id="syncBtn" title="Pull the live site's newer changes">Sync</button>
+    <button class="ed-btn" id="helpBtn" title="Help & troubleshooting">?</button>
     <button class="ed-btn" id="saveBtn">Save</button>
     <button class="ed-btn ed-btn--pub" id="publishBtn">Publish</button>
   </div>
 </header>
+<div class="ed-banner" id="banner" hidden></div>
 <div class="ed-toast" id="toast"></div>
 <main class="ed-main">
   <section class="ed-scans">
@@ -155,6 +188,50 @@ button{font-family:var(--serif-body);cursor:pointer}
     <div class="ed-preview" id="preview"></div>
   </section>
 </main>
-<script src="editor.js?v=1"></script>
+<div class="ed-overlay" id="helperDown" hidden>
+  <div class="ed-card">
+    <h2>The editor helper isn't running</h2>
+    <p>Your edits are safe. To start it again, open the <b>love-always-gene</b> folder and
+       <b>double-click &ldquo;Edit&nbsp;Letters.command.&rdquo;</b> A small Terminal window will open;
+       keep it open while you edit, then come back here and reload.</p>
+    <p class="muted">Still stuck? Double-click <b>&ldquo;Repair.command&rdquo;</b> in the same folder,
+       or ask Claude (point it at <b>CLAUDE.md</b>).</p>
+    <div class="ed-card-actions"><button class="ed-btn ed-btn--pub" id="helperReload">Reload</button></div>
+  </div>
+</div>
+
+<div class="ed-overlay" id="overlapModal" hidden>
+  <div class="ed-card">
+    <h2>This letter was changed in two places</h2>
+    <p id="overlapMsg"></p>
+    <p class="muted">Your edit has been backed up, so nothing is lost.</p>
+    <div class="ed-card-actions">
+      <button class="ed-btn ed-btn--pub" id="overlapSync">Sync &mdash; keep the other change</button>
+      <button class="ed-btn" id="overlapForce">Use my version instead</button>
+      <button class="ed-btn" id="overlapClose">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="ed-overlay" id="helpPanel" hidden>
+  <div class="ed-card ed-card--help">
+    <button class="ed-help-x" id="helpClose" aria-label="Close">&times;</button>
+    <h2>Help &amp; troubleshooting</h2>
+    <p><b>To edit:</b> pick a letter (dropdown or &lsaquo; &rsaquo;), read the original scan on the left
+       (pinch to zoom, drag to move), fix the text on the right, click <b>Save</b>. When you're ready
+       for it to go live, click <b>Publish</b>.</p>
+    <p><b>If Publish says it couldn't reach GitHub:</b> you're probably offline. Your work is saved on
+       your computer &mdash; just click Publish again when you're back online.</p>
+    <p><b>If the banner says the live site has newer changes:</b> click <b>Sync</b> first, then Publish.</p>
+    <p><b>If anything looks broken</b> (this page, or the website itself): double-click
+       <b>&ldquo;Repair.command&rdquo;</b> in the love-always-gene folder. It checks and fixes things and
+       tells you what to do. You can also rebuild the website files right now:</p>
+    <div class="ed-card-actions"><button class="ed-btn" id="helpRebuild">Rebuild the website files</button></div>
+    <p class="muted">Every save is also copied into a <b>.backups</b> folder, so an edit is never lost.
+       For a fresh Claude: everything is documented in <b>CLAUDE.md</b> and <b>EDITING.md</b> in the repo.</p>
+  </div>
+</div>
+
+<script src="editor.js?v=2"></script>
 </body>
 </html>

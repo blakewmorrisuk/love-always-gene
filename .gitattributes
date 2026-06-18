@@ -1,0 +1,8 @@
+# Generated files never merge by hand — the 'generated' merge driver regenerates
+# them from their source (letters.json, cast.json, photos.json) so a sync can never
+# leave them in conflict. The driver is registered in repo-local git config by the
+# editor (scripts/edit_server.py) and the repair tool (scripts/doctor.py). If it is
+# ever missing, run:  python3 scripts/doctor.py   (or see CLAUDE.md).
+letters.js merge=generated
+cast.js    merge=generated
+photos.js  merge=generated

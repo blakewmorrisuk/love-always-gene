@@ -1,0 +1,7 @@
+# Local editor backups of letters.json (one per Save). Never deployed.
+.backups/
+
+# Python caches
+__pycache__/
+*.pyc
+.DS_Store
