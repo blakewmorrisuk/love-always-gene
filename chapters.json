@@ -1,0 +1,47 @@
+[
+  {
+    "key": "great-lakes",
+    "numeral": "I",
+    "title": "Great Lakes",
+    "location_label": "U.S. Naval Training Station, Illinois",
+    "bridge": "Gene enlisted at nineteen and reported to Great Lakes Naval Training Station, north of Chicago, in mid-April. He spent the first three weeks in Company 26, learning to wash and roll clothes, drill with a nine-pound rifle, and sleep in a hammock. After a brief hospital stay he was reassigned to Company 28. Joan was finishing the school year in Stanford, Kentucky. Europe had been at war for seven months. America was still neutral.",
+    "map": {
+      "x": 595,
+      "y": 305,
+      "label": "Great Lakes"
+    }
+  },
+  {
+    "key": "san-diego",
+    "numeral": "II",
+    "title": "San Diego",
+    "location_label": "U.S. Destroyer Base, California",
+    "bridge": "On July 9, after eleven weeks at Great Lakes, Gene received his orders. He would travel by rail to San Diego and ship out to join the U.S.S. New Orleans, the heavy cruiser that would be his home for the next three years. That same week, Roosevelt signed the Two-Ocean Navy Act, expanding the Pacific fleet by seventy percent. Gene was nineteen.",
+    "map": {
+      "x": 220,
+      "y": 410,
+      "label": "San Diego"
+    }
+  },
+  {
+    "key": "pearl-harbor",
+    "numeral": "III",
+    "title": "Pearl Harbor",
+    "location_label": "U.S.S. New Orleans, Territory of Hawaii",
+    "bridge": "Gene crossed to Honolulu aboard the U.S.S. Cuyama in late July, then transferred briefly to the Portland before joining the New Orleans when she returned to port. He was assigned to F Division, on the deck force. The ship steamed out for gunnery and back to Pearl on a weekly cycle through the autumn and winter. Europe had been at war for over a year. America was still neutral.",
+    "map": {
+      "x": 1015,
+      "y": 525,
+      "label": "Pearl Harbor",
+      "inset": true
+    }
+  },
+  {
+    "key": "at-war",
+    "numeral": "IV",
+    "title": "At War",
+    "location_label": "U.S.S. New Orleans, the Pacific",
+    "bridge": "The morning of December 7, 1941 the U.S.S. New Orleans was moored in the Navy Yard at Pearl Harbor for refit, her power down. Sailors passed ammunition up to the antiaircraft guns by hand and the ship survived intact. Three crewmen were wounded and no one died. Within a week she was at sea again. From that morning forward every letter Gene wrote passed through a naval censor before it reached Joan in Kentucky. Most of what he wanted to say, he could not.",
+    "mapPin": "pearl-harbor"
+  }
+]

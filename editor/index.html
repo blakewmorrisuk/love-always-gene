@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Letter Editor — Love, Always</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Caveat:wght@600&family=JetBrains+Mono:wght@400;500&display=swap" />
+<style>
+:root{
+  --paper:#F5EFE0; --paper-deep:#EDE4CC; --card:#ECE3D0; --card-deep:#E3D6BB;
+  --walnut:#3B2A1A; --walnut-soft:#5C4733; --walnut-mute:#806852;
+  --brass:#9B7B3F; --brass-soft:#C8AC74; --ink:#1F1B17;
+  --navy:#1F2D3D; --navy-deep:#15202C; --red:#B02020;
+  --serif-display:"Cormorant Garamond",Garamond,serif;
+  --serif-body:"Source Serif 4",Georgia,serif;
+  --hand:"Caveat",cursive; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--paper-deep);color:var(--walnut);
+  font-family:var(--serif-body);font-size:15px}
+button{font-family:var(--serif-body);cursor:pointer}
+
+/* top bar */
+.ed-top{display:flex;align-items:center;gap:1rem;padding:.6rem 1rem;background:var(--navy);
+  color:var(--paper);position:sticky;top:0;z-index:20;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.ed-title{font-family:var(--serif-display);font-style:italic;font-size:1.3rem;color:var(--brass-soft);white-space:nowrap}
+.ed-nav{display:flex;align-items:center;gap:.4rem}
+.ed-nav select{font-family:var(--mono);font-size:.82rem;padding:.35rem .5rem;border-radius:3px;
+  border:1px solid var(--brass);background:var(--paper);color:var(--ink);max-width:46vw}
+.ed-nav button,.scan-toolbar button{border:1px solid var(--brass);background:var(--paper);color:var(--ink);
+  border-radius:3px;padding:.3rem .55rem;font-size:.9rem;line-height:1}
+.ed-nav button:hover,.scan-toolbar button:hover{background:var(--brass-soft)}
+.ed-actions{margin-left:auto;display:flex;align-items:center;gap:.6rem}
+.ed-changes{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--brass-soft);opacity:.9}
+.ed-btn{border:1px solid var(--brass-soft);background:transparent;color:var(--paper);
+  border-radius:3px;padding:.45rem 1rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.ed-btn:hover{background:rgba(200,172,116,.2)}
+.ed-btn--pub{background:var(--brass);border-color:var(--brass);color:var(--navy-deep);font-weight:600}
+.ed-btn--pub:hover{background:var(--brass-soft)}
+.ed-btn:disabled{opacity:.45;cursor:default}
+.ed-btn.dirty{box-shadow:0 0 0 2px var(--red)}
+
+/* toast */
+.ed-toast{position:fixed;left:50%;top:3.4rem;transform:translateX(-50%);z-index:50;
+  background:var(--navy-deep);color:var(--paper);padding:.55rem 1.1rem;border-radius:4px;
+  font-size:.85rem;box-shadow:0 8px 24px rgba(0,0,0,.35);opacity:0;pointer-events:none;
+  transition:opacity .25s ease;max-width:80vw}
+.ed-toast.show{opacity:1}
+.ed-toast.err{background:var(--red)}
+
+/* main two-column */
+.ed-main{display:grid;grid-template-columns:1fr 1fr;gap:0;height:calc(100vh - 3.1rem)}
+@media(max-width:860px){.ed-main{grid-template-columns:1fr;height:auto}}
+
+/* scans */
+.ed-scans{display:flex;flex-direction:column;background:var(--navy-deep);min-height:0}
+.scan-toolbar{display:flex;align-items:center;gap:.4rem;padding:.5rem .7rem;background:var(--navy);
+  color:var(--paper);flex-wrap:wrap}
+.scan-toolbar #pageInfo{font-family:var(--mono);font-size:.72rem;color:var(--brass-soft);margin:0 .3rem}
+.scan-toolbar .sp{margin-left:auto}
+.scan-stage{flex:1;min-height:340px;overflow:hidden;position:relative;background:
+  repeating-conic-gradient(#1a2735 0% 25%, #15202c 0% 50%) 50%/22px 22px;cursor:grab;touch-action:none}
+.scan-stage.grabbing{cursor:grabbing}
+.scan-stage img{position:absolute;top:50%;left:50%;transform-origin:center center;
+  max-width:none;user-select:none;-webkit-user-drag:none;box-shadow:0 10px 40px rgba(0,0,0,.5);background:#000}
+.scan-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  color:var(--brass-soft);font-style:italic;font-family:var(--serif-display);font-size:1.1rem}
+.scan-hint{padding:.4rem .7rem;background:var(--navy);color:var(--brass-soft);font-size:.66rem;
+  letter-spacing:.04em;text-align:center;opacity:.85}
+
+/* form */
+.ed-form{overflow-y:auto;padding:1.2rem 1.4rem 4rem;min-height:0}
+.ed-meta{display:flex;flex-wrap:wrap;gap:.4rem .9rem;font-family:var(--mono);font-size:.68rem;
+  color:var(--walnut-mute);border-bottom:1px solid rgba(155,123,63,.3);padding-bottom:.7rem;margin-bottom:1rem}
+.ed-meta b{color:var(--navy);font-weight:600}
+.ed-tabs{display:flex;gap:.4rem;margin-bottom:.9rem}
+.ed-tab{border:1px solid var(--brass);background:transparent;color:var(--walnut);border-radius:3px;
+  padding:.3rem .9rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+.ed-tab.active{background:var(--navy);color:var(--paper);border-color:var(--navy)}
+.field{margin-bottom:1rem}
+.field label{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:.35rem;font-weight:500}
+.field input,.field textarea{width:100%;font-family:var(--serif-body);font-size:1rem;line-height:1.6;
+  color:var(--ink);background:var(--paper);border:1px solid rgba(31,45,61,.3);border-radius:3px;
+  padding:.55rem .7rem;resize:vertical}
+.field textarea{min-height:5rem}
+.field textarea.body{min-height:24rem}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--brass);
+  box-shadow:0 0 0 2px rgba(155,123,63,.25)}
+.legend{font-size:.74rem;color:var(--walnut-mute);background:var(--card);border:1px solid rgba(155,123,63,.25);
+  border-radius:4px;padding:.6rem .8rem;margin-bottom:1.1rem;line-height:1.6}
+.legend code{font-family:var(--mono);font-size:.72rem;background:var(--paper-deep);padding:.05em .35em;border-radius:2px;color:var(--navy)}
+
+/* preview pane */
+.ed-preview{display:none;background:var(--card);border:1px solid rgba(31,45,61,.18);border-radius:3px;
+  padding:1.6rem 1.6rem 1.4rem;font-family:var(--serif-body);line-height:1.78;color:var(--walnut);
+  text-align:justify;text-align-last:left;hyphens:auto}
+.ed-preview.show{display:block}
+.ed-preview .pv-sal{font-family:var(--serif-display);font-style:italic;font-size:1.35rem;color:var(--navy-deep);margin-bottom:.8rem}
+.ed-preview p{margin:0 0 1rem}
+.ed-preview .pv-sig{font-family:var(--hand);font-size:2.2rem;color:var(--navy-deep);margin-top:1.2rem}
+.ed-preview .pv-ps{font-size:.95rem;font-style:italic;color:var(--walnut-soft);border-top:1px solid rgba(31,45,61,.12);padding-top:.9rem;margin-top:1.2rem}
+.ed-preview .pv-note{font-style:italic;color:var(--walnut-mute);font-size:.92rem;margin-top:1.4rem;border-top:1px solid rgba(155,123,63,.3);padding-top:.8rem}
+.ed-preview .em{background-image:linear-gradient(var(--brass),var(--brass));background-repeat:no-repeat;
+  background-position:0 100%;background-size:100% 1.5px;padding-bottom:.12em}
+.ed-preview sub.unc{font-size:.62em;color:var(--walnut-mute);font-style:italic;vertical-align:sub}
+</style>
+</head>
+<body>
+<header class="ed-top">
+  <div class="ed-title">Letter Editor</div>
+  <div class="ed-nav">
+    <button id="prevBtn" title="Previous letter">‹</button>
+    <select id="letterSelect" aria-label="Choose a letter"></select>
+    <button id="nextBtn" title="Next letter">›</button>
+  </div>
+  <div class="ed-actions">
+    <span class="ed-changes" id="changeInfo"></span>
+    <button class="ed-btn" id="saveBtn">Save</button>
+    <button class="ed-btn ed-btn--pub" id="publishBtn">Publish</button>
+  </div>
+</header>
+<div class="ed-toast" id="toast"></div>
+<main class="ed-main">
+  <section class="ed-scans">
+    <div class="scan-toolbar">
+      <button data-z="out" title="Zoom out">−</button>
+      <button data-z="in" title="Zoom in">+</button>
+      <button data-z="fit" title="Fit to view">Fit</button>
+      <span id="pageInfo"></span>
+      <span class="sp"></span>
+      <button id="pgPrev" title="Previous page">‹ page</button>
+      <button id="pgNext" title="Next page">page ›</button>
+    </div>
+    <div class="scan-stage" id="scanStage">
+      <img id="scanImg" alt="" draggable="false" />
+      <div class="scan-empty" id="scanEmpty" style="display:none">No scans for this entry</div>
+    </div>
+    <div class="scan-hint">Pinch on the trackpad to zoom · drag to move · double-click to zoom in/out</div>
+  </section>
+  <section class="ed-form" id="formPane">
+    <div class="ed-meta" id="meta"></div>
+    <div class="ed-tabs">
+      <button class="ed-tab active" id="tabEdit">Edit</button>
+      <button class="ed-tab" id="tabPreview">Preview</button>
+    </div>
+    <div class="legend">
+      Markers: <code>[[text]]</code> draws a brass underline (a line that earns weight) ·
+      <code>[?]</code> marks an unreadable word · <code>[word?]</code> marks an uncertain reading of that word.
+      Keep them as-is unless you're fixing the reading.
+    </div>
+    <form id="fields" autocomplete="off"></form>
+    <div class="ed-preview" id="preview"></div>
+  </section>
+</main>
+<script src="editor.js?v=1"></script>
+</body>
+</html>
