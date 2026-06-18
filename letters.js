@@ -85,7 +85,7 @@ window.LETTERS = [
     "id": "L06",
     "n": 6,
     "date": "1940-05-17",
-    "date_label": "May 17, 1940",
+    "date_label": "May 16, 1940",
     "location_chapter": "great-lakes",
     "location_stamp": "Great Lakes Naval Training Station",
     "folder": "L06_1940-05-17_great-lakes",
