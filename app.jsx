@@ -4,6 +4,10 @@ const { createPortal } = ReactDOM;
 const { createRoot } = ReactDOMClient;
 const { motion, AnimatePresence, useReducedMotion } = FramerMotion;
 
+// Cache-bust photo assets by the app version so re-cropped/rotated images are
+// re-fetched rather than served stale from the browser cache.
+const ASSET_V = "?v=" + (window.__APP_VERSION || "1");
+
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
@@ -38,7 +42,7 @@ function pearlHarborMarker(dateStr) {
   return { days: 0, label: "the morning of Pearl Harbor" };
 }
 
-function buildPages(letters, chapters) {
+function buildPages(letters, chapters, cast, photos) {
   const grouped = groupByChapter(letters, chapters);
   const pages = [{ type: "title" }];
   for (const c of chapters) {
@@ -48,6 +52,20 @@ function buildPages(letters, chapters) {
     for (const l of ls) {
       pages.push({ type: "letter", letter: l, chapter: c });
     }
+  }
+  // Cast of Characters — one intro page, then the photo gallery, then one
+  // page per non-empty group. Lives between the last letter and the closing.
+  // `cast` is window.CAST and `photos` is window.PHOTOS (both generated).
+  const galleries = (photos && Array.isArray(photos.galleries)) ? photos.galleries : [];
+  if (cast && Array.isArray(cast.people) && cast.people.length) {
+    pages.push({ type: "cast-intro", cast });
+    for (const gal of galleries) pages.push({ type: "gallery", gallery: gal });
+    for (const g of cast.groups) {
+      const members = cast.people.filter(p => p.group === g.key);
+      if (members.length) pages.push({ type: "cast-group", group: g, people: members });
+    }
+  } else {
+    for (const gal of galleries) pages.push({ type: "gallery", gallery: gal });
   }
   pages.push({ type: "closing" });
   return pages;
@@ -535,28 +553,66 @@ function NoteBlock({ text, extraClass }) {
   ));
 }
 
+function escapeRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+
+/* NameMark — wraps a person's name when the reader jumped here from the cast.
+   A red rectangle flashes around it on mount (CSS), then fades. */
+function NameMark({ children }) {
+  return <mark className="name-mark">{children}</mark>;
+}
+
 /* Render a paragraph string, splitting on [[...]] (emphasis) and
    [?]/[word?] (uncertain-reading) markers and wrapping each in the
    right component. Used by both transcribed and draft cards so the
-   markers behave the same in either path. */
-function renderProse(text) {
-  const parts = text.split(/(\[\[[^\]]+\]\]|\[\?\]|\[[^\]]+\?\])/g);
-  return parts.map((part, i) => {
+   markers behave the same in either path. When `highlight` is supplied
+   (a jump from a cast entry), the person's aliases are also split out
+   and flashed via NameMark. */
+function renderProse(text, highlight) {
+  const terms = (highlight && Array.isArray(highlight.terms))
+    ? highlight.terms.filter(t => t && t.trim().length > 1)
+    : [];
+  let splitRe;
+  if (terms.length) {
+    const alt = terms.slice().sort((a, b) => b.length - a.length).map(escapeRe).join("|");
+    // \b bounds the names so "Jo" doesn't match inside "Joan"; the marker
+    // alternatives are listed first so [[...]] spans win over names inside them.
+    splitRe = new RegExp(`(\\[\\[[^\\]]+\\]\\]|\\[\\?\\]|\\[[^\\]]+\\?\\]|\\b(?:${alt})\\b)`, "g");
+  } else {
+    splitRe = /(\[\[[^\]]+\]\]|\[\?\]|\[[^\]]+\?\])/g;
+  }
+  const termSet = new Set(terms);
+  return text.split(splitRe).map((part, i) => {
+    if (!part) return null;
     const em = part.match(/^\[\[([^\]]+)\]\]$/);
     if (em) return <Emphasis key={i}>{em[1]}</Emphasis>;
     if (/^\[.*\?\]$/.test(part)) {
       const inner = part.replace(/^\[|\]$/g, "");
       return <sub key={i} className="uncertain" title="Uncertain reading">{inner}</sub>;
     }
+    if (termSet.has(part)) {
+      return <NameMark key={`${i}-${highlight.token}`}>{part}</NameMark>;
+    }
     return <React.Fragment key={i}>{part}</React.Fragment>;
   });
 }
 
-function TranscribedCard({ letter, onOpen }) {
+/* Scroll the first flashed name into view when a highlight lands. Shared by
+   the transcribed and draft cards. */
+function useHighlightScroll(ref, highlight) {
+  useEffect(() => {
+    if (!highlight || !ref.current) return;
+    const el = ref.current.querySelector(".name-mark");
+    if (el && el.scrollIntoView) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [highlight && highlight.token]);
+}
+
+function TranscribedCard({ letter, onOpen, highlight }) {
   const paragraphs = letter.body.split(/\n\n+/);
   const hasNote = !!letter.note || letter.partial;
+  const ref = useRef(null);
+  useHighlightScroll(ref, highlight);
   return (
-    <article className="letter-card" id={`letter-${letter.id}`}>
+    <article ref={ref} className="letter-card" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
         <div className="salutation">{letter.salutation}</div>
@@ -564,17 +620,17 @@ function TranscribedCard({ letter, onOpen }) {
           if (i === 0 && /^[A-Za-z]/.test(para)) {
             return (
               <p key={i} className="has-dropcap">
-                <span className="dropcap">{para.charAt(0)}</span>{renderProse(para.slice(1))}
+                <span className="dropcap">{para.charAt(0)}</span>{renderProse(para.slice(1), highlight)}
               </p>
             );
           }
-          return <p key={i}>{renderProse(para)}</p>;
+          return <p key={i}>{renderProse(para, highlight)}</p>;
         })}
         {letter.partial && <p className="incomplete-marker">[the letter continues]</p>}
         <div className="signature">{letter.signature}</div>
         {letter.postscript && <Fleuron />}
         {letter.postscript && (
-          <p className="postscript"><span className="ps-mark">P.S.</span> {renderProse(letter.postscript)}</p>
+          <p className="postscript"><span className="ps-mark">P.S.</span> {renderProse(letter.postscript, highlight)}</p>
         )}
       </div>
       {hasNote && <Fleuron />}
@@ -585,10 +641,12 @@ function TranscribedCard({ letter, onOpen }) {
   );
 }
 
-function DraftCard({ letter, onOpen }) {
+function DraftCard({ letter, onOpen, highlight }) {
   const paragraphs = letter.body.split(/\n\n+/);
+  const ref = useRef(null);
+  useHighlightScroll(ref, highlight);
   return (
-    <article className="letter-card letter-card--draft" id={`letter-${letter.id}`}>
+    <article ref={ref} className="letter-card letter-card--draft" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
         <div className="salutation">{letter.salutation}</div>
@@ -596,11 +654,11 @@ function DraftCard({ letter, onOpen }) {
           if (i === 0 && /^[A-Za-z]/.test(para)) {
             return (
               <p key={i} className="has-dropcap">
-                <span className="dropcap">{para.charAt(0)}</span>{renderProse(para.slice(1))}
+                <span className="dropcap">{para.charAt(0)}</span>{renderProse(para.slice(1), highlight)}
               </p>
             );
           }
-          return <p key={i}>{renderProse(para)}</p>;
+          return <p key={i}>{renderProse(para, highlight)}</p>;
         })}
         <div className="signature">{letter.signature}</div>
       </div>
@@ -673,15 +731,15 @@ function TelegramCard({ letter, onOpen }) {
   );
 }
 
-function LetterCard({ letter, onOpen }) {
+function LetterCard({ letter, onOpen, highlight }) {
   switch (letter.status) {
     case "envelope_only":      return <EnvelopeCard letter={letter} onOpen={onOpen} />;
     case "christmas_card":     return <ChristmasCardCard letter={letter} onOpen={onOpen} />;
     case "telegram":           return <TelegramCard letter={letter} onOpen={onOpen} />;
-    case "transcribed_draft":  return <DraftCard letter={letter} onOpen={onOpen} />;
+    case "transcribed_draft":  return <DraftCard letter={letter} onOpen={onOpen} highlight={highlight} />;
     case "transcribed_partial":
     case "transcribed":
-    default:                   return <TranscribedCard letter={letter} onOpen={onOpen} />;
+    default:                   return <TranscribedCard letter={letter} onOpen={onOpen} highlight={highlight} />;
   }
 }
 
@@ -823,6 +881,108 @@ function Closing() {
 }
 
 /* ------------------------------------------------------------------ */
+/*  Cast of characters                                                 */
+/* ------------------------------------------------------------------ */
+
+/* CastIntro — opening page for the cast section. Mirrors the chapter
+   divider's quiet, centered treatment but on paper (no navy). */
+function CastIntro({ cast }) {
+  const count = (cast && cast.people) ? cast.people.length : 0;
+  return (
+    <section className="cast-intro">
+      <div className="cast-intro-eyebrow">Reference</div>
+      <h2 className="cast-intro-title">Cast of Characters</h2>
+      <div className="cast-dates">{count} people named in the letters</div>
+      <div className="hairline-rule" />
+      <p className="cast-intro-body">
+        Gene wrote of two worlds — the family and friends he left behind in
+        Lincoln County, Kentucky, and the shipmates he found aboard the
+        U.S.S. New Orleans. These are the people he named in his letters, and
+        who they were. Tap any letter mark to read where a name appears.
+      </p>
+    </section>
+  );
+}
+
+/* CastGroup — one page per grouping (Gene's family, the Navy, etc.).
+   Each person carries a relation, a short identification, and chips that
+   jump to the letters where they appear. */
+function CastGroup({ group, people, onJumpToLetter }) {
+  const byId = useMemo(() => {
+    const m = {};
+    for (const l of (window.LETTERS || [])) m[l.id] = l;
+    return m;
+  }, []);
+  const sorted = useMemo(
+    () => [...people].sort((a, b) =>
+      (a.sort || a.name || "").localeCompare(b.sort || b.name || "")),
+    [people]
+  );
+  return (
+    <section className="cast-group">
+      <header className="cast-group-head">
+        <div className="cast-group-eyebrow">{group.label}</div>
+        {group.blurb && <div className="cast-group-blurb">{group.blurb}</div>}
+        <div className="brass-rule" />
+      </header>
+      <div className="cast-list">
+        {sorted.map((p) => {
+          const isPrincipal = p.group === "principals";
+          const hasPortrait = !!(p.photo && p.photo.src);
+          return (
+            <article
+              key={p.id}
+              className={"cast-person" + ((hasPortrait || isPrincipal) ? " cast-person--portrait" : "")}
+              id={`person-${p.id}`}
+            >
+              {hasPortrait ? (
+                <figure className="cast-portrait">
+                  <img src={p.photo.src + ASSET_V} alt={p.photo.alt || p.name} loading="lazy" />
+                  {p.photo.caption && <figcaption>{p.photo.caption}</figcaption>}
+                </figure>
+              ) : isPrincipal ? (
+                <div className="cast-portrait cast-portrait--empty" aria-hidden="true">
+                  <span>photograph<br />to come</span>
+                </div>
+              ) : null}
+              <div className="cast-person-text">
+                <div className="cast-person-name">
+                  {p.name}
+                  {p.uncertain && (
+                    <span className="cast-uncertain" title="Identity or reading uncertain">?</span>
+                  )}
+                </div>
+                {p.relation && <div className="cast-person-relation">{p.relation}</div>}
+                {p.bio && <p className="cast-person-bio">{p.bio}</p>}
+                {Array.isArray(p.letters) && p.letters.length > 0 && (
+                  <div className="cast-letters">
+                    <span className="cast-letters-label">Appears in</span>
+                    {p.letters.map((id) => {
+                      const meta = byId[id];
+                      return (
+                        <button
+                          key={id}
+                          className="cast-chip"
+                          onClick={() => meta && onJumpToLetter(id, p.aliases)}
+                          disabled={!meta}
+                          title={meta ? meta.date_label : `${id} (not on the site)`}
+                        >
+                          {id}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+/* ------------------------------------------------------------------ */
 /*  Chapter divider                                                     */
 /* ------------------------------------------------------------------ */
 
@@ -893,10 +1053,91 @@ function Folio({ page, totalLetters }) {
 }
 
 /* ------------------------------------------------------------------ */
+/*  Photo gallery                                                      */
+/* ------------------------------------------------------------------ */
+
+function PhotoGallery({ gallery, onOpenPhoto }) {
+  const items = gallery.items || [];
+  return (
+    <section className="gallery">
+      <header className="gallery-head">
+        <div className="gallery-eyebrow">Hawaii · 1940–1941</div>
+        <h2 className="gallery-title">{gallery.title}</h2>
+        {gallery.blurb && <p className="gallery-blurb">{gallery.blurb}</p>}
+        <div className="brass-rule" />
+      </header>
+      <div className="gallery-grid">
+        {items.map((it, i) => (
+          <figure key={it.id} className="gallery-item">
+            <button className="gallery-thumb" onClick={() => onOpenPhoto(items, i)}
+              aria-label={it.caption || it.alt || "Open photograph"}>
+              <img src={it.front + ASSET_V} alt={it.alt || it.caption || ""} loading="lazy" />
+            </button>
+            {it.caption && <figcaption>{it.caption}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* PhotoLightbox — a generic image viewer for the gallery. Arrows move between
+   photographs; a "turn over" control flips to the captioned reverse. Reuses
+   the letter lightbox's .lightbox / .lb-* styling. */
+function PhotoLightbox({ items, index, onClose }) {
+  const [idx, setIdx] = useState(index || 0);
+  const [showBack, setShowBack] = useState(false);
+  const go = useCallback((d) => {
+    setIdx(i => Math.max(0, Math.min(items.length - 1, i + d)));
+    setShowBack(false);
+  }, [items.length]);
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") onClose();
+      else if (e.key === "ArrowRight") go(1);
+      else if (e.key === "ArrowLeft") go(-1);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onClose, go]);
+
+  const item = items[idx];
+  if (!item) return null;
+  const src = (showBack && item.back) ? item.back : item.front;
+  const metaLabel = showBack ? (item.caption_source || "The reverse") : (item.caption || "");
+
+  return (
+    <div className="lightbox" role="dialog" aria-modal="true" onClick={onClose}>
+      <button className="lb-close" onClick={onClose} aria-label="Close">×</button>
+      <div className="lb-stage" onClick={(e) => e.stopPropagation()}>
+        <div className="lb-frame">
+          <img src={src + ASSET_V} alt={item.alt || item.caption || ""} />
+        </div>
+        <div className="lb-meta">
+          <span className="lb-meta-date">{metaLabel}</span>
+          <span className="lb-counter">{String(idx + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span>
+        </div>
+        {item.back && (
+          <button className="lb-flip" onClick={(e) => { e.stopPropagation(); setShowBack(b => !b); }}>
+            {showBack ? "see the front" : "turn over"}
+          </button>
+        )}
+      </div>
+      {items.length > 1 && (
+        <>
+          <button className="lb-nav lb-prev" onClick={(e) => { e.stopPropagation(); go(-1); }} aria-label="Previous photograph">‹</button>
+          <button className="lb-nav lb-next" onClick={(e) => { e.stopPropagation(); go(1); }} aria-label="Next photograph">›</button>
+        </>
+      )}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
 /*  Page renderer                                                      */
 /* ------------------------------------------------------------------ */
 
-function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLetters }) {
+function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLetters, onJumpToLetter, onOpenPhoto, highlight }) {
   return (
     <main className="archive">
       <Folio page={page} totalLetters={totalLetters} />
@@ -909,7 +1150,18 @@ function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLette
           allLetters={allLetters}
         />
       )}
-      {page.type === "letter" && <LetterCard letter={page.letter} onOpen={onOpen} />}
+      {page.type === "letter" && (
+        <LetterCard
+          letter={page.letter}
+          onOpen={onOpen}
+          highlight={highlight && highlight.letterId === page.letter.id ? highlight : null}
+        />
+      )}
+      {page.type === "cast-intro" && <CastIntro cast={page.cast} />}
+      {page.type === "gallery" && <PhotoGallery gallery={page.gallery} onOpenPhoto={onOpenPhoto} />}
+      {page.type === "cast-group" && (
+        <CastGroup group={page.group} people={page.people} onJumpToLetter={onJumpToLetter} />
+      )}
       {page.type === "closing" && <Closing />}
     </main>
   );
@@ -983,6 +1235,8 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
   const sections = [];
   let titleIdx = pages.findIndex(p => p.type === "title");
   let closingIdx = pages.findIndex(p => p.type === "closing");
+  let castIntroIdx = pages.findIndex(p => p.type === "cast-intro");
+  let galleryIdx = pages.findIndex(p => p.type === "gallery");
 
   for (let i = 0; i < pages.length; i++) {
     const p = pages[i];
@@ -1068,6 +1322,26 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
           );
         })}
 
+        {castIntroIdx >= 0 && (
+          <button
+            className={"toc-entry" + (currentIdx === castIntroIdx ? " is-current" : "")}
+            onClick={() => onJump(castIntroIdx)}
+          >
+            <span className="toc-num">—</span>
+            <span className="toc-date">Cast of Characters</span>
+          </button>
+        )}
+
+        {galleryIdx >= 0 && (
+          <button
+            className={"toc-entry" + (currentIdx === galleryIdx ? " is-current" : "")}
+            onClick={() => onJump(galleryIdx)}
+          >
+            <span className="toc-num">—</span>
+            <span className="toc-date">Photographs</span>
+          </button>
+        )}
+
         <button
           className={"toc-entry" + (currentIdx === closingIdx ? " is-current" : "")}
           onClick={() => onJump(closingIdx)}
@@ -1138,12 +1412,16 @@ function CoverModal({ onClose }) {
 }
 
 function App() {
-  const pages = useMemo(() => buildPages(LETTERS, CHAPTERS), []);
+  const pages = useMemo(() => buildPages(LETTERS, CHAPTERS, window.CAST, window.PHOTOS), []);
   const [pageIdx, setPageIdx] = useState(() => parseHashIdx(pages.length - 1));
   const [direction, setDirection] = useState(1);
   const prevIdxRef = useRef(0);
   const [lb, setLb] = useState(null);
+  const [plb, setPlb] = useState(null);          // photo-gallery lightbox: { items, idx }
   const [tocOpen, setTocOpen] = useState(false);
+  const [highlight, setHighlight] = useState(null);     // { letterId, terms, token }
+  const [returnToCast, setReturnToCast] = useState(null); // page index to return to
+  const tokenRef = useRef(0);
   const swipeRef = useRef(null);
   const reduced = useReducedMotion();
 
@@ -1167,6 +1445,20 @@ function App() {
       return next;
     });
   }, [pages.length]);
+
+  // Jump from a cast entry's letter chip to that letter's page, flashing the
+  // person's name and remembering the cast page to return to.
+  const jumpToLetter = useCallback((id, aliases) => {
+    const idx = pages.findIndex(p => p.type === "letter" && p.letter && p.letter.id === id);
+    if (idx < 0) return;
+    tokenRef.current += 1;
+    setHighlight({ letterId: id, terms: aliases || [], token: tokenRef.current });
+    setReturnToCast(pageIdx);
+    goto(idx);
+  }, [pages, goto, pageIdx]);
+
+  const openPhoto = useCallback((items, idx) => setPlb({ items, idx }), []);
+  const closePhoto = useCallback(() => setPlb(null), []);
 
   const next = useCallback(() => {
     setPageIdx(curr => {
@@ -1204,7 +1496,7 @@ function App() {
 
   // keyboard nav
   useEffect(() => {
-    if (lb || tocOpen) return;
+    if (lb || tocOpen || plb) return;
     const onKey = (e) => {
       const tag = e.target && e.target.tagName;
       if (tag === "INPUT" || tag === "TEXTAREA") return;
@@ -1215,11 +1507,11 @@ function App() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [next, prev, goto, pages.length, lb, tocOpen]);
+  }, [next, prev, goto, pages.length, lb, tocOpen, plb]);
 
   // touch swipe
   useEffect(() => {
-    if (lb || tocOpen) return;
+    if (lb || tocOpen || plb) return;
     const onStart = (e) => {
       const t = e.touches[0];
       swipeRef.current = { x: t.clientX, y: t.clientY, t: Date.now() };
@@ -1243,9 +1535,19 @@ function App() {
       window.removeEventListener("touchstart", onStart);
       window.removeEventListener("touchend", onEnd);
     };
-  }, [next, prev, lb, tocOpen]);
+  }, [next, prev, lb, tocOpen, plb]);
 
   const currentPage = pages[pageIdx];
+
+  // Once the reader leaves the letters (back to the cast, gallery, title, or
+  // closing), drop the highlight and the "return to cast" affordance.
+  useEffect(() => {
+    if (currentPage.type !== "letter") {
+      setReturnToCast(curr => (curr === null ? curr : null));
+      setHighlight(curr => (curr === null ? curr : null));
+    }
+  }, [pageIdx]);
+
   const chapterKey = useMemo(() => {
     if (currentPage.type === "chapter") return currentPage.chapter.key;
     if (currentPage.type === "letter") return currentPage.chapter.key;
@@ -1281,12 +1583,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (lb || tocOpen) {
+    if (lb || tocOpen || plb) {
       const prevOverflow = document.body.style.overflow;
       document.body.style.overflow = "hidden";
       return () => { document.body.style.overflow = prevOverflow; };
     }
-  }, [lb, tocOpen]);
+  }, [lb, tocOpen, plb]);
 
   const totalLetters = LETTERS.length;
   const showProgress = currentPage.type !== "title";
@@ -1328,6 +1630,9 @@ function App() {
               onNext={next}
               allChapters={CHAPTERS}
               allLetters={LETTERS}
+              onJumpToLetter={jumpToLetter}
+              onOpenPhoto={openPhoto}
+              highlight={highlight}
             />
           </motion.div>
         </AnimatePresence>
@@ -1354,6 +1659,17 @@ function App() {
       {lb && <Lightbox letter={lb.letter} page={lb.page} onClose={closeLb} onNav={navLb} />}
 
       {coverOpen && <CoverModal onClose={closeCover} />}
+
+      {plb && <PhotoLightbox items={plb.items} index={plb.idx} onClose={closePhoto} />}
+
+      {returnToCast !== null && currentPage.type === "letter" && (
+        <button
+          className="return-to-cast"
+          onClick={() => { goto(returnToCast); setReturnToCast(null); setHighlight(null); }}
+        >
+          <span className="rtc-arrow">‹</span> Back to the Cast
+        </button>
+      )}
     </>
   );
 }

@@ -1573,6 +1573,410 @@ body.body--war .emphasis {
   letter-spacing: 0.01em;
 }
 
+/* ---- cast of characters ------------------------------------------ */
+
+.cast-intro {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  min-height: calc(100vh - 12rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cast-intro-eyebrow {
+  font-family: var(--serif-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--brass);
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+}
+.cast-intro-title {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2.6rem, 6.5vw, 4rem);
+  color: var(--ink);
+  margin: 0 0 0.6rem;
+  letter-spacing: -0.018em;
+  line-height: 1.05;
+}
+.cast-dates {
+  font-family: var(--serif-body);
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+.cast-intro-body {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-size: 1.16rem;
+  line-height: 1.7;
+  color: var(--walnut-soft);
+  max-width: 32rem;
+  margin: 0.4rem auto 0;
+  text-align: justify;
+  text-align-last: center;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  padding: 0 1rem;
+}
+
+.cast-group {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+.cast-group-head {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.cast-group-eyebrow {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.9rem, 4.5vw, 2.5rem);
+  color: var(--navy-deep);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+.cast-group-blurb {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--walnut-mute);
+  margin-top: 0.3rem;
+}
+.cast-group-head .brass-rule { margin: 1.2rem auto 0; max-width: 12rem; }
+
+.cast-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.cast-person {
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid rgba(31,45,61,0.12);
+}
+.cast-person:last-child { border-bottom: none; }
+.cast-person-name {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--navy-deep);
+  line-height: 1.2;
+}
+.cast-uncertain {
+  font-family: var(--serif-body);
+  font-style: normal;
+  font-size: 0.7rem;
+  color: var(--brass);
+  vertical-align: super;
+  margin-left: 0.25em;
+  font-weight: 600;
+}
+.cast-person-relation {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brass);
+  font-weight: 500;
+  margin-top: 0.35rem;
+}
+.cast-person-bio {
+  font-family: var(--serif-body);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--walnut);
+  margin: 0.7rem 0 0;
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.cast-letters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+}
+.cast-letters-label {
+  font-family: var(--serif-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--walnut-mute);
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
+.cast-chip {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  background: rgba(226,209,169,0.32);
+  border: 1px solid rgba(155,123,63,0.4);
+  border-radius: 2px;
+  padding: 0.18rem 0.45rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.cast-chip:hover, .cast-chip:focus-visible {
+  background: var(--brass);
+  color: var(--paper);
+  border-color: var(--brass);
+  outline: none;
+  transform: translateY(-1px);
+}
+.cast-chip:disabled {
+  cursor: default;
+  opacity: 0.5;
+  color: var(--walnut-mute);
+  background: transparent;
+}
+.cast-chip:disabled:hover { transform: none; background: transparent; color: var(--walnut-mute); border-color: rgba(155,123,63,0.4); }
+
+@media (max-width: 540px) {
+  .cast-person-name { font-size: 1.25rem; }
+  .cast-intro { min-height: calc(100vh - 10rem); }
+}
+
+/* ---- cast portraits (Gene/Joan and any pictured person) ---------- */
+
+.cast-person--portrait {
+  display: flex;
+  gap: 1.4rem;
+  align-items: flex-start;
+}
+.cast-person--portrait .cast-person-text { flex: 1; min-width: 0; }
+.cast-portrait {
+  flex-shrink: 0;
+  width: 168px;
+  margin: 0;
+}
+.cast-portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--paper);
+  padding: 7px;
+  border: 1px solid rgba(155,123,63,0.3);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.4) inset,
+    0 10px 24px -12px rgba(31,45,61,0.3),
+    0 2px 6px rgba(60,40,20,0.08);
+}
+.cast-portrait figcaption {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--walnut-mute);
+  text-align: center;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+.cast-portrait--empty {
+  width: 168px;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(155,123,63,0.5);
+  background: rgba(226,209,169,0.18);
+  border-radius: 2px;
+}
+.cast-portrait--empty span {
+  font-family: var(--serif-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--walnut-mute);
+  text-align: center;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+@media (max-width: 560px) {
+  .cast-person--portrait { flex-direction: column; align-items: center; }
+  .cast-person--portrait .cast-person-text { width: 100%; }
+  .cast-portrait, .cast-portrait--empty { width: 62%; max-width: 220px; }
+}
+
+/* ---- photo gallery ----------------------------------------------- */
+
+.gallery {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+.gallery-head { text-align: center; margin-bottom: 2.2rem; }
+.gallery-eyebrow {
+  font-family: var(--serif-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--brass);
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+.gallery-title {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  color: var(--ink);
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+.gallery-blurb {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--walnut-soft);
+  max-width: 34rem;
+  margin: 0.6rem auto 0;
+}
+.gallery-head .brass-rule { margin: 1.2rem auto 0; max-width: 12rem; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.4rem;
+}
+@media (min-width: 600px) {
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.8rem; }
+}
+.gallery-item { margin: 0; }
+.gallery-thumb {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  cursor: pointer;
+  background: var(--paper);
+  border: 1px solid rgba(155,123,63,0.28);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.4) inset,
+    0 10px 24px -12px rgba(31,45,61,0.28),
+    0 2px 6px rgba(60,40,20,0.07);
+  transition: transform 0.3s cubic-bezier(0.65,0,0.35,1), box-shadow 0.3s ease;
+}
+.gallery-thumb:hover, .gallery-thumb:focus-visible {
+  transform: translateY(-3px);
+  outline: none;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.4) inset,
+    0 16px 30px -12px rgba(31,45,61,0.32),
+    0 4px 10px rgba(60,40,20,0.1);
+}
+.gallery-thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: var(--card-deep);
+  filter: sepia(0.06);
+}
+.gallery-item figcaption {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--walnut-mute);
+  text-align: center;
+  margin-top: 0.6rem;
+  line-height: 1.4;
+}
+
+/* lightbox "turn over" control (reverse of a photo) */
+.lb-flip {
+  margin-top: 0.9rem;
+  background: none;
+  border: 1px solid rgba(200,172,116,0.45);
+  border-radius: 2px;
+  color: var(--brass-faint);
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 0.82rem;
+  padding: 0.4rem 1.1rem;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.lb-flip:hover, .lb-flip:focus-visible {
+  color: var(--navy-deep);
+  background: var(--brass-faint);
+  border-color: var(--brass-faint);
+  outline: none;
+}
+
+/* ---- name highlight (jump from cast) ----------------------------- */
+
+.name-mark {
+  background: transparent;
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 0.06em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  animation: name-mark-flash 2.6s ease-out 0.25s both;
+}
+@keyframes name-mark-flash {
+  0%   { box-shadow: 0 0 0 2px rgba(176,32,32,0);    background: rgba(176,32,32,0); }
+  12%  { box-shadow: 0 0 0 2px rgba(176,32,32,0.95); background: rgba(176,32,32,0.12); }
+  72%  { box-shadow: 0 0 0 2px rgba(176,32,32,0.95); background: rgba(176,32,32,0.12); }
+  100% { box-shadow: 0 0 0 2px rgba(176,32,32,0);    background: rgba(176,32,32,0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .name-mark { animation: none; box-shadow: 0 0 0 2px rgba(176,32,32,0.9); }
+}
+
+/* ---- return-to-cast button --------------------------------------- */
+
+.return-to-cast {
+  position: fixed;
+  left: 50%;
+  bottom: 4.8rem;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--serif-body);
+  font-size: 0.64rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--paper);
+  background: rgba(176,32,32,0.94);
+  border: 1px solid rgba(176,32,32,0.95);
+  border-radius: 2px;
+  padding: 0.55rem 1.15rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px -8px rgba(74,20,24,0.6);
+  transition: background 0.25s ease, transform 0.25s ease;
+  animation: rtc-in 0.4s cubic-bezier(0.22,1,0.36,1) both;
+}
+.return-to-cast:hover, .return-to-cast:focus-visible {
+  background: rgba(140,24,24,0.97);
+  outline: none;
+  transform: translateX(-50%) translateY(-2px);
+}
+.rtc-arrow { font-family: var(--serif-display); font-size: 1.05rem; line-height: 1; }
+@keyframes rtc-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) { .return-to-cast { animation: none; } }
+@media (max-width: 540px) {
+  .return-to-cast { bottom: 4.2rem; font-size: 0.6rem; padding: 0.5rem 0.9rem; }
+}
+
 /* ---- nav chrome -------------------------------------------------- */
 
 .nav-chrome {
@@ -2535,14 +2939,22 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 
 <!-- Cache-bust: bump on every meaningful release so iOS Safari doesn't
      keep serving a stale app.jsx after a new index.html lands. -->
-<script>window.__APP_VERSION = "20260515u";</script>
-<script src="letters.js?v=20260515u"></script>
+<script>window.__APP_VERSION = "20260617a";</script>
+<script src="letters.js?v=20260617a"></script>
 <!-- weather.js is generated by scripts/fetch_weather.mjs. If absent the
      atmosphere falls back to chapter defaults. The onerror swallow avoids
      a console 404 when it hasn't been generated yet. -->
 <script>window.LETTER_WEATHER = window.LETTER_WEATHER || null;</script>
-<script src="weather.js?v=20260515u" onerror="void 0"></script>
-<script type="text/babel" src="app.jsx?v=20260515u"></script>
+<script src="weather.js?v=20260617a" onerror="void 0"></script>
+<!-- cast.js is generated by scripts/build_cast.py from cast.json. If absent
+     the Cast of Characters section simply does not render. -->
+<script>window.CAST = window.CAST || null;</script>
+<script src="cast.js?v=20260617a" onerror="void 0"></script>
+<!-- photos.js is generated by scripts/build_photos.py from photos.json. If
+     absent the Photographs gallery simply does not render. -->
+<script>window.PHOTOS = window.PHOTOS || null;</script>
+<script src="photos.js?v=20260617a" onerror="void 0"></script>
+<script type="text/babel" src="app.jsx?v=20260617a"></script>
 
 </body>
 </html>

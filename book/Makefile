@@ -27,6 +27,7 @@ LETTERS  := generated/part-01-letters.tex \
             generated/part-08-letters.tex \
             generated/part-09-letters.tex \
             generated/appendix-undated-letters.tex \
+            generated/cast.tex \
             generated/manifest.tex
 
 .PHONY: all assemble book proof fonts clean distclean check
@@ -35,7 +36,7 @@ all: assemble book
 
 assemble: $(LETTERS)
 
-$(LETTERS): build_book.py $(wildcard ../L*/L*_transcription.md)
+$(LETTERS): build_book.py $(wildcard ../L*/L*_transcription.md) $(wildcard ../cast.json)
 	$(PYTHON) build_book.py --verbose
 
 book: assemble
