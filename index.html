@@ -2953,15 +2953,20 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 <div id="root"><noscript>This archive needs JavaScript to display. Please open it in a regular browser such as Safari or Chrome.</noscript></div>
 <div class="spine-shadow" aria-hidden="true"></div>
 
+<!-- All runtime libraries are vendored in ./vendor/ — the site has no
+     third-party origins at runtime. react/react-dom/jsx-runtime are esm.sh
+     single-file builds of react@18.3.1; framer-motion.js is an esbuild
+     bundle of framer-motion@11.18.2 (motion-dom/motion-utils inlined,
+     react externals kept). To upgrade a library, replace its file and
+     keep the bare-import names below. -->
 <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@18.3.1",
-    "react-dom": "https://esm.sh/react-dom@18.3.1?deps=react@18.3.1",
-    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?deps=react@18.3.1",
-    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
-    "react/jsx-dev-runtime": "https://esm.sh/react@18.3.1/jsx-dev-runtime",
-    "framer-motion": "https://esm.sh/framer-motion@11?external=react,react-dom"
+    "react": "./vendor/react.js",
+    "react-dom": "./vendor/react-dom.js",
+    "react-dom/client": "./vendor/react-dom-client.js",
+    "react/jsx-runtime": "./vendor/react-jsx-runtime.js",
+    "framer-motion": "./vendor/framer-motion.js"
   }
 }
 </script>
