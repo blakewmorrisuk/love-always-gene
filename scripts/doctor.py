@@ -49,6 +49,17 @@ def main() -> int:
                     print(f"       - {s['script']}: {s['out']}")
             todo.append("A website file failed to rebuild — ask Claude (show them the line above).")
 
+    # app.js is generated from app.jsx by scripts/build_app.sh (needs node;
+    # only relevant when app.jsx itself was edited — letter editing never
+    # touches it). Warn-only: never a failure.
+    app_jsx, app_js = REPO / "app.jsx", REPO / "app.js"
+    if app_jsx.exists() and app_js.exists():
+        if app_jsx.stat().st_mtime > app_js.stat().st_mtime + 1:
+            print("  [..] app.js looks older than app.jsx — if the website misbehaves,")
+            print("       ask Claude to run:  bash scripts/build_app.sh")
+        else:
+            print("  [ok] the website app file (app.js) is up to date")
+
     h = repo_lib.health(do_fetch=True)
     if h.get("online"):
         print(f"  [ok] connected to GitHub (you are {h['ahead']} ahead, {h['behind']} behind the live site)")
