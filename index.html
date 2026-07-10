@@ -2932,6 +2932,18 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
   .letter-body { box-shadow: none; border: 1px solid rgba(0,0,0,0.2); }
 }
 
+/* Invisible tap-target extensions. The visible controls stay exactly the
+   same size; only the touch/click zone grows to ≥44px (small phone
+   controls here are 30-40px). The ::before overlay is transparent and
+   inherits the parent's cursor/click handling. */
+.nav-btn, .photo-link { position: relative; }
+.nav-btn::before, .toc-btn::before, .toc-close::before,
+.photo-link::before, .lb-close::before, .lb-nav::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+}
+.photo-link::before { inset: -12px -10px; }
 
 </style>
 </head>

@@ -6,6 +6,15 @@ const { createRoot } = ReactDOMClient;
 const { motion, AnimatePresence, useReducedMotion } = FramerMotion;
 const ASSET_V = "?v=" + (window.__APP_VERSION || "1");
 const letterImages = (letter) => letter.images || [];
+function useDialogFocus(closeRef) {
+  useEffect(() => {
+    const prev = document.activeElement;
+    if (closeRef.current) closeRef.current.focus();
+    return () => {
+      if (prev && typeof prev.focus === "function") prev.focus();
+    };
+  }, [closeRef]);
+}
 function groupByChapter(letters, chapters) {
   const byKey = {};
   for (const c of chapters) byKey[c.key] = [];
@@ -289,6 +298,8 @@ function RouteDiagram({ activeChapter, chapters, letters }) {
   })));
 }
 function Lightbox({ letter, page, onClose, onNav }) {
+  const closeRef = useRef(null);
+  useDialogFocus(closeRef);
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") onClose();
@@ -306,7 +317,7 @@ function Lightbox({ letter, page, onClose, onNav }) {
   const src = `${letter.folder}/${webs[k - 1]}`;
   const fullSrc = `${letter.folder}/${imgs[k - 1]}`;
   const alt = `Original handwritten letter, page ${k} of ${total}, dated ${letter.date_label}`;
-  return /* @__PURE__ */ React.createElement("div", { className: "lightbox", role: "dialog", "aria-modal": "true", onClick: onClose }, /* @__PURE__ */ React.createElement("button", { className: "lb-close", onClick: onClose, "aria-label": "Close" }, "×"), /* @__PURE__ */ React.createElement("div", { className: "lb-stage", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ React.createElement("div", { className: "lb-frame" }, /* @__PURE__ */ React.createElement("img", { src, alt })), /* @__PURE__ */ React.createElement("div", { className: "lb-meta" }, /* @__PURE__ */ React.createElement("span", { className: "lb-meta-date" }, letter.date_label), /* @__PURE__ */ React.createElement("a", { className: "lb-full", href: fullSrc, target: "_blank", rel: "noopener noreferrer" }, "full resolution"), /* @__PURE__ */ React.createElement("span", { className: "lb-counter" }, String(k).padStart(2, "0"), " / ", String(total).padStart(2, "0")))), total > 1 && /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("button", { className: "lb-nav lb-prev", onClick: (e) => {
+  return /* @__PURE__ */ React.createElement("div", { className: "lightbox", role: "dialog", "aria-modal": "true", onClick: onClose }, /* @__PURE__ */ React.createElement("button", { className: "lb-close", ref: closeRef, onClick: onClose, "aria-label": "Close" }, "×"), /* @__PURE__ */ React.createElement("div", { className: "lb-stage", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ React.createElement("div", { className: "lb-frame" }, /* @__PURE__ */ React.createElement("img", { src, alt })), /* @__PURE__ */ React.createElement("div", { className: "lb-meta" }, /* @__PURE__ */ React.createElement("span", { className: "lb-meta-date" }, letter.date_label), /* @__PURE__ */ React.createElement("a", { className: "lb-full", href: fullSrc, target: "_blank", rel: "noopener noreferrer" }, "full resolution"), /* @__PURE__ */ React.createElement("span", { className: "lb-counter" }, String(k).padStart(2, "0"), " / ", String(total).padStart(2, "0")))), total > 1 && /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("button", { className: "lb-nav lb-prev", onClick: (e) => {
     e.stopPropagation();
     onNav(-1);
   }, "aria-label": "Previous page" }, "‹"), /* @__PURE__ */ React.createElement("button", { className: "lb-nav lb-next", onClick: (e) => {
@@ -388,7 +399,7 @@ function TranscribedCard({ letter, onOpen, highlight }) {
   const hasNote = !!letter.note || letter.partial;
   const ref = useRef(null);
   useHighlightScroll(ref, highlight);
-  return /* @__PURE__ */ React.createElement("article", { ref, className: "letter-card", id: `letter-${letter.id}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "letter-body" }, /* @__PURE__ */ React.createElement("div", { className: "salutation" }, letter.salutation), paragraphs.map((para, i) => {
+  return /* @__PURE__ */ React.createElement("article", { ref, className: "letter-card", id: `letter-${letter.id}`, "aria-label": `Letter, ${letter.date_label}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "letter-body" }, /* @__PURE__ */ React.createElement("div", { className: "salutation" }, letter.salutation), paragraphs.map((para, i) => {
     if (i === 0 && /^[A-Za-z]/.test(para)) {
       return /* @__PURE__ */ React.createElement("p", { key: i, className: "has-dropcap" }, /* @__PURE__ */ React.createElement("span", { className: "dropcap" }, para.charAt(0)), renderProse(para.slice(1), highlight));
     }
@@ -399,7 +410,7 @@ function DraftCard({ letter, onOpen, highlight }) {
   const paragraphs = letter.body.split(/\n\n+/);
   const ref = useRef(null);
   useHighlightScroll(ref, highlight);
-  return /* @__PURE__ */ React.createElement("article", { ref, className: "letter-card letter-card--draft", id: `letter-${letter.id}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "letter-body" }, /* @__PURE__ */ React.createElement("div", { className: "salutation" }, letter.salutation), paragraphs.map((para, i) => {
+  return /* @__PURE__ */ React.createElement("article", { ref, className: "letter-card letter-card--draft", id: `letter-${letter.id}`, "aria-label": `Letter, ${letter.date_label}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "letter-body" }, /* @__PURE__ */ React.createElement("div", { className: "salutation" }, letter.salutation), paragraphs.map((para, i) => {
     if (i === 0 && /^[A-Za-z]/.test(para)) {
       return /* @__PURE__ */ React.createElement("p", { key: i, className: "has-dropcap" }, /* @__PURE__ */ React.createElement("span", { className: "dropcap" }, para.charAt(0)), renderProse(para.slice(1), highlight));
     }
@@ -408,7 +419,7 @@ function DraftCard({ letter, onOpen, highlight }) {
 }
 function EnvelopeCard({ letter, onOpen }) {
   const imgs = letterImages(letter);
-  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--envelope", id: `letter-${letter.id}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), imgs.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "envelope-stage" }, /* @__PURE__ */ React.createElement("button", { className: "envelope-img", onClick: () => onOpen(letter, 1) }, /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--envelope", id: `letter-${letter.id}`, "aria-label": `Envelope, ${letter.date_label}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), imgs.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "envelope-stage" }, /* @__PURE__ */ React.createElement("button", { className: "envelope-img", onClick: () => onOpen(letter, 1) }, /* @__PURE__ */ React.createElement(
     "img",
     {
       src: `${letter.folder}/${(letter.images_web || imgs)[0]}`,
@@ -422,7 +433,7 @@ function ChristmasCardCard({ letter, onOpen }) {
   const imgs = letterImages(letter);
   const cardFile = letter.card_image && imgs.includes(letter.card_image) ? letter.card_image : imgs.find((f) => !f.includes("envelope")) || imgs[0];
   const cardPage = imgs.indexOf(cardFile) + 1;
-  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--xmas", id: `letter-${letter.id}` }, /* @__PURE__ */ React.createElement("div", { className: "brass-rule" }), /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "xmas-stage" }, cardFile && /* @__PURE__ */ React.createElement("button", { className: "xmas-img", onClick: () => onOpen(letter, cardPage) }, /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--xmas", id: `letter-${letter.id}`, "aria-label": `Christmas card, ${letter.date_label}` }, /* @__PURE__ */ React.createElement("div", { className: "brass-rule" }), /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "xmas-stage" }, cardFile && /* @__PURE__ */ React.createElement("button", { className: "xmas-img", onClick: () => onOpen(letter, cardPage) }, /* @__PURE__ */ React.createElement(
     "img",
     {
       src: `${letter.folder}/${(letter.images_web || imgs)[cardPage - 1]}`,
@@ -433,7 +444,7 @@ function ChristmasCardCard({ letter, onOpen }) {
   )), /* @__PURE__ */ React.createElement("div", { className: "xmas-verse" }, letter.card_verse.split("\n").map((line, i) => /* @__PURE__ */ React.createElement("div", { key: i }, line))), /* @__PURE__ */ React.createElement("div", { className: "xmas-cartouche" }, "Christmas · ", letter.date.slice(0, 4))), /* @__PURE__ */ React.createElement("div", { className: "signature signature--xmas" }, letter.signature), /* @__PURE__ */ React.createElement(NoteBlock, { text: letter.card_note }), letterImages(letter).length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }), /* @__PURE__ */ React.createElement("div", { className: "brass-rule" }));
 }
 function TelegramCard({ letter, onOpen }) {
-  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--telegram", id: `letter-${letter.id}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "telegram-paper" }, /* @__PURE__ */ React.createElement("div", { className: "telegram-letterhead" }, "Postal Telegraph · Commercial Cables"), /* @__PURE__ */ React.createElement("div", { className: "telegram-head" }, /* @__PURE__ */ React.createElement("span", null, "POSTAL TELEGRAPH"), /* @__PURE__ */ React.createElement("span", null, "HOLIDAY GREETINGS")), /* @__PURE__ */ React.createElement("div", { className: "telegram-routing" }, letter.telegram_routing), /* @__PURE__ */ React.createElement("div", { className: "telegram-to" }, letter.telegram_to.split("\n").map((line, i) => /* @__PURE__ */ React.createElement("div", { key: i }, line))), /* @__PURE__ */ React.createElement("div", { className: "telegram-message" }, letter.telegram_message), /* @__PURE__ */ React.createElement("div", { className: "telegram-signed" }, letter.telegram_signed)), letterImages(letter).length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
+  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--telegram", id: `letter-${letter.id}`, "aria-label": `Telegram, ${letter.date_label}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "telegram-paper" }, /* @__PURE__ */ React.createElement("div", { className: "telegram-letterhead" }, "Postal Telegraph · Commercial Cables"), /* @__PURE__ */ React.createElement("div", { className: "telegram-head" }, /* @__PURE__ */ React.createElement("span", null, "POSTAL TELEGRAPH"), /* @__PURE__ */ React.createElement("span", null, "HOLIDAY GREETINGS")), /* @__PURE__ */ React.createElement("div", { className: "telegram-routing" }, letter.telegram_routing), /* @__PURE__ */ React.createElement("div", { className: "telegram-to" }, letter.telegram_to.split("\n").map((line, i) => /* @__PURE__ */ React.createElement("div", { key: i }, line))), /* @__PURE__ */ React.createElement("div", { className: "telegram-message" }, letter.telegram_message), /* @__PURE__ */ React.createElement("div", { className: "telegram-signed" }, letter.telegram_signed)), letterImages(letter).length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
 }
 function LetterCard({ letter, onOpen, highlight }) {
   switch (letter.status) {
@@ -601,12 +612,14 @@ function PhotoGallery({ gallery, onOpenPhoto }) {
       onClick: () => onOpenPhoto(items, i),
       "aria-label": it.caption || it.alt || "Open photograph"
     },
-    /* @__PURE__ */ React.createElement("img", { src: it.front + ASSET_V, alt: it.alt || it.caption || "", loading: "lazy" })
+    /* @__PURE__ */ React.createElement("img", { src: it.front + ASSET_V, alt: it.alt || it.caption || "Photograph from the archive", loading: "lazy" })
   ), it.caption && /* @__PURE__ */ React.createElement("figcaption", null, it.caption)))));
 }
 function PhotoLightbox({ items, index, onClose }) {
   const [idx, setIdx] = useState(index || 0);
   const [showBack, setShowBack] = useState(false);
+  const closeRef = useRef(null);
+  useDialogFocus(closeRef);
   const go = useCallback((d) => {
     setIdx((i) => Math.max(0, Math.min(items.length - 1, i + d)));
     setShowBack(false);
@@ -624,7 +637,7 @@ function PhotoLightbox({ items, index, onClose }) {
   if (!item) return null;
   const src = showBack && item.back ? item.back : item.front;
   const metaLabel = showBack ? item.caption_source || "The reverse" : item.caption || "";
-  return /* @__PURE__ */ React.createElement("div", { className: "lightbox", role: "dialog", "aria-modal": "true", onClick: onClose }, /* @__PURE__ */ React.createElement("button", { className: "lb-close", onClick: onClose, "aria-label": "Close" }, "×"), /* @__PURE__ */ React.createElement("div", { className: "lb-stage", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ React.createElement("div", { className: "lb-frame" }, /* @__PURE__ */ React.createElement("img", { src: src + ASSET_V, alt: item.alt || item.caption || "" })), /* @__PURE__ */ React.createElement("div", { className: "lb-meta" }, /* @__PURE__ */ React.createElement("span", { className: "lb-meta-date" }, metaLabel), /* @__PURE__ */ React.createElement("span", { className: "lb-counter" }, String(idx + 1).padStart(2, "0"), " / ", String(items.length).padStart(2, "0"))), item.back && /* @__PURE__ */ React.createElement("button", { className: "lb-flip", onClick: (e) => {
+  return /* @__PURE__ */ React.createElement("div", { className: "lightbox", role: "dialog", "aria-modal": "true", onClick: onClose }, /* @__PURE__ */ React.createElement("button", { className: "lb-close", ref: closeRef, onClick: onClose, "aria-label": "Close" }, "×"), /* @__PURE__ */ React.createElement("div", { className: "lb-stage", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ React.createElement("div", { className: "lb-frame" }, /* @__PURE__ */ React.createElement("img", { src: src + ASSET_V, alt: item.alt || item.caption || "Photograph from the archive" })), /* @__PURE__ */ React.createElement("div", { className: "lb-meta" }, /* @__PURE__ */ React.createElement("span", { className: "lb-meta-date" }, metaLabel), /* @__PURE__ */ React.createElement("span", { className: "lb-counter" }, String(idx + 1).padStart(2, "0"), " / ", String(items.length).padStart(2, "0"))), item.back && /* @__PURE__ */ React.createElement("button", { className: "lb-flip", onClick: (e) => {
     e.stopPropagation();
     setShowBack((b) => !b);
   } }, showBack ? "see the front" : "turn over")), items.length > 1 && /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("button", { className: "lb-nav lb-prev", onClick: (e) => {
@@ -690,6 +703,8 @@ function statusDotClass(status) {
   }
 }
 function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
+  const closeRef = useRef(null);
+  useDialogFocus(closeRef);
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") onClose();
@@ -714,7 +729,7 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
       sections.push(sec);
     }
   }
-  return /* @__PURE__ */ React.createElement("div", { className: "toc-overlay", onClick: onClose }, /* @__PURE__ */ React.createElement("div", { className: "toc-panel", onClick: (e) => e.stopPropagation(), role: "dialog", "aria-modal": "true", "aria-label": "Table of contents" }, /* @__PURE__ */ React.createElement("button", { className: "toc-close", onClick: onClose, "aria-label": "Close" }, "×"), /* @__PURE__ */ React.createElement("div", { className: "toc-header" }, /* @__PURE__ */ React.createElement("div", { className: "toc-header-eyebrow" }, "Contents"), /* @__PURE__ */ React.createElement("h2", { className: "toc-title" }, "Love, Always"), /* @__PURE__ */ React.createElement("div", { className: "toc-sub" }, totalLetters, " letters · 1940 – 1943")), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("div", { className: "toc-overlay", onClick: onClose }, /* @__PURE__ */ React.createElement("div", { className: "toc-panel", onClick: (e) => e.stopPropagation(), role: "dialog", "aria-modal": "true", "aria-label": "Table of contents" }, /* @__PURE__ */ React.createElement("button", { className: "toc-close", ref: closeRef, onClick: onClose, "aria-label": "Close" }, "×"), /* @__PURE__ */ React.createElement("div", { className: "toc-header" }, /* @__PURE__ */ React.createElement("div", { className: "toc-header-eyebrow" }, "Contents"), /* @__PURE__ */ React.createElement("h2", { className: "toc-title" }, "Love, Always"), /* @__PURE__ */ React.createElement("div", { className: "toc-sub" }, totalLetters, " letters · 1940 – 1943")), /* @__PURE__ */ React.createElement(
     "button",
     {
       className: "toc-entry" + (currentIdx === titleIdx ? " is-current" : ""),
@@ -781,6 +796,8 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
   )));
 }
 function CoverModal({ onClose }) {
+  const closeRef = useRef(null);
+  useDialogFocus(closeRef);
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") onClose();
@@ -813,7 +830,7 @@ function CoverModal({ onClose }) {
     },
     /* @__PURE__ */ React.createElement("span", { className: "cover-button-label" }, "WKYT"),
     /* @__PURE__ */ React.createElement("span", { className: "cover-button-text" }, "Video")
-  )), /* @__PURE__ */ React.createElement("div", { className: "cover-signoff" }, /* @__PURE__ */ React.createElement("p", { className: "cover-signoff-line" }, "“From the one who cares,”"), /* @__PURE__ */ React.createElement("p", { className: "cover-signoff-handwritten" }, "“Love, always,”"), /* @__PURE__ */ React.createElement("p", { className: "cover-signoff-name" }, "Blake William Morris")), /* @__PURE__ */ React.createElement("button", { className: "cover-close", onClick: onClose }, "Open the letters")));
+  )), /* @__PURE__ */ React.createElement("div", { className: "cover-signoff" }, /* @__PURE__ */ React.createElement("p", { className: "cover-signoff-line" }, "“From the one who cares,”"), /* @__PURE__ */ React.createElement("p", { className: "cover-signoff-handwritten" }, "“Love, always,”"), /* @__PURE__ */ React.createElement("p", { className: "cover-signoff-name" }, "Blake William Morris")), /* @__PURE__ */ React.createElement("button", { className: "cover-close", ref: closeRef, onClick: onClose }, "Open the letters")));
 }
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS, window.CAST, window.PHOTOS), []);

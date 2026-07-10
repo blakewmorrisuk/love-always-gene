@@ -15,6 +15,16 @@ const ASSET_V = "?v=" + (window.__APP_VERSION || "1");
 // them would force re-downloads of very large files on every release.
 const letterImages = (letter) => letter.images || [];
 
+/* Focus the given ref on mount and put focus back where it was on unmount —
+   the minimal accessible-dialog behavior for the site's overlays. */
+function useDialogFocus(closeRef) {
+  useEffect(() => {
+    const prev = document.activeElement;
+    if (closeRef.current) closeRef.current.focus();
+    return () => { if (prev && typeof prev.focus === "function") prev.focus(); };
+  }, [closeRef]);
+}
+
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
@@ -413,6 +423,8 @@ function RouteDiagram({ activeChapter, chapters, letters }) {
 /* ------------------------------------------------------------------ */
 
 function Lightbox({ letter, page, onClose, onNav }) {
+  const closeRef = useRef(null);
+  useDialogFocus(closeRef);
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") onClose();
@@ -436,7 +448,7 @@ function Lightbox({ letter, page, onClose, onNav }) {
 
   return (
     <div className="lightbox" role="dialog" aria-modal="true" onClick={onClose}>
-      <button className="lb-close" onClick={onClose} aria-label="Close">×</button>
+      <button className="lb-close" ref={closeRef} onClick={onClose} aria-label="Close">×</button>
       <div className="lb-stage" onClick={(e) => e.stopPropagation()}>
         <div className="lb-frame">
           <img src={src} alt={alt} />
@@ -626,7 +638,7 @@ function TranscribedCard({ letter, onOpen, highlight }) {
   const ref = useRef(null);
   useHighlightScroll(ref, highlight);
   return (
-    <article ref={ref} className="letter-card" id={`letter-${letter.id}`}>
+    <article ref={ref} className="letter-card" id={`letter-${letter.id}`} aria-label={`Letter, ${letter.date_label}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
         <div className="salutation">{letter.salutation}</div>
@@ -660,7 +672,7 @@ function DraftCard({ letter, onOpen, highlight }) {
   const ref = useRef(null);
   useHighlightScroll(ref, highlight);
   return (
-    <article ref={ref} className="letter-card letter-card--draft" id={`letter-${letter.id}`}>
+    <article ref={ref} className="letter-card letter-card--draft" id={`letter-${letter.id}`} aria-label={`Letter, ${letter.date_label}`}>
       <LetterHeader letter={letter} />
       <div className="letter-body">
         <div className="salutation">{letter.salutation}</div>
@@ -687,7 +699,7 @@ function DraftCard({ letter, onOpen, highlight }) {
 function EnvelopeCard({ letter, onOpen }) {
   const imgs = letterImages(letter);
   return (
-    <article className="letter-card letter-card--envelope" id={`letter-${letter.id}`}>
+    <article className="letter-card letter-card--envelope" id={`letter-${letter.id}`} aria-label={`Envelope, ${letter.date_label}`}>
       <LetterHeader letter={letter} />
       {imgs.length > 0 && (
         <div className="envelope-stage">
@@ -712,7 +724,7 @@ function ChristmasCardCard({ letter, onOpen }) {
     : (imgs.find((f) => !f.includes("envelope")) || imgs[0]);
   const cardPage = imgs.indexOf(cardFile) + 1;
   return (
-    <article className="letter-card letter-card--xmas" id={`letter-${letter.id}`}>
+    <article className="letter-card letter-card--xmas" id={`letter-${letter.id}`} aria-label={`Christmas card, ${letter.date_label}`}>
       <div className="brass-rule" />
       <LetterHeader letter={letter} />
       <div className="xmas-stage">
@@ -737,7 +749,7 @@ function ChristmasCardCard({ letter, onOpen }) {
 
 function TelegramCard({ letter, onOpen }) {
   return (
-    <article className="letter-card letter-card--telegram" id={`letter-${letter.id}`}>
+    <article className="letter-card letter-card--telegram" id={`letter-${letter.id}`} aria-label={`Telegram, ${letter.date_label}`}>
       <LetterHeader letter={letter} />
       <div className="telegram-paper">
         <div className="telegram-letterhead">Postal Telegraph · Commercial Cables</div>
@@ -1097,7 +1109,7 @@ function PhotoGallery({ gallery, onOpenPhoto }) {
           <figure key={it.id} className="gallery-item">
             <button className="gallery-thumb" onClick={() => onOpenPhoto(items, i)}
               aria-label={it.caption || it.alt || "Open photograph"}>
-              <img src={it.front + ASSET_V} alt={it.alt || it.caption || ""} loading="lazy" />
+              <img src={it.front + ASSET_V} alt={it.alt || it.caption || "Photograph from the archive"} loading="lazy" />
             </button>
             {it.caption && <figcaption>{it.caption}</figcaption>}
           </figure>
@@ -1113,6 +1125,8 @@ function PhotoGallery({ gallery, onOpenPhoto }) {
 function PhotoLightbox({ items, index, onClose }) {
   const [idx, setIdx] = useState(index || 0);
   const [showBack, setShowBack] = useState(false);
+  const closeRef = useRef(null);
+  useDialogFocus(closeRef);
   const go = useCallback((d) => {
     setIdx(i => Math.max(0, Math.min(items.length - 1, i + d)));
     setShowBack(false);
@@ -1134,10 +1148,10 @@ function PhotoLightbox({ items, index, onClose }) {
 
   return (
     <div className="lightbox" role="dialog" aria-modal="true" onClick={onClose}>
-      <button className="lb-close" onClick={onClose} aria-label="Close">×</button>
+      <button className="lb-close" ref={closeRef} onClick={onClose} aria-label="Close">×</button>
       <div className="lb-stage" onClick={(e) => e.stopPropagation()}>
         <div className="lb-frame">
-          <img src={src + ASSET_V} alt={item.alt || item.caption || ""} />
+          <img src={src + ASSET_V} alt={item.alt || item.caption || "Photograph from the archive"} />
         </div>
         <div className="lb-meta">
           <span className="lb-meta-date">{metaLabel}</span>
@@ -1252,6 +1266,8 @@ function statusDotClass(status) {
 }
 
 function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
+  const closeRef = useRef(null);
+  useDialogFocus(closeRef);
   useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
     document.addEventListener("keydown", onKey);
@@ -1280,7 +1296,7 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
   return (
     <div className="toc-overlay" onClick={onClose}>
       <div className="toc-panel" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label="Table of contents">
-        <button className="toc-close" onClick={onClose} aria-label="Close">×</button>
+        <button className="toc-close" ref={closeRef} onClick={onClose} aria-label="Close">×</button>
         <div className="toc-header">
           <div className="toc-header-eyebrow">Contents</div>
           <h2 className="toc-title">Love, Always</h2>
@@ -1391,6 +1407,8 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
    buttons, simple signoff). localStorage-gated so returning readers
    aren't pestered. Click-outside, Escape, X, or CTA dismiss. */
 function CoverModal({ onClose }) {
+  const closeRef = useRef(null);
+  useDialogFocus(closeRef);
   useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
     document.addEventListener("keydown", onKey);
@@ -1431,7 +1449,7 @@ function CoverModal({ onClose }) {
           <p className="cover-signoff-handwritten">“Love, always,”</p>
           <p className="cover-signoff-name">Blake William Morris</p>
         </div>
-        <button className="cover-close" onClick={onClose}>Open the letters</button>
+        <button className="cover-close" ref={closeRef} onClick={onClose}>Open the letters</button>
       </div>
     </div>
   );
