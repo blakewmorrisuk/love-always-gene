@@ -119,6 +119,10 @@
     "location_stamp": "Great Lakes Naval Training Station",
     "folder": "L08_1940-06-18_envelope-only",
     "image_count": 2,
+    "images": [
+      "L08_p1.jpg",
+      "L08_p2.jpg"
+    ],
     "status": "envelope_only",
     "envelope_note": "Envelope postmarked Great Lakes, Ill. The letter pages bundled with this envelope by the family turned out to be duplicate scans of the May 17 letter; the original June 18 letter content has been lost."
   },
@@ -314,6 +318,7 @@
     "location_stamp": "Mailed from San Diego",
     "folder": "L21_1940-12-15_pearl-harbor",
     "image_count": 3,
+    "card_image": "L21_p2.jpg",
     "status": "christmas_card",
     "card_verse": "May the Star that shone\nO'er Bethlehem\nThat holy Christmas night,\nIts gentle radiance shed on you\nAnd make\nyour Christmas bright",
     "signature": "Love, Gene.",

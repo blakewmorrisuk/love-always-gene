@@ -8,6 +8,13 @@ const { motion, AnimatePresence, useReducedMotion } = FramerMotion;
 // re-fetched rather than served stale from the browser cache.
 const ASSET_V = "?v=" + (window.__APP_VERSION || "1");
 
+// Scan filenames for a letter, in reading order. Generated into letters.js by
+// scripts/build_letters.py from the files actually present in the letter's
+// folder (names vary: _p1, _envelope, _card_front, ...). Letter scans are
+// deliberately NOT version-tokened: they never change in place, and tokening
+// them would force re-downloads of very large files on every release.
+const letterImages = (letter) => letter.images || [];
+
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
@@ -417,9 +424,10 @@ function Lightbox({ letter, page, onClose, onNav }) {
   }, [onClose, onNav]);
 
   if (!letter) return null;
-  const total = letter.image_count;
+  const imgs = letterImages(letter);
+  const total = imgs.length;
   const k = page;
-  const src = `${letter.folder}/${letter.id}_p${k}.jpg`;
+  const src = `${letter.folder}/${imgs[k - 1]}`;
   const alt = `Original handwritten letter, page ${k} of ${total}, dated ${letter.date_label}`;
 
   return (
@@ -516,11 +524,12 @@ function LetterHeader({ letter }) {
 }
 
 function PhotoLink({ letter, onOpen }) {
+  const n = letterImages(letter).length;
   return (
     <button className="photo-link" onClick={() => onOpen(letter, 1)}>
       see the original
       <span className="photo-link-meta">
-        {letter.image_count === 1 ? "1 page" : `${letter.image_count} pages`}
+        {n === 1 ? "1 page" : `${n} pages`}
       </span>
     </button>
   );
@@ -636,7 +645,7 @@ function TranscribedCard({ letter, onOpen, highlight }) {
       {hasNote && <Fleuron />}
       <NoteBlock text={letter.note} />
       {letter.partial && <p className="letter-note">Transcription incomplete; the remainder is being verified.</p>}
-      {letter.image_count > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
+      {letterImages(letter).length > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
     </article>
   );
 }
@@ -665,21 +674,23 @@ function DraftCard({ letter, onOpen, highlight }) {
       <Fleuron />
       <NoteBlock text={letter.note} />
       <p className="letter-note">Some words are still being verified.</p>
-      {letter.image_count > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
+      {letterImages(letter).length > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
     </article>
   );
 }
 
 function EnvelopeCard({ letter, onOpen }) {
-  const src = `${letter.folder}/${letter.id}_p1.jpg`;
+  const imgs = letterImages(letter);
   return (
     <article className="letter-card letter-card--envelope" id={`letter-${letter.id}`}>
       <LetterHeader letter={letter} />
-      <div className="envelope-stage">
-        <button className="envelope-img" onClick={() => onOpen(letter, 1)}>
-          <img src={src} alt={`Original envelope, postmarked ${letter.date_label}`} />
-        </button>
-      </div>
+      {imgs.length > 0 && (
+        <div className="envelope-stage">
+          <button className="envelope-img" onClick={() => onOpen(letter, 1)}>
+            <img src={`${letter.folder}/${imgs[0]}`} alt={`Original envelope, postmarked ${letter.date_label}`} />
+          </button>
+        </div>
+      )}
       <p className="letter-note envelope-note">The letter inside has been lost.</p>
       <NoteBlock text={letter.envelope_note} />
     </article>
@@ -687,23 +698,32 @@ function EnvelopeCard({ letter, onOpen }) {
 }
 
 function ChristmasCardCard({ letter, onOpen }) {
+  const imgs = letterImages(letter);
+  // The card face to show inline: an explicit card_image from letters.json
+  // wins; otherwise the first non-envelope scan.
+  const cardFile = (letter.card_image && imgs.includes(letter.card_image))
+    ? letter.card_image
+    : (imgs.find((f) => !f.includes("envelope")) || imgs[0]);
+  const cardPage = imgs.indexOf(cardFile) + 1;
   return (
     <article className="letter-card letter-card--xmas" id={`letter-${letter.id}`}>
       <div className="brass-rule" />
       <LetterHeader letter={letter} />
       <div className="xmas-stage">
-        <button className="xmas-img" onClick={() => onOpen(letter, 2)}>
-          <img src={`${letter.folder}/${letter.id}_p2.jpg`}
-               alt={`Original Christmas card, dated ${letter.date_label}`} />
-        </button>
+        {cardFile && (
+          <button className="xmas-img" onClick={() => onOpen(letter, cardPage)}>
+            <img src={`${letter.folder}/${cardFile}`}
+                 alt={`Original Christmas card, dated ${letter.date_label}`} />
+          </button>
+        )}
         <div className="xmas-verse">
           {letter.card_verse.split("\n").map((line, i) => <div key={i}>{line}</div>)}
         </div>
-        <div className="xmas-cartouche">Christmas · 1940</div>
+        <div className="xmas-cartouche">Christmas · {letter.date.slice(0, 4)}</div>
       </div>
       <div className="signature signature--xmas">{letter.signature}</div>
       <NoteBlock text={letter.card_note} />
-      {letter.image_count > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
+      {letterImages(letter).length > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
       <div className="brass-rule" />
     </article>
   );
@@ -726,7 +746,7 @@ function TelegramCard({ letter, onOpen }) {
         <div className="telegram-message">{letter.telegram_message}</div>
         <div className="telegram-signed">{letter.telegram_signed}</div>
       </div>
-      {letter.image_count > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
+      {letterImages(letter).length > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
     </article>
   );
 }
@@ -1258,7 +1278,7 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
         <div className="toc-header">
           <div className="toc-header-eyebrow">Contents</div>
           <h2 className="toc-title">Love, Always</h2>
-          <div className="toc-sub">{totalLetters} letters · April – December 1940</div>
+          <div className="toc-sub">{totalLetters} letters · 1940 – 1943</div>
         </div>
 
         <button
@@ -1575,7 +1595,7 @@ function App() {
   const navLb = useCallback((dir) => {
     setLb(curr => {
       if (!curr) return curr;
-      const total = curr.letter.image_count;
+      const total = letterImages(curr.letter).length;
       const k = curr.page + dir;
       if (k < 1 || k > total) return curr;
       return { ...curr, page: k };

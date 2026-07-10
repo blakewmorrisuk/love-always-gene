@@ -30,6 +30,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
+import build_letters  # noqa: E402
 import repo_lib  # noqa: E402
 
 PORT = 8765
@@ -63,8 +64,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         p = self.path.split("?", 1)[0]
         if p == "/api/letters":
+            # Enriched view (adds the generated images/images_web fields) so
+            # the editor's scan pane shows the files that actually exist.
             return self._call(lambda: {
-                "letters": json.loads(repo_lib.LETTERS_JSON.read_text(encoding="utf-8")),
+                "letters": build_letters.enrich_letters(
+                    json.loads(repo_lib.LETTERS_JSON.read_text(encoding="utf-8"))),
                 "chapters": json.loads(repo_lib.CHAPTERS_JSON.read_text(encoding="utf-8")),
             })
         if p == "/api/health":
@@ -95,6 +99,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def save_letter(self, lid: str, raw: bytes):
         try:
             updated = json.loads(raw or b"{}")
+            # The editor round-trips whole records from the enriched
+            # /api/letters view; never write the generated display fields
+            # back into letters.json (an explicit "images" override that is
+            # already IN letters.json survives via the merge below).
+            for gen_key in ("images", "images_web", "image_count"):
+                updated.pop(gen_key, None)
             letters = json.loads(repo_lib.LETTERS_JSON.read_text(encoding="utf-8"))
             idx = next((i for i, l in enumerate(letters) if l.get("id") == lid), -1)
             if idx < 0:
