@@ -24,10 +24,10 @@ window.LETTERS = [
       "L01_p4.jpg"
     ],
     "images_web": [
-      "L01_p1.jpg",
-      "L01_p2.jpg",
-      "L01_p3.jpg",
-      "L01_p4.jpg"
+      "L01_p1_web.jpg",
+      "L01_p2_web.jpg",
+      "L01_p3_web.jpg",
+      "L01_p4_web.jpg"
     ]
   },
   {
@@ -53,11 +53,11 @@ window.LETTERS = [
       "L02_p5.jpg"
     ],
     "images_web": [
-      "L02_p1.jpg",
-      "L02_p2.jpg",
-      "L02_p3.jpg",
-      "L02_p4.jpg",
-      "L02_p5.jpg"
+      "L02_p1_web.jpg",
+      "L02_p2_web.jpg",
+      "L02_p3_web.jpg",
+      "L02_p4_web.jpg",
+      "L02_p5_web.jpg"
     ]
   },
   {
@@ -82,10 +82,10 @@ window.LETTERS = [
       "L03_p4.jpg"
     ],
     "images_web": [
-      "L03_p1.jpg",
-      "L03_p2.jpg",
-      "L03_p3.jpg",
-      "L03_p4.jpg"
+      "L03_p1_web.jpg",
+      "L03_p2_web.jpg",
+      "L03_p3_web.jpg",
+      "L03_p4_web.jpg"
     ]
   },
   {
@@ -109,9 +109,9 @@ window.LETTERS = [
       "L04_p3.jpg"
     ],
     "images_web": [
-      "L04_p1.jpg",
-      "L04_p2.jpg",
-      "L04_p3.jpg"
+      "L04_p1_web.jpg",
+      "L04_p2_web.jpg",
+      "L04_p3_web.jpg"
     ]
   },
   {
@@ -134,9 +134,9 @@ window.LETTERS = [
       "L05_p3.jpg"
     ],
     "images_web": [
-      "L05_p1.jpg",
-      "L05_p2.jpg",
-      "L05_p3.jpg"
+      "L05_p1_web.jpg",
+      "L05_p2_web.jpg",
+      "L05_p3_web.jpg"
     ]
   },
   {
@@ -161,10 +161,10 @@ window.LETTERS = [
       "L06_p4.jpg"
     ],
     "images_web": [
-      "L06_p1.jpg",
-      "L06_p2.jpg",
-      "L06_p3.jpg",
-      "L06_p4.jpg"
+      "L06_p1_web.jpg",
+      "L06_p2_web.jpg",
+      "L06_p3_web.jpg",
+      "L06_p4_web.jpg"
     ]
   },
   {
@@ -189,10 +189,10 @@ window.LETTERS = [
       "L07_p4.jpg"
     ],
     "images_web": [
-      "L07_p1.jpg",
-      "L07_p2.jpg",
-      "L07_p3.jpg",
-      "L07_p4.jpg"
+      "L07_p1_web.jpg",
+      "L07_p2_web.jpg",
+      "L07_p3_web.jpg",
+      "L07_p4_web.jpg"
     ]
   },
   {
@@ -211,8 +211,8 @@ window.LETTERS = [
     "status": "envelope_only",
     "envelope_note": "Envelope postmarked Great Lakes, Ill. The letter pages bundled with this envelope by the family turned out to be duplicate scans of the May 17 letter; the original June 18 letter content has been lost.",
     "images_web": [
-      "L08_p1.jpg",
-      "L08_p2.jpg"
+      "L08_p1_web.jpg",
+      "L08_p2_web.jpg"
     ]
   },
   {
@@ -237,10 +237,10 @@ window.LETTERS = [
       "L09_p4.jpg"
     ],
     "images_web": [
-      "L09_p1.jpg",
-      "L09_p2.jpg",
-      "L09_p3.jpg",
-      "L09_p4.jpg"
+      "L09_p1_web.jpg",
+      "L09_p2_web.jpg",
+      "L09_p3_web.jpg",
+      "L09_p4_web.jpg"
     ]
   },
   {
@@ -264,9 +264,9 @@ window.LETTERS = [
       "L10_p3.jpg"
     ],
     "images_web": [
-      "L10_p1.jpg",
-      "L10_p2.jpg",
-      "L10_p3.jpg"
+      "L10_p1_web.jpg",
+      "L10_p2_web.jpg",
+      "L10_p3_web.jpg"
     ]
   },
   {
@@ -291,10 +291,10 @@ window.LETTERS = [
       "L11_p4.jpg"
     ],
     "images_web": [
-      "L11_p1.jpg",
-      "L11_p2.jpg",
-      "L11_p3.jpg",
-      "L11_p4.jpg"
+      "L11_p1_web.jpg",
+      "L11_p2_web.jpg",
+      "L11_p3_web.jpg",
+      "L11_p4_web.jpg"
     ]
   },
   {
@@ -317,9 +317,9 @@ window.LETTERS = [
       "L12_p3.jpg"
     ],
     "images_web": [
-      "L12_p1.jpg",
-      "L12_p2.jpg",
-      "L12_p3.jpg"
+      "L12_p1_web.jpg",
+      "L12_p2_web.jpg",
+      "L12_p3_web.jpg"
     ]
   },
   {
@@ -344,11 +344,11 @@ window.LETTERS = [
       "L13_p5.jpg"
     ],
     "images_web": [
-      "L13_p1.jpg",
-      "L13_p2.jpg",
-      "L13_p3.jpg",
-      "L13_p4.jpg",
-      "L13_p5.jpg"
+      "L13_p1_web.jpg",
+      "L13_p2_web.jpg",
+      "L13_p3_web.jpg",
+      "L13_p4_web.jpg",
+      "L13_p5_web.jpg"
     ]
   },
   {
@@ -373,10 +373,10 @@ window.LETTERS = [
       "L14_p4.jpg"
     ],
     "images_web": [
-      "L14_p1.jpg",
-      "L14_p2.jpg",
-      "L14_p3.jpg",
-      "L14_p4.jpg"
+      "L14_p1_web.jpg",
+      "L14_p2_web.jpg",
+      "L14_p3_web.jpg",
+      "L14_p4_web.jpg"
     ]
   },
   {
@@ -402,11 +402,11 @@ window.LETTERS = [
       "L15_p5.jpg"
     ],
     "images_web": [
-      "L15_p1.jpg",
-      "L15_p2.jpg",
-      "L15_p3.jpg",
-      "L15_p4.jpg",
-      "L15_p5.jpg"
+      "L15_p1_web.jpg",
+      "L15_p2_web.jpg",
+      "L15_p3_web.jpg",
+      "L15_p4_web.jpg",
+      "L15_p5_web.jpg"
     ]
   },
   {
@@ -431,11 +431,11 @@ window.LETTERS = [
       "L16_p5.jpg"
     ],
     "images_web": [
-      "L16_p1.jpg",
-      "L16_p2.jpg",
-      "L16_p3.jpg",
-      "L16_p4.jpg",
-      "L16_p5.jpg"
+      "L16_p1_web.jpg",
+      "L16_p2_web.jpg",
+      "L16_p3_web.jpg",
+      "L16_p4_web.jpg",
+      "L16_p5_web.jpg"
     ]
   },
   {
@@ -458,9 +458,9 @@ window.LETTERS = [
       "L17_p3.jpg"
     ],
     "images_web": [
-      "L17_p1.jpg",
-      "L17_p2.jpg",
-      "L17_p3.jpg"
+      "L17_p1_web.jpg",
+      "L17_p2_web.jpg",
+      "L17_p3_web.jpg"
     ]
   },
   {
@@ -484,10 +484,10 @@ window.LETTERS = [
       "L18_p4.jpg"
     ],
     "images_web": [
-      "L18_p1.jpg",
-      "L18_p2.jpg",
-      "L18_p3.jpg",
-      "L18_p4.jpg"
+      "L18_p1_web.jpg",
+      "L18_p2_web.jpg",
+      "L18_p3_web.jpg",
+      "L18_p4_web.jpg"
     ]
   },
   {
@@ -505,7 +505,7 @@ window.LETTERS = [
       "L19_p1.jpg"
     ],
     "images_web": [
-      "L19_p1.jpg"
+      "L19_p1_web.jpg"
     ]
   },
   {
@@ -531,11 +531,11 @@ window.LETTERS = [
       "L20_p5.jpg"
     ],
     "images_web": [
-      "L20_p1.jpg",
-      "L20_p2.jpg",
-      "L20_p3.jpg",
-      "L20_p4.jpg",
-      "L20_p5.jpg"
+      "L20_p1_web.jpg",
+      "L20_p2_web.jpg",
+      "L20_p3_web.jpg",
+      "L20_p4_web.jpg",
+      "L20_p5_web.jpg"
     ]
   },
   {
@@ -558,9 +558,9 @@ window.LETTERS = [
       "L21_p3.jpg"
     ],
     "images_web": [
-      "L21_p1.jpg",
-      "L21_p2.jpg",
-      "L21_p3.jpg"
+      "L21_p1_web.jpg",
+      "L21_p2_web.jpg",
+      "L21_p3_web.jpg"
     ]
   },
   {
@@ -581,7 +581,7 @@ window.LETTERS = [
       "L22_p1.jpg"
     ],
     "images_web": [
-      "L22_p1.jpg"
+      "L22_p1_web.jpg"
     ]
   },
   {
@@ -606,10 +606,10 @@ window.LETTERS = [
       "L23_p4.jpg"
     ],
     "images_web": [
-      "L23_p1.jpg",
-      "L23_p2.jpg",
-      "L23_p3.jpg",
-      "L23_p4.jpg"
+      "L23_p1_web.jpg",
+      "L23_p2_web.jpg",
+      "L23_p3_web.jpg",
+      "L23_p4_web.jpg"
     ]
   },
   {
@@ -653,11 +653,11 @@ window.LETTERS = [
       "L25_envelope_back.jpg"
     ],
     "images_web": [
-      "L25_p1.jpg",
-      "L25_p2.jpg",
-      "L25_p3.jpg",
-      "L25_envelope.jpg",
-      "L25_envelope_back.jpg"
+      "L25_p1_web.jpg",
+      "L25_p2_web.jpg",
+      "L25_p3_web.jpg",
+      "L25_envelope_web.jpg",
+      "L25_envelope_back_web.jpg"
     ]
   },
   {
@@ -683,11 +683,11 @@ window.LETTERS = [
       "L26_envelope_back.jpg"
     ],
     "images_web": [
-      "L26_p1.jpg",
-      "L26_p2.jpg",
-      "L26_p3.jpg",
-      "L26_envelope.jpg",
-      "L26_envelope_back.jpg"
+      "L26_p1_web.jpg",
+      "L26_p2_web.jpg",
+      "L26_p3_web.jpg",
+      "L26_envelope_web.jpg",
+      "L26_envelope_back_web.jpg"
     ]
   },
   {
@@ -713,11 +713,11 @@ window.LETTERS = [
       "L27_envelope_back.jpg"
     ],
     "images_web": [
-      "L27_p1.jpg",
-      "L27_p2.jpg",
-      "L27_p3.jpg",
-      "L27_envelope.jpg",
-      "L27_envelope_back.jpg"
+      "L27_p1_web.jpg",
+      "L27_p2_web.jpg",
+      "L27_p3_web.jpg",
+      "L27_envelope_web.jpg",
+      "L27_envelope_back_web.jpg"
     ]
   },
   {
@@ -743,11 +743,11 @@ window.LETTERS = [
       "L28_envelope_back.jpg"
     ],
     "images_web": [
-      "L28_p1.jpg",
-      "L28_p2.jpg",
-      "L28_p3.jpg",
-      "L28_envelope.jpg",
-      "L28_envelope_back.jpg"
+      "L28_p1_web.jpg",
+      "L28_p2_web.jpg",
+      "L28_p3_web.jpg",
+      "L28_envelope_web.jpg",
+      "L28_envelope_back_web.jpg"
     ]
   },
   {
@@ -773,11 +773,11 @@ window.LETTERS = [
       "L29_envelope_back.jpg"
     ],
     "images_web": [
-      "L29_p1.jpg",
-      "L29_p2.jpg",
-      "L29_p3.jpg",
-      "L29_envelope.jpg",
-      "L29_envelope_back.jpg"
+      "L29_p1_web.jpg",
+      "L29_p2_web.jpg",
+      "L29_p3_web.jpg",
+      "L29_envelope_web.jpg",
+      "L29_envelope_back_web.jpg"
     ]
   },
   {
@@ -804,12 +804,12 @@ window.LETTERS = [
       "L30_envelope_back.jpg"
     ],
     "images_web": [
-      "L30_p1.jpg",
-      "L30_p2.jpg",
-      "L30_p3.jpg",
-      "L30_p4.jpg",
-      "L30_envelope.jpg",
-      "L30_envelope_back.jpg"
+      "L30_p1_web.jpg",
+      "L30_p2_web.jpg",
+      "L30_p3_web.jpg",
+      "L30_p4_web.jpg",
+      "L30_envelope_web.jpg",
+      "L30_envelope_back_web.jpg"
     ]
   },
   {
@@ -835,11 +835,11 @@ window.LETTERS = [
       "L31_envelope_back.jpg"
     ],
     "images_web": [
-      "L31_p1.jpg",
-      "L31_p2.jpg",
-      "L31_p3.jpg",
-      "L31_envelope.jpg",
-      "L31_envelope_back.jpg"
+      "L31_p1_web.jpg",
+      "L31_p2_web.jpg",
+      "L31_p3_web.jpg",
+      "L31_envelope_web.jpg",
+      "L31_envelope_back_web.jpg"
     ]
   },
   {
@@ -865,11 +865,11 @@ window.LETTERS = [
       "L32_envelope_back.jpg"
     ],
     "images_web": [
-      "L32_p1.jpg",
-      "L32_p2.jpg",
-      "L32_p3.jpg",
-      "L32_envelope.jpg",
-      "L32_envelope_back.jpg"
+      "L32_p1_web.jpg",
+      "L32_p2_web.jpg",
+      "L32_p3_web.jpg",
+      "L32_envelope_web.jpg",
+      "L32_envelope_back_web.jpg"
     ]
   },
   {
@@ -895,11 +895,11 @@ window.LETTERS = [
       "L33_envelope_back.jpg"
     ],
     "images_web": [
-      "L33_p1.jpg",
-      "L33_p2.jpg",
-      "L33_p3.jpg",
-      "L33_envelope.jpg",
-      "L33_envelope_back.jpg"
+      "L33_p1_web.jpg",
+      "L33_p2_web.jpg",
+      "L33_p3_web.jpg",
+      "L33_envelope_web.jpg",
+      "L33_envelope_back_web.jpg"
     ]
   },
   {
@@ -925,11 +925,11 @@ window.LETTERS = [
       "L34_envelope_back.jpg"
     ],
     "images_web": [
-      "L34_p1.jpg",
-      "L34_p2.jpg",
-      "L34_p3.jpg",
-      "L34_envelope.jpg",
-      "L34_envelope_back.jpg"
+      "L34_p1_web.jpg",
+      "L34_p2_web.jpg",
+      "L34_p3_web.jpg",
+      "L34_envelope_web.jpg",
+      "L34_envelope_back_web.jpg"
     ]
   },
   {
@@ -955,11 +955,11 @@ window.LETTERS = [
       "L35_envelope_back.jpg"
     ],
     "images_web": [
-      "L35_p1.jpg",
-      "L35_p2.jpg",
-      "L35_p3.jpg",
-      "L35_envelope.jpg",
-      "L35_envelope_back.jpg"
+      "L35_p1_web.jpg",
+      "L35_p2_web.jpg",
+      "L35_p3_web.jpg",
+      "L35_envelope_web.jpg",
+      "L35_envelope_back_web.jpg"
     ]
   },
   {
@@ -985,11 +985,11 @@ window.LETTERS = [
       "L36_envelope_back.jpg"
     ],
     "images_web": [
-      "L36_p1.jpg",
-      "L36_p2.jpg",
-      "L36_p3.jpg",
-      "L36_envelope.jpg",
-      "L36_envelope_back.jpg"
+      "L36_p1_web.jpg",
+      "L36_p2_web.jpg",
+      "L36_p3_web.jpg",
+      "L36_envelope_web.jpg",
+      "L36_envelope_back_web.jpg"
     ]
   },
   {
@@ -1016,12 +1016,12 @@ window.LETTERS = [
       "L37_envelope_back.jpg"
     ],
     "images_web": [
-      "L37_p1.jpg",
-      "L37_p2.jpg",
-      "L37_p3.jpg",
-      "L37_p4.jpg",
-      "L37_envelope.jpg",
-      "L37_envelope_back.jpg"
+      "L37_p1_web.jpg",
+      "L37_p2_web.jpg",
+      "L37_p3_web.jpg",
+      "L37_p4_web.jpg",
+      "L37_envelope_web.jpg",
+      "L37_envelope_back_web.jpg"
     ]
   },
   {
@@ -1047,11 +1047,11 @@ window.LETTERS = [
       "L38_envelope_back.jpg"
     ],
     "images_web": [
-      "L38_p1.jpg",
-      "L38_p2.jpg",
-      "L38_p3.jpg",
-      "L38_envelope.jpg",
-      "L38_envelope_back.jpg"
+      "L38_p1_web.jpg",
+      "L38_p2_web.jpg",
+      "L38_p3_web.jpg",
+      "L38_envelope_web.jpg",
+      "L38_envelope_back_web.jpg"
     ]
   },
   {
@@ -1077,11 +1077,11 @@ window.LETTERS = [
       "L39_envelope_back.jpg"
     ],
     "images_web": [
-      "L39_p1.jpg",
-      "L39_p2.jpg",
-      "L39_p3.jpg",
-      "L39_envelope.jpg",
-      "L39_envelope_back.jpg"
+      "L39_p1_web.jpg",
+      "L39_p2_web.jpg",
+      "L39_p3_web.jpg",
+      "L39_envelope_web.jpg",
+      "L39_envelope_back_web.jpg"
     ]
   },
   {
@@ -1108,12 +1108,12 @@ window.LETTERS = [
       "L40_envelope_back.jpg"
     ],
     "images_web": [
-      "L40_p1.jpg",
-      "L40_p2.jpg",
-      "L40_p3.jpg",
-      "L40_p4.jpg",
-      "L40_envelope.jpg",
-      "L40_envelope_back.jpg"
+      "L40_p1_web.jpg",
+      "L40_p2_web.jpg",
+      "L40_p3_web.jpg",
+      "L40_p4_web.jpg",
+      "L40_envelope_web.jpg",
+      "L40_envelope_back_web.jpg"
     ]
   },
   {
@@ -1139,11 +1139,11 @@ window.LETTERS = [
       "L41_envelope_back.jpg"
     ],
     "images_web": [
-      "L41_p1.jpg",
-      "L41_p2.jpg",
-      "L41_p3.jpg",
-      "L41_envelope.jpg",
-      "L41_envelope_back.jpg"
+      "L41_p1_web.jpg",
+      "L41_p2_web.jpg",
+      "L41_p3_web.jpg",
+      "L41_envelope_web.jpg",
+      "L41_envelope_back_web.jpg"
     ]
   },
   {
@@ -1169,11 +1169,11 @@ window.LETTERS = [
       "L42_envelope_back.jpg"
     ],
     "images_web": [
-      "L42_p1.jpg",
-      "L42_p2.jpg",
-      "L42_p3.jpg",
-      "L42_envelope.jpg",
-      "L42_envelope_back.jpg"
+      "L42_p1_web.jpg",
+      "L42_p2_web.jpg",
+      "L42_p3_web.jpg",
+      "L42_envelope_web.jpg",
+      "L42_envelope_back_web.jpg"
     ]
   },
   {
@@ -1199,11 +1199,11 @@ window.LETTERS = [
       "L43_envelope_back.jpg"
     ],
     "images_web": [
-      "L43_p1.jpg",
-      "L43_p2.jpg",
-      "L43_p3.jpg",
-      "L43_envelope.jpg",
-      "L43_envelope_back.jpg"
+      "L43_p1_web.jpg",
+      "L43_p2_web.jpg",
+      "L43_p3_web.jpg",
+      "L43_envelope_web.jpg",
+      "L43_envelope_back_web.jpg"
     ]
   },
   {
@@ -1229,11 +1229,11 @@ window.LETTERS = [
       "L44_envelope.jpg"
     ],
     "images_web": [
-      "L44_p1.jpg",
-      "L44_p2.jpg",
-      "L44_p3.jpg",
-      "L44_p4.jpg",
-      "L44_envelope.jpg"
+      "L44_p1_web.jpg",
+      "L44_p2_web.jpg",
+      "L44_p3_web.jpg",
+      "L44_p4_web.jpg",
+      "L44_envelope_web.jpg"
     ]
   },
   {
@@ -1260,12 +1260,12 @@ window.LETTERS = [
       "L45_envelope_back.jpg"
     ],
     "images_web": [
-      "L45_p1.jpg",
-      "L45_p2.jpg",
-      "L45_p3.jpg",
-      "L45_p4.jpg",
-      "L45_envelope.jpg",
-      "L45_envelope_back.jpg"
+      "L45_p1_web.jpg",
+      "L45_p2_web.jpg",
+      "L45_p3_web.jpg",
+      "L45_p4_web.jpg",
+      "L45_envelope_web.jpg",
+      "L45_envelope_back_web.jpg"
     ]
   },
   {
@@ -1288,8 +1288,8 @@ window.LETTERS = [
       "L46_envelope.jpg"
     ],
     "images_web": [
-      "L46_p1.jpg",
-      "L46_envelope.jpg"
+      "L46_p1_web.jpg",
+      "L46_envelope_web.jpg"
     ]
   },
   {
@@ -1312,8 +1312,8 @@ window.LETTERS = [
       "L47_p2.jpg"
     ],
     "images_web": [
-      "L47_p1.jpg",
-      "L47_p2.jpg"
+      "L47_p1_web.jpg",
+      "L47_p2_web.jpg"
     ]
   },
   {
@@ -1339,11 +1339,11 @@ window.LETTERS = [
       "L48_envelope.jpg"
     ],
     "images_web": [
-      "L48_p1.jpg",
-      "L48_p2.jpg",
-      "L48_p3.jpg",
-      "L48_p4.jpg",
-      "L48_envelope.jpg"
+      "L48_p1_web.jpg",
+      "L48_p2_web.jpg",
+      "L48_p3_web.jpg",
+      "L48_p4_web.jpg",
+      "L48_envelope_web.jpg"
     ]
   },
   {
@@ -1369,11 +1369,11 @@ window.LETTERS = [
       "L49_envelope_back.jpg"
     ],
     "images_web": [
-      "L49_p1.jpg",
-      "L49_p2.jpg",
-      "L49_p3.jpg",
-      "L49_envelope.jpg",
-      "L49_envelope_back.jpg"
+      "L49_p1_web.jpg",
+      "L49_p2_web.jpg",
+      "L49_p3_web.jpg",
+      "L49_envelope_web.jpg",
+      "L49_envelope_back_web.jpg"
     ]
   },
   {
@@ -1399,11 +1399,11 @@ window.LETTERS = [
       "L50_envelope_back.jpg"
     ],
     "images_web": [
-      "L50_p1.jpg",
-      "L50_p2.jpg",
-      "L50_p3.jpg",
-      "L50_envelope.jpg",
-      "L50_envelope_back.jpg"
+      "L50_p1_web.jpg",
+      "L50_p2_web.jpg",
+      "L50_p3_web.jpg",
+      "L50_envelope_web.jpg",
+      "L50_envelope_back_web.jpg"
     ]
   },
   {
@@ -1432,14 +1432,14 @@ window.LETTERS = [
       "L51_envelope_back.jpg"
     ],
     "images_web": [
-      "L51_p1.jpg",
-      "L51_p2.jpg",
-      "L51_p3.jpg",
-      "L51_p4.jpg",
-      "L51_p5.jpg",
-      "L51_p6.jpg",
-      "L51_envelope.jpg",
-      "L51_envelope_back.jpg"
+      "L51_p1_web.jpg",
+      "L51_p2_web.jpg",
+      "L51_p3_web.jpg",
+      "L51_p4_web.jpg",
+      "L51_p5_web.jpg",
+      "L51_p6_web.jpg",
+      "L51_envelope_web.jpg",
+      "L51_envelope_back_web.jpg"
     ]
   },
   {
@@ -1466,12 +1466,12 @@ window.LETTERS = [
       "L52_envelope_back.jpg"
     ],
     "images_web": [
-      "L52_p1.jpg",
-      "L52_p2.jpg",
-      "L52_p3.jpg",
-      "L52_p4.jpg",
-      "L52_envelope.jpg",
-      "L52_envelope_back.jpg"
+      "L52_p1_web.jpg",
+      "L52_p2_web.jpg",
+      "L52_p3_web.jpg",
+      "L52_p4_web.jpg",
+      "L52_envelope_web.jpg",
+      "L52_envelope_back_web.jpg"
     ]
   },
   {
@@ -1498,12 +1498,12 @@ window.LETTERS = [
       "L53_envelope_back.jpg"
     ],
     "images_web": [
-      "L53_p1.jpg",
-      "L53_p2.jpg",
-      "L53_p3.jpg",
-      "L53_p4.jpg",
-      "L53_envelope.jpg",
-      "L53_envelope_back.jpg"
+      "L53_p1_web.jpg",
+      "L53_p2_web.jpg",
+      "L53_p3_web.jpg",
+      "L53_p4_web.jpg",
+      "L53_envelope_web.jpg",
+      "L53_envelope_back_web.jpg"
     ]
   },
   {
@@ -1531,13 +1531,13 @@ window.LETTERS = [
       "L54_envelope_back.jpg"
     ],
     "images_web": [
-      "L54_p1.jpg",
-      "L54_p2.jpg",
-      "L54_p3.jpg",
-      "L54_p4.jpg",
-      "L54_p5.jpg",
-      "L54_envelope.jpg",
-      "L54_envelope_back.jpg"
+      "L54_p1_web.jpg",
+      "L54_p2_web.jpg",
+      "L54_p3_web.jpg",
+      "L54_p4_web.jpg",
+      "L54_p5_web.jpg",
+      "L54_envelope_web.jpg",
+      "L54_envelope_back_web.jpg"
     ]
   },
   {
@@ -1564,12 +1564,12 @@ window.LETTERS = [
       "L55_envelope_back.jpg"
     ],
     "images_web": [
-      "L55_p1.jpg",
-      "L55_p2.jpg",
-      "L55_p3.jpg",
-      "L55_p4.jpg",
-      "L55_envelope.jpg",
-      "L55_envelope_back.jpg"
+      "L55_p1_web.jpg",
+      "L55_p2_web.jpg",
+      "L55_p3_web.jpg",
+      "L55_p4_web.jpg",
+      "L55_envelope_web.jpg",
+      "L55_envelope_back_web.jpg"
     ]
   },
   {
@@ -1597,13 +1597,13 @@ window.LETTERS = [
       "L56_envelope_back.jpg"
     ],
     "images_web": [
-      "L56_p1.jpg",
-      "L56_p2.jpg",
-      "L56_p3.jpg",
-      "L56_p4.jpg",
-      "L56_p5.jpg",
-      "L56_envelope.jpg",
-      "L56_envelope_back.jpg"
+      "L56_p1_web.jpg",
+      "L56_p2_web.jpg",
+      "L56_p3_web.jpg",
+      "L56_p4_web.jpg",
+      "L56_p5_web.jpg",
+      "L56_envelope_web.jpg",
+      "L56_envelope_back_web.jpg"
     ]
   },
   {
@@ -1631,13 +1631,13 @@ window.LETTERS = [
       "L57_envelope_back.jpg"
     ],
     "images_web": [
-      "L57_p1.jpg",
-      "L57_p2.jpg",
-      "L57_p3.jpg",
-      "L57_p4.jpg",
-      "L57_p5.jpg",
-      "L57_envelope.jpg",
-      "L57_envelope_back.jpg"
+      "L57_p1_web.jpg",
+      "L57_p2_web.jpg",
+      "L57_p3_web.jpg",
+      "L57_p4_web.jpg",
+      "L57_p5_web.jpg",
+      "L57_envelope_web.jpg",
+      "L57_envelope_back_web.jpg"
     ]
   },
   {
@@ -1665,13 +1665,13 @@ window.LETTERS = [
       "L58_envelope_back.jpg"
     ],
     "images_web": [
-      "L58_p1.jpg",
-      "L58_p2.jpg",
-      "L58_p3.jpg",
-      "L58_p4.jpg",
-      "L58_p5.jpg",
-      "L58_envelope.jpg",
-      "L58_envelope_back.jpg"
+      "L58_p1_web.jpg",
+      "L58_p2_web.jpg",
+      "L58_p3_web.jpg",
+      "L58_p4_web.jpg",
+      "L58_p5_web.jpg",
+      "L58_envelope_web.jpg",
+      "L58_envelope_back_web.jpg"
     ]
   },
   {
@@ -1697,11 +1697,11 @@ window.LETTERS = [
       "L59_envelope_back.jpg"
     ],
     "images_web": [
-      "L59_p1.jpg",
-      "L59_p2.jpg",
-      "L59_p3.jpg",
-      "L59_envelope.jpg",
-      "L59_envelope_back.jpg"
+      "L59_p1_web.jpg",
+      "L59_p2_web.jpg",
+      "L59_p3_web.jpg",
+      "L59_envelope_web.jpg",
+      "L59_envelope_back_web.jpg"
     ]
   },
   {
@@ -1727,11 +1727,11 @@ window.LETTERS = [
       "L60_envelope_back.jpg"
     ],
     "images_web": [
-      "L60_p1.jpg",
-      "L60_p2.jpg",
-      "L60_p3.jpg",
-      "L60_envelope.jpg",
-      "L60_envelope_back.jpg"
+      "L60_p1_web.jpg",
+      "L60_p2_web.jpg",
+      "L60_p3_web.jpg",
+      "L60_envelope_web.jpg",
+      "L60_envelope_back_web.jpg"
     ]
   },
   {
@@ -1759,13 +1759,13 @@ window.LETTERS = [
       "L61_envelope_back.jpg"
     ],
     "images_web": [
-      "L61_p1.jpg",
-      "L61_p2.jpg",
-      "L61_p3.jpg",
-      "L61_p4.jpg",
-      "L61_p5.jpg",
-      "L61_envelope.jpg",
-      "L61_envelope_back.jpg"
+      "L61_p1_web.jpg",
+      "L61_p2_web.jpg",
+      "L61_p3_web.jpg",
+      "L61_p4_web.jpg",
+      "L61_p5_web.jpg",
+      "L61_envelope_web.jpg",
+      "L61_envelope_back_web.jpg"
     ]
   },
   {
@@ -1791,11 +1791,11 @@ window.LETTERS = [
       "L62_envelope_back.jpg"
     ],
     "images_web": [
-      "L62_p1.jpg",
-      "L62_p2.jpg",
-      "L62_p3.jpg",
-      "L62_envelope.jpg",
-      "L62_envelope_back.jpg"
+      "L62_p1_web.jpg",
+      "L62_p2_web.jpg",
+      "L62_p3_web.jpg",
+      "L62_envelope_web.jpg",
+      "L62_envelope_back_web.jpg"
     ]
   },
   {
@@ -1823,13 +1823,13 @@ window.LETTERS = [
       "L63_envelope_back.jpg"
     ],
     "images_web": [
-      "L63_p1.jpg",
-      "L63_p2.jpg",
-      "L63_p3.jpg",
-      "L63_p4.jpg",
-      "L63_p5.jpg",
-      "L63_envelope.jpg",
-      "L63_envelope_back.jpg"
+      "L63_p1_web.jpg",
+      "L63_p2_web.jpg",
+      "L63_p3_web.jpg",
+      "L63_p4_web.jpg",
+      "L63_p5_web.jpg",
+      "L63_envelope_web.jpg",
+      "L63_envelope_back_web.jpg"
     ]
   },
   {
@@ -1859,15 +1859,15 @@ window.LETTERS = [
       "L64_envelope_back.jpg"
     ],
     "images_web": [
-      "L64_p1.jpg",
-      "L64_p2.jpg",
-      "L64_p3.jpg",
-      "L64_p4.jpg",
-      "L64_p5.jpg",
-      "L64_p6.jpg",
-      "L64_p7.jpg",
-      "L64_envelope.jpg",
-      "L64_envelope_back.jpg"
+      "L64_p1_web.jpg",
+      "L64_p2_web.jpg",
+      "L64_p3_web.jpg",
+      "L64_p4_web.jpg",
+      "L64_p5_web.jpg",
+      "L64_p6_web.jpg",
+      "L64_p7_web.jpg",
+      "L64_envelope_web.jpg",
+      "L64_envelope_back_web.jpg"
     ]
   },
   {
@@ -1892,10 +1892,10 @@ window.LETTERS = [
       "L65_envelope_back.jpg"
     ],
     "images_web": [
-      "L65_p1.jpg",
-      "L65_p2.jpg",
-      "L65_envelope.jpg",
-      "L65_envelope_back.jpg"
+      "L65_p1_web.jpg",
+      "L65_p2_web.jpg",
+      "L65_envelope_web.jpg",
+      "L65_envelope_back_web.jpg"
     ]
   },
   {
@@ -1921,11 +1921,11 @@ window.LETTERS = [
       "L66_envelope_back.jpg"
     ],
     "images_web": [
-      "L66_p1.jpg",
-      "L66_p2.jpg",
-      "L66_p3.jpg",
-      "L66_envelope.jpg",
-      "L66_envelope_back.jpg"
+      "L66_p1_web.jpg",
+      "L66_p2_web.jpg",
+      "L66_p3_web.jpg",
+      "L66_envelope_web.jpg",
+      "L66_envelope_back_web.jpg"
     ]
   },
   {
@@ -1953,13 +1953,13 @@ window.LETTERS = [
       "L67_envelope_back.jpg"
     ],
     "images_web": [
-      "L67_p1.jpg",
-      "L67_p2.jpg",
-      "L67_p3.jpg",
-      "L67_p4.jpg",
-      "L67_p5.jpg",
-      "L67_envelope.jpg",
-      "L67_envelope_back.jpg"
+      "L67_p1_web.jpg",
+      "L67_p2_web.jpg",
+      "L67_p3_web.jpg",
+      "L67_p4_web.jpg",
+      "L67_p5_web.jpg",
+      "L67_envelope_web.jpg",
+      "L67_envelope_back_web.jpg"
     ]
   },
   {
@@ -1984,10 +1984,10 @@ window.LETTERS = [
       "L68_envelope_back.jpg"
     ],
     "images_web": [
-      "L68_p1.jpg",
-      "L68_p2.jpg",
-      "L68_envelope.jpg",
-      "L68_envelope_back.jpg"
+      "L68_p1_web.jpg",
+      "L68_p2_web.jpg",
+      "L68_envelope_web.jpg",
+      "L68_envelope_back_web.jpg"
     ]
   },
   {
@@ -2014,12 +2014,12 @@ window.LETTERS = [
       "L69_envelope_back.jpg"
     ],
     "images_web": [
-      "L69_p1.jpg",
-      "L69_p2.jpg",
-      "L69_p3.jpg",
-      "L69_p4.jpg",
-      "L69_envelope.jpg",
-      "L69_envelope_back.jpg"
+      "L69_p1_web.jpg",
+      "L69_p2_web.jpg",
+      "L69_p3_web.jpg",
+      "L69_p4_web.jpg",
+      "L69_envelope_web.jpg",
+      "L69_envelope_back_web.jpg"
     ]
   },
   {
@@ -2045,11 +2045,11 @@ window.LETTERS = [
       "L70_envelope_back.jpg"
     ],
     "images_web": [
-      "L70_p1.jpg",
-      "L70_p2.jpg",
-      "L70_p3.jpg",
-      "L70_envelope.jpg",
-      "L70_envelope_back.jpg"
+      "L70_p1_web.jpg",
+      "L70_p2_web.jpg",
+      "L70_p3_web.jpg",
+      "L70_envelope_web.jpg",
+      "L70_envelope_back_web.jpg"
     ]
   },
   {
@@ -2075,11 +2075,11 @@ window.LETTERS = [
       "L71_envelope_back.jpg"
     ],
     "images_web": [
-      "L71_p1.jpg",
-      "L71_p2.jpg",
-      "L71_p3.jpg",
-      "L71_envelope.jpg",
-      "L71_envelope_back.jpg"
+      "L71_p1_web.jpg",
+      "L71_p2_web.jpg",
+      "L71_p3_web.jpg",
+      "L71_envelope_web.jpg",
+      "L71_envelope_back_web.jpg"
     ]
   },
   {
@@ -2103,9 +2103,9 @@ window.LETTERS = [
       "L72_envelope_back.jpg"
     ],
     "images_web": [
-      "L72_p1.jpg",
-      "L72_envelope.jpg",
-      "L72_envelope_back.jpg"
+      "L72_p1_web.jpg",
+      "L72_envelope_web.jpg",
+      "L72_envelope_back_web.jpg"
     ]
   },
   {
@@ -2127,9 +2127,9 @@ window.LETTERS = [
       "L73_envelope.jpg"
     ],
     "images_web": [
-      "L73_card_front.jpg",
-      "L73_card_inside.jpg",
-      "L73_envelope.jpg"
+      "L73_card_front_web.jpg",
+      "L73_card_inside_web.jpg",
+      "L73_envelope_web.jpg"
     ]
   },
   {
@@ -2153,9 +2153,9 @@ window.LETTERS = [
       "L74_envelope.jpg"
     ],
     "images_web": [
-      "L74_p1.jpg",
-      "L74_p2.jpg",
-      "L74_envelope.jpg"
+      "L74_p1_web.jpg",
+      "L74_p2_web.jpg",
+      "L74_envelope_web.jpg"
     ]
   },
   {
@@ -2178,8 +2178,8 @@ window.LETTERS = [
       "L75_envelope.jpg"
     ],
     "images_web": [
-      "L75_p1.jpg",
-      "L75_envelope.jpg"
+      "L75_p1_web.jpg",
+      "L75_envelope_web.jpg"
     ]
   },
   {
@@ -2204,10 +2204,10 @@ window.LETTERS = [
       "L76_envelope.jpg"
     ],
     "images_web": [
-      "L76_p1.jpg",
-      "L76_p2.jpg",
-      "L76_p3.jpg",
-      "L76_envelope.jpg"
+      "L76_p1_web.jpg",
+      "L76_p2_web.jpg",
+      "L76_p3_web.jpg",
+      "L76_envelope_web.jpg"
     ]
   },
   {
@@ -2231,9 +2231,9 @@ window.LETTERS = [
       "L77_envelope.jpg"
     ],
     "images_web": [
-      "L77_p1.jpg",
-      "L77_p2.jpg",
-      "L77_envelope.jpg"
+      "L77_p1_web.jpg",
+      "L77_p2_web.jpg",
+      "L77_envelope_web.jpg"
     ]
   },
   {
@@ -2258,10 +2258,10 @@ window.LETTERS = [
       "L78_envelope.jpg"
     ],
     "images_web": [
-      "L78_p1.jpg",
-      "L78_p2.jpg",
-      "L78_p3.jpg",
-      "L78_envelope.jpg"
+      "L78_p1_web.jpg",
+      "L78_p2_web.jpg",
+      "L78_p3_web.jpg",
+      "L78_envelope_web.jpg"
     ]
   },
   {
@@ -2286,10 +2286,10 @@ window.LETTERS = [
       "L79_envelope_back.jpg"
     ],
     "images_web": [
-      "L79_p1.jpg",
-      "L79_p2.jpg",
-      "L79_envelope.jpg",
-      "L79_envelope_back.jpg"
+      "L79_p1_web.jpg",
+      "L79_p2_web.jpg",
+      "L79_envelope_web.jpg",
+      "L79_envelope_back_web.jpg"
     ]
   },
   {
@@ -2314,10 +2314,10 @@ window.LETTERS = [
       "L80_envelope.jpg"
     ],
     "images_web": [
-      "L80_p1.jpg",
-      "L80_p2.jpg",
-      "L80_p3.jpg",
-      "L80_envelope.jpg"
+      "L80_p1_web.jpg",
+      "L80_p2_web.jpg",
+      "L80_p3_web.jpg",
+      "L80_envelope_web.jpg"
     ]
   },
   {
@@ -2343,11 +2343,11 @@ window.LETTERS = [
       "L81_envelope.jpg"
     ],
     "images_web": [
-      "L81_p1.jpg",
-      "L81_p2.jpg",
-      "L81_p3.jpg",
-      "L81_p4.jpg",
-      "L81_envelope.jpg"
+      "L81_p1_web.jpg",
+      "L81_p2_web.jpg",
+      "L81_p3_web.jpg",
+      "L81_p4_web.jpg",
+      "L81_envelope_web.jpg"
     ]
   },
   {
@@ -2372,10 +2372,10 @@ window.LETTERS = [
       "L82_envelope.jpg"
     ],
     "images_web": [
-      "L82_p1.jpg",
-      "L82_p2.jpg",
-      "L82_p3.jpg",
-      "L82_envelope.jpg"
+      "L82_p1_web.jpg",
+      "L82_p2_web.jpg",
+      "L82_p3_web.jpg",
+      "L82_envelope_web.jpg"
     ]
   },
   {
@@ -2400,10 +2400,10 @@ window.LETTERS = [
       "L83_envelope.jpg"
     ],
     "images_web": [
-      "L83_p1.jpg",
-      "L83_p2.jpg",
-      "L83_p3.jpg",
-      "L83_envelope.jpg"
+      "L83_p1_web.jpg",
+      "L83_p2_web.jpg",
+      "L83_p3_web.jpg",
+      "L83_envelope_web.jpg"
     ]
   },
   {
@@ -2428,10 +2428,10 @@ window.LETTERS = [
       "L84_envelope.jpg"
     ],
     "images_web": [
-      "L84_p1.jpg",
-      "L84_p2.jpg",
-      "L84_p3.jpg",
-      "L84_envelope.jpg"
+      "L84_p1_web.jpg",
+      "L84_p2_web.jpg",
+      "L84_p3_web.jpg",
+      "L84_envelope_web.jpg"
     ]
   },
   {
@@ -2457,11 +2457,11 @@ window.LETTERS = [
       "L85_envelope_back.jpg"
     ],
     "images_web": [
-      "L85_p1.jpg",
-      "L85_p2.jpg",
-      "L85_p3.jpg",
-      "L85_envelope.jpg",
-      "L85_envelope_back.jpg"
+      "L85_p1_web.jpg",
+      "L85_p2_web.jpg",
+      "L85_p3_web.jpg",
+      "L85_envelope_web.jpg",
+      "L85_envelope_back_web.jpg"
     ]
   },
   {
@@ -2485,9 +2485,9 @@ window.LETTERS = [
       "L86_envelope.jpg"
     ],
     "images_web": [
-      "L86_p1.jpg",
-      "L86_p2.jpg",
-      "L86_envelope.jpg"
+      "L86_p1_web.jpg",
+      "L86_p2_web.jpg",
+      "L86_envelope_web.jpg"
     ]
   },
   {
@@ -2512,10 +2512,10 @@ window.LETTERS = [
       "L87_envelope.jpg"
     ],
     "images_web": [
-      "L87_p1.jpg",
-      "L87_p2.jpg",
-      "L87_p3.jpg",
-      "L87_envelope.jpg"
+      "L87_p1_web.jpg",
+      "L87_p2_web.jpg",
+      "L87_p3_web.jpg",
+      "L87_envelope_web.jpg"
     ]
   },
   {
@@ -2540,10 +2540,10 @@ window.LETTERS = [
       "L88_envelope.jpg"
     ],
     "images_web": [
-      "L88_p1.jpg",
-      "L88_p2.jpg",
-      "L88_p3.jpg",
-      "L88_envelope.jpg"
+      "L88_p1_web.jpg",
+      "L88_p2_web.jpg",
+      "L88_p3_web.jpg",
+      "L88_envelope_web.jpg"
     ]
   },
   {
@@ -2568,10 +2568,10 @@ window.LETTERS = [
       "L89_envelope.jpg"
     ],
     "images_web": [
-      "L89_p1.jpg",
-      "L89_p2.jpg",
-      "L89_p3.jpg",
-      "L89_envelope.jpg"
+      "L89_p1_web.jpg",
+      "L89_p2_web.jpg",
+      "L89_p3_web.jpg",
+      "L89_envelope_web.jpg"
     ]
   },
   {
@@ -2597,11 +2597,11 @@ window.LETTERS = [
       "L90_envelope.jpg"
     ],
     "images_web": [
-      "L90_p1.jpg",
-      "L90_p2.jpg",
-      "L90_p3.jpg",
-      "L90_p4.jpg",
-      "L90_envelope.jpg"
+      "L90_p1_web.jpg",
+      "L90_p2_web.jpg",
+      "L90_p3_web.jpg",
+      "L90_p4_web.jpg",
+      "L90_envelope_web.jpg"
     ]
   },
   {
@@ -2626,10 +2626,10 @@ window.LETTERS = [
       "L91_envelope.jpg"
     ],
     "images_web": [
-      "L91_p1.jpg",
-      "L91_p2.jpg",
-      "L91_p3.jpg",
-      "L91_envelope.jpg"
+      "L91_p1_web.jpg",
+      "L91_p2_web.jpg",
+      "L91_p3_web.jpg",
+      "L91_envelope_web.jpg"
     ]
   },
   {
@@ -2654,10 +2654,10 @@ window.LETTERS = [
       "L92_envelope.jpg"
     ],
     "images_web": [
-      "L92_p1.jpg",
-      "L92_p2.jpg",
-      "L92_p3.jpg",
-      "L92_envelope.jpg"
+      "L92_p1_web.jpg",
+      "L92_p2_web.jpg",
+      "L92_p3_web.jpg",
+      "L92_envelope_web.jpg"
     ]
   },
   {
@@ -2681,9 +2681,9 @@ window.LETTERS = [
       "L93_envelope.jpg"
     ],
     "images_web": [
-      "L93_p1.jpg",
-      "L93_p2.jpg",
-      "L93_envelope.jpg"
+      "L93_p1_web.jpg",
+      "L93_p2_web.jpg",
+      "L93_envelope_web.jpg"
     ]
   },
   {
@@ -2708,10 +2708,10 @@ window.LETTERS = [
       "L94_envelope.jpg"
     ],
     "images_web": [
-      "L94_p1.jpg",
-      "L94_p2.jpg",
-      "L94_p3.jpg",
-      "L94_envelope.jpg"
+      "L94_p1_web.jpg",
+      "L94_p2_web.jpg",
+      "L94_p3_web.jpg",
+      "L94_envelope_web.jpg"
     ]
   },
   {
@@ -2735,9 +2735,9 @@ window.LETTERS = [
       "L95_envelope.jpg"
     ],
     "images_web": [
-      "L95_p1.jpg",
-      "L95_p2.jpg",
-      "L95_envelope.jpg"
+      "L95_p1_web.jpg",
+      "L95_p2_web.jpg",
+      "L95_envelope_web.jpg"
     ]
   },
   {
@@ -2760,8 +2760,8 @@ window.LETTERS = [
       "L96_envelope.jpg"
     ],
     "images_web": [
-      "L96_p1.jpg",
-      "L96_envelope.jpg"
+      "L96_p1_web.jpg",
+      "L96_envelope_web.jpg"
     ]
   },
   {
@@ -2784,8 +2784,8 @@ window.LETTERS = [
       "L97_p2.jpg"
     ],
     "images_web": [
-      "L97_p1.jpg",
-      "L97_p2.jpg"
+      "L97_p1_web.jpg",
+      "L97_p2_web.jpg"
     ]
   },
   {
@@ -2808,8 +2808,8 @@ window.LETTERS = [
       "L98_envelope.jpg"
     ],
     "images_web": [
-      "L98_p1.jpg",
-      "L98_envelope.jpg"
+      "L98_p1_web.jpg",
+      "L98_envelope_web.jpg"
     ]
   },
   {
@@ -2832,8 +2832,8 @@ window.LETTERS = [
       "L99_envelope.jpg"
     ],
     "images_web": [
-      "L99_p1.jpg",
-      "L99_envelope.jpg"
+      "L99_p1_web.jpg",
+      "L99_envelope_web.jpg"
     ]
   },
   {
@@ -2861,13 +2861,13 @@ window.LETTERS = [
       "L100_envelope_back.jpg"
     ],
     "images_web": [
-      "L100_p1.jpg",
-      "L100_p2.jpg",
-      "L100_p3.jpg",
-      "L100_p4.jpg",
-      "L100_p5.jpg",
-      "L100_envelope.jpg",
-      "L100_envelope_back.jpg"
+      "L100_p1_web.jpg",
+      "L100_p2_web.jpg",
+      "L100_p3_web.jpg",
+      "L100_p4_web.jpg",
+      "L100_p5_web.jpg",
+      "L100_envelope_web.jpg",
+      "L100_envelope_back_web.jpg"
     ]
   },
   {
@@ -2893,11 +2893,11 @@ window.LETTERS = [
       "L101_envelope.jpg"
     ],
     "images_web": [
-      "L101_p1.jpg",
-      "L101_p2.jpg",
-      "L101_p3.jpg",
-      "L101_p4.jpg",
-      "L101_envelope.jpg"
+      "L101_p1_web.jpg",
+      "L101_p2_web.jpg",
+      "L101_p3_web.jpg",
+      "L101_p4_web.jpg",
+      "L101_envelope_web.jpg"
     ]
   },
   {
@@ -2923,11 +2923,11 @@ window.LETTERS = [
       "L102_envelope.jpg"
     ],
     "images_web": [
-      "L102_p1.jpg",
-      "L102_p2.jpg",
-      "L102_p3.jpg",
-      "L102_p4.jpg",
-      "L102_envelope.jpg"
+      "L102_p1_web.jpg",
+      "L102_p2_web.jpg",
+      "L102_p3_web.jpg",
+      "L102_p4_web.jpg",
+      "L102_envelope_web.jpg"
     ]
   },
   {
@@ -2953,11 +2953,11 @@ window.LETTERS = [
       "L103_envelope.jpg"
     ],
     "images_web": [
-      "L103_p1.jpg",
-      "L103_unfold_side1.jpg",
-      "L103_unfold_side2.jpg",
-      "L103_back_cover.jpg",
-      "L103_envelope.jpg"
+      "L103_p1_web.jpg",
+      "L103_unfold_side1_web.jpg",
+      "L103_unfold_side2_web.jpg",
+      "L103_back_cover_web.jpg",
+      "L103_envelope_web.jpg"
     ]
   },
   {
@@ -2984,12 +2984,12 @@ window.LETTERS = [
       "L104_envelope_back.jpg"
     ],
     "images_web": [
-      "L104_p1.jpg",
-      "L104_p2.jpg",
-      "L104_p3.jpg",
-      "L104_p4.jpg",
-      "L104_envelope.jpg",
-      "L104_envelope_back.jpg"
+      "L104_p1_web.jpg",
+      "L104_p2_web.jpg",
+      "L104_p3_web.jpg",
+      "L104_p4_web.jpg",
+      "L104_envelope_web.jpg",
+      "L104_envelope_back_web.jpg"
     ]
   },
   {
@@ -3014,10 +3014,10 @@ window.LETTERS = [
       "L105_envelope_back.jpg"
     ],
     "images_web": [
-      "L105_p1.jpg",
-      "L105_p2.jpg",
-      "L105_envelope.jpg",
-      "L105_envelope_back.jpg"
+      "L105_p1_web.jpg",
+      "L105_p2_web.jpg",
+      "L105_envelope_web.jpg",
+      "L105_envelope_back_web.jpg"
     ]
   },
   {
@@ -3043,11 +3043,11 @@ window.LETTERS = [
       "L106_envelope_back.jpg"
     ],
     "images_web": [
-      "L106_p1.jpg",
-      "L106_p2.jpg",
-      "L106_p3.jpg",
-      "L106_envelope.jpg",
-      "L106_envelope_back.jpg"
+      "L106_p1_web.jpg",
+      "L106_p2_web.jpg",
+      "L106_p3_web.jpg",
+      "L106_envelope_web.jpg",
+      "L106_envelope_back_web.jpg"
     ]
   },
   {
@@ -3073,11 +3073,11 @@ window.LETTERS = [
       "L107_envelope.jpg"
     ],
     "images_web": [
-      "L107_p1.jpg",
-      "L107_p2.jpg",
-      "L107_p3.jpg",
-      "L107_p4.jpg",
-      "L107_envelope.jpg"
+      "L107_p1_web.jpg",
+      "L107_p2_web.jpg",
+      "L107_p3_web.jpg",
+      "L107_p4_web.jpg",
+      "L107_envelope_web.jpg"
     ]
   },
   {
@@ -3101,9 +3101,9 @@ window.LETTERS = [
       "L108_envelope.jpg"
     ],
     "images_web": [
-      "L108_p1.jpg",
-      "L108_p2.jpg",
-      "L108_envelope.jpg"
+      "L108_p1_web.jpg",
+      "L108_p2_web.jpg",
+      "L108_envelope_web.jpg"
     ]
   },
   {
@@ -3127,9 +3127,9 @@ window.LETTERS = [
       "L109_envelope.jpg"
     ],
     "images_web": [
-      "L109_p1.jpg",
-      "L109_p2.jpg",
-      "L109_envelope.jpg"
+      "L109_p1_web.jpg",
+      "L109_p2_web.jpg",
+      "L109_envelope_web.jpg"
     ]
   },
   {
@@ -3154,10 +3154,10 @@ window.LETTERS = [
       "L110_envelope.jpg"
     ],
     "images_web": [
-      "L110_p1.jpg",
-      "L110_p2.jpg",
-      "L110_p3.jpg",
-      "L110_envelope.jpg"
+      "L110_p1_web.jpg",
+      "L110_p2_web.jpg",
+      "L110_p3_web.jpg",
+      "L110_envelope_web.jpg"
     ]
   }
 ];

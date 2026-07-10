@@ -2508,6 +2508,25 @@ body.body--navy .toc-btn:hover {
   color: var(--brass-soft);
   font-weight: 500;
 }
+/* "full resolution" — opens the untouched original scan in a new tab */
+.lb-full {
+  font-family: var(--mono);
+  font-style: normal;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--brass-soft);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200,172,116,0.35);
+  padding-bottom: 1px;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.lb-full:hover, .lb-full:focus-visible {
+  color: var(--brass-faint);
+  border-color: rgba(200,172,116,0.7);
+  outline: none;
+}
 .lb-close {
   position: absolute;
   top: 1.4rem; right: 1.6rem;

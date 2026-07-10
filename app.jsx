@@ -427,7 +427,11 @@ function Lightbox({ letter, page, onClose, onNav }) {
   const imgs = letterImages(letter);
   const total = imgs.length;
   const k = page;
-  const src = `${letter.folder}/${imgs[k - 1]}`;
+  // Display the smaller _web derivative when it exists; the "full
+  // resolution" link always opens the untouched original scan.
+  const webs = letter.images_web || imgs;
+  const src = `${letter.folder}/${webs[k - 1]}`;
+  const fullSrc = `${letter.folder}/${imgs[k - 1]}`;
   const alt = `Original handwritten letter, page ${k} of ${total}, dated ${letter.date_label}`;
 
   return (
@@ -439,6 +443,7 @@ function Lightbox({ letter, page, onClose, onNav }) {
         </div>
         <div className="lb-meta">
           <span className="lb-meta-date">{letter.date_label}</span>
+          <a className="lb-full" href={fullSrc} target="_blank" rel="noopener noreferrer">full resolution</a>
           <span className="lb-counter">{String(k).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
         </div>
       </div>
@@ -687,7 +692,8 @@ function EnvelopeCard({ letter, onOpen }) {
       {imgs.length > 0 && (
         <div className="envelope-stage">
           <button className="envelope-img" onClick={() => onOpen(letter, 1)}>
-            <img src={`${letter.folder}/${imgs[0]}`} alt={`Original envelope, postmarked ${letter.date_label}`} />
+            <img src={`${letter.folder}/${(letter.images_web || imgs)[0]}`} loading="lazy" decoding="async"
+                 alt={`Original envelope, postmarked ${letter.date_label}`} />
           </button>
         </div>
       )}
@@ -712,7 +718,7 @@ function ChristmasCardCard({ letter, onOpen }) {
       <div className="xmas-stage">
         {cardFile && (
           <button className="xmas-img" onClick={() => onOpen(letter, cardPage)}>
-            <img src={`${letter.folder}/${cardFile}`}
+            <img src={`${letter.folder}/${(letter.images_web || imgs)[cardPage - 1]}`} loading="lazy" decoding="async"
                  alt={`Original Christmas card, dated ${letter.date_label}`} />
           </button>
         )}

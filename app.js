@@ -302,9 +302,11 @@ function Lightbox({ letter, page, onClose, onNav }) {
   const imgs = letterImages(letter);
   const total = imgs.length;
   const k = page;
-  const src = `${letter.folder}/${imgs[k - 1]}`;
+  const webs = letter.images_web || imgs;
+  const src = `${letter.folder}/${webs[k - 1]}`;
+  const fullSrc = `${letter.folder}/${imgs[k - 1]}`;
   const alt = `Original handwritten letter, page ${k} of ${total}, dated ${letter.date_label}`;
-  return /* @__PURE__ */ React.createElement("div", { className: "lightbox", role: "dialog", "aria-modal": "true", onClick: onClose }, /* @__PURE__ */ React.createElement("button", { className: "lb-close", onClick: onClose, "aria-label": "Close" }, "×"), /* @__PURE__ */ React.createElement("div", { className: "lb-stage", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ React.createElement("div", { className: "lb-frame" }, /* @__PURE__ */ React.createElement("img", { src, alt })), /* @__PURE__ */ React.createElement("div", { className: "lb-meta" }, /* @__PURE__ */ React.createElement("span", { className: "lb-meta-date" }, letter.date_label), /* @__PURE__ */ React.createElement("span", { className: "lb-counter" }, String(k).padStart(2, "0"), " / ", String(total).padStart(2, "0")))), total > 1 && /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("button", { className: "lb-nav lb-prev", onClick: (e) => {
+  return /* @__PURE__ */ React.createElement("div", { className: "lightbox", role: "dialog", "aria-modal": "true", onClick: onClose }, /* @__PURE__ */ React.createElement("button", { className: "lb-close", onClick: onClose, "aria-label": "Close" }, "×"), /* @__PURE__ */ React.createElement("div", { className: "lb-stage", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ React.createElement("div", { className: "lb-frame" }, /* @__PURE__ */ React.createElement("img", { src, alt })), /* @__PURE__ */ React.createElement("div", { className: "lb-meta" }, /* @__PURE__ */ React.createElement("span", { className: "lb-meta-date" }, letter.date_label), /* @__PURE__ */ React.createElement("a", { className: "lb-full", href: fullSrc, target: "_blank", rel: "noopener noreferrer" }, "full resolution"), /* @__PURE__ */ React.createElement("span", { className: "lb-counter" }, String(k).padStart(2, "0"), " / ", String(total).padStart(2, "0")))), total > 1 && /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("button", { className: "lb-nav lb-prev", onClick: (e) => {
     e.stopPropagation();
     onNav(-1);
   }, "aria-label": "Previous page" }, "‹"), /* @__PURE__ */ React.createElement("button", { className: "lb-nav lb-next", onClick: (e) => {
@@ -406,7 +408,15 @@ function DraftCard({ letter, onOpen, highlight }) {
 }
 function EnvelopeCard({ letter, onOpen }) {
   const imgs = letterImages(letter);
-  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--envelope", id: `letter-${letter.id}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), imgs.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "envelope-stage" }, /* @__PURE__ */ React.createElement("button", { className: "envelope-img", onClick: () => onOpen(letter, 1) }, /* @__PURE__ */ React.createElement("img", { src: `${letter.folder}/${imgs[0]}`, alt: `Original envelope, postmarked ${letter.date_label}` }))), /* @__PURE__ */ React.createElement("p", { className: "letter-note envelope-note" }, "The letter inside has been lost."), /* @__PURE__ */ React.createElement(NoteBlock, { text: letter.envelope_note }));
+  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--envelope", id: `letter-${letter.id}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), imgs.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "envelope-stage" }, /* @__PURE__ */ React.createElement("button", { className: "envelope-img", onClick: () => onOpen(letter, 1) }, /* @__PURE__ */ React.createElement(
+    "img",
+    {
+      src: `${letter.folder}/${(letter.images_web || imgs)[0]}`,
+      loading: "lazy",
+      decoding: "async",
+      alt: `Original envelope, postmarked ${letter.date_label}`
+    }
+  ))), /* @__PURE__ */ React.createElement("p", { className: "letter-note envelope-note" }, "The letter inside has been lost."), /* @__PURE__ */ React.createElement(NoteBlock, { text: letter.envelope_note }));
 }
 function ChristmasCardCard({ letter, onOpen }) {
   const imgs = letterImages(letter);
@@ -415,7 +425,9 @@ function ChristmasCardCard({ letter, onOpen }) {
   return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--xmas", id: `letter-${letter.id}` }, /* @__PURE__ */ React.createElement("div", { className: "brass-rule" }), /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "xmas-stage" }, cardFile && /* @__PURE__ */ React.createElement("button", { className: "xmas-img", onClick: () => onOpen(letter, cardPage) }, /* @__PURE__ */ React.createElement(
     "img",
     {
-      src: `${letter.folder}/${cardFile}`,
+      src: `${letter.folder}/${(letter.images_web || imgs)[cardPage - 1]}`,
+      loading: "lazy",
+      decoding: "async",
       alt: `Original Christmas card, dated ${letter.date_label}`
     }
   )), /* @__PURE__ */ React.createElement("div", { className: "xmas-verse" }, letter.card_verse.split("\n").map((line, i) => /* @__PURE__ */ React.createElement("div", { key: i }, line))), /* @__PURE__ */ React.createElement("div", { className: "xmas-cartouche" }, "Christmas · ", letter.date.slice(0, 4))), /* @__PURE__ */ React.createElement("div", { className: "signature signature--xmas" }, letter.signature), /* @__PURE__ */ React.createElement(NoteBlock, { text: letter.card_note }), letterImages(letter).length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }), /* @__PURE__ */ React.createElement("div", { className: "brass-rule" }));
