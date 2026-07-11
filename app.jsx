@@ -1817,10 +1817,10 @@ function CoverModal({ onClose }) {
         <button className="cover-x" onClick={onClose} aria-label="Close">×</button>
         <p className="cover-salutation">Dear Reader,</p>
         <p className="cover-body">
-          From before the war, through the attack on Pearl Harbor, and across
-          the perilous journey of the U.S.S. New Orleans — the "NO (Such)
-          Boat," the "Ghost Ship," the "Miracle Ship" — my grandfather wrote
-          wartime love letters home to my grandmother.
+          My grandfather served aboard the U.S.S. New Orleans: the "NO (Such)
+          Boat," the "Ghost Ship," the "Miracle Ship." From before the war,
+          through the attack on Pearl Harbor, and across her perilous journey,
+          he wrote wartime love letters home to my grandmother.
         </p>
         <p className="cover-body">These are those letters.</p>
         <div className="cover-signoff">
