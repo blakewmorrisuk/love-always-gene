@@ -1817,30 +1817,32 @@ function CoverModal({ onClose }) {
         <button className="cover-x" onClick={onClose} aria-label="Close">×</button>
         <p className="cover-salutation">Dear Reader,</p>
         <p className="cover-body">
-          These are my grandfather's letters to my grandmother, written from
-          the Navy between 1940 and 1944. Transcribing them is a labor of
-          love and a work in progress, so expect a few rough edges while I
-          get it right.
+          From before the war, through the attack on Pearl Harbor, and across
+          the perilous journey of the U.S.S. New Orleans — the "NO (Such)
+          Boat," the "Ghost Ship," the "Miracle Ship" — my grandfather wrote
+          wartime love letters home to my grandmother.
         </p>
-        <div className="cover-context-label">For context:</div>
-        <div className="cover-buttons">
-          <a className="cover-button cover-button--navy"
-             href="https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/"
-             target="_blank" rel="noopener noreferrer">
-            <span className="cover-button-label">WKYT</span>
-            <span className="cover-button-text">Article</span>
-          </a>
-          <a className="cover-button cover-button--brass"
-             href="https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/"
-             target="_blank" rel="noopener noreferrer">
-            <span className="cover-button-label">WKYT</span>
-            <span className="cover-button-text">Video</span>
-          </a>
-        </div>
+        <p className="cover-body">These are those letters.</p>
         <div className="cover-signoff">
-          <p className="cover-signoff-line">“From the one who cares,”</p>
-          <p className="cover-signoff-handwritten">“Love, always,”</p>
+          <p className="cover-signoff-handwritten">Love, Always,</p>
           <p className="cover-signoff-name">Blake William Morris</p>
+        </div>
+        <div className="cover-context">
+          <div className="cover-context-label">Context:</div>
+          <div className="cover-buttons">
+            <a className="cover-button cover-button--navy"
+               href="https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/"
+               target="_blank" rel="noopener noreferrer">
+              <span className="cover-button-label">WKYT</span>
+              <span className="cover-button-text">Article</span>
+            </a>
+            <a className="cover-button cover-button--brass"
+               href="https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/"
+               target="_blank" rel="noopener noreferrer">
+              <span className="cover-button-label">WKYT</span>
+              <span className="cover-button-text">Video</span>
+            </a>
+          </div>
         </div>
         <button className="cover-close" ref={closeRef} onClick={onClose}>Open the letters</button>
       </div>
