@@ -750,20 +750,10 @@ function JourneyPage({ journey, onSelectStop, focusPlace }) {
           </li>
         ))}
       </ol>
-      <p className="journey-note-plain">
-        Please note that dotted lines and open points reflect places where
-        the Naval Censor prohibited sailors from indicating their wartime
-        locations. Therefore, these paths and points are reconstructed from
-        the ship's record and not from the letters themselves.
-      </p>
-      <p className="journey-note">
-        As with everything here, this is a passion project by a grandson
-        studying for the bar, and it is subject to change as it is made
-        more accurate.
-      </p>
-      <p className="journey-signoff">
-        Kind regards,<br />Blake William Morris
-      </p>
+      {/* Blake's foot-of-page note (censor explanation + signed personal
+          line) removed 2026-07-11 at his request; may be reinstated. The
+          .journey-note-plain / .journey-note / .journey-signoff styles
+          remain in index.html for when it returns. */}
     </section>
   );
 }

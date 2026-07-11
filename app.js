@@ -549,7 +549,7 @@ function JourneyPage({ journey, onSelectStop, focusPlace }) {
     },
     /* @__PURE__ */ React.createElement("span", { className: "js-num" }, p.n),
     /* @__PURE__ */ React.createElement("span", { className: "js-meta" }, /* @__PURE__ */ React.createElement("span", { className: "js-label" }, p.place.label), /* @__PURE__ */ React.createElement("span", { className: "js-dates" }, pinDateSpan(p), " · ", p.letters.length === 1 ? "1 letter" : `${p.letters.length} letters`))
-  )))), /* @__PURE__ */ React.createElement("p", { className: "journey-note-plain" }, "Please note that dotted lines and open points reflect places where the Naval Censor prohibited sailors from indicating their wartime locations. Therefore, these paths and points are reconstructed from the ship's record and not from the letters themselves."), /* @__PURE__ */ React.createElement("p", { className: "journey-note" }, "As with everything here, this is a passion project by a grandson studying for the bar, and it is subject to change as it is made more accurate."), /* @__PURE__ */ React.createElement("p", { className: "journey-signoff" }, "Kind regards,", /* @__PURE__ */ React.createElement("br", null), "Blake William Morris"));
+  )))));
 }
 function LetterWaypoint({ letter, journey, onOpenJourney }) {
   const place = PLACES[letter.place];
