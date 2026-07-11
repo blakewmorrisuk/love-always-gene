@@ -26,8 +26,23 @@
   function populate(d, keepId) {
     state.letters = d.letters || [];
     state.chapters = d.chapters || [];
+    state.places = d.places || [];
     state.byId = {};
     state.letters.forEach(function (l) { state.byId[l.id] = l; });
+    // Datalist of journey place keys (places.json) for the Place field.
+    var dl = $("place-keys");
+    if (!dl) {
+      dl = document.createElement("datalist");
+      dl.id = "place-keys";
+      document.body.appendChild(dl);
+    }
+    dl.innerHTML = "";
+    state.places.forEach(function (p) {
+      var o = document.createElement("option");
+      o.value = p.key;
+      o.label = p.label || p.key;
+      dl.appendChild(o);
+    });
     var sel = $("letterSelect");
     sel.innerHTML = "";
     state.letters.forEach(function (l) {
@@ -104,6 +119,7 @@
     return main.concat([
       ["note", "Editorial note (shown in italics below the letter)", "area", 4],
       ["date_label", "Date label", "text"], ["location_stamp", "Location stamp", "text"],
+      ["place", "Journey place (map pin — pick a key from the list)", "text"],
     ]);
   }
   function renderFields(work) {
@@ -119,6 +135,7 @@
       var input;
       if (type === "text") { input = document.createElement("input"); input.type = "text"; }
       else { input = document.createElement("textarea"); if (type === "body") input.className = "body"; else if (rows) input.rows = rows; }
+      if (key === "place") input.setAttribute("list", "place-keys");
       input.id = "f_" + key;
       input.value = work[key] == null ? "" : String(work[key]);
       input.addEventListener("input", function () { work[key] = input.value; markDirty(true); renderPreview(); });

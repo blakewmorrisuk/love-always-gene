@@ -21,6 +21,10 @@ Terminal window opens alongside the editor; keep it open while you work, close i
   look on the website.
 - The markers `[[ ]]` (a brass underline), `[?]` (an unreadable word), and `[word?]` (an
   uncertain reading) are explained on the screen. Leave them unless you're fixing the reading.
+- The **Journey place** field is the letter's pin on the journey map (the chart after the
+  title page, and the small map under each letter). Start typing and pick a key from the
+  list that appears — the choices live in `places.json`. You'd only change this if a letter
+  turns out to have been written somewhere else.
 - Click **Save**. Your change is written, and a copy is tucked into a hidden **.backups**
   folder automatically, so an edit is never lost.
 

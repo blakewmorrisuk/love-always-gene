@@ -66,10 +66,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if p == "/api/letters":
             # Enriched view (adds the generated images/images_web fields) so
             # the editor's scan pane shows the files that actually exist.
+            # places (the journey gazetteer) feeds the Place field's datalist.
             return self._call(lambda: {
                 "letters": build_letters.enrich_letters(
                     json.loads(repo_lib.LETTERS_JSON.read_text(encoding="utf-8"))),
                 "chapters": json.loads(repo_lib.CHAPTERS_JSON.read_text(encoding="utf-8")),
+                "places": build_letters.load_places(),
             })
         if p == "/api/health":
             return self._call(lambda: repo_lib.health(do_fetch=True))

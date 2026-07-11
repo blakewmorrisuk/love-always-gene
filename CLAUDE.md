@@ -19,9 +19,24 @@ back to a working state with minimal fuss. Read this first; then run `python3 sc
   in the same push**, or the live site will reference files it can't serve.
 - Same pattern: `cast.json` → `cast.js` (`scripts/build_cast.py`), `photos.json` → `photos.js`
   (`scripts/build_photos.py`).
-- **Never hand-edit `letters.js` / `cast.js` / `photos.js`.** Edit the `.json`, then run the
-  matching `build_*.py`. They are marked `merge=generated` in `.gitattributes` so a merge
-  driver regenerates them on any sync (see "Merge driver").
+- **`places.json`** (repo root) is the journey gazetteer: ~19 places (key, label, lat/lon,
+  kind shore/sea/home, `approx` = position reconstructed from the ship's record, `route:false`
+  = never a stop on the journey line). `build_letters.py` folds it into `letters.js` as
+  `window.PLACES` and validates each letter's `place` key against it. Each letter's `place`
+  field (editable in the editor's "Journey place" field) is its pin on the journey map.
+  The one-time assignment table lives in `scripts/assign_places.py`.
+- Two more generated, committed data files (rebuild only when their inputs change; both are
+  optional at runtime — the site degrades gracefully without them):
+  - **`map.js`** (`window.MAP_BASE`) — pre-projected Natural Earth coastlines for the journey
+    chart. Regenerate with `node scripts/build_map.mjs` (Node 18+, fetches Natural Earth once).
+  - **`weather.js`** (`window.LETTER_WEATHER`) — day-accurate 1940s weather per letter, keyed
+    by letter id, `approx:true` on censored at-sea letters. Regenerate with
+    `node scripts/fetch_weather.mjs` (Node 18+, Open-Meteo; worklist derives from
+    letters.json + places.json — rerun after adding letters or changing a `place`).
+- **Never hand-edit `letters.js` / `cast.js` / `photos.js` / `map.js` / `weather.js`.** Edit
+  the `.json` (or rerun the generator), then run the matching build script. The first three
+  are marked `merge=generated` in `.gitattributes` so a merge driver regenerates them on any
+  sync (see "Merge driver").
 
 ## The website runtime (app.js, vendor/, fonts/)
 
