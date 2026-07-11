@@ -62,6 +62,10 @@ function pearlHarborMarker(dateStr) {
 function buildPages(letters, chapters, cast, photos) {
   const grouped = groupByChapter(letters, chapters);
   const pages = [{ type: "title" }];
+  // The Journey — the frontispiece chart, between the title page and
+  // Chapter I. (This shifts every #p=N deep link by one; parseHashIdx
+  // clamps, and the TOC/progress bar derive from `pages`.)
+  pages.push({ type: "journey" });
   for (const c of chapters) {
     const ls = grouped[c.key];
     if (!ls || !ls.length) continue;
@@ -94,6 +98,87 @@ function parseHashIdx(maxIdx) {
   const i = parseInt(m[1], 10);
   if (isNaN(i) || i < 0 || i > maxIdx) return 0;
   return i;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Journey — gazetteer, projection, route derivation                  */
+/* ------------------------------------------------------------------ */
+
+/* places.json rides into letters.js as window.PLACES (keyed by place key);
+   map.js carries window.MAP_BASE, the pre-projected Natural Earth chart.
+   Both are optional — without them the journey map quietly doesn't render. */
+const PLACES = window.PLACES || {};
+const MAP_BASE = window.MAP_BASE || null;
+
+/* Project lat/lon into the base chart's pixel space. The chart is
+   Pacific-centered: longitudes west of its left edge wrap +360. */
+function projectLL(lat, lon, base) {
+  const L = lon >= base.lon0 ? lon : lon + 360;
+  return [
+    ((L - base.lon0) / (base.lon1 - base.lon0)) * base.w,
+    ((base.lat1 - lat) / (base.lat1 - base.lat0)) * base.h,
+  ];
+}
+
+/* Derive the journey from the letters themselves: sort by date, join each
+   letter's `place` key to the gazetteer, skip places marked route:false
+   (mail that isn't a leg of Gene's journey — the gunnery-cycle "at sea"
+   letters, the card that isn't from Gene), collapse consecutive repeats.
+
+   Returns { stops, legs, pins }:
+     stops — chronological visits (a place can appear more than once)
+     legs  — consecutive stop pairs; approx when either end is a position
+             reconstructed from the ship's record rather than the mail
+     pins  — one entry per distinct place, numbered by first visit, with
+             all its letters and full date span (drives pins + legend)   */
+function buildJourney(letters, places) {
+  const sorted = [...letters].sort((a, b) =>
+    a.date === b.date ? (a.n || 0) - (b.n || 0) : a.date.localeCompare(b.date));
+  const stops = [];
+  for (const l of sorted) {
+    const place = places[l.place];
+    if (!place || place.route === false) continue;
+    const last = stops[stops.length - 1];
+    if (last && last.key === l.place) {
+      last.letters.push(l);
+      last.lastDate = l.date;
+    } else {
+      stops.push({ key: l.place, place, letters: [l], firstDate: l.date, lastDate: l.date });
+    }
+  }
+  const legs = [];
+  for (let i = 1; i < stops.length; i++) {
+    legs.push({
+      from: stops[i - 1],
+      to: stops[i],
+      approx: !!(stops[i - 1].place.approx || stops[i].place.approx),
+    });
+  }
+  const pins = [];
+  const byKey = {};
+  for (const s of stops) {
+    let p = byKey[s.key];
+    if (!p) {
+      p = byKey[s.key] = {
+        key: s.key, place: s.place, n: pins.length + 1,
+        letters: [], firstDate: s.firstDate, lastDate: s.lastDate,
+      };
+      pins.push(p);
+    }
+    p.letters.push(...s.letters);
+    if (s.lastDate > p.lastDate) p.lastDate = s.lastDate;
+  }
+  return { stops, legs, pins };
+}
+
+const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function monthYear(dateStr) {
+  const m = dateStr.match(/(\d{4})-(\d{2})/);
+  return m ? `${MONTHS_SHORT[parseInt(m[2], 10) - 1]} ${m[1]}` : dateStr;
+}
+function pinDateSpan(pin) {
+  const a = monthYear(pin.firstDate), b = monthYear(pin.lastDate);
+  return a === b ? a : `${a} – ${b}`;
 }
 
 /* ------------------------------------------------------------------ */
@@ -146,11 +231,19 @@ function WeatherGlyph({ weather }) {
   const kind = weatherKind(weather);
   if (!kind || !weather) return null;
   const t = weather.tmax_f != null ? `${Math.round(weather.tmax_f)}°` : "";
+  // approx: the letter was censored at sea, so this is the day's weather at
+  // the ship's position as reconstructed from her record — mark it honestly.
+  const approx = !!weather.approx;
+  const approxNote = "reconstructed from the ship's estimated position";
   return (
-    <div className="weather-glyph" aria-label={`Weather: ${weatherLabel(kind)}${t ? ", high " + t : ""}`}>
+    <div
+      className={"weather-glyph" + (approx ? " weather-glyph--approx" : "")}
+      aria-label={`Weather: ${weatherLabel(kind)}${t ? ", high " + t : ""}${approx ? ` (${approxNote})` : ""}`}
+      title={approx ? approxNote : undefined}
+    >
       <WeatherIcon kind={kind} />
       <span>{weatherLabel(kind)}</span>
-      {t && <span className="wg-temp">{t}</span>}
+      {t && <span className="wg-temp">{approx ? `≈ ${t}` : t}</span>}
     </div>
   );
 }
@@ -211,8 +304,8 @@ function Atmosphere({ chapterKey, weather, on }) {
   // Chapter IV (At War) divider — no animated atmosphere. The deep red
   // background (body--war class on the body element) carries the mood
   // on its own. Letters within the chapter still get their per-day
-  // weather animation as normal.
-  if (chapterKey === "at-war") return null;
+  // weather animation as normal (kind is set when a letter has weather).
+  if (chapterKey === "at-war" && !kind) return null;
 
   if (kind === "rain" || kind === "storm") {
     return (
@@ -414,6 +507,279 @@ function RouteDiagram({ activeChapter, chapters, letters }) {
           );
         })}
       </svg>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Journey map — real geography (frontispiece + per-letter waypoint)  */
+/* ------------------------------------------------------------------ */
+
+/* Hand-tuned label placement for the full chart. Geography clusters the
+   California ports (and Chicago against Great Lakes), so a few labels fan
+   out, with a hairline leader where the label sits away from its pin.
+   `text` is the short chart name; the gazetteer's full label lives in the
+   legend and tooltips. */
+const MAP_LABELS = {
+  "great-lakes":           { text: "Great Lakes",   dx: -9,  dy: -5,  anchor: "end", num: { dx: 0, dy: -9, anchor: "middle" } },
+  "chicago":               { text: "Chicago",       dx: 9,   dy: 13,  anchor: "start", num: { dx: -9, dy: 7, anchor: "end" } },
+  "el-paso":               { text: "El Paso",       dx: 8,   dy: 11,  anchor: "start" },
+  "san-diego":             { text: "San Diego",     dx: -11, dy: 16,  anchor: "end", leader: true, num: { dx: 7, dy: 3, anchor: "start" } },
+  "pearl-harbor":          { text: "Pearl Harbor",  dx: -2,  dy: -12, anchor: "middle" },
+  "bremerton":             { text: "Bremerton",     dx: 10,  dy: -2,  anchor: "start" },
+  "long-beach":            { text: "Long Beach",    dx: -11, dy: 5,   anchor: "end", leader: true, num: { dx: 0, dy: -8, anchor: "middle" } },
+  "mare-island":           { text: "Mare Island",   dx: 11,  dy: -7,  anchor: "start", leader: true, num: { dx: 8, dy: -4, anchor: "start" } },
+  "san-francisco":         { text: "San Francisco", dx: -11, dy: 12,  anchor: "end", leader: true, num: { dx: 7, dy: 4, anchor: "start" } },
+  "wake-relief":           { text: "Wake sortie",   dx: 0,   dy: -11, anchor: "middle" },
+  "coral-sea":             { text: "Coral Sea",     dx: -9,  dy: 5,   anchor: "end" },
+  "south-pacific-transit": { text: "South Pacific", dx: 10,  dy: 5,   anchor: "start" },
+  "solomons-area":         { text: "The Solomons",  dx: 10,  dy: 9,   anchor: "start" },
+  "tulagi":                { text: "Tulagi",        dx: -8,  dy: -5,  anchor: "end" },
+  "sydney":                { text: "Sydney",        dx: -10, dy: 7,   anchor: "end" },
+  "kentucky":              { text: "Home",          dx: 0,   dy: 16,  anchor: "middle", num: { dx: -10, dy: 4, anchor: "end" } },
+  "montgomery-wv":         { text: "Montgomery",    dx: 9,   dy: -4,  anchor: "start" },
+};
+
+/* A gently bowed course line between two stops — bows northward so the
+   long Pacific legs read like a chart's plotted track, not a chord. */
+function legPath(x1, y1, x2, y2) {
+  const dx = x2 - x1, dy = y2 - y1;
+  const len = Math.hypot(dx, dy) || 1;
+  const bow = Math.min(len * 0.1, 40);
+  let px = -dy / len, py = dx / len;
+  if (py > 0) { px = -px; py = -py; }
+  const cx = x1 + dx / 2 + px * bow;
+  const cy = y1 + dy / 2 + py * bow;
+  return `M ${x1.toFixed(1)} ${y1.toFixed(1)} Q ${cx.toFixed(1)} ${cy.toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`;
+}
+
+function starPath(x, y, r) {
+  const pts = [];
+  for (let i = 0; i < 10; i++) {
+    const a = -Math.PI / 2 + (i * Math.PI) / 5;
+    const rr = i % 2 === 0 ? r : r * 0.45;
+    pts.push(`${(x + Math.cos(a) * rr).toFixed(1)} ${(y + Math.sin(a) * rr).toFixed(1)}`);
+  }
+  return `M ${pts.join(" L ")} Z`;
+}
+
+function CompassRose({ x, y }) {
+  return (
+    <g className="mc-rose" transform={`translate(${x} ${y})`} aria-hidden="true">
+      <circle r="26" className="mc-rose-ring" />
+      <circle r="19" className="mc-rose-ring mc-rose-ring--inner" />
+      {[0, 45, 90, 135].map((a) => (
+        <line key={a} x1="0" y1="-24" x2="0" y2="24" transform={`rotate(${a})`}
+          className={"mc-rose-line" + (a % 90 === 0 ? "" : " mc-rose-line--minor")} />
+      ))}
+      <path d="M 0 -24 L 3.6 -7 L 0 -10.5 L -3.6 -7 Z" className="mc-rose-north" />
+      <text y="-31" textAnchor="middle" className="mc-rose-n">N</text>
+    </g>
+  );
+}
+
+/* MapChart — the journey drawn on the Natural Earth base chart.
+   mode "full"  — the frontispiece: labels, graticule figures, compass
+                  rose, censored-leg annotation, draw-on animation,
+                  clickable pins (onSelectStop).
+   mode "mini"  — the waypoint map under a letter: static, unlabeled,
+                  clipped to the route travelled so far (visibleThrough),
+                  with the letter's own place pulsing (activePlace).     */
+function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) {
+  const reduced = useReducedMotion();
+  const base = MAP_BASE;
+  const full = mode === "full";
+  if (!base || !journey || !journey.stops.length) return null;
+
+  const xy = (place) => projectLL(place.lat, place.lon, base);
+  const cutoff = visibleThrough || "9999-12-31";
+  const legs = journey.legs.filter((l) => l.to.firstDate <= cutoff);
+  const pins = journey.pins.filter((p) => p.firstDate <= cutoff);
+
+  // A letter written somewhere off the route (the gunnery-cycle "at sea"
+  // letters, the card that isn't from Gene) still pins its own map.
+  const extraPin = activePlace && PLACES[activePlace] && !pins.some((p) => p.key === activePlace)
+    ? { key: activePlace, place: PLACES[activePlace], letters: [], n: null }
+    : null;
+
+  const lonLines = [];
+  for (let lon = 120; lon < base.lon1; lon += 20) {
+    lonLines.push(((lon - base.lon0) / (base.lon1 - base.lon0)) * base.w);
+  }
+  const latLines = [];
+  for (let lat = -40; lat <= 40; lat += 20) {
+    latLines.push({ y: ((base.lat1 - lat) / (base.lat1 - base.lat0)) * base.h, eq: lat === 0 });
+  }
+
+  const animate = full && !reduced;
+  const legDelay = (i) => 0.45 + i * 0.09;
+
+  const renderPin = (p, isActive) => {
+    const [x, y] = xy(p.place);
+    const kind = p.place.kind;
+    const cls = "mc-pin"
+      + (p.place.approx ? " mc-pin--approx" : "")
+      + (kind === "home" ? " mc-pin--home" : "")
+      + (isActive ? " mc-pin--active" : "");
+    const label = full ? MAP_LABELS[p.key] : null;
+    const count = p.letters.length;
+    const tip = `${p.place.label}${count ? ` · ${pinDateSpan(p)} · ${count === 1 ? "1 letter" : `${count} letters`}` : ""}`;
+    const inboundIdx = legs.findIndex((l) => l.to.key === p.key);
+    const delay = inboundIdx >= 0 ? legDelay(inboundIdx) + 0.35 : 0.3;
+    const G = animate ? motion.g : "g";
+    const gProps = animate
+      ? { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay, duration: 0.4 } }
+      : {};
+    return (
+      <G key={p.key} {...gProps}
+        className={"mc-stop" + (full && onSelectStop ? " mc-stop--link" : "")}
+        onClick={full && onSelectStop ? () => onSelectStop(p.key) : undefined}
+      >
+        <title>{tip}</title>
+        {isActive && <circle cx={x} cy={y} r="11" className="route-pin-active-halo" />}
+        {kind === "home"
+          ? <path d={starPath(x, y, 6.5)} className={cls} />
+          : <circle cx={x} cy={y} r={isActive ? 5 : 4.2} className={cls} />}
+        {full && p.n != null && (() => {
+          // Number sits opposite the label so neither collides; the
+          // clustered pins carry explicit overrides in MAP_LABELS.
+          const np = (label && label.num)
+            || (!label ? { dx: 8, dy: -5, anchor: "start" }
+              : label.anchor === "end" ? { dx: 7, dy: 3, anchor: "start" }
+              : label.anchor === "start" ? { dx: -7, dy: 3, anchor: "end" }
+              : label.dy < 0 ? { dx: 0, dy: 13, anchor: "middle" }
+              : { dx: 0, dy: -8, anchor: "middle" });
+          return (
+            <text x={x + np.dx} y={y + np.dy} textAnchor={np.anchor} className="mc-pin-num">{p.n}</text>
+          );
+        })()}
+        {label && (
+          <>
+            {label.leader && (
+              <line x1={x + (label.anchor === "end" ? -3 : 3) * 1.6} y1={y + (label.dy > 0 ? 3 : -3)}
+                x2={x + label.dx * 0.92} y2={y + label.dy - 3} className="mc-leader" />
+            )}
+            <text x={x + label.dx} y={y + label.dy} textAnchor={label.anchor} className="mc-label">
+              {label.text}
+            </text>
+          </>
+        )}
+      </G>
+    );
+  };
+
+  return (
+    <svg viewBox={`0 0 ${base.w} ${base.h}`} className={"mc-svg" + (full ? " mc-svg--full" : " mc-svg--mini")}
+      preserveAspectRatio="xMidYMid meet" role={full ? "img" : undefined}
+      aria-label={full ? "Chart of the Pacific tracing Gene's journey, 1940 to 1944" : undefined}
+      aria-hidden={full ? undefined : true}
+    >
+      <g className="mc-graticule" aria-hidden="true">
+        {lonLines.map((x, i) => <line key={`lon${i}`} x1={x} y1="0" x2={x} y2={base.h} />)}
+        {latLines.map((l, i) => (
+          <line key={`lat${i}`} x1="0" y1={l.y} x2={base.w} y2={l.y}
+            className={l.eq ? "mc-grat-eq" : undefined} />
+        ))}
+      </g>
+      <g aria-hidden="true">
+        {base.land.map((d, i) => <path key={i} d={d} className="mc-land" />)}
+        {base.lakes.map((d, i) => <path key={`lk${i}`} d={d} className="mc-lake" />)}
+      </g>
+      {full && (
+        <rect x="0.5" y="0.5" width={base.w - 1} height={base.h - 1} className="mc-neatline" aria-hidden="true" />
+      )}
+      {full && <CompassRose x={615} y={478} />}
+      <g aria-hidden="true">
+        {legs.map((leg, i) => {
+          const [x1, y1] = xy(leg.from.place);
+          const [x2, y2] = xy(leg.to.place);
+          const d = legPath(x1, y1, x2, y2);
+          const cls = "mc-leg" + (leg.approx ? " mc-leg--approx" : "");
+          if (!animate) return <path key={i} d={d} className={cls} />;
+          // pathLength animation owns stroke-dasharray, so dashed (approx)
+          // legs fade in instead of drawing on.
+          return leg.approx ? (
+            <motion.path key={i} d={d} className={cls}
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+              transition={{ delay: legDelay(i), duration: 0.55 }} />
+          ) : (
+            <motion.path key={i} d={d} className={cls}
+              initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: 1 }}
+              transition={{ delay: legDelay(i), duration: 0.55, ease: "easeInOut" }} />
+          );
+        })}
+      </g>
+      {pins.map((p) => renderPin(p, p.key === activePlace))}
+      {extraPin && renderPin(extraPin, true)}
+      {full && (
+        <g className="mc-censored" aria-hidden="true" transform="rotate(-4 330 442)">
+          <text x="330" y="442">positions censored</text>
+          <text x="330" y="461" className="mc-censored-sub">reconstructed from the ship's record</text>
+        </g>
+      )}
+    </svg>
+  );
+}
+
+/* JourneyPage — the frontispiece: the full chart, then a numbered legend
+   (the accessible tap targets, one per stop) that jumps into the letters. */
+function JourneyPage({ journey, onSelectStop, focusPlace }) {
+  return (
+    <section className="journey-page">
+      <div className="journey-eyebrow">Frontispiece</div>
+      <h2 className="journey-title">The Journey</h2>
+      <div className="journey-dates">Great Lakes to the Solomon Islands, and home · 1940 – 1944</div>
+      <div className="hairline-rule" />
+      <div className="journey-chart">
+        <MapChart journey={journey} mode="full" activePlace={focusPlace} onSelectStop={onSelectStop} />
+      </div>
+      <ol className="journey-legend">
+        {journey.pins.map((p) => (
+          <li key={p.key}>
+            <button
+              className={"journey-stop" + (focusPlace === p.key ? " is-focus" : "")}
+              onClick={() => onSelectStop(p.key)}
+            >
+              <span className="js-num">{p.n}</span>
+              <span className="js-meta">
+                <span className="js-label">{p.place.label}</span>
+                <span className="js-dates">
+                  {pinDateSpan(p)} · {p.letters.length === 1 ? "1 letter" : `${p.letters.length} letters`}
+                </span>
+              </span>
+            </button>
+          </li>
+        ))}
+      </ol>
+      <p className="journey-note">
+        Hollow pins and broken lines are the censored stretches: positions
+        reconstructed from the ship's record, not from the letters.
+      </p>
+    </section>
+  );
+}
+
+/* LetterWaypoint — the small waypoint map under each letter: the route
+   travelled so far, with this letter's place pulsing. Tapping it opens
+   the frontispiece chart focused on that stop. */
+function LetterWaypoint({ letter, journey, onOpenJourney }) {
+  const place = PLACES[letter.place];
+  if (!MAP_BASE || !place || !journey || !journey.stops.length) return null;
+  const approx = !!place.approx;
+  return (
+    <div className="letter-waypoint">
+      <button
+        className="letter-waypoint-map"
+        onClick={() => onOpenJourney(letter.place)}
+        aria-label={`The journey so far. This letter was written from ${place.label}${approx ? " (position reconstructed)" : ""}. Open the full journey map.`}
+      >
+        <MapChart journey={journey} mode="mini" activePlace={letter.place} visibleThrough={letter.date} />
+      </button>
+      <div className="letter-waypoint-caption">
+        <span className="lw-place">{place.label}</span>
+        {approx && <span className="lw-approx">position reconstructed</span>}
+        <span className="lw-link" aria-hidden="true">the journey so far · tap for the full map</span>
+      </div>
     </div>
   );
 }
@@ -1177,11 +1543,14 @@ function PhotoLightbox({ items, index, onClose }) {
 /*  Page renderer                                                      */
 /* ------------------------------------------------------------------ */
 
-function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLetters, onJumpToLetter, onOpenPhoto, highlight }) {
+function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLetters, onJumpToLetter, onOpenPhoto, highlight, journey, onSelectStop, onOpenJourney, focusPlace }) {
   return (
     <main className="archive">
       <Folio page={page} totalLetters={totalLetters} />
       {page.type === "title" && <TitlePage />}
+      {page.type === "journey" && (
+        <JourneyPage journey={journey} onSelectStop={onSelectStop} focusPlace={focusPlace} />
+      )}
       {page.type === "chapter" && (
         <ChapterDivider
           chapter={page.chapter}
@@ -1191,11 +1560,14 @@ function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLette
         />
       )}
       {page.type === "letter" && (
-        <LetterCard
-          letter={page.letter}
-          onOpen={onOpen}
-          highlight={highlight && highlight.letterId === page.letter.id ? highlight : null}
-        />
+        <>
+          <LetterCard
+            letter={page.letter}
+            onOpen={onOpen}
+            highlight={highlight && highlight.letterId === page.letter.id ? highlight : null}
+          />
+          <LetterWaypoint letter={page.letter} journey={journey} onOpenJourney={onOpenJourney} />
+        </>
       )}
       {page.type === "cast-intro" && <CastIntro cast={page.cast} />}
       {page.type === "gallery" && <PhotoGallery gallery={page.gallery} onOpenPhoto={onOpenPhoto} />}
@@ -1276,6 +1648,7 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
 
   const sections = [];
   let titleIdx = pages.findIndex(p => p.type === "title");
+  let journeyIdx = pages.findIndex(p => p.type === "journey");
   let closingIdx = pages.findIndex(p => p.type === "closing");
   let castIntroIdx = pages.findIndex(p => p.type === "cast-intro");
   let galleryIdx = pages.findIndex(p => p.type === "gallery");
@@ -1310,6 +1683,16 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
           <span className="toc-num">—</span>
           <span className="toc-date">Title page</span>
         </button>
+
+        {journeyIdx >= 0 && (
+          <button
+            className={"toc-entry" + (currentIdx === journeyIdx ? " is-current" : "")}
+            onClick={() => onJump(journeyIdx)}
+          >
+            <span className="toc-num">—</span>
+            <span className="toc-date">The Journey</span>
+          </button>
+        )}
 
         {sections.map((sec) => {
           const lastLetterIdx = sec.chapterIdx + sec.items.length;
@@ -1457,6 +1840,8 @@ function CoverModal({ onClose }) {
 
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS, window.CAST, window.PHOTOS), []);
+  const journey = useMemo(() => buildJourney(LETTERS, PLACES), []);
+  const journeyIdx = useMemo(() => pages.findIndex(p => p.type === "journey"), [pages]);
   const [pageIdx, setPageIdx] = useState(() => parseHashIdx(pages.length - 1));
   const [direction, setDirection] = useState(1);
   const prevIdxRef = useRef(0);
@@ -1465,6 +1850,7 @@ function App() {
   const [tocOpen, setTocOpen] = useState(false);
   const [highlight, setHighlight] = useState(null);     // { letterId, terms, token }
   const [returnToCast, setReturnToCast] = useState(null); // page index to return to
+  const [focusPlace, setFocusPlace] = useState(null);   // journey pin to spotlight
   const tokenRef = useRef(0);
   const swipeRef = useRef(null);
   const reduced = useReducedMotion();
@@ -1503,6 +1889,18 @@ function App() {
 
   const openPhoto = useCallback((items, idx) => setPlb({ items, idx }), []);
   const closePhoto = useCallback(() => setPlb(null), []);
+
+  // Journey pin (or legend row) → the first letter written from that place.
+  const jumpToPlace = useCallback((key) => {
+    const idx = pages.findIndex(p => p.type === "letter" && p.letter.place === key);
+    if (idx >= 0) goto(idx);
+  }, [pages, goto]);
+
+  // A letter's waypoint map → the frontispiece, with that stop spotlit.
+  const openJourney = useCallback((key) => {
+    setFocusPlace(key || null);
+    if (journeyIdx >= 0) goto(journeyIdx);
+  }, [goto, journeyIdx]);
 
   const next = useCallback(() => {
     setPageIdx(curr => {
@@ -1584,11 +1982,15 @@ function App() {
   const currentPage = pages[pageIdx];
 
   // Once the reader leaves the letters (back to the cast, gallery, title, or
-  // closing), drop the highlight and the "return to cast" affordance.
+  // closing), drop the highlight and the "return to cast" affordance. The
+  // journey spotlight likewise only survives while on the journey page.
   useEffect(() => {
     if (currentPage.type !== "letter") {
       setReturnToCast(curr => (curr === null ? curr : null));
       setHighlight(curr => (curr === null ? curr : null));
+    }
+    if (currentPage.type !== "journey") {
+      setFocusPlace(curr => (curr === null ? curr : null));
     }
   }, [pageIdx]);
 
@@ -1677,6 +2079,10 @@ function App() {
               onJumpToLetter={jumpToLetter}
               onOpenPhoto={openPhoto}
               highlight={highlight}
+              journey={journey}
+              onSelectStop={jumpToPlace}
+              onOpenJourney={openJourney}
+              focusPlace={focusPlace}
             />
           </motion.div>
         </AnimatePresence>

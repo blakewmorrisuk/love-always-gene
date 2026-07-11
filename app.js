@@ -42,6 +42,7 @@ function pearlHarborMarker(dateStr) {
 function buildPages(letters, chapters, cast, photos) {
   const grouped = groupByChapter(letters, chapters);
   const pages = [{ type: "title" }];
+  pages.push({ type: "journey" });
   for (const c of chapters) {
     const ls = grouped[c.key];
     if (!ls || !ls.length) continue;
@@ -70,6 +71,66 @@ function parseHashIdx(maxIdx) {
   const i = parseInt(m[1], 10);
   if (isNaN(i) || i < 0 || i > maxIdx) return 0;
   return i;
+}
+const PLACES = window.PLACES || {};
+const MAP_BASE = window.MAP_BASE || null;
+function projectLL(lat, lon, base) {
+  const L = lon >= base.lon0 ? lon : lon + 360;
+  return [
+    (L - base.lon0) / (base.lon1 - base.lon0) * base.w,
+    (base.lat1 - lat) / (base.lat1 - base.lat0) * base.h
+  ];
+}
+function buildJourney(letters, places) {
+  const sorted = [...letters].sort((a, b) => a.date === b.date ? (a.n || 0) - (b.n || 0) : a.date.localeCompare(b.date));
+  const stops = [];
+  for (const l of sorted) {
+    const place = places[l.place];
+    if (!place || place.route === false) continue;
+    const last = stops[stops.length - 1];
+    if (last && last.key === l.place) {
+      last.letters.push(l);
+      last.lastDate = l.date;
+    } else {
+      stops.push({ key: l.place, place, letters: [l], firstDate: l.date, lastDate: l.date });
+    }
+  }
+  const legs = [];
+  for (let i = 1; i < stops.length; i++) {
+    legs.push({
+      from: stops[i - 1],
+      to: stops[i],
+      approx: !!(stops[i - 1].place.approx || stops[i].place.approx)
+    });
+  }
+  const pins = [];
+  const byKey = {};
+  for (const s of stops) {
+    let p = byKey[s.key];
+    if (!p) {
+      p = byKey[s.key] = {
+        key: s.key,
+        place: s.place,
+        n: pins.length + 1,
+        letters: [],
+        firstDate: s.firstDate,
+        lastDate: s.lastDate
+      };
+      pins.push(p);
+    }
+    p.letters.push(...s.letters);
+    if (s.lastDate > p.lastDate) p.lastDate = s.lastDate;
+  }
+  return { stops, legs, pins };
+}
+const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function monthYear(dateStr) {
+  const m = dateStr.match(/(\d{4})-(\d{2})/);
+  return m ? `${MONTHS_SHORT[parseInt(m[2], 10) - 1]} ${m[1]}` : dateStr;
+}
+function pinDateSpan(pin) {
+  const a = monthYear(pin.firstDate), b = monthYear(pin.lastDate);
+  return a === b ? a : `${a} – ${b}`;
 }
 function weatherKind(w) {
   if (!w || w.wmo == null) return null;
@@ -117,7 +178,19 @@ function WeatherGlyph({ weather }) {
   const kind = weatherKind(weather);
   if (!kind || !weather) return null;
   const t = weather.tmax_f != null ? `${Math.round(weather.tmax_f)}°` : "";
-  return /* @__PURE__ */ React.createElement("div", { className: "weather-glyph", "aria-label": `Weather: ${weatherLabel(kind)}${t ? ", high " + t : ""}` }, /* @__PURE__ */ React.createElement(WeatherIcon, { kind }), /* @__PURE__ */ React.createElement("span", null, weatherLabel(kind)), t && /* @__PURE__ */ React.createElement("span", { className: "wg-temp" }, t));
+  const approx = !!weather.approx;
+  const approxNote = "reconstructed from the ship's estimated position";
+  return /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "weather-glyph" + (approx ? " weather-glyph--approx" : ""),
+      "aria-label": `Weather: ${weatherLabel(kind)}${t ? ", high " + t : ""}${approx ? ` (${approxNote})` : ""}`,
+      title: approx ? approxNote : void 0
+    },
+    /* @__PURE__ */ React.createElement(WeatherIcon, { kind }),
+    /* @__PURE__ */ React.createElement("span", null, weatherLabel(kind)),
+    t && /* @__PURE__ */ React.createElement("span", { className: "wg-temp" }, approx ? `≈ ${t}` : t)
+  );
 }
 function Atmosphere({ chapterKey, weather, on }) {
   const kind = weather ? weatherKind(weather) : null;
@@ -172,7 +245,7 @@ function Atmosphere({ chapterKey, weather, on }) {
     dur: 3 + Math.random() * 3
   })), []);
   if (!on) return null;
-  if (chapterKey === "at-war") return null;
+  if (chapterKey === "at-war" && !kind) return null;
   if (kind === "rain" || kind === "storm") {
     return /* @__PURE__ */ React.createElement("div", { className: "atmosphere atmosphere--on", "aria-hidden": "true" }, /* @__PURE__ */ React.createElement("div", { className: "rain-mist" }), kind === "storm" && /* @__PURE__ */ React.createElement("div", { className: "lightning-flash" }), rain.map((r, i) => /* @__PURE__ */ React.createElement("span", { key: i, className: "rain-streak", style: {
       left: `${r.left}%`,
@@ -296,6 +369,201 @@ function RouteDiagram({ activeChapter, chapters, letters }) {
       label
     ), /* @__PURE__ */ React.createElement("text", { x: p.x, y: p.y + 30, textAnchor: "middle", className: "route-date" }, dr));
   })));
+}
+const MAP_LABELS = {
+  "great-lakes": { text: "Great Lakes", dx: -9, dy: -5, anchor: "end", num: { dx: 0, dy: -9, anchor: "middle" } },
+  "chicago": { text: "Chicago", dx: 9, dy: 13, anchor: "start", num: { dx: -9, dy: 7, anchor: "end" } },
+  "el-paso": { text: "El Paso", dx: 8, dy: 11, anchor: "start" },
+  "san-diego": { text: "San Diego", dx: -11, dy: 16, anchor: "end", leader: true, num: { dx: 7, dy: 3, anchor: "start" } },
+  "pearl-harbor": { text: "Pearl Harbor", dx: -2, dy: -12, anchor: "middle" },
+  "bremerton": { text: "Bremerton", dx: 10, dy: -2, anchor: "start" },
+  "long-beach": { text: "Long Beach", dx: -11, dy: 5, anchor: "end", leader: true, num: { dx: 0, dy: -8, anchor: "middle" } },
+  "mare-island": { text: "Mare Island", dx: 11, dy: -7, anchor: "start", leader: true, num: { dx: 8, dy: -4, anchor: "start" } },
+  "san-francisco": { text: "San Francisco", dx: -11, dy: 12, anchor: "end", leader: true, num: { dx: 7, dy: 4, anchor: "start" } },
+  "wake-relief": { text: "Wake sortie", dx: 0, dy: -11, anchor: "middle" },
+  "coral-sea": { text: "Coral Sea", dx: -9, dy: 5, anchor: "end" },
+  "south-pacific-transit": { text: "South Pacific", dx: 10, dy: 5, anchor: "start" },
+  "solomons-area": { text: "The Solomons", dx: 10, dy: 9, anchor: "start" },
+  "tulagi": { text: "Tulagi", dx: -8, dy: -5, anchor: "end" },
+  "sydney": { text: "Sydney", dx: -10, dy: 7, anchor: "end" },
+  "kentucky": { text: "Home", dx: 0, dy: 16, anchor: "middle", num: { dx: -10, dy: 4, anchor: "end" } },
+  "montgomery-wv": { text: "Montgomery", dx: 9, dy: -4, anchor: "start" }
+};
+function legPath(x1, y1, x2, y2) {
+  const dx = x2 - x1, dy = y2 - y1;
+  const len = Math.hypot(dx, dy) || 1;
+  const bow = Math.min(len * 0.1, 40);
+  let px = -dy / len, py = dx / len;
+  if (py > 0) {
+    px = -px;
+    py = -py;
+  }
+  const cx = x1 + dx / 2 + px * bow;
+  const cy = y1 + dy / 2 + py * bow;
+  return `M ${x1.toFixed(1)} ${y1.toFixed(1)} Q ${cx.toFixed(1)} ${cy.toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`;
+}
+function starPath(x, y, r) {
+  const pts = [];
+  for (let i = 0; i < 10; i++) {
+    const a = -Math.PI / 2 + i * Math.PI / 5;
+    const rr = i % 2 === 0 ? r : r * 0.45;
+    pts.push(`${(x + Math.cos(a) * rr).toFixed(1)} ${(y + Math.sin(a) * rr).toFixed(1)}`);
+  }
+  return `M ${pts.join(" L ")} Z`;
+}
+function CompassRose({ x, y }) {
+  return /* @__PURE__ */ React.createElement("g", { className: "mc-rose", transform: `translate(${x} ${y})`, "aria-hidden": "true" }, /* @__PURE__ */ React.createElement("circle", { r: "26", className: "mc-rose-ring" }), /* @__PURE__ */ React.createElement("circle", { r: "19", className: "mc-rose-ring mc-rose-ring--inner" }), [0, 45, 90, 135].map((a) => /* @__PURE__ */ React.createElement(
+    "line",
+    {
+      key: a,
+      x1: "0",
+      y1: "-24",
+      x2: "0",
+      y2: "24",
+      transform: `rotate(${a})`,
+      className: "mc-rose-line" + (a % 90 === 0 ? "" : " mc-rose-line--minor")
+    }
+  )), /* @__PURE__ */ React.createElement("path", { d: "M 0 -24 L 3.6 -7 L 0 -10.5 L -3.6 -7 Z", className: "mc-rose-north" }), /* @__PURE__ */ React.createElement("text", { y: "-31", textAnchor: "middle", className: "mc-rose-n" }, "N"));
+}
+function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) {
+  const reduced = useReducedMotion();
+  const base = MAP_BASE;
+  const full = mode === "full";
+  if (!base || !journey || !journey.stops.length) return null;
+  const xy = (place) => projectLL(place.lat, place.lon, base);
+  const cutoff = visibleThrough || "9999-12-31";
+  const legs = journey.legs.filter((l) => l.to.firstDate <= cutoff);
+  const pins = journey.pins.filter((p) => p.firstDate <= cutoff);
+  const extraPin = activePlace && PLACES[activePlace] && !pins.some((p) => p.key === activePlace) ? { key: activePlace, place: PLACES[activePlace], letters: [], n: null } : null;
+  const lonLines = [];
+  for (let lon = 120; lon < base.lon1; lon += 20) {
+    lonLines.push((lon - base.lon0) / (base.lon1 - base.lon0) * base.w);
+  }
+  const latLines = [];
+  for (let lat = -40; lat <= 40; lat += 20) {
+    latLines.push({ y: (base.lat1 - lat) / (base.lat1 - base.lat0) * base.h, eq: lat === 0 });
+  }
+  const animate = full && !reduced;
+  const legDelay = (i) => 0.45 + i * 0.09;
+  const renderPin = (p, isActive) => {
+    const [x, y] = xy(p.place);
+    const kind = p.place.kind;
+    const cls = "mc-pin" + (p.place.approx ? " mc-pin--approx" : "") + (kind === "home" ? " mc-pin--home" : "") + (isActive ? " mc-pin--active" : "");
+    const label = full ? MAP_LABELS[p.key] : null;
+    const count = p.letters.length;
+    const tip = `${p.place.label}${count ? ` · ${pinDateSpan(p)} · ${count === 1 ? "1 letter" : `${count} letters`}` : ""}`;
+    const inboundIdx = legs.findIndex((l) => l.to.key === p.key);
+    const delay = inboundIdx >= 0 ? legDelay(inboundIdx) + 0.35 : 0.3;
+    const G = animate ? motion.g : "g";
+    const gProps = animate ? { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay, duration: 0.4 } } : {};
+    return /* @__PURE__ */ React.createElement(
+      G,
+      {
+        key: p.key,
+        ...gProps,
+        className: "mc-stop" + (full && onSelectStop ? " mc-stop--link" : ""),
+        onClick: full && onSelectStop ? () => onSelectStop(p.key) : void 0
+      },
+      /* @__PURE__ */ React.createElement("title", null, tip),
+      isActive && /* @__PURE__ */ React.createElement("circle", { cx: x, cy: y, r: "11", className: "route-pin-active-halo" }),
+      kind === "home" ? /* @__PURE__ */ React.createElement("path", { d: starPath(x, y, 6.5), className: cls }) : /* @__PURE__ */ React.createElement("circle", { cx: x, cy: y, r: isActive ? 5 : 4.2, className: cls }),
+      full && p.n != null && (() => {
+        const np = label && label.num || (!label ? { dx: 8, dy: -5, anchor: "start" } : label.anchor === "end" ? { dx: 7, dy: 3, anchor: "start" } : label.anchor === "start" ? { dx: -7, dy: 3, anchor: "end" } : label.dy < 0 ? { dx: 0, dy: 13, anchor: "middle" } : { dx: 0, dy: -8, anchor: "middle" });
+        return /* @__PURE__ */ React.createElement("text", { x: x + np.dx, y: y + np.dy, textAnchor: np.anchor, className: "mc-pin-num" }, p.n);
+      })(),
+      label && /* @__PURE__ */ React.createElement(React.Fragment, null, label.leader && /* @__PURE__ */ React.createElement(
+        "line",
+        {
+          x1: x + (label.anchor === "end" ? -3 : 3) * 1.6,
+          y1: y + (label.dy > 0 ? 3 : -3),
+          x2: x + label.dx * 0.92,
+          y2: y + label.dy - 3,
+          className: "mc-leader"
+        }
+      ), /* @__PURE__ */ React.createElement("text", { x: x + label.dx, y: y + label.dy, textAnchor: label.anchor, className: "mc-label" }, label.text))
+    );
+  };
+  return /* @__PURE__ */ React.createElement(
+    "svg",
+    {
+      viewBox: `0 0 ${base.w} ${base.h}`,
+      className: "mc-svg" + (full ? " mc-svg--full" : " mc-svg--mini"),
+      preserveAspectRatio: "xMidYMid meet",
+      role: full ? "img" : void 0,
+      "aria-label": full ? "Chart of the Pacific tracing Gene's journey, 1940 to 1944" : void 0,
+      "aria-hidden": full ? void 0 : true
+    },
+    /* @__PURE__ */ React.createElement("g", { className: "mc-graticule", "aria-hidden": "true" }, lonLines.map((x, i) => /* @__PURE__ */ React.createElement("line", { key: `lon${i}`, x1: x, y1: "0", x2: x, y2: base.h })), latLines.map((l, i) => /* @__PURE__ */ React.createElement(
+      "line",
+      {
+        key: `lat${i}`,
+        x1: "0",
+        y1: l.y,
+        x2: base.w,
+        y2: l.y,
+        className: l.eq ? "mc-grat-eq" : void 0
+      }
+    ))),
+    /* @__PURE__ */ React.createElement("g", { "aria-hidden": "true" }, base.land.map((d, i) => /* @__PURE__ */ React.createElement("path", { key: i, d, className: "mc-land" })), base.lakes.map((d, i) => /* @__PURE__ */ React.createElement("path", { key: `lk${i}`, d, className: "mc-lake" }))),
+    full && /* @__PURE__ */ React.createElement("rect", { x: "0.5", y: "0.5", width: base.w - 1, height: base.h - 1, className: "mc-neatline", "aria-hidden": "true" }),
+    full && /* @__PURE__ */ React.createElement(CompassRose, { x: 615, y: 478 }),
+    /* @__PURE__ */ React.createElement("g", { "aria-hidden": "true" }, legs.map((leg, i) => {
+      const [x1, y1] = xy(leg.from.place);
+      const [x2, y2] = xy(leg.to.place);
+      const d = legPath(x1, y1, x2, y2);
+      const cls = "mc-leg" + (leg.approx ? " mc-leg--approx" : "");
+      if (!animate) return /* @__PURE__ */ React.createElement("path", { key: i, d, className: cls });
+      return leg.approx ? /* @__PURE__ */ React.createElement(
+        motion.path,
+        {
+          key: i,
+          d,
+          className: cls,
+          initial: { opacity: 0 },
+          animate: { opacity: 1 },
+          transition: { delay: legDelay(i), duration: 0.55 }
+        }
+      ) : /* @__PURE__ */ React.createElement(
+        motion.path,
+        {
+          key: i,
+          d,
+          className: cls,
+          initial: { pathLength: 0, opacity: 0 },
+          animate: { pathLength: 1, opacity: 1 },
+          transition: { delay: legDelay(i), duration: 0.55, ease: "easeInOut" }
+        }
+      );
+    })),
+    pins.map((p) => renderPin(p, p.key === activePlace)),
+    extraPin && renderPin(extraPin, true),
+    full && /* @__PURE__ */ React.createElement("g", { className: "mc-censored", "aria-hidden": "true", transform: "rotate(-4 330 442)" }, /* @__PURE__ */ React.createElement("text", { x: "330", y: "442" }, "positions censored"), /* @__PURE__ */ React.createElement("text", { x: "330", y: "461", className: "mc-censored-sub" }, "reconstructed from the ship's record"))
+  );
+}
+function JourneyPage({ journey, onSelectStop, focusPlace }) {
+  return /* @__PURE__ */ React.createElement("section", { className: "journey-page" }, /* @__PURE__ */ React.createElement("div", { className: "journey-eyebrow" }, "Frontispiece"), /* @__PURE__ */ React.createElement("h2", { className: "journey-title" }, "The Journey"), /* @__PURE__ */ React.createElement("div", { className: "journey-dates" }, "Great Lakes to the Solomon Islands, and home · 1940 – 1944"), /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("div", { className: "journey-chart" }, /* @__PURE__ */ React.createElement(MapChart, { journey, mode: "full", activePlace: focusPlace, onSelectStop })), /* @__PURE__ */ React.createElement("ol", { className: "journey-legend" }, journey.pins.map((p) => /* @__PURE__ */ React.createElement("li", { key: p.key }, /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      className: "journey-stop" + (focusPlace === p.key ? " is-focus" : ""),
+      onClick: () => onSelectStop(p.key)
+    },
+    /* @__PURE__ */ React.createElement("span", { className: "js-num" }, p.n),
+    /* @__PURE__ */ React.createElement("span", { className: "js-meta" }, /* @__PURE__ */ React.createElement("span", { className: "js-label" }, p.place.label), /* @__PURE__ */ React.createElement("span", { className: "js-dates" }, pinDateSpan(p), " · ", p.letters.length === 1 ? "1 letter" : `${p.letters.length} letters`))
+  )))), /* @__PURE__ */ React.createElement("p", { className: "journey-note" }, "Hollow pins and broken lines are the censored stretches: positions reconstructed from the ship's record, not from the letters."));
+}
+function LetterWaypoint({ letter, journey, onOpenJourney }) {
+  const place = PLACES[letter.place];
+  if (!MAP_BASE || !place || !journey || !journey.stops.length) return null;
+  const approx = !!place.approx;
+  return /* @__PURE__ */ React.createElement("div", { className: "letter-waypoint" }, /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      className: "letter-waypoint-map",
+      onClick: () => onOpenJourney(letter.place),
+      "aria-label": `The journey so far. This letter was written from ${place.label}${approx ? " (position reconstructed)" : ""}. Open the full journey map.`
+    },
+    /* @__PURE__ */ React.createElement(MapChart, { journey, mode: "mini", activePlace: letter.place, visibleThrough: letter.date })
+  ), /* @__PURE__ */ React.createElement("div", { className: "letter-waypoint-caption" }, /* @__PURE__ */ React.createElement("span", { className: "lw-place" }, place.label), approx && /* @__PURE__ */ React.createElement("span", { className: "lw-approx" }, "position reconstructed"), /* @__PURE__ */ React.createElement("span", { className: "lw-link", "aria-hidden": "true" }, "the journey so far · tap for the full map")));
 }
 function Lightbox({ letter, page, onClose, onNav }) {
   const closeRef = useRef(null);
@@ -648,8 +916,8 @@ function PhotoLightbox({ items, index, onClose }) {
     go(1);
   }, "aria-label": "Next photograph" }, "›")));
 }
-function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLetters, onJumpToLetter, onOpenPhoto, highlight }) {
-  return /* @__PURE__ */ React.createElement("main", { className: "archive" }, /* @__PURE__ */ React.createElement(Folio, { page, totalLetters }), page.type === "title" && /* @__PURE__ */ React.createElement(TitlePage, null), page.type === "chapter" && /* @__PURE__ */ React.createElement(
+function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLetters, onJumpToLetter, onOpenPhoto, highlight, journey, onSelectStop, onOpenJourney, focusPlace }) {
+  return /* @__PURE__ */ React.createElement("main", { className: "archive" }, /* @__PURE__ */ React.createElement(Folio, { page, totalLetters }), page.type === "title" && /* @__PURE__ */ React.createElement(TitlePage, null), page.type === "journey" && /* @__PURE__ */ React.createElement(JourneyPage, { journey, onSelectStop, focusPlace }), page.type === "chapter" && /* @__PURE__ */ React.createElement(
     ChapterDivider,
     {
       chapter: page.chapter,
@@ -657,14 +925,14 @@ function PageContent({ page, totalLetters, onOpen, onNext, allChapters, allLette
       allChapters,
       allLetters
     }
-  ), page.type === "letter" && /* @__PURE__ */ React.createElement(
+  ), page.type === "letter" && /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(
     LetterCard,
     {
       letter: page.letter,
       onOpen,
       highlight: highlight && highlight.letterId === page.letter.id ? highlight : null
     }
-  ), page.type === "cast-intro" && /* @__PURE__ */ React.createElement(CastIntro, { cast: page.cast }), page.type === "gallery" && /* @__PURE__ */ React.createElement(PhotoGallery, { gallery: page.gallery, onOpenPhoto }), page.type === "cast-group" && /* @__PURE__ */ React.createElement(CastGroup, { group: page.group, people: page.people, onJumpToLetter }), page.type === "closing" && /* @__PURE__ */ React.createElement(Closing, null));
+  ), /* @__PURE__ */ React.createElement(LetterWaypoint, { letter: page.letter, journey, onOpenJourney })), page.type === "cast-intro" && /* @__PURE__ */ React.createElement(CastIntro, { cast: page.cast }), page.type === "gallery" && /* @__PURE__ */ React.createElement(PhotoGallery, { gallery: page.gallery, onOpenPhoto }), page.type === "cast-group" && /* @__PURE__ */ React.createElement(CastGroup, { group: page.group, people: page.people, onJumpToLetter }), page.type === "closing" && /* @__PURE__ */ React.createElement(Closing, null));
 }
 function NavChrome({ pageIdx, total, onPrev, onNext, onToc }) {
   return /* @__PURE__ */ React.createElement("div", { className: "nav-chrome", role: "navigation" }, /* @__PURE__ */ React.createElement("button", { className: "nav-btn nav-prev", onClick: onPrev, disabled: pageIdx === 0 }, /* @__PURE__ */ React.createElement("span", { className: "nav-arrow" }, "‹"), " Previous"), /* @__PURE__ */ React.createElement("button", { className: "toc-btn", onClick: onToc }, "Contents"), /* @__PURE__ */ React.createElement("button", { className: "nav-btn nav-next", onClick: onNext, disabled: pageIdx === total - 1 }, "Next ", /* @__PURE__ */ React.createElement("span", { className: "nav-arrow" }, "›")));
@@ -714,6 +982,7 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
   }, [onClose]);
   const sections = [];
   let titleIdx = pages.findIndex((p) => p.type === "title");
+  let journeyIdx = pages.findIndex((p) => p.type === "journey");
   let closingIdx = pages.findIndex((p) => p.type === "closing");
   let castIntroIdx = pages.findIndex((p) => p.type === "cast-intro");
   let galleryIdx = pages.findIndex((p) => p.type === "gallery");
@@ -737,6 +1006,14 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
     },
     /* @__PURE__ */ React.createElement("span", { className: "toc-num" }, "—"),
     /* @__PURE__ */ React.createElement("span", { className: "toc-date" }, "Title page")
+  ), journeyIdx >= 0 && /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      className: "toc-entry" + (currentIdx === journeyIdx ? " is-current" : ""),
+      onClick: () => onJump(journeyIdx)
+    },
+    /* @__PURE__ */ React.createElement("span", { className: "toc-num" }, "—"),
+    /* @__PURE__ */ React.createElement("span", { className: "toc-date" }, "The Journey")
   ), sections.map((sec) => {
     const lastLetterIdx = sec.chapterIdx + sec.items.length;
     let progress;
@@ -834,6 +1111,8 @@ function CoverModal({ onClose }) {
 }
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS, window.CAST, window.PHOTOS), []);
+  const journey = useMemo(() => buildJourney(LETTERS, PLACES), []);
+  const journeyIdx = useMemo(() => pages.findIndex((p) => p.type === "journey"), [pages]);
   const [pageIdx, setPageIdx] = useState(() => parseHashIdx(pages.length - 1));
   const [direction, setDirection] = useState(1);
   const prevIdxRef = useRef(0);
@@ -842,6 +1121,7 @@ function App() {
   const [tocOpen, setTocOpen] = useState(false);
   const [highlight, setHighlight] = useState(null);
   const [returnToCast, setReturnToCast] = useState(null);
+  const [focusPlace, setFocusPlace] = useState(null);
   const tokenRef = useRef(0);
   const swipeRef = useRef(null);
   const reduced = useReducedMotion();
@@ -870,6 +1150,14 @@ function App() {
   }, [pages, goto, pageIdx]);
   const openPhoto = useCallback((items, idx) => setPlb({ items, idx }), []);
   const closePhoto = useCallback(() => setPlb(null), []);
+  const jumpToPlace = useCallback((key) => {
+    const idx = pages.findIndex((p) => p.type === "letter" && p.letter.place === key);
+    if (idx >= 0) goto(idx);
+  }, [pages, goto]);
+  const openJourney = useCallback((key) => {
+    setFocusPlace(key || null);
+    if (journeyIdx >= 0) goto(journeyIdx);
+  }, [goto, journeyIdx]);
   const next = useCallback(() => {
     setPageIdx((curr) => {
       const n = Math.min(pages.length - 1, curr + 1);
@@ -954,6 +1242,9 @@ function App() {
       setReturnToCast((curr) => curr === null ? curr : null);
       setHighlight((curr) => curr === null ? curr : null);
     }
+    if (currentPage.type !== "journey") {
+      setFocusPlace((curr) => curr === null ? curr : null);
+    }
   }, [pageIdx]);
   const chapterKey = useMemo(() => {
     if (currentPage.type === "chapter") return currentPage.chapter.key;
@@ -1025,7 +1316,11 @@ function App() {
         allLetters: LETTERS,
         onJumpToLetter: jumpToLetter,
         onOpenPhoto: openPhoto,
-        highlight
+        highlight,
+        journey,
+        onSelectStop: jumpToPlace,
+        onOpenJourney: openJourney,
+        focusPlace
       }
     )
   ))), /* @__PURE__ */ React.createElement(
