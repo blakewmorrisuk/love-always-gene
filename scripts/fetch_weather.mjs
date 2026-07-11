@@ -1,13 +1,19 @@
-// Fetches historical weather for every letter date+location from Open-Meteo's
-// free archive API (which goes back to 1940), then writes ../weather.js with a
-// window.LETTER_WEATHER map keyed by letter id.
+// Fetches historical weather for every letter's date + place from Open-Meteo's
+// free archive API (ERA5 reanalysis, back to 1940 and global — ocean included),
+// then writes ../weather.js with a window.LETTER_WEATHER map keyed by letter id.
 //
 //   Usage:    node scripts/fetch_weather.mjs
 //   Requires: Node 18+ (built-in fetch).
 //
-// Open-Meteo is free and unauthenticated. If the script is rerun it will
-// overwrite weather.js. To re-do a single letter, edit weather.js by hand
-// or rerun the whole script.
+// The worklist comes from letters.json (each letter's `place` field) joined to
+// places.json (coordinates + timezone) — nothing is hardcoded here. Letters at
+// an `approx` place (the censored at-sea waypoints reconstructed from the
+// U.S.S. New Orleans's documented movements) carry `approx: true` through to
+// their weather record, and the site marks the badge accordingly.
+//
+// One request per place spanning that place's first-to-last letter date keeps
+// this to ~19 requests. Open-Meteo is free and unauthenticated. Rerunning
+// overwrites weather.js.
 
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -16,103 +22,100 @@ import url from "node:url";
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 
-// Coordinates per location_chapter. Open-Meteo has 1940-era reanalysis at
-// ~10km resolution; these are the nearest reasonable coordinates for each.
-const LOCATIONS = {
-  "great-lakes":  { lat: 42.31, lon: -87.84, tz: "America/Chicago"     }, // Great Lakes NTS, IL
-  "san-diego":    { lat: 32.74, lon: -117.20, tz: "America/Los_Angeles" }, // San Diego NTS
-  "pearl-harbor": { lat: 21.36, lon: -157.95, tz: "Pacific/Honolulu"    }, // Pearl Harbor, HI
-};
-
-// 23 letters. Keep this in sync with letters.js — id, date, location_chapter.
-const LETTERS = [
-  { id: "L01", date: "1940-04-14", loc: "great-lakes" },
-  { id: "L02", date: "1940-04-20", loc: "great-lakes" },
-  { id: "L03", date: "1940-04-27", loc: "great-lakes" },
-  { id: "L04", date: "1940-05-04", loc: "great-lakes" },
-  { id: "L05", date: "1940-05-10", loc: "great-lakes" },
-  { id: "L06", date: "1940-05-17", loc: "great-lakes" },
-  { id: "L07", date: "1940-05-30", loc: "great-lakes" },
-  { id: "L08", date: "1940-06-18", loc: "great-lakes" },
-  { id: "L09", date: "1940-07-02", loc: "great-lakes" },
-  { id: "L10", date: "1940-07-09", loc: "great-lakes" },
-  { id: "L11", date: "1940-07-14", loc: "san-diego" },
-  { id: "L12", date: "1940-07-19", loc: "san-diego" },
-  { id: "L13", date: "1940-08-18", loc: "pearl-harbor" },
-  { id: "L14", date: "1940-09-29", loc: "pearl-harbor" },
-  { id: "L15", date: "1940-10-19", loc: "pearl-harbor" },
-  { id: "L16", date: "1940-10-23", loc: "pearl-harbor" },
-  { id: "L17", date: "1940-10-28", loc: "pearl-harbor" },
-  { id: "L18", date: "1940-11-02", loc: "pearl-harbor" },
-  { id: "L19", date: "1940-11-17", loc: "pearl-harbor" },
-  { id: "L20", date: "1940-11-27", loc: "pearl-harbor" },
-  { id: "L21", date: "1940-12-15", loc: "pearl-harbor" },
-  { id: "L22", date: "1940-12-25", loc: "pearl-harbor" },
-  { id: "L23", date: "1940-12-29", loc: "pearl-harbor" },
-
-  // ─── Chapter IV — At War ─────────────────────────────────────────
-  // L24 was written from sea on the recall from the Wake Island relief
-  // expedition, but the ship's home port and the postal coordinates the
-  // censor would associate with the letter are still Pearl Harbor.
-  { id: "L24", date: "1941-12-20", loc: "pearl-harbor" },
-];
-
 const ENDPOINT = "https://archive-api.open-meteo.com/v1/archive";
+const DAILY = [
+  "temperature_2m_max",
+  "temperature_2m_min",
+  "precipitation_sum",
+  "snowfall_sum",
+  "weathercode",
+  "windspeed_10m_max",
+].join(",");
 
-async function fetchOne({ id, date, loc }) {
-  const { lat, lon, tz } = LOCATIONS[loc];
+async function readJson(name) {
+  return JSON.parse(await fs.readFile(path.join(ROOT, name), "utf8"));
+}
+
+async function fetchPlace(place, dates, { forceEra5 = false } = {}) {
   const params = new URLSearchParams({
-    latitude: String(lat),
-    longitude: String(lon),
-    start_date: date,
-    end_date: date,
-    daily: [
-      "temperature_2m_max",
-      "temperature_2m_min",
-      "precipitation_sum",
-      "snowfall_sum",
-      "weathercode",
-      "windspeed_10m_max",
-    ].join(","),
+    latitude: String(place.lat),
+    longitude: String(place.lon),
+    start_date: dates[0],
+    end_date: dates[dates.length - 1],
+    daily: DAILY,
     temperature_unit: "fahrenheit",
     precipitation_unit: "inch",
     windspeed_unit: "mph",
-    timezone: tz,
+    timezone: place.tz || "auto",
   });
-  const url = `${ENDPOINT}?${params.toString()}`;
-  const res = await fetch(url);
+  if (forceEra5) params.set("models", "era5");
+  const res = await fetch(`${ENDPOINT}?${params.toString()}`);
   if (!res.ok) {
-    throw new Error(`${id} ${date} ${loc}: HTTP ${res.status} ${await res.text().catch(() => "")}`);
+    throw new Error(`${place.key}: HTTP ${res.status} ${await res.text().catch(() => "")}`);
   }
-  const j = await res.json();
-  const d = j.daily || {};
-  return {
-    id,
-    date,
-    location: loc,
-    tmax_f: d.temperature_2m_max?.[0] ?? null,
-    tmin_f: d.temperature_2m_min?.[0] ?? null,
-    precip_in: d.precipitation_sum?.[0] ?? null,
-    snowfall_in: d.snowfall_sum?.[0] ?? null,
-    wmo: d.weathercode?.[0] ?? null,
-    wind_mph: d.windspeed_10m_max?.[0] ?? null,
-  };
+  const d = (await res.json()).daily || {};
+  const idx = new Map((d.time || []).map((t, i) => [t, i]));
+  const pick = (arr, i) => (arr && arr[i] != null ? arr[i] : null);
+  const byDate = {};
+  for (const date of dates) {
+    const i = idx.get(date);
+    byDate[date] = i == null ? null : {
+      tmax_f: pick(d.temperature_2m_max, i),
+      tmin_f: pick(d.temperature_2m_min, i),
+      precip_in: pick(d.precipitation_sum, i),
+      snowfall_in: pick(d.snowfall_sum, i),
+      wmo: pick(d.weathercode, i),
+      wind_mph: pick(d.windspeed_10m_max, i),
+    };
+  }
+  return byDate;
 }
 
 async function main() {
-  console.log(`Fetching weather for ${LETTERS.length} letter dates from Open-Meteo …`);
+  const letters = await readJson("letters.json");
+  const places = Object.fromEntries((await readJson("places.json")).map(p => [p.key, p]));
+
+  // Group letters by place.
+  const groups = new Map();
+  for (const l of letters) {
+    if (!l.place) { console.warn(`  ${l.id}: no place — skipped`); continue; }
+    if (!places[l.place]) { console.warn(`  ${l.id}: unknown place '${l.place}' — skipped`); continue; }
+    if (!groups.has(l.place)) groups.set(l.place, []);
+    groups.get(l.place).push(l);
+  }
+  const total = [...groups.values()].reduce((n, g) => n + g.length, 0);
+  console.log(`Fetching weather for ${total} letters across ${groups.size} places from Open-Meteo …`);
+
   const results = {};
-  for (const ltr of LETTERS) {
+  for (const [key, group] of groups) {
+    const place = places[key];
+    const dates = [...new Set(group.map(l => l.date))].sort();
     try {
-      const w = await fetchOne(ltr);
-      results[ltr.id] = w;
-      const t = w.tmax_f != null ? `${Math.round(w.tmin_f)}–${Math.round(w.tmax_f)}°F` : "—";
-      console.log(`  ${ltr.id} ${ltr.date} ${ltr.loc.padEnd(13)}  WMO ${String(w.wmo).padStart(2)}  ${t}  ${w.precip_in ?? 0}″`);
-      // be polite — small delay between requests
-      await new Promise(r => setTimeout(r, 120));
+      let byDate = await fetchPlace(place, dates);
+      // ERA5 covers ocean grid points; the default best_match model can come
+      // back empty offshore. Retry once, pinned to era5.
+      const allNull = dates.every(dt => !byDate[dt] || byDate[dt].tmax_f == null);
+      if (allNull && place.kind !== "shore") {
+        console.log(`  ${key}: empty from best_match — retrying with era5`);
+        byDate = await fetchPlace(place, dates, { forceEra5: true });
+      }
+      for (const l of group) {
+        const w = byDate[l.date];
+        if (!w) {
+          results[l.id] = { id: l.id, date: l.date, location: key, error: "date missing from archive response" };
+          continue;
+        }
+        results[l.id] = { id: l.id, date: l.date, location: key, ...w };
+        if (place.approx) results[l.id].approx = true;
+      }
+      const ok = group.filter(l => results[l.id] && !results[l.id].error).length;
+      console.log(`  ${key.padEnd(22)} ${String(ok).padStart(3)}/${group.length} letters  (${dates[0]} → ${dates[dates.length - 1]})${place.approx ? "  ~approx" : ""}`);
+      await new Promise(r => setTimeout(r, 120));  // be polite
     } catch (e) {
-      console.error(`  ${ltr.id} FAILED:`, e.message);
-      results[ltr.id] = { id: ltr.id, date: ltr.date, location: ltr.loc, error: String(e.message) };
+      console.error(`  ${key} FAILED:`, e.message);
+      for (const l of group) {
+        results[l.id] = { id: l.id, date: l.date, location: key, error: String(e.message) };
+      }
     }
   }
 
@@ -126,7 +129,7 @@ window.LETTER_WEATHER = ${JSON.stringify(results, null, 2)};
 `;
   const outPath = path.join(ROOT, "weather.js");
   await fs.writeFile(outPath, out);
-  console.log(`\nWrote ${outPath}  (${successCount}/${LETTERS.length} succeeded)`);
+  console.log(`\nWrote ${outPath}  (${successCount}/${total} succeeded)`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

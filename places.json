@@ -1,0 +1,164 @@
+[
+  {
+    "key": "great-lakes",
+    "label": "Great Lakes Naval Training Station, Illinois",
+    "lat": 42.31,
+    "lon": -87.84,
+    "tz": "America/Chicago",
+    "kind": "shore"
+  },
+  {
+    "key": "chicago",
+    "label": "Chicago, Illinois",
+    "lat": 41.88,
+    "lon": -87.63,
+    "tz": "America/Chicago",
+    "kind": "shore"
+  },
+  {
+    "key": "el-paso",
+    "label": "El Paso, Texas",
+    "lat": 31.76,
+    "lon": -106.49,
+    "tz": "America/Denver",
+    "kind": "shore"
+  },
+  {
+    "key": "san-diego",
+    "label": "San Diego, California",
+    "lat": 32.74,
+    "lon": -117.2,
+    "tz": "America/Los_Angeles",
+    "kind": "shore"
+  },
+  {
+    "key": "pearl-harbor",
+    "label": "Pearl Harbor, T.H.",
+    "lat": 21.36,
+    "lon": -157.95,
+    "tz": "Pacific/Honolulu",
+    "kind": "shore"
+  },
+  {
+    "key": "off-oahu",
+    "label": "At sea off Oahu",
+    "lat": 21.1,
+    "lon": -158.6,
+    "tz": "Pacific/Honolulu",
+    "kind": "sea",
+    "approx": true,
+    "route": false
+  },
+  {
+    "key": "bremerton",
+    "label": "Puget Sound Navy Yard, Bremerton",
+    "lat": 47.57,
+    "lon": -122.63,
+    "tz": "America/Los_Angeles",
+    "kind": "shore"
+  },
+  {
+    "key": "long-beach",
+    "label": "Long Beach, California",
+    "lat": 33.77,
+    "lon": -118.19,
+    "tz": "America/Los_Angeles",
+    "kind": "shore"
+  },
+  {
+    "key": "mare-island",
+    "label": "Mare Island Navy Yard, Vallejo",
+    "lat": 38.1,
+    "lon": -122.27,
+    "tz": "America/Los_Angeles",
+    "kind": "shore"
+  },
+  {
+    "key": "san-francisco",
+    "label": "San Francisco, California",
+    "lat": 37.79,
+    "lon": -122.41,
+    "tz": "America/Los_Angeles",
+    "kind": "shore"
+  },
+  {
+    "key": "northeast-pacific",
+    "label": "At sea, eastern Pacific",
+    "lat": 30.0,
+    "lon": -140.0,
+    "tz": "America/Los_Angeles",
+    "kind": "sea",
+    "approx": true,
+    "route": false
+  },
+  {
+    "key": "wake-relief",
+    "label": "The Wake Island relief sortie",
+    "lat": 17.0,
+    "lon": 178.0,
+    "tz": "Pacific/Honolulu",
+    "kind": "sea",
+    "approx": true
+  },
+  {
+    "key": "coral-sea",
+    "label": "The Coral Sea",
+    "lat": -14.0,
+    "lon": 158.0,
+    "tz": "Australia/Brisbane",
+    "kind": "sea",
+    "approx": true
+  },
+  {
+    "key": "south-pacific-transit",
+    "label": "The South Pacific",
+    "lat": -5.0,
+    "lon": -175.0,
+    "tz": "Pacific/Fiji",
+    "kind": "sea",
+    "approx": true
+  },
+  {
+    "key": "solomons-area",
+    "label": "Off the Solomon Islands",
+    "lat": -10.5,
+    "lon": 162.0,
+    "tz": "Pacific/Guadalcanal",
+    "kind": "sea",
+    "approx": true
+  },
+  {
+    "key": "tulagi",
+    "label": "Tulagi Harbor, Solomon Islands",
+    "lat": -9.1,
+    "lon": 160.15,
+    "tz": "Pacific/Guadalcanal",
+    "kind": "shore",
+    "approx": true
+  },
+  {
+    "key": "sydney",
+    "label": "Cockatoo Island, Sydney",
+    "lat": -33.85,
+    "lon": 151.17,
+    "tz": "Australia/Sydney",
+    "kind": "shore"
+  },
+  {
+    "key": "kentucky",
+    "label": "Home · Stanford, Kentucky",
+    "lat": 37.53,
+    "lon": -84.66,
+    "tz": "America/New_York",
+    "kind": "home"
+  },
+  {
+    "key": "montgomery-wv",
+    "label": "Montgomery, West Virginia",
+    "lat": 38.17,
+    "lon": -81.33,
+    "tz": "America/New_York",
+    "kind": "shore",
+    "route": false
+  }
+]
