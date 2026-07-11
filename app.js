@@ -541,7 +541,7 @@ function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) 
   );
 }
 function JourneyPage({ journey, onSelectStop, focusPlace }) {
-  return /* @__PURE__ */ React.createElement("section", { className: "journey-page" }, /* @__PURE__ */ React.createElement("div", { className: "journey-eyebrow" }, "Frontispiece"), /* @__PURE__ */ React.createElement("h2", { className: "journey-title" }, "The Journey"), /* @__PURE__ */ React.createElement("div", { className: "journey-dates" }, "Great Lakes to the Solomon Islands, and home · 1940 – 1944"), /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("div", { className: "journey-chart" }, /* @__PURE__ */ React.createElement(MapChart, { journey, mode: "full", activePlace: focusPlace, onSelectStop })), /* @__PURE__ */ React.createElement("ol", { className: "journey-legend" }, journey.pins.map((p) => /* @__PURE__ */ React.createElement("li", { key: p.key }, /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("section", { className: "journey-page" }, /* @__PURE__ */ React.createElement("h2", { className: "journey-title" }, "Map"), /* @__PURE__ */ React.createElement("div", { className: "journey-dates" }, "Great Lakes to the Solomon Islands, and home · 1940 – 1944"), /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("div", { className: "journey-chart" }, /* @__PURE__ */ React.createElement(MapChart, { journey, mode: "full", activePlace: focusPlace, onSelectStop })), /* @__PURE__ */ React.createElement("ol", { className: "journey-legend" }, journey.pins.map((p) => /* @__PURE__ */ React.createElement("li", { key: p.key }, /* @__PURE__ */ React.createElement(
     "button",
     {
       className: "journey-stop" + (focusPlace === p.key ? " is-focus" : ""),
@@ -549,7 +549,7 @@ function JourneyPage({ journey, onSelectStop, focusPlace }) {
     },
     /* @__PURE__ */ React.createElement("span", { className: "js-num" }, p.n),
     /* @__PURE__ */ React.createElement("span", { className: "js-meta" }, /* @__PURE__ */ React.createElement("span", { className: "js-label" }, p.place.label), /* @__PURE__ */ React.createElement("span", { className: "js-dates" }, pinDateSpan(p), " · ", p.letters.length === 1 ? "1 letter" : `${p.letters.length} letters`))
-  )))), /* @__PURE__ */ React.createElement("p", { className: "journey-note" }, "Hollow pins and broken lines are the censored stretches: positions reconstructed from the ship's record, not from the letters."));
+  )))), /* @__PURE__ */ React.createElement("p", { className: "journey-note-plain" }, "Please note that dotted lines and open points reflect places where the Naval Censor prohibited sailors from indicating their wartime locations. Therefore, these paths and points are reconstructed from the ship's record and not from the letters themselves."), /* @__PURE__ */ React.createElement("p", { className: "journey-note" }, "As with everything here, this is a passion project by a grandson studying for the bar, and it is subject to change as it is made more accurate."), /* @__PURE__ */ React.createElement("p", { className: "journey-signoff" }, "Kind regards,", /* @__PURE__ */ React.createElement("br", null), "Blake William Morris"));
 }
 function LetterWaypoint({ letter, journey, onOpenJourney }) {
   const place = PLACES[letter.place];
@@ -1013,7 +1013,7 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
       onClick: () => onJump(journeyIdx)
     },
     /* @__PURE__ */ React.createElement("span", { className: "toc-num" }, "—"),
-    /* @__PURE__ */ React.createElement("span", { className: "toc-date" }, "The Journey")
+    /* @__PURE__ */ React.createElement("span", { className: "toc-date" }, "Map")
   ), sections.map((sec) => {
     const lastLetterIdx = sec.chapterIdx + sec.items.length;
     let progress;
@@ -1087,7 +1087,7 @@ function CoverModal({ onClose }) {
       document.body.style.overflow = prevOverflow;
     };
   }, [onClose]);
-  return /* @__PURE__ */ React.createElement("div", { className: "cover-backdrop", role: "dialog", "aria-modal": "true", "aria-label": "A note from the grandson", onClick: onClose }, /* @__PURE__ */ React.createElement("div", { className: "cover-popup", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ React.createElement("button", { className: "cover-x", onClick: onClose, "aria-label": "Close" }, "×"), /* @__PURE__ */ React.createElement("p", { className: "cover-salutation" }, "Dear Reader,"), /* @__PURE__ */ React.createElement("p", { className: "cover-body" }, 'From before the war, through the attack on Pearl Harbor, and the perilous journey of the U.S.S. New Orleans — the "NO (Such) Boat," the "Ghost Ship," the "Miracle Ship" — love endures.'), /* @__PURE__ */ React.createElement("p", { className: "cover-body" }, "What follows are his letters to her."), /* @__PURE__ */ React.createElement("div", { className: "cover-buttons" }, /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("div", { className: "cover-backdrop", role: "dialog", "aria-modal": "true", "aria-label": "A note from the grandson", onClick: onClose }, /* @__PURE__ */ React.createElement("div", { className: "cover-popup", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ React.createElement("button", { className: "cover-x", onClick: onClose, "aria-label": "Close" }, "×"), /* @__PURE__ */ React.createElement("p", { className: "cover-salutation" }, "Dear Reader,"), /* @__PURE__ */ React.createElement("p", { className: "cover-body" }, "These are my grandfather's letters to my grandmother, written from the Navy between 1940 and 1944. Transcribing them is a labor of love and a work in progress, so expect a few rough edges while I get it right."), /* @__PURE__ */ React.createElement("div", { className: "cover-context-label" }, "For context:"), /* @__PURE__ */ React.createElement("div", { className: "cover-buttons" }, /* @__PURE__ */ React.createElement(
     "a",
     {
       className: "cover-button cover-button--navy",

@@ -62,7 +62,7 @@ function pearlHarborMarker(dateStr) {
 function buildPages(letters, chapters, cast, photos) {
   const grouped = groupByChapter(letters, chapters);
   const pages = [{ type: "title" }];
-  // The Journey — the frontispiece chart, between the title page and
+  // The Map page — the journey chart, between the title page and
   // Chapter I. (This shifts every #p=N deep link by one; parseHashIdx
   // clamps, and the TOC/progress bar derive from `pages`.)
   pages.push({ type: "journey" });
@@ -721,13 +721,12 @@ function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) 
   );
 }
 
-/* JourneyPage — the frontispiece: the full chart, then a numbered legend
+/* JourneyPage — the Map page: the full chart, then a numbered legend
    (the accessible tap targets, one per stop) that jumps into the letters. */
 function JourneyPage({ journey, onSelectStop, focusPlace }) {
   return (
     <section className="journey-page">
-      <div className="journey-eyebrow">Frontispiece</div>
-      <h2 className="journey-title">The Journey</h2>
+      <h2 className="journey-title">Map</h2>
       <div className="journey-dates">Great Lakes to the Solomon Islands, and home · 1940 – 1944</div>
       <div className="hairline-rule" />
       <div className="journey-chart">
@@ -751,9 +750,19 @@ function JourneyPage({ journey, onSelectStop, focusPlace }) {
           </li>
         ))}
       </ol>
+      <p className="journey-note-plain">
+        Please note that dotted lines and open points reflect places where
+        the Naval Censor prohibited sailors from indicating their wartime
+        locations. Therefore, these paths and points are reconstructed from
+        the ship's record and not from the letters themselves.
+      </p>
       <p className="journey-note">
-        Hollow pins and broken lines are the censored stretches: positions
-        reconstructed from the ship's record, not from the letters.
+        As with everything here, this is a passion project by a grandson
+        studying for the bar, and it is subject to change as it is made
+        more accurate.
+      </p>
+      <p className="journey-signoff">
+        Kind regards,<br />Blake William Morris
       </p>
     </section>
   );
@@ -1690,7 +1699,7 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
             onClick={() => onJump(journeyIdx)}
           >
             <span className="toc-num">—</span>
-            <span className="toc-date">The Journey</span>
+            <span className="toc-date">Map</span>
           </button>
         )}
 
@@ -1808,11 +1817,12 @@ function CoverModal({ onClose }) {
         <button className="cover-x" onClick={onClose} aria-label="Close">×</button>
         <p className="cover-salutation">Dear Reader,</p>
         <p className="cover-body">
-          From before the war, through the attack on Pearl Harbor, and the perilous journey of the U.S.S. New Orleans — the "NO (Such) Boat," the "Ghost Ship," the "Miracle Ship" — love endures.
+          These are my grandfather's letters to my grandmother, written from
+          the Navy between 1940 and 1944. Transcribing them is a labor of
+          love and a work in progress, so expect a few rough edges while I
+          get it right.
         </p>
-        <p className="cover-body">
-          What follows are his letters to her.
-        </p>
+        <div className="cover-context-label">For context:</div>
         <div className="cover-buttons">
           <a className="cover-button cover-button--navy"
              href="https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/"
