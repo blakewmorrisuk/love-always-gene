@@ -4,7 +4,7 @@ The people mentioned throughout the wartime letters of Raymond Eugene "Gene" Lan
 
 _Identifications are drawn from the letters themselves and from family research. Entries marked (uncertain) rest on an ambiguous reading or an inferred relationship._
 
-_52 people across 6 groupings._
+_51 people across 6 groupings._
 
 ## The Correspondents
 
@@ -35,13 +35,13 @@ _Appears in 2 letters: L56, L57_
 
 Note: Paired with Alberta in the letters; possibly her husband (Alberta married a Brady). Distinct from Joan's uncle Bill and the 'Bill' who had the flu.
 
-**Louise Dunagan** — Carroll's sweetheart/wife (Gene's would-be sister-in-law) _(uncertain)_
+**Louise Dunagan** — Carroll's sweetheart (they later parted) _(uncertain)_
 
 A woman from Stanford, Kentucky (Route 4) involved with Gene's brother Carroll; she was glad to see Carroll home but their relationship sours, and she later goes with another man from Michigan. She corresponds warmly with Gene and travels (Ohio, New Orleans).
 
 _Appears in 7 letters: L55, L74, L75, L83, L84, L92, L107_
 
-Note: Marriage vs courtship with Carroll not fully clear; the bare 'Louise' in L92 and L107 merged here.
+Note: Marriage vs courtship with Carroll not fully clear; the bare 'Louise' in L92 and L107 merged here. Relation corrected from "sweetheart/wife": by L92 she is "down & out on Carroll," and L107 has her engaged to a man from Michigan. The "Louise" of L100 is Mary Louise Pendleton, Jack's bride, not her.
 
 **Gene's aunts** — Gene's aunts _(uncertain)_
 
@@ -75,13 +75,13 @@ _Appears in 36 letters: L05, L10, L15, L17, L20, L24, L27, L34, L35, L55, L56, L
 
 Note: Confirmed brother; had served in the Navy before Gene. Confirmed via Gene's 2008 Somerset obituary (Find A Grave #27110511).
 
-**Earl** — Gene's brother
+**Earl** — Gene's brother or cousin (unconfirmed) _(uncertain)_
 
 Gene's brother, who attended Highland school and later worked in Detroit with their brother Carroll as he neared draft age.
 
 _Appears in 4 letters: L24, L33, L80, L84_
 
-Note: Confirmed brother (Earl Lankford), not a cousin. Confirmed via Gene's 2008 Somerset obituary (Find A Grave #27110511).
+Note: Confirmed brother (Earl Lankford), not a cousin. Confirmed via Gene's 2008 Somerset obituary (Find A Grave #27110511). Counted with the brothers for the draft in L24, at Highland school in L33, working in Detroit with Carroll by L84; earlier site curation called him a cousin. Family confirmation needed.
 
 **James Edward "Jim" Lankford** — Gene's brother
 
@@ -96,6 +96,8 @@ Note: Confirmed brother James Edward Lankford of Danville, KY. Confirmed via Gen
 Gene's mother, who does most of the family's letter-writing. She frequently worries about Gene being in the Navy, writes about home life being lonesome, and at one point asks about troubles between Gene and Joan.
 
 _Appears in 21 letters: L02, L04, L17, L23, L40, L46, L52, L61, L64, L67, L68, L71, L79, L82, L84, L90, L97, L100, L106, L109, L110_
+
+Note: Gene writes his own mother lowercase in several letters (L04, L23, L46, L100, L106), so the lowercase aliases stay. Known quirk: in L71 and L100 the highlight also catches the 'mother' inside 'your mother' (Joan's); both letters genuinely mention Marguerite, so the reference is sound.
 
 **Martha Lankford Broaddus** — Gene's sister
 
@@ -128,9 +130,9 @@ _Stanford, Kentucky._
 
 A person Joan mentioned who had the flu twice; Gene sympathizes. Relation to Joan unclear, and may overlap with another 'Bill' in the letters.
 
-_Appears in 1 letter: L29_
+_Appears in 2 letters: L29, L57_
 
-Note: Possibly the same as Joan's uncle Bill or the Alberta-paired Bill; kept separate due to different context.
+Note: Possibly the same as Joan's uncle Bill or the Alberta-paired Bill; kept separate due to different context. L57 added: "Bill cutting his finger off" continues the same hometown-health news thread as the flu in L29.
 
 **Uncle Bill** — Joan's uncle
 
@@ -176,7 +178,7 @@ A man, likely a teacher or coach, tied to 'the trouble the girls had at Highland
 
 _Appears in 1 letter: L77_
 
-Note: Surname truncated in the source.
+Note: Surname truncated in the source. Alias trimmed to "Mr. Mc" so the highlight can match the letter's "Mr. Mc.—" (trailing punctuation breaks the word-boundary regex).
 
 **Elizabeth McKinney** — Joan's friend
 
@@ -219,13 +221,15 @@ Don Chapin's wife, whom Gene counted as a friend. A letter Gene sent her upset h
 
 _Appears in 3 letters: L71, L88, L101_
 
-Note: 'the wife he left in Seattle' (L71) inferred to be Betty.
+Note: 'the wife he left in Seattle' (L71) inferred to be Betty. In L101 Don calls her only "my wife" (alias added so the jump highlights). L102's "Betty" is the Mitsubishi bomber Jack shot down, not her; deliberately not referenced.
 
 **Donald V. "Don" Chapin** — Gene's Navy shipmate and best friend (coxswain; later U.S.S. Rowe)
 
 A coxswain and one of Gene's best friends aboard the New Orleans, who married a girl in Seattle and worried about the wife (Betty) he left behind. He was later transferred to the U.S.S. Rowe and wrote Gene a letter (L101) about a misunderstanding over a note Gene sent Betty.
 
 _Appears in 6 letters: L62, L71, L88, L94, L101, L102_
+
+Note: Per Mary Parkhurst (L102, Dec 1944): transferred off the New Orleans and had a baby.
 
 **Maudsley** — Navy shipmate or acquaintance _(uncertain)_
 
@@ -241,7 +245,7 @@ Gene's closest Navy friend aboard the U.S.S. New Orleans, a radar operator in th
 
 _Appears in 19 letters: L49, L51, L56, L58, L59, L61, L62, L64, L67, L68, L69, L71, L76, L80, L94, L100, L101, L102, L107_
 
-Note: 'Johnny' confirmed as Jack's nickname by his wife's letter (L102).
+Note: 'Johnny' confirmed as Jack's nickname by his wife's letter (L102). Married Mary Louise Pendleton on December 25, 1942 (L100 postscript). By late 1944 (L102): radar operator PO3c aboard U.S.S. Massachusetts ("the best operator on the ship," per Officer Riley), credited with downing a "Betty" bomber.
 
 **Mary Louise Parkhurst** — Wife of Gene's shipmate Jack "Johnny" Parkhurst
 
@@ -249,7 +253,7 @@ Jack Parkhurst's bride (nee Mary Louise Pendleton), whom Jack married on Decembe
 
 _Appears in 2 letters: L100, L102_
 
-Note: Maiden name Pendleton; married name Parkhurst.
+Note: Maiden name Pendleton; married name Parkhurst. Married Jack December 25, 1942 (L100); with him in Bremerton May 29 to July 10, 1944, then nine weeks without word by December (L102).
 
 **Officer Riley** — Navy division officer
 
@@ -392,14 +396,6 @@ A second person named Joan, distinct from the recipient, who got sick on cherry 
 _Appears in 1 letter: L53_
 
 Note: Distinct from recipient Joan; identity unclear.
-
-**John** — Unclear (possibly an affectionate address or OCR misreading) _(uncertain)_
-
-A 'John' appearing in one line that may be an affectionate address to Joan or an OCR misreading rather than a real third party.
-
-_Appears in 1 letter: L44_
-
-Note: May not be a real person; possible OCR/address artifact.
 
 **Billie Tilds** — Acquaintance of Gene's _(uncertain)_
 

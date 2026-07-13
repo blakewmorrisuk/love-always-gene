@@ -967,7 +967,9 @@ function renderProse(text, highlight) {
     const alt = terms.slice().sort((a, b) => b.length - a.length).map(escapeRe).join("|");
     // \b bounds the names so "Jo" doesn't match inside "Joan"; the marker
     // alternatives are listed first so [[...]] spans win over names inside them.
-    splitRe = new RegExp(`(\\[\\[[^\\]]+\\]\\]|\\[\\?\\]|\\[[^\\]]+\\?\\]|\\b(?:${alt})\\b)`, "g");
+    // (?!'t\b) keeps "Don" from flashing inside "Don't" while possessives
+    // like "Jack's" still match.
+    splitRe = new RegExp(`(\\[\\[[^\\]]+\\]\\]|\\[\\?\\]|\\[[^\\]]+\\?\\]|\\b(?:${alt})\\b(?!'t\\b))`, "g");
   } else {
     splitRe = /(\[\[[^\]]+\]\]|\[\?\]|\[[^\]]+\?\])/g;
   }
@@ -1156,22 +1158,22 @@ function ShipOrnament() {
       <span className="ornament-rule" />
       <svg viewBox="0 0 56 56" className="ornament-anchor">
         {/* outer rope ring — dotted */}
-        <circle cx="28" cy="28" r="25" fill="none" stroke="#9B7B3F"
+        <circle cx="28" cy="28" r="25" fill="none" stroke="currentColor"
           strokeWidth="0.9" strokeDasharray="1 3" opacity="0.85" />
-        <circle cx="28" cy="28" r="22.5" fill="none" stroke="#9B7B3F"
+        <circle cx="28" cy="28" r="22.5" fill="none" stroke="currentColor"
           strokeWidth="0.6" opacity="0.45" />
         {/* anchor */}
-        <circle cx="28" cy="14" r="2.6" fill="none" stroke="#9B7B3F" strokeWidth="1.1" />
-        <line x1="28" y1="16.6" x2="28" y2="40" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
-        <line x1="22" y1="20" x2="34" y2="20" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
-        <path d="M 17 34 Q 28 46 39 34" fill="none" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
-        <line x1="17" y1="34" x2="15" y2="32" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
-        <line x1="39" y1="34" x2="41" y2="32" stroke="#9B7B3F" strokeWidth="1.1" strokeLinecap="round" />
+        <circle cx="28" cy="14" r="2.6" fill="none" stroke="currentColor" strokeWidth="1.1" />
+        <line x1="28" y1="16.6" x2="28" y2="40" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" />
+        <line x1="22" y1="20" x2="34" y2="20" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" />
+        <path d="M 17 34 Q 28 46 39 34" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" />
+        <line x1="17" y1="34" x2="15" y2="32" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" />
+        <line x1="39" y1="34" x2="41" y2="32" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" />
         {/* olive branch flourishes left + right */}
-        <path d="M 6 28 Q 10 26 14 28" fill="none" stroke="#9B7B3F" strokeWidth="0.7" opacity="0.6" />
-        <path d="M 8 27.4 L 8 25.6 M 10.5 26.6 L 10.5 24.7 M 12.5 27 L 12.5 25.3" stroke="#9B7B3F" strokeWidth="0.6" opacity="0.55" strokeLinecap="round" />
-        <path d="M 50 28 Q 46 26 42 28" fill="none" stroke="#9B7B3F" strokeWidth="0.7" opacity="0.6" />
-        <path d="M 48 27.4 L 48 25.6 M 45.5 26.6 L 45.5 24.7 M 43.5 27 L 43.5 25.3" stroke="#9B7B3F" strokeWidth="0.6" opacity="0.55" strokeLinecap="round" />
+        <path d="M 6 28 Q 10 26 14 28" fill="none" stroke="currentColor" strokeWidth="0.7" opacity="0.6" />
+        <path d="M 8 27.4 L 8 25.6 M 10.5 26.6 L 10.5 24.7 M 12.5 27 L 12.5 25.3" stroke="currentColor" strokeWidth="0.6" opacity="0.55" strokeLinecap="round" />
+        <path d="M 50 28 Q 46 26 42 28" fill="none" stroke="currentColor" strokeWidth="0.7" opacity="0.6" />
+        <path d="M 48 27.4 L 48 25.6 M 45.5 26.6 L 45.5 24.7 M 43.5 27 L 43.5 25.3" stroke="currentColor" strokeWidth="0.6" opacity="0.55" strokeLinecap="round" />
       </svg>
       <span className="ornament-rule" />
     </div>

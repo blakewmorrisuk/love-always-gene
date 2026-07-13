@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -140,6 +141,19 @@ def validate(cast: dict) -> list[str]:
         if f.is_dir() and f.name.startswith("L") and "_" in f.name
     }
 
+    # The letters the website actually serves, plus their searchable text, so
+    # a cast reference is checked against reality rather than folder names.
+    letters_path = REPO / "letters.json"
+    letter_text: dict[str, str] = {}
+    if letters_path.exists():
+        letters = json.loads(letters_path.read_text(encoding="utf-8"))
+        valid_ids = {l.get("id") for l in letters}
+        text_fields = ("body", "postscript", "salutation", "signature", "note",
+                       "card_verse", "card_note", "envelope_note", "telegram_routing",
+                       "telegram_to", "telegram_message", "telegram_signed")
+        for l in letters:
+            letter_text[l.get("id")] = " ".join(str(l.get(f) or "") for f in text_fields)
+
     seen_ids: set[str] = set()
     for p in cast.get("people", []):
         pid = p.get("id", "<missing id>")
@@ -156,6 +170,15 @@ def validate(cast: dict) -> list[str]:
         for lid in p.get("letters", []):
             if lid not in valid_ids:
                 problems.append(f"{pid}: references unknown letter '{lid}'")
+            elif letter_text:
+                # Warn-level accuracy check: some alias should occur in the
+                # letter's text (word-bounded, matching the site's rules).
+                hay = letter_text.get(lid, "")
+                if not any(re.search(r"\b" + re.escape(a) + r"(?=\W|$)", hay)
+                           for a in p.get("aliases", [])):
+                    problems.append(
+                        f"{pid}: no alias found anywhere in {lid} "
+                        f"(check the reference or add the alias used there)")
 
     return problems
 
