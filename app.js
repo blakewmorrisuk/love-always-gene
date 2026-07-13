@@ -536,8 +536,7 @@ function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) 
       );
     })),
     pins.map((p) => renderPin(p, p.key === activePlace)),
-    extraPin && renderPin(extraPin, true),
-    full && /* @__PURE__ */ React.createElement("g", { className: "mc-censored", "aria-hidden": "true", transform: "rotate(-4 330 442)" }, /* @__PURE__ */ React.createElement("text", { x: "330", y: "442" }, "positions censored"), /* @__PURE__ */ React.createElement("text", { x: "330", y: "461", className: "mc-censored-sub" }, "reconstructed from the ship's record"))
+    extraPin && renderPin(extraPin, true)
   );
 }
 function JourneyPage({ journey, onSelectStop, focusPlace }) {

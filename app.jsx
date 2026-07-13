@@ -711,12 +711,8 @@ function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) 
       </g>
       {pins.map((p) => renderPin(p, p.key === activePlace))}
       {extraPin && renderPin(extraPin, true)}
-      {full && (
-        <g className="mc-censored" aria-hidden="true" transform="rotate(-4 330 442)">
-          <text x="330" y="442">positions censored</text>
-          <text x="330" y="461" className="mc-censored-sub">reconstructed from the ship's record</text>
-        </g>
-      )}
+      {/* The red "positions censored" annotation was removed 2026-07-12 at
+          Blake's request; the dashed legs and hollow pins carry the idea. */}
     </svg>
   );
 }
