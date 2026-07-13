@@ -542,15 +542,33 @@ const MAP_LABELS = {
 
 /* A gently bowed course line between two stops — bows northward so the
    long Pacific legs read like a chart's plotted track, not a chord. */
-function legPath(x1, y1, x2, y2) {
+function quadControl(x1, y1, x2, y2) {
   const dx = x2 - x1, dy = y2 - y1;
   const len = Math.hypot(dx, dy) || 1;
   const bow = Math.min(len * 0.1, 40);
   let px = -dy / len, py = dx / len;
   if (py > 0) { px = -px; py = -py; }
-  const cx = x1 + dx / 2 + px * bow;
-  const cy = y1 + dy / 2 + py * bow;
+  return [x1 + dx / 2 + px * bow, y1 + dy / 2 + py * bow];
+}
+
+function legPath(x1, y1, x2, y2) {
+  const [cx, cy] = quadControl(x1, y1, x2, y2);
   return `M ${x1.toFixed(1)} ${y1.toFixed(1)} Q ${cx.toFixed(1)} ${cy.toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`;
+}
+
+/* On-screen length of that curve (8-segment polyline) — drives the
+   constant-speed voyage animation. */
+function quadLength(x1, y1, x2, y2) {
+  const [cx, cy] = quadControl(x1, y1, x2, y2);
+  let L = 0, lx = x1, ly = y1;
+  for (let i = 1; i <= 8; i++) {
+    const t = i / 8, u = 1 - t;
+    const qx = u * u * x1 + 2 * u * t * cx + t * t * x2;
+    const qy = u * u * y1 + 2 * u * t * cy + t * t * y2;
+    L += Math.hypot(qx - lx, qy - ly);
+    lx = qx; ly = qy;
+  }
+  return L;
 }
 
 function starPath(x, y, r) {
@@ -587,8 +605,18 @@ function CompassRose({ x, y }) {
                   with the letter's own place pulsing (activePlace).     */
 function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) {
   const reduced = useReducedMotion();
-  const base = MAP_BASE;
   const full = mode === "full";
+  // The voyage starts one frame after mount. Driving the animation off a
+  // state change (rather than initial values) sidesteps the reader's
+  // AnimatePresence initial={false}, which suppresses mount animations on
+  // direct page loads; this way the crossing plays on every arrival.
+  const [voyage, setVoyage] = useState(false);
+  useEffect(() => {
+    if (!full || reduced) return;
+    const id = requestAnimationFrame(() => setVoyage(true));
+    return () => cancelAnimationFrame(id);
+  }, [full, reduced]);
+  const base = MAP_BASE;
   if (!base || !journey || !journey.stops.length) return null;
 
   const xy = (place) => projectLL(place.lat, place.lon, base);
@@ -612,7 +640,26 @@ function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) 
   }
 
   const animate = full && !reduced;
-  const legDelay = (i) => 0.45 + i * 0.09;
+
+  // The voyage schedule: legs draw one after another in date order, each
+  // duration proportional to its on-screen length so the pen moves at a
+  // steady speed. The whole crossing lands in about seven seconds.
+  const schedule = [];
+  {
+    const segs = legs.map((leg) => {
+      const [x1, y1] = xy(leg.from.place);
+      const [x2, y2] = xy(leg.to.place);
+      return { d: legPath(x1, y1, x2, y2), len: quadLength(x1, y1, x2, y2) };
+    });
+    const total = segs.reduce((s, x) => s + x.len, 0) || 1;
+    const pps = total / 7;
+    let t = 0.7;   // after the page's entrance fade
+    for (const s of segs) {
+      const dur = Math.min(1.4, Math.max(0.18, s.len / pps));
+      schedule.push({ ...s, start: t, dur });
+      t += dur;
+    }
+  }
 
   const renderPin = (p, isActive) => {
     const [x, y] = xy(p.place);
@@ -624,11 +671,15 @@ function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) 
     const label = full ? MAP_LABELS[p.key] : null;
     const count = p.letters.length;
     const tip = `${p.place.label}${count ? ` · ${pinDateSpan(p)} · ${count === 1 ? "1 letter" : `${count} letters`}` : ""}`;
+    // A pin appears the moment the course line ARRIVES at it; the origin
+    // pin appears as the pen first sets down.
     const inboundIdx = legs.findIndex((l) => l.to.key === p.key);
-    const delay = inboundIdx >= 0 ? legDelay(inboundIdx) + 0.35 : 0.3;
+    const arrive = inboundIdx >= 0
+      ? schedule[inboundIdx].start + schedule[inboundIdx].dur
+      : 0.7;
     const G = animate ? motion.g : "g";
     const gProps = animate
-      ? { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay, duration: 0.4 } }
+      ? { initial: false, animate: { opacity: voyage ? 1 : 0 }, transition: { delay: arrive, duration: 0.3 } }
       : {};
     return (
       <G key={p.key} {...gProps}
@@ -691,21 +742,31 @@ function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) 
       {full && <CompassRose x={615} y={478} />}
       <g aria-hidden="true">
         {legs.map((leg, i) => {
-          const [x1, y1] = xy(leg.from.place);
-          const [x2, y2] = xy(leg.to.place);
-          const d = legPath(x1, y1, x2, y2);
+          const { d, start, dur } = schedule[i];
           const cls = "mc-leg" + (leg.approx ? " mc-leg--approx" : "");
           if (!animate) return <path key={i} d={d} className={cls} />;
-          // pathLength animation owns stroke-dasharray, so dashed (approx)
-          // legs fade in instead of drawing on.
-          return leg.approx ? (
-            <motion.path key={i} d={d} className={cls}
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-              transition={{ delay: legDelay(i), duration: 0.55 }} />
-          ) : (
-            <motion.path key={i} d={d} className={cls}
-              initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: 1 }}
-              transition={{ delay: legDelay(i), duration: 0.55, ease: "easeInOut" }} />
+          if (!leg.approx) {
+            return (
+              <motion.path key={i} d={d} className={cls}
+                initial={false}
+                animate={{ pathLength: voyage ? 1 : 0 }}
+                transition={{ delay: start, duration: dur, ease: "linear" }} />
+            );
+          }
+          // Dashed legs draw on through a mask: framer's pathLength owns
+          // stroke-dasharray, so a solid reveal path animates inside the
+          // mask while the visible path keeps its dashes.
+          const mid = `mc-reveal-${i}`;
+          return (
+            <g key={i}>
+              <mask id={mid} maskUnits="userSpaceOnUse">
+                <motion.path d={d} fill="none" stroke="#fff" strokeWidth="6" strokeLinecap="round"
+                  initial={false}
+                  animate={{ pathLength: voyage ? 1 : 0 }}
+                  transition={{ delay: start, duration: dur, ease: "linear" }} />
+              </mask>
+              <path d={d} className={cls} mask={`url(#${mid})`} />
+            </g>
           );
         })}
       </g>

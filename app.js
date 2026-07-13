@@ -389,7 +389,7 @@ const MAP_LABELS = {
   "kentucky": { text: "Home", dx: 0, dy: 16, anchor: "middle", num: { dx: -10, dy: 4, anchor: "end" } },
   "montgomery-wv": { text: "Montgomery", dx: 9, dy: -4, anchor: "start" }
 };
-function legPath(x1, y1, x2, y2) {
+function quadControl(x1, y1, x2, y2) {
   const dx = x2 - x1, dy = y2 - y1;
   const len = Math.hypot(dx, dy) || 1;
   const bow = Math.min(len * 0.1, 40);
@@ -398,9 +398,24 @@ function legPath(x1, y1, x2, y2) {
     px = -px;
     py = -py;
   }
-  const cx = x1 + dx / 2 + px * bow;
-  const cy = y1 + dy / 2 + py * bow;
+  return [x1 + dx / 2 + px * bow, y1 + dy / 2 + py * bow];
+}
+function legPath(x1, y1, x2, y2) {
+  const [cx, cy] = quadControl(x1, y1, x2, y2);
   return `M ${x1.toFixed(1)} ${y1.toFixed(1)} Q ${cx.toFixed(1)} ${cy.toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`;
+}
+function quadLength(x1, y1, x2, y2) {
+  const [cx, cy] = quadControl(x1, y1, x2, y2);
+  let L = 0, lx = x1, ly = y1;
+  for (let i = 1; i <= 8; i++) {
+    const t = i / 8, u = 1 - t;
+    const qx = u * u * x1 + 2 * u * t * cx + t * t * x2;
+    const qy = u * u * y1 + 2 * u * t * cy + t * t * y2;
+    L += Math.hypot(qx - lx, qy - ly);
+    lx = qx;
+    ly = qy;
+  }
+  return L;
 }
 function starPath(x, y, r) {
   const pts = [];
@@ -427,8 +442,14 @@ function CompassRose({ x, y }) {
 }
 function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) {
   const reduced = useReducedMotion();
-  const base = MAP_BASE;
   const full = mode === "full";
+  const [voyage, setVoyage] = useState(false);
+  useEffect(() => {
+    if (!full || reduced) return;
+    const id = requestAnimationFrame(() => setVoyage(true));
+    return () => cancelAnimationFrame(id);
+  }, [full, reduced]);
+  const base = MAP_BASE;
   if (!base || !journey || !journey.stops.length) return null;
   const xy = (place) => projectLL(place.lat, place.lon, base);
   const cutoff = visibleThrough || "9999-12-31";
@@ -444,7 +465,22 @@ function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) 
     latLines.push({ y: (base.lat1 - lat) / (base.lat1 - base.lat0) * base.h, eq: lat === 0 });
   }
   const animate = full && !reduced;
-  const legDelay = (i) => 0.45 + i * 0.09;
+  const schedule = [];
+  {
+    const segs = legs.map((leg) => {
+      const [x1, y1] = xy(leg.from.place);
+      const [x2, y2] = xy(leg.to.place);
+      return { d: legPath(x1, y1, x2, y2), len: quadLength(x1, y1, x2, y2) };
+    });
+    const total = segs.reduce((s, x) => s + x.len, 0) || 1;
+    const pps = total / 7;
+    let t = 0.7;
+    for (const s of segs) {
+      const dur = Math.min(1.4, Math.max(0.18, s.len / pps));
+      schedule.push({ ...s, start: t, dur });
+      t += dur;
+    }
+  }
   const renderPin = (p, isActive) => {
     const [x, y] = xy(p.place);
     const kind = p.place.kind;
@@ -453,9 +489,9 @@ function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) 
     const count = p.letters.length;
     const tip = `${p.place.label}${count ? ` · ${pinDateSpan(p)} · ${count === 1 ? "1 letter" : `${count} letters`}` : ""}`;
     const inboundIdx = legs.findIndex((l) => l.to.key === p.key);
-    const delay = inboundIdx >= 0 ? legDelay(inboundIdx) + 0.35 : 0.3;
+    const arrive = inboundIdx >= 0 ? schedule[inboundIdx].start + schedule[inboundIdx].dur : 0.7;
     const G = animate ? motion.g : "g";
-    const gProps = animate ? { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay, duration: 0.4 } } : {};
+    const gProps = animate ? { initial: false, animate: { opacity: voyage ? 1 : 0 }, transition: { delay: arrive, duration: 0.3 } } : {};
     return /* @__PURE__ */ React.createElement(
       G,
       {
@@ -508,32 +544,36 @@ function MapChart({ journey, mode, activePlace, visibleThrough, onSelectStop }) 
     full && /* @__PURE__ */ React.createElement("rect", { x: "0.5", y: "0.5", width: base.w - 1, height: base.h - 1, className: "mc-neatline", "aria-hidden": "true" }),
     full && /* @__PURE__ */ React.createElement(CompassRose, { x: 615, y: 478 }),
     /* @__PURE__ */ React.createElement("g", { "aria-hidden": "true" }, legs.map((leg, i) => {
-      const [x1, y1] = xy(leg.from.place);
-      const [x2, y2] = xy(leg.to.place);
-      const d = legPath(x1, y1, x2, y2);
+      const { d, start, dur } = schedule[i];
       const cls = "mc-leg" + (leg.approx ? " mc-leg--approx" : "");
       if (!animate) return /* @__PURE__ */ React.createElement("path", { key: i, d, className: cls });
-      return leg.approx ? /* @__PURE__ */ React.createElement(
+      if (!leg.approx) {
+        return /* @__PURE__ */ React.createElement(
+          motion.path,
+          {
+            key: i,
+            d,
+            className: cls,
+            initial: false,
+            animate: { pathLength: voyage ? 1 : 0 },
+            transition: { delay: start, duration: dur, ease: "linear" }
+          }
+        );
+      }
+      const mid = `mc-reveal-${i}`;
+      return /* @__PURE__ */ React.createElement("g", { key: i }, /* @__PURE__ */ React.createElement("mask", { id: mid, maskUnits: "userSpaceOnUse" }, /* @__PURE__ */ React.createElement(
         motion.path,
         {
-          key: i,
           d,
-          className: cls,
-          initial: { opacity: 0 },
-          animate: { opacity: 1 },
-          transition: { delay: legDelay(i), duration: 0.55 }
+          fill: "none",
+          stroke: "#fff",
+          strokeWidth: "6",
+          strokeLinecap: "round",
+          initial: false,
+          animate: { pathLength: voyage ? 1 : 0 },
+          transition: { delay: start, duration: dur, ease: "linear" }
         }
-      ) : /* @__PURE__ */ React.createElement(
-        motion.path,
-        {
-          key: i,
-          d,
-          className: cls,
-          initial: { pathLength: 0, opacity: 0 },
-          animate: { pathLength: 1, opacity: 1 },
-          transition: { delay: legDelay(i), duration: 0.55, ease: "easeInOut" }
-        }
-      );
+      )), /* @__PURE__ */ React.createElement("path", { d, className: cls, mask: `url(#${mid})` }));
     })),
     pins.map((p) => renderPin(p, p.key === activePlace)),
     extraPin && renderPin(extraPin, true)
