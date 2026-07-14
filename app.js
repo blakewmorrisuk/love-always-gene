@@ -1164,12 +1164,6 @@ function App() {
   const tokenRef = useRef(0);
   const swipeRef = useRef(null);
   const reduced = useReducedMotion();
-  const [coverOpen, setCoverOpen] = useState(false);
-  useEffect(() => {
-    const t = setTimeout(() => setCoverOpen(true), 2e3);
-    return () => clearTimeout(t);
-  }, []);
-  const closeCover = useCallback(() => setCoverOpen(false), []);
   const goto = useCallback((idx) => {
     setPageIdx((curr) => {
       const next2 = Math.max(0, Math.min(pages.length - 1, idx));
@@ -1383,7 +1377,7 @@ function App() {
       },
       onClose: () => setTocOpen(false)
     }
-  ), lb && /* @__PURE__ */ React.createElement(Lightbox, { letter: lb.letter, page: lb.page, onClose: closeLb, onNav: navLb }), coverOpen && /* @__PURE__ */ React.createElement(CoverModal, { onClose: closeCover }), plb && /* @__PURE__ */ React.createElement(PhotoLightbox, { items: plb.items, index: plb.idx, onClose: closePhoto }), returnToCast !== null && currentPage.type === "letter" && /* @__PURE__ */ React.createElement(
+  ), lb && /* @__PURE__ */ React.createElement(Lightbox, { letter: lb.letter, page: lb.page, onClose: closeLb, onNav: navLb }), plb && /* @__PURE__ */ React.createElement(PhotoLightbox, { items: plb.items, index: plb.idx, onClose: closePhoto }), returnToCast !== null && currentPage.type === "letter" && /* @__PURE__ */ React.createElement(
     "button",
     {
       className: "return-to-cast",

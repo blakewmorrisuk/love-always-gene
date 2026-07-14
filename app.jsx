@@ -1845,8 +1845,12 @@ function TableOfContents({ pages, currentIdx, onJump, onClose, totalLetters }) {
    on the title page. Different aesthetic from Eugene's letters
    (lighter paper, no postmark/drop-cap/handwritten salutation —
    plain readable typography, two short paragraphs, two press
-   buttons, simple signoff). localStorage-gated so returning readers
-   aren't pestered. Click-outside, Escape, X, or CTA dismiss. */
+   buttons, simple signoff). Click-outside, Escape, X, or CTA dismiss.
+   CURRENTLY DISABLED: nothing renders this component. The auto-open
+   timer, the coverOpen state, and the render line were removed from
+   App(); the .cover-* CSS in index.html stays dormant with it. To
+   re-enable, restore those three pieces from git history. Note: this
+   modal holds the site's only links to the WKYT article/video. */
 function CoverModal({ onClose }) {
   const closeRef = useRef(null);
   useDialogFocus(closeRef);
@@ -1915,17 +1919,6 @@ function App() {
   const tokenRef = useRef(0);
   const swipeRef = useRef(null);
   const reduced = useReducedMotion();
-
-  // Cover dedication — float in 2s after page load so the title-page
-  // entrance animations get to play first. Shows every visit (no
-  // localStorage gate) so the dedication isn't hidden from returning
-  // readers.
-  const [coverOpen, setCoverOpen] = useState(false);
-  useEffect(() => {
-    const t = setTimeout(() => setCoverOpen(true), 2000);
-    return () => clearTimeout(t);
-  }, []);
-  const closeCover = useCallback(() => setCoverOpen(false), []);
 
   const goto = useCallback((idx) => {
     setPageIdx(curr => {
@@ -2168,8 +2161,6 @@ function App() {
       )}
 
       {lb && <Lightbox letter={lb.letter} page={lb.page} onClose={closeLb} onNav={navLb} />}
-
-      {coverOpen && <CoverModal onClose={closeCover} />}
 
       {plb && <PhotoLightbox items={plb.items} index={plb.idx} onClose={closePhoto} />}
 
