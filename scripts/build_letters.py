@@ -168,7 +168,7 @@ def validate(letters, chapters) -> list[str]:
             problems.append(f"duplicate letter id {lid}")
         seen_ids.add(lid)
         if not l.get("body") and l.get("status") not in (
-            "envelope_only", "telegram", "christmas_card"
+            "envelope_only", "telegram", "christmas_card", "souvenir"
         ):
             problems.append(f"{lid}: empty body for status {l.get('status')}")
         if l.get("location_chapter") and chapter_keys and l["location_chapter"] not in chapter_keys:

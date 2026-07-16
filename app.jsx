@@ -1193,9 +1193,37 @@ function TelegramCard({ letter, onOpen }) {
   );
 }
 
+/* SouvenirCard — a printed keepsake (e.g. the El Paso postcard folder) that
+   carries no handwritten message. We show ONLY the artifact: the dated header
+   (with its weather glyph and Pearl-Harbor countdown) and the first scan,
+   rotated upright via CSS, clickable into the lightbox at page 1. The
+   "see the original" affordance keeps every scan reachable. No salutation,
+   body, signature, or note is rendered — those fields stay in letters.json
+   for the archive but the card variant simply omits them. */
+function SouvenirCard({ letter, onOpen }) {
+  const imgs = letterImages(letter);
+  return (
+    <article className="letter-card letter-card--souvenir" id={`letter-${letter.id}`} aria-label={`Souvenir, ${letter.date_label}`}>
+      <LetterHeader letter={letter} />
+      {imgs.length > 0 && (
+        <div className="souvenir-stage">
+          <button className="souvenir-img" onClick={() => onOpen(letter, 1)} aria-label="Open the original souvenir">
+            <div className="souvenir-rot">
+              <img src={`${letter.folder}/${(letter.images_web || imgs)[0]}`} loading="lazy" decoding="async"
+                   alt={`Souvenir postcard folder, ${letter.date_label}`} />
+            </div>
+          </button>
+        </div>
+      )}
+      {imgs.length > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
+    </article>
+  );
+}
+
 function LetterCard({ letter, onOpen, highlight }) {
   switch (letter.status) {
     case "envelope_only":      return <EnvelopeCard letter={letter} onOpen={onOpen} />;
+    case "souvenir":           return <SouvenirCard letter={letter} onOpen={onOpen} />;
     case "christmas_card":     return <ChristmasCardCard letter={letter} onOpen={onOpen} />;
     case "telegram":           return <TelegramCard letter={letter} onOpen={onOpen} />;
     case "transcribed_draft":  return <DraftCard letter={letter} onOpen={onOpen} highlight={highlight} />;

@@ -753,10 +753,24 @@ function ChristmasCardCard({ letter, onOpen }) {
 function TelegramCard({ letter, onOpen }) {
   return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--telegram", id: `letter-${letter.id}`, "aria-label": `Telegram, ${letter.date_label}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "telegram-paper" }, /* @__PURE__ */ React.createElement("div", { className: "telegram-letterhead" }, "Postal Telegraph · Commercial Cables"), /* @__PURE__ */ React.createElement("div", { className: "telegram-head" }, /* @__PURE__ */ React.createElement("span", null, "POSTAL TELEGRAPH"), /* @__PURE__ */ React.createElement("span", null, "HOLIDAY GREETINGS")), /* @__PURE__ */ React.createElement("div", { className: "telegram-routing" }, letter.telegram_routing), /* @__PURE__ */ React.createElement("div", { className: "telegram-to" }, letter.telegram_to.split("\n").map((line, i) => /* @__PURE__ */ React.createElement("div", { key: i }, line))), /* @__PURE__ */ React.createElement("div", { className: "telegram-message" }, letter.telegram_message), /* @__PURE__ */ React.createElement("div", { className: "telegram-signed" }, letter.telegram_signed)), letterImages(letter).length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
 }
+function SouvenirCard({ letter, onOpen }) {
+  const imgs = letterImages(letter);
+  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--souvenir", id: `letter-${letter.id}`, "aria-label": `Souvenir, ${letter.date_label}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), imgs.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "souvenir-stage" }, /* @__PURE__ */ React.createElement("button", { className: "souvenir-img", onClick: () => onOpen(letter, 1), "aria-label": "Open the original souvenir" }, /* @__PURE__ */ React.createElement("div", { className: "souvenir-rot" }, /* @__PURE__ */ React.createElement(
+    "img",
+    {
+      src: `${letter.folder}/${(letter.images_web || imgs)[0]}`,
+      loading: "lazy",
+      decoding: "async",
+      alt: `Souvenir postcard folder, ${letter.date_label}`
+    }
+  )))), imgs.length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
+}
 function LetterCard({ letter, onOpen, highlight }) {
   switch (letter.status) {
     case "envelope_only":
       return /* @__PURE__ */ React.createElement(EnvelopeCard, { letter, onOpen });
+    case "souvenir":
+      return /* @__PURE__ */ React.createElement(SouvenirCard, { letter, onOpen });
     case "christmas_card":
       return /* @__PURE__ */ React.createElement(ChristmasCardCard, { letter, onOpen });
     case "telegram":
