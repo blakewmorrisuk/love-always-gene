@@ -1164,8 +1164,9 @@ function ContextDrawer() {
   })();
   const [open, setOpen] = useState(false);
   const [revealed, setRevealed] = useState(false);
+  const [tucking, setTucking] = useState(false);
   useEffect(() => {
-    const t1 = setTimeout(() => setRevealed(true), 2850);
+    const t1 = setTimeout(() => setRevealed(true), 2650);
     if (startCollapsed) return () => clearTimeout(t1);
     const t2 = setTimeout(() => setOpen(true), 5600);
     return () => {
@@ -1175,6 +1176,7 @@ function ContextDrawer() {
   }, []);
   const collapse = () => {
     setOpen(false);
+    setTucking(true);
     try {
       localStorage.setItem(CONTEXT_DRAWER_KEY, "1");
     } catch (e) {
@@ -1183,6 +1185,7 @@ function ContextDrawer() {
   const expand = () => {
     setRevealed(true);
     setOpen(true);
+    setTucking(false);
     try {
       localStorage.removeItem(CONTEXT_DRAWER_KEY);
     } catch (e) {
@@ -1191,7 +1194,7 @@ function ContextDrawer() {
   return /* @__PURE__ */ React.createElement(
     "aside",
     {
-      className: "context-drawer" + (revealed ? " is-revealed" : "") + (open ? " is-open" : ""),
+      className: "context-drawer" + (revealed ? " is-revealed" : "") + (open ? " is-open" : "") + (tucking ? " is-tucking" : ""),
       "aria-label": CONTEXT_DRAWER_LABEL
     },
     /* @__PURE__ */ React.createElement("div", { className: "context-drawer-body", "aria-hidden": open ? void 0 : "true" }, /* @__PURE__ */ React.createElement("span", { className: "context-drawer-eyebrow" }, CONTEXT_DRAWER_LABEL), /* @__PURE__ */ React.createElement("span", { className: "context-drawer-links" }, CONTEXT_DRAWER_LINKS.map((l) => /* @__PURE__ */ React.createElement("a", { key: l.href, className: "context-drawer-link", href: l.href, target: "_blank", rel: "noopener" }, l.text)))),

@@ -1924,7 +1924,7 @@ const CONTEXT_DRAWER_KEY = "context-drawer-collapsed";
    target for both directions and never changes size, so the motion reads as
    one drawer gliding, not two objects swapping. Entrance waits for the
    title page's own choreography (last piece: ship-rise, done ~2.8s), then
-   plays in two beats — nudge in to the closed position (~2.85s, 1.5s
+   plays in two beats — nudge in to the closed position (~2.65s, 1.5s
    glide), hold there ~1.25s so the closed state registers, then slide
    open (~5.6s) — so the drawer never pre-exists the page. Visitors who tucked it away get the same float-in but it stops at
    closed. The collapsed state is remembered in localStorage (never
@@ -1939,9 +1939,12 @@ function ContextDrawer() {
      open: the body is slid out. Both start false → fully off-screen. */
   const [open, setOpen] = useState(false);
   const [revealed, setRevealed] = useState(false);
+  /* tucking: set only for a user-initiated collapse, which rides a
+     slightly quicker transition than the entrance/open glides. */
+  const [tucking, setTucking] = useState(false);
 
   useEffect(() => {
-    const t1 = setTimeout(() => setRevealed(true), 2850);
+    const t1 = setTimeout(() => setRevealed(true), 2650);
     if (startCollapsed) return () => clearTimeout(t1);
     const t2 = setTimeout(() => setOpen(true), 5600);
     return () => { clearTimeout(t1); clearTimeout(t2); };
@@ -1949,17 +1952,19 @@ function ContextDrawer() {
 
   const collapse = () => {
     setOpen(false);
+    setTucking(true);
     try { localStorage.setItem(CONTEXT_DRAWER_KEY, "1"); } catch (e) {}
   };
   const expand = () => {
     setRevealed(true);
     setOpen(true);
+    setTucking(false);
     try { localStorage.removeItem(CONTEXT_DRAWER_KEY); } catch (e) {}
   };
 
   return (
     <aside
-      className={"context-drawer" + (revealed ? " is-revealed" : "") + (open ? " is-open" : "")}
+      className={"context-drawer" + (revealed ? " is-revealed" : "") + (open ? " is-open" : "") + (tucking ? " is-tucking" : "")}
       aria-label={CONTEXT_DRAWER_LABEL}
     >
       <div className="context-drawer-body" aria-hidden={open ? undefined : "true"}>
