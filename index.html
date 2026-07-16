@@ -1873,13 +1873,14 @@ body.body--war .emphasis {
 }
 /* ---- context chip (quiet fixed placard, bottom-left) ------------- */
 
-/* A small museum-placard-style card offering outside coverage. Sits
-   above the nav chrome, below every modal/lightbox. Hidden until its
-   .is-shown class is added (~2.5s after load), then rises in gently. */
-.context-chip {
+/* A slim museum-placard drawer flush against the viewport's left edge,
+   shown only on the title page, below every modal/lightbox. Slides out
+   from off-screen left when .is-open; collapsed it hides off-screen and
+   leaves the narrow .context-drawer-tab peeking from the edge. */
+.context-drawer {
   position: fixed;
-  left: 1.5rem;
-  bottom: calc(5.4rem + env(safe-area-inset-bottom, 0px));
+  left: 0;
+  bottom: calc(2.4rem + env(safe-area-inset-bottom, 0px));
   z-index: 40;
   max-width: 15rem;
   display: flex;
@@ -1888,19 +1889,18 @@ body.body--war .emphasis {
   padding: 0.75rem 2.1rem 0.8rem 0.95rem;
   background: var(--card-deep);
   border: 1px solid rgba(var(--brass-rgb), 0.32);
-  border-radius: 3px;
+  border-left: none;
+  border-radius: 0 3px 3px 0;
   box-shadow: 0 8px 24px rgba(var(--shadow-rgb), 0.4);
-  opacity: 0;
-  transform: translateY(12px);
+  transform: translateX(-100%);
   pointer-events: none;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-.context-chip.is-shown {
-  opacity: 1;
-  transform: translateY(0);
+.context-drawer.is-open {
+  transform: translateX(0);
   pointer-events: auto;
 }
-.context-chip-eyebrow {
+.context-drawer-eyebrow {
   font-family: var(--serif-body);
   font-size: 0.6rem;
   letter-spacing: 0.26em;
@@ -1908,12 +1908,12 @@ body.body--war .emphasis {
   color: var(--walnut-mute);
   font-weight: 500;
 }
-.context-chip-links {
+.context-drawer-links {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
-.context-chip-link {
+.context-drawer-link {
   font-family: var(--serif-body);
   font-size: 0.85rem;
   color: var(--walnut-soft);
@@ -1924,12 +1924,12 @@ body.body--war .emphasis {
   align-self: flex-start;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
-.context-chip-link:hover, .context-chip-link:focus-visible {
+.context-drawer-link:hover, .context-drawer-link:focus-visible {
   color: var(--brass-soft);
   border-bottom-color: var(--brass);
   outline: none;
 }
-.context-chip-dismiss {
+.context-drawer-collapse {
   position: absolute;
   top: 0.35rem;
   right: 0.4rem;
@@ -1937,18 +1937,59 @@ body.body--war .emphasis {
   border: none;
   color: var(--walnut-mute);
   font-family: var(--serif-body);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1;
   padding: 0.15rem 0.35rem;
   cursor: pointer;
   transition: color 0.2s ease;
 }
-.context-chip-dismiss:hover, .context-chip-dismiss:focus-visible {
+.context-drawer-collapse:hover, .context-drawer-collapse:focus-visible {
   color: var(--brass-soft);
   outline: none;
 }
+/* The pull tab: a narrow vertical strip peeking from the left edge when
+   the drawer is tucked away. Clicking it slides the drawer back out. */
+.context-drawer-tab {
+  position: fixed;
+  left: 0;
+  bottom: calc(2.4rem + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  width: 28px;
+  min-height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: var(--card-deep);
+  border: 1px solid rgba(var(--brass-rgb), 0.32);
+  border-left: none;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 0 8px 24px rgba(var(--shadow-rgb), 0.4);
+  color: var(--walnut-mute);
+  font-family: var(--serif-body);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.45s ease, color 0.2s ease;
+}
+.context-drawer-tab.is-shown {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.context-drawer-tab:hover, .context-drawer-tab:focus-visible {
+  color: var(--brass-soft);
+  outline: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .context-drawer, .context-drawer-tab { transition: color 0.2s ease; }
+}
 @media (max-width: 540px) {
-  .context-chip { left: 1rem; bottom: calc(4.6rem + env(safe-area-inset-bottom, 0px)); max-width: 13rem; }
+  .context-drawer { max-width: 13rem; bottom: calc(2.2rem + env(safe-area-inset-bottom, 0px)); }
+  .context-drawer-tab { bottom: calc(2.2rem + env(safe-area-inset-bottom, 0px)); }
 }
 
 /* ---- cast of characters ------------------------------------------ */
@@ -3378,32 +3419,32 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 
 <!-- Cache-bust: bump on every meaningful release so iOS Safari doesn't
      keep serving a stale app.js after a new index.html lands. -->
-<script>window.__APP_VERSION = "20260716102539";</script>
-<script src="letters.js?v=20260716102539"></script>
+<script>window.__APP_VERSION = "20260716104802";</script>
+<script src="letters.js?v=20260716104802"></script>
 <!-- weather.js is generated by scripts/fetch_weather.mjs. If absent the
      atmosphere falls back to chapter defaults. The onerror swallow avoids
      a console 404 when it hasn't been generated yet. -->
 <script>window.LETTER_WEATHER = window.LETTER_WEATHER || null;</script>
-<script src="weather.js?v=20260716102539" onerror="void 0"></script>
+<script src="weather.js?v=20260716104802" onerror="void 0"></script>
 <!-- map.js is generated by scripts/build_map.mjs (Natural Earth coastlines,
      public domain, pre-projected). If absent, the journey map and the
      per-letter waypoint maps quietly do not render. -->
 <script>window.MAP_BASE = window.MAP_BASE || null;</script>
-<script src="map.js?v=20260716102539" onerror="void 0"></script>
+<script src="map.js?v=20260716104802" onerror="void 0"></script>
 <!-- cast.js is generated by scripts/build_cast.py from cast.json. If absent
      the Cast of Characters section simply does not render. -->
 <script>window.CAST = window.CAST || null;</script>
-<script src="cast.js?v=20260716102539" onerror="void 0"></script>
+<script src="cast.js?v=20260716104802" onerror="void 0"></script>
 <!-- photos.js is generated by scripts/build_photos.py from photos.json. If
      absent the Photographs gallery simply does not render. -->
 <script>window.PHOTOS = window.PHOTOS || null;</script>
-<script src="photos.js?v=20260716102539" onerror="void 0"></script>
+<script src="photos.js?v=20260716104802" onerror="void 0"></script>
 <!-- app.js is GENERATED from app.jsx by scripts/build_app.sh. It executes
      after the module above (defer scripts run in order, after module
      execution), so the window.* globals are always ready. Exactly one
      execution — the old in-browser Babel pipeline ran the app twice, which
      is why the dedication used to need dismissing twice. -->
-<script defer src="app.js?v=20260716102539"></script>
+<script defer src="app.js?v=20260716104802"></script>
 
 </body>
 </html>

@@ -1148,36 +1148,61 @@ function CoverModal({ onClose }) {
     /* @__PURE__ */ React.createElement("span", { className: "cover-button-text" }, "Video")
   ))), /* @__PURE__ */ React.createElement("button", { className: "cover-close", ref: closeRef, onClick: onClose }, "Open the letters")));
 }
-const CONTEXT_CHIP_LABEL = "Context";
-const CONTEXT_CHIP_LINKS = [
+const CONTEXT_DRAWER_LABEL = "Context";
+const CONTEXT_DRAWER_LINKS = [
   { text: "WKYT · Article", href: "https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/" },
   { text: "WKYT · Video", href: "https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/" }
 ];
-const CONTEXT_CHIP_KEY = "context-chip-dismissed";
-function ContextChip() {
-  const [dismissed, setDismissed] = useState(() => {
+const CONTEXT_DRAWER_KEY = "context-drawer-collapsed";
+function ContextDrawer() {
+  const startCollapsed = (() => {
     try {
-      return localStorage.getItem(CONTEXT_CHIP_KEY) === "1";
+      return localStorage.getItem(CONTEXT_DRAWER_KEY) === "1";
     } catch (e) {
       return false;
     }
-  });
-  const [shown, setShown] = useState(false);
+  })();
+  const [open, setOpen] = useState(false);
   useEffect(() => {
-    if (dismissed) return;
-    const t = setTimeout(() => setShown(true), 2500);
+    if (startCollapsed) return;
+    const t = setTimeout(() => setOpen(true), 2500);
     return () => clearTimeout(t);
-  }, [dismissed]);
-  if (dismissed) return null;
-  const dismiss = () => {
-    setShown(false);
-    setDismissed(true);
+  }, []);
+  const collapse = () => {
+    setOpen(false);
     try {
-      localStorage.setItem(CONTEXT_CHIP_KEY, "1");
+      localStorage.setItem(CONTEXT_DRAWER_KEY, "1");
     } catch (e) {
     }
   };
-  return /* @__PURE__ */ React.createElement("aside", { className: "context-chip" + (shown ? " is-shown" : ""), "aria-label": CONTEXT_CHIP_LABEL }, /* @__PURE__ */ React.createElement("span", { className: "context-chip-eyebrow" }, CONTEXT_CHIP_LABEL), /* @__PURE__ */ React.createElement("span", { className: "context-chip-links" }, CONTEXT_CHIP_LINKS.map((l) => /* @__PURE__ */ React.createElement("a", { key: l.href, className: "context-chip-link", href: l.href, target: "_blank", rel: "noopener" }, l.text))), /* @__PURE__ */ React.createElement("button", { className: "context-chip-dismiss", onClick: dismiss, "aria-label": "Dismiss" }, "×"));
+  const expand = () => {
+    setOpen(true);
+    try {
+      localStorage.removeItem(CONTEXT_DRAWER_KEY);
+    } catch (e) {
+    }
+  };
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(
+    "aside",
+    {
+      className: "context-drawer" + (open ? " is-open" : ""),
+      "aria-label": CONTEXT_DRAWER_LABEL,
+      "aria-hidden": open ? void 0 : "true"
+    },
+    /* @__PURE__ */ React.createElement("span", { className: "context-drawer-eyebrow" }, CONTEXT_DRAWER_LABEL),
+    /* @__PURE__ */ React.createElement("span", { className: "context-drawer-links" }, CONTEXT_DRAWER_LINKS.map((l) => /* @__PURE__ */ React.createElement("a", { key: l.href, className: "context-drawer-link", href: l.href, target: "_blank", rel: "noopener" }, l.text))),
+    /* @__PURE__ */ React.createElement("button", { className: "context-drawer-collapse", onClick: collapse, "aria-label": "Tuck away" }, "‹")
+  ), /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      className: "context-drawer-tab" + (open ? "" : " is-shown"),
+      onClick: expand,
+      "aria-label": CONTEXT_DRAWER_LABEL,
+      "aria-expanded": false,
+      tabIndex: open ? -1 : 0
+    },
+    "›"
+  ));
 }
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS, window.CAST, window.PHOTOS), []);
@@ -1420,7 +1445,7 @@ function App() {
     },
     /* @__PURE__ */ React.createElement("span", { className: "rtc-arrow" }, "‹"),
     " Back to the Cast"
-  ), /* @__PURE__ */ React.createElement(ContextChip, null));
+  ), currentPage.type === "title" && /* @__PURE__ */ React.createElement(ContextDrawer, null));
 }
 function AtmosphereMount({ chapterKey, weather }) {
   const [mounted, setMounted] = useState(null);

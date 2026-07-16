@@ -1904,51 +1904,68 @@ function CoverModal({ onClose }) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Context chip — a quiet placard offering outside coverage          */
+/*  Context drawer — a quiet placard sliding out from the left edge    */
 /* ------------------------------------------------------------------ */
 
-/* Context chip — edit label/links here */
-const CONTEXT_CHIP_LABEL = "Context";
-const CONTEXT_CHIP_LINKS = [
+/* Context drawer — edit label/links here */
+const CONTEXT_DRAWER_LABEL = "Context";
+const CONTEXT_DRAWER_LINKS = [
   { text: "WKYT · Article", href: "https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/" },
   { text: "WKYT · Video",   href: "https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/" },
 ];
-const CONTEXT_CHIP_KEY = "context-chip-dismissed";
+const CONTEXT_DRAWER_KEY = "context-drawer-collapsed";
 
-/* A small fixed placard, bottom-left, above the nav chrome. It stays
-   hidden for ~2.5s after load, then rises in gently. Dismiss (×) is
-   remembered in localStorage so it never returns for that reader. */
-function ContextChip() {
-  const [dismissed, setDismissed] = useState(() => {
-    try { return localStorage.getItem(CONTEXT_CHIP_KEY) === "1"; }
+/* A slim placard flush against the viewport's left edge, shown only on
+   the title page. On first visit it auto-slides out ~2.5s after load.
+   The ‹ chevron tucks it away (slides off to the left), leaving a narrow
+   pull tab (›) peeking from the edge; clicking the tab slides it back.
+   The collapsed state is remembered in localStorage (never permanently
+   dismissed). prefers-reduced-motion drops the slide to an instant swap. */
+function ContextDrawer() {
+  const startCollapsed = (() => {
+    try { return localStorage.getItem(CONTEXT_DRAWER_KEY) === "1"; }
     catch (e) { return false; }
-  });
-  const [shown, setShown] = useState(false);
+  })();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (dismissed) return;
-    const t = setTimeout(() => setShown(true), 2500);
+    if (startCollapsed) return;
+    const t = setTimeout(() => setOpen(true), 2500);
     return () => clearTimeout(t);
-  }, [dismissed]);
+  }, []);
 
-  if (dismissed) return null;
-
-  const dismiss = () => {
-    setShown(false);
-    setDismissed(true);
-    try { localStorage.setItem(CONTEXT_CHIP_KEY, "1"); } catch (e) {}
+  const collapse = () => {
+    setOpen(false);
+    try { localStorage.setItem(CONTEXT_DRAWER_KEY, "1"); } catch (e) {}
+  };
+  const expand = () => {
+    setOpen(true);
+    try { localStorage.removeItem(CONTEXT_DRAWER_KEY); } catch (e) {}
   };
 
   return (
-    <aside className={"context-chip" + (shown ? " is-shown" : "")} aria-label={CONTEXT_CHIP_LABEL}>
-      <span className="context-chip-eyebrow">{CONTEXT_CHIP_LABEL}</span>
-      <span className="context-chip-links">
-        {CONTEXT_CHIP_LINKS.map((l) => (
-          <a key={l.href} className="context-chip-link" href={l.href} target="_blank" rel="noopener">{l.text}</a>
-        ))}
-      </span>
-      <button className="context-chip-dismiss" onClick={dismiss} aria-label="Dismiss">×</button>
-    </aside>
+    <>
+      <aside
+        className={"context-drawer" + (open ? " is-open" : "")}
+        aria-label={CONTEXT_DRAWER_LABEL}
+        aria-hidden={open ? undefined : "true"}
+      >
+        <span className="context-drawer-eyebrow">{CONTEXT_DRAWER_LABEL}</span>
+        <span className="context-drawer-links">
+          {CONTEXT_DRAWER_LINKS.map((l) => (
+            <a key={l.href} className="context-drawer-link" href={l.href} target="_blank" rel="noopener">{l.text}</a>
+          ))}
+        </span>
+        <button className="context-drawer-collapse" onClick={collapse} aria-label="Tuck away">‹</button>
+      </aside>
+      <button
+        className={"context-drawer-tab" + (open ? "" : " is-shown")}
+        onClick={expand}
+        aria-label={CONTEXT_DRAWER_LABEL}
+        aria-expanded={false}
+        tabIndex={open ? -1 : 0}
+      >›</button>
+    </>
   );
 }
 
@@ -2222,7 +2239,7 @@ function App() {
         </button>
       )}
 
-      <ContextChip />
+      {currentPage.type === "title" && <ContextDrawer />}
     </>
   );
 }
