@@ -1165,9 +1165,9 @@ function ContextDrawer() {
   const [open, setOpen] = useState(false);
   const [revealed, setRevealed] = useState(false);
   useEffect(() => {
-    const t1 = setTimeout(() => setRevealed(true), 3050);
+    const t1 = setTimeout(() => setRevealed(true), 2850);
     if (startCollapsed) return () => clearTimeout(t1);
-    const t2 = setTimeout(() => setOpen(true), 5300);
+    const t2 = setTimeout(() => setOpen(true), 5400);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);

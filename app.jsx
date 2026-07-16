@@ -1924,9 +1924,9 @@ const CONTEXT_DRAWER_KEY = "context-drawer-collapsed";
    target for both directions and never changes size, so the motion reads as
    one drawer gliding, not two objects swapping. Entrance waits for the
    title page's own choreography (last piece: ship-rise, done ~2.8s), then
-   plays in two beats — nudge in to the closed position (~3.05s, 0.95s
+   plays in two beats — nudge in to the closed position (~2.85s, 1.25s
    glide), hold there ~1.3s so the closed state registers, then slide
-   open (~5.3s) — so the drawer never pre-exists the page. Visitors who tucked it away get the same float-in but it stops at
+   open (~5.4s) — so the drawer never pre-exists the page. Visitors who tucked it away get the same float-in but it stops at
    closed. The collapsed state is remembered in localStorage (never
    permanently dismissed). prefers-reduced-motion drops the slides to
    instant swaps on the same schedule. */
@@ -1941,9 +1941,9 @@ function ContextDrawer() {
   const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    const t1 = setTimeout(() => setRevealed(true), 3050);
+    const t1 = setTimeout(() => setRevealed(true), 2850);
     if (startCollapsed) return () => clearTimeout(t1);
-    const t2 = setTimeout(() => setOpen(true), 5300);
+    const t2 = setTimeout(() => setOpen(true), 5400);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
 
