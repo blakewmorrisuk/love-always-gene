@@ -1163,14 +1163,15 @@ function ContextDrawer() {
     }
   })();
   const [open, setOpen] = useState(false);
-  const [revealed, setRevealed] = useState(startCollapsed);
+  const [revealed, setRevealed] = useState(false);
   useEffect(() => {
-    if (startCollapsed) return;
-    const t = setTimeout(() => {
-      setRevealed(true);
-      setOpen(true);
-    }, 2500);
-    return () => clearTimeout(t);
+    const t1 = setTimeout(() => setRevealed(true), 3050);
+    if (startCollapsed) return () => clearTimeout(t1);
+    const t2 = setTimeout(() => setOpen(true), 4500);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
   }, []);
   const collapse = () => {
     setOpen(false);

@@ -1922,26 +1922,29 @@ const CONTEXT_DRAWER_KEY = "context-drawer-collapsed";
    body; collapsed (translateX -100% + 28px) tucks the body off-screen and
    leaves only the handle strip peeking, full height. The handle is the click
    target for both directions and never changes size, so the motion reads as
-   one drawer gliding, not two objects swapping. On first visit it starts
-   fully off-screen and auto-glides open ~2.5s after load. The collapsed
-   state is remembered in localStorage (never permanently dismissed).
-   prefers-reduced-motion drops the slide to an instant swap. */
+   one drawer gliding, not two objects swapping. Entrance waits for the
+   title page's own choreography (last piece: ship-rise, done ~2.8s), then
+   plays in two beats — float in to the closed position (~3.05s), a short
+   breath, then slide open (~4.5s) — so the drawer never pre-exists the
+   page. Visitors who tucked it away get the same float-in but it stops at
+   closed. The collapsed state is remembered in localStorage (never
+   permanently dismissed). prefers-reduced-motion drops the slides to
+   instant swaps on the same schedule. */
 function ContextDrawer() {
   const startCollapsed = (() => {
     try { return localStorage.getItem(CONTEXT_DRAWER_KEY) === "1"; }
     catch (e) { return false; }
   })();
   /* revealed: the drawer has entered the viewport at all (handle visible).
-     open: the body is slid out. On first visit both are false → fully
-     off-screen, then the 2.5s timer reveals + opens in one glide. When
-     starting collapsed we reveal immediately (handle only), no auto-open. */
+     open: the body is slid out. Both start false → fully off-screen. */
   const [open, setOpen] = useState(false);
-  const [revealed, setRevealed] = useState(startCollapsed);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    if (startCollapsed) return;
-    const t = setTimeout(() => { setRevealed(true); setOpen(true); }, 2500);
-    return () => clearTimeout(t);
+    const t1 = setTimeout(() => setRevealed(true), 3050);
+    if (startCollapsed) return () => clearTimeout(t1);
+    const t2 = setTimeout(() => setOpen(true), 4500);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
 
   const collapse = () => {
