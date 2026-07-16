@@ -1338,6 +1338,18 @@ function Closing() {
       </p>
       <div className="hairline-rule" />
       <p className="dedication">For the family who carries his story.</p>
+      <div className="closing-context">
+        <div className="closing-context-label">In the News</div>
+        <div className="closing-context-links">
+          <a className="closing-context-link"
+             href="https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/"
+             target="_blank" rel="noopener">WKYT · Article</a>
+          <span className="closing-context-sep" aria-hidden="true">·</span>
+          <a className="closing-context-link"
+             href="https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/"
+             target="_blank" rel="noopener">WKYT · Video</a>
+        </div>
+      </div>
     </section>
   );
 }

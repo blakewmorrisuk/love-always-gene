@@ -826,7 +826,25 @@ function Emphasis({ children }) {
   return /* @__PURE__ */ React.createElement("span", { ref, className: "emphasis" + (revealed ? " is-revealed" : "") }, children);
 }
 function Closing() {
-  return /* @__PURE__ */ React.createElement("section", { className: "closing" }, /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("p", { className: "closing-body" }, "Gene's letters to Joan continued through the war. Less than a year after this last letter of 1940, on the morning of December 7, 1941, he was at Pearl Harbor. A year after that, off Tassafaronga in the Solomon Islands, a Japanese torpedo struck the New Orleans and tore away one hundred and fifty feet of her bow. One hundred and eighty-three of his shipmates went down with it, along with most of Joan's letters back. Gene came home in 1943. He and Joan were married for forty-nine years."), /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("p", { className: "dedication" }, "For the family who carries his story."));
+  return /* @__PURE__ */ React.createElement("section", { className: "closing" }, /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("p", { className: "closing-body" }, "Gene's letters to Joan continued through the war. Less than a year after this last letter of 1940, on the morning of December 7, 1941, he was at Pearl Harbor. A year after that, off Tassafaronga in the Solomon Islands, a Japanese torpedo struck the New Orleans and tore away one hundred and fifty feet of her bow. One hundred and eighty-three of his shipmates went down with it, along with most of Joan's letters back. Gene came home in 1943. He and Joan were married for forty-nine years."), /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("p", { className: "dedication" }, "For the family who carries his story."), /* @__PURE__ */ React.createElement("div", { className: "closing-context" }, /* @__PURE__ */ React.createElement("div", { className: "closing-context-label" }, "In the News"), /* @__PURE__ */ React.createElement("div", { className: "closing-context-links" }, /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      className: "closing-context-link",
+      href: "https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/",
+      target: "_blank",
+      rel: "noopener"
+    },
+    "WKYT · Article"
+  ), /* @__PURE__ */ React.createElement("span", { className: "closing-context-sep", "aria-hidden": "true" }, "·"), /* @__PURE__ */ React.createElement(
+    "a",
+    {
+      className: "closing-context-link",
+      href: "https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/",
+      target: "_blank",
+      rel: "noopener"
+    },
+    "WKYT · Video"
+  ))));
 }
 function CastIntro({ cast }) {
   const count = cast && cast.people ? cast.people.length : 0;
