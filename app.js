@@ -826,25 +826,7 @@ function Emphasis({ children }) {
   return /* @__PURE__ */ React.createElement("span", { ref, className: "emphasis" + (revealed ? " is-revealed" : "") }, children);
 }
 function Closing() {
-  return /* @__PURE__ */ React.createElement("section", { className: "closing" }, /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("p", { className: "closing-body" }, "Gene's letters to Joan continued through the war. Less than a year after this last letter of 1940, on the morning of December 7, 1941, he was at Pearl Harbor. A year after that, off Tassafaronga in the Solomon Islands, a Japanese torpedo struck the New Orleans and tore away one hundred and fifty feet of her bow. One hundred and eighty-three of his shipmates went down with it, along with most of Joan's letters back. Gene came home in 1943. He and Joan were married for forty-nine years."), /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("p", { className: "dedication" }, "For the family who carries his story."), /* @__PURE__ */ React.createElement("div", { className: "closing-context" }, /* @__PURE__ */ React.createElement("div", { className: "closing-context-label" }, "In the News"), /* @__PURE__ */ React.createElement("div", { className: "closing-context-links" }, /* @__PURE__ */ React.createElement(
-    "a",
-    {
-      className: "closing-context-link",
-      href: "https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/",
-      target: "_blank",
-      rel: "noopener"
-    },
-    "WKYT · Article"
-  ), /* @__PURE__ */ React.createElement("span", { className: "closing-context-sep", "aria-hidden": "true" }, "·"), /* @__PURE__ */ React.createElement(
-    "a",
-    {
-      className: "closing-context-link",
-      href: "https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/",
-      target: "_blank",
-      rel: "noopener"
-    },
-    "WKYT · Video"
-  ))));
+  return /* @__PURE__ */ React.createElement("section", { className: "closing" }, /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("p", { className: "closing-body" }, "Gene's letters to Joan continued through the war. Less than a year after this last letter of 1940, on the morning of December 7, 1941, he was at Pearl Harbor. A year after that, off Tassafaronga in the Solomon Islands, a Japanese torpedo struck the New Orleans and tore away one hundred and fifty feet of her bow. One hundred and eighty-three of his shipmates went down with it, along with most of Joan's letters back. Gene came home in 1943. He and Joan were married for forty-nine years."), /* @__PURE__ */ React.createElement("div", { className: "hairline-rule" }), /* @__PURE__ */ React.createElement("p", { className: "dedication" }, "For the family who carries his story."));
 }
 function CastIntro({ cast }) {
   const count = cast && cast.people ? cast.people.length : 0;
@@ -1166,6 +1148,37 @@ function CoverModal({ onClose }) {
     /* @__PURE__ */ React.createElement("span", { className: "cover-button-text" }, "Video")
   ))), /* @__PURE__ */ React.createElement("button", { className: "cover-close", ref: closeRef, onClick: onClose }, "Open the letters")));
 }
+const CONTEXT_CHIP_LABEL = "Context";
+const CONTEXT_CHIP_LINKS = [
+  { text: "WKYT · Article", href: "https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/" },
+  { text: "WKYT · Video", href: "https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/" }
+];
+const CONTEXT_CHIP_KEY = "context-chip-dismissed";
+function ContextChip() {
+  const [dismissed, setDismissed] = useState(() => {
+    try {
+      return localStorage.getItem(CONTEXT_CHIP_KEY) === "1";
+    } catch (e) {
+      return false;
+    }
+  });
+  const [shown, setShown] = useState(false);
+  useEffect(() => {
+    if (dismissed) return;
+    const t = setTimeout(() => setShown(true), 2500);
+    return () => clearTimeout(t);
+  }, [dismissed]);
+  if (dismissed) return null;
+  const dismiss = () => {
+    setShown(false);
+    setDismissed(true);
+    try {
+      localStorage.setItem(CONTEXT_CHIP_KEY, "1");
+    } catch (e) {
+    }
+  };
+  return /* @__PURE__ */ React.createElement("aside", { className: "context-chip" + (shown ? " is-shown" : ""), "aria-label": CONTEXT_CHIP_LABEL }, /* @__PURE__ */ React.createElement("span", { className: "context-chip-eyebrow" }, CONTEXT_CHIP_LABEL), /* @__PURE__ */ React.createElement("span", { className: "context-chip-links" }, CONTEXT_CHIP_LINKS.map((l) => /* @__PURE__ */ React.createElement("a", { key: l.href, className: "context-chip-link", href: l.href, target: "_blank", rel: "noopener" }, l.text))), /* @__PURE__ */ React.createElement("button", { className: "context-chip-dismiss", onClick: dismiss, "aria-label": "Dismiss" }, "×"));
+}
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS, window.CAST, window.PHOTOS), []);
   const journey = useMemo(() => buildJourney(LETTERS, PLACES), []);
@@ -1407,7 +1420,7 @@ function App() {
     },
     /* @__PURE__ */ React.createElement("span", { className: "rtc-arrow" }, "‹"),
     " Back to the Cast"
-  ));
+  ), /* @__PURE__ */ React.createElement(ContextChip, null));
 }
 function AtmosphereMount({ chapterKey, weather }) {
   const [mounted, setMounted] = useState(null);

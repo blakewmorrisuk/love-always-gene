@@ -1338,18 +1338,6 @@ function Closing() {
       </p>
       <div className="hairline-rule" />
       <p className="dedication">For the family who carries his story.</p>
-      <div className="closing-context">
-        <div className="closing-context-label">In the News</div>
-        <div className="closing-context-links">
-          <a className="closing-context-link"
-             href="https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/"
-             target="_blank" rel="noopener">WKYT · Article</a>
-          <span className="closing-context-sep" aria-hidden="true">·</span>
-          <a className="closing-context-link"
-             href="https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/"
-             target="_blank" rel="noopener">WKYT · Video</a>
-        </div>
-      </div>
     </section>
   );
 }
@@ -1915,6 +1903,55 @@ function CoverModal({ onClose }) {
   );
 }
 
+/* ------------------------------------------------------------------ */
+/*  Context chip — a quiet placard offering outside coverage          */
+/* ------------------------------------------------------------------ */
+
+/* Context chip — edit label/links here */
+const CONTEXT_CHIP_LABEL = "Context";
+const CONTEXT_CHIP_LINKS = [
+  { text: "WKYT · Article", href: "https://www.wkyt.com/2023/02/15/love-always-gene-somerset-family-finds-wwii-love-letters/" },
+  { text: "WKYT · Video",   href: "https://www.wkyt.com/video/2023/02/14/watch-somerset-woman-finds-her-fathers-love-letters-sent-her-mother-during-world-war-ii/" },
+];
+const CONTEXT_CHIP_KEY = "context-chip-dismissed";
+
+/* A small fixed placard, bottom-left, above the nav chrome. It stays
+   hidden for ~2.5s after load, then rises in gently. Dismiss (×) is
+   remembered in localStorage so it never returns for that reader. */
+function ContextChip() {
+  const [dismissed, setDismissed] = useState(() => {
+    try { return localStorage.getItem(CONTEXT_CHIP_KEY) === "1"; }
+    catch (e) { return false; }
+  });
+  const [shown, setShown] = useState(false);
+
+  useEffect(() => {
+    if (dismissed) return;
+    const t = setTimeout(() => setShown(true), 2500);
+    return () => clearTimeout(t);
+  }, [dismissed]);
+
+  if (dismissed) return null;
+
+  const dismiss = () => {
+    setShown(false);
+    setDismissed(true);
+    try { localStorage.setItem(CONTEXT_CHIP_KEY, "1"); } catch (e) {}
+  };
+
+  return (
+    <aside className={"context-chip" + (shown ? " is-shown" : "")} aria-label={CONTEXT_CHIP_LABEL}>
+      <span className="context-chip-eyebrow">{CONTEXT_CHIP_LABEL}</span>
+      <span className="context-chip-links">
+        {CONTEXT_CHIP_LINKS.map((l) => (
+          <a key={l.href} className="context-chip-link" href={l.href} target="_blank" rel="noopener">{l.text}</a>
+        ))}
+      </span>
+      <button className="context-chip-dismiss" onClick={dismiss} aria-label="Dismiss">×</button>
+    </aside>
+  );
+}
+
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS, window.CAST, window.PHOTOS), []);
   const journey = useMemo(() => buildJourney(LETTERS, PLACES), []);
@@ -2184,6 +2221,8 @@ function App() {
           <span className="rtc-arrow">‹</span> Back to the Cast
         </button>
       )}
+
+      <ContextChip />
     </>
   );
 }
