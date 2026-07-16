@@ -1915,22 +1915,32 @@ const CONTEXT_DRAWER_LINKS = [
 ];
 const CONTEXT_DRAWER_KEY = "context-drawer-collapsed";
 
-/* A slim placard flush against the viewport's left edge, shown only on
-   the title page. On first visit it auto-slides out ~2.5s after load.
-   The ‹ chevron tucks it away (slides off to the left), leaving a narrow
-   pull tab (›) peeking from the edge; clicking the tab slides it back.
-   The collapsed state is remembered in localStorage (never permanently
-   dismissed). prefers-reduced-motion drops the slide to an instant swap. */
+/* A slim placard flush against the viewport's left edge, shown only on the
+   title page. It is ONE fixed-size element: the body (label + links) with a
+   narrow 28px handle strip permanently attached along its right edge. The
+   whole thing slides as a single piece — expanded (translateX 0) shows the
+   body; collapsed (translateX -100% + 28px) tucks the body off-screen and
+   leaves only the handle strip peeking, full height. The handle is the click
+   target for both directions and never changes size, so the motion reads as
+   one drawer gliding, not two objects swapping. On first visit it starts
+   fully off-screen and auto-glides open ~2.5s after load. The collapsed
+   state is remembered in localStorage (never permanently dismissed).
+   prefers-reduced-motion drops the slide to an instant swap. */
 function ContextDrawer() {
   const startCollapsed = (() => {
     try { return localStorage.getItem(CONTEXT_DRAWER_KEY) === "1"; }
     catch (e) { return false; }
   })();
+  /* revealed: the drawer has entered the viewport at all (handle visible).
+     open: the body is slid out. On first visit both are false → fully
+     off-screen, then the 2.5s timer reveals + opens in one glide. When
+     starting collapsed we reveal immediately (handle only), no auto-open. */
   const [open, setOpen] = useState(false);
+  const [revealed, setRevealed] = useState(startCollapsed);
 
   useEffect(() => {
     if (startCollapsed) return;
-    const t = setTimeout(() => setOpen(true), 2500);
+    const t = setTimeout(() => { setRevealed(true); setOpen(true); }, 2500);
     return () => clearTimeout(t);
   }, []);
 
@@ -1939,33 +1949,36 @@ function ContextDrawer() {
     try { localStorage.setItem(CONTEXT_DRAWER_KEY, "1"); } catch (e) {}
   };
   const expand = () => {
+    setRevealed(true);
     setOpen(true);
     try { localStorage.removeItem(CONTEXT_DRAWER_KEY); } catch (e) {}
   };
 
   return (
-    <>
-      <aside
-        className={"context-drawer" + (open ? " is-open" : "")}
-        aria-label={CONTEXT_DRAWER_LABEL}
-        aria-hidden={open ? undefined : "true"}
-      >
+    <aside
+      className={"context-drawer" + (revealed ? " is-revealed" : "") + (open ? " is-open" : "")}
+      aria-label={CONTEXT_DRAWER_LABEL}
+    >
+      <div className="context-drawer-body" aria-hidden={open ? undefined : "true"}>
         <span className="context-drawer-eyebrow">{CONTEXT_DRAWER_LABEL}</span>
         <span className="context-drawer-links">
           {CONTEXT_DRAWER_LINKS.map((l) => (
             <a key={l.href} className="context-drawer-link" href={l.href} target="_blank" rel="noopener">{l.text}</a>
           ))}
         </span>
-        <button className="context-drawer-collapse" onClick={collapse} aria-label="Tuck away">‹</button>
-      </aside>
+      </div>
       <button
-        className={"context-drawer-tab" + (open ? "" : " is-shown")}
-        onClick={expand}
-        aria-label={CONTEXT_DRAWER_LABEL}
-        aria-expanded={false}
-        tabIndex={open ? -1 : 0}
-      >›</button>
-    </>
+        className="context-drawer-handle"
+        onClick={open ? collapse : expand}
+        aria-label={open ? "Tuck away" : CONTEXT_DRAWER_LABEL}
+        aria-expanded={open}
+      >
+        <span className="context-drawer-chevron" aria-hidden="true">
+          <span className="chev-collapse">‹</span>
+          <span className="chev-expand">›</span>
+        </span>
+      </button>
+    </aside>
   );
 }
 

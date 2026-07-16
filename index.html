@@ -1874,19 +1874,23 @@ body.body--war .emphasis {
 /* ---- context chip (quiet fixed placard, bottom-left) ------------- */
 
 /* A slim museum-placard drawer flush against the viewport's left edge,
-   shown only on the title page, below every modal/lightbox. Slides out
-   from off-screen left when .is-open; collapsed it hides off-screen and
-   leaves the narrow .context-drawer-tab peeking from the edge. */
+   shown only on the title page, below every modal/lightbox. It is ONE
+   fixed-size element that never changes size: a .context-drawer-body plus a
+   narrow 28px .context-drawer-handle strip permanently attached along its
+   right edge. The whole container slides as a single piece —
+      hidden    (translateX -100%)              first visit, before reveal
+      collapsed (translateX -100% + 28px)       only the handle peeks
+      is-open   (translateX 0)                  body slid fully into view
+   Because it is one constant-size object, collapse/expand is a single
+   continuous glide, not two objects swapping. is-open wins over is-revealed
+   (declared later, equal specificity). */
 .context-drawer {
   position: fixed;
   left: 0;
   bottom: calc(2.4rem + env(safe-area-inset-bottom, 0px));
   z-index: 40;
-  max-width: 15rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  padding: 0.75rem 2.1rem 0.8rem 0.95rem;
+  align-items: stretch;
   background: var(--card-deep);
   border: 1px solid rgba(var(--brass-rgb), 0.32);
   border-left: none;
@@ -1894,10 +1898,23 @@ body.body--war .emphasis {
   box-shadow: 0 8px 24px rgba(var(--shadow-rgb), 0.4);
   transform: translateX(-100%);
   pointer-events: none;
-  transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.context-drawer.is-revealed {
+  transform: translateX(calc(-100% + 28px));
 }
 .context-drawer.is-open {
   transform: translateX(0);
+}
+.context-drawer-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 15rem;
+  padding: 0.75rem 0.95rem 0.8rem 0.95rem;
+  pointer-events: none;
+}
+.context-drawer.is-open .context-drawer-body {
   pointer-events: auto;
 }
 .context-drawer-eyebrow {
@@ -1929,67 +1946,62 @@ body.body--war .emphasis {
   border-bottom-color: var(--brass);
   outline: none;
 }
-.context-drawer-collapse {
-  position: absolute;
-  top: 0.35rem;
-  right: 0.4rem;
-  background: none;
-  border: none;
-  color: var(--walnut-mute);
-  font-family: var(--serif-body);
-  font-size: 1.2rem;
-  line-height: 1;
-  padding: 0.15rem 0.35rem;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-.context-drawer-collapse:hover, .context-drawer-collapse:focus-visible {
-  color: var(--brass-soft);
-  outline: none;
-}
-/* The pull tab: a narrow vertical strip peeking from the left edge when
-   the drawer is tucked away. Clicking it slides the drawer back out. */
-.context-drawer-tab {
-  position: fixed;
-  left: 0;
-  bottom: calc(2.4rem + env(safe-area-inset-bottom, 0px));
-  z-index: 40;
+/* The handle: a narrow vertical strip on the drawer's right edge, full
+   height, always the click target. When the drawer is tucked away it is the
+   only part still on-screen. It shares the container's border/palette; only
+   a hairline divider separates it from the body. */
+.context-drawer-handle {
+  flex: 0 0 28px;
   width: 28px;
-  min-height: 2.8rem;
+  align-self: stretch;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  background: var(--card-deep);
-  border: 1px solid rgba(var(--brass-rgb), 0.32);
-  border-left: none;
-  border-radius: 0 3px 3px 0;
-  box-shadow: 0 8px 24px rgba(var(--shadow-rgb), 0.4);
+  margin: 0;
+  background: none;
+  border: none;
+  border-left: 1px solid rgba(var(--brass-rgb), 0.2);
   color: var(--walnut-mute);
-  font-family: var(--serif-body);
-  font-size: 1.2rem;
-  line-height: 1;
   cursor: pointer;
-  transform: translateX(-100%);
-  opacity: 0;
   pointer-events: none;
-  transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.45s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
-.context-drawer-tab.is-shown {
-  transform: translateX(0);
-  opacity: 1;
+.context-drawer.is-revealed .context-drawer-handle {
   pointer-events: auto;
 }
-.context-drawer-tab:hover, .context-drawer-tab:focus-visible {
+.context-drawer-handle:hover, .context-drawer-handle:focus-visible {
   color: var(--brass-soft);
   outline: none;
 }
+/* Chevron cross-fades between › (collapsed) and ‹ (open) — unobtrusive, so
+   nothing snaps mid-glide. */
+.context-drawer-chevron {
+  position: relative;
+  display: inline-flex;
+  width: 1ch;
+  height: 1.2em;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif-body);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.context-drawer-chevron > span {
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+.chev-collapse { opacity: 0; }
+.chev-expand { opacity: 1; }
+.context-drawer.is-open .chev-collapse { opacity: 1; }
+.context-drawer.is-open .chev-expand { opacity: 0; }
 @media (prefers-reduced-motion: reduce) {
-  .context-drawer, .context-drawer-tab { transition: color 0.2s ease; }
+  .context-drawer { transition: none; }
+  .context-drawer-chevron > span { transition: none; }
 }
 @media (max-width: 540px) {
-  .context-drawer { max-width: 13rem; bottom: calc(2.2rem + env(safe-area-inset-bottom, 0px)); }
-  .context-drawer-tab { bottom: calc(2.2rem + env(safe-area-inset-bottom, 0px)); }
+  .context-drawer { bottom: calc(2.2rem + env(safe-area-inset-bottom, 0px)); }
+  .context-drawer-body { max-width: 13rem; }
 }
 
 /* ---- cast of characters ------------------------------------------ */
@@ -3419,32 +3431,32 @@ body.body--navy .progress-marker.is-active { background: var(--brass-faint); }
 
 <!-- Cache-bust: bump on every meaningful release so iOS Safari doesn't
      keep serving a stale app.js after a new index.html lands. -->
-<script>window.__APP_VERSION = "20260716104802";</script>
-<script src="letters.js?v=20260716104802"></script>
+<script>window.__APP_VERSION = "20260716110019";</script>
+<script src="letters.js?v=20260716110019"></script>
 <!-- weather.js is generated by scripts/fetch_weather.mjs. If absent the
      atmosphere falls back to chapter defaults. The onerror swallow avoids
      a console 404 when it hasn't been generated yet. -->
 <script>window.LETTER_WEATHER = window.LETTER_WEATHER || null;</script>
-<script src="weather.js?v=20260716104802" onerror="void 0"></script>
+<script src="weather.js?v=20260716110019" onerror="void 0"></script>
 <!-- map.js is generated by scripts/build_map.mjs (Natural Earth coastlines,
      public domain, pre-projected). If absent, the journey map and the
      per-letter waypoint maps quietly do not render. -->
 <script>window.MAP_BASE = window.MAP_BASE || null;</script>
-<script src="map.js?v=20260716104802" onerror="void 0"></script>
+<script src="map.js?v=20260716110019" onerror="void 0"></script>
 <!-- cast.js is generated by scripts/build_cast.py from cast.json. If absent
      the Cast of Characters section simply does not render. -->
 <script>window.CAST = window.CAST || null;</script>
-<script src="cast.js?v=20260716104802" onerror="void 0"></script>
+<script src="cast.js?v=20260716110019" onerror="void 0"></script>
 <!-- photos.js is generated by scripts/build_photos.py from photos.json. If
      absent the Photographs gallery simply does not render. -->
 <script>window.PHOTOS = window.PHOTOS || null;</script>
-<script src="photos.js?v=20260716104802" onerror="void 0"></script>
+<script src="photos.js?v=20260716110019" onerror="void 0"></script>
 <!-- app.js is GENERATED from app.jsx by scripts/build_app.sh. It executes
      after the module above (defer scripts run in order, after module
      execution), so the window.* globals are always ready. Exactly one
      execution — the old in-browser Babel pipeline ran the app twice, which
      is why the dedication used to need dismissing twice. -->
-<script defer src="app.js?v=20260716104802"></script>
+<script defer src="app.js?v=20260716110019"></script>
 
 </body>
 </html>

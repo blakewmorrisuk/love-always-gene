@@ -1163,9 +1163,13 @@ function ContextDrawer() {
     }
   })();
   const [open, setOpen] = useState(false);
+  const [revealed, setRevealed] = useState(startCollapsed);
   useEffect(() => {
     if (startCollapsed) return;
-    const t = setTimeout(() => setOpen(true), 2500);
+    const t = setTimeout(() => {
+      setRevealed(true);
+      setOpen(true);
+    }, 2500);
     return () => clearTimeout(t);
   }, []);
   const collapse = () => {
@@ -1176,33 +1180,31 @@ function ContextDrawer() {
     }
   };
   const expand = () => {
+    setRevealed(true);
     setOpen(true);
     try {
       localStorage.removeItem(CONTEXT_DRAWER_KEY);
     } catch (e) {
     }
   };
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement(
     "aside",
     {
-      className: "context-drawer" + (open ? " is-open" : ""),
-      "aria-label": CONTEXT_DRAWER_LABEL,
-      "aria-hidden": open ? void 0 : "true"
+      className: "context-drawer" + (revealed ? " is-revealed" : "") + (open ? " is-open" : ""),
+      "aria-label": CONTEXT_DRAWER_LABEL
     },
-    /* @__PURE__ */ React.createElement("span", { className: "context-drawer-eyebrow" }, CONTEXT_DRAWER_LABEL),
-    /* @__PURE__ */ React.createElement("span", { className: "context-drawer-links" }, CONTEXT_DRAWER_LINKS.map((l) => /* @__PURE__ */ React.createElement("a", { key: l.href, className: "context-drawer-link", href: l.href, target: "_blank", rel: "noopener" }, l.text))),
-    /* @__PURE__ */ React.createElement("button", { className: "context-drawer-collapse", onClick: collapse, "aria-label": "Tuck away" }, "‹")
-  ), /* @__PURE__ */ React.createElement(
-    "button",
-    {
-      className: "context-drawer-tab" + (open ? "" : " is-shown"),
-      onClick: expand,
-      "aria-label": CONTEXT_DRAWER_LABEL,
-      "aria-expanded": false,
-      tabIndex: open ? -1 : 0
-    },
-    "›"
-  ));
+    /* @__PURE__ */ React.createElement("div", { className: "context-drawer-body", "aria-hidden": open ? void 0 : "true" }, /* @__PURE__ */ React.createElement("span", { className: "context-drawer-eyebrow" }, CONTEXT_DRAWER_LABEL), /* @__PURE__ */ React.createElement("span", { className: "context-drawer-links" }, CONTEXT_DRAWER_LINKS.map((l) => /* @__PURE__ */ React.createElement("a", { key: l.href, className: "context-drawer-link", href: l.href, target: "_blank", rel: "noopener" }, l.text)))),
+    /* @__PURE__ */ React.createElement(
+      "button",
+      {
+        className: "context-drawer-handle",
+        onClick: open ? collapse : expand,
+        "aria-label": open ? "Tuck away" : CONTEXT_DRAWER_LABEL,
+        "aria-expanded": open
+      },
+      /* @__PURE__ */ React.createElement("span", { className: "context-drawer-chevron", "aria-hidden": "true" }, /* @__PURE__ */ React.createElement("span", { className: "chev-collapse" }, "‹"), /* @__PURE__ */ React.createElement("span", { className: "chev-expand" }, "›"))
+    )
+  );
 }
 function App() {
   const pages = useMemo(() => buildPages(LETTERS, CHAPTERS, window.CAST, window.PHOTOS), []);
