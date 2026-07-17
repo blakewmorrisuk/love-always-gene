@@ -1207,6 +1207,9 @@ const SOUVENIR_DISPLAY = {
   "L103_unfold_side2_web.jpg": { rotate: -90, w: 1600, h: 1200 }, // fold-out strip, side 2
   "L103_back_cover_web.jpg":   { rotate: -90, w: 1600, h: 1200 }, // printed description
   "L103_envelope_web.jpg":     { rotate:   0, w: 1600, h: 1200 }, // mailing cover, already upright
+  // Chicago picture postcard (L47). Enumeration order: p1 · p2.
+  "L47_p1_web.jpg":            { rotate: -90, w: 1200, h: 1600 }, // printed Union Station view, landscape
+  // p2 (handwritten back) is upright in its portrait scan — defaults suffice.
 };
 
 /* SouvenirCarousel — cycles through every scan of a keepsake one at a time,
