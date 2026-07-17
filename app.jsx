@@ -1193,13 +1193,118 @@ function TelegramCard({ letter, onOpen }) {
   );
 }
 
+/* Per-scan display config for souvenir carousels. Scans on disk are NEVER
+   modified — these rotations are display-only. Keyed by the _web filename:
+   `rotate` is the CSS rotation (deg, ±90 or 0) needed to read the scan
+   upright; `w`/`h` are the scan's pixel dimensions (used to size the rotated
+   frame so nothing clips). An unlisted scan defaults to no rotation and its
+   natural aspect (measured on load). EDIT HERE to tune a scan's orientation. */
+const SOUVENIR_DISPLAY = {
+  // El Paso postcard folder (L103). Enumeration order (from letters.js):
+  //   p1 · unfold_side1 · unfold_side2 · back_cover · envelope
+  "L103_p1_web.jpg":           { rotate: -90, w: 1200, h: 1600 }, // postcard, printed landscape
+  "L103_unfold_side1_web.jpg": { rotate: -90, w: 1600, h: 1200 }, // fold-out strip, side 1
+  "L103_unfold_side2_web.jpg": { rotate: -90, w: 1600, h: 1200 }, // fold-out strip, side 2
+  "L103_back_cover_web.jpg":   { rotate: -90, w: 1600, h: 1200 }, // printed description
+  "L103_envelope_web.jpg":     { rotate:   0, w: 1600, h: 1200 }, // mailing cover, already upright
+};
+
+/* SouvenirCarousel — cycles through every scan of a keepsake one at a time,
+   each sized by its own (optionally rotated) aspect. The viewport's height is
+   driven by an inline padding-bottom so it eases smoothly between differently
+   shaped scans; slides crossfade (opacity). Quiet ‹ › arrows wrap around, dot
+   indicators track position, and tapping the IMAGE (not the arrows) opens the
+   lightbox at that scan's page. Left/right arrow keys move slides while focus
+   is inside the carousel; prefers-reduced-motion drops the crossfade (CSS). */
+function SouvenirCarousel({ letter, onOpen }) {
+  const webs = letter.images_web || letterImages(letter);
+  const n = webs.length;
+  const [idx, setIdx] = useState(0);
+  const [measured, setMeasured] = useState({});
+  const pointer = useRef(null);
+  const go = useCallback((d) => setIdx((i) => (i + d + n) % n), [n]);
+
+  // padding-bottom % = frame height / frame width * 100 for the current scan.
+  const slidePad = (file) => {
+    const cfg = SOUVENIR_DISPLAY[file] || {};
+    const rot = Math.abs(cfg.rotate || 0) === 90;
+    if (cfg.w && cfg.h) return (rot ? cfg.w / cfg.h : cfg.h / cfg.w) * 100;
+    return measured[file] || 75;
+  };
+  const onKeyDown = (e) => {
+    if (e.key === "ArrowRight") { e.preventDefault(); e.stopPropagation(); go(1); }
+    else if (e.key === "ArrowLeft") { e.preventDefault(); e.stopPropagation(); go(-1); }
+  };
+  const onPointerDown = (e) => { pointer.current = e.clientX; };
+  const onPointerUp = (e) => {
+    if (pointer.current == null) return;
+    const dx = e.clientX - pointer.current;
+    pointer.current = null;
+    if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+  };
+
+  return (
+    <div className="souv-carousel" onKeyDown={onKeyDown}>
+      <div className="souv-frame">
+        <div className="souv-viewport" style={{ paddingBottom: slidePad(webs[idx]) + "%" }}
+             onPointerDown={onPointerDown} onPointerUp={onPointerUp}>
+          {webs.map((file, i) => {
+            const cfg = SOUVENIR_DISPLAY[file] || {};
+            const rot = Math.abs(cfg.rotate || 0) === 90;
+            const imgStyle = rot
+              ? { width: `calc(100% * ${cfg.w} / ${cfg.h})`,
+                  transform: `translate(-50%, -50%) rotate(${cfg.rotate}deg)` }
+              : undefined;
+            const onLoad = (SOUVENIR_DISPLAY[file] && cfg.w && cfg.h) ? undefined : (e) => {
+              const img = e.currentTarget;
+              if (img.naturalWidth) {
+                setMeasured((m) => ({ ...m, [file]: (img.naturalHeight / img.naturalWidth) * 100 }));
+              }
+            };
+            return (
+              <div key={file} className={`souv-slide${i === idx ? " is-current" : ""}`} aria-hidden={i !== idx}>
+                <button className="souv-img-btn" tabIndex={i === idx ? 0 : -1}
+                        onClick={() => onOpen(letter, i + 1)}
+                        aria-label={`Open scan ${i + 1} of ${n} at full size`}>
+                  <img className={`souv-img${rot ? " souv-img--rot" : ""}`}
+                       src={`${letter.folder}/${file}`} style={imgStyle}
+                       loading={i === 0 ? "eager" : "lazy"} decoding="async" onLoad={onLoad}
+                       alt={`Souvenir folder, scan ${i + 1} of ${n}, ${letter.date_label}`} />
+                </button>
+              </div>
+            );
+          })}
+        </div>
+        {n > 1 && (
+          <>
+            <button className="souv-arrow souv-arrow--prev" onClick={() => go(-1)} aria-label="Previous scan">‹</button>
+            <button className="souv-arrow souv-arrow--next" onClick={() => go(1)} aria-label="Next scan">›</button>
+          </>
+        )}
+      </div>
+      {n > 1 && (
+        <div className="souv-controls">
+          <div className="souv-dots" role="group" aria-label="Choose a scan">
+            {webs.map((_, i) => (
+              <button key={i} className={`souv-dot${i === idx ? " is-current" : ""}`}
+                      onClick={() => setIdx(i)} aria-current={i === idx ? "true" : undefined}
+                      aria-label={`Scan ${i + 1}`} />
+            ))}
+          </div>
+          <span className="souv-counter" aria-hidden="true">{idx + 1} / {n}</span>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* SouvenirCard — a printed keepsake (e.g. the El Paso postcard folder) that
    carries no handwritten message. We show ONLY the artifact: the dated header
-   (with its weather glyph and Pearl-Harbor countdown) and the first scan,
-   rotated upright via CSS, clickable into the lightbox at page 1. The
-   "see the original" affordance keeps every scan reachable. No salutation,
-   body, signature, or note is rendered — those fields stay in letters.json
-   for the archive but the card variant simply omits them. */
+   (with its weather glyph and Pearl-Harbor countdown) and a small carousel of
+   every scan, each rotated upright via CSS, clickable into the lightbox at its
+   page. The "see the original" affordance echoes the full page count. No
+   salutation, body, signature, or note is rendered — those fields stay in
+   letters.json for the archive but the card variant simply omits them. */
 function SouvenirCard({ letter, onOpen }) {
   const imgs = letterImages(letter);
   return (
@@ -1207,12 +1312,7 @@ function SouvenirCard({ letter, onOpen }) {
       <LetterHeader letter={letter} />
       {imgs.length > 0 && (
         <div className="souvenir-stage">
-          <button className="souvenir-img" onClick={() => onOpen(letter, 1)} aria-label="Open the original souvenir">
-            <div className="souvenir-rot">
-              <img src={`${letter.folder}/${(letter.images_web || imgs)[0]}`} loading="lazy" decoding="async"
-                   alt={`Souvenir postcard folder, ${letter.date_label}`} />
-            </div>
-          </button>
+          <SouvenirCarousel letter={letter} onOpen={onOpen} />
         </div>
       )}
       {imgs.length > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}

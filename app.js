@@ -753,17 +753,110 @@ function ChristmasCardCard({ letter, onOpen }) {
 function TelegramCard({ letter, onOpen }) {
   return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--telegram", id: `letter-${letter.id}`, "aria-label": `Telegram, ${letter.date_label}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), /* @__PURE__ */ React.createElement("div", { className: "telegram-paper" }, /* @__PURE__ */ React.createElement("div", { className: "telegram-letterhead" }, "Postal Telegraph · Commercial Cables"), /* @__PURE__ */ React.createElement("div", { className: "telegram-head" }, /* @__PURE__ */ React.createElement("span", null, "POSTAL TELEGRAPH"), /* @__PURE__ */ React.createElement("span", null, "HOLIDAY GREETINGS")), /* @__PURE__ */ React.createElement("div", { className: "telegram-routing" }, letter.telegram_routing), /* @__PURE__ */ React.createElement("div", { className: "telegram-to" }, letter.telegram_to.split("\n").map((line, i) => /* @__PURE__ */ React.createElement("div", { key: i }, line))), /* @__PURE__ */ React.createElement("div", { className: "telegram-message" }, letter.telegram_message), /* @__PURE__ */ React.createElement("div", { className: "telegram-signed" }, letter.telegram_signed)), letterImages(letter).length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
 }
+const SOUVENIR_DISPLAY = {
+  // El Paso postcard folder (L103). Enumeration order (from letters.js):
+  //   p1 · unfold_side1 · unfold_side2 · back_cover · envelope
+  "L103_p1_web.jpg": { rotate: -90, w: 1200, h: 1600 },
+  // postcard, printed landscape
+  "L103_unfold_side1_web.jpg": { rotate: -90, w: 1600, h: 1200 },
+  // fold-out strip, side 1
+  "L103_unfold_side2_web.jpg": { rotate: -90, w: 1600, h: 1200 },
+  // fold-out strip, side 2
+  "L103_back_cover_web.jpg": { rotate: -90, w: 1600, h: 1200 },
+  // printed description
+  "L103_envelope_web.jpg": { rotate: 0, w: 1600, h: 1200 }
+  // mailing cover, already upright
+};
+function SouvenirCarousel({ letter, onOpen }) {
+  const webs = letter.images_web || letterImages(letter);
+  const n = webs.length;
+  const [idx, setIdx] = useState(0);
+  const [measured, setMeasured] = useState({});
+  const pointer = useRef(null);
+  const go = useCallback((d) => setIdx((i) => (i + d + n) % n), [n]);
+  const slidePad = (file) => {
+    const cfg = SOUVENIR_DISPLAY[file] || {};
+    const rot = Math.abs(cfg.rotate || 0) === 90;
+    if (cfg.w && cfg.h) return (rot ? cfg.w / cfg.h : cfg.h / cfg.w) * 100;
+    return measured[file] || 75;
+  };
+  const onKeyDown = (e) => {
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      e.stopPropagation();
+      go(1);
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      e.stopPropagation();
+      go(-1);
+    }
+  };
+  const onPointerDown = (e) => {
+    pointer.current = e.clientX;
+  };
+  const onPointerUp = (e) => {
+    if (pointer.current == null) return;
+    const dx = e.clientX - pointer.current;
+    pointer.current = null;
+    if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+  };
+  return /* @__PURE__ */ React.createElement("div", { className: "souv-carousel", onKeyDown }, /* @__PURE__ */ React.createElement("div", { className: "souv-frame" }, /* @__PURE__ */ React.createElement(
+    "div",
+    {
+      className: "souv-viewport",
+      style: { paddingBottom: slidePad(webs[idx]) + "%" },
+      onPointerDown,
+      onPointerUp
+    },
+    webs.map((file, i) => {
+      const cfg = SOUVENIR_DISPLAY[file] || {};
+      const rot = Math.abs(cfg.rotate || 0) === 90;
+      const imgStyle = rot ? {
+        width: `calc(100% * ${cfg.w} / ${cfg.h})`,
+        transform: `translate(-50%, -50%) rotate(${cfg.rotate}deg)`
+      } : void 0;
+      const onLoad = SOUVENIR_DISPLAY[file] && cfg.w && cfg.h ? void 0 : (e) => {
+        const img = e.currentTarget;
+        if (img.naturalWidth) {
+          setMeasured((m) => ({ ...m, [file]: img.naturalHeight / img.naturalWidth * 100 }));
+        }
+      };
+      return /* @__PURE__ */ React.createElement("div", { key: file, className: `souv-slide${i === idx ? " is-current" : ""}`, "aria-hidden": i !== idx }, /* @__PURE__ */ React.createElement(
+        "button",
+        {
+          className: "souv-img-btn",
+          tabIndex: i === idx ? 0 : -1,
+          onClick: () => onOpen(letter, i + 1),
+          "aria-label": `Open scan ${i + 1} of ${n} at full size`
+        },
+        /* @__PURE__ */ React.createElement(
+          "img",
+          {
+            className: `souv-img${rot ? " souv-img--rot" : ""}`,
+            src: `${letter.folder}/${file}`,
+            style: imgStyle,
+            loading: i === 0 ? "eager" : "lazy",
+            decoding: "async",
+            onLoad,
+            alt: `Souvenir folder, scan ${i + 1} of ${n}, ${letter.date_label}`
+          }
+        )
+      ));
+    })
+  ), n > 1 && /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("button", { className: "souv-arrow souv-arrow--prev", onClick: () => go(-1), "aria-label": "Previous scan" }, "‹"), /* @__PURE__ */ React.createElement("button", { className: "souv-arrow souv-arrow--next", onClick: () => go(1), "aria-label": "Next scan" }, "›"))), n > 1 && /* @__PURE__ */ React.createElement("div", { className: "souv-controls" }, /* @__PURE__ */ React.createElement("div", { className: "souv-dots", role: "group", "aria-label": "Choose a scan" }, webs.map((_, i) => /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      key: i,
+      className: `souv-dot${i === idx ? " is-current" : ""}`,
+      onClick: () => setIdx(i),
+      "aria-current": i === idx ? "true" : void 0,
+      "aria-label": `Scan ${i + 1}`
+    }
+  ))), /* @__PURE__ */ React.createElement("span", { className: "souv-counter", "aria-hidden": "true" }, idx + 1, " / ", n)));
+}
 function SouvenirCard({ letter, onOpen }) {
   const imgs = letterImages(letter);
-  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--souvenir", id: `letter-${letter.id}`, "aria-label": `Souvenir, ${letter.date_label}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), imgs.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "souvenir-stage" }, /* @__PURE__ */ React.createElement("button", { className: "souvenir-img", onClick: () => onOpen(letter, 1), "aria-label": "Open the original souvenir" }, /* @__PURE__ */ React.createElement("div", { className: "souvenir-rot" }, /* @__PURE__ */ React.createElement(
-    "img",
-    {
-      src: `${letter.folder}/${(letter.images_web || imgs)[0]}`,
-      loading: "lazy",
-      decoding: "async",
-      alt: `Souvenir postcard folder, ${letter.date_label}`
-    }
-  )))), imgs.length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
+  return /* @__PURE__ */ React.createElement("article", { className: "letter-card letter-card--souvenir", id: `letter-${letter.id}`, "aria-label": `Souvenir, ${letter.date_label}` }, /* @__PURE__ */ React.createElement(LetterHeader, { letter }), imgs.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "souvenir-stage" }, /* @__PURE__ */ React.createElement(SouvenirCarousel, { letter, onOpen })), imgs.length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
 }
 function LetterCard({ letter, onOpen, highlight }) {
   switch (letter.status) {
