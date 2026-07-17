@@ -1195,10 +1195,11 @@ function TelegramCard({ letter, onOpen }) {
 
 /* Per-scan display config for souvenir carousels. Scans on disk are NEVER
    modified — these rotations are display-only. Keyed by the _web filename:
-   `rotate` is the CSS rotation (deg, ±90 or 0) needed to read the scan
+   `rotate` is the CSS rotation (deg: ±90, 180, or 0) needed to read the scan
    upright; `w`/`h` are the scan's pixel dimensions (used to size the rotated
-   frame so nothing clips). An unlisted scan defaults to no rotation and its
-   natural aspect (measured on load). EDIT HERE to tune a scan's orientation. */
+   frame so nothing clips — required for ±90, where the frame aspect swaps).
+   An unlisted scan defaults to no rotation and its natural aspect (measured on
+   load). EDIT HERE to tune a scan's orientation. */
 const SOUVENIR_DISPLAY = {
   // El Paso postcard folder (L103). Enumeration order (from letters.js):
   //   p1 · unfold_side1 · unfold_side2 · back_cover · envelope
@@ -1210,6 +1211,13 @@ const SOUVENIR_DISPLAY = {
   // Chicago picture postcard (L47). Enumeration order: p1 · p2.
   "L47_p1_web.jpg":            { rotate: -90, w: 1200, h: 1600 }, // printed Union Station view, landscape
   // p2 (handwritten back) is upright in its portrait scan — defaults suffice.
+  // Christmas card, from Nancy (L73). Enumeration order: card_front ·
+  //   card_inside · envelope. All three landscape scans need reorienting;
+  //   the two envelope_only letters (L08, L19), the Pearl-Harbor card (L21)
+  //   and the Honolulu telegram (L22) scan upright already — defaults suffice.
+  "L73_card_front_web.jpg":    { rotate: -90, w: 1600, h: 1200 }, // card face, shot on its side
+  "L73_card_inside_web.jpg":   { rotate: 180, w: 1600, h: 1200 }, // inside spread, shot upside down
+  "L73_envelope_web.jpg":      { rotate: -90, w: 1600, h: 1200 }, // mailing cover, shot on its side
 };
 
 /* SouvenirCarousel — cycles through every scan of a keepsake one at a time,
@@ -1228,10 +1236,11 @@ function SouvenirCarousel({ letter, onOpen }) {
   const go = useCallback((d) => setIdx((i) => (i + d + n) % n), [n]);
 
   // padding-bottom % = frame height / frame width * 100 for the current scan.
+  // A ±90 rotation swaps the frame's aspect; 0 or 180 leaves it unchanged.
   const slidePad = (file) => {
     const cfg = SOUVENIR_DISPLAY[file] || {};
-    const rot = Math.abs(cfg.rotate || 0) === 90;
-    if (cfg.w && cfg.h) return (rot ? cfg.w / cfg.h : cfg.h / cfg.w) * 100;
+    const quarter = Math.abs(cfg.rotate || 0) === 90;
+    if (cfg.w && cfg.h) return (quarter ? cfg.w / cfg.h : cfg.h / cfg.w) * 100;
     return measured[file] || 75;
   };
   const onKeyDown = (e) => {
@@ -1253,11 +1262,13 @@ function SouvenirCarousel({ letter, onOpen }) {
              onPointerDown={onPointerDown} onPointerUp={onPointerUp}>
           {webs.map((file, i) => {
             const cfg = SOUVENIR_DISPLAY[file] || {};
-            const rot = Math.abs(cfg.rotate || 0) === 90;
-            const imgStyle = rot
+            // ±90 needs the absolutely-centred, reframed layout (souv-img--rot);
+            // 180 keeps the natural (object-fit) box and only flips in place.
+            const quarter = Math.abs(cfg.rotate || 0) === 90;
+            const imgStyle = quarter
               ? { width: `calc(100% * ${cfg.w} / ${cfg.h})`,
                   transform: `translate(-50%, -50%) rotate(${cfg.rotate}deg)` }
-              : undefined;
+              : (cfg.rotate ? { transform: `rotate(${cfg.rotate}deg)` } : undefined);
             const onLoad = (SOUVENIR_DISPLAY[file] && cfg.w && cfg.h) ? undefined : (e) => {
               const img = e.currentTarget;
               if (img.naturalWidth) {
@@ -1269,7 +1280,7 @@ function SouvenirCarousel({ letter, onOpen }) {
                 <button className="souv-img-btn" tabIndex={i === idx ? 0 : -1}
                         onClick={() => onOpen(letter, i + 1)}
                         aria-label={`Open scan ${i + 1} of ${n} at full size`}>
-                  <img className={`souv-img${rot ? " souv-img--rot" : ""}`}
+                  <img className={`souv-img${quarter ? " souv-img--rot" : ""}`}
                        src={`${letter.folder}/${file}`} style={imgStyle}
                        loading={i === 0 ? "eager" : "lazy"} decoding="async" onLoad={onLoad}
                        alt={`Souvenir folder, scan ${i + 1} of ${n}, ${letter.date_label}`} />

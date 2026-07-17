@@ -767,9 +767,19 @@ const SOUVENIR_DISPLAY = {
   "L103_envelope_web.jpg": { rotate: 0, w: 1600, h: 1200 },
   // mailing cover, already upright
   // Chicago picture postcard (L47). Enumeration order: p1 · p2.
-  "L47_p1_web.jpg": { rotate: -90, w: 1200, h: 1600 }
+  "L47_p1_web.jpg": { rotate: -90, w: 1200, h: 1600 },
   // printed Union Station view, landscape
   // p2 (handwritten back) is upright in its portrait scan — defaults suffice.
+  // Christmas card, from Nancy (L73). Enumeration order: card_front ·
+  //   card_inside · envelope. All three landscape scans need reorienting;
+  //   the two envelope_only letters (L08, L19), the Pearl-Harbor card (L21)
+  //   and the Honolulu telegram (L22) scan upright already — defaults suffice.
+  "L73_card_front_web.jpg": { rotate: -90, w: 1600, h: 1200 },
+  // card face, shot on its side
+  "L73_card_inside_web.jpg": { rotate: 180, w: 1600, h: 1200 },
+  // inside spread, shot upside down
+  "L73_envelope_web.jpg": { rotate: -90, w: 1600, h: 1200 }
+  // mailing cover, shot on its side
 };
 function SouvenirCarousel({ letter, onOpen }) {
   const webs = letter.images_web || letterImages(letter);
@@ -780,8 +790,8 @@ function SouvenirCarousel({ letter, onOpen }) {
   const go = useCallback((d) => setIdx((i) => (i + d + n) % n), [n]);
   const slidePad = (file) => {
     const cfg = SOUVENIR_DISPLAY[file] || {};
-    const rot = Math.abs(cfg.rotate || 0) === 90;
-    if (cfg.w && cfg.h) return (rot ? cfg.w / cfg.h : cfg.h / cfg.w) * 100;
+    const quarter = Math.abs(cfg.rotate || 0) === 90;
+    if (cfg.w && cfg.h) return (quarter ? cfg.w / cfg.h : cfg.h / cfg.w) * 100;
     return measured[file] || 75;
   };
   const onKeyDown = (e) => {
@@ -814,11 +824,11 @@ function SouvenirCarousel({ letter, onOpen }) {
     },
     webs.map((file, i) => {
       const cfg = SOUVENIR_DISPLAY[file] || {};
-      const rot = Math.abs(cfg.rotate || 0) === 90;
-      const imgStyle = rot ? {
+      const quarter = Math.abs(cfg.rotate || 0) === 90;
+      const imgStyle = quarter ? {
         width: `calc(100% * ${cfg.w} / ${cfg.h})`,
         transform: `translate(-50%, -50%) rotate(${cfg.rotate}deg)`
-      } : void 0;
+      } : cfg.rotate ? { transform: `rotate(${cfg.rotate}deg)` } : void 0;
       const onLoad = SOUVENIR_DISPLAY[file] && cfg.w && cfg.h ? void 0 : (e) => {
         const img = e.currentTarget;
         if (img.naturalWidth) {
@@ -836,7 +846,7 @@ function SouvenirCarousel({ letter, onOpen }) {
         /* @__PURE__ */ React.createElement(
           "img",
           {
-            className: `souv-img${rot ? " souv-img--rot" : ""}`,
+            className: `souv-img${quarter ? " souv-img--rot" : ""}`,
             src: `${letter.folder}/${file}`,
             style: imgStyle,
             loading: i === 0 ? "eager" : "lazy",
