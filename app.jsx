@@ -1085,7 +1085,6 @@ function TranscribedCard({ letter, onOpen, highlight }) {
       </div>
       {hasNote && <Fleuron />}
       <NoteBlock text={letter.note} />
-      {letter.partial && <p className="letter-note">Transcription incomplete; the remainder is being verified.</p>}
       {letterImages(letter).length > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
     </article>
   );
@@ -1114,7 +1113,6 @@ function DraftCard({ letter, onOpen, highlight }) {
       </div>
       <Fleuron />
       <NoteBlock text={letter.note} />
-      <p className="letter-note">Some words are still being verified.</p>
       {letterImages(letter).length > 0 && <PhotoLink letter={letter} onOpen={onOpen} />}
     </article>
   );

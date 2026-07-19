@@ -711,7 +711,7 @@ function TranscribedCard({ letter, onOpen, highlight }) {
       return /* @__PURE__ */ React.createElement("p", { key: i, className: "has-dropcap" }, /* @__PURE__ */ React.createElement("span", { className: "dropcap" }, para.charAt(0)), renderProse(para.slice(1), highlight));
     }
     return /* @__PURE__ */ React.createElement("p", { key: i }, renderProse(para, highlight));
-  }), letter.partial && /* @__PURE__ */ React.createElement("p", { className: "incomplete-marker" }, "[the letter continues]"), /* @__PURE__ */ React.createElement("div", { className: "signature" }, letter.signature), letter.postscript && /* @__PURE__ */ React.createElement(Fleuron, null), letter.postscript && /* @__PURE__ */ React.createElement("p", { className: "postscript" }, /* @__PURE__ */ React.createElement("span", { className: "ps-mark" }, "P.S."), " ", renderProse(letter.postscript, highlight))), hasNote && /* @__PURE__ */ React.createElement(Fleuron, null), /* @__PURE__ */ React.createElement(NoteBlock, { text: letter.note }), letter.partial && /* @__PURE__ */ React.createElement("p", { className: "letter-note" }, "Transcription incomplete; the remainder is being verified."), letterImages(letter).length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
+  }), letter.partial && /* @__PURE__ */ React.createElement("p", { className: "incomplete-marker" }, "[the letter continues]"), /* @__PURE__ */ React.createElement("div", { className: "signature" }, letter.signature), letter.postscript && /* @__PURE__ */ React.createElement(Fleuron, null), letter.postscript && /* @__PURE__ */ React.createElement("p", { className: "postscript" }, /* @__PURE__ */ React.createElement("span", { className: "ps-mark" }, "P.S."), " ", renderProse(letter.postscript, highlight))), hasNote && /* @__PURE__ */ React.createElement(Fleuron, null), /* @__PURE__ */ React.createElement(NoteBlock, { text: letter.note }), letterImages(letter).length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
 }
 function DraftCard({ letter, onOpen, highlight }) {
   const paragraphs = letter.body.split(/\n\n+/);
@@ -722,7 +722,7 @@ function DraftCard({ letter, onOpen, highlight }) {
       return /* @__PURE__ */ React.createElement("p", { key: i, className: "has-dropcap" }, /* @__PURE__ */ React.createElement("span", { className: "dropcap" }, para.charAt(0)), renderProse(para.slice(1), highlight));
     }
     return /* @__PURE__ */ React.createElement("p", { key: i }, renderProse(para, highlight));
-  }), /* @__PURE__ */ React.createElement("div", { className: "signature" }, letter.signature)), /* @__PURE__ */ React.createElement(Fleuron, null), /* @__PURE__ */ React.createElement(NoteBlock, { text: letter.note }), /* @__PURE__ */ React.createElement("p", { className: "letter-note" }, "Some words are still being verified."), letterImages(letter).length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
+  }), /* @__PURE__ */ React.createElement("div", { className: "signature" }, letter.signature)), /* @__PURE__ */ React.createElement(Fleuron, null), /* @__PURE__ */ React.createElement(NoteBlock, { text: letter.note }), letterImages(letter).length > 0 && /* @__PURE__ */ React.createElement(PhotoLink, { letter, onOpen }));
 }
 function EnvelopeCard({ letter, onOpen }) {
   const imgs = letterImages(letter);
